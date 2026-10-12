@@ -11,33 +11,72 @@ fn main() {
 
 fn run() -> Result<(), String> {
     let mut input_text = String::new();
-    io::stdin().read_to_string(&mut input_text).map_err(|e| e.to_string())?;
+    io::stdin()
+        .read_to_string(&mut input_text)
+        .map_err(|e| e.to_string())?;
     let request: Value = serde_json::from_str(&input_text).map_err(|e| e.to_string())?;
-    let input: Input = serde_json::from_value(request.get("data").cloned()
-        .ok_or("missing data")?).map_err(|e| e.to_string())?;
+    let input: Input = serde_json::from_value(request.get("data").cloned().ok_or("missing data")?)
+        .map_err(|e| e.to_string())?;
     input.validate().map_err(|errors| errors.join("\n"))?;
-    let command = request.get("command").and_then(Value::as_str).ok_or("missing command")?;
+    let command = request
+        .get("command")
+        .and_then(Value::as_str)
+        .ok_or("missing command")?;
     let result = match command {
         "validate" => json!({
             "concepts": input.ontology.concepts.len(),
             "sources": input.ontology.sources.len(),
             "edges": input.ontology.edges.len(),
+            "relations": input.ontology.relations.len(),
+            "passion_profiles": input.ontology.passion_profiles.len(),
             "valid": true
         }),
         "concept" => {
-            let id = request.get("id").and_then(Value::as_str).ok_or("missing id")?;
+            let id = request
+                .get("id")
+                .and_then(Value::as_str)
+                .ok_or("missing id")?;
             let concept = input.ontology.concepts.get(id).ok_or("unknown concept")?;
-            let source = input.ontology.sources.get(&concept.source_id).ok_or("unknown source")?;
+            let source = input
+                .ontology
+                .sources
+                .get(&concept.source_id)
+                .ok_or("unknown source")?;
             json!({"id": id, "concept": concept, "source": source})
         }
+        "relation" => {
+            let id = request
+                .get("id")
+                .and_then(Value::as_str)
+                .ok_or("missing id")?;
+            let relation = input.ontology.relations.get(id).ok_or("unknown relation")?;
+            json!({"id": id, "relation": relation})
+        }
         "outgoing" => {
-            let id = request.get("id").and_then(Value::as_str).ok_or("missing id")?;
-            if !input.ontology.concepts.contains_key(id) { return Err("unknown concept".into()); }
+            let id = request
+                .get("id")
+                .and_then(Value::as_str)
+                .ok_or("missing id")?;
+            if !input.ontology.concepts.contains_key(id) {
+                return Err("unknown concept".into());
+            }
             let relation = request.get("relation").and_then(Value::as_str);
             json!(input.cited_edges(id, relation))
         }
+        "passion" => {
+            let id = request
+                .get("id")
+                .and_then(Value::as_str)
+                .ok_or("missing id")?;
+            json!(input
+                .cited_passion_profile(id)
+                .ok_or("unknown passion profile")?)
+        }
         _ => return Err(format!("unknown command: {command}")),
     };
-    println!("{}", serde_json::to_string(&result).map_err(|e| e.to_string())?);
+    println!(
+        "{}",
+        serde_json::to_string(&result).map_err(|e| e.to_string())?
+    );
     Ok(())
 }

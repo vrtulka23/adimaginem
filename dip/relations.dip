@@ -1,0 +1,142 @@
+# Predicate definitions are editorial vocabulary; each actual claim cites a passage.
+ontology
+  relations map : ontological_relation
+  relations[actualizes]
+    label = "Actualizes"
+    kind = "metaphysical"
+    description = "A form or act brings a relevant potency into act."
+
+  relations[confers_character]
+    label = "Confers character"
+    kind = "theological"
+    description = "A sacrament confers an enduring sacramental character."
+
+  relations[creates]
+    label = "Creates"
+    kind = "creation"
+    description = "God gives being without pre-existing material; the object is a creature class, not a dated event."
+
+  relations[denotes_same_god_as]
+    label = "Denotes the same God as"
+    kind = "identity"
+    description = "Two concept IDs refer to the one God; this introduces no further divine being."
+
+  relations[distinct_in_essence_from]
+    label = "Distinct in essence from"
+    kind = "metaphysical"
+    description = "Subject and object differ in what they are, under the cited distinction."
+
+  relations[follows_apprehension]
+    label = "Follows apprehension"
+    kind = "appetite_and_passion"
+    description = "An appetitive response follows presentation of an object."
+
+  relations[has_corporeal_dimension]
+    label = "Has corporeal dimension"
+    kind = "composition"
+    description = "A human person includes a body in the one human composite."
+
+  relations[has_formal_object]
+    label = "Has formal object"
+    kind = "appetite_and_passion"
+    description = "A power or inclination is specified by its object under a relevant aspect."
+
+  relations[has_one_divine_essence]
+    label = "Has one divine essence"
+    kind = "theological"
+    description = "The one Trinity is the one undivided divine essence."
+
+  relations[has_part]
+    label = "Has part"
+    kind = "composition"
+    description = "An item has a proper part according to the cited account."
+
+  relations[has_power_genus]
+    label = "Has power genus"
+    kind = "power_and_act"
+    description = "A soul has a genus of operative powers."
+
+  relations[has_substantial_form]
+    label = "Has substantial form"
+    kind = "composition"
+    description = "The composite has the substantial form that makes it one substance."
+
+  relations[inheres_in_subject]
+    label = "Inheres in subject"
+    kind = "metaphysical"
+    description = "A habit or quality has the indicated subject."
+
+  relations[instrumentally_causes_grace]
+    label = "Instrumentally causes grace"
+    kind = "theological"
+    description = "A sacrament causes grace instrumentally, with God as principal cause."
+
+  relations[is_act_of]
+    label = "Is an act of"
+    kind = "power_and_act"
+    description = "An operation belongs to the indicated power."
+
+  relations[is_fallen_condition_of]
+    label = "Is a fallen condition of"
+    kind = "condition"
+    description = "The subject is an angel in a fallen condition, not another created nature."
+
+  relations[is_in_potency_to]
+    label = "Is in potency to"
+    kind = "metaphysical"
+    description = "The subject is capable of the indicated act or form."
+
+  relations[is_kind_of]
+    label = "Is a kind of"
+    kind = "classification"
+    description = "The subject is classified under the broader object concept."
+
+  relations[is_passion_of]
+    label = "Is a passion of"
+    kind = "appetite_and_passion"
+    description = "A named passion belongs to the indicated sensitive appetite."
+
+  relations[is_person_of]
+    label = "Is a person of"
+    kind = "theological"
+    description = "A divine person is a person of the Trinity, without partition of essence."
+
+  relations[is_pure_act]
+    label = "Is pure act"
+    kind = "metaphysical"
+    description = "God has no passive potency, in Aquinas's account."
+
+  relations[is_realized_in]
+    label = "Is realized in"
+    kind = "metaphysical"
+    description = "The subject is realized in the indicated bearer or composite."
+
+  relations[is_sacrament_of_group]
+    label = "Is a sacrament in group"
+    kind = "classification"
+    description = "A sacrament belongs to a Catechism pastoral grouping."
+
+  relations[lacks_corporeality]
+    label = "Lacks corporeality"
+    kind = "condition"
+    description = "The subject has no material body by nature."
+
+  relations[natural_principle_of]
+    label = "Is a natural principle of"
+    kind = "power_and_act"
+    description = "The subject is a natural source of the indicated power or operation."
+
+  relations[operates_through_organ]
+    label = "Operates through a bodily organ"
+    kind = "power_and_act"
+    description = "The indicated power uses a bodily organ in its operation."
+
+  relations[perfects]
+    label = "Perfects"
+    kind = "theological"
+    description = "A grace, gift, or habit perfects its indicated subject."
+
+  relations[principle_of_becoming]
+    label = "Is a principle of becoming"
+    kind = "metaphysical"
+    description = "The subject contributes as a principle of natural change."

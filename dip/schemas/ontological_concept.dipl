@@ -1,12 +1,12 @@
-?descr "A cited philosophical concept used by the human ontology"
+?descr "A cited concept in the anthropological, metaphysical, or theological ontology"
 label str
 latin_name str
 domain str
-  !options ["anthropology", "metaphysics"]
-  !labels ["Human ontology", "General metaphysics"]
+  !options ["anthropology", "metaphysics", "theology"]
+  !labels ["Human ontology", "General metaphysics", "Catholic theology"]
 category str
-  !options ["person", "body", "organ", "substantial_form", "power", "power_genus", "act", "passion", "principle", "process"]
-  !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process"]
+  !options ["person", "body", "organ", "substantial_form", "power", "power_genus", "act", "passion", "principle", "process", "inclination", "formal_object", "habit", "divine_person", "divine_essence", "doctrine", "grace", "virtue", "gift", "fruit", "sacrament", "sacrament_group", "sacramental_character", "creature", "creature_order", "angelic_condition"]
+  !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process", "Inclination", "Formal object", "Habit", "Divine person", "Divine essence", "Doctrine", "Grace", "Virtue", "Gift", "Fruit", "Sacrament", "Sacrament group", "Sacramental character", "Creature", "Creature order", "Angelic condition"]
 note str
 source_id str
 review_status str = "draft"

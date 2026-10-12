@@ -1,0 +1,86 @@
+# Natural inclination and the formal objects of appetitive powers.
+ontology
+  sources[st_i_80_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I, q. 80, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/1080.htm"
+
+  sources[st_i_ii_8_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 8, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/2008.htm"
+
+  concepts[natural_appetite]
+    latin_name = "appetitus naturalis"
+    label = "Natural appetite"
+    domain = "anthropology"
+    category = "inclination"
+    note = "Inclination following a thing's natural form; not an additional operative power of the soul."
+    source_id = "st_i_80_1"
+
+  concepts[naturally_suitable_good]
+    latin_name = "bonum conveniens naturae"
+    label = "Good suitable to nature"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "The fitting good toward which natural appetite inclines."
+    source_id = "st_i_80_1"
+
+  concepts[sensible_good_or_evil]
+    latin_name = "bonum vel malum sensibile"
+    label = "Sensible good or evil"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "The sensible good or harm considered simply by concupiscible appetite."
+    source_id = "st_i_81_2"
+
+  concepts[arduous_sensible_good_or_evil]
+    latin_name = "bonum vel malum sensibile arduum"
+    label = "Arduous sensible good or evil"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "A sensible good difficult to obtain or evil difficult to avoid."
+    source_id = "st_i_81_2"
+
+  concepts[apprehended_good]
+    latin_name = "bonum apprehensum"
+    label = "Apprehended good"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "Good as apprehended, including an apparent good; this is not necessarily a true good."
+    source_id = "st_i_ii_8_1"
+
+  edges[natural_appetite_object]
+    subject str = "natural_appetite"
+    relation str = "has_formal_object"
+    object str = "naturally_suitable_good"
+    source_id str = "st_i_80_1"
+      ?rationale "ST I, q. 80, a. 1 distinguishes the inclination following natural form from appetite following apprehension."
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[concupiscible_object]
+    subject str = "concupiscible_appetite"
+    relation str = "has_formal_object"
+    object str = "sensible_good_or_evil"
+    source_id str = "st_i_81_2"
+      ?rationale "ST I, q. 81, a. 2 assigns suitable and harmful sensible things considered simply to concupiscible appetite."
+    included_in_model bool = true
+
+  edges[irascible_object]
+    subject str = "irascible_appetite"
+    relation str = "has_formal_object"
+    object str = "arduous_sensible_good_or_evil"
+    source_id str = "st_i_81_2"
+      ?rationale "ST I, q. 81, a. 2 identifies the arduous object of irascible appetite through obstacles and resistance."
+    included_in_model bool = true
+
+  edges[will_object]
+    subject str = "will"
+    relation str = "has_formal_object"
+    object str = "apprehended_good"
+    source_id str = "st_i_ii_8_1"
+      ?rationale "ST I-II, q. 8, a. 1 says that voluntary appetite tends to a good as apprehended, even if it is only an apparent good."
+    included_in_model bool = true

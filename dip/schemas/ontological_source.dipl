@@ -1,4 +1,7 @@
 ?descr "A passage-level citation supporting an ontological concept or relation"
+authority_kind str = "thomistic_text"
+  !options ["thomistic_text", "church_teaching"]
+  !labels ["Text of Thomas Aquinas", "Catholic teaching"]
 author str
 work str
 locator str

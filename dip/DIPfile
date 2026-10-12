@@ -7,6 +7,12 @@ schemas[]
 schemas[]
   name = "ontological_edge"
   file = "schemas/ontological_edge.dipl"
+schemas[]
+  name = "passion_profile"
+  file = "schemas/passion_profile.dipl"
+schemas[]
+  name = "ontological_relation"
+  file = "schemas/ontological_relation.dipl"
 
 code[]
   file = "concepts.dip"
@@ -14,3 +20,23 @@ code[]
   file = "sources.dip"
 code[]
   file = "edges.dip"
+code[]
+  file = "appetite.dip"
+code[]
+  file = "acts_habits.dip"
+code[]
+  file = "passion_profiles.dip"
+code[]
+  file = "theology_sources.dip"
+code[]
+  file = "theology_concepts.dip"
+code[]
+  file = "theology_edges.dip"
+code[]
+  file = "creation_sources.dip"
+code[]
+  file = "creation_concepts.dip"
+code[]
+  file = "creation_edges.dip"
+code[]
+  file = "relations.dip"

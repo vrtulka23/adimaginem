@@ -1,0 +1,6 @@
+?descr "Editorial classification and meaning of an edge predicate"
+label str
+kind str
+  !options ["creation", "identity", "classification", "composition", "metaphysical", "power_and_act", "appetite_and_passion", "theological", "condition"]
+  !labels ["Creation", "Identity and co-reference", "Classification", "Composition", "Metaphysical relation", "Power and act", "Appetite and passion", "Theological relation", "Condition"]
+description str

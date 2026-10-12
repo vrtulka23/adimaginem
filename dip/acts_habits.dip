@@ -1,0 +1,121 @@
+# Selected operations and the habit distinction needed before dynamic rules.
+ontology
+  sources[st_i_84_7]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I, q. 84, a. 7, respondeo"
+    url str = "https://www.newadvent.org/summa/1084.htm"
+
+  sources[st_i_ii_14_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 14, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/2014.htm"
+
+  sources[st_i_ii_49_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 49, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/2049.htm"
+
+  sources[st_i_ii_55_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 55, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/2055.htm"
+
+  concepts[sensing]
+    latin_name = "sentire"
+    label = "Sensing"
+    domain = "anthropology"
+    category = "act"
+    note = "A sensitive operation, distinguished here from a sensitive power."
+    source_id = "st_i_78_1"
+
+  concepts[imagining]
+    latin_name = "imaginari"
+    label = "Imagining"
+    domain = "anthropology"
+    category = "act"
+    note = "Operation of imagination concerning sensible forms."
+    source_id = "st_i_78_4"
+
+  concepts[understanding]
+    latin_name = "intelligere"
+    label = "Understanding"
+    domain = "anthropology"
+    category = "act"
+    note = "Actual intellectual operation; in embodied life it turns to phantasms."
+    source_id = "st_i_84_7"
+
+  concepts[willing]
+    latin_name = "velle"
+    label = "Willing"
+    domain = "anthropology"
+    category = "act"
+    note = "Act of will concerning good as apprehended."
+    source_id = "st_i_ii_8_1"
+
+  concepts[counsel]
+    latin_name = "consilium"
+    label = "Counsel or deliberation"
+    domain = "anthropology"
+    category = "act"
+    note = "Reason's inquiry about means to an end, ordered to choice."
+    source_id = "st_i_ii_14_1"
+
+  concepts[habit]
+    latin_name = "habitus"
+    label = "Habit"
+    domain = "anthropology"
+    category = "habit"
+    note = "A relatively stable dispositional quality, distinct from a momentary operation."
+    source_id = "st_i_ii_49_1"
+
+  edges[sensing_of_sensitive_power]
+    subject str = "sensing"
+    relation str = "is_act_of"
+    object str = "sensitive_power"
+    source_id str = "st_i_78_1"
+      ?rationale "ST I, q. 78, a. 1 distinguishes sensitive operations from their underlying genus of powers."
+    included_in_model bool = true
+
+  edges[imagining_of_imagination]
+    subject str = "imagining"
+    relation str = "is_act_of"
+    object str = "imagination"
+    source_id str = "st_i_78_4"
+      ?rationale "ST I, q. 78, a. 4 assigns conservation of sensible forms to the imaginative power."
+    included_in_model bool = true
+
+  edges[understanding_of_intellect]
+    subject str = "understanding"
+    relation str = "is_act_of"
+    object str = "intellectual_power"
+    source_id str = "st_i_84_7"
+      ?rationale "ST I, q. 84, a. 7 treats actual understanding as an operation of the intellect that turns to phantasms in embodied life."
+    included_in_model bool = true
+
+  edges[willing_of_will]
+    subject str = "willing"
+    relation str = "is_act_of"
+    object str = "will"
+    source_id str = "st_i_ii_8_1"
+      ?rationale "ST I-II, q. 8, a. 1 identifies willing as the will's act toward good as apprehended."
+    included_in_model bool = true
+
+  edges[counsel_of_intellect]
+    subject str = "counsel"
+    relation str = "is_act_of"
+    object str = "intellectual_power"
+    source_id str = "st_i_ii_14_1"
+      ?rationale "ST I-II, q. 14, a. 1 treats counsel as rational inquiry, while acknowledging the will's involvement."
+    included_in_model bool = true
+
+  edges[virtue_as_habit]
+    subject str = "virtue"
+    relation str = "is_kind_of"
+    object str = "habit"
+    source_id str = "st_i_ii_55_1"
+      ?rationale "ST I-II, q. 55, a. 1 argues that human virtue is a habit rather than a power or a single act."
+    included_in_model bool = true

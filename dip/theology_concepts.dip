@@ -1,0 +1,434 @@
+# Doctrinal concepts and cited classes; names are not numerical state variables.
+ontology
+  concepts[trinity]
+    latin_name = "Trinitas"
+    label = "Holy Trinity"
+    domain = "theology"
+    category = "doctrine"
+    note = "One God in three really distinct divine persons; the divine essence is not divided."
+    source_id = "ccc_253_254"
+
+  concepts[divine_essence]
+    latin_name = "essentia divina"
+    label = "Divine essence"
+    domain = "theology"
+    category = "divine_essence"
+    note = "The one undivided divine nature of the Father, Son, and Holy Spirit."
+    source_id = "ccc_253_254"
+
+  concepts[father]
+    latin_name = "Pater"
+    label = "Father"
+    domain = "theology"
+    category = "divine_person"
+    note = "The Father is a divine person, really distinct from the Son and Holy Spirit."
+    source_id = "ccc_253_254"
+
+  concepts[son]
+    latin_name = "Filius"
+    label = "Son"
+    domain = "theology"
+    category = "divine_person"
+    note = "The Son is a divine person, really distinct from the Father and Holy Spirit."
+    source_id = "ccc_253_254"
+
+  concepts[holy_spirit]
+    latin_name = "Spiritus Sanctus"
+    label = "Holy Spirit"
+    domain = "theology"
+    category = "divine_person"
+    note = "The Holy Spirit is a divine person, really distinct from the Father and Son."
+    source_id = "ccc_253_254"
+
+  concepts[grace]
+    latin_name = "gratia"
+    label = "Grace"
+    domain = "theology"
+    category = "grace"
+    note = "God's free and undeserved gift; this general concept must not be reduced to a measurable quantity."
+    source_id = "ccc_1996_2000"
+
+  concepts[sanctifying_grace]
+    latin_name = "gratia sanctificans"
+    label = "Sanctifying grace"
+    domain = "theology"
+    category = "grace"
+    note = "Habitual supernatural gift perfecting the soul for life with God."
+    source_id = "ccc_1996_2000"
+
+  concepts[actual_grace]
+    latin_name = "gratia actualis"
+    label = "Actual grace"
+    domain = "theology"
+    category = "grace"
+    note = "Divine intervention distinguished from habitual sanctifying grace."
+    source_id = "ccc_1996_2000"
+
+  concepts[virtue]
+    latin_name = "virtus"
+    label = "Virtue"
+    domain = "anthropology"
+    category = "virtue"
+    note = "A firm disposition to do good; acquired and infused virtues require further distinctions."
+    source_id = "ccc_1804_1805"
+
+  concepts[cardinal_virtue]
+    latin_name = "virtus cardinalis"
+    label = "Cardinal virtue"
+    domain = "anthropology"
+    category = "virtue"
+    note = "The class of four pivotal human virtues distinguished by the Catechism."
+    source_id = "ccc_1804_1805"
+
+  concepts[theological_virtue]
+    latin_name = "virtus theologica"
+    label = "Theological virtue"
+    domain = "theology"
+    category = "virtue"
+    note = "The class of infused virtues whose origin, motive, and object is the Triune God."
+    source_id = "ccc_1812_1813"
+
+  concepts[acquired_virtue]
+    latin_name = "virtus acquisita"
+    label = "Acquired virtue"
+    domain = "anthropology"
+    category = "virtue"
+    note = "Virtue developed through repeated human acts; a mode of origin distinct from infusion."
+    source_id = "st_i_ii_63_2"
+
+  concepts[infused_virtue]
+    latin_name = "virtus infusa"
+    label = "Infused virtue"
+    domain = "theology"
+    category = "virtue"
+    note = "Virtue given by God and ordered to supernatural good; includes infused moral virtues."
+    source_id = "st_i_ii_63_3"
+
+  concepts[prudence_virtue]
+    latin_name = "prudentia"
+    label = "Prudence"
+    domain = "anthropology"
+    category = "virtue"
+    note = "Cardinal virtue concerned with discerning the true good and right means."
+    source_id = "ccc_1804_1805"
+
+  concepts[justice_virtue]
+    latin_name = "iustitia"
+    label = "Justice"
+    domain = "anthropology"
+    category = "virtue"
+    note = "Cardinal virtue concerning what is due to God and neighbor."
+    source_id = "ccc_1804_1805"
+
+  concepts[fortitude_virtue]
+    latin_name = "fortitudo"
+    label = "Fortitude"
+    domain = "anthropology"
+    category = "virtue"
+    note = "Cardinal virtue giving firmness in difficulties."
+    source_id = "ccc_1804_1805"
+
+  concepts[temperance_virtue]
+    latin_name = "temperantia"
+    label = "Temperance"
+    domain = "anthropology"
+    category = "virtue"
+    note = "Cardinal virtue moderating attraction to pleasures."
+    source_id = "ccc_1804_1805"
+
+  concepts[faith_virtue]
+    latin_name = "fides"
+    label = "Faith"
+    domain = "theology"
+    category = "virtue"
+    note = "Theological virtue; distinct from the fruit named faithfulness."
+    source_id = "ccc_1812_1813"
+
+  concepts[hope_virtue]
+    latin_name = "spes"
+    label = "Hope"
+    domain = "theology"
+    category = "virtue"
+    note = "Theological virtue; distinct from the sensitive passion of hope."
+    source_id = "ccc_1812_1813"
+
+  concepts[charity_virtue]
+    latin_name = "caritas"
+    label = "Charity"
+    domain = "theology"
+    category = "virtue"
+    note = "Theological virtue; distinct from the fruit also named charity."
+    source_id = "ccc_1812_1813"
+
+  concepts[gift_of_holy_spirit]
+    latin_name = "donum Spiritus Sancti"
+    label = "Gift of the Holy Spirit"
+    domain = "theology"
+    category = "gift"
+    note = "A permanent disposition making a person docile to the Holy Spirit's promptings."
+    source_id = "ccc_1830_1831"
+
+  concepts[fruit_of_holy_spirit]
+    latin_name = "fructus Spiritus Sancti"
+    label = "Fruit of the Holy Spirit"
+    domain = "theology"
+    category = "fruit"
+    note = "A perfection formed by the Holy Spirit; Aquinas discusses fruits as acts."
+    source_id = "ccc_1832"
+
+  concepts[sacrament]
+    latin_name = "sacramentum"
+    label = "Sacrament of the New Law"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven efficacious signs instituted by Christ."
+    source_id = "ccc_1210_1211"
+
+  concepts[initiation_sacraments]
+    latin_name = "sacramenta initiationis christianae"
+    label = "Sacraments of initiation"
+    domain = "theology"
+    category = "sacrament_group"
+    note = "Baptism, Confirmation, and Eucharist."
+    source_id = "ccc_1210_1211"
+
+  concepts[healing_sacraments]
+    latin_name = "sacramenta sanationis"
+    label = "Sacraments of healing"
+    domain = "theology"
+    category = "sacrament_group"
+    note = "Penance and Anointing of the Sick."
+    source_id = "ccc_1210_1211"
+
+  concepts[service_sacraments]
+    latin_name = "sacramenta in servitium communionis"
+    label = "Sacraments at the service of communion"
+    domain = "theology"
+    category = "sacrament_group"
+    note = "Holy Orders and Matrimony."
+    source_id = "ccc_1210_1211"
+
+  concepts[sacramental_grace]
+    latin_name = "gratia sacramentalis"
+    label = "Sacramental grace"
+    domain = "theology"
+    category = "grace"
+    note = "Grace of the Holy Spirit proper to each sacrament; effects need sacrament-specific claims."
+    source_id = "ccc_1127_1129"
+
+  concepts[sacramental_character]
+    latin_name = "character sacramentalis"
+    label = "Sacramental character"
+    domain = "theology"
+    category = "sacramental_character"
+    note = "Indelible spiritual seal associated with Baptism, Confirmation, and Holy Orders."
+    source_id = "ccc_698"
+
+  concepts[wisdom_gift]
+    latin_name = "donum sapientiae"
+    label = "Wisdom (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[understanding_gift]
+    latin_name = "donum intellectus"
+    label = "Understanding (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[counsel_gift]
+    latin_name = "donum consilii"
+    label = "Counsel (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[fortitude_gift]
+    latin_name = "donum fortitudinis"
+    label = "Fortitude (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[knowledge_gift]
+    latin_name = "donum scientiae"
+    label = "Knowledge (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[piety_gift]
+    latin_name = "donum pietatis"
+    label = "Piety (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[fear_of_lord_gift]
+    latin_name = "donum timoris Domini"
+    label = "Fear of the Lord (gift)"
+    domain = "theology"
+    category = "gift"
+    note = "One of the seven gifts of the Holy Spirit; distinct from virtues with similar names."
+    source_id = "ccc_1830_1831"
+
+  concepts[charity_fruit]
+    latin_name = "fructus caritatis"
+    label = "Charity (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[joy_fruit]
+    latin_name = "fructus gaudii"
+    label = "Joy (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[peace_fruit]
+    latin_name = "fructus pacis"
+    label = "Peace (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[patience_fruit]
+    latin_name = "fructus patientiae"
+    label = "Patience (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[kindness_fruit]
+    latin_name = "fructus benignitatis"
+    label = "Kindness (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[goodness_fruit]
+    latin_name = "fructus bonitatis"
+    label = "Goodness (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[generosity_fruit]
+    latin_name = "fructus longanimitatis"
+    label = "Generosity (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[gentleness_fruit]
+    latin_name = "fructus mansuetudinis"
+    label = "Gentleness (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[faithfulness_fruit]
+    latin_name = "fructus fidei"
+    label = "Faithfulness (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[modesty_fruit]
+    latin_name = "fructus modestiae"
+    label = "Modesty (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[self_control_fruit]
+    latin_name = "fructus continentiae"
+    label = "Self-control (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[chastity_fruit]
+    latin_name = "fructus castitatis"
+    label = "Chastity (fruit)"
+    domain = "theology"
+    category = "fruit"
+    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    source_id = "ccc_1832"
+
+  concepts[baptism]
+    latin_name = "Baptismus"
+    label = "Baptism"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+
+  concepts[confirmation]
+    latin_name = "Confirmatio"
+    label = "Confirmation"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+
+  concepts[eucharist]
+    latin_name = "Eucharistia"
+    label = "Eucharist"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+
+  concepts[penance]
+    latin_name = "Paenitentia"
+    label = "Penance"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+
+  concepts[anointing_of_sick]
+    latin_name = "Unctio infirmorum"
+    label = "Anointing of the Sick"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+
+  concepts[holy_orders]
+    latin_name = "Ordo"
+    label = "Holy Orders"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+
+  concepts[matrimony]
+    latin_name = "Matrimonium"
+    label = "Matrimony"
+    domain = "theology"
+    category = "sacrament"
+    note = "One of the seven sacraments of the New Law; specific signs and effects require separate cited records."
+    source_id = "ccc_1210_1211"
+

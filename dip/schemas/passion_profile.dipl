@@ -1,0 +1,21 @@
+?descr "Cited formal conditions distinguishing a kind of sensitive passion"
+concept_id str
+appetite_id str
+  !options ["concupiscible_appetite", "irascible_appetite"]
+  !labels ["Concupiscible appetite", "Irascible appetite"]
+object_aspect str
+  !options ["good", "evil"]
+  !labels ["Apprehended as good", "Apprehended as evil"]
+arduous bool
+phase str
+  !options ["initial_affinity", "approach", "withdrawal", "present_response", "attack"]
+  !labels ["Initial affinity or aversion", "Approach", "Withdrawal", "Response to a present object", "Attack on present harm"]
+temporal_relation str
+  !options ["not_specified", "not_yet_present", "present"]
+  !labels ["Not specified", "Not yet present", "Present or attained"]
+evidence_kind str = "editorial_classification"
+  !options ["textual_paraphrase", "interpretive_inference", "editorial_classification"]
+  !labels ["Textual paraphrase", "Interpretive inference", "Editorial classification"]
+review_status str = "draft"
+  !options ["draft", "reviewed", "contested"]
+  !labels ["Draft", "Reviewed", "Contested"]

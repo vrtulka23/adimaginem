@@ -1,0 +1,119 @@
+# Formal distinctions for the eleven passions, not intensity or a causal rule.
+ontology
+  sources[st_i_ii_23_3]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 23, a. 3, respondeo"
+    url str = "https://www.newadvent.org/summa/2023.htm"
+
+  passion_profiles map : passion_profile
+  passion_profiles[love_passion]
+    concept_id = "love_passion"
+    appetite_id = "concupiscible_appetite"
+    object_aspect = "good"
+    arduous = false
+    phase = "initial_affinity"
+    temporal_relation = "not_specified"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places love as the first response of concupiscible appetite to good."
+
+  passion_profiles[hatred_passion]
+    concept_id = "hatred_passion"
+    appetite_id = "concupiscible_appetite"
+    object_aspect = "evil"
+    arduous = false
+    phase = "initial_affinity"
+    temporal_relation = "not_specified"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places hatred as the first response of concupiscible appetite to evil."
+
+  passion_profiles[desire_passion]
+    concept_id = "desire_passion"
+    appetite_id = "concupiscible_appetite"
+    object_aspect = "good"
+    arduous = false
+    phase = "approach"
+    temporal_relation = "not_yet_present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 distinguishes desire as movement toward an absent sensible good."
+
+  passion_profiles[aversion_passion]
+    concept_id = "aversion_passion"
+    appetite_id = "concupiscible_appetite"
+    object_aspect = "evil"
+    arduous = false
+    phase = "withdrawal"
+    temporal_relation = "not_yet_present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 distinguishes aversion as movement away from an evil not yet present."
+
+  passion_profiles[joy_passion]
+    concept_id = "joy_passion"
+    appetite_id = "concupiscible_appetite"
+    object_aspect = "good"
+    arduous = false
+    phase = "present_response"
+    temporal_relation = "present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places joy with good attained and the appetite's repose in it."
+
+  passion_profiles[sorrow_passion]
+    concept_id = "sorrow_passion"
+    appetite_id = "concupiscible_appetite"
+    object_aspect = "evil"
+    arduous = false
+    phase = "present_response"
+    temporal_relation = "present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places sorrow with evil already present."
+
+  passion_profiles[hope_passion]
+    concept_id = "hope_passion"
+    appetite_id = "irascible_appetite"
+    object_aspect = "good"
+    arduous = true
+    phase = "approach"
+    temporal_relation = "not_yet_present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places hope toward an arduous good not yet attained."
+
+  passion_profiles[despair_passion]
+    concept_id = "despair_passion"
+    appetite_id = "irascible_appetite"
+    object_aspect = "good"
+    arduous = true
+    phase = "withdrawal"
+    temporal_relation = "not_yet_present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places despair away from an arduous good not yet attained."
+
+  passion_profiles[fear_passion]
+    concept_id = "fear_passion"
+    appetite_id = "irascible_appetite"
+    object_aspect = "evil"
+    arduous = true
+    phase = "withdrawal"
+    temporal_relation = "not_yet_present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places fear away from an arduous evil not yet present."
+
+  passion_profiles[daring_passion]
+    concept_id = "daring_passion"
+    appetite_id = "irascible_appetite"
+    object_aspect = "evil"
+    arduous = true
+    phase = "approach"
+    temporal_relation = "not_yet_present"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places daring toward an arduous evil to be confronted."
+
+  passion_profiles[anger_passion]
+    concept_id = "anger_passion"
+    appetite_id = "irascible_appetite"
+    object_aspect = "evil"
+    arduous = true
+    phase = "attack"
+    temporal_relation = "present"
+    source_id str = "st_i_ii_23_3"
+      ?rationale "ST I-II, q. 23, a. 3 treats anger as attack against an arduous evil already present."
+

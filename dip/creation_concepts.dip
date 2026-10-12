@@ -1,0 +1,89 @@
+# Creation classes are theological kinds, not a physical chronology.
+ontology
+  concepts[god]
+    latin_name = "Deus"
+    label = "God"
+    domain = "theology"
+    category = "doctrine"
+    note = "The one uncreated God, the Holy Trinity; this is a co-reference to trinity, not a fourth divine person or a second god."
+    source_id = "ccc_290_292"
+
+  concepts[created_being]
+    latin_name = "creatura"
+    label = "Created being"
+    domain = "theology"
+    category = "creature_order"
+    note = "Anything with received existence from God; God is not in this class."
+    source_id = "ccc_290_292"
+
+  concepts[spiritual_creature]
+    latin_name = "creatura spiritualis"
+    label = "Spiritual creature"
+    domain = "theology"
+    category = "creature_order"
+    note = "The incorporeal created order, including angels."
+    source_id = "ccc_327_330"
+
+  concepts[corporeal_creature]
+    latin_name = "creatura corporalis"
+    label = "Corporeal creature"
+    domain = "theology"
+    category = "creature_order"
+    note = "The visible, bodily created order; the human person also has a spiritual soul."
+    source_id = "ccc_327_330"
+
+  concepts[angel]
+    latin_name = "angelus"
+    label = "Angel"
+    domain = "theology"
+    category = "creature"
+    note = "An intelligent, willing, incorporeal created spirit; angel also names its office."
+    source_id = "ccc_327_330"
+
+  concepts[fallen_angel]
+    latin_name = "angelus lapsus"
+    label = "Fallen angel (demon)"
+    domain = "theology"
+    category = "angelic_condition"
+    note = "A condition arising through an angel's own free fall; God did not create an evil angelic nature."
+    source_id = "ccc_391_392"
+
+  concepts[nonhuman_animal]
+    latin_name = "animal brutum"
+    label = "Nonhuman animal"
+    domain = "theology"
+    category = "creature"
+    note = "A living sensible creature distinct from the human person."
+    source_id = "ccc_337_343"
+
+  concepts[plant]
+    latin_name = "planta"
+    label = "Plant"
+    domain = "theology"
+    category = "creature"
+    note = "A living corporeal creature; the Latin label is normalized vocabulary."
+    source_id = "ccc_337_343"
+
+  concepts[inanimate_material_creature]
+    latin_name = "res corporea inanimata"
+    label = "Inanimate material creature"
+    domain = "theology"
+    category = "creature"
+    note = "A corporeal created thing without vegetative or sensitive life, such as stone or water."
+    source_id = "ccc_337_343"
+
+  concepts[pure_act]
+    latin_name = "actus purus"
+    label = "Pure act"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Aquinas's formulation: God has no passive potency; this is not a degree on a numerical scale."
+    source_id = "st_i_3_1"
+
+  concepts[corporeality]
+    latin_name = "corporeitas"
+    label = "Corporeality"
+    domain = "metaphysics"
+    category = "principle"
+    note = "The condition of having a material body, used here to state the angelic distinction explicitly."
+    source_id = "ccc_327_330"

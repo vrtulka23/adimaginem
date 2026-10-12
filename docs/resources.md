@@ -17,6 +17,10 @@ Read this corpus with the [scholarly and Catholic method](method.md) in mind. Se
 | Thomas Aquinas, [*De principiis naturae*](https://www.jonhaines.com/thomas/english/DePrincNaturae.htm) | Matter, form, privation, potency, act, and the four causes. The linked English edition is translated by R. A. Kocourek and numbers its sections; cite those section numbers. |
 | Thomas Aquinas, [*De unitate intellectus contra Averroistas*](https://isidore.co/aquinas/english/DeUnitateIntellectus.htm) | Clarifies why individual human beings each have their own intellect, a constraint on any model of persons. |
 | Thomas Aquinas, [*Commentary on the Nicomachean Ethics*](https://isidore.co/aquinas/english/Ethics.htm) | Ends, action, deliberation, character, and virtue. Cite by book and lecture, alongside the relevant passage of Aristotle. |
+| Thomas Aquinas, [*Summa theologiae* III, qq. 60–65](https://www.newadvent.org/summa/4060.htm) | Sacramental signs, causality, character, and the seven sacraments; read alongside the Church's doctrinal presentation. |
+| [*Catechism of the Catholic Church*](https://www.vatican.va/content/catechism/en.html) | The doctrinal authority for the project's claims about the Trinity, grace, virtues, gifts, fruits, and sacraments. Cite paragraph numbers, and distinguish these claims from Aquinas's arguments. |
+| [*Catechism of the Catholic Church* §§279–354](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_4_the_creator.index.html) | Creation by the Trinity, spiritual and corporeal creatures, angels, and the goodness and order of the visible world. See the [creation graph](creation.md). |
+| Thomas Aquinas, [*Summa theologiae* I, q. 3](https://www.newadvent.org/summa/1003.htm) and [I, qq. 44–50](https://www.newadvent.org/summa/1045.htm) | Divine simplicity and pure act, God as cause of being, creation, and angelic nature. Cite individual question and article for each claim. |
 
 ## Foundational background
 

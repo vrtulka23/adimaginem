@@ -1,0 +1,474 @@
+# Cited theological relations; no temporal or numerical effect is inferred.
+ontology
+  edges[trinity_one_essence]
+    subject str = "trinity"
+    relation str = "has_one_divine_essence"
+    object str = "divine_essence"
+    source_id str = "ccc_253_254"
+      ?rationale "Catechism §253 affirms the undivided divine unity of the three persons."
+    included_in_model bool = true
+
+  edges[father_person_of_trinity]
+    subject str = "father"
+    relation str = "is_person_of"
+    object str = "trinity"
+    source_id str = "ccc_253_254"
+      ?rationale "Catechism §§253-254 identify the Father as a really distinct divine person of the one Trinity."
+    included_in_model bool = true
+
+  edges[son_person_of_trinity]
+    subject str = "son"
+    relation str = "is_person_of"
+    object str = "trinity"
+    source_id str = "ccc_253_254"
+      ?rationale "Catechism §§253-254 identify the Son as a really distinct divine person of the one Trinity."
+    included_in_model bool = true
+
+  edges[spirit_person_of_trinity]
+    subject str = "holy_spirit"
+    relation str = "is_person_of"
+    object str = "trinity"
+    source_id str = "ccc_253_254"
+      ?rationale "Catechism §§253-254 identify the Holy Spirit as a really distinct divine person of the one Trinity."
+    included_in_model bool = true
+
+  edges[sanctifying_kind_of_grace]
+    subject str = "sanctifying_grace"
+    relation str = "is_kind_of"
+    object str = "grace"
+    source_id str = "ccc_1996_2000"
+      ?rationale "Catechism §2000 distinguishes habitual sanctifying grace from actual graces."
+    included_in_model bool = true
+
+  edges[actual_kind_of_grace]
+    subject str = "actual_grace"
+    relation str = "is_kind_of"
+    object str = "grace"
+    source_id str = "ccc_1996_2000"
+      ?rationale "Catechism §2000 distinguishes actual divine interventions from habitual sanctifying grace."
+    included_in_model bool = true
+
+  edges[grace_in_soul]
+    subject str = "sanctifying_grace"
+    relation str = "inheres_in_subject"
+    object str = "rational_soul"
+    source_id str = "st_i_ii_110_4"
+      ?rationale "ST I-II, q. 110, a. 4 places sanctifying grace in the essence of the rational soul."
+    included_in_model bool = true
+
+  edges[grace_distinct_from_virtue]
+    subject str = "sanctifying_grace"
+    relation str = "distinct_in_essence_from"
+    object str = "virtue"
+    source_id str = "st_i_ii_110_3"
+      ?rationale "ST I-II, q. 110, a. 3 argues that grace is distinct from infused virtue."
+    included_in_model bool = true
+
+  edges[cardinal_kind_of_virtue]
+    subject str = "cardinal_virtue"
+    relation str = "is_kind_of"
+    object str = "virtue"
+    source_id str = "ccc_1804_1805"
+      ?rationale "Catechism §1805 identifies four pivotal virtues as cardinal virtues."
+    included_in_model bool = true
+
+  edges[theological_kind_of_virtue]
+    subject str = "theological_virtue"
+    relation str = "is_kind_of"
+    object str = "virtue"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §§1812-1813 identifies faith, hope, and charity as theological virtues."
+    included_in_model bool = true
+
+  edges[acquired_kind_of_virtue]
+    subject str = "acquired_virtue"
+    relation str = "is_kind_of"
+    object str = "virtue"
+    source_id str = "st_i_ii_63_2"
+      ?rationale "ST I-II, q. 63, a. 2 discusses virtues generated through human acts."
+    included_in_model bool = true
+
+  edges[infused_kind_of_virtue]
+    subject str = "infused_virtue"
+    relation str = "is_kind_of"
+    object str = "virtue"
+    source_id str = "st_i_ii_63_3"
+      ?rationale "ST I-II, q. 63, a. 3 distinguishes virtues infused by God from those acquired through human acts."
+    included_in_model bool = true
+
+  edges[theological_kind_of_infused]
+    subject str = "theological_virtue"
+    relation str = "is_kind_of"
+    object str = "infused_virtue"
+    source_id str = "st_i_ii_62_1"
+      ?rationale "ST I-II, q. 62, a. 1 describes theological virtues as infused by God and ordered to God as their object."
+    included_in_model bool = true
+
+  edges[gift_perfects_virtue]
+    subject str = "gift_of_holy_spirit"
+    relation str = "perfects"
+    object str = "virtue"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 states that the gifts complete and perfect the virtues of their recipients."
+    included_in_model bool = true
+
+  edges[sacrament_instrumental_grace]
+    subject str = "sacrament"
+    relation str = "instrumentally_causes_grace"
+    object str = "grace"
+    source_id str = "st_iii_62_1"
+      ?rationale "ST III, q. 62, a. 1 treats God as principal cause and the sacraments of the New Law as instrumental causes of grace."
+    included_in_model bool = true
+
+  edges[sacramental_grace_kind]
+    subject str = "sacramental_grace"
+    relation str = "is_kind_of"
+    object str = "grace"
+    source_id str = "ccc_1127_1129"
+      ?rationale "Catechism §1129 calls sacramental grace the grace of the Holy Spirit proper to each sacrament."
+    included_in_model bool = true
+
+  edges[prudence_virtue_cardinal]
+    subject str = "prudence_virtue"
+    relation str = "is_kind_of"
+    object str = "cardinal_virtue"
+    source_id str = "ccc_1804_1805"
+      ?rationale "Catechism §1805 lists Prudence among the four cardinal virtues."
+    included_in_model bool = true
+
+  edges[justice_virtue_cardinal]
+    subject str = "justice_virtue"
+    relation str = "is_kind_of"
+    object str = "cardinal_virtue"
+    source_id str = "ccc_1804_1805"
+      ?rationale "Catechism §1805 lists Justice among the four cardinal virtues."
+    included_in_model bool = true
+
+  edges[fortitude_virtue_cardinal]
+    subject str = "fortitude_virtue"
+    relation str = "is_kind_of"
+    object str = "cardinal_virtue"
+    source_id str = "ccc_1804_1805"
+      ?rationale "Catechism §1805 lists Fortitude among the four cardinal virtues."
+    included_in_model bool = true
+
+  edges[temperance_virtue_cardinal]
+    subject str = "temperance_virtue"
+    relation str = "is_kind_of"
+    object str = "cardinal_virtue"
+    source_id str = "ccc_1804_1805"
+      ?rationale "Catechism §1805 lists Temperance among the four cardinal virtues."
+    included_in_model bool = true
+
+  edges[faith_virtue_theological]
+    subject str = "faith_virtue"
+    relation str = "is_kind_of"
+    object str = "theological_virtue"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1813 lists Faith among the three theological virtues."
+    included_in_model bool = true
+
+  edges[hope_virtue_theological]
+    subject str = "hope_virtue"
+    relation str = "is_kind_of"
+    object str = "theological_virtue"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1813 lists Hope among the three theological virtues."
+    included_in_model bool = true
+
+  edges[charity_virtue_theological]
+    subject str = "charity_virtue"
+    relation str = "is_kind_of"
+    object str = "theological_virtue"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1813 lists Charity among the three theological virtues."
+    included_in_model bool = true
+
+  edges[wisdom_gift_kind]
+    subject str = "wisdom_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists wisdom among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[understanding_gift_kind]
+    subject str = "understanding_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists understanding among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[counsel_gift_kind]
+    subject str = "counsel_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists counsel among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[fortitude_gift_kind]
+    subject str = "fortitude_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists fortitude among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[knowledge_gift_kind]
+    subject str = "knowledge_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists knowledge among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[piety_gift_kind]
+    subject str = "piety_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists piety among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[fear_of_lord_gift_kind]
+    subject str = "fear_of_lord_gift"
+    relation str = "is_kind_of"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §1831 lists fear of the Lord among the seven gifts of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[charity_fruit_kind]
+    subject str = "charity_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists charity among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[joy_fruit_kind]
+    subject str = "joy_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists joy among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[peace_fruit_kind]
+    subject str = "peace_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists peace among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[patience_fruit_kind]
+    subject str = "patience_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists patience among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[kindness_fruit_kind]
+    subject str = "kindness_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists kindness among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[goodness_fruit_kind]
+    subject str = "goodness_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists goodness among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[generosity_fruit_kind]
+    subject str = "generosity_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists generosity among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[gentleness_fruit_kind]
+    subject str = "gentleness_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists gentleness among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[faithfulness_fruit_kind]
+    subject str = "faithfulness_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists faithfulness among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[modesty_fruit_kind]
+    subject str = "modesty_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists modesty among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[self_control_fruit_kind]
+    subject str = "self_control_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists self-control among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[chastity_fruit_kind]
+    subject str = "chastity_fruit"
+    relation str = "is_kind_of"
+    object str = "fruit_of_holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 lists chastity among the twelve fruits of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[baptism_sacrament]
+    subject str = "baptism"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Baptism among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[baptism_group]
+    subject str = "baptism"
+    relation str = "is_sacrament_of_group"
+    object str = "initiation_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Baptism in this sacramental group."
+    included_in_model bool = true
+
+  edges[confirmation_sacrament]
+    subject str = "confirmation"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Confirmation among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[confirmation_group]
+    subject str = "confirmation"
+    relation str = "is_sacrament_of_group"
+    object str = "initiation_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Confirmation in this sacramental group."
+    included_in_model bool = true
+
+  edges[eucharist_sacrament]
+    subject str = "eucharist"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Eucharist among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[eucharist_group]
+    subject str = "eucharist"
+    relation str = "is_sacrament_of_group"
+    object str = "initiation_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Eucharist in this sacramental group."
+    included_in_model bool = true
+
+  edges[penance_sacrament]
+    subject str = "penance"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Penance among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[penance_group]
+    subject str = "penance"
+    relation str = "is_sacrament_of_group"
+    object str = "healing_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Penance in this sacramental group."
+    included_in_model bool = true
+
+  edges[anointing_of_sick_sacrament]
+    subject str = "anointing_of_sick"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Anointing of the Sick among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[anointing_of_sick_group]
+    subject str = "anointing_of_sick"
+    relation str = "is_sacrament_of_group"
+    object str = "healing_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Anointing of the Sick in this sacramental group."
+    included_in_model bool = true
+
+  edges[holy_orders_sacrament]
+    subject str = "holy_orders"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Holy Orders among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[holy_orders_group]
+    subject str = "holy_orders"
+    relation str = "is_sacrament_of_group"
+    object str = "service_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Holy Orders in this sacramental group."
+    included_in_model bool = true
+
+  edges[matrimony_sacrament]
+    subject str = "matrimony"
+    relation str = "is_kind_of"
+    object str = "sacrament"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1210 lists Matrimony among the seven sacraments of the New Law."
+    included_in_model bool = true
+
+  edges[matrimony_group]
+    subject str = "matrimony"
+    relation str = "is_sacrament_of_group"
+    object str = "service_sacraments"
+    source_id str = "ccc_1210_1211"
+      ?rationale "Catechism §1211 places Matrimony in this sacramental group."
+    included_in_model bool = true
+
+  edges[baptism_character]
+    subject str = "baptism"
+    relation str = "confers_character"
+    object str = "sacramental_character"
+    source_id str = "ccc_698"
+      ?rationale "Catechism §698 identifies Baptism as conferring an indelible sacramental character."
+    included_in_model bool = true
+
+  edges[confirmation_character]
+    subject str = "confirmation"
+    relation str = "confers_character"
+    object str = "sacramental_character"
+    source_id str = "ccc_698"
+      ?rationale "Catechism §698 identifies Confirmation as conferring an indelible sacramental character."
+    included_in_model bool = true
+
+  edges[holy_orders_character]
+    subject str = "holy_orders"
+    relation str = "confers_character"
+    object str = "sacramental_character"
+    source_id str = "ccc_698"
+      ?rationale "Catechism §698 identifies Holy Orders as conferring an indelible sacramental character."
+    included_in_model bool = true
+

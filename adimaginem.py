@@ -1,7 +1,7 @@
 """Python entry point for the cited Rust ontology core.
 
-SNT evaluates the canonical DIPL project; its inspection API supplies metadata
-which SNT 0.9.4's values-only JSON generator does not include.
+SNT evaluates the canonical DIPL project; its inspection API supplies edge and
+passion rationale metadata which SNT's values-only JSON generator omits.
 """
 
 import argparse
@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PROJECT = ROOT / "dip" / "DIPfile"
 EDGE_SOURCE_PATH = re.compile(r"^ontology\.edges\[([^]]+)\]\.source_id$")
+PROFILE_SOURCE_PATH = re.compile(r"^ontology\.passion_profiles\[([^]]+)\]\.source_id$")
 
 
 def _run(command):
@@ -47,7 +48,20 @@ def load_ontology():
             if match.group(1) in rationales:
                 raise RuntimeError(f"duplicate metadata for edge {match.group(1)}")
             rationales[match.group(1)] = rationale
-    return {"ontology": data["ontology"], "rationales": rationales}
+    profiles = json.loads(_run(["snt", "dip", "list", "--project", str(PROJECT),
+                                "--query", "?ontology.passion_profiles.", "--limit", "10000",
+                                "--format", "json"]))
+    if profiles.get("truncated") or len(profiles["items"]) != profiles["total"]:
+        raise RuntimeError("SNT passion metadata listing is incomplete")
+    profile_rationales = {}
+    for item in profiles["items"]:
+        match = PROFILE_SOURCE_PATH.fullmatch(item["path"])
+        if match:
+            if match.group(1) in profile_rationales:
+                raise RuntimeError(f"duplicate metadata for passion {match.group(1)}")
+            profile_rationales[match.group(1)] = item["metadata"].get("rationale", "")
+    return {"ontology": data["ontology"], "rationales": rationales,
+            "profile_rationales": profile_rationales}
 
 
 def query(command, concept_id=None, relation=None):
@@ -71,9 +85,13 @@ def main():
     subcommands.add_parser("validate")
     concept = subcommands.add_parser("concept")
     concept.add_argument("id")
+    relation_type = subcommands.add_parser("relation")
+    relation_type.add_argument("id")
     outgoing = subcommands.add_parser("outgoing")
     outgoing.add_argument("id")
     outgoing.add_argument("--relation")
+    passion = subcommands.add_parser("passion")
+    passion.add_argument("id")
     arguments = parser.parse_args()
     try:
         result = query(arguments.command, getattr(arguments, "id", None),

@@ -1,0 +1,138 @@
+# God alone creates; classification and conditions use separate predicates.
+ontology
+  edges[god_same_as_trinity]
+    subject str = "god"
+    relation str = "denotes_same_god_as"
+    object str = "trinity"
+    source_id str = "ccc_290_292"
+      ?rationale "Catechism §§290-292 teaches that creation is the common work of the one Holy Trinity; this edge resolves two labels for that one God."
+    evidence_kind = "editorial_classification"
+    included_in_model bool = true
+
+  edges[god_creates_all]
+    subject str = "god"
+    relation str = "creates"
+    object str = "created_being"
+    source_id str = "ccc_290_292"
+      ?rationale "Catechism §290 says all that exists outside God depends on God for being, and God alone is Creator."
+    included_in_model bool = true
+
+  edges[god_creates_angels]
+    subject str = "god"
+    relation str = "creates"
+    object str = "angel"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §327 includes the angelic order among the creatures God made from nothing."
+    included_in_model bool = true
+
+  edges[god_creates_humans]
+    subject str = "god"
+    relation str = "creates"
+    object str = "human_person"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §327 includes the human creature, composed of spirit and body, in God's creation."
+    included_in_model bool = true
+
+  edges[god_creates_animals]
+    subject str = "god"
+    relation str = "creates"
+    object str = "nonhuman_animal"
+    source_id str = "ccc_337_343"
+      ?rationale "Catechism §§337-340 attributes the diverse visible creatures, including eagle and sparrow, to God the Creator."
+    included_in_model bool = true
+
+  edges[god_creates_plants]
+    subject str = "god"
+    relation str = "creates"
+    object str = "plant"
+    source_id str = "ccc_337_343"
+      ?rationale "Catechism §§337-340 attributes the diverse visible creatures, including cedar and flower, to God the Creator."
+    included_in_model bool = true
+
+  edges[god_creates_inanimate]
+    subject str = "god"
+    relation str = "creates"
+    object str = "inanimate_material_creature"
+    source_id str = "ccc_337_343"
+      ?rationale "Catechism §§337-339 says the visible material world owes its existence to God."
+    included_in_model bool = true
+
+  edges[spiritual_is_created]
+    subject str = "spiritual_creature"
+    relation str = "is_kind_of"
+    object str = "created_being"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §327 distinguishes the spiritual order of created beings."
+    included_in_model bool = true
+
+  edges[corporeal_is_created]
+    subject str = "corporeal_creature"
+    relation str = "is_kind_of"
+    object str = "created_being"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §327 distinguishes the corporeal order of created beings."
+    included_in_model bool = true
+
+  edges[angel_is_spiritual]
+    subject str = "angel"
+    relation str = "is_kind_of"
+    object str = "spiritual_creature"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §§327-330 identifies angels as purely spiritual creatures."
+    included_in_model bool = true
+
+  edges[human_is_created]
+    subject str = "human_person"
+    relation str = "is_kind_of"
+    object str = "created_being"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §327 names the human creature as a composite sharing the spiritual and corporeal orders."
+    included_in_model bool = true
+
+  edges[animal_is_corporeal]
+    subject str = "nonhuman_animal"
+    relation str = "is_kind_of"
+    object str = "corporeal_creature"
+    source_id str = "ccc_337_343"
+      ?rationale "Catechism §§337-340 includes animals among the diverse visible creatures."
+    included_in_model bool = true
+
+  edges[plant_is_corporeal]
+    subject str = "plant"
+    relation str = "is_kind_of"
+    object str = "corporeal_creature"
+    source_id str = "ccc_337_343"
+      ?rationale "Catechism §§337-340 includes plants among the diverse visible creatures."
+    included_in_model bool = true
+
+  edges[inanimate_is_corporeal]
+    subject str = "inanimate_material_creature"
+    relation str = "is_kind_of"
+    object str = "corporeal_creature"
+    source_id str = "ccc_337_343"
+      ?rationale "Catechism §§337-339 describes material beings in the visible creation."
+    included_in_model bool = true
+
+  edges[demon_is_fallen_angel]
+    subject str = "fallen_angel"
+    relation str = "is_fallen_condition_of"
+    object str = "angel"
+    source_id str = "ccc_391_392"
+      ?rationale "Catechism §§391-392 says demons were created good as angels and became evil by their own free act."
+    included_in_model bool = true
+
+  edges[angel_lacks_body]
+    subject str = "angel"
+    relation str = "lacks_corporeality"
+    object str = "corporeality"
+    source_id str = "ccc_327_330"
+      ?rationale "Catechism §§328-330 calls angels non-corporeal, purely spiritual creatures."
+    included_in_model bool = true
+
+  edges[god_pure_act]
+    subject str = "god"
+    relation str = "is_pure_act"
+    object str = "pure_act"
+    source_id str = "st_i_3_1"
+      ?rationale "ST I, q. 3, a. 1 argues that God has no potentiality and is pure act."
+    included_in_model bool = true
