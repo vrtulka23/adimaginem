@@ -1,0 +1,8 @@
+?descr "A cited directed relation between two concepts in the human ontology"
+subject str
+relation str
+  !options ["actualizes", "distinct_in_essence_from", "has_corporeal_dimension", "has_power_genus", "has_substantial_form", "inheres_in_subject", "is_in_potency_to", "is_kind_of", "is_realized_in", "natural_principle_of", "principle_of_becoming"]
+  !labels ["Actualizes", "Distinct in essence from", "Has corporeal dimension", "Has power genus", "Has substantial form", "Inheres in subject", "Is in potency to", "Is a kind of", "Is realized in", "Is a natural principle of", "Is a principle of becoming"]
+object str
+source_id str
+included_in_model bool

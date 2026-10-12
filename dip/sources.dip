@@ -1,0 +1,93 @@
+ontology
+  sources map : ontological_source
+  # The source registry keeps passage-level provenance separate from edges.
+  sources[st_i_75_4]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 75, a. 4, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1075.htm"
+      !constant
+  sources[st_i_76_1]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 76, a. 1, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1076.htm"
+      !constant
+  sources[st_i_77_1]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 77, a. 1, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1077.htm"
+      !constant
+  sources[st_i_77_6]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 77, a. 6, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1077.htm"
+      !constant
+  sources[st_i_78_1]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 78, a. 1, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1078.htm"
+      !constant
+  sources[dpn_8]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "De principiis naturae"
+      !constant
+    locator str = "section 8, English edition linked here"
+      !constant
+    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      !constant
+  sources[dpn_1]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "De principiis naturae"
+      !constant
+    locator str = "section 1, English edition linked here"
+      !constant
+    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      !constant
+  sources[dpn_3]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "De principiis naturae"
+      !constant
+    locator str = "sections 3-4, English edition linked here"
+      !constant
+    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      !constant
+  sources[dpn_12]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "De principiis naturae"
+      !constant
+    locator str = "section 12, English edition linked here"
+      !constant
+    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      !constant
+  sources[dpn_20]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "De principiis naturae"
+      !constant
+    locator str = "section 20, English edition linked here"
+      !constant
+    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      !constant

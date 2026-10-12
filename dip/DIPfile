@@ -1,0 +1,16 @@
+schemas[]
+  name = "ontological_concept"
+  file = "schemas/ontological_concept.dipl"
+schemas[]
+  name = "ontological_source"
+  file = "schemas/ontological_source.dipl"
+schemas[]
+  name = "ontological_edge"
+  file = "schemas/ontological_edge.dipl"
+
+code[]
+  file = "concepts.dip"
+code[]
+  file = "sources.dip"
+code[]
+  file = "edges.dip"

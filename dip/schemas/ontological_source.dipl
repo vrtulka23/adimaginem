@@ -1,0 +1,5 @@
+?descr "A passage-level citation supporting an ontological concept or relation"
+author str
+work str
+locator str
+url str

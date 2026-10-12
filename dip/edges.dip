@@ -1,0 +1,192 @@
+# Cited relations. `included_in_model` selects a simulation view; it does not alter a claim.
+ontology
+  edges map : ontological_edge
+  edges[person_has_body]
+    subject str = "human_person"
+      !constant
+    relation str = "has_corporeal_dimension"
+      !constant
+      ?descr "The body belongs to the human being; the person is not the soul alone."
+    object str = "human_body"
+      !constant
+    source_id str = "st_i_75_4"
+      !constant
+    included_in_model bool = true
+  edges[person_has_form]
+    subject str = "human_person"
+      !constant
+    relation str = "has_substantial_form"
+      !constant
+      ?descr "The intellectual soul is the substantial form of the human body."
+    object str = "rational_soul"
+      !constant
+    source_id str = "st_i_76_1"
+      !constant
+    included_in_model bool = true
+  edges[soul_distinct_from_power]
+    subject str = "rational_soul"
+      !constant
+    relation str = "distinct_in_essence_from"
+      !constant
+      ?descr "A power of the soul is not identical with the soul's essence."
+    object str = "soul_power"
+      !constant
+    source_id str = "st_i_77_1"
+      !constant
+    included_in_model bool = true
+  edges[soul_origin_of_powers]
+    subject str = "rational_soul"
+      !constant
+    relation str = "natural_principle_of"
+      !constant
+      ?descr "The powers proceed from the soul's essence as natural properties."
+    object str = "soul_power"
+      !constant
+    source_id str = "st_i_77_6"
+      !constant
+    included_in_model bool = true
+  edges[soul_vegetative_power]
+    subject str = "rational_soul"
+      !constant
+    relation str = "has_power_genus"
+      !constant
+    object str = "vegetative_power"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+  edges[soul_sensitive_power]
+    subject str = "rational_soul"
+      !constant
+    relation str = "has_power_genus"
+      !constant
+    object str = "sensitive_power"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+  edges[soul_appetitive_power]
+    subject str = "rational_soul"
+      !constant
+    relation str = "has_power_genus"
+      !constant
+    object str = "appetitive_power"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+  edges[soul_locomotive_power]
+    subject str = "rational_soul"
+      !constant
+    relation str = "has_power_genus"
+      !constant
+    object str = "locomotive_power"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+  edges[soul_intellectual_power]
+    subject str = "rational_soul"
+      !constant
+    relation str = "has_power_genus"
+      !constant
+    object str = "intellectual_power"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+  edges[matter_potential_to_form]
+    subject str = "matter"
+      !constant
+    relation str = "is_in_potency_to"
+      !constant
+      ?descr "Matter is understood as in potency to form in natural generation."
+    object str = "form"
+      !constant
+    source_id str = "dpn_8"
+      !constant
+    included_in_model bool = true
+  edges[form_actualizes_matter]
+    subject str = "form"
+      !constant
+    relation str = "actualizes"
+      !constant
+      ?descr "Form makes what was in potency be in act."
+    object str = "matter"
+      !constant
+    source_id str = "dpn_8"
+      !constant
+    included_in_model bool = true
+  edges[privation_in_becoming]
+    subject str = "privation"
+      !constant
+    relation str = "principle_of_becoming"
+      !constant
+      ?descr "Privation is a principle of becoming, not of the completed thing's being."
+    object str = "natural_generation"
+      !constant
+    source_id str = "dpn_12"
+      !constant
+    included_in_model bool = true
+  edges[potency_to_act]
+    subject str = "potentiality"
+      !constant
+    relation str = "is_realized_in"
+      !constant
+      ?descr "The cited text distinguishes what can be from what already is in act."
+    object str = "actuality"
+      !constant
+    source_id str = "dpn_1"
+      !constant
+    included_in_model bool = true
+  edges[accident_in_substance]
+    subject str = "accident"
+      !constant
+    relation str = "inheres_in_subject"
+      !constant
+      ?descr "An accident is in a subject that already has substantial existence."
+    object str = "substance"
+      !constant
+    source_id str = "dpn_3"
+      !constant
+    included_in_model bool = true
+  edges[material_cause_kind]
+    subject str = "material_cause"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "cause"
+      !constant
+    source_id str = "dpn_20"
+      !constant
+    included_in_model bool = true
+  edges[formal_cause_kind]
+    subject str = "formal_cause"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "cause"
+      !constant
+    source_id str = "dpn_20"
+      !constant
+    included_in_model bool = true
+  edges[efficient_cause_kind]
+    subject str = "efficient_cause"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "cause"
+      !constant
+    source_id str = "dpn_20"
+      !constant
+    included_in_model bool = true
+  edges[final_cause_kind]
+    subject str = "final_cause"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "cause"
+      !constant
+    source_id str = "dpn_20"
+      !constant
+    included_in_model bool = true
