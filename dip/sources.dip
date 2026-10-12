@@ -10,6 +10,7 @@ ontology
       !constant
     url str = "https://www.newadvent.org/summa/1075.htm"
       !constant
+
   sources[st_i_76_1]
     author str = "Thomas Aquinas"
       !constant
@@ -19,6 +20,7 @@ ontology
       !constant
     url str = "https://www.newadvent.org/summa/1076.htm"
       !constant
+
   sources[st_i_77_1]
     author str = "Thomas Aquinas"
       !constant
@@ -28,6 +30,7 @@ ontology
       !constant
     url str = "https://www.newadvent.org/summa/1077.htm"
       !constant
+
   sources[st_i_77_6]
     author str = "Thomas Aquinas"
       !constant
@@ -37,6 +40,7 @@ ontology
       !constant
     url str = "https://www.newadvent.org/summa/1077.htm"
       !constant
+
   sources[st_i_78_1]
     author str = "Thomas Aquinas"
       !constant
@@ -46,6 +50,107 @@ ontology
       !constant
     url str = "https://www.newadvent.org/summa/1078.htm"
       !constant
+
+  sources[st_i_78_2]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 78, a. 2, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1078.htm"
+      !constant
+
+  sources[st_i_78_3]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 78, a. 3, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1078.htm"
+      !constant
+
+  sources[st_i_78_4]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 78, a. 4, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1078.htm"
+      !constant
+
+  sources[st_i_79_2]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 79, a. 2, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1079.htm"
+      !constant
+
+  sources[st_i_79_3]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 79, a. 3, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1079.htm"
+      !constant
+
+  sources[st_i_80_2]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 80, a. 2, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1080.htm"
+      !constant
+
+  sources[st_i_81_2]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 81, a. 2, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1081.htm"
+      !constant
+
+  sources[st_i_83_4]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I, q. 83, a. 4, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/1083.htm"
+      !constant
+
+  sources[st_i_ii_22_3]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I-II, q. 22, a. 3, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/2022.htm"
+      !constant
+
+  sources[st_i_ii_23_4]
+    author str = "Thomas Aquinas"
+      !constant
+    work str = "Summa theologiae"
+      !constant
+    locator str = "I-II, q. 23, a. 4, respondeo"
+      !constant
+    url str = "https://www.newadvent.org/summa/2023.htm"
+      !constant
+
   sources[dpn_8]
     author str = "Thomas Aquinas"
       !constant
@@ -55,6 +160,7 @@ ontology
       !constant
     url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
       !constant
+
   sources[dpn_1]
     author str = "Thomas Aquinas"
       !constant
@@ -64,6 +170,7 @@ ontology
       !constant
     url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
       !constant
+
   sources[dpn_3]
     author str = "Thomas Aquinas"
       !constant
@@ -73,6 +180,7 @@ ontology
       !constant
     url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
       !constant
+
   sources[dpn_12]
     author str = "Thomas Aquinas"
       !constant
@@ -82,6 +190,7 @@ ontology
       !constant
     url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
       !constant
+
   sources[dpn_20]
     author str = "Thomas Aquinas"
       !constant

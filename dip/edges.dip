@@ -12,6 +12,7 @@ ontology
     source_id str = "st_i_75_4"
       !constant
     included_in_model bool = true
+
   edges[person_has_form]
     subject str = "human_person"
       !constant
@@ -23,6 +24,7 @@ ontology
     source_id str = "st_i_76_1"
       !constant
     included_in_model bool = true
+
   edges[soul_distinct_from_power]
     subject str = "rational_soul"
       !constant
@@ -34,6 +36,7 @@ ontology
     source_id str = "st_i_77_1"
       !constant
     included_in_model bool = true
+
   edges[soul_origin_of_powers]
     subject str = "rational_soul"
       !constant
@@ -45,6 +48,7 @@ ontology
     source_id str = "st_i_77_6"
       !constant
     included_in_model bool = true
+
   edges[soul_vegetative_power]
     subject str = "rational_soul"
       !constant
@@ -55,6 +59,7 @@ ontology
     source_id str = "st_i_78_1"
       !constant
     included_in_model bool = true
+
   edges[soul_sensitive_power]
     subject str = "rational_soul"
       !constant
@@ -65,6 +70,7 @@ ontology
     source_id str = "st_i_78_1"
       !constant
     included_in_model bool = true
+
   edges[soul_appetitive_power]
     subject str = "rational_soul"
       !constant
@@ -75,6 +81,7 @@ ontology
     source_id str = "st_i_78_1"
       !constant
     included_in_model bool = true
+
   edges[soul_locomotive_power]
     subject str = "rational_soul"
       !constant
@@ -85,6 +92,7 @@ ontology
     source_id str = "st_i_78_1"
       !constant
     included_in_model bool = true
+
   edges[soul_intellectual_power]
     subject str = "rational_soul"
       !constant
@@ -95,6 +103,7 @@ ontology
     source_id str = "st_i_78_1"
       !constant
     included_in_model bool = true
+
   edges[matter_potential_to_form]
     subject str = "matter"
       !constant
@@ -106,6 +115,7 @@ ontology
     source_id str = "dpn_8"
       !constant
     included_in_model bool = true
+
   edges[form_actualizes_matter]
     subject str = "form"
       !constant
@@ -117,6 +127,7 @@ ontology
     source_id str = "dpn_8"
       !constant
     included_in_model bool = true
+
   edges[privation_in_becoming]
     subject str = "privation"
       !constant
@@ -128,6 +139,7 @@ ontology
     source_id str = "dpn_12"
       !constant
     included_in_model bool = true
+
   edges[potency_to_act]
     subject str = "potentiality"
       !constant
@@ -139,6 +151,7 @@ ontology
     source_id str = "dpn_1"
       !constant
     included_in_model bool = true
+
   edges[accident_in_substance]
     subject str = "accident"
       !constant
@@ -150,6 +163,7 @@ ontology
     source_id str = "dpn_3"
       !constant
     included_in_model bool = true
+
   edges[material_cause_kind]
     subject str = "material_cause"
       !constant
@@ -160,6 +174,7 @@ ontology
     source_id str = "dpn_20"
       !constant
     included_in_model bool = true
+
   edges[formal_cause_kind]
     subject str = "formal_cause"
       !constant
@@ -170,6 +185,7 @@ ontology
     source_id str = "dpn_20"
       !constant
     included_in_model bool = true
+
   edges[efficient_cause_kind]
     subject str = "efficient_cause"
       !constant
@@ -180,6 +196,7 @@ ontology
     source_id str = "dpn_20"
       !constant
     included_in_model bool = true
+
   edges[final_cause_kind]
     subject str = "final_cause"
       !constant
@@ -188,5 +205,380 @@ ontology
     object str = "cause"
       !constant
     source_id str = "dpn_20"
+      !constant
+    included_in_model bool = true
+  # Human faculties, appetites, and passions. Taxonomic edges denote power types or passion types.
+
+  edges[body_has_organ]
+    subject str = "human_body"
+      !constant
+    relation str = "has_part"
+      !constant
+    object str = "bodily_organ"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+
+  edges[sensitive_power_uses_organ]
+    subject str = "sensitive_power"
+      !constant
+    relation str = "operates_through_organ"
+      !constant
+    object str = "bodily_organ"
+      !constant
+    source_id str = "st_i_78_1"
+      !constant
+    included_in_model bool = true
+
+  edges[external_sense_kind]
+    subject str = "external_sense"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "sensitive_power"
+      !constant
+    source_id str = "st_i_78_3"
+      !constant
+    included_in_model bool = true
+
+  edges[internal_sense_kind]
+    subject str = "internal_sense"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "sensitive_power"
+      !constant
+    source_id str = "st_i_78_4"
+      !constant
+    included_in_model bool = true
+
+  edges[sight_kind]
+    subject str = "sight"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "external_sense"
+      !constant
+    source_id str = "st_i_78_3"
+      !constant
+    included_in_model bool = true
+
+  edges[hearing_kind]
+    subject str = "hearing"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "external_sense"
+      !constant
+    source_id str = "st_i_78_3"
+      !constant
+    included_in_model bool = true
+
+  edges[smell_kind]
+    subject str = "smell"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "external_sense"
+      !constant
+    source_id str = "st_i_78_3"
+      !constant
+    included_in_model bool = true
+
+  edges[taste_kind]
+    subject str = "taste"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "external_sense"
+      !constant
+    source_id str = "st_i_78_3"
+      !constant
+    included_in_model bool = true
+
+  edges[touch_kind]
+    subject str = "touch"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "external_sense"
+      !constant
+    source_id str = "st_i_78_3"
+      !constant
+    included_in_model bool = true
+
+  edges[common_sense_kind]
+    subject str = "common_sense"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "internal_sense"
+      !constant
+    source_id str = "st_i_78_4"
+      !constant
+    included_in_model bool = true
+
+  edges[imagination_kind]
+    subject str = "imagination"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "internal_sense"
+      !constant
+    source_id str = "st_i_78_4"
+      !constant
+    included_in_model bool = true
+
+  edges[cogitative_kind]
+    subject str = "cogitative_power"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "internal_sense"
+      !constant
+    source_id str = "st_i_78_4"
+      !constant
+    included_in_model bool = true
+
+  edges[sensitive_memory_kind]
+    subject str = "sensitive_memory"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "internal_sense"
+      !constant
+    source_id str = "st_i_78_4"
+      !constant
+    included_in_model bool = true
+
+  edges[nutritive_kind]
+    subject str = "nutritive_power"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "vegetative_power"
+      !constant
+    source_id str = "st_i_78_2"
+      !constant
+    included_in_model bool = true
+
+  edges[augmentative_kind]
+    subject str = "augmentative_power"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "vegetative_power"
+      !constant
+    source_id str = "st_i_78_2"
+      !constant
+    included_in_model bool = true
+
+  edges[generative_kind]
+    subject str = "generative_power"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "vegetative_power"
+      !constant
+    source_id str = "st_i_78_2"
+      !constant
+    included_in_model bool = true
+
+  edges[possible_intellect_kind]
+    subject str = "possible_intellect"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "intellectual_power"
+      !constant
+    source_id str = "st_i_79_2"
+      !constant
+    included_in_model bool = true
+
+  edges[agent_intellect_kind]
+    subject str = "agent_intellect"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "intellectual_power"
+      !constant
+    source_id str = "st_i_79_3"
+      !constant
+    included_in_model bool = true
+
+  edges[sensitive_appetite_kind]
+    subject str = "sensitive_appetite"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "appetitive_power"
+      !constant
+    source_id str = "st_i_80_2"
+      !constant
+    included_in_model bool = true
+
+  edges[will_kind]
+    subject str = "will"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "appetitive_power"
+      !constant
+    source_id str = "st_i_80_2"
+      !constant
+    included_in_model bool = true
+
+  edges[concupiscible_kind]
+    subject str = "concupiscible_appetite"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "sensitive_appetite"
+      !constant
+    source_id str = "st_i_81_2"
+      !constant
+    included_in_model bool = true
+
+  edges[irascible_kind]
+    subject str = "irascible_appetite"
+      !constant
+    relation str = "is_kind_of"
+      !constant
+    object str = "sensitive_appetite"
+      !constant
+    source_id str = "st_i_81_2"
+      !constant
+    included_in_model bool = true
+
+  edges[choice_of_will]
+    subject str = "choice"
+      !constant
+    relation str = "is_act_of"
+      !constant
+    object str = "will"
+      !constant
+    source_id str = "st_i_83_4"
+      !constant
+    included_in_model bool = true
+
+  edges[love_of_concupiscible]
+    subject str = "love_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "concupiscible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[hatred_of_concupiscible]
+    subject str = "hatred_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "concupiscible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[desire_of_concupiscible]
+    subject str = "desire_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "concupiscible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[aversion_of_concupiscible]
+    subject str = "aversion_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "concupiscible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[joy_of_concupiscible]
+    subject str = "joy_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "concupiscible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[sorrow_of_concupiscible]
+    subject str = "sorrow_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "concupiscible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[hope_of_irascible]
+    subject str = "hope_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "irascible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[despair_of_irascible]
+    subject str = "despair_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "irascible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[fear_of_irascible]
+    subject str = "fear_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "irascible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[daring_of_irascible]
+    subject str = "daring_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "irascible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
+      !constant
+    included_in_model bool = true
+
+  edges[anger_of_irascible]
+    subject str = "anger_passion"
+      !constant
+    relation str = "is_passion_of"
+      !constant
+    object str = "irascible_appetite"
+      !constant
+    source_id str = "st_i_ii_23_4"
       !constant
     included_in_model bool = true

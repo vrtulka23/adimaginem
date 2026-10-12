@@ -1,10 +1,11 @@
 ?descr "A cited philosophical concept used by the human ontology"
 label str
+latin_name str
 domain str
   !options ["anthropology", "metaphysics"]
   !labels ["Human ontology", "General metaphysics"]
 category str
-  !options ["person", "body", "substantial_form", "power", "power_genus", "principle", "process"]
-  !labels ["Person", "Body", "Substantial form", "Power", "Power genus", "Principle", "Process"]
+  !options ["person", "body", "organ", "substantial_form", "power", "power_genus", "act", "passion", "principle", "process"]
+  !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process"]
 note str
 source_id str
