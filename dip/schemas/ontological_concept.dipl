@@ -9,3 +9,6 @@ category str
   !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process"]
 note str
 source_id str
+review_status str = "draft"
+  !options ["draft", "reviewed", "contested"]
+  !labels ["Draft", "Reviewed", "Contested"]

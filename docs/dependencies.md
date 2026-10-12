@@ -8,7 +8,7 @@ Use DIPL types, constraints, units where meaningful, derived relationships, and 
 
 The [`dip/DIPfile`](../dip/DIPfile) is the project entry point. It currently loads the [cited ontology graph](ontology.md), which holds source-backed concepts and relations for ingestion by the future computational model.
 
-SNT3 currently documents [Python bindings](https://github.com/scinumtools/snt3#interfaces) and [Rust parameter generation](https://github.com/scinumtools/snt3#features). The first implementation should verify the chosen Rust handoff against the version of SNT3 it pins, rather than assume a native Rust DIPL runtime API.
+The first implementation uses SNT3 0.9.4's JSON generation and metadata inspection commands as its handoff to Rust; see the [executable slice](architecture.md#first-executable-slice). Rust uses `serde` and `serde_json` to deserialize the evaluated graph. These are implementation dependencies, not stores for project parameters.
 
 ## Other formats
 

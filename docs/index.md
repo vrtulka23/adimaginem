@@ -10,4 +10,5 @@ The project follows a [scholarly and Catholic method](method.md): claims about A
 - [Scholarly and Catholic method](method.md): interpretive authorities and review standards for model claims.
 - [Ontology data](ontology.md): structure and source provenance of the DIPL concept and edge graph.
 - [Architecture](architecture.md): responsibilities of the Rust core and Python outer layer.
+- [First executable slice](architecture.md#first-executable-slice): run validation and cited graph queries.
 - [Dependencies and data formats](dependencies.md): SNT3/DIPL and the rules for other serialization formats.

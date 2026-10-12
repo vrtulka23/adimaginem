@@ -3,582 +3,428 @@ ontology
   edges map : ontological_edge
   edges[person_has_body]
     subject str = "human_person"
-      !constant
     relation str = "has_corporeal_dimension"
-      !constant
-      ?descr "The body belongs to the human being; the person is not the soul alone."
     object str = "human_body"
-      !constant
     source_id str = "st_i_75_4"
-      !constant
+      ?descr "The body belongs to the human being; the person is not the soul alone."
+      ?rationale "ST I, q. 75, a. 4 argues that a human being is not the soul alone; corporeality belongs to the human composite."
     included_in_model bool = true
 
   edges[person_has_form]
     subject str = "human_person"
-      !constant
     relation str = "has_substantial_form"
-      !constant
-      ?descr "The intellectual soul is the substantial form of the human body."
     object str = "rational_soul"
-      !constant
     source_id str = "st_i_76_1"
-      !constant
+      ?descr "The intellectual soul is the substantial form of the human body."
+      ?rationale "ST I, q. 76, a. 1 identifies the intellectual soul as the form of the human body."
     included_in_model bool = true
 
   edges[soul_distinct_from_power]
     subject str = "rational_soul"
-      !constant
     relation str = "distinct_in_essence_from"
-      !constant
-      ?descr "A power of the soul is not identical with the soul's essence."
     object str = "soul_power"
-      !constant
     source_id str = "st_i_77_1"
-      !constant
+      ?descr "A power of the soul is not identical with the soul's essence."
+      ?rationale "ST I, q. 77, a. 1 distinguishes the soul's essence from its operative powers."
     included_in_model bool = true
 
   edges[soul_origin_of_powers]
     subject str = "rational_soul"
-      !constant
     relation str = "natural_principle_of"
-      !constant
-      ?descr "The powers proceed from the soul's essence as natural properties."
     object str = "soul_power"
-      !constant
     source_id str = "st_i_77_6"
-      !constant
+      ?descr "The powers proceed from the soul's essence as natural properties."
+      ?rationale "ST I, q. 77, a. 6 derives powers from the soul's essence as natural properties."
     included_in_model bool = true
 
   edges[soul_vegetative_power]
     subject str = "rational_soul"
-      !constant
     relation str = "has_power_genus"
-      !constant
     object str = "vegetative_power"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 counts vegetative power among five genera of soul powers."
     included_in_model bool = true
 
   edges[soul_sensitive_power]
     subject str = "rational_soul"
-      !constant
     relation str = "has_power_genus"
-      !constant
     object str = "sensitive_power"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 counts sensitive power among five genera of soul powers."
     included_in_model bool = true
 
   edges[soul_appetitive_power]
     subject str = "rational_soul"
-      !constant
     relation str = "has_power_genus"
-      !constant
     object str = "appetitive_power"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 counts appetitive power among five genera of soul powers."
     included_in_model bool = true
 
   edges[soul_locomotive_power]
     subject str = "rational_soul"
-      !constant
     relation str = "has_power_genus"
-      !constant
     object str = "locomotive_power"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 counts locomotive power among five genera of soul powers."
     included_in_model bool = true
 
   edges[soul_intellectual_power]
     subject str = "rational_soul"
-      !constant
     relation str = "has_power_genus"
-      !constant
     object str = "intellectual_power"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 counts intellectual power among five genera of soul powers."
     included_in_model bool = true
 
   edges[matter_potential_to_form]
     subject str = "matter"
-      !constant
     relation str = "is_in_potency_to"
-      !constant
-      ?descr "Matter is understood as in potency to form in natural generation."
     object str = "form"
-      !constant
     source_id str = "dpn_8"
-      !constant
+      ?descr "Matter is understood as in potency to form in natural generation."
+      ?rationale "De principiis naturae section 8 explains matter through its capacity to receive form in generation."
     included_in_model bool = true
 
   edges[form_actualizes_matter]
     subject str = "form"
-      !constant
     relation str = "actualizes"
-      !constant
-      ?descr "Form makes what was in potency be in act."
     object str = "matter"
-      !constant
     source_id str = "dpn_8"
-      !constant
+      ?descr "Form makes what was in potency be in act."
+      ?rationale "De principiis naturae section 8 treats form as that by which what is potential becomes actual."
     included_in_model bool = true
 
   edges[privation_in_becoming]
     subject str = "privation"
-      !constant
     relation str = "principle_of_becoming"
-      !constant
-      ?descr "Privation is a principle of becoming, not of the completed thing's being."
     object str = "natural_generation"
-      !constant
     source_id str = "dpn_12"
-      !constant
+      ?descr "Privation is a principle of becoming, not of the completed thing's being."
+      ?rationale "De principiis naturae section 12 distinguishes privation as a principle of becoming from the principles of the completed thing."
     included_in_model bool = true
 
   edges[potency_to_act]
     subject str = "potentiality"
-      !constant
     relation str = "is_realized_in"
-      !constant
-      ?descr "The cited text distinguishes what can be from what already is in act."
     object str = "actuality"
-      !constant
     source_id str = "dpn_1"
-      !constant
+      ?descr "The cited text distinguishes what can be from what already is in act."
+      ?rationale "De principiis naturae section 1 contrasts being in potency with being in act; this edge summarizes that distinction."
+    evidence_kind = "interpretive_inference"
     included_in_model bool = true
 
   edges[accident_in_substance]
     subject str = "accident"
-      !constant
     relation str = "inheres_in_subject"
-      !constant
-      ?descr "An accident is in a subject that already has substantial existence."
     object str = "substance"
-      !constant
     source_id str = "dpn_3"
-      !constant
+      ?descr "An accident is in a subject that already has substantial existence."
+      ?rationale "De principiis naturae sections 3-4 distinguishes what exists in a subject from substantial being."
     included_in_model bool = true
 
   edges[material_cause_kind]
     subject str = "material_cause"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "cause"
-      !constant
     source_id str = "dpn_20"
-      !constant
+      ?rationale "De principiis naturae section 20 enumerates matter among the four causes."
     included_in_model bool = true
 
   edges[formal_cause_kind]
     subject str = "formal_cause"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "cause"
-      !constant
     source_id str = "dpn_20"
-      !constant
+      ?rationale "De principiis naturae section 20 enumerates form among the four causes."
     included_in_model bool = true
 
   edges[efficient_cause_kind]
     subject str = "efficient_cause"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "cause"
-      !constant
     source_id str = "dpn_20"
-      !constant
+      ?rationale "De principiis naturae section 20 enumerates the agent among the four causes."
     included_in_model bool = true
 
   edges[final_cause_kind]
     subject str = "final_cause"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "cause"
-      !constant
     source_id str = "dpn_20"
-      !constant
+      ?rationale "De principiis naturae section 20 enumerates the end among the four causes."
     included_in_model bool = true
   # Human faculties, appetites, and passions. Taxonomic edges denote power types or passion types.
 
   edges[body_has_organ]
     subject str = "human_body"
-      !constant
     relation str = "has_part"
-      !constant
     object str = "bodily_organ"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 describes sensitive operations through corporeal organs; this generic body-to-organ edge is an editorial abstraction."
+    evidence_kind = "editorial_classification"
     included_in_model bool = true
 
   edges[sensitive_power_uses_organ]
     subject str = "sensitive_power"
-      !constant
     relation str = "operates_through_organ"
-      !constant
     object str = "bodily_organ"
-      !constant
     source_id str = "st_i_78_1"
-      !constant
+      ?rationale "ST I, q. 78, a. 1 contrasts sensitive operations through a corporeal organ with intellectual operations without one."
     included_in_model bool = true
 
   edges[external_sense_kind]
     subject str = "external_sense"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "sensitive_power"
-      !constant
     source_id str = "st_i_78_3"
-      !constant
+      ?rationale "ST I, q. 78, a. 3 treats the exterior senses as sensitive powers distinguished by their sensible objects."
     included_in_model bool = true
 
   edges[internal_sense_kind]
     subject str = "internal_sense"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "sensitive_power"
-      !constant
     source_id str = "st_i_78_4"
-      !constant
+      ?rationale "ST I, q. 78, a. 4 distinguishes interior sensitive powers needed beyond exterior sensation."
     included_in_model bool = true
 
   edges[sight_kind]
     subject str = "sight"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "external_sense"
-      !constant
     source_id str = "st_i_78_3"
-      !constant
+      ?rationale "ST I, q. 78, a. 3 names sight among the five exterior senses."
     included_in_model bool = true
 
   edges[hearing_kind]
     subject str = "hearing"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "external_sense"
-      !constant
     source_id str = "st_i_78_3"
-      !constant
+      ?rationale "ST I, q. 78, a. 3 names hearing among the five exterior senses."
     included_in_model bool = true
 
   edges[smell_kind]
     subject str = "smell"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "external_sense"
-      !constant
     source_id str = "st_i_78_3"
-      !constant
+      ?rationale "ST I, q. 78, a. 3 names smell among the five exterior senses."
     included_in_model bool = true
 
   edges[taste_kind]
     subject str = "taste"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "external_sense"
-      !constant
     source_id str = "st_i_78_3"
-      !constant
+      ?rationale "ST I, q. 78, a. 3 names taste among the five exterior senses."
     included_in_model bool = true
 
   edges[touch_kind]
     subject str = "touch"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "external_sense"
-      !constant
     source_id str = "st_i_78_3"
-      !constant
+      ?rationale "ST I, q. 78, a. 3 names touch among the five exterior senses, while discussing its possible further division."
     included_in_model bool = true
 
   edges[common_sense_kind]
     subject str = "common_sense"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "internal_sense"
-      !constant
     source_id str = "st_i_78_4"
-      !constant
+      ?rationale "ST I, q. 78, a. 4 assigns discernment among exterior sensations to the common sense."
     included_in_model bool = true
 
   edges[imagination_kind]
     subject str = "imagination"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "internal_sense"
-      !constant
     source_id str = "st_i_78_4"
-      !constant
+      ?rationale "ST I, q. 78, a. 4 assigns retention of sensible forms to imagination."
     included_in_model bool = true
 
   edges[cogitative_kind]
     subject str = "cogitative_power"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "internal_sense"
-      !constant
     source_id str = "st_i_78_4"
-      !constant
+      ?rationale "ST I, q. 78, a. 4 identifies the human cogitative power with particular reasoning about intentions."
     included_in_model bool = true
 
   edges[sensitive_memory_kind]
     subject str = "sensitive_memory"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "internal_sense"
-      !constant
     source_id str = "st_i_78_4"
-      !constant
+      ?rationale "ST I, q. 78, a. 4 assigns preservation of intentions to the memorative power."
     included_in_model bool = true
 
   edges[nutritive_kind]
     subject str = "nutritive_power"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "vegetative_power"
-      !constant
     source_id str = "st_i_78_2"
-      !constant
+      ?rationale "ST I, q. 78, a. 2 distinguishes nutrition as one of three vegetative powers."
     included_in_model bool = true
 
   edges[augmentative_kind]
     subject str = "augmentative_power"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "vegetative_power"
-      !constant
     source_id str = "st_i_78_2"
-      !constant
+      ?rationale "ST I, q. 78, a. 2 distinguishes growth as one of three vegetative powers."
     included_in_model bool = true
 
   edges[generative_kind]
     subject str = "generative_power"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "vegetative_power"
-      !constant
     source_id str = "st_i_78_2"
-      !constant
+      ?rationale "ST I, q. 78, a. 2 distinguishes generation as one of three vegetative powers."
     included_in_model bool = true
 
   edges[possible_intellect_kind]
     subject str = "possible_intellect"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "intellectual_power"
-      !constant
     source_id str = "st_i_79_2"
-      !constant
+      ?rationale "ST I, q. 79, a. 2 argues for an intellectual power receptive of intelligible forms."
     included_in_model bool = true
 
   edges[agent_intellect_kind]
     subject str = "agent_intellect"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "intellectual_power"
-      !constant
     source_id str = "st_i_79_3"
-      !constant
+      ?rationale "ST I, q. 79, a. 3 argues for an active intellectual power that makes phantasms intelligible in act."
     included_in_model bool = true
 
   edges[sensitive_appetite_kind]
     subject str = "sensitive_appetite"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "appetitive_power"
-      !constant
     source_id str = "st_i_80_2"
-      !constant
+      ?rationale "ST I, q. 80, a. 2 distinguishes appetite following sensation from appetite following intellect."
     included_in_model bool = true
 
   edges[will_kind]
     subject str = "will"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "appetitive_power"
-      !constant
     source_id str = "st_i_80_2"
-      !constant
+      ?rationale "ST I, q. 80, a. 2 identifies will as intellectual appetite, distinct from sensitive appetite."
     included_in_model bool = true
 
   edges[concupiscible_kind]
     subject str = "concupiscible_appetite"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "sensitive_appetite"
-      !constant
     source_id str = "st_i_81_2"
-      !constant
+      ?rationale "ST I, q. 81, a. 2 assigns pursuit of suitable sensible goods and avoidance of harms to the concupiscible power."
     included_in_model bool = true
 
   edges[irascible_kind]
     subject str = "irascible_appetite"
-      !constant
     relation str = "is_kind_of"
-      !constant
     object str = "sensitive_appetite"
-      !constant
     source_id str = "st_i_81_2"
-      !constant
+      ?rationale "ST I, q. 81, a. 2 assigns resistance to obstacles and arduous goods or evils to the irascible power."
     included_in_model bool = true
 
   edges[choice_of_will]
     subject str = "choice"
-      !constant
     relation str = "is_act_of"
-      !constant
     object str = "will"
-      !constant
     source_id str = "st_i_83_4"
-      !constant
+      ?rationale "ST I, q. 83, a. 4 argues that willing and choosing belong to one power; choice is therefore represented as an act of will."
     included_in_model bool = true
 
   edges[love_of_concupiscible]
     subject str = "love_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "concupiscible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places love in the concupiscible appetite as inclination toward apprehended good."
     included_in_model bool = true
 
   edges[hatred_of_concupiscible]
     subject str = "hatred_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "concupiscible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places hatred in the concupiscible appetite as the counterpart of love concerning evil."
     included_in_model bool = true
 
   edges[desire_of_concupiscible]
     subject str = "desire_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "concupiscible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places desire in the concupiscible appetite as movement toward an absent good."
     included_in_model bool = true
 
   edges[aversion_of_concupiscible]
     subject str = "aversion_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "concupiscible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places aversion in the concupiscible appetite as movement away from evil."
     included_in_model bool = true
 
   edges[joy_of_concupiscible]
     subject str = "joy_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "concupiscible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places joy in the concupiscible appetite when a good is attained."
     included_in_model bool = true
 
   edges[sorrow_of_concupiscible]
     subject str = "sorrow_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "concupiscible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places sorrow in the concupiscible appetite in response to present evil."
     included_in_model bool = true
 
   edges[hope_of_irascible]
     subject str = "hope_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "irascible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places hope in the irascible appetite with respect to a difficult future good."
     included_in_model bool = true
 
   edges[despair_of_irascible]
     subject str = "despair_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "irascible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places despair in the irascible appetite with respect to a difficult good judged unattainable."
     included_in_model bool = true
 
   edges[fear_of_irascible]
     subject str = "fear_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "irascible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places fear in the irascible appetite with respect to a future evil."
     included_in_model bool = true
 
   edges[daring_of_irascible]
     subject str = "daring_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "irascible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places daring in the irascible appetite as a response to a future evil."
     included_in_model bool = true
 
   edges[anger_of_irascible]
     subject str = "anger_passion"
-      !constant
     relation str = "is_passion_of"
-      !constant
     object str = "irascible_appetite"
-      !constant
     source_id str = "st_i_ii_23_4"
-      !constant
+      ?rationale "ST I-II, q. 23, a. 4 places anger in the irascible appetite in response to present evil."
     included_in_model bool = true
