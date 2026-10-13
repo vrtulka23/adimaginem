@@ -1,0 +1,53 @@
+# Shared display schemas. These are visual groupings, not ontological claims.
+
+$schema graph_human
+  color str = "#54d6ae"
+    ?category "Person, soul & body"
+
+$schema graph_faculties
+  color str = "#669eff"
+    ?category "Faculties & cognition"
+
+$schema graph_appetites
+  color str = "#ff7797"
+    ?category "Appetites & passions"
+
+$schema graph_metaphysics
+  color str = "#b2bacb"
+    ?category "Metaphysical principles"
+
+$schema graph_divine
+  color str = "#f5d76e"
+    ?category "God & Trinity"
+
+$schema graph_grace
+  color str = "#ffbca0"
+    ?category "Grace"
+
+$schema graph_virtues
+  color str = "#b4df64"
+    ?category "Virtues & habits"
+
+$schema graph_gifts
+  color str = "#59d8f0"
+    ?category "Gifts of the Holy Spirit"
+
+$schema graph_fruits
+  color str = "#f7a34b"
+    ?category "Fruits of the Holy Spirit"
+
+$schema graph_sacraments
+  color str = "#b493ff"
+    ?category "Sacraments"
+
+$schema graph_creation
+  color str = "#dba8cf"
+    ?category "Created orders & creatures"
+
+$schema graph_sin
+  color str = "#ef7d74"
+    ?category "Sin, wounds & temptation"
+
+$schema graph_angels
+  color str = "#8bcce8"
+    ?category "Angels, orders & ministry"

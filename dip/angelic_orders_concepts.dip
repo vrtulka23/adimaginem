@@ -1,0 +1,185 @@
+# Cited angelic orders records; all concepts and edges default to draft.
+ontology
+  concepts[angelic_order]
+    label = "Angelic order"
+    latin_name = "ordo angelicus"
+    domain = "theology"
+    category = "angelic_order"
+    note = "A rank of heavenly spirits according to their perfections and offices; not a separate bodily species."
+    source_id = "st_i_108_1_4"
+
+  concepts[angelic_hierarchy]
+    label = "Angelic hierarchy"
+    latin_name = "hierarchia angelica"
+    domain = "theology"
+    category = "angelic_hierarchy"
+    note = "An ordered grouping of angelic orders under divine government."
+    source_id = "st_i_108_1_4"
+
+  concepts[first_angelic_hierarchy]
+    label = "First angelic hierarchy"
+    latin_name = "hierarchia prima"
+    domain = "theology"
+    category = "angelic_hierarchy"
+    note = "Contemplation of the divine reasons in God. Dionysian arrangement expounded by Aquinas."
+    source_id = "st_i_108_6"
+
+  concepts[second_angelic_hierarchy]
+    label = "Second angelic hierarchy"
+    latin_name = "hierarchia secunda"
+    domain = "theology"
+    category = "angelic_hierarchy"
+    note = "Universal disposition of angelic work. Dionysian arrangement expounded by Aquinas."
+    source_id = "st_i_108_6"
+
+  concepts[third_angelic_hierarchy]
+    label = "Third angelic hierarchy"
+    latin_name = "hierarchia tertia"
+    domain = "theology"
+    category = "angelic_hierarchy"
+    note = "Application of divine ordering to particular effects. Dionysian arrangement expounded by Aquinas."
+    source_id = "st_i_108_6"
+
+  concepts[seraphim]
+    label = "Seraphim"
+    latin_name = "Seraphim"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[seraphic_ardor]
+    label = "Seraphic ardor"
+    latin_name = "ardor caritatis"
+    domain = "theology"
+    category = "disposition"
+    note = "Excellence of charity and fervent union with God; ardor is not a sensitive passion."
+    source_id = "st_i_108_5"
+
+  concepts[cherubim]
+    label = "Cherubim"
+    latin_name = "Cherubim"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[cherubic_knowledge]
+    label = "Cherubic knowledge"
+    latin_name = "plenitudo scientiae"
+    domain = "theology"
+    category = "state"
+    note = "Eminent contemplation and communication of divine truth."
+    source_id = "st_i_108_5"
+
+  concepts[thrones]
+    label = "Thrones"
+    latin_name = "Throni"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[receptivity_to_divine_government]
+    label = "Receptivity to divine government"
+    latin_name = "receptio divinae gubernationis"
+    domain = "theology"
+    category = "disposition"
+    note = "Readiness to receive God and the divine ordering of things; normalized label."
+    source_id = "st_i_108_5"
+
+  concepts[dominions]
+    label = "Dominions"
+    latin_name = "Dominationes"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[direction_of_angelic_ministry]
+    label = "Direction of angelic ministry"
+    latin_name = "dispositio ministerii angelici"
+    domain = "theology"
+    category = "office"
+    note = "Appointing what is to be done in angelic ministry."
+    source_id = "st_i_108_6"
+
+  concepts[angelic_virtues]
+    label = "Virtues (angelic order)"
+    latin_name = "Virtutes"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[empowerment_of_angelic_ministry]
+    label = "Strength for angelic ministry"
+    latin_name = "virtus ad ministerium angelicum"
+    domain = "theology"
+    category = "office"
+    note = "Strength for carrying out the appointed work; distinguished from moral virtue."
+    source_id = "st_i_108_6"
+
+  concepts[powers_order]
+    label = "Powers (angelic order)"
+    latin_name = "Potestates"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[ordering_of_angelic_execution]
+    label = "Ordering of angelic execution"
+    latin_name = "ordinatio executionis angelicae"
+    domain = "theology"
+    category = "office"
+    note = "Ordering how commands are carried out by subordinate ministers."
+    source_id = "st_i_108_6"
+
+  concepts[principalities]
+    label = "Principalities"
+    latin_name = "Principatus"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[leadership_of_angelic_ministry]
+    label = "Leadership in angelic ministry"
+    latin_name = "principatus in ministerio angelico"
+    domain = "theology"
+    category = "office"
+    note = "Leading the execution of angelic ministry."
+    source_id = "st_i_108_6"
+
+  concepts[archangels]
+    label = "Archangels"
+    latin_name = "Archangeli"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[announcement_of_great_divine_matters]
+    label = "Announcement of greater divine matters"
+    latin_name = "annuntiatio maiorum"
+    domain = "theology"
+    category = "act"
+    note = "Announcement of greater matters; Gregory's ministerial account as reported by Aquinas."
+    source_id = "st_i_108_5"
+
+  concepts[angels_order]
+    label = "Angels (lowest order)"
+    latin_name = "Angeli"
+    domain = "theology"
+    category = "angelic_order"
+    note = "Named angelic order; perfections are shared by participation and are not exclusive capacities."
+    source_id = "st_i_108_5"
+
+  concepts[angelic_announcement]
+    label = "Angelic announcement"
+    latin_name = "annuntiatio angelica"
+    domain = "theology"
+    category = "act"
+    note = "Immediate announcement to humans; distinguish the lowest order from angelic nature generally."
+    source_id = "st_i_108_5"

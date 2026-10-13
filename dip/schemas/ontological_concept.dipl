@@ -5,8 +5,8 @@ domain str
   !options ["anthropology", "metaphysics", "theology"]
   !labels ["Human ontology", "General metaphysics", "Catholic theology"]
 category str
-  !options ["person", "body", "organ", "substantial_form", "power", "power_genus", "act", "passion", "principle", "process", "inclination", "formal_object", "habit", "divine_person", "divine_essence", "doctrine", "grace", "virtue", "gift", "fruit", "sacrament", "sacrament_group", "sacramental_character", "creature", "creature_order", "angelic_condition"]
-  !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process", "Inclination", "Formal object", "Habit", "Divine person", "Divine essence", "Doctrine", "Grace", "Virtue", "Gift", "Fruit", "Sacrament", "Sacrament group", "Sacramental character", "Creature", "Creature order", "Angelic condition"]
+  !options ["person", "body", "organ", "substantial_form", "power", "power_genus", "act", "passion", "principle", "process", "inclination", "formal_object", "habit", "divine_person", "divine_essence", "doctrine", "grace", "virtue", "gift", "fruit", "sacrament", "sacrament_group", "sacramental_character", "creature", "creature_order", "angelic_condition", "state", "disposition", "office", "angelic_order", "angelic_hierarchy"]
+  !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process", "Inclination", "Formal object", "Habit", "Divine person", "Divine essence", "Doctrine", "Grace", "Virtue", "Gift", "Fruit", "Sacrament", "Sacrament group", "Sacramental character", "Creature", "Creature order", "Angelic condition", "State", "Disposition", "Office", "Angelic order", "Angelic hierarchy"]
 note str
 source_id str
 review_status str = "draft"

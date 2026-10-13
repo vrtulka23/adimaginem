@@ -1,0 +1,465 @@
+# Each concept applies a display schema with one shared color and category.
+graph_concept_styles map
+
+graph_concept_styles[human_person] : graph_human
+
+graph_concept_styles[human_body] : graph_human
+
+graph_concept_styles[rational_soul] : graph_human
+
+graph_concept_styles[soul_power] : graph_faculties
+
+graph_concept_styles[vegetative_power] : graph_faculties
+
+graph_concept_styles[sensitive_power] : graph_faculties
+
+graph_concept_styles[appetitive_power] : graph_appetites
+
+graph_concept_styles[locomotive_power] : graph_faculties
+
+graph_concept_styles[intellectual_power] : graph_faculties
+
+graph_concept_styles[bodily_organ] : graph_human
+
+graph_concept_styles[nutritive_power] : graph_faculties
+
+graph_concept_styles[augmentative_power] : graph_faculties
+
+graph_concept_styles[generative_power] : graph_faculties
+
+graph_concept_styles[external_sense] : graph_faculties
+
+graph_concept_styles[sight] : graph_faculties
+
+graph_concept_styles[hearing] : graph_faculties
+
+graph_concept_styles[smell] : graph_faculties
+
+graph_concept_styles[taste] : graph_faculties
+
+graph_concept_styles[touch] : graph_faculties
+
+graph_concept_styles[internal_sense] : graph_faculties
+
+graph_concept_styles[common_sense] : graph_faculties
+
+graph_concept_styles[imagination] : graph_faculties
+
+graph_concept_styles[cogitative_power] : graph_faculties
+
+graph_concept_styles[sensitive_memory] : graph_faculties
+
+graph_concept_styles[possible_intellect] : graph_faculties
+
+graph_concept_styles[agent_intellect] : graph_faculties
+
+graph_concept_styles[sensitive_appetite] : graph_appetites
+
+graph_concept_styles[will] : graph_appetites
+
+graph_concept_styles[concupiscible_appetite] : graph_appetites
+
+graph_concept_styles[irascible_appetite] : graph_appetites
+
+graph_concept_styles[choice] : graph_faculties
+
+graph_concept_styles[love_passion] : graph_appetites
+
+graph_concept_styles[hatred_passion] : graph_appetites
+
+graph_concept_styles[desire_passion] : graph_appetites
+
+graph_concept_styles[aversion_passion] : graph_appetites
+
+graph_concept_styles[joy_passion] : graph_appetites
+
+graph_concept_styles[sorrow_passion] : graph_appetites
+
+graph_concept_styles[hope_passion] : graph_appetites
+
+graph_concept_styles[despair_passion] : graph_appetites
+
+graph_concept_styles[fear_passion] : graph_appetites
+
+graph_concept_styles[daring_passion] : graph_appetites
+
+graph_concept_styles[anger_passion] : graph_appetites
+
+graph_concept_styles[matter] : graph_metaphysics
+
+graph_concept_styles[form] : graph_metaphysics
+
+graph_concept_styles[potentiality] : graph_metaphysics
+
+graph_concept_styles[actuality] : graph_metaphysics
+
+graph_concept_styles[privation] : graph_metaphysics
+
+graph_concept_styles[natural_generation] : graph_metaphysics
+
+graph_concept_styles[substance] : graph_metaphysics
+
+graph_concept_styles[accident] : graph_metaphysics
+
+graph_concept_styles[cause] : graph_metaphysics
+
+graph_concept_styles[material_cause] : graph_metaphysics
+
+graph_concept_styles[formal_cause] : graph_metaphysics
+
+graph_concept_styles[efficient_cause] : graph_metaphysics
+
+graph_concept_styles[final_cause] : graph_metaphysics
+
+graph_concept_styles[natural_appetite] : graph_appetites
+
+graph_concept_styles[naturally_suitable_good] : graph_appetites
+
+graph_concept_styles[sensible_good_or_evil] : graph_appetites
+
+graph_concept_styles[arduous_sensible_good_or_evil] : graph_appetites
+
+graph_concept_styles[apprehended_good] : graph_appetites
+
+graph_concept_styles[sensing] : graph_faculties
+
+graph_concept_styles[imagining] : graph_faculties
+
+graph_concept_styles[understanding] : graph_faculties
+
+graph_concept_styles[willing] : graph_appetites
+
+graph_concept_styles[counsel] : graph_faculties
+
+graph_concept_styles[habit] : graph_virtues
+
+graph_concept_styles[phantasm] : graph_faculties
+
+graph_concept_styles[intelligible_species] : graph_faculties
+
+graph_concept_styles[practical_intellect] : graph_faculties
+
+graph_concept_styles[trinity] : graph_divine
+
+graph_concept_styles[divine_essence] : graph_divine
+
+graph_concept_styles[father] : graph_divine
+
+graph_concept_styles[son] : graph_divine
+
+graph_concept_styles[holy_spirit] : graph_divine
+
+graph_concept_styles[grace] : graph_grace
+
+graph_concept_styles[sanctifying_grace] : graph_grace
+
+graph_concept_styles[actual_grace] : graph_grace
+
+graph_concept_styles[virtue] : graph_virtues
+
+graph_concept_styles[cardinal_virtue] : graph_virtues
+
+graph_concept_styles[theological_virtue] : graph_virtues
+
+graph_concept_styles[acquired_virtue] : graph_virtues
+
+graph_concept_styles[infused_virtue] : graph_virtues
+
+graph_concept_styles[prudence_virtue] : graph_virtues
+
+graph_concept_styles[justice_virtue] : graph_virtues
+
+graph_concept_styles[fortitude_virtue] : graph_virtues
+
+graph_concept_styles[temperance_virtue] : graph_virtues
+
+graph_concept_styles[faith_virtue] : graph_virtues
+
+graph_concept_styles[hope_virtue] : graph_virtues
+
+graph_concept_styles[charity_virtue] : graph_virtues
+
+graph_concept_styles[gift_of_holy_spirit] : graph_gifts
+
+graph_concept_styles[fruit_of_holy_spirit] : graph_fruits
+
+graph_concept_styles[sacrament] : graph_sacraments
+
+graph_concept_styles[initiation_sacraments] : graph_sacraments
+
+graph_concept_styles[healing_sacraments] : graph_sacraments
+
+graph_concept_styles[service_sacraments] : graph_sacraments
+
+graph_concept_styles[sacramental_grace] : graph_grace
+
+graph_concept_styles[sacramental_character] : graph_sacraments
+
+graph_concept_styles[wisdom_gift] : graph_gifts
+
+graph_concept_styles[understanding_gift] : graph_gifts
+
+graph_concept_styles[counsel_gift] : graph_gifts
+
+graph_concept_styles[fortitude_gift] : graph_gifts
+
+graph_concept_styles[knowledge_gift] : graph_gifts
+
+graph_concept_styles[piety_gift] : graph_gifts
+
+graph_concept_styles[fear_of_lord_gift] : graph_gifts
+
+graph_concept_styles[charity_fruit] : graph_fruits
+
+graph_concept_styles[joy_fruit] : graph_fruits
+
+graph_concept_styles[peace_fruit] : graph_fruits
+
+graph_concept_styles[patience_fruit] : graph_fruits
+
+graph_concept_styles[kindness_fruit] : graph_fruits
+
+graph_concept_styles[goodness_fruit] : graph_fruits
+
+graph_concept_styles[generosity_fruit] : graph_fruits
+
+graph_concept_styles[gentleness_fruit] : graph_fruits
+
+graph_concept_styles[faithfulness_fruit] : graph_fruits
+
+graph_concept_styles[modesty_fruit] : graph_fruits
+
+graph_concept_styles[self_control_fruit] : graph_fruits
+
+graph_concept_styles[chastity_fruit] : graph_fruits
+
+graph_concept_styles[baptism] : graph_sacraments
+
+graph_concept_styles[confirmation] : graph_sacraments
+
+graph_concept_styles[eucharist] : graph_sacraments
+
+graph_concept_styles[penance] : graph_sacraments
+
+graph_concept_styles[anointing_of_sick] : graph_sacraments
+
+graph_concept_styles[holy_orders] : graph_sacraments
+
+graph_concept_styles[matrimony] : graph_sacraments
+
+graph_concept_styles[god] : graph_divine
+
+graph_concept_styles[created_being] : graph_creation
+
+graph_concept_styles[spiritual_creature] : graph_creation
+
+graph_concept_styles[corporeal_creature] : graph_creation
+
+graph_concept_styles[angel] : graph_angels
+
+graph_concept_styles[fallen_angel] : graph_creation
+
+graph_concept_styles[nonhuman_animal] : graph_creation
+
+graph_concept_styles[plant] : graph_creation
+
+graph_concept_styles[inanimate_material_creature] : graph_creation
+
+graph_concept_styles[pure_act] : graph_divine
+
+graph_concept_styles[corporeality] : graph_metaphysics
+
+graph_relation_colors map
+graph_relation_colors[creation]
+  color str = "#e0b765"
+    ?category "Creation"
+
+graph_relation_colors[identity]
+  color str = "#c69cff"
+    ?category "Identity"
+
+graph_relation_colors[classification]
+  color str = "#8bd0c5"
+    ?category "Classification"
+
+graph_relation_colors[composition]
+  color str = "#78a9ed"
+    ?category "Composition"
+
+graph_relation_colors[metaphysical]
+  color str = "#e89379"
+    ?category "Metaphysical"
+
+graph_relation_colors[power_and_act]
+  color str = "#df9cce"
+    ?category "Power & act"
+
+graph_relation_colors[appetite_and_passion]
+  color str = "#e88ea1"
+    ?category "Appetite & passion"
+
+graph_relation_colors[theological]
+  color str = "#a7d98d"
+    ?category "Theological"
+
+graph_relation_colors[condition]
+  color str = "#f38b78"
+    ?category "Condition"
+
+# Subjects and effects of sanctification.
+
+graph_concept_styles[speculative_intellect] : graph_faculties
+
+graph_concept_styles[act_of_charity] : graph_virtues
+
+graph_concept_styles[spiritual_life] : graph_grace
+
+graph_concept_styles[spiritual_regeneration] : graph_sacraments
+
+graph_concept_styles[remission_of_sin] : graph_grace
+
+graph_concept_styles[remnants_of_sin] : graph_grace
+
+graph_concept_styles[sacred_ministry] : graph_sacraments
+
+graph_concept_styles[generation_of_children] : graph_human
+
+graph_concept_styles[disordered_concupiscence] : graph_appetites
+
+graph_concept_styles[bodily_healing] : graph_human
+
+graph_concept_styles[endurance_in_illness] : graph_sacraments
+
+graph_concept_styles[beatific_vision] : graph_grace
+
+graph_concept_styles[blessed_angel] : graph_angels
+
+graph_concept_styles[angelic_intellect] : graph_angels
+
+graph_concept_styles[angelic_will] : graph_angels
+
+graph_concept_styles[angelic_turning_to_god] : graph_angels
+
+graph_concept_styles[angelic_ministry] : graph_angels
+
+graph_concept_styles[christ_priesthood] : graph_sacraments
+
+# Human acts and states connected to the fruits.
+
+graph_concept_styles[benevolence] : graph_virtues
+
+graph_concept_styles[beneficence] : graph_virtues
+
+graph_concept_styles[concord] : graph_virtues
+
+graph_concept_styles[appetitive_harmony] : graph_appetites
+
+graph_concept_styles[endurance_of_adversity] : graph_virtues
+
+graph_concept_styles[perseverance_in_waiting] : graph_virtues
+
+graph_concept_styles[trustworthy_dealing] : graph_virtues
+
+graph_concept_styles[outward_conduct] : graph_human
+
+# Moral disorders and angelic orders.
+
+graph_concept_styles[personal_sin] : graph_sin
+
+graph_concept_styles[original_sin] : graph_sin
+
+graph_concept_styles[mortal_sin] : graph_sin
+
+graph_concept_styles[venial_sin] : graph_sin
+
+graph_concept_styles[vice] : graph_sin
+
+graph_concept_styles[original_justice] : graph_grace
+
+graph_concept_styles[wounded_human_nature] : graph_sin
+
+graph_concept_styles[ignorance_wound] : graph_sin
+
+graph_concept_styles[malice_wound] : graph_sin
+
+graph_concept_styles[weakness_wound] : graph_sin
+
+graph_concept_styles[blindness_of_mind] : graph_sin
+
+graph_concept_styles[dullness_of_understanding] : graph_sin
+
+graph_concept_styles[disordered_passion] : graph_sin
+
+graph_concept_styles[practical_judgment] : graph_faculties
+
+graph_concept_styles[grave_matter] : graph_sin
+
+graph_concept_styles[full_moral_knowledge] : graph_faculties
+
+graph_concept_styles[deliberate_consent] : graph_human
+
+graph_concept_styles[aversion_from_god] : graph_sin
+
+graph_concept_styles[human_conversion] : graph_grace
+
+graph_concept_styles[repentance_for_sin] : graph_grace
+
+graph_concept_styles[justification] : graph_grace
+
+graph_concept_styles[angelic_illumination] : graph_angels
+
+graph_concept_styles[angelic_persuasion] : graph_angels
+
+graph_concept_styles[temptation_to_sin] : graph_sin
+
+graph_concept_styles[demonic_suggestion] : graph_sin
+
+graph_concept_styles[angelic_guardianship] : graph_angels
+
+graph_concept_styles[personal_angelic_guardianship] : graph_angels
+
+graph_concept_styles[angelic_order] : graph_angels
+
+graph_concept_styles[angelic_hierarchy] : graph_angels
+
+graph_concept_styles[first_angelic_hierarchy] : graph_angels
+
+graph_concept_styles[second_angelic_hierarchy] : graph_angels
+
+graph_concept_styles[third_angelic_hierarchy] : graph_angels
+
+graph_concept_styles[seraphim] : graph_angels
+
+graph_concept_styles[seraphic_ardor] : graph_angels
+
+graph_concept_styles[cherubim] : graph_angels
+
+graph_concept_styles[cherubic_knowledge] : graph_angels
+
+graph_concept_styles[thrones] : graph_angels
+
+graph_concept_styles[receptivity_to_divine_government] : graph_angels
+
+graph_concept_styles[dominions] : graph_angels
+
+graph_concept_styles[direction_of_angelic_ministry] : graph_angels
+
+graph_concept_styles[angelic_virtues] : graph_angels
+
+graph_concept_styles[empowerment_of_angelic_ministry] : graph_angels
+
+graph_concept_styles[powers_order] : graph_angels
+
+graph_concept_styles[ordering_of_angelic_execution] : graph_angels
+
+graph_concept_styles[principalities] : graph_angels
+
+graph_concept_styles[leadership_of_angelic_ministry] : graph_angels
+
+graph_concept_styles[archangels] : graph_angels
+
+graph_concept_styles[announcement_of_great_divine_matters] : graph_angels
+
+graph_concept_styles[angels_order] : graph_angels
+
+graph_concept_styles[angelic_announcement] : graph_angels

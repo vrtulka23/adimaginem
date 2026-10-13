@@ -48,6 +48,70 @@ ontology
       ?rationale "Catechism §2000 distinguishes actual divine interventions from habitual sanctifying grace."
     included_in_model bool = true
 
+  edges[god_bestows_grace]
+    subject str = "god"
+    relation str = "bestows"
+    object str = "grace"
+    source_id str = "ccc_1996_2000"
+      ?rationale "Catechism §§1996-2000 describes grace as God's free and undeserved gift and distinguishes its habitual and actual forms."
+    included_in_model bool = true
+
+  edges[god_bestows_sanctifying_grace]
+    subject str = "god"
+    relation str = "bestows"
+    object str = "sanctifying_grace"
+    source_id str = "ccc_1996_2000"
+      ?rationale "Catechism §2000 identifies sanctifying grace as God's habitual gift, distinct from actual graces."
+    included_in_model bool = true
+
+  edges[god_bestows_actual_grace]
+    subject str = "god"
+    relation str = "bestows"
+    object str = "actual_grace"
+    source_id str = "ccc_1996_2000"
+      ?rationale "Catechism §2000 describes actual graces as divine interventions at the beginning of conversion and in the course of sanctification."
+    included_in_model bool = true
+
+  edges[faith_ordered_to_god]
+    subject str = "faith_virtue"
+    relation str = "is_ordered_to"
+    object str = "god"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1812 says the theological virtues relate directly to God, who is their origin, motive, and object."
+    included_in_model bool = true
+
+  edges[hope_ordered_to_god]
+    subject str = "hope_virtue"
+    relation str = "is_ordered_to"
+    object str = "god"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1812 says the theological virtues relate directly to God, who is their origin, motive, and object."
+    included_in_model bool = true
+
+  edges[charity_ordered_to_god]
+    subject str = "charity_virtue"
+    relation str = "is_ordered_to"
+    object str = "god"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1812 says the theological virtues relate directly to God, who is their origin, motive, and object."
+    included_in_model bool = true
+
+  edges[god_bestows_spirit_gifts]
+    subject str = "holy_spirit"
+    relation str = "bestows"
+    object str = "gift_of_holy_spirit"
+    source_id str = "ccc_1830_1831"
+      ?rationale "Catechism §§1830-1831 presents the seven gifts as graces by which the faithful are made docile to the promptings of the Holy Spirit."
+    included_in_model bool = true
+
+  edges[god_infuses_theological_virtues]
+    subject str = "god"
+    relation str = "infuses"
+    object str = "theological_virtue"
+    source_id str = "ccc_1812_1813"
+      ?rationale "Catechism §1813 says the theological virtues are infused by God into the souls of the faithful."
+    included_in_model bool = true
+
   edges[grace_in_soul]
     subject str = "sanctifying_grace"
     relation str = "inheres_in_subject"
@@ -112,6 +176,83 @@ ontology
       ?rationale "Catechism §1831 states that the gifts complete and perfect the virtues of their recipients."
     included_in_model bool = true
 
+  edges[wisdom_gift_perfects_intellect]
+    subject str = "wisdom_gift"
+    relation str = "perfects"
+    object str = "intellectual_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places wisdom among the gifts perfecting reason, specifically speculative judgment."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[understanding_gift_perfects_intellect]
+    subject str = "understanding_gift"
+    relation str = "perfects"
+    object str = "intellectual_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places understanding among the gifts perfecting reason, specifically speculative apprehension."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[counsel_gift_perfects_intellect]
+    subject str = "counsel_gift"
+    relation str = "perfects"
+    object str = "intellectual_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places counsel among the gifts perfecting practical reason."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[knowledge_gift_perfects_intellect]
+    subject str = "knowledge_gift"
+    relation str = "perfects"
+    object str = "intellectual_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places knowledge among the gifts perfecting reason, specifically practical judgment."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[fortitude_gift_perfects_appetite]
+    subject str = "fortitude_gift"
+    relation str = "perfects"
+    object str = "appetitive_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places fortitude among the gifts perfecting appetite in the face of dangers."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[piety_gift_perfects_appetite]
+    subject str = "piety_gift"
+    relation str = "perfects"
+    object str = "appetitive_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places piety among the gifts perfecting appetite in matters concerning relations to others."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[fear_gift_perfects_appetite]
+    subject str = "fear_of_lord_gift"
+    relation str = "perfects"
+    object str = "appetitive_power"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "ST I-II, q. 68, a. 4 places fear of the Lord among the gifts perfecting appetite against disordered desire for pleasures."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
   edges[sacrament_instrumental_grace]
     subject str = "sacrament"
     relation str = "instrumentally_causes_grace"
@@ -120,12 +261,28 @@ ontology
       ?rationale "ST III, q. 62, a. 1 treats God as principal cause and the sacraments of the New Law as instrumental causes of grace."
     included_in_model bool = true
 
+  edges[sacraments_instituted_by_christ]
+    subject str = "sacrament"
+    relation str = "is_instituted_by"
+    object str = "son"
+    source_id str = "ccc_1114_1116"
+      ?rationale "Catechism §1114 professes that all the sacraments of the New Law were instituted by Jesus Christ."
+    included_in_model bool = true
+
   edges[sacramental_grace_kind]
     subject str = "sacramental_grace"
     relation str = "is_kind_of"
     object str = "grace"
     source_id str = "ccc_1127_1129"
       ?rationale "Catechism §1129 calls sacramental grace the grace of the Holy Spirit proper to each sacrament."
+    included_in_model bool = true
+
+  edges[sacramental_grace_proper_to_sacraments]
+    subject str = "sacramental_grace"
+    relation str = "is_proper_to"
+    object str = "sacrament"
+    source_id str = "ccc_1127_1129"
+      ?rationale "Catechism §1129 describes sacramental grace as the grace of the Holy Spirit proper to each sacrament; effects should be added for specific sacraments only with their own citations."
     included_in_model bool = true
 
   edges[prudence_virtue_cardinal]
@@ -470,5 +627,157 @@ ontology
     object str = "sacramental_character"
     source_id str = "ccc_698"
       ?rationale "Catechism §698 identifies Holy Orders as conferring an indelible sacramental character."
+    included_in_model bool = true
+
+  edges[father_begets_son]
+    subject str = "father"
+    relation str = "begets"
+    object str = "son"
+    source_id str = "ccc_246"
+      ?rationale "Catechism §246 names the Father as the one who eternally begets the Son; this is a relation of origin, not a temporal act."
+    included_in_model bool = true
+
+  edges[holy_spirit_proceeds_from_father]
+    subject str = "holy_spirit"
+    relation str = "proceeds_from"
+    object str = "father"
+    source_id str = "ccc_246"
+      ?rationale "Catechism §246 teaches that the Holy Spirit proceeds eternally from the Father and the Son as from one principle."
+    included_in_model bool = true
+
+  edges[holy_spirit_proceeds_from_son]
+    subject str = "holy_spirit"
+    relation str = "proceeds_from"
+    object str = "son"
+    source_id str = "ccc_246"
+      ?rationale "Catechism §246 teaches that the Holy Spirit proceeds eternally from the Father and the Son as from one principle, not as two independent causes."
+    included_in_model bool = true
+
+  edges[prudence_perfects_intellect]
+    subject str = "prudence_virtue"
+    relation str = "perfects"
+    object str = "intellectual_power"
+    source_id str = "st_i_ii_61_2"
+      ?rationale "ST I-II, q. 61, a. 2 assigns prudence to the power rational in essence, namely reason."
+    included_in_model bool = true
+
+  edges[justice_perfects_will]
+    subject str = "justice_virtue"
+    relation str = "perfects"
+    object str = "will"
+    source_id str = "st_i_ii_61_2"
+      ?rationale "ST I-II, q. 61, a. 2 assigns justice to the will, the power rational by participation."
+    included_in_model bool = true
+
+  edges[fortitude_perfects_irascible]
+    subject str = "fortitude_virtue"
+    relation str = "perfects"
+    object str = "irascible_appetite"
+    source_id str = "st_i_ii_61_2"
+      ?rationale "ST I-II, q. 61, a. 2 assigns fortitude to the irascible appetite as rational by participation."
+    included_in_model bool = true
+
+  edges[temperance_perfects_concupiscible]
+    subject str = "temperance_virtue"
+    relation str = "perfects"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_61_2"
+      ?rationale "ST I-II, q. 61, a. 2 assigns temperance to the concupiscible appetite as rational by participation."
+    included_in_model bool = true
+
+  edges[charity_fruit_formed_by_spirit]
+    subject str = "charity_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us; this edge states that general source relation for the listed fruit."
+    included_in_model bool = true
+
+  edges[joy_fruit_formed_by_spirit]
+    subject str = "joy_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[peace_fruit_formed_by_spirit]
+    subject str = "peace_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[patience_fruit_formed_by_spirit]
+    subject str = "patience_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[kindness_fruit_formed_by_spirit]
+    subject str = "kindness_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[goodness_fruit_formed_by_spirit]
+    subject str = "goodness_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[generosity_fruit_formed_by_spirit]
+    subject str = "generosity_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[gentleness_fruit_formed_by_spirit]
+    subject str = "gentleness_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[faithfulness_fruit_formed_by_spirit]
+    subject str = "faithfulness_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[modesty_fruit_formed_by_spirit]
+    subject str = "modesty_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[self_control_fruit_formed_by_spirit]
+    subject str = "self_control_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
+    included_in_model bool = true
+
+  edges[chastity_fruit_formed_by_spirit]
+    subject str = "chastity_fruit"
+    relation str = "is_formed_by"
+    object str = "holy_spirit"
+    source_id str = "ccc_1832"
+      ?rationale "Catechism §1832 calls the fruits perfections that the Holy Spirit forms in us."
     included_in_model bool = true
 

@@ -46,3 +46,9 @@ ontology
     work = "Summa theologiae"
     locator = "I, q. 45, a. 5, respondeo"
     url = "https://www.newadvent.org/summa/1045.htm"
+
+  sources[st_i_44_3_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 44, aa. 3-4, respondeo"
+    url = "https://www.newadvent.org/summa/1044.htm"

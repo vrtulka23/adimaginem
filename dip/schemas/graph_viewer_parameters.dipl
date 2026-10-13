@@ -1,0 +1,83 @@
+?descr "Default icon sizing and collision spacing for the standalone 3D ontology viewer"
+icon_size float = 2.0
+  ?descr "Relative diameter of each 3D node icon; the annealing collision radius scales from this value."
+  ?recommended_range "0.85 to 10.0 viewer units"
+icon_size_min float = 0.85
+  ?descr "Smallest icon size exposed by the graph viewer control."
+icon_size_max float = 10.0
+  ?descr "Largest icon size exposed by the graph viewer control."
+icon_size_step float = 0.1
+  ?descr "Increment used by the graph viewer icon size control."
+icon_gap float = 0.65
+  ?descr "Extra collision spacing around each icon during layout annealing."
+icon_hit_padding float = 0.08
+  ?descr "Small extra margin around the icon outline for pointer hover and selection, in viewer units."
+
+dimmed_icon_opacity float = 0.12
+  ?descr "Opacity of icons outside the groups highlighted through the legend."
+
+focus_emission float = 0.3
+  ?descr "Additional illumination of selected icons and groups highlighted through the legend."
+
+focused_relation_opacity float = 0.7
+  ?descr "Opacity of relations incident to a highlighted group."
+
+dimmed_relation_opacity float = 0.025
+  ?descr "Opacity of relations unrelated to a highlighted group."
+
+arrow_size_ratio float = 0.5
+  ?descr "Arrowhead length relative to icon size; layout spacing reserves room for it."
+
+arrow_position float = 0.5
+  ?descr "Position along each directed relation: 0 is its subject, 1 its object, 0.5 its midpoint."
+
+arrow_opacity float = 0.85
+  ?descr "Default arrowhead opacity, brighter than its connecting line."
+
+relation_opacity float = 0.34
+  ?descr "Default relation line opacity when no concept or legend group is focused."
+
+relation_width float = 0.07
+  ?descr "Ordinary relation line width in viewer units."
+
+highlighted_relation_width float = 0.18
+  ?descr "Line width for a selected path or a relation incident to the selected concept."
+
+parallel_curve_step float = 0.5
+  ?descr "Curvature spacing between relations sharing the same pair of concepts, including reverse relations."
+
+link_spacing float = 1.6
+  ?descr "Multiplier for preferred link distances, including icon and arrow clearance."
+
+charge_strength float = -8.0
+  ?descr "Repulsion strength at the default icon size; scales quadratically with icon size."
+
+fit_padding float = 45.0
+  ?descr "Screen margin in pixels when fitting the graph to the viewport."
+
+selection_ring_color str = "#9fffe0"
+  ?descr "Color of the selected concept's glowing ring, as a six-digit hex color."
+
+selection_ring_radius float = 0.84
+  ?descr "Selection ring radius relative to icon size."
+
+selection_ring_width float = 0.04
+  ?descr "Selection ring stroke width relative to icon size; the glow fades around this stroke."
+
+selection_ring_opacity float = 0.95
+  ?descr "Peak opacity of the selection ring."
+
+selection_ring_dashes int = 8
+  ?descr "Number of rotating bright segments around the selection ring."
+
+selection_ring_speed float = 0.55
+  ?descr "Rotation in radians per second; zero gives a static ring. Browser reduced-motion preferences also stop rotation."
+
+label_height float = 0.45
+  ?descr "Concept label height relative to icon size; width fits the text without squeezing its letters."
+
+label_min_text_pixels float = 14.0
+  ?descr "Minimum label font size in CSS pixels, maintained when zooming out."
+
+label_gap float = 0.1
+  ?descr "Space between the selection ring glow and the label, relative to icon size."

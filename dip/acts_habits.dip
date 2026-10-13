@@ -24,6 +24,30 @@ ontology
     locator str = "I-II, q. 55, a. 1, respondeo"
     url str = "https://www.newadvent.org/summa/2055.htm"
 
+  sources[st_i_ii_9_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 9, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/2009.htm"
+
+  sources[st_i_79_11]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I, q. 79, a. 11, respondeo"
+    url str = "https://www.newadvent.org/summa/1079.htm"
+
+  sources[st_i_85_1]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I, q. 85, a. 1, respondeo"
+    url str = "https://www.newadvent.org/summa/1085.htm"
+
+  sources[st_i_ii_61_2]
+    author str = "Thomas Aquinas"
+    work str = "Summa theologiae"
+    locator str = "I-II, q. 61, a. 2, respondeo"
+    url str = "https://www.newadvent.org/summa/2061.htm"
+
   concepts[sensing]
     latin_name = "sentire"
     label = "Sensing"
@@ -72,6 +96,30 @@ ontology
     note = "A relatively stable dispositional quality, distinct from a momentary operation."
     source_id = "st_i_ii_49_1"
 
+  concepts[phantasm]
+    latin_name = "phantasma"
+    label = "Phantasm"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "An imaginative likeness of a particular sensible thing, used by the embodied intellect in understanding."
+    source_id = "st_i_84_7"
+
+  concepts[intelligible_species]
+    latin_name = "species intelligibilis"
+    label = "Intelligible species"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "The intelligible form by which the possible intellect understands; abstracted from phantasms in human knowing."
+    source_id = "st_i_85_1"
+
+  concepts[practical_intellect]
+    latin_name = "intellectus practicus"
+    label = "Practical intellect"
+    domain = "anthropology"
+    category = "power"
+    note = "Intellect considered as ordering action; distinguished from speculative intellect by its end."
+    source_id = "st_i_79_11"
+
   edges[sensing_of_sensitive_power]
     subject str = "sensing"
     relation str = "is_act_of"
@@ -118,4 +166,76 @@ ontology
     object str = "habit"
     source_id str = "st_i_ii_55_1"
       ?rationale "ST I-II, q. 55, a. 1 argues that human virtue is a habit rather than a power or a single act."
+    included_in_model bool = true
+
+  edges[practical_intellect_is_intellectual]
+    subject str = "practical_intellect"
+    relation str = "is_kind_of"
+    object str = "intellectual_power"
+    source_id str = "st_i_79_11"
+      ?rationale "ST I, q. 79, a. 11 distinguishes practical and speculative intellect by their ends, as modes of intellect."
+    included_in_model bool = true
+
+  edges[agent_intellect_renders_phantasm_intelligible]
+    subject str = "agent_intellect"
+    relation str = "renders_intelligible"
+    object str = "phantasm"
+    source_id str = "st_i_79_3"
+      ?rationale "ST I, q. 79, a. 3 assigns the agent intellect the work of making phantasms actually intelligible."
+    included_in_model bool = true
+
+  edges[intelligible_species_abstracted_from_phantasm]
+    subject str = "intelligible_species"
+    relation str = "is_abstracted_from"
+    object str = "phantasm"
+    source_id str = "st_i_85_1"
+      ?rationale "ST I, q. 85, a. 1 teaches that material things are understood through intelligible species abstracted from phantasms."
+    included_in_model bool = true
+
+  edges[possible_intellect_receives_species]
+    subject str = "possible_intellect"
+    relation str = "receives"
+    object str = "intelligible_species"
+    source_id str = "st_i_85_1"
+      ?rationale "ST I, q. 85, a. 1 distinguishes the possible intellect's reception of intelligible species from the agent intellect's abstraction."
+    included_in_model bool = true
+
+  edges[understanding_turns_to_phantasm]
+    subject str = "understanding"
+    relation str = "turns_to"
+    object str = "phantasm"
+    source_id str = "st_i_84_7"
+      ?rationale "ST I, q. 84, a. 7 holds that in embodied life the intellect understands actually by turning to phantasms."
+    included_in_model bool = true
+
+  edges[practical_intellect_moves_will_as_to_object]
+    subject str = "practical_intellect"
+    relation str = "moves_as_to_object"
+    object str = "will"
+    source_id str = "st_i_ii_9_1"
+      ?rationale "ST I-II, q. 9, a. 1 says intellect moves the will by presenting and determining its object, the apprehended good."
+    included_in_model bool = true
+
+  edges[will_moves_practical_intellect_as_to_exercise]
+    subject str = "will"
+    relation str = "moves_as_to_exercise"
+    object str = "practical_intellect"
+    source_id str = "st_i_ii_9_1"
+      ?rationale "ST I-II, q. 9, a. 1 says will moves intellect regarding the exercise or use of its act, while intellect specifies the act by its object."
+    included_in_model bool = true
+
+  edges[counsel_precedes_choice]
+    subject str = "counsel"
+    relation str = "precedes_in_practical_order"
+    object str = "choice"
+    source_id str = "st_i_ii_14_1"
+      ?rationale "ST I-II, q. 14, a. 1 treats counsel as inquiry about means ordered toward choice."
+    included_in_model bool = true
+
+  edges[phantasm_retained_by_imagination]
+    subject str = "phantasm"
+    relation str = "is_retained_by"
+    object str = "imagination"
+    source_id str = "st_i_78_4"
+      ?rationale "ST I, q. 78, a. 4 assigns the imagination retention of sensible forms when the sensed object is absent."
     included_in_model bool = true

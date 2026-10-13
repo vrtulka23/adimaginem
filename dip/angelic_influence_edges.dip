@@ -1,0 +1,307 @@
+# Cited angelic influence records; all concepts and edges default to draft.
+ontology
+  edges[good_angel_can_illuminate]
+    subject = "blessed_angel"
+    relation = "can_perform"
+    object = "angelic_illumination"
+    source_id str = "st_i_111_1"
+      ?rationale "Good angels assist human understanding."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A capacity and ministry under providence; not a claim that every cognition has a separately identified angelic cause."
+    condition_source_id = "st_i_111_1"
+
+  edges[illumination_strengthens_intellect]
+    subject = "angelic_illumination"
+    relation = "strengthens"
+    object = "intellectual_power"
+    source_id str = "st_i_111_1"
+      ?rationale "Illumination strengthens the recipient's intellect."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[illumination_uses_phantasms]
+    subject = "angelic_illumination"
+    relation = "uses_presentation"
+    object = "phantasm"
+    source_id str = "st_i_111_1"
+      ?rationale "Truth is proposed in forms suited to embodied human understanding."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Human illumination retains the need for sensible likenesses; this does not equate human and angelic cognition."
+    condition_source_id = "st_i_111_1"
+
+  edges[illumination_does_not_infuse_faith]
+    subject = "angelic_illumination"
+    relation = "does_not_infuse"
+    object = "faith_virtue"
+    source_id str = "st_i_111_1"
+      ?rationale "Angels propose what is believed; God gives the inward habit."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[blessed_angel_can_affect_imagination]
+    subject = "blessed_angel"
+    relation = "can_influence"
+    object = "imagination"
+    source_id str = "st_i_111_3_4"
+      ?rationale "Aquinas allows angelic action upon these embodied cognitive operations."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A capacity mediated through bodily processes in Aquinas's account; no particular image or sensation establishes an angelic cause."
+    condition_source_id = "st_i_111_3_4"
+
+  edges[blessed_angel_can_affect_external_sense]
+    subject = "blessed_angel"
+    relation = "can_influence"
+    object = "external_sense"
+    source_id str = "st_i_111_3_4"
+      ?rationale "Aquinas allows angelic action upon these embodied cognitive operations."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A capacity mediated through bodily processes in Aquinas's account; no particular image or sensation establishes an angelic cause."
+    condition_source_id = "st_i_111_3_4"
+
+  edges[blessed_angel_can_persuade]
+    subject = "blessed_angel"
+    relation = "can_perform"
+    object = "angelic_persuasion"
+    source_id str = "st_i_111_2"
+      ?rationale "Created spirits influence by presenting an apparent good."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[blessed_angel_cannot_compel_consent]
+    subject = "blessed_angel"
+    relation = "cannot_compel"
+    object = "deliberate_consent"
+    source_id str = "st_i_111_2"
+      ?rationale "Angelic influence does not necessitate the will's consent."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[fallen_angel_can_affect_imagination]
+    subject = "fallen_angel"
+    relation = "can_influence"
+    object = "imagination"
+    source_id str = "st_i_111_3_4"
+      ?rationale "Aquinas allows angelic action upon these embodied cognitive operations."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A capacity mediated through bodily processes in Aquinas's account; no particular image or sensation establishes an angelic cause."
+    condition_source_id = "st_i_111_3_4"
+
+  edges[fallen_angel_can_affect_external_sense]
+    subject = "fallen_angel"
+    relation = "can_influence"
+    object = "external_sense"
+    source_id str = "st_i_111_3_4"
+      ?rationale "Aquinas allows angelic action upon these embodied cognitive operations."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A capacity mediated through bodily processes in Aquinas's account; no particular image or sensation establishes an angelic cause."
+    condition_source_id = "st_i_111_3_4"
+
+  edges[fallen_angel_can_persuade]
+    subject = "fallen_angel"
+    relation = "can_perform"
+    object = "angelic_persuasion"
+    source_id str = "st_i_111_2"
+      ?rationale "Created spirits influence by presenting an apparent good."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[fallen_angel_cannot_compel_consent]
+    subject = "fallen_angel"
+    relation = "cannot_compel"
+    object = "deliberate_consent"
+    source_id str = "st_i_111_2"
+      ?rationale "Angelic influence does not necessitate the will's consent."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[persuasion_inclines_will]
+    subject = "angelic_persuasion"
+    relation = "can_influence"
+    object = "will"
+    source_id str = "st_i_111_2"
+      ?rationale "Persuasion inclines through apprehended good."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Influence is external and non-necessitating; the person may consent or resist."
+    condition_source_id = "st_i_111_2"
+
+  edges[demon_can_suggest]
+    subject = "fallen_angel"
+    relation = "can_perform"
+    object = "demonic_suggestion"
+    source_id str = "st_i_114_2_3"
+      ?rationale "Demonic temptation aims at wrongdoing."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[demonic_suggestion_temptation]
+    subject = "demonic_suggestion"
+    relation = "is_kind_of"
+    object = "temptation_to_sin"
+    source_id str = "st_i_114_2_3"
+      ?rationale "Demonic suggestion is one source of solicitation to sin."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[suggestion_can_stir_passion]
+    subject = "demonic_suggestion"
+    relation = "can_influence"
+    object = "disordered_passion"
+    source_id str = "st_i_111_2"
+      ?rationale "Demonic instigation may operate by stirring passions."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[temptation_inclines_to_sin]
+    subject = "temptation_to_sin"
+    relation = "inclines_to"
+    object = "personal_sin"
+    source_id str = "st_i_114_2_3"
+      ?rationale "Solicitation aims at wrongdoing without ensuring consent."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[temptation_cannot_compel_consent]
+    subject = "temptation_to_sin"
+    relation = "cannot_compel"
+    object = "deliberate_consent"
+    source_id str = "st_i_111_2"
+      ?rationale "Temptation does not necessitate consent."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[personal_sin_does_not_require_suggestion]
+    subject = "personal_sin"
+    relation = "does_not_require"
+    object = "demonic_suggestion"
+    source_id str = "st_i_114_2_3"
+      ?rationale "Some sins arise without a particular demonic instigation."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "This denies a necessary direct instigation of each sin, not the indirect role of the first temptation discussed by Aquinas."
+    condition_source_id = "st_i_114_2_3"
+
+  edges[good_angel_guardian_office]
+    subject = "blessed_angel"
+    relation = "has_office"
+    object = "angelic_guardianship"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Good angels exercise providential care."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "An office within good angelic ministry; this does not assign every angel as a personal guardian of every human."
+    condition_source_id = "st_i_113_1_3"
+
+  edges[guardianship_part_of_ministry]
+    subject = "angelic_guardianship"
+    relation = "is_kind_of"
+    object = "angelic_ministry"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Guardianship is a form of angelic ministry."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[personal_guardianship_kind]
+    subject = "personal_angelic_guardianship"
+    relation = "is_kind_of"
+    object = "angelic_guardianship"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Particular guardianship differs from universal care."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[guardianship_human_recipient]
+    subject = "personal_angelic_guardianship"
+    relation = "has_recipient"
+    object = "human_person"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Individual angels are appointed for individual humans."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[god_orders_guardianship]
+    subject = "god"
+    relation = "directs"
+    object = "angelic_guardianship"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Angelic guardianship belongs to divine providence."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "principal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true

@@ -26,8 +26,12 @@ def _run(command):
     return result.stdout
 
 
-def load_ontology():
-    """Return SNT evaluated values and all edge citation rationales."""
+def load_ontology(include_viewer=False):
+    """Return SNT ontology values and cited rationales.
+
+    The graph viewer can opt into its separate DIPL layout settings; they stay
+    outside the strict ontology structure consumed by Rust.
+    """
     with tempfile.TemporaryDirectory(prefix="adimaginem-") as temporary:
         output = Path(temporary) / "ontology.json"
         _run(["snt", "dip", "parse", "--project", str(PROJECT),
@@ -60,8 +64,31 @@ def load_ontology():
             if match.group(1) in profile_rationales:
                 raise RuntimeError(f"duplicate metadata for passion {match.group(1)}")
             profile_rationales[match.group(1)] = item["metadata"].get("rationale", "")
-    return {"ontology": data["ontology"], "rationales": rationales,
-            "profile_rationales": profile_rationales}
+    result = {"ontology": data["ontology"], "rationales": rationales,
+              "profile_rationales": profile_rationales}
+    if include_viewer and "graph_viewer" in data:
+        result["graph_viewer"] = data["graph_viewer"]
+        for palette in ("graph_concept_styles", "graph_relation_colors"):
+            colors = data[palette]
+            metadata = json.loads(_run([
+                "snt", "dip", "list", "--project", str(PROJECT),
+                "--query", f"?{palette}.", "--limit", "10000", "--format", "json",
+            ]))
+            if metadata.get("truncated") or len(metadata["items"]) != metadata["total"]:
+                raise RuntimeError(f"SNT {palette} metadata listing is incomplete")
+            for item in metadata["items"]:
+                match = re.fullmatch(rf"{palette}\[([^\]]+)\]\.color", item["path"])
+                if match:
+                    colors[match.group(1)]["metadata"] = {"category": item["metadata"]["category"]}
+            for key, color in colors.items():
+                if not color.get("metadata", {}).get("category"):
+                    raise ValueError(f"{palette}[{key}].color needs ?category metadata")
+                if not re.fullmatch(r"#[0-9a-fA-F]{6}", color["color"]):
+                    raise ValueError(f"{palette}[{key}].color must be a six-digit hex color")
+            result[palette] = colors
+        if set(result["graph_concept_styles"]) != set(data["ontology"]["concepts"]):
+            raise ValueError("Every ontology concept needs exactly one graph_concept_styles entry")
+    return result
 
 
 def query(command, concept_id=None, relation=None):

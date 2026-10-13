@@ -7,6 +7,13 @@ ontology
     locator = "paragraphs 253-254"
     url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"
 
+  sources[ccc_246]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraph 246"
+    url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"
+
   sources[ccc_1804_1805]
     authority_kind = "church_teaching"
     author = "Catholic Church"
@@ -49,6 +56,13 @@ ontology
     locator = "paragraphs 1210-1211"
     url = "https://www.vatican.va/content/catechism/en/part_two/section_two.index.html"
 
+  sources[ccc_1114_1116]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 1114-1116"
+    url = "https://www.vatican.va/content/catechism/en/part_two/section_one/chapter_one/article_2/i_the_sacraments_of_christ.html"
+
   sources[ccc_1127_1129]
     authority_kind = "church_teaching"
     author = "Catholic Church"
@@ -90,7 +104,7 @@ ontology
   sources[st_i_ii_70_1]
     author = "Thomas Aquinas"
     work = "Summa theologiae"
-    locator = "I-II, q. 70, a. 1, respondeo"
+    locator = "I-II, q. 70, a. 1, respondeo and ad 3"
     url = "https://www.newadvent.org/summa/2070.htm"
 
   sources[st_i_ii_110_3]

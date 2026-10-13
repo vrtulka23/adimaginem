@@ -1,0 +1,22 @@
+# Cited angelic orders records; all concepts and edges default to draft.
+ontology
+  sources[st_i_108_1_4]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 108, aa. 1-4, respondeo"
+    url = "https://www.newadvent.org/summa/1108.htm#article1"
+
+  sources[st_i_108_5]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 108, a. 5, respondeo and ad 1-6"
+    url = "https://www.newadvent.org/summa/1108.htm#article5"
+
+  sources[st_i_108_6]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 108, a. 6, respondeo"
+    url = "https://www.newadvent.org/summa/1108.htm#article6"

@@ -1,0 +1,771 @@
+# Cited angelic orders records; all concepts and edges default to draft.
+ontology
+  edges[first_hierarchy_kind]
+    subject = "first_angelic_hierarchy"
+    relation = "is_kind_of"
+    object = "angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "One of three hierarchies in the Dionysian exposition."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[second_hierarchy_kind]
+    subject = "second_angelic_hierarchy"
+    relation = "is_kind_of"
+    object = "angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "One of three hierarchies in the Dionysian exposition."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[third_hierarchy_kind]
+    subject = "third_angelic_hierarchy"
+    relation = "is_kind_of"
+    object = "angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "One of three hierarchies in the Dionysian exposition."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[seraphim_order]
+    subject = "seraphim"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[seraphim_members]
+    subject = "seraphim"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[seraphim_hierarchy]
+    subject = "seraphim"
+    relation = "belongs_to_hierarchy"
+    object = "first_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[seraphim_characteristic]
+    subject = "seraphim"
+    relation = "has_characteristic"
+    object = "seraphic_ardor"
+    source_id str = "st_i_108_5"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[cherubim_order]
+    subject = "cherubim"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[cherubim_members]
+    subject = "cherubim"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[cherubim_hierarchy]
+    subject = "cherubim"
+    relation = "belongs_to_hierarchy"
+    object = "first_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[cherubim_characteristic]
+    subject = "cherubim"
+    relation = "has_characteristic"
+    object = "cherubic_knowledge"
+    source_id str = "st_i_108_5"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[thrones_order]
+    subject = "thrones"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[thrones_members]
+    subject = "thrones"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[thrones_hierarchy]
+    subject = "thrones"
+    relation = "belongs_to_hierarchy"
+    object = "first_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[thrones_characteristic]
+    subject = "thrones"
+    relation = "has_characteristic"
+    object = "receptivity_to_divine_government"
+    source_id str = "st_i_108_5"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[dominions_order]
+    subject = "dominions"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[dominions_members]
+    subject = "dominions"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[dominions_hierarchy]
+    subject = "dominions"
+    relation = "belongs_to_hierarchy"
+    object = "second_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[dominions_characteristic]
+    subject = "dominions"
+    relation = "has_characteristic"
+    object = "direction_of_angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[angelic_virtues_order]
+    subject = "angelic_virtues"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[angelic_virtues_members]
+    subject = "angelic_virtues"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[angelic_virtues_hierarchy]
+    subject = "angelic_virtues"
+    relation = "belongs_to_hierarchy"
+    object = "second_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[angelic_virtues_characteristic]
+    subject = "angelic_virtues"
+    relation = "has_characteristic"
+    object = "empowerment_of_angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[powers_order_order]
+    subject = "powers_order"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[powers_order_members]
+    subject = "powers_order"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[powers_order_hierarchy]
+    subject = "powers_order"
+    relation = "belongs_to_hierarchy"
+    object = "second_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[powers_order_characteristic]
+    subject = "powers_order"
+    relation = "has_characteristic"
+    object = "ordering_of_angelic_execution"
+    source_id str = "st_i_108_6"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[principalities_order]
+    subject = "principalities"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[principalities_members]
+    subject = "principalities"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[principalities_hierarchy]
+    subject = "principalities"
+    relation = "belongs_to_hierarchy"
+    object = "third_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[principalities_characteristic]
+    subject = "principalities"
+    relation = "has_characteristic"
+    object = "leadership_of_angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[archangels_order]
+    subject = "archangels"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[archangels_members]
+    subject = "archangels"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[archangels_hierarchy]
+    subject = "archangels"
+    relation = "belongs_to_hierarchy"
+    object = "third_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[archangels_characteristic]
+    subject = "archangels"
+    relation = "has_characteristic"
+    object = "announcement_of_great_divine_matters"
+    source_id str = "st_i_108_5"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[angels_order_order]
+    subject = "angels_order"
+    relation = "is_kind_of"
+    object = "angelic_order"
+    source_id str = "st_i_108_5"
+      ?rationale "One of the nine named orders."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[angels_order_members]
+    subject = "angels_order"
+    relation = "has_members_of_kind"
+    object = "blessed_angel"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The heavenly order groups blessed spirits; order membership is not a new individual substance."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    conditions = "These records describe the heavenly orders in beatitude; fallen angels are not thereby assigned their blessed offices."
+    condition_source_id = "st_i_108_1_4"
+
+  edges[angels_order_hierarchy]
+    subject = "angels_order"
+    relation = "belongs_to_hierarchy"
+    object = "third_angelic_hierarchy"
+    source_id str = "st_i_108_6"
+      ?rationale "Placement in the Dionysian hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[angels_order_characteristic]
+    subject = "angels_order"
+    relation = "has_characteristic"
+    object = "angelic_announcement"
+    source_id str = "st_i_108_5"
+      ?rationale "The order is named by its characteristic perfection or ministry."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Characteristic excellence does not imply that other orders entirely lack this perfection or participation in this work."
+    condition_source_id = "st_i_108_5"
+
+  edges[seraphim_above_cherubim]
+    subject = "seraphim"
+    relation = "is_higher_order_than"
+    object = "cherubim"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[cherubim_above_thrones]
+    subject = "cherubim"
+    relation = "is_higher_order_than"
+    object = "thrones"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[thrones_above_dominions]
+    subject = "thrones"
+    relation = "is_higher_order_than"
+    object = "dominions"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[dominions_above_angelic_virtues]
+    subject = "dominions"
+    relation = "is_higher_order_than"
+    object = "angelic_virtues"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[angelic_virtues_above_powers_order]
+    subject = "angelic_virtues"
+    relation = "is_higher_order_than"
+    object = "powers_order"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[powers_order_above_principalities]
+    subject = "powers_order"
+    relation = "is_higher_order_than"
+    object = "principalities"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[principalities_above_archangels]
+    subject = "principalities"
+    relation = "is_higher_order_than"
+    object = "archangels"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[archangels_above_angels_order]
+    subject = "archangels"
+    relation = "is_higher_order_than"
+    object = "angels_order"
+    source_id str = "st_i_108_6"
+      ?rationale "Relative rank in the specified hierarchy."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Dionysian ordering expounded in ST I, q. 108, a. 6; Gregory assigns different positions to Virtues and Principalities."
+    condition_source_id = "st_i_108_6"
+
+  edges[hierarchy_ordered_to_god]
+    subject = "angelic_hierarchy"
+    relation = "is_ordered_to"
+    object = "god"
+    source_id str = "st_i_108_1_4"
+      ?rationale "The hierarchy is an ordering under divine government."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "community"
+    causal_mode = "final"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[seraphic_ardor_charity]
+    subject = "seraphic_ardor"
+    relation = "participates_in"
+    object = "charity_virtue"
+    source_id str = "st_i_108_5"
+      ?rationale "Seraphic ardor denotes excellence of charity."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[cherubic_knowledge_in_intellect]
+    subject = "cherubic_knowledge"
+    relation = "is_realized_in"
+    object = "angelic_intellect"
+    source_id str = "st_i_108_5"
+      ?rationale "The knowledge characteristic of Cherubim is an angelic intellectual perfection."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[direction_of_angelic_ministry_directs_ministry]
+    subject = "direction_of_angelic_ministry"
+    relation = "is_ordered_to"
+    object = "angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The office concerns ordering or executing angelic work."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "final"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[empowerment_of_angelic_ministry_directs_ministry]
+    subject = "empowerment_of_angelic_ministry"
+    relation = "is_ordered_to"
+    object = "angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The office concerns ordering or executing angelic work."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "final"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[ordering_of_angelic_execution_directs_ministry]
+    subject = "ordering_of_angelic_execution"
+    relation = "is_ordered_to"
+    object = "angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The office concerns ordering or executing angelic work."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "final"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[leadership_of_angelic_ministry_directs_ministry]
+    subject = "leadership_of_angelic_ministry"
+    relation = "is_ordered_to"
+    object = "angelic_ministry"
+    source_id str = "st_i_108_6"
+      ?rationale "The office concerns ordering or executing angelic work."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "final"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[announcement_of_great_divine_matters_human_recipient]
+    subject = "announcement_of_great_divine_matters"
+    relation = "has_recipient"
+    object = "human_person"
+    source_id str = "st_i_108_5"
+      ?rationale "The account concerns divine announcements reaching humans."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[angelic_announcement_human_recipient]
+    subject = "angelic_announcement"
+    relation = "has_recipient"
+    object = "human_person"
+    source_id str = "st_i_108_5"
+      ?rationale "The account concerns divine announcements reaching humans."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[lowest_order_guardianship]
+    subject = "angels_order"
+    relation = "has_office"
+    object = "personal_angelic_guardianship"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Aquinas assigns individual guardianship to the lowest order."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Particular guardianship is distinguished from the universal care of higher orders."
+    condition_source_id = "st_i_113_1_3"
+
+  edges[powers_restrain_demons]
+    subject = "powers_order"
+    relation = "can_restrain"
+    object = "fallen_angel"
+    source_id str = "st_i_113_1_3"
+      ?rationale "Aquinas reports Gregory's assignment of restraint of demons to Powers."
+    recipient_scope = "angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Gregory's ministerial account, reported by Aquinas; lower angels can share this work (a. 3, ad 3)."
+    condition_source_id = "st_i_113_1_3"

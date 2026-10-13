@@ -1,0 +1,65 @@
+# Normalized human operations and states; these are not additional faculties.
+ontology
+  concepts[benevolence]
+    label = "Benevolence"
+    latin_name = "benevolentia"
+    domain = "anthropology"
+    category = "act"
+    note = "Willing another person good; an act of will included in love, without exhausting what love means."
+    source_id = "st_ii_ii_27_2"
+
+  concepts[beneficence]
+    label = "Beneficence"
+    latin_name = "beneficentia"
+    domain = "anthropology"
+    category = "act"
+    note = "Doing good to another; considered generally as an act of friendship or charity, with particular acts also belonging to particular virtues."
+    source_id = "st_ii_ii_31_1"
+
+  concepts[concord]
+    label = "Concord"
+    latin_name = "concordia"
+    domain = "anthropology"
+    category = "state"
+    note = "Agreement among persons in what they will; concord alone need not constitute the fullness of peace."
+    source_id = "st_ii_ii_29_1_3"
+
+  concepts[appetitive_harmony]
+    label = "Harmony of appetitive movements"
+    latin_name = "unio motuum appetitivorum"
+    domain = "anthropology"
+    category = "state"
+    note = "The unity of appetitive movements within a person included in peace; a normalized name for this aspect of Aquinas's account."
+    source_id = "st_ii_ii_29_1_3"
+
+  concepts[endurance_of_adversity]
+    label = "Endurance of adversity"
+    latin_name = "tolerantia malorum"
+    domain = "anthropology"
+    category = "act"
+    note = "Bearing adversity while remaining steadfast in the good, as described in the account of patience."
+    source_id = "st_ii_ii_136_1"
+
+  concepts[perseverance_in_waiting]
+    label = "Perseverance in awaiting good"
+    latin_name = "exspectatio boni dilati"
+    domain = "anthropology"
+    category = "act"
+    note = "Persisting toward a good whose attainment is delayed; normalized operational label for longanimity, not an identification with the distinct virtue of perseverance."
+    source_id = "st_ii_ii_136_5"
+
+  concepts[trustworthy_dealing]
+    label = "Trustworthy dealing"
+    latin_name = "fidelitas ad proximum"
+    domain = "anthropology"
+    category = "act"
+    note = "Dealing faithfully with others, without deceit."
+    source_id = "st_i_ii_70_3"
+
+  concepts[outward_conduct]
+    label = "Outward words and deeds"
+    latin_name = "verba et facta exteriora"
+    domain = "anthropology"
+    category = "act"
+    note = "External conduct considered under its due measure."
+    source_id = "st_i_ii_70_3"

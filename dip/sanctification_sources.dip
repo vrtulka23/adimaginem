@@ -1,0 +1,116 @@
+# Passage-level authorities for gifts, sacramental effects, and angelic grace.
+ontology
+  sources[st_ii_ii_4_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 4, a. 2, respondeo and ad 3"
+    url = "https://www.newadvent.org/summa/3004.htm#article2"
+
+  sources[st_ii_ii_18_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 18, a. 1, respondeo and ad 2"
+    url = "https://www.newadvent.org/summa/3018.htm#article1"
+
+  sources[st_i_ii_68_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 68, a. 4, respondeo and ad 1-3"
+    url = "https://www.newadvent.org/summa/2068.htm#article4"
+
+  sources[st_i_ii_68_3]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 68, a. 3, respondeo and ad 2"
+    url = "https://www.newadvent.org/summa/2068.htm#article3"
+
+  sources[st_ii_ii_45_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 45, a. 2, respondeo"
+    url = "https://www.newadvent.org/summa/3045.htm#article2"
+
+  sources[st_ii_ii_24_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 24, a. 1, respondeo"
+    url = "https://www.newadvent.org/summa/3024.htm#article1"
+
+  sources[st_ii_ii_52_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 52, a. 2, respondeo"
+    url = "https://www.newadvent.org/summa/3052.htm#article2"
+
+  sources[st_ii_ii_52_3]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 52, a. 3, respondeo and ad 1-2"
+    url = "https://www.newadvent.org/summa/3052.htm#article3"
+
+  sources[st_iii_65_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 65, a. 1, respondeo and ad 1"
+    url = "https://www.newadvent.org/summa/4065.htm#article1"
+
+  sources[st_iii_63_3]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 63, a. 3, respondeo"
+    url = "https://www.newadvent.org/summa/4063.htm#article3"
+
+  sources[st_iii_63_4_5]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 63, a. 4, respondeo and ad 3; a. 5, respondeo and ad 1"
+    url = "https://www.newadvent.org/summa/4063.htm#article4"
+
+  sources[st_iii_79_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 79, a. 1, respondeo and ad 1-2"
+    url = "https://www.newadvent.org/summa/4079.htm#article1"
+
+  sources[st_iii_86_1_6]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 86, aa. 1, 5-6, respondeo"
+    url = "https://www.newadvent.org/summa/4086.htm#article1"
+
+  sources[st_i_54_3_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 54, aa. 3-4, respondeo"
+    url = "https://www.newadvent.org/summa/1054.htm#article3"
+
+  sources[st_i_59_1_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 59, aa. 1, 4, respondeo"
+    url = "https://www.newadvent.org/summa/1059.htm#article1"
+
+  sources[st_i_62_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 62, a. 2, respondeo"
+    url = "https://www.newadvent.org/summa/1062.htm#article2"
+
+  sources[st_i_62_8]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 62, a. 8, respondeo"
+    url = "https://www.newadvent.org/summa/1062.htm#article8"
+
+  sources[st_iii_80_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 80, a. 2, respondeo and ad 1-3"
+    url = "https://www.newadvent.org/summa/4080.htm#article2"
+
+  sources[ccc_1532]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraph 1532"
+    url = "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_two/article_5/in_brief.html"

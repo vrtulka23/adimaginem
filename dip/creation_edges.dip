@@ -17,6 +17,22 @@ ontology
       ?rationale "Catechism §290 says all that exists outside God depends on God for being, and God alone is Creator."
     included_in_model bool = true
 
+  edges[god_exemplar_cause_of_created_being]
+    subject str = "god"
+    relation str = "is_exemplar_cause_of"
+    object str = "created_being"
+    source_id str = "st_i_44_3_4"
+      ?rationale "ST I, q. 44, a. 3 identifies God as the first exemplar cause of all things."
+    included_in_model bool = true
+
+  edges[god_final_cause_of_created_being]
+    subject str = "god"
+    relation str = "is_final_cause_of"
+    object str = "created_being"
+    source_id str = "st_i_44_3_4"
+      ?rationale "ST I, q. 44, a. 4 argues that God is the final cause of all things, since all things are ordered to divine goodness as their end."
+    included_in_model bool = true
+
   edges[god_creates_angels]
     subject str = "god"
     relation str = "creates"

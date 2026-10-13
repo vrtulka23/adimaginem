@@ -1,0 +1,499 @@
+# Qualified, cited claims; conditions are descriptive and not executable rules.
+ontology
+  edges[faith_in_intellect]
+    subject str = "faith_virtue"
+    relation str = "inheres_in_subject"
+    object str = "intellectual_power"
+    source_id str = "st_ii_ii_4_2"
+      ?rationale "Faith resides in the intellect; believing is intellectual assent moved by the will. Its subject is the speculative intellect, which can extend to action."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[hope_in_will]
+    subject str = "hope_virtue"
+    relation str = "inheres_in_subject"
+    object str = "will"
+    source_id str = "st_ii_ii_18_1"
+      ?rationale "Theological hope resides in the will, the intellectual appetite, because its object is divine good; it is distinct from the passion of hope in the sensitive appetite."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[speculative_intellect_kind]
+    subject str = "speculative_intellect"
+    relation str = "is_kind_of"
+    object str = "intellectual_power"
+    source_id str = "st_i_79_11"
+      ?rationale "Speculative names the one intellect by its contemplative end."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[counsel_perfects_prudence]
+    subject str = "counsel_gift"
+    relation str = "perfects"
+    object str = "prudence_virtue"
+    source_id str = "st_ii_ii_52_2"
+      ?rationale "Divine counsel perfects prudence in directing action."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[wisdom_in_intellect]
+    subject str = "wisdom_gift"
+    relation str = "inheres_in_subject"
+    object str = "intellectual_power"
+    source_id str = "st_ii_ii_45_2"
+      ?rationale "Wisdom resides in intellect, although charity supplies its connaturality with divine things."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[charity_grounds_wisdom]
+    subject str = "charity_virtue"
+    relation str = "grounds_connatural_judgment"
+    object str = "wisdom_gift"
+    source_id str = "st_ii_ii_45_2"
+      ?rationale "Charity grounds the affinity by which wisdom judges divine things."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "dispositive"
+    included_in_model bool = true
+
+  edges[charity_in_will]
+    subject str = "charity_virtue"
+    relation str = "inheres_in_subject"
+    object str = "will"
+    source_id str = "st_ii_ii_24_1"
+      ?rationale "Charity has intellectual appetite, or will, as its subject."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[charity_act_of_will]
+    subject str = "act_of_charity"
+    relation str = "is_act_of"
+    object str = "will"
+    source_id str = "st_ii_ii_24_1"
+      ?rationale "The exercise of charity belongs to its subject, the will."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[gifts_are_habits]
+    subject str = "gift_of_holy_spirit"
+    relation str = "is_kind_of"
+    object str = "habit"
+    source_id str = "st_i_ii_68_3"
+      ?rationale "Gifts are abiding dispositions for divine movement, with free human cooperation."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[god_principal_cause_of_grace]
+    subject str = "god"
+    relation str = "principally_causes_grace"
+    object str = "grace"
+    source_id str = "st_iii_62_1"
+      ?rationale "God alone causes grace as principal agent."
+    causal_mode = "principal"
+    included_in_model bool = true
+
+  edges[baptism_regenerates]
+    subject str = "baptism"
+    relation str = "instrumentally_effects"
+    object str = "spiritual_regeneration"
+    source_id str = "st_iii_65_1"
+      ?rationale "Baptism begins spiritual life."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[regeneration_begins_spiritual_life]
+    subject str = "spiritual_regeneration"
+    relation str = "is_ordered_to"
+    object str = "spiritual_life"
+    source_id str = "st_iii_65_1"
+      ?rationale "Spiritual regeneration inaugurates the life nourished by the sacraments."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "final"
+    included_in_model bool = true
+
+  edges[confirmation_strengthens_life]
+    subject str = "confirmation"
+    relation str = "strengthens"
+    object str = "spiritual_life"
+    source_id str = "st_iii_65_1"
+      ?rationale "Confirmation supplies spiritual strength."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[eucharist_nourishes_life]
+    subject str = "eucharist"
+    relation str = "nourishes"
+    object str = "spiritual_life"
+    source_id str = "st_iii_65_1"
+      ?rationale "The Eucharist sustains spiritual life."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[penance_remits_sin]
+    subject str = "penance"
+    relation str = "instrumentally_effects"
+    object str = "remission_of_sin"
+    source_id str = "st_iii_86_1_6"
+      ?rationale "Forgiveness is an effect of sacramental Penance through the keys and the acts of the penitent."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "Human penitents in this life; genuine repentance and the sacramental acts are required. This is not applied to demons."
+    condition_source_id = "st_iii_86_1_6"
+    included_in_model bool = true
+
+  edges[anointing_remedies_remnants]
+    subject str = "anointing_of_sick"
+    relation str = "remedies"
+    object str = "remnants_of_sin"
+    source_id str = "st_iii_65_1"
+      ?rationale "Anointing remedies residual spiritual weakness."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[orders_enables_ministry]
+    subject str = "holy_orders"
+    relation str = "enables"
+    object str = "sacred_ministry"
+    source_id str = "st_iii_65_1"
+      ?rationale "Orders equips ministers for ecclesial service."
+    recipient_scope = "human_person"
+    affected_aspect = "community"
+    causal_mode = "instrumental"
+    included_in_model bool = true
+
+  edges[matrimony_ordered_to_procreation]
+    subject str = "matrimony"
+    relation str = "is_ordered_to"
+    object str = "generation_of_children"
+    source_id str = "st_iii_65_1"
+      ?rationale "Marriage is ordered to human generation."
+    recipient_scope = "human_person"
+    affected_aspect = "community"
+    causal_mode = "final"
+    included_in_model bool = true
+
+  edges[matrimony_remedies_concupiscence]
+    subject str = "matrimony"
+    relation str = "remedies"
+    object str = "disordered_concupiscence"
+    source_id str = "st_iii_65_1"
+      ?rationale "Marriage remedies sexual concupiscence."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[eucharist_increases_charity]
+    subject str = "eucharist"
+    relation str = "increases"
+    object str = "charity_virtue"
+    source_id str = "st_iii_79_1"
+      ?rationale "Eucharistic nourishment perfects grace and charity."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[eucharist_arouses_charity]
+    subject str = "eucharist"
+    relation str = "arouses"
+    object str = "act_of_charity"
+    source_id str = "st_iii_79_1"
+      ?rationale "Aquinas distinguishes the bestowed habit from its arousal to activity."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[character_in_intellect]
+    subject str = "sacramental_character"
+    relation str = "inheres_in_subject"
+    object str = "intellectual_power"
+    source_id str = "st_iii_63_4_5"
+      ?rationale "Aquinas locates character in cognitive power and argues for its indelibility."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[character_participates_priesthood]
+    subject str = "sacramental_character"
+    relation str = "participates_in"
+    object str = "christ_priesthood"
+    source_id str = "st_iii_63_3"
+      ?rationale "Character is a participation in the priesthood of Christ."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[priesthood_proper_to_incarnate_son]
+    subject str = "christ_priesthood"
+    relation str = "is_proper_to"
+    object str = "son"
+    source_id str = "st_iii_63_3"
+      ?rationale "Christ is the source of the priesthood participated through character; Son here denotes the incarnate Christ."
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[anointing_enables_endurance]
+    subject str = "anointing_of_sick"
+    relation str = "enables"
+    object str = "endurance_in_illness"
+    source_id str = "ccc_1532"
+      ?rationale "Anointing gives spiritual courage to endure suffering."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "instrumental"
+    conditions = "Fruitful reception presupposes the dispositions appropriate to the sacrament; sacramental efficacy comes from Christ."
+    condition_source_id = "ccc_1127_1129"
+    included_in_model bool = true
+
+  edges[anointing_bodily_healing]
+    subject str = "anointing_of_sick"
+    relation str = "instrumentally_effects"
+    object str = "bodily_healing"
+    source_id str = "ccc_1532"
+      ?rationale "Bodily recovery is among the conditional effects of anointing."
+    recipient_scope = "human_person"
+    affected_aspect = "body"
+    causal_mode = "instrumental"
+    conditions = "Bodily health is restored if conducive to the salvation of the recipient; recovery is not guaranteed."
+    condition_source_id = "ccc_1532"
+    included_in_model bool = true
+
+  edges[bodily_healing_of_body]
+    subject str = "bodily_healing"
+    relation str = "is_realized_in"
+    object str = "human_body"
+    source_id str = "ccc_1532"
+      ?rationale "The bodily aspect of healing concerns the sick human body."
+    recipient_scope = "human_person"
+    affected_aspect = "body"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[angel_has_intellect]
+    subject str = "angel"
+    relation str = "has_power"
+    object str = "angelic_intellect"
+    source_id str = "st_i_54_3_4"
+      ?rationale "Angelic intellect is a faculty distinct from angelic essence."
+    recipient_scope = "angel"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[angel_has_will]
+    subject str = "angel"
+    relation str = "has_power"
+    object str = "angelic_will"
+    source_id str = "st_i_59_1_4"
+      ?rationale "Angels possess intellectual appetite, or will."
+    recipient_scope = "angel"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[blessed_angel_condition]
+    subject str = "blessed_angel"
+    relation str = "is_blessed_condition_of"
+    object str = "angel"
+    source_id str = "st_i_62_8"
+      ?rationale "Beatitude names the condition of an angel beholding God."
+    recipient_scope = "blessed_angel"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[grace_enables_angelic_turning]
+    subject str = "grace"
+    relation str = "enables"
+    object str = "angelic_turning_to_god"
+    source_id str = "st_i_62_2"
+      ?rationale "Supernatural turning to beatitude needs divine assistance."
+    recipient_scope = "angel"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    conditions = "This concerns supernatural conversion, not natural love of God or an assertion that every angel presently possesses grace."
+    condition_source_id = "st_i_62_2"
+    included_in_model bool = true
+
+  edges[angelic_turning_act_of_will]
+    subject str = "angelic_turning_to_god"
+    relation str = "is_act_of"
+    object str = "angelic_will"
+    source_id str = "st_i_62_2"
+      ?rationale "The supernatural movement is an act of angelic will."
+    recipient_scope = "angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[angelic_turning_toward_god]
+    subject str = "angelic_turning_to_god"
+    relation str = "is_ordered_to"
+    object str = "god"
+    source_id str = "st_i_62_2"
+      ?rationale "Grace directs the angelic will toward God as supernatural end."
+    recipient_scope = "angel"
+    affected_aspect = "act"
+    causal_mode = "final"
+    included_in_model bool = true
+
+  edges[blessed_angel_receives_vision]
+    subject str = "blessed_angel"
+    relation str = "receives"
+    object str = "beatific_vision"
+    source_id str = "st_i_62_8"
+      ?rationale "Blessed angels enjoy the vision of the divine essence."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[angelic_vision_act_of_intellect]
+    subject str = "beatific_vision"
+    relation str = "is_act_of"
+    object str = "angelic_intellect"
+    source_id str = "st_i_62_8"
+      ?rationale "In blessed angels, the vision is intellectual."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[vision_has_divine_object]
+    subject str = "beatific_vision"
+    relation str = "has_formal_object"
+    object str = "divine_essence"
+    source_id str = "st_i_62_8"
+      ?rationale "Angelic beatitude consists in seeing God in his essence."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[counsel_directs_angelic_ministry]
+    subject str = "counsel_gift"
+    relation str = "directs"
+    object str = "angelic_ministry"
+    source_id str = "st_ii_ii_52_3"
+      ?rationale "Divine counsel guides the ministries of blessed angels."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "perfective"
+    conditions = "In beatitude counsel is divine instruction, without the anxious uncertainty and discursive inquiry of earthly deliberation."
+    condition_source_id = "st_ii_ii_52_3"
+    included_in_model bool = true
+
+  edges[angelic_ministry_in_blessed]
+    subject str = "angelic_ministry"
+    relation str = "is_realized_in"
+    object str = "blessed_angel"
+    source_id str = "st_ii_ii_52_3"
+      ?rationale "Blessed angels serve others under divine direction."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[blessed_angels_united_to_christ]
+    subject str = "blessed_angel"
+    relation str = "is_united_in_charity_with"
+    object str = "son"
+    source_id str = "st_iii_80_2"
+      ?rationale "Angels enjoy communion with Christ through perfected charity and clear vision."
+    recipient_scope = "blessed_angel"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    conditions = "Heavenly communion with Christ does not mean reception of the Eucharistic sacrament."
+    condition_source_id = "st_iii_80_2"
+    included_in_model bool = true
+
+  edges[wisdom_gift_specific_intellect]
+    subject str = "wisdom_gift"
+    relation str = "perfects"
+    object str = "speculative_intellect"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "Wisdom perfects speculative judgment."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[understanding_gift_specific_intellect]
+    subject str = "understanding_gift"
+    relation str = "perfects"
+    object str = "speculative_intellect"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "Understanding perfects speculative apprehension."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[counsel_gift_specific_intellect]
+    subject str = "counsel_gift"
+    relation str = "perfects"
+    object str = "practical_intellect"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "Counsel perfects practical apprehension."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[knowledge_gift_specific_intellect]
+    subject str = "knowledge_gift"
+    relation str = "perfects"
+    object str = "practical_intellect"
+    source_id str = "st_i_ii_68_4"
+      ?rationale "Knowledge perfects practical judgment in this classification."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true

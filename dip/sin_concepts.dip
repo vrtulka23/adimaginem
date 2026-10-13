@@ -1,0 +1,169 @@
+# Cited sin records; all concepts and edges default to draft.
+ontology
+  concepts[personal_sin]
+    label = "Personal sin"
+    latin_name = "peccatum actuale"
+    domain = "theology"
+    category = "act"
+    note = "A culpable disordered act, including voluntary omission; distinguish from inherited original sin."
+    source_id = "st_i_ii_71_1_6"
+
+  concepts[original_sin]
+    label = "Original sin"
+    latin_name = "peccatum originale"
+    domain = "theology"
+    category = "state"
+    note = "Inherited deprivation of original holiness and justice; contracted rather than personally committed by descendants."
+    source_id = "ccc_404_405"
+
+  concepts[mortal_sin]
+    label = "Mortal sin"
+    latin_name = "peccatum mortale"
+    domain = "theology"
+    category = "act"
+    note = "Personal sin involving grave matter, full knowledge and deliberate consent together."
+    source_id = "ccc_1854_1863"
+
+  concepts[venial_sin]
+    label = "Venial sin"
+    latin_name = "peccatum veniale"
+    domain = "theology"
+    category = "act"
+    note = "Personal sin that wounds charity while leaving sanctifying grace and friendship with God."
+    source_id = "ccc_1854_1863"
+
+  concepts[vice]
+    label = "Vice"
+    latin_name = "vitium"
+    domain = "theology"
+    category = "habit"
+    note = "An enduring bad moral disposition; distinguish the habit from its individual acts."
+    source_id = "st_i_ii_71_1_6"
+
+  concepts[original_justice]
+    label = "Original justice"
+    latin_name = "iustitia originalis"
+    domain = "theology"
+    category = "state"
+    note = "Original ordering of human powers under reason and of reason under God."
+    source_id = "st_i_ii_85_1_3"
+
+  concepts[wounded_human_nature]
+    label = "Wounded human nature"
+    latin_name = "natura humana vulnerata"
+    domain = "theology"
+    category = "state"
+    note = "Human powers deprived of their due ordering; their natural existence is not destroyed."
+    source_id = "st_i_ii_85_1_3"
+
+  concepts[ignorance_wound]
+    label = "Ignorance (wound)"
+    latin_name = "vulnus ignorantiae"
+    domain = "theology"
+    category = "disposition"
+    note = "Wounded ordering of reason toward truth, especially in practical matters; not every lack of information is a personal fault."
+    source_id = "st_i_ii_85_1_3"
+
+  concepts[malice_wound]
+    label = "Malice (wound)"
+    latin_name = "vulnus malitiae"
+    domain = "theology"
+    category = "disposition"
+    note = "Disordered inclination of will toward evil; distinguished from an individual malicious act."
+    source_id = "st_i_ii_85_1_3"
+
+  concepts[weakness_wound]
+    label = "Weakness (wound)"
+    latin_name = "vulnus infirmitatis"
+    domain = "theology"
+    category = "disposition"
+    note = "Difficulty of the irascible appetite in pursuing arduous good; not a bodily diagnosis."
+    source_id = "st_i_ii_85_1_3"
+
+  concepts[blindness_of_mind]
+    label = "Blindness of mind"
+    latin_name = "caecitas mentis"
+    domain = "theology"
+    category = "disposition"
+    note = "Here the culpable failure to attend to an intellectual principle, through refusal or competing attachment; natural incapacity is distinguished."
+    source_id = "st_ii_ii_15_1_2"
+
+  concepts[dullness_of_understanding]
+    label = "Dullness of understanding"
+    latin_name = "hebetudo sensus circa intelligentiam"
+    domain = "theology"
+    category = "disposition"
+    note = "Here the culpable dullness in penetrating spiritual meaning discussed by Aquinas; distinguish natural limitations."
+    source_id = "st_ii_ii_15_1_2"
+
+  concepts[disordered_passion]
+    label = "Disordered passion"
+    latin_name = "passio inordinata"
+    domain = "theology"
+    category = "passion"
+    note = "An appetitive movement considered as exceeding rational order; passions as such are not identified with sin."
+    source_id = "st_i_ii_77_1_2"
+
+  concepts[practical_judgment]
+    label = "Practical judgment"
+    latin_name = "iudicium rationis practicae"
+    domain = "theology"
+    category = "act"
+    note = "Reason judging a particular object or action; a normalized label for the judgment affected by passion in this passage."
+    source_id = "st_i_ii_77_1_2"
+
+  concepts[grave_matter]
+    label = "Grave matter"
+    latin_name = "materia gravis"
+    domain = "theology"
+    category = "formal_object"
+    note = "Serious moral matter; by itself it does not establish personal mortal culpability."
+    source_id = "ccc_1854_1863"
+
+  concepts[full_moral_knowledge]
+    label = "Full moral knowledge"
+    latin_name = "plena cognitio"
+    domain = "theology"
+    category = "state"
+    note = "Knowledge of the sinful character of the act relevant to mortal culpability."
+    source_id = "ccc_1854_1863"
+
+  concepts[deliberate_consent]
+    label = "Deliberate consent"
+    latin_name = "deliberatus consensus"
+    domain = "theology"
+    category = "act"
+    note = "Personal and sufficiently deliberate consent relevant to mortal culpability."
+    source_id = "ccc_1854_1863"
+
+  concepts[aversion_from_god]
+    label = "Turning away from God"
+    latin_name = "aversio a Deo"
+    domain = "theology"
+    category = "state"
+    note = "Moral departure from God as ultimate end; not spatial distance or independence from the Creator."
+    source_id = "ccc_1854_1863"
+
+  concepts[human_conversion]
+    label = "Human conversion to God"
+    latin_name = "conversio hominis ad Deum"
+    domain = "theology"
+    category = "act"
+    note = "Turning toward God under grace; distinguished from the existing angelic conversion concept."
+    source_id = "st_i_ii_113_3_6"
+
+  concepts[repentance_for_sin]
+    label = "Repentance for sin"
+    latin_name = "detestatio peccati"
+    domain = "theology"
+    category = "act"
+    note = "Rejection of sin in the movement of free will accompanying adult justification."
+    source_id = "st_i_ii_113_3_6"
+
+  concepts[justification]
+    label = "Justification"
+    latin_name = "iustificatio impii"
+    domain = "theology"
+    category = "process"
+    note = "Divine restoration to justice, including grace and forgiveness; adult free response is distinguished from infant reception."
+    source_id = "st_i_ii_113_3_6"

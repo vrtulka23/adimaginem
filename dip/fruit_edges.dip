@@ -1,0 +1,293 @@
+# Fruits as human operations: source-backed relations, not numeric effects.
+ontology
+  edges[fruits_realized_in_humans]
+    subject str = "fruit_of_holy_spirit"
+    relation str = "is_realized_in"
+    object str = "human_person"
+    source_id str = "st_i_ii_70_1"
+      ?rationale "Fruits are human operations under the Spirit's movement."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[charity_fruit_expresses_love]
+    subject str = "charity_fruit"
+    relation str = "expresses"
+    object str = "act_of_charity"
+    source_id str = "st_i_ii_70_1"
+      ?rationale "Charity here names its exercise."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[joy_fruit_from_charity]
+    subject str = "joy_fruit"
+    relation str = "is_effect_of"
+    object str = "charity_virtue"
+    source_id str = "st_ii_ii_28_1_2"
+      ?rationale "Spiritual joy follows charity's love of divine goodness."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "perfective"
+    conditions = "Joy in divine goodness coexists with sorrow about obstacles to participation in that goodness; this is not a claim of uninterrupted pleasant feeling."
+    condition_source_id = "st_ii_ii_28_1_2"
+    included_in_model bool = true
+
+  edges[peace_fruit_from_charity]
+    subject str = "peace_fruit"
+    relation str = "is_effect_of"
+    object str = "charity_virtue"
+    source_id str = "st_ii_ii_29_1_3"
+      ?rationale "Charity brings unity within a person and with others."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[peace_includes_concord]
+    subject str = "peace_fruit"
+    relation str = "includes"
+    object str = "concord"
+    source_id str = "st_ii_ii_29_1_3"
+      ?rationale "Peace includes concord between persons."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    conditions = "Peace concerns concord in good; it does not require agreement on every opinion."
+    condition_source_id = "st_ii_ii_29_1_3"
+    included_in_model bool = true
+
+  edges[peace_includes_appetitive_harmony]
+    subject str = "peace_fruit"
+    relation str = "includes"
+    object str = "appetitive_harmony"
+    source_id str = "st_ii_ii_29_1_3"
+      ?rationale "Peace also includes unity among a person's appetitive movements."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[patience_sustains_endurance]
+    subject str = "patience_fruit"
+    relation str = "sustains"
+    object str = "endurance_of_adversity"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Patience bears adversity."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[longanimity_sustains_waiting]
+    subject str = "generosity_fruit"
+    relation str = "sustains"
+    object str = "perseverance_in_waiting"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Longanimity endures delayed good."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "perfective"
+    conditions = "Read this preserved ID in the Thomistic sense of longanimitas: waiting for good, not monetary liberality."
+    condition_source_id = "st_i_ii_70_3"
+    included_in_model bool = true
+
+  edges[goodness_expresses_benevolence]
+    subject str = "goodness_fruit"
+    relation str = "expresses"
+    object str = "benevolence"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Goodness wills another's good."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[kindness_expresses_beneficence]
+    subject str = "kindness_fruit"
+    relation str = "expresses"
+    object str = "beneficence"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Kindness carries goodwill into action."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[gentleness_moderates_anger]
+    subject str = "gentleness_fruit"
+    relation str = "moderates"
+    object str = "anger_passion"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Gentleness curbs anger."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[faithfulness_expresses_fidelity]
+    subject str = "faithfulness_fruit"
+    relation str = "expresses"
+    object str = "trustworthy_dealing"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Fidelity excludes deceit."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    conditions = "This edge uses fides as interpersonal fidelity, one of the two readings Aquinas gives."
+    condition_source_id = "st_i_ii_70_3"
+    included_in_model bool = true
+
+  edges[modesty_orders_conduct]
+    subject str = "modesty_fruit"
+    relation str = "orders"
+    object str = "outward_conduct"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Modesty measures words and deeds."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[self_control_resists_desire]
+    subject str = "self_control_fruit"
+    relation str = "resists"
+    object str = "disordered_concupiscence"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Continence withstands desire."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    included_in_model bool = true
+
+  edges[self_control_exercised_in_will]
+    subject str = "self_control_fruit"
+    relation str = "is_act_of"
+    object str = "will"
+    source_id str = "st_ii_ii_155_3"
+      ?rationale "The fruit is mapped to the exercise of continence: will chooses to resist contrary desire."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    conditions = "This is continence as resistance of will; the sensitive appetite may still contain vehement contrary desires."
+    condition_source_id = "st_ii_ii_155_3"
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[chastity_moderates_desire]
+    subject str = "chastity_fruit"
+    relation str = "moderates"
+    object str = "desire_passion"
+    source_id str = "st_ii_ii_151_1_2"
+      ?rationale "Chastity as fruit denotes its operation, ordering desire according to reason and voluntary choice."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "perfective"
+    conditions = "The literal sexual sense of chastity is used here; the relation does not extend to every object of desire."
+    condition_source_id = "st_ii_ii_151_1_2"
+    included_in_model bool = true
+
+  edges[benevolence_act_of_will]
+    subject str = "benevolence"
+    relation str = "is_act_of"
+    object str = "will"
+    source_id str = "st_ii_ii_27_2"
+      ?rationale "Goodwill is the act of wishing another person good."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[charity_includes_benevolence]
+    subject str = "act_of_charity"
+    relation str = "includes"
+    object str = "benevolence"
+    source_id str = "st_ii_ii_27_2"
+      ?rationale "Loving includes goodwill and adds union of affection."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[beneficence_expresses_charity]
+    subject str = "beneficence"
+    relation str = "expresses"
+    object str = "act_of_charity"
+    source_id str = "st_ii_ii_31_1"
+      ?rationale "Beneficence generally expresses friendship or charity."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Considered as doing good from charity; outward help alone does not establish supernatural charity in the agent."
+    condition_source_id = "st_ii_ii_31_1"
+    included_in_model bool = true
+
+  edges[concord_realized_in_wills]
+    subject str = "concord"
+    relation str = "is_realized_in"
+    object str = "will"
+    source_id str = "st_ii_ii_29_1_3"
+      ?rationale "Concord is agreement among the wills of different persons."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[harmony_realized_in_appetites]
+    subject str = "appetitive_harmony"
+    relation str = "is_realized_in"
+    object str = "appetitive_power"
+    source_id str = "st_ii_ii_29_1_3"
+      ?rationale "The mapped state concerns unity among appetitive movements."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+
+  edges[adversity_endurance_in_person]
+    subject str = "endurance_of_adversity"
+    relation str = "is_realized_in"
+    object str = "human_person"
+    source_id str = "st_ii_ii_136_1"
+      ?rationale "The person bears evils without abandoning the good."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[waiting_in_person]
+    subject str = "perseverance_in_waiting"
+    relation str = "is_realized_in"
+    object str = "human_person"
+    source_id str = "st_ii_ii_136_5"
+      ?rationale "Longanimity persists toward a temporally distant good."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[fidelity_in_person]
+    subject str = "trustworthy_dealing"
+    relation str = "is_realized_in"
+    object str = "human_person"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Fidelity governs human dealings."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    included_in_model bool = true
+
+  edges[outward_conduct_in_person]
+    subject str = "outward_conduct"
+    relation str = "is_realized_in"
+    object str = "human_person"
+    source_id str = "st_i_ii_70_3"
+      ?rationale "Words and deeds are human conduct."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    included_in_model bool = true

@@ -1,0 +1,146 @@
+# Subjects and effects needed for the cited sanctification relations.
+# Latin labels are normalized vocabulary; definitions are paraphrases.
+ontology
+  concepts[speculative_intellect]
+    label = "Speculative intellect"
+    latin_name = "intellectus speculativus"
+    domain = "anthropology"
+    category = "power"
+    note = "Intellect directed to contemplating truth; speculative and practical intellect are one power distinguished by their end."
+    source_id = "st_i_79_11"
+
+  concepts[act_of_charity]
+    label = "Act of charity"
+    latin_name = "actus caritatis"
+    domain = "theology"
+    category = "act"
+    note = "The exercise of charity, distinguished from its abiding habit."
+    source_id = "st_iii_79_1"
+
+  concepts[spiritual_life]
+    label = "Life of grace"
+    latin_name = "vita spiritualis"
+    domain = "theology"
+    category = "state"
+    note = "Supernatural life considered in its sacramental beginning, strengthening, and nourishment."
+    source_id = "st_iii_65_1"
+
+  concepts[spiritual_regeneration]
+    label = "Spiritual regeneration"
+    latin_name = "regeneratio spiritualis"
+    domain = "theology"
+    category = "process"
+    note = "Baptismal beginning of supernatural life."
+    source_id = "st_iii_65_1"
+
+  concepts[remission_of_sin]
+    label = "Remission of sin"
+    latin_name = "remissio peccatorum"
+    domain = "theology"
+    category = "process"
+    note = "Forgiveness of guilt; distinguished from removal of all temporal consequences and residual dispositions."
+    source_id = "st_iii_86_1_6"
+
+  concepts[remnants_of_sin]
+    label = "Remnants of sin"
+    latin_name = "reliquiae peccati"
+    domain = "theology"
+    category = "disposition"
+    note = "Residual dispositions following sin may remain after forgiveness of guilt."
+    source_id = "st_iii_86_1_6"
+
+  concepts[sacred_ministry]
+    label = "Ordained sacred ministry"
+    latin_name = "ministerium sacrum"
+    domain = "theology"
+    category = "office"
+    note = "Ecclesial service entrusted through Holy Orders, differentiated according to the order received."
+    source_id = "st_iii_65_1"
+
+  concepts[generation_of_children]
+    label = "Generation of children"
+    latin_name = "generatio prolis"
+    domain = "anthropology"
+    category = "process"
+    note = "Human procreation as an end of marriage; this does not assert fertility in every marriage."
+    source_id = "st_iii_65_1"
+
+  concepts[disordered_concupiscence]
+    label = "Disordered concupiscence"
+    latin_name = "concupiscentia inordinata"
+    domain = "anthropology"
+    category = "inclination"
+    note = "Desire for pleasure contrary to its due order; distinguished from the concupiscible faculty itself."
+    source_id = "st_i_ii_68_4"
+
+  concepts[bodily_healing]
+    label = "Bodily healing"
+    latin_name = "sanatio corporis"
+    domain = "anthropology"
+    category = "process"
+    note = "Restoration of bodily health; a conditional effect in the account of anointing."
+    source_id = "ccc_1532"
+
+  concepts[endurance_in_illness]
+    label = "Christian endurance in illness"
+    latin_name = "tolerantia infirmitatis"
+    domain = "theology"
+    category = "act"
+    note = "Bearing illness or old age with spiritual strength and courage."
+    source_id = "ccc_1532"
+
+  concepts[beatific_vision]
+    label = "Beatific vision"
+    latin_name = "visio beatifica"
+    domain = "theology"
+    category = "act"
+    note = "Seeing the divine essence, in which blessed angelic beatitude consists."
+    source_id = "st_i_62_8"
+
+  concepts[blessed_angel]
+    label = "Blessed angel"
+    latin_name = "angelus beatus"
+    domain = "theology"
+    category = "angelic_condition"
+    note = "An angel enjoying the vision of God and confirmed in good; this condition excludes fallen angels."
+    source_id = "st_i_62_8"
+
+  concepts[angelic_intellect]
+    label = "Angelic intellect"
+    latin_name = "intellectus angelicus"
+    domain = "theology"
+    category = "power"
+    note = "An angelic cognitive faculty distinct from its essence; the human agent/possible-intellect division does not apply."
+    source_id = "st_i_54_3_4"
+
+  concepts[angelic_will]
+    label = "Angelic will"
+    latin_name = "voluntas angeli"
+    domain = "theology"
+    category = "power"
+    note = "Angelic intellectual appetite; angels do not have sensitive concupiscible and irascible faculties."
+    source_id = "st_i_59_1_4"
+
+  concepts[angelic_turning_to_god]
+    label = "Angelic supernatural turning to God"
+    latin_name = "conversio angeli ad Deum"
+    domain = "theology"
+    category = "act"
+    note = "A grace-enabled movement of angelic will toward supernatural beatitude, distinguished from natural love of God."
+    source_id = "st_i_62_2"
+
+  concepts[angelic_ministry]
+    label = "Angelic ministry"
+    latin_name = "ministerium angelorum"
+    domain = "theology"
+    category = "act"
+    note = "Service under divine providence in which blessed angels help others toward their end."
+    source_id = "st_ii_ii_52_3"
+
+  concepts[christ_priesthood]
+    label = "Christ's priesthood"
+    latin_name = "sacerdotium Christi"
+    domain = "theology"
+    category = "office"
+    note = "The priesthood of Christ from which sacramental characters derive as participations."
+    source_id = "st_iii_63_3"

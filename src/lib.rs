@@ -33,6 +33,11 @@ pub struct Edge {
     pub evidence_kind: String,
     pub review_status: String,
     pub included_in_model: bool,
+    pub recipient_scope: String,
+    pub affected_aspect: String,
+    pub causal_mode: String,
+    pub conditions: Option<String>,
+    pub condition_source_id: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -81,6 +86,7 @@ pub struct CitedEdge<'a> {
     pub edge: &'a Edge,
     pub rationale: &'a str,
     pub source: &'a Source,
+    pub condition_source: Option<&'a Source>,
 }
 
 #[derive(Debug, Serialize)]
@@ -135,6 +141,25 @@ impl Input {
             }
             if !ontology.sources.contains_key(&edge.source_id) {
                 errors.push(format!("edge {id}: unknown source {}", edge.source_id));
+            }
+            if edge.conditions.is_some() != edge.condition_source_id.is_some()
+                || edge
+                    .conditions
+                    .as_ref()
+                    .is_some_and(|s| s.trim().is_empty())
+                || edge
+                    .condition_source_id
+                    .as_ref()
+                    .is_some_and(|s| s.trim().is_empty())
+            {
+                errors.push(format!(
+                    "edge {id}: conditions and condition citation must occur together"
+                ));
+            }
+            if let Some(source_id) = &edge.condition_source_id {
+                if !ontology.sources.contains_key(source_id) {
+                    errors.push(format!("edge {id}: unknown condition source {source_id}"));
+                }
             }
             if self
                 .rationales
@@ -228,6 +253,10 @@ impl Input {
                     edge,
                     rationale: self.rationales.get(id)?.as_str(),
                     source: self.ontology.sources.get(&edge.source_id)?,
+                    condition_source: edge
+                        .condition_source_id
+                        .as_ref()
+                        .and_then(|id| self.ontology.sources.get(id)),
                 })
             })
             .collect()
@@ -248,9 +277,8 @@ impl Input {
 mod tests {
     use super::*;
 
-    #[test]
-    fn invalid_reference_and_missing_rationale_are_rejected() {
-        let mut input = Input {
+    fn example_input() -> Input {
+        Input {
             ontology: Ontology {
                 concepts: BTreeMap::from([(
                     "person".into(),
@@ -284,6 +312,11 @@ mod tests {
                         evidence_kind: "textual_paraphrase".into(),
                         review_status: "draft".into(),
                         included_in_model: true,
+                        recipient_scope: "unspecified".into(),
+                        affected_aspect: "unspecified".into(),
+                        causal_mode: "unspecified".into(),
+                        conditions: None,
+                        condition_source_id: None,
                     },
                 )]),
                 relations: BTreeMap::from([(
@@ -298,7 +331,12 @@ mod tests {
             },
             rationales: BTreeMap::new(),
             profile_rationales: BTreeMap::new(),
-        };
+        }
+    }
+
+    #[test]
+    fn invalid_reference_and_missing_rationale_are_rejected() {
+        let mut input = example_input();
         let errors = input.validate().unwrap_err();
         assert!(errors
             .iter()
@@ -320,5 +358,56 @@ mod tests {
         assert!(errors
             .iter()
             .any(|error| error.contains("only God may be the subject of creates")));
+    }
+
+    #[test]
+    fn conditions_require_a_resolvable_citation_and_survive_queries() {
+        let mut input = example_input();
+        input
+            .rationales
+            .insert("broken".into(), "Test claim".into());
+        let edge = input.ontology.edges.get_mut("broken").unwrap();
+        edge.object = "person".into();
+        edge.conditions = Some("A stated condition".into());
+        edge.recipient_scope = "human_person".into();
+        edge.causal_mode = "instrumental".into();
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("must occur together")));
+
+        input
+            .ontology
+            .edges
+            .get_mut("broken")
+            .unwrap()
+            .condition_source_id = Some("missing".into());
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("unknown condition source")));
+
+        input
+            .ontology
+            .edges
+            .get_mut("broken")
+            .unwrap()
+            .condition_source_id = Some("source".into());
+        assert!(input.validate().is_ok());
+        let result = serde_json::to_value(input.cited_edges("person", None)).unwrap();
+        assert_eq!(result[0]["edge"]["conditions"], "A stated condition");
+        assert_eq!(result[0]["edge"]["recipient_scope"], "human_person");
+        assert_eq!(result[0]["edge"]["causal_mode"], "instrumental");
+        assert_eq!(result[0]["edge"]["condition_source_id"], "source");
+
+        assert_eq!(result[0]["condition_source"]["author"], "Thomas Aquinas");
+        input.ontology.edges.get_mut("broken").unwrap().conditions = None;
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("must occur together")));
     }
 }

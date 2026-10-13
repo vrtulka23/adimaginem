@@ -1,0 +1,55 @@
+# Graph rendering defaults; the icon diameter also controls force-collision radius.
+graph_viewer map : graph_viewer_parameters
+graph_viewer[default]
+  icon_size float = 2.0
+  icon_size_min float = 0.85
+  icon_size_max float = 10.0
+  icon_size_step float = 0.1
+  icon_gap float = 0.65
+  icon_hit_padding float = 0.08
+
+  dimmed_icon_opacity float = 0.12
+
+  focus_emission float = 0.3
+
+  focused_relation_opacity float = 0.7
+
+  dimmed_relation_opacity float = 0.025
+
+  arrow_size_ratio float = 0.5
+
+  arrow_position float = 0.5
+
+  arrow_opacity float = 0.85
+
+  relation_opacity float = 0.34
+
+  relation_width float = 0.07
+
+  highlighted_relation_width float = 0.18
+
+  parallel_curve_step float = 0.5
+
+  link_spacing float = 1.6
+
+  charge_strength float = -8.0
+
+  fit_padding float = 45.0
+
+  selection_ring_color str = "#9fffe0"
+
+  selection_ring_radius float = 0.84
+
+  selection_ring_width float = 0.04
+
+  selection_ring_opacity float = 0.95
+
+  selection_ring_dashes int = 8
+
+  selection_ring_speed float = 0.55
+
+  label_height float = 0.45
+
+  label_min_text_pixels float = 14.0
+
+  label_gap float = 0.1

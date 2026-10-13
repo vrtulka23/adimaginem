@@ -1,0 +1,49 @@
+# Cited angelic influence records; all concepts and edges default to draft.
+ontology
+  concepts[angelic_illumination]
+    label = "Angelic illumination"
+    latin_name = "illuminatio angelica"
+    domain = "theology"
+    category = "act"
+    note = "Angelic assistance in understanding truth through strengthened intellect and presentations suited to human cognition."
+    source_id = "st_i_111_1"
+
+  concepts[angelic_persuasion]
+    label = "Angelic persuasion"
+    latin_name = "persuasio angelica"
+    domain = "theology"
+    category = "act"
+    note = "Presentation of an apprehensible good, inclining human will without necessitating consent."
+    source_id = "st_i_111_2"
+
+  concepts[temptation_to_sin]
+    label = "Temptation to sin"
+    latin_name = "tentatio ad peccatum"
+    domain = "theology"
+    category = "act"
+    note = "Solicitation toward wrongdoing; distinguish the solicitation from the person's consent."
+    source_id = "st_i_114_2_3"
+
+  concepts[demonic_suggestion]
+    label = "Demonic suggestion"
+    latin_name = "suggestio daemonis"
+    domain = "theology"
+    category = "act"
+    note = "A fallen angel's instigation toward sin; a kind of temptation rather than its universal cause."
+    source_id = "st_i_114_2_3"
+
+  concepts[angelic_guardianship]
+    label = "Angelic guardianship"
+    latin_name = "custodia angelorum"
+    domain = "theology"
+    category = "office"
+    note = "Providential care exercised by good angels for humans."
+    source_id = "st_i_113_1_3"
+
+  concepts[personal_angelic_guardianship]
+    label = "Personal angelic guardianship"
+    latin_name = "custodia particularis"
+    domain = "theology"
+    category = "office"
+    note = "Guardianship assigned to an individual human; distinguished from universal guardianship."
+    source_id = "st_i_113_1_3"

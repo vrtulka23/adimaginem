@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ad Imaginem · Thomistic Ontology Graph</title>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-dispatch@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-quadtree@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-timer@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-binarytree"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-octree"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-force-3d"></script>
+<style>
+:root{color-scheme:dark;--bg:#101419;--panel:#171e25;--line:#28333d;--muted:#99a8b5;--text:#edf3f6;--mint:#87e0c2;--gold:#ffd27a;--blue:#87baff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 54% 42%,#1c2a31 0,#101419 65%);color:var(--text);font:14px/1.45 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:#101419e8}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:44px;height:44px;flex:none;filter:drop-shadow(0 4px 12px #0005)}h1{font-size:18px;letter-spacing:.015em;margin:0;font-weight:680}h1 span{color:var(--mint);font-size:14px;font-weight:450;margin-left:5px}.subtitle{color:var(--muted);font-size:12px;margin-top:2px}.counts{display:flex;gap:8px}.pill{border:1px solid var(--line);border-radius:99px;padding:5px 10px;color:#cad7df;font-size:11px;background:#151d23}
+main{display:grid;grid-template-columns:290px minmax(400px,1fr) 300px;height:calc(100vh - 72px);min-height:620px}.sidebar,.details{background:#141a20d9;overflow:auto;padding:18px 16px}.sidebar{border-right:1px solid var(--line)}.details{border-left:1px solid var(--line)}h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#aab8c3;margin:3px 0 14px}.field{margin:14px 0}.field label,.label{display:block;color:#b6c3cc;font-size:11px;margin-bottom:6px}.field input,.field select{width:100%;background:#0f151a;border:1px solid #33414b;color:var(--text);border-radius:7px;padding:9px 10px;font:inherit;outline:none}.field input:focus,.field select:focus{border-color:var(--mint)}select[multiple]{height:102px;padding:5px}select[multiple] option{padding:3px 5px}.hint{color:#84939e;font-size:11px;margin-top:5px}.checks{display:flex;flex-wrap:wrap;gap:7px}.check{display:flex!important;align-items:center;gap:5px;border:1px solid var(--line);padding:6px 8px;border-radius:7px;margin:0!important;font-size:11px!important;background:#10161b}.check input{width:auto;accent-color:var(--mint);margin:0}.toggle{display:flex;align-items:center;gap:8px;color:#c1ccd4;font-size:12px;margin:11px 0}.toggle input{accent-color:var(--mint)}button{border:1px solid #3e5d5a;border-radius:7px;background:#18312e;color:#c9f7e8;padding:9px 11px;font:inherit;cursor:pointer}button:hover{background:#20423c}.action{width:100%;font-weight:600;margin-top:2px}.graph-wrap{min-width:0;position:relative}.graph{position:absolute;inset:0}.legend-note{position:absolute;z-index:2;top:16px;left:17px;pointer-events:none;background:#111820cf;border:1px solid #34404a;border-radius:9px;padding:9px 12px;color:#aebbc4;font-size:11px}.legend-note b{color:var(--text)}.empty{color:#81909b;font-size:13px;line-height:1.6}.detail-icon{font-size:33px;margin:10px 0}.detail-title{font-size:19px;font-weight:650}.latin{font-style:italic;color:#b5c3cc;margin-top:2px}.id{color:#7e919e;font:11px ui-monospace,monospace;margin:8px 0 13px}.tag{display:inline-block;border:1px solid #34434d;background:#1a242c;border-radius:6px;padding:3px 7px;font-size:10px;color:#b9c9d4;margin:0 5px 7px 0}.note{color:#d2dce2;font-size:12px;margin:12px 0 18px}.section-title{color:#8fa2af;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--line);padding-top:13px;margin:14px 0 8px}.citation{font-size:11px;color:#afbdc6;margin:7px 0;padding:0 0 0 9px;border-left:2px solid #526c6a}.citation a{color:var(--blue);text-decoration:none}.citation a:hover{text-decoration:underline}.edge-row{font-size:11px;line-height:1.45;padding:6px 0;border-bottom:1px solid #222d35;color:#b9c6ce}.edge-row button{font-size:10px;padding:2px 5px;margin:2px}.path-result{margin-top:12px;padding:10px;border:1px solid #40534c;border-radius:8px;background:#14231f;color:#d5f6e9;font-size:11px;line-height:1.6;overflow-wrap:anywhere}.path-result.none{color:#ffc0a8;border-color:#69443a;background:#291b17}.loading{position:absolute;inset:0;display:grid;place-items:center;color:#c6d2d9;font-size:14px}.small{font-size:10px;color:#8796a0}
+@media(max-width:1000px){main{grid-template-columns:245px minmax(350px,1fr)}.details{display:none}}@media(max-width:680px){header{padding:0 14px}.brand-mark{width:38px;height:38px}h1{font-size:16px}h1 span{font-size:12px}.counts{display:none}main{display:flex;flex-direction:column;height:auto;min-height:calc(100vh - 72px)}.sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:40vh}.graph-wrap{height:64vh;min-height:450px}.details{display:block;border-left:0;border-top:1px solid var(--line)}}
+</style>
+<style>
+.color-legend{position:absolute;z-index:3;right:14px;bottom:14px;width:255px;max-width:calc(100% - 28px);max-height:64%;overflow:auto;background:#111820ef;border:1px solid #34404a;border-radius:10px;padding:10px 12px;box-shadow:0 8px 28px #0005;font-size:11px}
+.color-legend summary{cursor:pointer;font-weight:650;color:#edf3f6;padding:2px 0}.color-legend .hint{margin:6px 0 8px}.legend-item{display:flex;align-items:center;gap:8px;width:100%;text-align:left;font-size:11px;padding:5px 6px;border:1px solid transparent;border-radius:5px;background:transparent;color:#d5e0e7}.legend-item:hover{background:#263640}.legend-item[aria-pressed=true]{border-color:#83a6b4;background:#263640;color:white}.legend-item:focus-visible{outline:2px solid var(--mint);outline-offset:1px}.legend-item.muted-group{opacity:.55}.legend-item:disabled{opacity:.3;cursor:default}.swatch{width:10px;height:10px;border-radius:3px;flex:none}.line-swatch{height:3px;border-radius:0}.legend-count{margin-left:auto;color:#9cabb7;font-variant-numeric:tabular-nums}.relation-legend{margin-top:9px;padding-top:7px;border-top:1px solid var(--line)}.relation-key{cursor:default}.legend-clear{font-size:11px;margin-top:8px;padding:5px 8px;width:100%}.legend-clear[hidden]{display:none}
+body{height:100vh;display:flex;flex-direction:column}
+header{height:auto;min-height:72px;flex:none;flex-wrap:wrap;gap:16px;padding:12px 24px}
+main{height:auto;flex:1;min-height:0}
+.layout-controls{flex:1;min-width:360px;max-width:720px}
+.layout-actions{display:flex;flex-wrap:wrap;gap:8px}.layout-actions button{font-size:12px;white-space:nowrap}
+.layout-size{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:11px;color:#b6c3cc}
+.layout-size label{white-space:nowrap}.layout-size input{width:130px;accent-color:var(--mint)}.layout-size .hint{margin:0}
+@media(max-width:1100px){.layout-controls{order:3;flex-basis:100%;max-width:none}.counts{margin-left:auto}}
+@media(max-width:680px){body{height:auto}header{padding:12px 14px;gap:10px}.layout-controls{min-width:0;width:100%}main{min-height:620px;flex:none}}
+</style>
+</head>
+<body>
+<header><div class="brand"><svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-labelledby="brand-title brand-desc"><title id="brand-title">Ad Imaginem mark</title><desc id="brand-desc">A human figure within a luminous circle, joined to two orbiting points.</desc><defs><linearGradient id="mark-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#233b3b"/><stop offset="1" stop-color="#171e25"/></linearGradient><linearGradient id="mark-line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe3a0"/><stop offset="1" stop-color="#87e0c2"/></linearGradient></defs><rect x="3" y="3" width="58" height="58" rx="19" fill="url(#mark-bg)" stroke="#58766f" stroke-width="1.2"/><circle cx="32" cy="31" r="21" fill="none" stroke="#87e0c2" stroke-opacity=".38" stroke-width="1.2"/><path d="M17 31a15 15 0 0 1 30 0" fill="none" stroke="#ffd27a" stroke-width="1.5" stroke-linecap="round"/><circle cx="32" cy="24" r="5.4" fill="#ffe3a0"/><path d="M21.5 46.5c1.3-8 5.1-12 10.5-12s9.2 4 10.5 12" fill="none" stroke="url(#mark-line)" stroke-width="2.6" stroke-linecap="round"/><path d="M11 31h6m30 0h6" stroke="#87e0c2" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="31" r="2.3" fill="#ffd27a"/><circle cx="54" cy="31" r="2.3" fill="#ffd27a"/><path d="M32 11v5" stroke="#ffd27a" stroke-width="1.4" stroke-linecap="round"/></svg><div><h1>Ad Imaginem <span>/ ontology graph</span></h1><div class="subtitle">A cited map of Thomistic and Catholic concepts</div></div></div><section class="layout-controls" aria-label="Graph layout">
+<div class="layout-actions">
+<button type="button" id="reheat">Reheat layout</button>
+<button type="button" id="restore-layout">Restore starting layout</button>
+<button type="button" id="reset">Reset graph view</button>
+</div>
+<div class="layout-size"><label for="icon-size">Icon size · <output id="icon-size-value">—</output></label><input id="icon-size" type="range" aria-describedby="icon-size-hint"><span class="hint" id="icon-size-hint">Larger icons spread farther apart.</span></div>
+<div class="hint" id="layout-status">Reheat restarts attraction and repulsion from the current positions.</div>
+</section><div class="counts" id="counts"></div></header>
+<main>
+<aside class="sidebar">
+<h2>Explore</h2>
+<div class="field"><label for="search">Find a concept</label><input id="search" list="concept-list" placeholder="Try rational_soul or grace"><datalist id="concept-list"></datalist></div>
+<div class="field"><label>Domains</label><div class="checks" id="domains"></div></div>
+<div class="field"><label for="relations">Relations <span class="small">(no selection shows all)</span></label><select id="relations" multiple></select><button type="button" class="legend-clear" id="clear-relations">Clear relation filter</button></div>
+<label class="toggle"><input id="included" type="checkbox" checked> Show model-included edges only</label>
+<label class="toggle"><input id="show-labels" type="checkbox"> Show all concept labels</label>
+<div class="hint">Names appear on hover; selected and path concepts stay labeled.</div>
+<h2 style="margin-top:22px">Connect two concepts</h2>
+<div class="field"><label for="from">From</label><select id="from"></select></div>
+<div class="field"><label for="to">To</label><select id="to"></select></div>
+<label class="toggle"><input id="directed" type="checkbox"> Follow arrow direction</label>
+<div class="hint">By default, path search treats relations as connections either way. Turn this on to follow each edge from subject to object.</div>
+<button class="action" id="find-path">Highlight shortest path</button>
+<div id="path-result"></div>
+</aside>
+<section class="graph-wrap"><div class="legend-note"><b>Drag</b> to rotate · scroll to zoom · hover an icon or click for details</div><div id="graph" class="graph"></div><div id="loading" class="loading">Loading cited DIPL ontology…</div>
+<details class="color-legend" open>
+  <summary>Color legend</summary>
+  <div class="hint">Click groups to highlight them. Click again to release. Counts follow domain filters.</div>
+  <div id="concept-colors" role="group" aria-label="Highlight concept groups"></div>
+  <button type="button" id="clear-color-focus" class="legend-clear" hidden>Clear group highlights</button>
+  <details class="relation-legend"><summary>Relation colors</summary><div id="relation-colors"></div><div class="legend-item"><span class="swatch line-swatch" style="background:#ffe08b"></span><span>Highlighted path</span></div></details>
+</details></section>
+<aside class="details" id="details"><h2>Concept</h2><div class="empty">Select a node in the graph or search for a concept to see its definition, source, and connected relations.</div></aside>
+</main>
+<script type="module" src="/ontology_graph.js"></script>
+</body>
+</html>

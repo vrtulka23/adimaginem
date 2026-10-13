@@ -140,3 +140,323 @@ ontology
     label = "Is a principle of becoming"
     kind = "metaphysical"
     description = "The subject contributes as a principle of natural change."
+
+  relations[renders_intelligible]
+    label = "Renders intelligible"
+    kind = "power_and_act"
+    description = "The agent intellect makes a phantasm intelligible in act."
+
+  relations[is_abstracted_from]
+    label = "Is abstracted from"
+    kind = "power_and_act"
+    description = "An intelligible species is abstracted from a phantasm by the agent intellect."
+
+  relations[receives]
+    label = "Receives"
+    kind = "power_and_act"
+    description = "A receptive cognitive power receives a form by which it understands."
+
+  relations[turns_to]
+    label = "Turns to"
+    kind = "power_and_act"
+    description = "In embodied human knowing, actual understanding turns to phantasms."
+
+  relations[is_retained_by]
+    label = "Is retained by"
+    kind = "power_and_act"
+    description = "A sensible likeness is retained by the imaginative power."
+
+  relations[moves_as_to_object]
+    label = "Moves as to object"
+    kind = "appetite_and_passion"
+    description = "Intellect moves will by presenting and specifying its apprehended object."
+
+  relations[moves_as_to_exercise]
+    label = "Moves as to exercise"
+    kind = "appetite_and_passion"
+    description = "Will moves a power regarding whether it exercises its act."
+
+  relations[precedes_in_practical_order]
+    label = "Precedes in practical order"
+    kind = "power_and_act"
+    description = "One practical act is ordered before another in deliberation and choice."
+
+  relations[begets]
+    label = "Begets"
+    kind = "theological"
+    description = "The Father eternally begets the Son, a relation of origin within the one divine essence."
+
+  relations[bestows]
+    label = "Bestows"
+    kind = "theological"
+    description = "A divine person freely gives a supernatural gift; the predicate expresses dependence on divine generosity, not a measured transfer."
+
+  relations[infuses]
+    label = "Infuses"
+    kind = "theological"
+    description = "God infuses a supernatural virtue into the faithful."
+
+  relations[is_ordered_to]
+    label = "Is ordered to"
+    kind = "theological"
+    description = "A theological virtue is directed to God as its origin, motive, and object."
+
+  relations[is_proper_to]
+    label = "Is proper to"
+    kind = "theological"
+    description = "Sacramental grace is proper to each sacrament, with sacrament-specific effects to be established separately."
+
+  relations[is_instituted_by]
+    label = "Is instituted by"
+    kind = "theological"
+    description = "The sacraments of the New Law are instituted by Christ."
+
+  relations[proceeds_from]
+    label = "Proceeds from"
+    kind = "theological"
+    description = "The Holy Spirit proceeds eternally from the Father and the Son as from one principle."
+
+  relations[is_formed_by]
+    label = "Is formed by"
+    kind = "theological"
+    description = "A fruit of the Spirit is formed in the faithful through the Holy Spirit."
+
+  relations[is_exemplar_cause_of]
+    label = "Is exemplar cause of"
+    kind = "metaphysical"
+    description = "The exemplar cause is the intelligible pattern according to which a thing is made."
+
+  relations[is_final_cause_of]
+    label = "Is final cause of"
+    kind = "metaphysical"
+    description = "The final cause is that for the sake of which an effect or action is ordered."
+
+  relations[principally_causes_grace]
+    label = "Principally causes grace"
+    kind = "theological"
+    description = "God causes grace as principal agent; distinguish sacramental instrumentality."
+
+  relations[instrumentally_effects]
+    label = "Instrumentally effects"
+    kind = "theological"
+    description = "A sacrament brings about the specified effect through divine agency, subject to the cited conditions."
+
+  relations[strengthens]
+    label = "Strengthens"
+    kind = "theological"
+    description = "Confers strength in the specified spiritual respect; no numerical magnitude is implied."
+
+  relations[nourishes]
+    label = "Nourishes"
+    kind = "theological"
+    description = "Sustains and perfects spiritual life in the cited sacramental sense."
+
+  relations[remedies]
+    label = "Remedies"
+    kind = "theological"
+    description = "Is a remedy for the stated disorder or residual disposition; the extent is governed by the cited account."
+
+  relations[enables]
+    label = "Enables"
+    kind = "theological"
+    description = "Provides the help or capacity for an operation without asserting that the operation occurs in every instance."
+
+  relations[grounds_connatural_judgment]
+    label = "Grounds connatural judgment of"
+    kind = "theological"
+    description = "Charity supplies affinity with divine things through which the gift of wisdom judges."
+
+  relations[increases]
+    label = "Increases"
+    kind = "theological"
+    description = "Perfects an existing habit in the qualitative sense stated by the source."
+
+  relations[arouses]
+    label = "Arouses"
+    kind = "theological"
+    description = "Brings a habit into exercise under the stated conditions."
+
+  relations[has_power]
+    label = "Has power"
+    kind = "power_and_act"
+    description = "A subject possesses an operative faculty; this does not identify the faculty with its essence."
+
+  relations[is_blessed_condition_of]
+    label = "Is a blessed condition of"
+    kind = "condition"
+    description = "The angelic subject is considered in beatitude; this introduces no further angelic nature."
+
+  relations[directs]
+    label = "Directs"
+    kind = "theological"
+    description = "Guides an operation according to the cited divine instruction."
+
+  relations[is_united_in_charity_with]
+    label = "Is united in charity with"
+    kind = "theological"
+    description = "Personal communion through charity, without identity of natures or sacramental reception being implied."
+
+  relations[participates_in]
+    label = "Participates in"
+    kind = "metaphysical"
+    description = "Possesses a received participation in the stated perfection, without identity or division of that perfection."
+
+  relations[expresses]
+    label = "Expresses"
+    kind = "power_and_act"
+    description = "An operation considered under a specific aspect manifests the indicated act; no additional faculty or independent agent is implied."
+
+  relations[moderates]
+    label = "Moderates"
+    kind = "appetite_and_passion"
+    description = "Orders an appetitive movement within its due measure, in the respect specified by the source."
+
+  relations[sustains]
+    label = "Sustains"
+    kind = "power_and_act"
+    description = "Maintains a good operation amid the difficulty identified by the source."
+
+  relations[includes]
+    label = "Includes"
+    kind = "metaphysical"
+    description = "Includes the indicated aspect in its account; this is not a bodily part relation or an assertion of identity."
+
+  relations[orders]
+    label = "Orders"
+    kind = "power_and_act"
+    description = "Gives due measure to the indicated conduct according to reason."
+
+  relations[resists]
+    label = "Resists"
+    kind = "appetite_and_passion"
+    description = "Withstands an inclination without implying that the inclination has ceased."
+
+  relations[is_effect_of]
+    label = "Is an effect of"
+    kind = "theological"
+    description = "Follows from the named principle under the cited account; distinguish from eternal divine procession."
+
+  relations[is_opposed_to]
+    label = "Is opposed to"
+    kind = "metaphysical"
+    description = "Contrariety in the aspect specified by the source; not necessarily absolute opposition in every respect."
+
+  relations[can_dispose_to]
+    label = "Can dispose to"
+    kind = "condition"
+    description = "A possible dispositional consequence, not an inevitable transition."
+
+  relations[inclines_to]
+    label = "Inclines to"
+    kind = "appetite_and_passion"
+    description = "Inclines toward an operation without necessitating consent or occurrence."
+
+  relations[is_privation_of]
+    label = "Is a privation of"
+    kind = "metaphysical"
+    description = "Lack of a due perfection, not a positive substance competing with it."
+
+  relations[wounds_order_of]
+    label = "Wounds the ordering of"
+    kind = "power_and_act"
+    description = "Disorders a power in relation to its due object or operation without destroying the power."
+
+  relations[can_aggravate]
+    label = "Can aggravate"
+    kind = "condition"
+    description = "Can deepen an existing disorder; no numerical rate is implied."
+
+  relations[does_not_destroy]
+    label = "Does not destroy"
+    kind = "condition"
+    description = "Explicit preservation of the specified reality in the respect stated by the citation."
+
+  relations[can_impede]
+    label = "Can impede"
+    kind = "power_and_act"
+    description = "Can obstruct an operation or its proper exercise, without asserting every instance does so."
+
+  relations[can_influence]
+    label = "Can influence"
+    kind = "power_and_act"
+    description = "A capacity to affect the specified operation or faculty under the cited limits; not an observed event."
+
+  relations[requires]
+    label = "Requires"
+    kind = "condition"
+    description = "A necessary condition, not by itself a sufficient condition or an executable diagnostic rule."
+
+  relations[deprives_of]
+    label = "Deprives of"
+    kind = "theological"
+    description = "Entails loss of the named perfection in the recipient under the stated conditions."
+
+  relations[weakens]
+    label = "Weakens"
+    kind = "condition"
+    description = "Impedes a perfection or its exercise without necessarily removing it."
+
+  relations[turns_away_from]
+    label = "Turns away from"
+    kind = "theological"
+    description = "Moral aversion from the named end; not spatial separation or loss of dependence for existence."
+
+  relations[can_perform]
+    label = "Can perform"
+    kind = "power_and_act"
+    description = "Agent has capacity for the named act; this does not assert its universal or present exercise."
+
+  relations[uses_presentation]
+    label = "Uses presentation of"
+    kind = "power_and_act"
+    description = "The operation presents truth through the indicated cognitive medium."
+
+  relations[does_not_infuse]
+    label = "Does not infuse"
+    kind = "theological"
+    description = "Explicit exclusion of the named agent or operation as the source of an infused habit."
+
+  relations[cannot_compel]
+    label = "Cannot compel"
+    kind = "power_and_act"
+    description = "Excludes necessitating the specified voluntary act; persuasion and inclination remain distinct."
+
+  relations[does_not_require]
+    label = "Does not require"
+    kind = "condition"
+    description = "Denies that the object is a necessary condition of every instance of the subject."
+
+  relations[has_office]
+    label = "Has office"
+    kind = "classification"
+    description = "An assigned ministry or role, distinct from nature and from every actual exercise."
+
+  relations[has_recipient]
+    label = "Has recipient"
+    kind = "power_and_act"
+    description = "The act or office is directed to the indicated recipient class."
+
+  relations[has_members_of_kind]
+    label = "Has members of kind"
+    kind = "classification"
+    description = "A collective order groups beings of the indicated kind; it is not itself an individual being."
+
+  relations[belongs_to_hierarchy]
+    label = "Belongs to hierarchy"
+    kind = "classification"
+    description = "An order occupies a place within the explicitly identified hierarchical arrangement."
+
+  relations[has_characteristic]
+    label = "Has characteristic"
+    kind = "classification"
+    description = "A characteristic perfection or ministry; does not assert exclusive possession."
+
+  relations[is_higher_order_than]
+    label = "Is a higher order than"
+    kind = "classification"
+    description = "Relative rank in the source-specific ordering, not spatial distance or a causal edge."
+
+  relations[can_restrain]
+    label = "Can restrain"
+    kind = "power_and_act"
+    description = "Capacity to limit an agent's activity under the cited providential or ministerial account."

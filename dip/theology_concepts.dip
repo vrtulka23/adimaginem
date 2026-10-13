@@ -285,7 +285,7 @@ ontology
     label = "Charity (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Charity considered in its loving exercise; see the cited operational relations in fruit_edges.dip."
     source_id = "ccc_1832"
 
   concepts[joy_fruit]
@@ -293,7 +293,7 @@ ontology
     label = "Joy (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Spiritual joy related to charity; distinguished from the sensitive passion of pleasure."
     source_id = "ccc_1832"
 
   concepts[peace_fruit]
@@ -301,7 +301,7 @@ ontology
     label = "Peace (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Peace considered as fruit; its connected relations distinguish inward harmony and interpersonal concord."
     source_id = "ccc_1832"
 
   concepts[patience_fruit]
@@ -309,7 +309,7 @@ ontology
     label = "Patience (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Patient exercise amid adversity; distinguished from the abiding virtue of patience."
     source_id = "ccc_1832"
 
   concepts[kindness_fruit]
@@ -317,7 +317,7 @@ ontology
     label = "Kindness (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Kindness in doing good; see its relation to beneficence."
     source_id = "ccc_1832"
 
   concepts[goodness_fruit]
@@ -325,23 +325,23 @@ ontology
     label = "Goodness (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Goodness in willing good to another; see its relation to benevolence."
     source_id = "ccc_1832"
 
   concepts[generosity_fruit]
     latin_name = "fructus longanimitatis"
-    label = "Generosity (fruit)"
+    label = "Longanimity / generosity (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
-    source_id = "ccc_1832"
+    note = "Stable ID retained from the English Catechism label generosity. The Latin list has longanimitas; Thomistic relations use longanimity, not financial generosity."
+    source_id = "ccc_1832_latin"
 
   concepts[gentleness_fruit]
     latin_name = "fructus mansuetudinis"
     label = "Gentleness (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Gentle exercise concerning anger; see the cited moderation relation."
     source_id = "ccc_1832"
 
   concepts[faithfulness_fruit]
@@ -349,7 +349,7 @@ ontology
     label = "Faithfulness (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "The fruit is modeled here under the interpersonal fidelity reading of fides; the alternative theological-faith reading is not asserted by that edge."
     source_id = "ccc_1832"
 
   concepts[modesty_fruit]
@@ -357,7 +357,7 @@ ontology
     label = "Modesty (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Modest exercise concerning outward conduct."
     source_id = "ccc_1832"
 
   concepts[self_control_fruit]
@@ -365,7 +365,7 @@ ontology
     label = "Self-control (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Continence considered in its exercise of resistance; distinguished from a claim that contrary desire has disappeared."
     source_id = "ccc_1832"
 
   concepts[chastity_fruit]
@@ -373,7 +373,7 @@ ontology
     label = "Chastity (fruit)"
     domain = "theology"
     category = "fruit"
-    note = "One of the twelve fruits named by the Catechism; distinct from a virtue or passion with the same name."
+    note = "Chastity considered in its operation; its relation to desire specifies the sexual sense."
     source_id = "ccc_1832"
 
   concepts[baptism]

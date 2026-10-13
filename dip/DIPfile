@@ -13,6 +13,9 @@ schemas[]
 schemas[]
   name = "ontological_relation"
   file = "schemas/ontological_relation.dipl"
+schemas[]
+  name = "graph_viewer_parameters"
+  file = "schemas/graph_viewer_parameters.dipl"
 
 code[]
   file = "concepts.dip"
@@ -39,4 +42,40 @@ code[]
 code[]
   file = "creation_edges.dip"
 code[]
+  file = "sanctification_sources.dip"
+code[]
+  file = "sanctification_concepts.dip"
+code[]
+  file = "sanctification_edges.dip"
+code[]
+  file = "fruit_sources.dip"
+code[]
+  file = "fruit_concepts.dip"
+code[]
+  file = "fruit_edges.dip"
+code[]
+  file = "sin_sources.dip"
+code[]
+  file = "sin_concepts.dip"
+code[]
+  file = "sin_edges.dip"
+code[]
+  file = "angelic_influence_sources.dip"
+code[]
+  file = "angelic_influence_concepts.dip"
+code[]
+  file = "angelic_influence_edges.dip"
+code[]
+  file = "angelic_orders_sources.dip"
+code[]
+  file = "angelic_orders_concepts.dip"
+code[]
+  file = "angelic_orders_edges.dip"
+code[]
   file = "relations.dip"
+code[]
+  file = "graph_viewer.dip"
+code[]
+  file = "schemas/graph_color_groups.dipl"
+code[]
+  file = "graph_colors.dip"

@@ -1,0 +1,621 @@
+# Cited sin records; all concepts and edges default to draft.
+ontology
+  edges[baptism_remedies_original_sin]
+    subject = "baptism"
+    relation = "remedies"
+    object = "original_sin"
+    source_id str = "ccc_404_405"
+      ?rationale "Baptism erases original sin while its consequences for nature persist."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "The inherited sin is removed; the wounds and inclination toward sin are not thereby wholly removed."
+    condition_source_id = "ccc_404_405"
+    included_in_model = true
+
+  edges[justification_from_god]
+    subject = "justification"
+    relation = "is_effect_of"
+    object = "god"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "God moves the person to justice in a manner befitting human nature."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "principal"
+    included_in_model = true
+
+  edges[mortal_sin_personal]
+    subject = "mortal_sin"
+    relation = "is_kind_of"
+    object = "personal_sin"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Mortal and venial distinguish personal sins by gravity."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[venial_sin_personal]
+    subject = "venial_sin"
+    relation = "is_kind_of"
+    object = "personal_sin"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Mortal and venial distinguish personal sins by gravity."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[vice_habit]
+    subject = "vice"
+    relation = "is_kind_of"
+    object = "habit"
+    source_id str = "st_i_ii_71_1_6"
+      ?rationale "Moral vice is a bad habitual disposition."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[vice_opposes_virtue]
+    subject = "vice"
+    relation = "is_opposed_to"
+    object = "virtue"
+    source_id str = "st_i_ii_71_1_6"
+      ?rationale "Vice opposes the good disposition constituted by virtue."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[sin_disposes_to_vice]
+    subject = "personal_sin"
+    relation = "can_dispose_to"
+    object = "vice"
+    source_id str = "ccc_1865"
+      ?rationale "Repeated sins engender vice."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "The relation concerns repetition and habituation, not a necessary habit acquired from every isolated act."
+    condition_source_id = "ccc_1865"
+
+  edges[vice_inclines_sin]
+    subject = "vice"
+    relation = "inclines_to"
+    object = "personal_sin"
+    source_id str = "ccc_1865"
+      ?rationale "Vice inclines toward further wrongdoing."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[original_sin_privation]
+    subject = "original_sin"
+    relation = "is_privation_of"
+    object = "original_justice"
+    source_id str = "ccc_404_405"
+      ?rationale "Original sin entails deprivation of original justice."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[wounded_nature_original]
+    subject = "wounded_human_nature"
+    relation = "is_effect_of"
+    object = "original_sin"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "Loss of original justice leaves the powers wounded."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[wounded_nature_in_human]
+    subject = "wounded_human_nature"
+    relation = "is_realized_in"
+    object = "human_person"
+    source_id str = "ccc_404_405"
+      ?rationale "The inherited condition affects human nature."
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "This is the account of fallen human nature; it does not assert original guilt of every individual without the doctrinal exceptions."
+    condition_source_id = "ccc_404_405"
+
+  edges[wounded_nature_ignorance_wound]
+    subject = "wounded_human_nature"
+    relation = "includes"
+    object = "ignorance_wound"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "One of the four wounds in Aquinas's account."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[ignorance_wound_power]
+    subject = "ignorance_wound"
+    relation = "wounds_order_of"
+    object = "intellectual_power"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "The wound concerns this power's due orientation."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A disorder of orientation and operation; the faculty itself is not destroyed."
+    condition_source_id = "st_i_ii_85_1_3"
+
+  edges[wounded_nature_malice_wound]
+    subject = "wounded_human_nature"
+    relation = "includes"
+    object = "malice_wound"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "One of the four wounds in Aquinas's account."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[malice_wound_power]
+    subject = "malice_wound"
+    relation = "wounds_order_of"
+    object = "will"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "The wound concerns this power's due orientation."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A disorder of orientation and operation; the faculty itself is not destroyed."
+    condition_source_id = "st_i_ii_85_1_3"
+
+  edges[wounded_nature_weakness_wound]
+    subject = "wounded_human_nature"
+    relation = "includes"
+    object = "weakness_wound"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "One of the four wounds in Aquinas's account."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[weakness_wound_power]
+    subject = "weakness_wound"
+    relation = "wounds_order_of"
+    object = "irascible_appetite"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "The wound concerns this power's due orientation."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A disorder of orientation and operation; the faculty itself is not destroyed."
+    condition_source_id = "st_i_ii_85_1_3"
+
+  edges[wounded_nature_disordered_concupiscence]
+    subject = "wounded_human_nature"
+    relation = "includes"
+    object = "disordered_concupiscence"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "One of the four wounds in Aquinas's account."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[disordered_concupiscence_power]
+    subject = "disordered_concupiscence"
+    relation = "wounds_order_of"
+    object = "concupiscible_appetite"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "The wound concerns this power's due orientation."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "A disorder of orientation and operation; the faculty itself is not destroyed."
+    condition_source_id = "st_i_ii_85_1_3"
+
+  edges[personal_sin_aggravates_wounds]
+    subject = "personal_sin"
+    relation = "can_aggravate"
+    object = "wounded_human_nature"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "Personal sins further disorder the powers."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[sin_preserves_natural_intellect]
+    subject = "personal_sin"
+    relation = "does_not_destroy"
+    object = "intellectual_power"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "The natural powers remain despite moral disorder."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "The claim concerns the power as a constituent property of rational nature, not unimpaired exercise."
+    condition_source_id = "st_i_ii_85_1_3"
+
+  edges[ignorance_impedes_judgment]
+    subject = "ignorance_wound"
+    relation = "can_impede"
+    object = "practical_judgment"
+    source_id str = "st_i_ii_85_1_3"
+      ?rationale "Actual sin particularly obscures practical reason."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[blindness_of_mind_impedes]
+    subject = "blindness_of_mind"
+    relation = "can_impede"
+    object = "understanding"
+    source_id str = "st_ii_ii_15_1_2"
+      ?rationale "The disorder concerns intellectual apprehension of spiritual meaning."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[blindness_of_mind_opposes_gift]
+    subject = "blindness_of_mind"
+    relation = "is_opposed_to"
+    object = "understanding_gift"
+    source_id str = "st_ii_ii_15_1_2"
+      ?rationale "These defects oppose the penetration associated with understanding."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[dullness_of_understanding_impedes]
+    subject = "dullness_of_understanding"
+    relation = "can_impede"
+    object = "understanding"
+    source_id str = "st_ii_ii_15_1_2"
+      ?rationale "The disorder concerns intellectual apprehension of spiritual meaning."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[dullness_of_understanding_opposes_gift]
+    subject = "dullness_of_understanding"
+    relation = "is_opposed_to"
+    object = "understanding_gift"
+    source_id str = "st_ii_ii_15_1_2"
+      ?rationale "These defects oppose the penetration associated with understanding."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[passion_impedes_judgment]
+    subject = "disordered_passion"
+    relation = "can_impede"
+    object = "practical_judgment"
+    source_id str = "st_i_ii_77_1_2"
+      ?rationale "Passion can obstruct attention and particular judgment."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[passion_affects_imagining]
+    subject = "disordered_passion"
+    relation = "can_influence"
+    object = "imagining"
+    source_id str = "st_i_ii_77_1_2"
+      ?rationale "Imagination can remain absorbed in the passionate object."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[imagining_affects_judgment]
+    subject = "imagining"
+    relation = "can_influence"
+    object = "practical_judgment"
+    source_id str = "st_i_ii_77_1_2"
+      ?rationale "Imaginative presentation can affect practical appraisal."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[judgment_presents_good_to_will]
+    subject = "practical_judgment"
+    relation = "moves_as_to_object"
+    object = "will"
+    source_id str = "st_i_ii_77_1_2"
+      ?rationale "Will tends to good as apprehended by reason."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[judgment_act_of_practical_intellect]
+    subject = "practical_judgment"
+    relation = "is_act_of"
+    object = "practical_intellect"
+    source_id str = "st_i_ii_77_1_2"
+      ?rationale "The judgment is an operation of practical reason."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[disordered_passion_sensitive]
+    subject = "disordered_passion"
+    relation = "is_passion_of"
+    object = "sensitive_appetite"
+    source_id str = "st_i_ii_77_1_2"
+      ?rationale "The cited movements belong to sensitive appetite."
+    recipient_scope = "human_person"
+    affected_aspect = "faculty"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[mortal_requires_grave_matter]
+    subject = "mortal_sin"
+    relation = "requires"
+    object = "grave_matter"
+    source_id str = "ccc_1854_1863"
+      ?rationale "One of three jointly necessary conditions for mortal sin."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Grave matter, full knowledge and deliberate consent must all be present; no single edge is a sufficient test of culpability."
+    condition_source_id = "ccc_1854_1863"
+
+  edges[mortal_requires_full_moral_knowledge]
+    subject = "mortal_sin"
+    relation = "requires"
+    object = "full_moral_knowledge"
+    source_id str = "ccc_1854_1863"
+      ?rationale "One of three jointly necessary conditions for mortal sin."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Grave matter, full knowledge and deliberate consent must all be present; no single edge is a sufficient test of culpability."
+    condition_source_id = "ccc_1854_1863"
+
+  edges[mortal_requires_deliberate_consent]
+    subject = "mortal_sin"
+    relation = "requires"
+    object = "deliberate_consent"
+    source_id str = "ccc_1854_1863"
+      ?rationale "One of three jointly necessary conditions for mortal sin."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Grave matter, full knowledge and deliberate consent must all be present; no single edge is a sufficient test of culpability."
+    condition_source_id = "ccc_1854_1863"
+
+  edges[mortal_deprives_charity_virtue]
+    subject = "mortal_sin"
+    relation = "deprives_of"
+    object = "charity_virtue"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Mortal sin entails loss of charity and sanctifying grace."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Mortal sin is understood with all three conditions in paragraph 1857; this does not classify a person from outward behavior alone."
+    condition_source_id = "ccc_1854_1863"
+
+  edges[mortal_deprives_sanctifying_grace]
+    subject = "mortal_sin"
+    relation = "deprives_of"
+    object = "sanctifying_grace"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Mortal sin entails loss of charity and sanctifying grace."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "unspecified"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Mortal sin is understood with all three conditions in paragraph 1857; this does not classify a person from outward behavior alone."
+    condition_source_id = "ccc_1854_1863"
+
+  edges[venial_weakens_charity]
+    subject = "venial_sin"
+    relation = "weakens"
+    object = "charity_virtue"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Venial sin wounds charity while it subsists."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "interpretive_inference"
+    conditions = "Weakening is mapped here to impeded exercise and progress in virtue (paragraph 1863), with charity and sanctifying grace preserved; no numerical decrement of the infused habit is asserted."
+    condition_source_id = "ccc_1854_1863"
+    included_in_model = true
+
+  edges[venial_preserves_grace]
+    subject = "venial_sin"
+    relation = "does_not_destroy"
+    object = "sanctifying_grace"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Venial sin does not deprive the sinner of sanctifying grace."
+    recipient_scope = "human_person"
+    affected_aspect = "habit"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[mortal_involves_aversion]
+    subject = "mortal_sin"
+    relation = "includes"
+    object = "aversion_from_god"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Mortal sin turns the person from God as ultimate end."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[aversion_away_from_god]
+    subject = "aversion_from_god"
+    relation = "turns_away_from"
+    object = "god"
+    source_id str = "ccc_1854_1863"
+      ?rationale "The terminus of this moral aversion is God as ultimate end."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[consent_act_of_will]
+    subject = "deliberate_consent"
+    relation = "is_act_of"
+    object = "will"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "Free acceptance is a movement of will."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+
+  edges[grace_enables_conversion]
+    subject = "grace"
+    relation = "enables"
+    object = "human_conversion"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "Conversion in justification is initiated by God through grace."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[conversion_to_god]
+    subject = "human_conversion"
+    relation = "turns_to"
+    object = "god"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "The movement of faith in justification turns toward God."
+    recipient_scope = "human_person"
+    affected_aspect = "relationship"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[repentance_opposes_personal_sin]
+    subject = "repentance_for_sin"
+    relation = "is_opposed_to"
+    object = "personal_sin"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "Repentance rejects the sin from which one is justified."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[justification_includes_human_conversion]
+    subject = "justification"
+    relation = "includes"
+    object = "human_conversion"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "An aspect of Aquinas's account of justification."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Movements of free will concern recipients capable of them; Aquinas distinguishes infants and those without the use of reason."
+    condition_source_id = "st_i_ii_113_3_6"
+
+  edges[justification_includes_repentance_for_sin]
+    subject = "justification"
+    relation = "includes"
+    object = "repentance_for_sin"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "An aspect of Aquinas's account of justification."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "Movements of free will concern recipients capable of them; Aquinas distinguishes infants and those without the use of reason."
+    condition_source_id = "st_i_ii_113_3_6"
+
+  edges[justification_includes_remission_of_sin]
+    subject = "justification"
+    relation = "includes"
+    object = "remission_of_sin"
+    source_id str = "st_i_ii_113_3_6"
+      ?rationale "An aspect of Aquinas's account of justification."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+
+  edges[penance_remedies_mortal]
+    subject = "penance"
+    relation = "remedies"
+    object = "mortal_sin"
+    source_id str = "ccc_1854_1863"
+      ?rationale "Conversion after mortal sin ordinarily occurs through reconciliation."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "instrumental"
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    conditions = "This summarizes the ordinary sacramental setting in paragraph 1856; it is not a complete account of sacramental validity or disposition."
+    condition_source_id = "ccc_1854_1863"
