@@ -25,6 +25,7 @@ fn run() -> Result<(), String> {
     let result = match command {
         "validate" => json!({
             "concepts": input.ontology.concepts.len(),
+            "study_areas": input.ontology.study_areas.len(),
             "sources": input.ontology.sources.len(),
             "edges": input.ontology.edges.len(),
             "relations": input.ontology.relations.len(),

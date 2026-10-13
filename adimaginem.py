@@ -38,6 +38,12 @@ def load_ontology(include_viewer=False):
               "--generate", "json", str(output)])
         data = json.loads(output.read_text(encoding="utf-8"))
 
+    # SNT's JSON generator renders a one-element array as a scalar. This
+    # schema-defined field must remain a sequence for both Rust and the viewer.
+    for concept in data["ontology"]["concepts"].values():
+        if isinstance(concept.get("study_areas"), str):
+            concept["study_areas"] = [concept["study_areas"]]
+
     listing = json.loads(_run(["snt", "dip", "list", "--project", str(PROJECT),
                                "--query", "?ontology.edges.", "--limit", "10000",
                                "--format", "json"]))

@@ -5,6 +5,9 @@ kind str
   !labels ["Creation", "Identity and co-reference", "Classification", "Composition", "Metaphysical relation", "Power and act", "Appetite and passion", "Theological relation", "Condition"]
 description str
 
+principle_id str = none
+  ?descr "Optional concept ID explaining this predicate's philosophical basis. Editorial navigation only: it neither generates an edge nor changes the cited claim."
+
 prose_template str = none
   ?descr "Optional sentence for one directed claim. Use {subject} and {object}; conditions and citations are supplied by the edge. Templates are editorial wording, not additional evidence."
 

@@ -53,6 +53,13 @@ main{height:auto;flex:1;min-height:0}
 <div id="study-focus-note" class="note" hidden></div>
 <div class="field"><label for="search">Find a concept</label><input id="search" list="concept-list" placeholder="Try rational_soul or grace"><datalist id="concept-list"></datalist></div>
 <div class="field"><label>Domains</label><div class="checks" id="domains"></div></div>
+<details class="field">
+  <summary id="study-areas-summary">Study areas · All</summary>
+  <div class="hint">Select one or more areas. Shows concepts in any selected area; other filters still apply.</div>
+  <div class="checks" id="study-areas"></div>
+  <button type="button" class="legend-clear" id="clear-study-areas" hidden>Clear study-area filter</button>
+  <details id="study-area-notes" hidden><summary>About selected areas</summary><div id="study-area-descriptions"></div></details>
+</details>
 <div class="field"><label for="relations">Relations <span class="small">(no selection shows all)</span></label><select id="relations" multiple></select><button type="button" class="legend-clear" id="clear-relations">Clear relation filter</button></div>
 <label class="toggle"><input id="included" type="checkbox" checked> Show model-included edges only</label>
 <label class="toggle"><input id="show-labels" type="checkbox"> Show all concept labels</label>

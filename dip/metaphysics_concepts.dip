@@ -1,0 +1,169 @@
+# General principles and their distinct senses; stable original concept IDs.
+ontology
+  concepts[matter]
+    latin_name = "materia"
+    label = "Matter"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Receptive principle in relation to form. Distinguish prime matter from an already constituted subject receiving accidental determination; the living body is not bare prime matter."
+    source_id = "dpn_2_7"
+
+  concepts[form]
+    latin_name = "forma"
+    label = "Form"
+    domain = "metaphysics"
+    category = "principle"
+    note = "That by which something is actual in the relevant respect. Substantial form constitutes substantial being; accidental form determines an already constituted subject."
+    source_id = "dpn_2_7"
+
+  concepts[potentiality]
+    latin_name = "potentia"
+    label = "Potentiality"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Potentia: capacity, distinguished as passive receptivity to act and active power founded on act. These senses must not be treated as one univocal deficiency or a numerical possibility."
+    source_id = "st_i_25_1"
+
+  concepts[actuality]
+    latin_name = "actus"
+    label = "Actuality"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Actus: actuality or perfection, distinguished here as first actuality and exercised operation. The general term is not restricted to material generation."
+    source_id = "st_i_77_1"
+
+  concepts[privation]
+    latin_name = "privatio"
+    label = "Privation"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Absence of a form or perfection in a subject apt for it. In generation it belongs to becoming, not to the completed composite; privation must be distinguished from mere negation."
+    source_id = "dpn_12"
+
+  concepts[natural_generation]
+    latin_name = "generatio naturalis"
+    label = "Natural generation"
+    domain = "metaphysics"
+    category = "process"
+    note = "Coming to be through reception of form in pre-existing matter. Generation simply concerns substantial form; generation in a qualified sense concerns accidental form."
+    source_id = "dpn_2_7"
+
+  concepts[substance]
+    latin_name = "substantia"
+    label = "Substance"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Being in itself as contrasted with an accident existing in a subject. The human composite is a substance; this category does not make body and soul two complete human substances."
+    source_id = "dpn_1"
+
+  concepts[accident]
+    latin_name = "accidens"
+    label = "Accident"
+    domain = "metaphysics"
+    category = "principle"
+    note = "A determination existing in a subject. Predicamental accident can be a natural property; the term does not imply chance, insignificance, or dispensability."
+    source_id = "dpn_3"
+
+  concepts[cause]
+    latin_name = "causa"
+    label = "Cause"
+    domain = "metaphysics"
+    category = "principle"
+    note = "General category of the four per se causes distinguished here."
+    source_id = "dpn_20"
+
+  concepts[material_cause]
+    latin_name = "causa materialis"
+    label = "Material cause"
+    domain = "metaphysics"
+    category = "principle"
+    note = "One of the four per se causes."
+    source_id = "dpn_20"
+
+  concepts[formal_cause]
+    latin_name = "causa formalis"
+    label = "Formal cause"
+    domain = "metaphysics"
+    category = "principle"
+    note = "One of the four per se causes."
+    source_id = "dpn_20"
+
+  concepts[efficient_cause]
+    latin_name = "causa efficiens"
+    label = "Efficient cause"
+    domain = "metaphysics"
+    category = "principle"
+    note = "One of the four per se causes."
+    source_id = "dpn_20"
+
+  concepts[final_cause]
+    latin_name = "causa finalis"
+    label = "Final cause"
+    domain = "metaphysics"
+    category = "principle"
+    note = "One of the four per se causes."
+    source_id = "dpn_20"
+
+  concepts[substantial_form]
+    latin_name = "forma substantialis"
+    label = "Substantial form"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Form by which a composite has substantial being; distinguished from an accidental determination."
+    source_id = "dpn_2_7"
+
+  concepts[accidental_form]
+    latin_name = "forma accidentalis"
+    label = "Accidental form"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Form determining a subject that already has substantial being."
+    source_id = "dpn_2_7"
+
+  concepts[quality]
+    latin_name = "qualitas"
+    label = "Quality"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Category of accidental determination; includes natural powers and habits under different species of quality."
+    source_id = "st_i_ii_49_2"
+
+  concepts[active_power]
+    latin_name = "potentia activa"
+    label = "Active power"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Principle of acting, founded on actuality; distinguish from passive receptivity. In God it is not a faculty really distinct from his essence."
+    source_id = "st_i_25_1"
+
+  concepts[passive_potentiality]
+    latin_name = "potentia passiva"
+    label = "Passive potentiality"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Capacity to receive actuality or perfection in the stated respect. Intellectual reception is not necessarily material reception."
+    source_id = "st_i_25_1"
+
+  concepts[first_actuality]
+    latin_name = "actus primus"
+    label = "First actuality"
+    domain = "metaphysics"
+    category = "principle"
+    note = "First perfection in relation to operation; in living beings the soul as subject of its powers is first act, without implying continuous exercise of every operation."
+    source_id = "st_i_77_1"
+
+  concepts[second_actuality]
+    latin_name = "actus secundus"
+    label = "Second actuality / operation"
+    domain = "metaphysics"
+    category = "principle"
+    note = "Exercise of operation in relation to an already actual subject and its powers. This distinction does not introduce successive states in God."
+    source_id = "st_i_77_1"
+
+  concepts[creation]
+    latin_name = "creatio"
+    label = "Creation"
+    domain = "theology"
+    category = "doctrine"
+    note = "Giving being without a pre-existing material subject. Considered in the creature it is dependence on the Creator; considered actively it is not a temporal change in God."
+    source_id = "st_i_45_1_3"

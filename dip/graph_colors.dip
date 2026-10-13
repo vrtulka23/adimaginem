@@ -489,3 +489,19 @@ graph_concept_styles[divine_unity] : graph_divine
 graph_concept_styles[common_divine_operation] : graph_divine
 
 graph_concept_styles[apprehended_evil] : graph_appetites
+
+graph_concept_styles[substantial_form] : graph_metaphysics
+
+graph_concept_styles[accidental_form] : graph_metaphysics
+
+graph_concept_styles[quality] : graph_metaphysics
+
+graph_concept_styles[active_power] : graph_metaphysics
+
+graph_concept_styles[passive_potentiality] : graph_metaphysics
+
+graph_concept_styles[first_actuality] : graph_metaphysics
+
+graph_concept_styles[second_actuality] : graph_metaphysics
+
+graph_concept_styles[creation] : graph_creation

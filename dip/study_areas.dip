@@ -1,0 +1,90 @@
+# Sources ground the scope of study areas; assignments remain editorial.
+ontology
+  sources[boeth_trin_5_1_2]
+    author = "Thomas Aquinas"
+    work = "Super Boetium De Trinitate"
+    locator = "q. 5, aa. 1-2, especially a. 2 ad 6-7"
+    url = "https://isidore.co/aquinas/english/BoethiusDeTr.htm"
+
+  sources[in_ethic_i_1]
+    author = "Thomas Aquinas"
+    work = "Sententia libri Ethicorum"
+    locator = "I, lectio 1, nos. 1-6: orders considered by philosophy and divisions of moral philosophy"
+    url = "https://isidore.co/aquinas/Ethics1.htm"
+
+  sources[in_postanal_prooemium]
+    author = "Thomas Aquinas"
+    work = "Expositio libri Posteriorum Analyticorum"
+    locator = "Prooemium (Foreword of Thomas Aquinas): logic and the three operations of reason"
+    url = "https://isidore.co/aquinas/english/PostAnalytica.htm#02"
+
+  sources[st_i_16_1_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 16, aa. 1-2, respondeo: truth and intellectual judgment"
+    url = "https://www.newadvent.org/summa/1016.htm"
+
+  sources[st_i_1_1_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 1, aa. 1-4: sacred doctrine, its principles and scope"
+    url = "https://www.newadvent.org/summa/1001.htm"
+
+  study_areas map : study_area
+
+  study_areas[anthropology]
+    label = "Human ontology"
+    latin_name = "de homine"
+    description = "The human person, soul, body, powers, acts, and dispositions."
+    source_id = "st_i_75_4"
+    classification_note = "Modern study heading for the human ontology; it overlaps natural philosophy, ethics, and theological treatments of the human person."
+
+  study_areas[metaphysics]
+    label = "Metaphysics"
+    latin_name = "metaphysica"
+    description = "Being, act and potency, substance and accident, and principles and modes of causality."
+    source_id = "boeth_trin_5_1_2"
+    classification_note = "General principles may also be studied through their application to humans, creatures, and God; this grouping does not assert univocal predication."
+
+  study_areas[theology]
+    label = "Catholic theology"
+    latin_name = "sacra doctrina"
+    description = "God and creatures as considered in sacred doctrine, including Trinity, grace, angels, and sacraments."
+    source_id = "st_i_1_1_4"
+    classification_note = "Sacred doctrine proceeds from revelation. Its overlap with philosophy does not identify their principles or methods."
+
+  study_areas[natural_philosophy]
+    label = "Natural philosophy"
+    latin_name = "philosophia naturalis"
+    description = "Corporeal nature, life, natural change, and the principles and powers of living things."
+    source_id = "boeth_trin_5_1_2"
+    classification_note = "The soul is considered as the perfection of a living body. This study area does not reduce intellectual operations to material processes or identify creation with natural change."
+
+  study_areas[ethics]
+    label = "Ethics and moral life"
+    latin_name = "philosophia moralis"
+    description = "Voluntary acts and their ends, habits, virtues, vices, passions in relation to reason, and moral responsibility."
+    source_id = "in_ethic_i_1"
+    classification_note = "The filter also includes related material treated by moral theology. Inclusion does not make infused gifts naturally acquired or inherited original sin a personal act."
+
+  study_areas[knowledge_truth]
+    label = "Knowledge and truth"
+    latin_name = "cognitio et veritas"
+    description = "Cognition, apprehension, intellectual understanding, practical judgment, truth, and impediments to knowledge."
+    source_id = "st_i_16_1_2"
+    classification_note = "A modern organizational heading, not a claim that Aquinas established an independent discipline called epistemology. Natural cognition, faith, and the beatific vision retain their distinctions."
+
+  study_areas[logic]
+    label = "Logic"
+    latin_name = "logica"
+    description = "The order of intellectual operations, predication, reasoning, and demonstration."
+    source_id = "in_postanal_prooemium"
+    classification_note = "Membership identifies existing concepts relevant to reasoning; it does not identify a faculty with the discipline of logic. Propositions and demonstration are not yet separately modeled."
+
+  study_areas[social_political]
+    label = "Social and political philosophy"
+    latin_name = "scientia civilis"
+    description = "Human action with and for others, justice, concord, common good, and the ordering of communal life."
+    source_id = "in_ethic_i_1"
+    classification_note = "An initial selection of relevant interpersonal and practical concepts. It is not yet a full ontology of law, political authority, or the common good; angelic hierarchies are not human political institutions."
+

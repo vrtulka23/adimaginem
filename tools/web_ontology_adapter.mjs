@@ -17,15 +17,28 @@ export function decodeScalar(description) {
   throw new Error(`Unsupported or imprecise ${type} value at ${description.path}`);
 }
 
+export function decodeViewerValue(description) {
+  if (description.kind === "value" && description.shape.length) {
+    if (description.storedType === "str" && description.shape.length === 1 && !description.units && description.valueText !== null) {
+      let value = JSON.parse(description.valueText);
+      // SNT keeps shape [1] but renders the single element without brackets.
+      if (description.shape[0] === 1 && typeof value === "string") value = [value];
+      if (Array.isArray(value) && value.length === description.shape[0] && value.every(item => typeof item === "string")) return value;
+    }
+    throw new Error(`Unsupported or omitted viewer array: ${description.path}`);
+  }
+  return decodeScalar(description);
+}
+
 export function readViewerData(model, progress = () => {}) {
   const data = { ontology: {}, rationales: {}, profile_rationales: {},
     graph_viewer: {}, graph_concept_styles: {}, graph_relation_colors: {} };
   const paths = model.paths().filter(path => /^(ontology\.|graph_viewer\[|graph_concept_styles\[|graph_relation_colors\[)/.test(path));
   paths.forEach((path, index) => {
     const description = model.describe(path);
-    const value = decodeScalar(description);
+    const value = decodeViewerValue(description);
     if (value !== undefined) {
-      // The viewer's DIPL schemas use named records with scalar fields.
+      // Named records have scalar fields and one-dimensional string arrays.
       const match = /^(ontology\.([a-z_]+)|graph_viewer|graph_concept_styles|graph_relation_colors)\[([a-z_0-9]+)\]\.([a-z_0-9]+)$/.exec(path);
       if (!match) throw new Error(`Unsupported viewer path: ${path}`);
       const [, root, collection, id, field] = match;
@@ -41,8 +54,15 @@ export function readViewerData(model, progress = () => {}) {
     }
     if (index % 100 === 0 || index === paths.length - 1) progress(index + 1, paths.length);
   });
-  for (const key of ["concepts", "edges", "relations", "sources", "passion_profiles"]) {
+  for (const key of ["concepts", "edges", "relations", "sources", "passion_profiles", "study_areas"]) {
     if (!data.ontology[key]) throw new Error(`Missing ontology collection: ${key}`);
+  }
+  for (const [id, concept] of Object.entries(data.ontology.concepts)) {
+    if (!Array.isArray(concept.study_areas) || !concept.study_areas.length ||
+        new Set(concept.study_areas).size !== concept.study_areas.length ||
+        concept.study_areas.some(area => !data.ontology.study_areas[area])) {
+      throw new Error(`Invalid study areas for concept ${id}`);
+    }
   }
   const expected = Object.keys(data.ontology.concepts).sort();
   if (JSON.stringify(expected) !== JSON.stringify(Object.keys(data.graph_concept_styles).sort())) {

@@ -17,6 +17,7 @@ pub struct Concept {
     pub label: String,
     pub latin_name: String,
     pub domain: String,
+    pub study_areas: Vec<String>,
     pub category: String,
     pub note: String,
     pub source_id: String,
@@ -48,6 +49,7 @@ pub struct Relation {
     pub description: String,
     pub prose_template: Option<String>,
     pub explanation_role: Option<String>,
+    pub principle_id: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -68,7 +70,19 @@ pub struct PassionProfile {
 
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
+pub struct StudyArea {
+    pub label: String,
+    pub latin_name: String,
+    pub description: String,
+    pub source_id: String,
+    pub classification_note: String,
+    pub evidence_kind: String,
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct Ontology {
+    pub study_areas: BTreeMap<String, StudyArea>,
     pub concepts: BTreeMap<String, Concept>,
     pub sources: BTreeMap<String, Source>,
     pub edges: BTreeMap<String, Edge>,
@@ -105,6 +119,25 @@ impl Input {
     pub fn validate(&self) -> Result<(), Vec<String>> {
         let mut errors = Vec::new();
         let ontology = &self.ontology;
+        for (id, area) in &ontology.study_areas {
+            if id.is_empty()
+                || area.label.trim().is_empty()
+                || area.latin_name.trim().is_empty()
+                || area.description.trim().is_empty()
+                || area.classification_note.trim().is_empty()
+                || area.evidence_kind != "editorial_classification"
+            {
+                errors.push(format!(
+                    "study area {id}: incomplete or non-editorial definition"
+                ));
+            }
+            if !ontology.sources.contains_key(&area.source_id) {
+                errors.push(format!(
+                    "study area {id}: unknown source {}",
+                    area.source_id
+                ));
+            }
+        }
         for (id, source) in &ontology.sources {
             if id.is_empty()
                 || source.author.trim().is_empty()
@@ -116,6 +149,18 @@ impl Input {
             }
         }
         for (id, concept) in &ontology.concepts {
+            if concept.study_areas.is_empty() {
+                errors.push(format!("concept {id}: at least one study area is required"));
+            }
+            let mut seen = std::collections::BTreeSet::new();
+            for area in &concept.study_areas {
+                if !ontology.study_areas.contains_key(area) {
+                    errors.push(format!("concept {id}: unknown study area {area}"));
+                }
+                if !seen.insert(area) {
+                    errors.push(format!("concept {id}: duplicate study area {area}"));
+                }
+            }
             if id.is_empty()
                 || concept.label.trim().is_empty()
                 || concept.latin_name.trim().is_empty()
@@ -174,6 +219,11 @@ impl Input {
             }
         }
         for (id, relation) in &ontology.relations {
+            if let Some(principle_id) = &relation.principle_id {
+                if !ontology.concepts.contains_key(principle_id) {
+                    errors.push(format!("relation {id}: unknown principle {principle_id}"));
+                }
+            }
             if id.is_empty()
                 || relation.label.trim().is_empty()
                 || relation.description.trim().is_empty()
@@ -298,12 +348,24 @@ mod tests {
     fn example_input() -> Input {
         Input {
             ontology: Ontology {
+                study_areas: BTreeMap::from([(
+                    "anthropology".into(),
+                    StudyArea {
+                        label: "Human ontology".into(),
+                        latin_name: "de homine".into(),
+                        description: "Human nature and powers".into(),
+                        source_id: "source".into(),
+                        classification_note: "Editorial study grouping".into(),
+                        evidence_kind: "editorial_classification".into(),
+                    },
+                )]),
                 concepts: BTreeMap::from([(
                     "person".into(),
                     Concept {
                         label: "Person".into(),
                         latin_name: "persona".into(),
                         domain: "anthropology".into(),
+                        study_areas: vec!["anthropology".into()],
                         category: "person".into(),
                         note: "A cited concept".into(),
                         source_id: "source".into(),
@@ -345,6 +407,7 @@ mod tests {
                         description: "A part relation".into(),
                         prose_template: None,
                         explanation_role: None,
+                        principle_id: None,
                     },
                 )]),
                 passion_profiles: BTreeMap::new(),
@@ -352,6 +415,71 @@ mod tests {
             rationales: BTreeMap::new(),
             profile_rationales: BTreeMap::new(),
         }
+    }
+
+    #[test]
+    fn study_memberships_and_scope_sources_must_resolve() {
+        let mut input = example_input();
+        assert!(!input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("study area")));
+        input
+            .ontology
+            .concepts
+            .get_mut("person")
+            .unwrap()
+            .study_areas = vec!["missing".into(), "missing".into()];
+        let errors = input.validate().unwrap_err();
+        assert!(errors
+            .iter()
+            .any(|e| e.contains("unknown study area missing")));
+        assert!(errors
+            .iter()
+            .any(|e| e.contains("duplicate study area missing")));
+        input
+            .ontology
+            .concepts
+            .get_mut("person")
+            .unwrap()
+            .study_areas
+            .clear();
+        input
+            .ontology
+            .study_areas
+            .get_mut("anthropology")
+            .unwrap()
+            .source_id = "missing".into();
+        let errors = input.validate().unwrap_err();
+        assert!(errors.iter().any(|e| e.contains("at least one study area")));
+        assert!(errors
+            .iter()
+            .any(|e| e.contains("study area anthropology: unknown source missing")));
+    }
+
+    #[test]
+    fn relation_principles_must_resolve_to_concepts() {
+        let mut input = example_input();
+        input
+            .ontology
+            .relations
+            .get_mut("has_part")
+            .unwrap()
+            .principle_id = Some("missing_principle".into());
+        let errors = input.validate().unwrap_err();
+        assert!(errors
+            .iter()
+            .any(|e| e.contains("unknown principle missing_principle")));
+
+        input
+            .ontology
+            .relations
+            .get_mut("has_part")
+            .unwrap()
+            .principle_id = Some("person".into());
+        let errors = input.validate().unwrap_err();
+        assert!(!errors.iter().any(|e| e.contains("unknown principle")));
     }
 
     #[test]
@@ -395,6 +523,7 @@ mod tests {
                 description: "Gives being".into(),
                 prose_template: None,
                 explanation_role: None,
+                principle_id: None,
             },
         );
         input.ontology.edges.get_mut("broken").unwrap().relation = "creates".into();

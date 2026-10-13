@@ -24,6 +24,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({
 
 let colorGroups, relationColors, conceptGroups;
 const focusedGroups = new Set();
+const selectedStudyAreas = new Set();
 const shortKinds = new Set(["identity", "classification", "composition"]);
 let db, concepts, edges, positions, graph, iconSize, iconGap, iconHitPadding, sizeConfig, activeSignature = "", layoutNeedsFit = false;
 let nodeRegistry = {}, nodeVisuals = {}, pathEdgeIds = new Set(), pathNodeIds = new Set(), selected = null, initialTickReported = false;
@@ -369,7 +370,23 @@ function initialLayout() {
 }
 function activeDomains() { return new Set([...document.querySelectorAll("#domains input:checked")].map((x) => x.value)); }
 function matchesStudyFocus(id) {
-  return !document.querySelector("#study-focus").checked || conceptGroups[id] === conceptGroups[sizeConfig.study_focus_concept];
+  const matchesArea = !selectedStudyAreas.size || concepts[id].study_areas.some(area => selectedStudyAreas.has(area));
+  return matchesArea && (!document.querySelector("#study-focus").checked || conceptGroups[id] === conceptGroups[sizeConfig.study_focus_concept]);
+}
+
+function updateStudyAreas() {
+  selectedStudyAreas.clear();
+  document.querySelectorAll("#study-areas input:checked").forEach(input => selectedStudyAreas.add(input.value));
+  document.querySelector("#study-areas-summary").textContent = `Study areas · ${selectedStudyAreas.size ? `${selectedStudyAreas.size} selected` : "All"}`;
+  document.querySelector("#clear-study-areas").hidden = !selectedStudyAreas.size;
+  document.querySelector("#study-area-notes").hidden = !selectedStudyAreas.size;
+  document.querySelector("#study-area-descriptions").innerHTML = [...selectedStudyAreas].map(id => {
+    const area = db.ontology.study_areas[id];
+    return `<div class="edge-row"><b>${esc(area.label)}</b><div class="latin">${esc(area.latin_name)}</div><p>${esc(area.description)}</p><p>${esc(area.classification_note)}</p>${citation(db.ontology.sources[area.source_id], area.source_id)}</div>`;
+  }).join("");
+  clearPathResult();
+  if (selected && !matchesStudyFocus(selected)) deselectConcept();
+  draw();
 }
 function activeEdges() {
   const selectedRelations = [...document.querySelector("#relations").selectedOptions].map((o) => o.value), domains = activeDomains(), included = document.querySelector("#included").checked;
@@ -459,6 +476,7 @@ function draw(reheatChanged = true) {
     configureForces();
     if (reheatChanged) graph.d3ReheatSimulation();
   }
+  if (selected) showDetails(selected);
   updateVisualState();
 }
 function createGraph() {
@@ -508,25 +526,34 @@ function deselectConcept() {
 }
 function showDetails(id) {
   const c = concepts[id], source = db.ontology.sources[c.source_id];
-  const incident = Object.entries(edges).filter(([, e]) => e.subject === id || e.object === id);
+  const incident = activeEdges().filter(([, e]) => e.subject === id || e.object === id);
   let html = `<div class="concept-panel-header"><h2>Concept</h2><button type="button" id="deselect-concept" aria-label="Deselect concept" title="Deselect concept">×</button></div><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div><span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll("_", " "))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div><div class="section-title">Definition source</div>${citation(source, c.source_id)}`;
+  const groundedRelations = Object.values(db.ontology.relations).filter((relation) => relation.principle_id === id);
+  html += `<div class="section-title">Study areas</div>${c.study_areas.map(area => `<span class="tag" title="${esc(db.ontology.study_areas[area].description)}">${esc(db.ontology.study_areas[area].label)}</span>`).join("")}<div class="hint">Editorial study groupings; a concept can belong to several areas.</div>`;
+  if (groundedRelations.length) {
+    html += `<details><summary>Relations using this principle (${groundedRelations.length})</summary>${groundedRelations.map((relation) => `<div class="edge-row"><b>${esc(relation.label)}</b><p>${esc(relation.description)}</p></div>`).join("")}</details>`;
+  }
+  html += `<div class="section-title">Connected relations · ${incident.length}</div>`;
   if (incident.length) {
-    html += `<div class="section-title">Connected relations · ${incident.length}</div>`;
     for (const [edgeId, e] of incident) {
       const outgoing = e.subject === id, other = outgoing ? e.object : e.subject, edgeSource = db.ontology.sources[e.source_id], rationale = db.rationales?.[edgeId] || "";
       const qualifiers = [["Recipient", e.recipient_scope], ["Aspect", e.affected_aspect], ["Causality", e.causal_mode]]
         .filter(([, value]) => value && value !== "unspecified")
         .map(([name, value]) => `<span class="tag">${name}: ${esc(value.replaceAll("_", " "))}</span>`).join("");
       const condition = e.conditions ? `<div><b>Conditions:</b> ${esc(e.conditions)}</div>${citation(db.ontology.sources[e.condition_source_id], e.condition_source_id)}` : "";
-      html += `<div class="edge-row"><button data-node="${esc(other)}">${esc(concepts[other].label)}</button><br><b>${outgoing ? "→" : "←"} ${esc(db.ontology.relations[e.relation]?.label || e.relation)}</b><div>${esc(rationale)}</div>${qualifiers}${citation(edgeSource, e.source_id)}${condition}</div>`;
+      const principleId = db.ontology.relations[e.relation]?.principle_id;
+      const principle = concepts[principleId] ? `<div>Principle: <button data-node="${esc(principleId)}">${esc(concepts[principleId].label)}</button></div>` : "";
+      html += `<div class="edge-row" data-edge="${esc(edgeId)}"><button data-node="${esc(other)}">${esc(concepts[other].label)}</button><br><b>${outgoing ? "→" : "←"} ${esc(db.ontology.relations[e.relation]?.label || e.relation)}</b>${principle}<div>${esc(rationale)}</div>${qualifiers}${citation(edgeSource, e.source_id)}${condition}</div>`;
     }
+  } else {
+    html += '<div class="empty">No connected relations are displayed with the current filters.</div>';
   }
   document.querySelector("#details").innerHTML = html;
   document.querySelector("#deselect-concept").addEventListener("click", () => {
     deselectConcept();
     document.querySelector("#search").focus({ preventScroll: true });
   });
-  document.querySelectorAll("[data-node]").forEach((button) => button.addEventListener("click", () => selectConcept(button.dataset.node)));
+  document.querySelectorAll("#details [data-node]").forEach((button) => button.addEventListener("click", () => selectConcept(button.dataset.node)));
 }
 function citation(source, id) {
   if (!source) return `<span class="small">Source: ${esc(id || "unknown")}</span>`;
@@ -605,6 +632,17 @@ function fillControls() {
   const domains = [...new Set(Object.values(concepts).map((c) => c.domain))].sort();
   document.querySelector("#domains").innerHTML = domains.map((domain) => `<label class="check"><input type="checkbox" value="${esc(domain)}" checked>${esc(domain)}</label>`).join("");
   document.querySelectorAll("#domains input").forEach((input) => input.addEventListener("change", () => { clearPathResult(); draw(); }));
+  document.querySelector("#study-areas").innerHTML = Object.entries(db.ontology.study_areas)
+    .sort((a, b) => a[1].label.localeCompare(b[1].label))
+    .map(([id, area]) => {
+      const count = Object.values(concepts).filter(c => c.study_areas.includes(id)).length;
+      return `<label class="check"><input type="checkbox" value="${esc(id)}">${esc(area.label)} <span class="small">(${count})</span></label>`;
+    }).join("");
+  document.querySelectorAll("#study-areas input").forEach(input => input.addEventListener("change", updateStudyAreas));
+  document.querySelector("#clear-study-areas").addEventListener("click", () => {
+    document.querySelectorAll("#study-areas input").forEach(input => { input.checked = false; });
+    updateStudyAreas();
+  });
   const relations = document.querySelector("#relations");
   for (const id of Object.keys(db.ontology.relations).sort()) { const option = document.createElement("option"); option.value = id; option.textContent = db.ontology.relations[id].label; relations.append(option); }
   document.querySelector("#counts").innerHTML = `<span class="pill">${Object.keys(concepts).length} concepts</span><span class="pill">${Object.keys(edges).length} relations</span><span class="pill">${Object.keys(db.ontology.sources).length} sources</span>`;

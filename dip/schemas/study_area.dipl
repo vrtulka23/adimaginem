@@ -1,0 +1,9 @@
+?descr "An editorial study area with an authoritative textual basis for its scope"
+label str
+latin_name str
+description str
+source_id str
+classification_note str
+evidence_kind str = "editorial_classification"
+  !options ["editorial_classification"]
+  !labels ["Editorial study grouping"]

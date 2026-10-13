@@ -2,6 +2,7 @@
 ontology
   relations map : ontological_relation
   relations[actualizes]
+    principle_id = "actuality"
     label = "Actualizes"
     kind = "metaphysical"
     description = "A form or act brings a relevant potency into act."
@@ -14,6 +15,7 @@ ontology
     prose_template = "{subject} confers {object}."
 
   relations[creates]
+    principle_id = "creation"
     label = "Creates"
     kind = "creation"
     description = "God gives being without pre-existing material; the object is a creature class, not a dated event."
@@ -68,12 +70,14 @@ ontology
     prose_template = "{subject} has {object} as a genus of powers."
 
   relations[has_substantial_form]
+    principle_id = "substantial_form"
     label = "Has substantial form"
     kind = "composition"
     description = "The composite has the substantial form that makes it one substance."
     prose_template = "{subject} has {object} as its substantial form."
 
   relations[inheres_in_subject]
+    principle_id = "accident"
     label = "Inheres in subject"
     kind = "metaphysical"
     description = "A habit or quality has the indicated subject."
@@ -87,6 +91,7 @@ ontology
     prose_template = "{subject} causes {object} instrumentally."
 
   relations[is_act_of]
+    principle_id = "second_actuality"
     label = "Is an act of"
     kind = "power_and_act"
     description = "An operation belongs to the indicated power."
@@ -99,6 +104,7 @@ ontology
     prose_template = "{subject} is a fallen condition of {object}."
 
   relations[is_in_potency_to]
+    principle_id = "passive_potentiality"
     label = "Is in potency to"
     kind = "metaphysical"
     description = "The subject is capable of the indicated act or form."
@@ -123,6 +129,7 @@ ontology
     prose_template = "{subject} is a person of {object}."
 
   relations[is_pure_act]
+    principle_id = "pure_act"
     label = "Is pure act"
     kind = "metaphysical"
     description = "God has no passive potency, in Aquinas's account."
@@ -166,6 +173,7 @@ ontology
     prose_template = "{subject} perfects {object}."
 
   relations[principle_of_becoming]
+    principle_id = "natural_generation"
     label = "Is a principle of becoming"
     kind = "metaphysical"
     description = "The subject contributes as a principle of natural change."
@@ -278,6 +286,7 @@ ontology
     prose_template = "{subject} is an exemplar cause of {object}."
 
   relations[is_final_cause_of]
+    principle_id = "final_cause"
     label = "Is final cause of"
     kind = "metaphysical"
     description = "The final cause is that for the sake of which an effect or action is ordered."
@@ -443,6 +452,7 @@ ontology
     prose_template = "{subject} inclines to {object}."
 
   relations[is_privation_of]
+    principle_id = "privation"
     label = "Is a privation of"
     kind = "metaphysical"
     description = "Lack of a due perfection, not a positive substance competing with it."
@@ -572,7 +582,7 @@ ontology
   relations[has_characteristic]
     label = "Has characteristic"
     kind = "classification"
-    description = "A characteristic perfection or ministry; does not assert exclusive possession."
+    description = "A characteristic aspect, capacity, perfection, or ministry in the cited respect; does not by itself assert exclusive possession or real composition."
     prose_template = "{subject} has {object} as a characteristic."
 
   relations[is_higher_order_than]
@@ -647,3 +657,37 @@ ontology
     description = "A cited conditional dependence or development between passions. Read the edge conditions and causal mode; the subject need not be a sufficient cause, nor does it cause an external event."
     prose_template = "{subject} can give rise to {object}."
     explanation_role = "effect"
+
+  relations[has_material_principle]
+    label = "Has material principle"
+    kind = "composition"
+    description = "An intrinsic material principle of a corporeal composite; does not identify a living body with prime matter."
+    prose_template = "{subject} has {object} as a material principle."
+    principle_id = "matter"
+
+  relations[has_causal_role]
+    label = "Has causal role"
+    kind = "metaphysical"
+    description = "Classifies a causal role under the edge conditions; the object denotes a mode of causality, not another effect."
+    prose_template = "{subject} has the causal role of {object}."
+    principle_id = "cause"
+
+  relations[excludes]
+    label = "Excludes"
+    kind = "condition"
+    description = "The subject rules out the object in the specified respect; a conceptual exclusion, not an efficient action."
+    prose_template = "{subject} excludes {object}."
+    explanation_role = "limit"
+
+  relations[follows_natural_form]
+    label = "Follows natural form"
+    kind = "metaphysical"
+    description = "Natural inclination follows the form of the subject, distinguished from appetite following apprehension."
+    prose_template = "{subject} follows {object} as natural inclination."
+    principle_id = "form"
+
+  relations[is_distinct_from]
+    label = "Is distinct from"
+    kind = "metaphysical"
+    description = "Distinguishes concepts or modes under the cited account without asserting opposition or separability."
+    prose_template = "{subject} is distinct from {object}."

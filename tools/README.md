@@ -105,3 +105,11 @@ The graph includes sourced relations for embodied cognition, practical reasoning
 Local Python mode, the static build, and the native parity check need the `snt` command on `PATH`; visitors to the static site do not. Three.js, 3d-force-graph, d3-force-3d, and Font Awesome Free Solid are loaded from CDNs, so the browser needs internet access to render and arrange the 3D graph. Each node is an individual Font Awesome vector icon, extruded into a shallow 3D mesh and faced toward the camera. There are no node badges or background circles. Icons use their display group's color; labels appear on hover and for selected or path concepts. Icon implementation details are kept out of the concept panel.
 
 Icon attribution: **Font Awesome Free**, by Fonticons, Inc., licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Source: [Font Awesome Free](https://fontawesome.com/). The viewer uses modified, extruded vector forms from the solid icon set. Use `--host` and `--port` to change the local server address or port.
+
+## Metaphysical foundations
+
+The cited [metaphysics module](../docs/metaphysics.md) connects general principles to human nature, faculties, habits, and creation. Concept details include a **Principle** button for predicates with a DIPL `principle_id`. A principle's own panel lists the relations using it. These navigation references do not add synthetic graph edges or causal claims.
+
+## Overlapping study areas
+
+Expand **Study areas** in the left sidebar to filter by ethics, knowledge and truth, natural philosophy, logic, social and political philosophy, or the three broad areas. Checkboxes combine by union; domain and other filters still apply. **Clear study-area filter** restores all areas. **About selected areas** shows the cited scope and qualifications from DIPL, and concept panels list their memberships. See [study areas](../docs/study-areas.md).

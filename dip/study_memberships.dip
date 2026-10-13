@@ -1,0 +1,466 @@
+# Editorial study memberships; concept IDs, domains, and categories retain their meanings.
+# Scope citations and qualifications are in study_areas.dip; definitions retain their own sources.
+# Multiple study areas do not generate edges or imply shared ontological nature.
+ontology
+  concepts[human_person].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics", "knowledge_truth", "social_political"]
+
+  concepts[human_body].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[rational_soul].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics", "knowledge_truth"]
+
+  concepts[soul_power].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[vegetative_power].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[sensitive_power].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[appetitive_power].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics"]
+
+  concepts[locomotive_power].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[intellectual_power].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth", "logic"]
+
+  concepts[bodily_organ].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[nutritive_power].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[augmentative_power].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[generative_power].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[external_sense].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[sight].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[hearing].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[smell].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[taste].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[touch].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[internal_sense].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[common_sense].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[imagination].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[cogitative_power].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[sensitive_memory].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[possible_intellect].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[agent_intellect].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[sensitive_appetite].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics"]
+
+  concepts[will].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[concupiscible_appetite].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics"]
+
+  concepts[irascible_appetite].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics"]
+
+  concepts[choice].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[natural_appetite].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[naturally_suitable_good].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[sensible_good_or_evil].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics"]
+
+  concepts[arduous_sensible_good_or_evil].study_areas str[1:] = ["anthropology", "natural_philosophy", "ethics"]
+
+  concepts[apprehended_good].study_areas str[1:] = ["anthropology", "ethics", "knowledge_truth"]
+
+  concepts[sensing].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[imagining].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[understanding].study_areas str[1:] = ["anthropology", "knowledge_truth", "logic"]
+
+  concepts[willing].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[counsel].study_areas str[1:] = ["anthropology", "ethics", "knowledge_truth", "social_political"]
+
+  concepts[habit].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[phantasm].study_areas str[1:] = ["anthropology", "natural_philosophy", "knowledge_truth"]
+
+  concepts[intelligible_species].study_areas str[1:] = ["anthropology", "knowledge_truth"]
+
+  concepts[practical_intellect].study_areas str[1:] = ["anthropology", "ethics", "knowledge_truth", "social_political"]
+
+  concepts[love_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[hatred_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[desire_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[aversion_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[joy_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[sorrow_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[hope_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[despair_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[fear_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[daring_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[anger_passion].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[apprehended_evil].study_areas str[1:] = ["anthropology", "ethics", "knowledge_truth"]
+
+  concepts[trinity].study_areas str[1:] = ["theology"]
+
+  concepts[divine_essence].study_areas str[1:] = ["theology"]
+
+  concepts[father].study_areas str[1:] = ["theology"]
+
+  concepts[son].study_areas str[1:] = ["theology"]
+
+  concepts[holy_spirit].study_areas str[1:] = ["theology"]
+
+  concepts[grace].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[sanctifying_grace].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[actual_grace].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[virtue].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[cardinal_virtue].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[theological_virtue].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[acquired_virtue].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[infused_virtue].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[prudence_virtue].study_areas str[1:] = ["anthropology", "ethics", "knowledge_truth", "social_political"]
+
+  concepts[justice_virtue].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[fortitude_virtue].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[temperance_virtue].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[faith_virtue].study_areas str[1:] = ["theology", "ethics", "knowledge_truth"]
+
+  concepts[hope_virtue].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[charity_virtue].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[gift_of_holy_spirit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[fruit_of_holy_spirit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[sacrament].study_areas str[1:] = ["theology"]
+
+  concepts[initiation_sacraments].study_areas str[1:] = ["theology"]
+
+  concepts[healing_sacraments].study_areas str[1:] = ["theology"]
+
+  concepts[service_sacraments].study_areas str[1:] = ["theology"]
+
+  concepts[sacramental_grace].study_areas str[1:] = ["theology"]
+
+  concepts[sacramental_character].study_areas str[1:] = ["theology"]
+
+  concepts[wisdom_gift].study_areas str[1:] = ["theology", "ethics", "knowledge_truth"]
+
+  concepts[understanding_gift].study_areas str[1:] = ["theology", "ethics", "knowledge_truth"]
+
+  concepts[counsel_gift].study_areas str[1:] = ["theology", "ethics", "knowledge_truth"]
+
+  concepts[fortitude_gift].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[knowledge_gift].study_areas str[1:] = ["theology", "ethics", "knowledge_truth"]
+
+  concepts[piety_gift].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[fear_of_lord_gift].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[charity_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[joy_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[peace_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[patience_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[kindness_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[goodness_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[generosity_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[gentleness_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[faithfulness_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[modesty_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[self_control_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[chastity_fruit].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[baptism].study_areas str[1:] = ["theology"]
+
+  concepts[confirmation].study_areas str[1:] = ["theology"]
+
+  concepts[eucharist].study_areas str[1:] = ["theology"]
+
+  concepts[penance].study_areas str[1:] = ["theology"]
+
+  concepts[anointing_of_sick].study_areas str[1:] = ["theology"]
+
+  concepts[holy_orders].study_areas str[1:] = ["theology"]
+
+  concepts[matrimony].study_areas str[1:] = ["theology"]
+
+  concepts[eternal_word].study_areas str[1:] = ["theology"]
+
+  concepts[subsistent_love].study_areas str[1:] = ["theology"]
+
+  concepts[divine_love].study_areas str[1:] = ["theology"]
+
+  concepts[eternal_generation].study_areas str[1:] = ["theology"]
+
+  concepts[procession_of_love].study_areas str[1:] = ["theology"]
+
+  concepts[divine_paternity].study_areas str[1:] = ["theology"]
+
+  concepts[divine_filiation].study_areas str[1:] = ["theology"]
+
+  concepts[common_spiration].study_areas str[1:] = ["theology"]
+
+  concepts[personal_procession].study_areas str[1:] = ["theology"]
+
+  concepts[divine_simplicity].study_areas str[1:] = ["theology"]
+
+  concepts[divine_unity].study_areas str[1:] = ["theology"]
+
+  concepts[common_divine_operation].study_areas str[1:] = ["theology"]
+
+  concepts[god].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[created_being].study_areas str[1:] = ["theology"]
+
+  concepts[spiritual_creature].study_areas str[1:] = ["theology"]
+
+  concepts[corporeal_creature].study_areas str[1:] = ["theology", "natural_philosophy"]
+
+  concepts[angel].study_areas str[1:] = ["theology"]
+
+  concepts[fallen_angel].study_areas str[1:] = ["theology"]
+
+  concepts[nonhuman_animal].study_areas str[1:] = ["theology", "natural_philosophy"]
+
+  concepts[plant].study_areas str[1:] = ["theology", "natural_philosophy"]
+
+  concepts[inanimate_material_creature].study_areas str[1:] = ["theology", "natural_philosophy"]
+
+  concepts[pure_act].study_areas str[1:] = ["metaphysics"]
+
+  concepts[corporeality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[speculative_intellect].study_areas str[1:] = ["anthropology", "ethics", "knowledge_truth", "logic"]
+
+  concepts[act_of_charity].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[spiritual_life].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[spiritual_regeneration].study_areas str[1:] = ["theology"]
+
+  concepts[remission_of_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[remnants_of_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[sacred_ministry].study_areas str[1:] = ["theology"]
+
+  concepts[generation_of_children].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[disordered_concupiscence].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[bodily_healing].study_areas str[1:] = ["anthropology", "natural_philosophy"]
+
+  concepts[endurance_in_illness].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[beatific_vision].study_areas str[1:] = ["theology", "knowledge_truth"]
+
+  concepts[blessed_angel].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_intellect].study_areas str[1:] = ["theology", "knowledge_truth"]
+
+  concepts[angelic_will].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_turning_to_god].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_ministry].study_areas str[1:] = ["theology"]
+
+  concepts[christ_priesthood].study_areas str[1:] = ["theology"]
+
+  concepts[benevolence].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[beneficence].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[concord].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[appetitive_harmony].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[endurance_of_adversity].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[perseverance_in_waiting].study_areas str[1:] = ["anthropology", "ethics"]
+
+  concepts[trustworthy_dealing].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[outward_conduct].study_areas str[1:] = ["anthropology", "ethics", "social_political"]
+
+  concepts[personal_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[original_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[mortal_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[venial_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[vice].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[original_justice].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[wounded_human_nature].study_areas str[1:] = ["anthropology", "theology", "ethics"]
+
+  concepts[ignorance_wound].study_areas str[1:] = ["anthropology", "theology", "ethics", "knowledge_truth"]
+
+  concepts[malice_wound].study_areas str[1:] = ["anthropology", "theology", "ethics"]
+
+  concepts[weakness_wound].study_areas str[1:] = ["anthropology", "theology", "ethics"]
+
+  concepts[blindness_of_mind].study_areas str[1:] = ["anthropology", "theology", "ethics", "knowledge_truth"]
+
+  concepts[dullness_of_understanding].study_areas str[1:] = ["anthropology", "theology", "ethics", "knowledge_truth"]
+
+  concepts[disordered_passion].study_areas str[1:] = ["anthropology", "theology", "ethics"]
+
+  concepts[practical_judgment].study_areas str[1:] = ["anthropology", "theology", "ethics", "knowledge_truth"]
+
+  concepts[grave_matter].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[full_moral_knowledge].study_areas str[1:] = ["anthropology", "theology", "ethics", "knowledge_truth"]
+
+  concepts[deliberate_consent].study_areas str[1:] = ["anthropology", "theology", "ethics"]
+
+  concepts[aversion_from_god].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[human_conversion].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[repentance_for_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[justification].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[angelic_illumination].study_areas str[1:] = ["theology", "knowledge_truth"]
+
+  concepts[angelic_persuasion].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[temptation_to_sin].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[demonic_suggestion].study_areas str[1:] = ["theology", "ethics"]
+
+  concepts[angelic_guardianship].study_areas str[1:] = ["theology"]
+
+  concepts[personal_angelic_guardianship].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_order].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_hierarchy].study_areas str[1:] = ["theology"]
+
+  concepts[first_angelic_hierarchy].study_areas str[1:] = ["theology"]
+
+  concepts[second_angelic_hierarchy].study_areas str[1:] = ["theology"]
+
+  concepts[third_angelic_hierarchy].study_areas str[1:] = ["theology"]
+
+  concepts[seraphim].study_areas str[1:] = ["theology"]
+
+  concepts[seraphic_ardor].study_areas str[1:] = ["theology"]
+
+  concepts[cherubim].study_areas str[1:] = ["theology"]
+
+  concepts[cherubic_knowledge].study_areas str[1:] = ["theology", "knowledge_truth"]
+
+  concepts[thrones].study_areas str[1:] = ["theology"]
+
+  concepts[receptivity_to_divine_government].study_areas str[1:] = ["theology"]
+
+  concepts[dominions].study_areas str[1:] = ["theology"]
+
+  concepts[direction_of_angelic_ministry].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_virtues].study_areas str[1:] = ["theology"]
+
+  concepts[empowerment_of_angelic_ministry].study_areas str[1:] = ["theology"]
+
+  concepts[powers_order].study_areas str[1:] = ["theology"]
+
+  concepts[ordering_of_angelic_execution].study_areas str[1:] = ["theology"]
+
+  concepts[principalities].study_areas str[1:] = ["theology"]
+
+  concepts[leadership_of_angelic_ministry].study_areas str[1:] = ["theology"]
+
+  concepts[archangels].study_areas str[1:] = ["theology"]
+
+  concepts[announcement_of_great_divine_matters].study_areas str[1:] = ["theology"]
+
+  concepts[angels_order].study_areas str[1:] = ["theology"]
+
+  concepts[angelic_announcement].study_areas str[1:] = ["theology"]
+
+  concepts[matter].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[form].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[potentiality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[actuality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[privation].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[natural_generation].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[substance].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[accident].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[cause].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[material_cause].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[formal_cause].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[efficient_cause].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[final_cause].study_areas str[1:] = ["metaphysics", "natural_philosophy", "ethics"]
+
+  concepts[substantial_form].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[accidental_form].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[quality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[active_power].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[passive_potentiality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[first_actuality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[second_actuality].study_areas str[1:] = ["metaphysics", "natural_philosophy"]
+
+  concepts[creation].study_areas str[1:] = ["theology"]
+

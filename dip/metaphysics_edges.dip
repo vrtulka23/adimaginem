@@ -1,0 +1,526 @@
+# Intrinsic principles, categories, capacities, and causal roles are distinguished.
+ontology
+  edges[matter_potential_to_form]
+    subject str = "matter"
+    relation str = "is_in_potency_to"
+    object str = "form"
+    source_id str = "dpn_8"
+      ?descr "Matter is understood as in potency to form in natural generation."
+      ?rationale "De principiis naturae section 8 explains matter through its capacity to receive form in generation."
+    included_in_model bool = true
+
+  edges[form_actualizes_matter]
+    subject str = "form"
+    relation str = "actualizes"
+    object str = "matter"
+    source_id str = "dpn_8"
+      ?descr "Form makes what was in potency be in act."
+      ?rationale "De principiis naturae section 8 treats form as that by which what is potential becomes actual."
+    included_in_model bool = true
+    causal_mode = "formal"
+
+  edges[privation_in_becoming]
+    subject str = "privation"
+    relation str = "principle_of_becoming"
+    object str = "natural_generation"
+    source_id str = "dpn_12"
+      ?descr "Privation is a principle of becoming, not of the completed thing's being."
+      ?rationale "De principiis naturae section 12 distinguishes privation as a principle of becoming from the principles of the completed thing."
+    included_in_model bool = true
+
+  edges[potency_to_act]
+    subject str = "potentiality"
+    relation str = "is_realized_in"
+    object str = "actuality"
+    source_id str = "dpn_1"
+      ?descr "The cited text distinguishes what can be from what already is in act."
+      ?rationale "De principiis naturae section 1 contrasts being in potency with being in act; this edge summarizes that distinction."
+    evidence_kind = "interpretive_inference"
+    included_in_model bool = true
+    conditions = "Here potentiality is considered as receptivity to act, not active power as though it were deficient in the same sense."
+    condition_source_id = "st_i_25_1"
+
+  edges[accident_in_substance]
+    subject str = "accident"
+    relation str = "inheres_in_subject"
+    object str = "substance"
+    source_id str = "dpn_3"
+      ?descr "An accident is in a subject that already has substantial existence."
+      ?rationale "De principiis naturae sections 3-4 distinguishes what exists in a subject from substantial being."
+    included_in_model bool = true
+
+  edges[material_cause_kind]
+    subject str = "material_cause"
+    relation str = "is_kind_of"
+    object str = "cause"
+    source_id str = "dpn_20"
+      ?rationale "De principiis naturae section 20 enumerates matter among the four causes."
+    included_in_model bool = true
+
+  edges[formal_cause_kind]
+    subject str = "formal_cause"
+    relation str = "is_kind_of"
+    object str = "cause"
+    source_id str = "dpn_20"
+      ?rationale "De principiis naturae section 20 enumerates form among the four causes."
+    included_in_model bool = true
+
+  edges[efficient_cause_kind]
+    subject str = "efficient_cause"
+    relation str = "is_kind_of"
+    object str = "cause"
+    source_id str = "dpn_20"
+      ?rationale "De principiis naturae section 20 enumerates the agent among the four causes."
+    included_in_model bool = true
+
+  edges[final_cause_kind]
+    subject str = "final_cause"
+    relation str = "is_kind_of"
+    object str = "cause"
+    source_id str = "dpn_20"
+      ?rationale "De principiis naturae section 20 enumerates the end among the four causes."
+    included_in_model bool = true
+
+  edges[substantial_form_kind]
+    subject = "substantial_form"
+    relation = "is_kind_of"
+    object = "form"
+    source_id str = "dpn_2_7"
+      ?rationale "Section 5 distinguishes substantial and accidental form."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Form giving substantial being."
+    condition_source_id = "dpn_2_7"
+
+  edges[accidental_form_kind]
+    subject = "accidental_form"
+    relation = "is_kind_of"
+    object = "form"
+    source_id str = "dpn_2_7"
+      ?rationale "Section 5 distinguishes substantial and accidental form."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Determination of an existing subject."
+    condition_source_id = "dpn_2_7"
+
+  edges[quality_accident]
+    subject = "quality"
+    relation = "is_kind_of"
+    object = "accident"
+    source_id str = "st_i_ii_49_2"
+      ?rationale "Quality determines accidental being."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Predicamental accident; not a chance event."
+    condition_source_id = "st_i_ii_49_2"
+
+  edges[habit_quality]
+    subject = "habit"
+    relation = "is_kind_of"
+    object = "quality"
+    source_id str = "st_i_ii_49_1"
+      ?rationale "Habit is a dispositional quality."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Habitus as disposition, not the separate predicament of having."
+    condition_source_id = "st_i_ii_49_1"
+
+  edges[soul_power_quality]
+    subject = "soul_power"
+    relation = "is_kind_of"
+    object = "quality"
+    source_id str = "st_i_77_1_ad5"
+      ?rationale "Aquinas classifies soul powers as qualities."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Natural properties are accidents in the predicamental sense; they are not the soul's essence."
+    condition_source_id = "st_i_77_1_ad5"
+
+  edges[human_substance]
+    subject = "human_person"
+    relation = "is_kind_of"
+    object = "substance"
+    source_id str = "st_i_29_1"
+      ?rationale "A person is an individual substance of rational nature."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The embodied human composite is the subject; this does not make body and soul separate complete persons."
+    condition_source_id = "st_i_29_1"
+
+  edges[soul_substantial_form_kind]
+    subject = "rational_soul"
+    relation = "is_kind_of"
+    object = "substantial_form"
+    source_id str = "st_i_76_1"
+      ?rationale "The intellectual soul gives the human composite its form."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The rational soul retains its subsistence and intellectual operation."
+    condition_source_id = "st_i_76_1"
+
+  edges[soul_actualizes_body]
+    subject = "rational_soul"
+    relation = "actualizes"
+    object = "human_body"
+    source_id str = "st_i_76_1"
+      ?rationale "The soul is the primary principle by which the body lives."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "formal"
+    conditions = "Substantial actualization; the living body is not already a complete human substance independently of its soul."
+    condition_source_id = "st_i_76_1"
+
+  edges[human_material_principle]
+    subject = "human_person"
+    relation = "has_material_principle"
+    object = "matter"
+    source_id str = "st_i_76_1"
+      ?rationale "The human being is one composite of matter and form."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "material"
+    conditions = "Matter is an intrinsic principle; the actual living body must not be identified with bare prime matter."
+    condition_source_id = "st_i_76_1"
+
+  edges[first_actuality_kind]
+    subject = "first_actuality"
+    relation = "is_kind_of"
+    object = "actuality"
+    source_id str = "st_i_77_1"
+      ?rationale "The soul as subject of its powers is called first act."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "A distinction of senses of act, not a separate agent."
+    condition_source_id = "st_i_77_1"
+
+  edges[second_actuality_kind]
+    subject = "second_actuality"
+    relation = "is_kind_of"
+    object = "actuality"
+    source_id str = "st_i_77_1"
+      ?rationale "Operation is distinguished from first act."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The exercise of a creature's power."
+    condition_source_id = "st_i_77_1"
+
+  edges[soul_first_actuality]
+    subject = "rational_soul"
+    relation = "has_characteristic"
+    object = "first_actuality"
+    source_id str = "st_i_77_1"
+      ?rationale "A living subject need not continuously exercise its operations."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "First act in relation to the body and operative powers; not an acquired habit."
+    condition_source_id = "st_i_77_1"
+
+  edges[first_to_second_actuality]
+    subject = "first_actuality"
+    relation = "is_in_potency_to"
+    object = "second_actuality"
+    source_id str = "st_i_77_1"
+      ?rationale "A soul has reference to further operation according to its power."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Potentiality belongs to the subject through its power, not to act precisely as act."
+    condition_source_id = "st_i_77_1"
+
+  edges[understanding_second_actuality]
+    subject = "understanding"
+    relation = "is_kind_of"
+    object = "second_actuality"
+    source_id str = "st_i_77_1"
+      ?rationale "Intellectual operation is distinct from the soul and its power."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Actual exercise of the created intellectual power."
+    condition_source_id = "st_i_77_1"
+
+  edges[sensing_second_actuality]
+    subject = "sensing"
+    relation = "is_kind_of"
+    object = "second_actuality"
+    source_id str = "st_i_77_1"
+      ?rationale "Sensitive operation is distinct from the soul and its power."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Actual exercise of sensitive power in the living composite."
+    condition_source_id = "st_i_77_1"
+
+  edges[intellect_potential_to_understanding]
+    subject = "possible_intellect"
+    relation = "is_in_potency_to"
+    object = "understanding"
+    source_id str = "st_i_79_2"
+      ?rationale "Human intellect advances from potential to actual understanding."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Receptivity to intelligible actuality, not reception of a bodily form as matter."
+    condition_source_id = "st_i_79_2"
+
+  edges[passive_potency_kind]
+    subject = "passive_potentiality"
+    relation = "is_kind_of"
+    object = "potentiality"
+    source_id str = "st_i_25_1"
+      ?rationale "Aquinas distinguishes passive and active power."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Division of the senses of potentia."
+    condition_source_id = "st_i_25_1"
+
+  edges[active_power_kind]
+    subject = "active_power"
+    relation = "is_kind_of"
+    object = "potentiality"
+    source_id str = "st_i_25_1"
+      ?rationale "Active power is founded on actuality."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Division of the senses of potentia; active power does not entail passive deficiency."
+    condition_source_id = "st_i_25_1"
+
+  edges[intellect_passive_potency]
+    subject = "possible_intellect"
+    relation = "has_characteristic"
+    object = "passive_potentiality"
+    source_id str = "st_i_79_2"
+      ?rationale "The human intellect is receptive of intelligible actuality."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Passive in the sense of receiving perfection; not necessarily corruption or bodily alteration."
+    condition_source_id = "st_i_79_2"
+
+  edges[agent_intellect_active_power]
+    subject = "agent_intellect"
+    relation = "has_characteristic"
+    object = "active_power"
+    source_id str = "st_i_79_3"
+      ?rationale "An active intellectual power makes intelligibles actual."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Human intellectual abstraction from phantasms, not creation of the external object."
+    condition_source_id = "st_i_79_3"
+
+  edges[pure_act_actuality]
+    subject = "pure_act"
+    relation = "includes"
+    object = "actuality"
+    source_id str = "st_i_3_2"
+      ?rationale "Pure act excludes passive potency."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Conceptual inclusion of actuality without passive potency; no parts or common genus in God."
+    condition_source_id = "st_i_3_2"
+
+  edges[pure_act_excludes_passivity]
+    subject = "pure_act"
+    relation = "excludes"
+    object = "passive_potentiality"
+    source_id str = "st_i_25_1"
+      ?rationale "Passive power is absent from God."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This exclusion does not deny divine active power."
+    condition_source_id = "st_i_25_1"
+
+  edges[god_active_power]
+    subject = "god"
+    relation = "has_characteristic"
+    object = "active_power"
+    source_id str = "st_i_25_1"
+      ?rationale "Active power belongs to God in the highest degree."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Divine power and operation are identical with the divine essence; no added faculty or accident."
+    condition_source_id = "st_i_25_1"
+
+  edges[angel_has_act]
+    subject = "angel"
+    relation = "has_characteristic"
+    object = "actuality"
+    source_id str = "st_i_50_2"
+      ?rationale "Angels involve act and potency without matter-form composition."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Their received existence is act; immateriality does not entail pure actuality."
+    condition_source_id = "st_i_50_2"
+
+  edges[angel_has_potency]
+    subject = "angel"
+    relation = "has_characteristic"
+    object = "passive_potentiality"
+    source_id str = "st_i_50_2"
+      ?rationale "An angelic nature receives its act of existence."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Ontological receptivity, not bodily matter or an assertion of temporal learning."
+    condition_source_id = "st_i_50_2"
+
+  edges[matter_in_generation]
+    subject = "matter"
+    relation = "principle_of_becoming"
+    object = "natural_generation"
+    source_id str = "dpn_8"
+      ?rationale "Matter is required in generation."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Pre-existing potency for the acquired form."
+    condition_source_id = "dpn_8"
+
+  edges[form_in_generation]
+    subject = "form"
+    relation = "principle_of_becoming"
+    object = "natural_generation"
+    source_id str = "dpn_8"
+      ?rationale "Form is that through which generation terminates in actuality."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The form acquired in substantial or qualified generation."
+    condition_source_id = "dpn_8"
+
+  edges[matter_material_cause]
+    subject = "matter"
+    relation = "has_causal_role"
+    object = "material_cause"
+    source_id str = "dpn_20"
+      ?rationale "Matter is counted among the four causes."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Causal role under a specified form; not an efficient agent."
+    condition_source_id = "dpn_20"
+
+  edges[form_formal_cause]
+    subject = "form"
+    relation = "has_causal_role"
+    object = "formal_cause"
+    source_id str = "dpn_20"
+      ?rationale "Form is counted among the four causes."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "That by which the effect is actual in the relevant respect."
+    condition_source_id = "dpn_20"
+
+  edges[god_efficient_cause_role]
+    subject = "god"
+    relation = "has_causal_role"
+    object = "efficient_cause"
+    source_id str = "st_i_44_1"
+      ?rationale "All beings other than God derive being from the first being."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Universal cause of created being, not one univocal cause alongside creatures."
+    condition_source_id = "st_i_44_1"
+
+  edges[god_final_cause_role]
+    subject = "god"
+    relation = "has_causal_role"
+    object = "final_cause"
+    source_id str = "st_i_44_3_4"
+      ?rationale "All things are ordered to divine goodness as their end."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Creatures seek participation in goodness; God does not act to acquire a missing perfection."
+    condition_source_id = "st_i_44_3_4"
+
+  edges[original_sin_includes_privation]
+    subject = "original_sin"
+    relation = "includes"
+    object = "privation"
+    source_id str = "ccc_404_405"
+      ?rationale "Original sin involves deprivation of original holiness and justice."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This inherited state is contracted rather than personally committed; not every absence or natural limitation is original sin."
+    condition_source_id = "ccc_404_405"
+
+  edges[natural_appetite_follows_form]
+    subject = "natural_appetite"
+    relation = "follows_natural_form"
+    object = "form"
+    source_id str = "st_i_80_1"
+      ?rationale "Inclination follows a thing's natural form."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Natural inclination is distinguished from appetite following the subject's apprehension."
+    condition_source_id = "st_i_80_1"
+
+  edges[creation_distinct_generation]
+    subject = "creation"
+    relation = "is_distinct_from"
+    object = "natural_generation"
+    source_id str = "st_i_45_1_3"
+      ?rationale "Creation gives being without a pre-existing subject."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Creation is not a change between forms in matter."
+    condition_source_id = "st_i_45_1_3"
+
+  edges[creation_no_presupposed_matter]
+    subject = "creation"
+    relation = "does_not_require"
+    object = "matter"
+    source_id str = "st_i_45_1_3"
+      ?rationale "The universal production of being presupposes no material subject."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This denies pre-existing matter; it does not deny that God creates material beings."
+    condition_source_id = "st_i_45_1_3"
+
+  edges[god_can_create]
+    subject = "god"
+    relation = "can_perform"
+    object = "creation"
+    source_id str = "st_i_45_5"
+      ?rationale "Creation belongs to God alone."
+    evidence_kind = "textual_paraphrase"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "No creature is a principal or instrumental creator in the strict sense of creation from nothing."
+    condition_source_id = "st_i_45_5"
+
+  edges[quality_accidental_form]
+    subject = "quality"
+    relation = "is_kind_of"
+    object = "accidental_form"
+    source_id str = "st_i_ii_49_2"
+      ?rationale "Quality determines a subject in accidental being."
+    evidence_kind = "interpretive_inference"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Classification of qualitative determination as accidental form; it does not exhaust all accidents."
+    condition_source_id = "st_i_ii_49_2"

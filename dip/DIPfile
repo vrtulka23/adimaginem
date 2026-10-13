@@ -1,4 +1,7 @@
 schemas[]
+  name = "study_area"
+  file = "schemas/study_area.dipl"
+schemas[]
   name = "ontological_concept"
   file = "schemas/ontological_concept.dipl"
 schemas[]
@@ -83,6 +86,16 @@ code[]
   file = "angelic_orders_concepts.dip"
 code[]
   file = "angelic_orders_edges.dip"
+code[]
+  file = "metaphysics_sources.dip"
+code[]
+  file = "metaphysics_concepts.dip"
+code[]
+  file = "metaphysics_edges.dip"
+code[]
+  file = "study_areas.dip"
+code[]
+  file = "study_memberships.dip"
 code[]
   file = "relations.dip"
 code[]

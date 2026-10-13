@@ -4,6 +4,10 @@ latin_name str
 domain str
   !options ["anthropology", "metaphysics", "theology"]
   !labels ["Human ontology", "General metaphysics", "Catholic theology"]
+study_areas str[1:]
+  ?descr "Nonempty, unique study-area IDs. Editorial topical membership; references are validated by the ontology core."
+  ?category "Study classification"
+  ?rationale "Editorial topical indexing under the scopes and qualifications in ontology.study_areas; not an additional ontological claim."
 category str
   !options ["person", "body", "organ", "substantial_form", "power", "power_genus", "act", "passion", "principle", "process", "inclination", "formal_object", "habit", "divine_person", "divine_essence", "doctrine", "grace", "virtue", "gift", "fruit", "sacrament", "sacrament_group", "sacramental_character", "creature", "creature_order", "angelic_condition", "state", "disposition", "office", "angelic_order", "angelic_hierarchy", "divine_name", "divine_relation"]
   !labels ["Person", "Body", "Bodily organ", "Substantial form", "Power", "Power genus", "Act", "Passion", "Principle", "Process", "Inclination", "Formal object", "Habit", "Divine person", "Divine essence", "Doctrine", "Grace", "Virtue", "Gift", "Fruit", "Sacrament", "Sacrament group", "Sacramental character", "Creature", "Creature order", "Angelic condition", "State", "Disposition", "Office", "Angelic order", "Angelic hierarchy", "Divine personal name", "Divine relation"]
