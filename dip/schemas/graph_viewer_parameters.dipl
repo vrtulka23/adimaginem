@@ -73,6 +73,18 @@ selection_ring_dashes int = 8
 selection_ring_speed float = 0.55
   ?descr "Rotation in radians per second; zero gives a static ring. Browser reduced-motion preferences also stop rotation."
 
+selection_repulsion_enabled bool = true
+  ?descr "Temporarily open space around a selected concept and restore the layout on deselection."
+
+selection_repulsion_radius float = 7.0
+  ?descr "Local expansion radius as a multiple of the selected icon size, including its individual scale."
+
+selection_repulsion_strength float = 0.35
+  ?descr "Maximum outward displacement as a fraction of the radius, fading quadratically to zero at its boundary."
+
+selection_return_strength float = 0.3
+  ?descr "Spring strength for smoothly opening and restoring the local layout."
+
 label_height float = 0.45
   ?descr "Concept label height relative to icon size; width fits the text without squeezing its letters."
 
@@ -99,3 +111,9 @@ god_icon_glow_opacity float = 0.38
 
 influence_summary_depth int = 3
   ?descr "Maximum number of recorded steps explored for the influence overview; limits are gathered separately from the selected statements."
+
+study_focus_concept str = "trinity"
+  ?descr "Concept whose existing color-category group supplies the study focus; its cited note introduces the topic."
+
+study_focus_enabled bool = false
+  ?descr "Whether the viewer initially restricts the graph to the study focus group."

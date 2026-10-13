@@ -1,5 +1,7 @@
 import * as THREE from "https://esm.sh/three";
 import { explainPath, collectInfluence } from "./relationship_summary.mjs";
+import { loadOntology } from "./ontology_loader.mjs";
+import { createSelectionForce } from "./selection_force.mjs";
 import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.js";
 import {
   faAppleWhole, faBrain, faCompass, faCross, faCube, faCrown, faDove,
@@ -26,6 +28,8 @@ const shortKinds = new Set(["identity", "classification", "composition"]);
 let db, concepts, edges, positions, graph, iconSize, iconGap, iconHitPadding, sizeConfig, activeSignature = "", layoutNeedsFit = false;
 let nodeRegistry = {}, nodeVisuals = {}, pathEdgeIds = new Set(), pathNodeIds = new Set(), selected = null, initialTickReported = false;
 let selectionRing;
+const selectionForce = createSelectionForce();
+let suspendedForces = null;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function createSelectionRing() {
@@ -157,7 +161,7 @@ function fillColorLegend() {
 }
 function updateLegend() {
   const domains = activeDomains(), counts = {}, relationCounts = {};
-  for (const [id, c] of Object.entries(concepts)) if (domains.has(c.domain)) counts[conceptGroups[id]] = (counts[conceptGroups[id]] || 0) + 1;
+  for (const [id, c] of Object.entries(concepts)) if (domains.has(c.domain) && matchesStudyFocus(id)) counts[conceptGroups[id]] = (counts[conceptGroups[id]] || 0) + 1;
   for (const [, edge] of activeEdges()) {
     const kind = db.ontology.relations[edge.relation].kind;
     relationCounts[kind] = (relationCounts[kind] || 0) + 1;
@@ -364,13 +368,16 @@ function initialLayout() {
   return pos;
 }
 function activeDomains() { return new Set([...document.querySelectorAll("#domains input:checked")].map((x) => x.value)); }
+function matchesStudyFocus(id) {
+  return !document.querySelector("#study-focus").checked || conceptGroups[id] === conceptGroups[sizeConfig.study_focus_concept];
+}
 function activeEdges() {
   const selectedRelations = [...document.querySelector("#relations").selectedOptions].map((o) => o.value), domains = activeDomains(), included = document.querySelector("#included").checked;
-  return Object.entries(edges).filter(([, e]) => (!included || e.included_in_model) && (!selectedRelations.length || selectedRelations.includes(e.relation)) && concepts[e.subject] && concepts[e.object] && domains.has(concepts[e.subject].domain) && domains.has(concepts[e.object].domain));
+  return Object.entries(edges).filter(([, e]) => (!included || e.included_in_model) && (!selectedRelations.length || selectedRelations.includes(e.relation)) && concepts[e.subject] && concepts[e.object] && matchesStudyFocus(e.subject) && matchesStudyFocus(e.object) && domains.has(concepts[e.subject].domain) && domains.has(concepts[e.object].domain));
 }
 function visibleNodes() {
   const domains = activeDomains();
-  return Object.entries(concepts).filter(([, c]) => domains.has(c.domain)).map(([id, c]) => {
+  return Object.entries(concepts).filter(([id, c]) => domains.has(c.domain) && matchesStudyFocus(id)).map(([id, c]) => {
     if (!nodeRegistry[id]) { const [x, y, z] = positions[id]; nodeRegistry[id] = { id, label: c.label, domain: c.domain, category: c.category, x, y, z }; }
     return nodeRegistry[id];
   });
@@ -386,6 +393,34 @@ function configureForces() {
   graph.d3Force("charge").strength(sizeConfig.charge_strength * (iconSize / sizeConfig.icon_size) ** 2);
   graph.d3Force("center", d3.forceCenter(0, 0, 0));
   graph.d3Force("collide", d3.forceCollide(node => iconSize * iconScale(node.id) * 0.52 + iconGap + arrowLength() * 0.5).strength(0.72).iterations(2));
+}
+function restoreSelectionLayout() {
+  selectionForce.restore();
+  if (suspendedForces) {
+    for (const [name, force] of Object.entries(suspendedForces)) graph.d3Force(name, force);
+    suspendedForces = null;
+  }
+  for (const node of graph.graphData().nodes) positions[node.id] = [node.x, node.y, node.z];
+}
+function openSelectionSpace() {
+  if (!graph || !selected || !sizeConfig.selection_repulsion_enabled) return;
+  if (!selectionForce.begin(selected, {
+    radius: iconSize * iconScale(selected) * sizeConfig.selection_repulsion_radius,
+    strength: sizeConfig.selection_repulsion_strength,
+    spring: sizeConfig.selection_return_strength,
+  })) { closeSelectionSpace(); return; }
+  if (!suspendedForces) {
+    suspendedForces = Object.fromEntries(["link", "charge", "center", "collide"].map(name => [name, graph.d3Force(name)]));
+    for (const name of Object.keys(suspendedForces)) graph.d3Force(name, null);
+  }
+  document.querySelector("#layout-status").textContent = "Opening space around the selected concept. Deselect to restore its surroundings.";
+  graph.d3ReheatSimulation();
+}
+function closeSelectionSpace() {
+  if (!selectionForce.active()) return;
+  selectionForce.release();
+  document.querySelector("#layout-status").textContent = "Restoring the layout around the deselected concept…";
+  graph.d3ReheatSimulation();
 }
 function syncBillboards() {
   if (!graph) return;
@@ -417,6 +452,7 @@ function draw(reheatChanged = true) {
   separateParallelLinks(links);
   const signature = graphSignature(nodes, links), changed = signature !== activeSignature;
   if (changed) {
+    restoreSelectionLayout();
     activeSignature = signature;
     layoutNeedsFit = true;
     graph.graphData({ nodes, links });
@@ -445,8 +481,9 @@ function createGraph() {
     .onNodeClick((node) => { if (selected === node.id) deselectConcept(); else selectConcept(node.id); })
     .onNodeHover((node) => { el.style.cursor = node ? "pointer" : "grab"; })
     .onEngineTick(() => { const active = visibleNodes(); for (const n of active) positions[n.id] = [n.x, n.y, n.z]; if (!initialTickReported && active.length) { const extent = ["x", "y", "z"].map((axis) => (Math.max(...active.map((n) => n[axis])) - Math.min(...active.map((n) => n[axis]))).toFixed(1)).join(" × "); document.querySelector("#layout-status").textContent = `Settling ${active.length} concepts · initial spread ${extent}.`; initialTickReported = true; } syncBillboards(); })
-    .onEngineStop(() => { const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } });
+    .onEngineStop(() => { if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } if (selected && !selectionForce.active()) openSelectionSpace(); });
   graph.d3AlphaDecay(0.045).d3AlphaMin(0.002).d3VelocityDecay(0.65).cooldownTime(9000);
+  graph.d3Force("selection-space", selectionForce);
   graph.scene().add(new THREE.AmbientLight(0x9fb1c7, 1.7));
   const key = new THREE.DirectionalLight(0xffefd1, 2.4); key.position.set(-9, 12, 15); graph.scene().add(key);
   const fill = new THREE.DirectionalLight(0x94c9ff, 1.25); fill.position.set(8, -5, 10); graph.scene().add(fill);
@@ -455,23 +492,24 @@ function createGraph() {
   graph.cameraPosition({ x: 25, y: 18, z: 29 }, { x: 0, y: 0, z: 0 }, 0);
 }
 
-function iconName(id, category) { return iconFamily(id, category).replaceAll("_", " "); }
 function selectConcept(id) {
   if (!concepts[id]) return;
   selected = id;
   document.querySelector("#search").value = id;
   showDetails(id); updateVisualState();
+  openSelectionSpace();
 }
 function deselectConcept() {
   selected = null;
   document.querySelector("#search").value = "";
   document.querySelector("#details").innerHTML = '<h2>Concept</h2><div class="empty">Select a node in the graph or search for a concept to see its definition, source, and directly connected cited relations.</div>';
   updateVisualState();
+  closeSelectionSpace();
 }
 function showDetails(id) {
   const c = concepts[id], source = db.ontology.sources[c.source_id];
   const incident = Object.entries(edges).filter(([, e]) => e.subject === id || e.object === id);
-  let html = `<div class="concept-panel-header"><h2>Concept</h2><button type="button" id="deselect-concept" aria-label="Deselect concept" title="Deselect concept">×</button></div><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div><span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll("_", " "))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div><div class="section-title">Icon</div><div class="note">${id === "god" ? "Divine majesty · original gilded 3D emblem with a triangular aureole and radiant ivory center" : `${esc(iconName(id, c.category))} · Font Awesome Free vector, extruded in 3D`}</div><div class="section-title">Definition source</div>${citation(source, c.source_id)}`;
+  let html = `<div class="concept-panel-header"><h2>Concept</h2><button type="button" id="deselect-concept" aria-label="Deselect concept" title="Deselect concept">×</button></div><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div><span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll("_", " "))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div><div class="section-title">Definition source</div>${citation(source, c.source_id)}`;
   if (incident.length) {
     html += `<div class="section-title">Connected relations · ${incident.length}</div>`;
     for (const [edgeId, e] of incident) {
@@ -501,6 +539,7 @@ function clearPathResult() {
   const summary = document.querySelector("#relationship-summary");
   summary.replaceChildren(); summary.hidden = true;
   document.querySelector("#connection-summary").hidden = true;
+  document.querySelector("#disconnect").disabled = true;
 }
 function influenceOverview(start, end) {
   if (start === end) return "";
@@ -578,10 +617,12 @@ function shortestPath() {
   const queue = [start], previous = { [start]: null };
   for (let i = 0; i < queue.length && !Object.hasOwn(previous, end); i++) for (const step of adj[queue[i]] || []) { if (Object.hasOwn(previous, step.node)) continue; previous[step.node] = { from: queue[i], edge: step.id }; queue.push(step.node); if (step.node === end) break; }
   clearPathResult(); const output = document.querySelector("#path-result");
+  document.querySelector("#disconnect").disabled = false;
   const domains = activeDomains();
-  if (!Object.hasOwn(previous, end) || !domains.has(concepts[start].domain) || !domains.has(concepts[end].domain)) {
+  const endpointsVisible = [start, end].every(id => domains.has(concepts[id].domain) && matchesStudyFocus(id));
+  if (!Object.hasOwn(previous, end) || !endpointsVisible) {
     output.className = "path-result none"; output.textContent = `No path found from “${concepts[start].label}” to “${concepts[end].label}” with these filters.`;
-    if (domains.has(concepts[start].domain) && domains.has(concepts[end].domain)) showRelationshipSummary([], [], start, end);
+    if (endpointsVisible) showRelationshipSummary([], [], start, end);
     updateVisualState(); return;
   }
   const ordered = [end]; let current = end; pathNodeIds.add(current);
@@ -597,6 +638,7 @@ function shortestPath() {
   updateVisualState();
 }
 function setIconSize(value, anneal = true) {
+  if (graph) restoreSelectionLayout();
   iconSize = Number(value);
   document.querySelector("#icon-size").value = String(iconSize);
   document.querySelector("#icon-size-value").value = iconSize.toFixed(2);
@@ -606,12 +648,14 @@ function setIconSize(value, anneal = true) {
   if (graph) { configureForces(); graph.linkDirectionalArrowLength(arrowLength); if (anneal) graph.d3ReheatSimulation(); graph.refresh(); }
 }
 function restoreLayout() {
+  restoreSelectionLayout();
   const initial = initialLayout();
   for (const [id, node] of Object.entries(nodeRegistry)) { const [x, y, z] = initial[id]; Object.assign(node, { x, y, z, vx: 0, vy: 0, vz: 0, fx: null, fy: null, fz: null }); positions[id] = [x, y, z]; }
   document.querySelector("#layout-status").textContent = "Starting arrangement restored. Reheat to settle it using visible relations.";
   graph.d3ReheatSimulation(); graph.refresh();
 }
 function reheatLayout() {
+  restoreSelectionLayout();
   layoutNeedsFit = true;
   const nodes = visibleNodes().length, links = activeEdges().length;
   document.querySelector("#layout-status").textContent = `Settling ${nodes} concepts and ${links} relations with space for icons and midpoint arrows.`;
@@ -620,12 +664,19 @@ function reheatLayout() {
 
 async function init() {
   try {
-    const response = await fetch("/api/ontology"); if (!response.ok) throw new Error(`server responded ${response.status}`);
-    db = await response.json(); concepts = db.ontology.concepts; edges = db.ontology.edges; positions = initialLayout();
+    db = await loadOntology(message => { document.querySelector("#loading").textContent = message; });
+    concepts = db.ontology.concepts; edges = db.ontology.edges; positions = initialLayout();
     relationColors = db.graph_relation_colors;
     conceptGroups = Object.fromEntries(Object.entries(db.graph_concept_styles).map(([id, style]) => [id, colorLabel(style)]));
     colorGroups = Object.fromEntries(Object.values(db.graph_concept_styles).map((style) => [colorLabel(style), style]));
     sizeConfig = db.graph_viewer.default; iconGap = sizeConfig.icon_gap; iconHitPadding = sizeConfig.icon_hit_padding;
+    const studyConcept = concepts[sizeConfig.study_focus_concept];
+    if (!studyConcept) throw new Error("Unknown DIPL study_focus_concept");
+    const studyFocus = document.querySelector("#study-focus"), studyNote = document.querySelector("#study-focus-note");
+    studyFocus.checked = sizeConfig.study_focus_enabled;
+    document.querySelector("#study-focus-label").textContent = `Focus: ${studyConcept.label}`;
+    studyNote.innerHTML = `${esc(studyConcept.note)}${citation(db.ontology.sources[studyConcept.source_id], studyConcept.source_id)}<div class="hint">Other filters still apply. Turn off focus to explore connections with the wider ontology.</div>`;
+    studyNote.hidden = !studyFocus.checked;
     const sizeInput = document.querySelector("#icon-size");
     sizeInput.min = sizeConfig.icon_size_min; sizeInput.max = sizeConfig.icon_size_max; sizeInput.step = sizeConfig.icon_size_step;
     fillControls(); fillColorLegend(); createGraph(); setIconSize(sizeConfig.icon_size, false); document.querySelector("#loading").remove(); draw();
@@ -643,12 +694,19 @@ async function init() {
     document.querySelector("#included").addEventListener("change", () => { clearPathResult(); draw(); });
     for (const id of ["from", "to"]) document.querySelector(`#${id}`).addEventListener("change", () => { clearPathResult(); updateVisualState(); });
     document.querySelector("#show-labels").addEventListener("change", updateVisualState);
+    studyFocus.addEventListener("change", () => {
+      clearPathResult(); studyNote.hidden = !studyFocus.checked; draw();
+      if (studyFocus.checked) selectConcept(sizeConfig.study_focus_concept);
+    });
     document.querySelector("#find-path").addEventListener("click", shortestPath);
+    document.querySelector("#disconnect").addEventListener("click", () => { clearPathResult(); updateVisualState(); });
     document.querySelector("#reheat").addEventListener("click", reheatLayout);
     document.querySelector("#restore-layout").addEventListener("click", restoreLayout);
     sizeInput.addEventListener("input", (event) => setIconSize(event.target.value));
     document.querySelector("#reset").addEventListener("click", () => {
+      studyFocus.checked = false; studyNote.hidden = true;
       clearPathResult(); focusedGroups.clear(); deselectConcept();
+      draw();
       graph.zoomToFit(900, sizeConfig.fit_padding);
     });
     document.querySelector("#directed").addEventListener("change", () => { if (document.querySelector("#path-result").textContent) shortestPath(); });

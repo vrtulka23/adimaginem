@@ -1,0 +1,97 @@
+# Names, processions, and relations are conceptual records, not additional gods or persons.
+ontology
+  concepts[eternal_word]
+    latin_name = "Verbum aeternum"
+    label = "Eternal Word"
+    domain = "theology"
+    category = "divine_name"
+    note = "Word is the Son's personal name: his immaterial generation communicates the same divine nature. This name adds no person beside the Son."
+    source_id = "st_i_34_2"
+
+  concepts[subsistent_love]
+    latin_name = "Amor subsistens"
+    label = "Subsistent Love"
+    domain = "theology"
+    category = "divine_name"
+    note = "Love taken personally names the Holy Spirit, proceeding from Father and Son. He is a subsistent person, not an impersonal bond or a passion."
+    source_id = "st_i_37_1"
+
+  concepts[divine_love]
+    latin_name = "amor divinus"
+    label = "Divine love (essential)"
+    domain = "theology"
+    category = "act"
+    note = "Love belongs to God's will without bodily passion or change. Essential love must be distinguished in meaning from Love as a personal name."
+    source_id = "st_i_20_1"
+
+  concepts[eternal_generation]
+    latin_name = "generatio aeterna"
+    label = "Eternal generation"
+    domain = "theology"
+    category = "process"
+    note = "The Son's origin by intellectual procession is generation within the divine nature, without bodily reproduction, change, or creation."
+    source_id = "st_i_27_1_4"
+
+  concepts[procession_of_love]
+    latin_name = "processio amoris"
+    label = "Procession of Love"
+    domain = "theology"
+    category = "process"
+    note = "The Holy Spirit proceeds by way of will as Love. This procession is distinct from generation and is not the begetting of another Son."
+    source_id = "st_i_27_1_4"
+
+  concepts[divine_paternity]
+    latin_name = "paternitas"
+    label = "Divine paternity"
+    domain = "theology"
+    category = "divine_relation"
+    note = "The relation of the Father to the Son as begotten; opposed relatively to filiation."
+    source_id = "st_i_28_4"
+
+  concepts[divine_filiation]
+    latin_name = "filiatio"
+    label = "Divine filiation"
+    domain = "theology"
+    category = "divine_relation"
+    note = "The relation of the Son to the Father as begetting; opposed relatively to paternity."
+    source_id = "st_i_28_4"
+
+  concepts[common_spiration]
+    latin_name = "spiratio communis"
+    label = "Common spiration"
+    domain = "theology"
+    category = "divine_relation"
+    note = "The relation belonging to Father and Son as spirating the Holy Spirit; it does not constitute a fourth person."
+    source_id = "st_i_30_2"
+
+  concepts[personal_procession]
+    latin_name = "processio"
+    label = "Procession (personal relation)"
+    domain = "theology"
+    category = "divine_relation"
+    note = "The Holy Spirit's relation to those from whom he proceeds; distinct from common spiration. Here procession names a relation, not a temporal process."
+    source_id = "st_i_28_4"
+
+  concepts[divine_simplicity]
+    latin_name = "simplicitas divina"
+    label = "Divine simplicity"
+    domain = "theology"
+    category = "principle"
+    note = "God has no composition of parts, matter and form, essence and existence, or subject and accident."
+    source_id = "st_i_3_7"
+
+  concepts[divine_unity]
+    latin_name = "unitas divina"
+    label = "Divine unity"
+    domain = "theology"
+    category = "principle"
+    note = "There is only one God; divine nature cannot be multiplied into several gods."
+    source_id = "st_i_11_3"
+
+  concepts[common_divine_operation]
+    latin_name = "operatio divina ad extra"
+    label = "Common divine operation"
+    domain = "theology"
+    category = "act"
+    note = "The Trinity acts inseparably toward creatures; personal missions manifest the persons' distinct origins."
+    source_id = "ccc_258"

@@ -9,10 +9,12 @@ The project follows a [scholarly and Catholic method](method.md): claims about A
 - [Resources and source practice](resources.md): primary texts, relevant passages, a starting conceptual map, and citation guidance.
 - [Scholarly and Catholic method](method.md): interpretive authorities and review standards for model claims.
 - [Ontology data](ontology.md): structure and source provenance of the DIPL concept and edge graph.
+- [Passions and their interrelations](passions.md): objects, contraries, natural ordering, and conditional influences.
 - [Theological ontology](theology.md): grace, virtues, gifts, fruits, the Trinity, and sacraments.
+- [Holy Trinity](trinity.md): divine unity, Word and Love, relations of origin, and the focused graph view.
 - [Sin and angelic ministry](sin-and-angels.md): wounds of human powers, conversion, temptation, guardianship, and angelic orders.
 - [Creation and created orders](creation.md): God as creator, angels and demons, embodied humans, animals, plants, and matter.
 - [Architecture](architecture.md): responsibilities of the Rust core and Python outer layer.
 - [First executable slice](architecture.md#first-executable-slice): run validation and cited graph queries.
 - [Dependencies and data formats](dependencies.md): SNT3/DIPL and the rules for other serialization formats.
-- [Ontology graph explorer](../tools/README.md): run the standalone local 3D graph browser.
+- [Ontology graph explorer](../tools/README.md): faster local Python mode or a static WebAssembly site for GitHub Pages.

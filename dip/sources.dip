@@ -85,12 +85,6 @@ ontology
     locator str = "I-II, q. 22, a. 3, respondeo"
     url str = "https://www.newadvent.org/summa/2022.htm"
 
-  sources[st_i_ii_23_4]
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
-    locator str = "I-II, q. 23, a. 4, respondeo"
-    url str = "https://www.newadvent.org/summa/2023.htm"
-
   sources[dpn_8]
     author str = "Thomas Aquinas"
     work str = "De principiis naturae"

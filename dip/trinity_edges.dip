@@ -1,0 +1,286 @@
+# Cited Trinitarian distinctions; no temporal simulation or causal composition is licensed.
+ontology
+  edges[word_names_son]
+    subject = "eternal_word"
+    relation = "is_personal_name_of"
+    object = "son"
+    source_id str = "st_i_34_2"
+      ?rationale "ST I, q. 34, a. 2 identifies Word as the proper name of the Son; ad 1 excludes a created effect or accident."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[love_names_spirit]
+    subject = "subsistent_love"
+    relation = "is_personal_name_of"
+    object = "holy_spirit"
+    source_id str = "st_i_37_1"
+      ?rationale "ST I, q. 37, a. 1 uses Love personally for the Holy Spirit."
+    causal_mode = "noncausal"
+    included_in_model = true
+    conditions = "Love here signifies the person proceeding, not the essential act common to all three."
+    condition_source_id = "st_i_37_1"
+
+  edges[father_one_essence]
+    subject = "father"
+    relation = "has_one_divine_essence"
+    object = "divine_essence"
+    source_id str = "ccc_253_254"
+      ?rationale "CCC 253: each person is wholly the same undivided Godhead."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[essential_love_common_to_father]
+    subject = "divine_love"
+    relation = "is_common_to_person"
+    object = "father"
+    source_id str = "st_i_37_1"
+      ?rationale "ST I, q. 37, a. 1 distinguishes essential love, common to all three, from personal Love."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[operation_common_to_father]
+    subject = "common_divine_operation"
+    relation = "is_common_to_person"
+    object = "father"
+    source_id str = "st_i_45_6"
+      ?rationale "ST I, q. 45, a. 6: creation belongs to all three persons through their one essence."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[son_one_essence]
+    subject = "son"
+    relation = "has_one_divine_essence"
+    object = "divine_essence"
+    source_id str = "ccc_253_254"
+      ?rationale "CCC 253: each person is wholly the same undivided Godhead."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[essential_love_common_to_son]
+    subject = "divine_love"
+    relation = "is_common_to_person"
+    object = "son"
+    source_id str = "st_i_37_1"
+      ?rationale "ST I, q. 37, a. 1 distinguishes essential love, common to all three, from personal Love."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[operation_common_to_son]
+    subject = "common_divine_operation"
+    relation = "is_common_to_person"
+    object = "son"
+    source_id str = "st_i_45_6"
+      ?rationale "ST I, q. 45, a. 6: creation belongs to all three persons through their one essence."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[holy_spirit_one_essence]
+    subject = "holy_spirit"
+    relation = "has_one_divine_essence"
+    object = "divine_essence"
+    source_id str = "ccc_253_254"
+      ?rationale "CCC 253: each person is wholly the same undivided Godhead."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[essential_love_common_to_holy_spirit]
+    subject = "divine_love"
+    relation = "is_common_to_person"
+    object = "holy_spirit"
+    source_id str = "st_i_37_1"
+      ?rationale "ST I, q. 37, a. 1 distinguishes essential love, common to all three, from personal Love."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[operation_common_to_holy_spirit]
+    subject = "common_divine_operation"
+    relation = "is_common_to_person"
+    object = "holy_spirit"
+    source_id str = "st_i_45_6"
+      ?rationale "ST I, q. 45, a. 6: creation belongs to all three persons through their one essence."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_distinct_from_son]
+    subject = "father"
+    relation = "is_personally_distinct_from"
+    object = "son"
+    source_id str = "ccc_255"
+      ?rationale "CCC 255 locates personal distinction in relations without dividing divine unity."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_coeternal_with_son]
+    subject = "father"
+    relation = "is_coeternal_with"
+    object = "son"
+    source_id str = "st_i_42_2"
+      ?rationale "ST I, q. 42, a. 2 affirms the coeternity of all three persons; origin entails no temporal succession."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_indwells_son]
+    subject = "father"
+    relation = "mutually_indwells"
+    object = "son"
+    source_id str = "st_i_42_5"
+      ?rationale "ST I, q. 42, a. 5 affirms mutual indwelling through essence, relation, and origin, without spatial separation."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_distinct_from_holy_spirit]
+    subject = "father"
+    relation = "is_personally_distinct_from"
+    object = "holy_spirit"
+    source_id str = "ccc_255"
+      ?rationale "CCC 255 locates personal distinction in relations without dividing divine unity."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_coeternal_with_holy_spirit]
+    subject = "father"
+    relation = "is_coeternal_with"
+    object = "holy_spirit"
+    source_id str = "st_i_42_2"
+      ?rationale "ST I, q. 42, a. 2 affirms the coeternity of all three persons; origin entails no temporal succession."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_indwells_holy_spirit]
+    subject = "father"
+    relation = "mutually_indwells"
+    object = "holy_spirit"
+    source_id str = "st_i_42_5"
+      ?rationale "ST I, q. 42, a. 5 affirms mutual indwelling through essence, relation, and origin, without spatial separation."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[son_distinct_from_holy_spirit]
+    subject = "son"
+    relation = "is_personally_distinct_from"
+    object = "holy_spirit"
+    source_id str = "ccc_255"
+      ?rationale "CCC 255 locates personal distinction in relations without dividing divine unity."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[son_coeternal_with_holy_spirit]
+    subject = "son"
+    relation = "is_coeternal_with"
+    object = "holy_spirit"
+    source_id str = "st_i_42_2"
+      ?rationale "ST I, q. 42, a. 2 affirms the coeternity of all three persons; origin entails no temporal succession."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[son_indwells_holy_spirit]
+    subject = "son"
+    relation = "mutually_indwells"
+    object = "holy_spirit"
+    source_id str = "st_i_42_5"
+      ?rationale "ST I, q. 42, a. 5 affirms mutual indwelling through essence, relation, and origin, without spatial separation."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[son_by_generation]
+    subject = "son"
+    relation = "proceeds_by"
+    object = "eternal_generation"
+    source_id str = "st_i_27_1_4"
+      ?rationale "ST I, q. 27, a. 2 calls the intellectual procession of the Son generation; a. 1 excludes an exterior created effect."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[spirit_by_love]
+    subject = "holy_spirit"
+    relation = "proceeds_by"
+    object = "procession_of_love"
+    source_id str = "st_i_27_1_4"
+      ?rationale "ST I, q. 27, aa. 3-4 distinguish procession by love from generation."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[father_subsisting_relation]
+    subject = "father"
+    relation = "subsists_as_relation"
+    object = "divine_paternity"
+    source_id str = "st_i_29_4"
+      ?rationale "ST I, q. 29, a. 4 understands a divine person as a subsisting relation, not an accident added to essence."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[son_subsisting_relation]
+    subject = "son"
+    relation = "subsists_as_relation"
+    object = "divine_filiation"
+    source_id str = "st_i_29_4"
+      ?rationale "ST I, q. 29, a. 4 understands a divine person as a subsisting relation, not an accident added to essence."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[spirit_subsisting_relation]
+    subject = "holy_spirit"
+    relation = "subsists_as_relation"
+    object = "personal_procession"
+    source_id str = "st_i_30_2"
+      ?rationale "ST I, q. 30, a. 2, ad 1 identifies procession as the personal relation of the Holy Spirit."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[spiration_common_to_father]
+    subject = "common_spiration"
+    relation = "is_common_to_person"
+    object = "father"
+    source_id str = "st_i_36_4"
+      ?rationale "ST I, q. 36, a. 4 identifies Father and Son as one principle of the Holy Spirit."
+    causal_mode = "noncausal"
+    included_in_model = true
+    conditions = "One common spiration; the Father and Son are not two independent principles."
+    condition_source_id = "st_i_36_4"
+
+  edges[spiration_common_to_son]
+    subject = "common_spiration"
+    relation = "is_common_to_person"
+    object = "son"
+    source_id str = "st_i_36_4"
+      ?rationale "ST I, q. 36, a. 4 identifies Father and Son as one principle of the Holy Spirit."
+    causal_mode = "noncausal"
+    included_in_model = true
+    conditions = "One common spiration; the Father and Son are not two independent principles."
+    condition_source_id = "st_i_36_4"
+
+  edges[paternity_opposed_to_filiation]
+    subject = "divine_paternity"
+    relation = "is_relatively_opposed_to"
+    object = "divine_filiation"
+    source_id str = "st_i_28_4"
+      ?rationale "ST I, q. 28, a. 4 pairs paternity with filiation as the opposed relations of generation."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[spiration_opposed_to_procession]
+    subject = "common_spiration"
+    relation = "is_relatively_opposed_to"
+    object = "personal_procession"
+    source_id str = "st_i_28_4"
+      ?rationale "ST I, q. 28, a. 4 pairs spiration with procession as the opposed relations of the procession of Love."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[god_simple]
+    subject = "god"
+    relation = "has_characteristic"
+    object = "divine_simplicity"
+    source_id str = "st_i_3_7"
+      ?rationale "ST I, q. 3, a. 7 excludes every composition in God; these distinctions do not divide him into parts."
+    causal_mode = "noncausal"
+    included_in_model = true
+
+  edges[god_one]
+    subject = "god"
+    relation = "has_characteristic"
+    object = "divine_unity"
+    source_id str = "st_i_11_3"
+      ?rationale "ST I, q. 11, a. 3 argues that there cannot be several gods."
+    causal_mode = "noncausal"
+    included_in_model = true

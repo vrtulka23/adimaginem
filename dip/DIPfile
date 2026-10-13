@@ -28,6 +28,12 @@ code[]
 code[]
   file = "acts_habits.dip"
 code[]
+  file = "passion_sources.dip"
+code[]
+  file = "passion_concepts.dip"
+code[]
+  file = "passion_edges.dip"
+code[]
   file = "passion_profiles.dip"
 code[]
   file = "theology_sources.dip"
@@ -35,6 +41,12 @@ code[]
   file = "theology_concepts.dip"
 code[]
   file = "theology_edges.dip"
+code[]
+  file = "trinity_sources.dip"
+code[]
+  file = "trinity_concepts.dip"
+code[]
+  file = "trinity_edges.dip"
 code[]
   file = "creation_sources.dip"
 code[]

@@ -463,3 +463,29 @@ graph_concept_styles[announcement_of_great_divine_matters] : graph_angels
 graph_concept_styles[angels_order] : graph_angels
 
 graph_concept_styles[angelic_announcement] : graph_angels
+
+graph_concept_styles[eternal_word] : graph_divine
+
+graph_concept_styles[subsistent_love] : graph_divine
+
+graph_concept_styles[divine_love] : graph_divine
+
+graph_concept_styles[eternal_generation] : graph_divine
+
+graph_concept_styles[procession_of_love] : graph_divine
+
+graph_concept_styles[divine_paternity] : graph_divine
+
+graph_concept_styles[divine_filiation] : graph_divine
+
+graph_concept_styles[common_spiration] : graph_divine
+
+graph_concept_styles[personal_procession] : graph_divine
+
+graph_concept_styles[divine_simplicity] : graph_divine
+
+graph_concept_styles[divine_unity] : graph_divine
+
+graph_concept_styles[common_divine_operation] : graph_divine
+
+graph_concept_styles[apprehended_evil] : graph_appetites

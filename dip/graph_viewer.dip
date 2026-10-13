@@ -1,6 +1,10 @@
 # Graph rendering defaults; the icon diameter also controls force-collision radius.
 graph_viewer map : graph_viewer_parameters
 graph_viewer[default]
+  study_focus_concept = "trinity"
+
+  study_focus_enabled = false
+
   icon_size float = 2.0
   icon_size_min float = 0.85
   icon_size_max float = 10.0
@@ -47,6 +51,14 @@ graph_viewer[default]
   selection_ring_dashes int = 8
 
   selection_ring_speed float = 0.55
+
+  selection_repulsion_enabled = true
+
+  selection_repulsion_radius = 7.0
+
+  selection_repulsion_strength = 0.35
+
+  selection_return_strength = 0.3
 
   label_height float = 0.45
 

@@ -5,8 +5,8 @@ ontology
     label = "Holy Trinity"
     domain = "theology"
     category = "doctrine"
-    note = "One God in three really distinct divine persons; the divine essence is not divided."
-    source_id = "ccc_253_254"
+    note = "The mystery of God's inner life: one undivided God in three really distinct persons, not three gods or parts of God. This mystery is known through divine revelation."
+    source_id = "ccc_234_255"
 
   concepts[divine_essence]
     latin_name = "essentia divina"

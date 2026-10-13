@@ -1,11 +1,5 @@
 # Formal distinctions for the eleven passions, not intensity or a causal rule.
 ontology
-  sources[st_i_ii_23_3]
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
-    locator str = "I-II, q. 23, a. 3, respondeo"
-    url str = "https://www.newadvent.org/summa/2023.htm"
-
   passion_profiles map : passion_profile
   passion_profiles[love_passion]
     concept_id = "love_passion"
@@ -14,8 +8,10 @@ ontology
     arduous = false
     phase = "initial_affinity"
     temporal_relation = "not_specified"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places love as the first response of concupiscible appetite to good."
+    object_description = "Good apprehended as suitable, whether absent or possessed."
+    attainability = "not_specified"
+    source_id str = "st_i_ii_26_1_2"
+      ?rationale "The cited passage supports this editorial profile: Good apprehended as suitable, whether absent or possessed."
 
   passion_profiles[hatred_passion]
     concept_id = "hatred_passion"
@@ -24,8 +20,10 @@ ontology
     arduous = false
     phase = "initial_affinity"
     temporal_relation = "not_specified"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places hatred as the first response of concupiscible appetite to evil."
+    object_description = "Evil apprehended as unsuitable, whether absent or present."
+    attainability = "not_specified"
+    source_id str = "st_i_ii_29_1"
+      ?rationale "The cited passage supports this editorial profile: Evil apprehended as unsuitable, whether absent or present."
 
   passion_profiles[desire_passion]
     concept_id = "desire_passion"
@@ -34,8 +32,10 @@ ontology
     arduous = false
     phase = "approach"
     temporal_relation = "not_yet_present"
+    object_description = "Apprehended good not yet possessed."
+    attainability = "not_specified"
     source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 distinguishes desire as movement toward an absent sensible good."
+      ?rationale "The cited passage supports this editorial profile: Apprehended good not yet possessed."
 
   passion_profiles[aversion_passion]
     concept_id = "aversion_passion"
@@ -44,8 +44,10 @@ ontology
     arduous = false
     phase = "withdrawal"
     temporal_relation = "not_yet_present"
+    object_description = "Apprehended evil not yet present."
+    attainability = "not_specified"
     source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 distinguishes aversion as movement away from an evil not yet present."
+      ?rationale "The cited passage supports this editorial profile: Apprehended evil not yet present."
 
   passion_profiles[joy_passion]
     concept_id = "joy_passion"
@@ -54,8 +56,10 @@ ontology
     arduous = false
     phase = "present_response"
     temporal_relation = "present"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places joy with good attained and the appetite's repose in it."
+    object_description = "Apprehended suitable good possessed or attained."
+    attainability = "not_specified"
+    source_id str = "st_i_ii_31_1_3"
+      ?rationale "The cited passage supports this editorial profile: Apprehended suitable good possessed or attained."
 
   passion_profiles[sorrow_passion]
     concept_id = "sorrow_passion"
@@ -64,8 +68,10 @@ ontology
     arduous = false
     phase = "present_response"
     temporal_relation = "present"
+    object_description = "Apprehended evil already encountered."
+    attainability = "not_specified"
     source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places sorrow with evil already present."
+      ?rationale "The cited passage supports this editorial profile: Apprehended evil already encountered."
 
   passion_profiles[hope_passion]
     concept_id = "hope_passion"
@@ -74,8 +80,10 @@ ontology
     arduous = true
     phase = "approach"
     temporal_relation = "not_yet_present"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places hope toward an arduous good not yet attained."
+    object_description = "Future arduous good apprehended as possible to obtain."
+    attainability = "possible"
+    source_id str = "st_i_ii_40_1"
+      ?rationale "The cited passage supports this editorial profile: Future arduous good apprehended as possible to obtain."
 
   passion_profiles[despair_passion]
     concept_id = "despair_passion"
@@ -84,8 +92,10 @@ ontology
     arduous = true
     phase = "withdrawal"
     temporal_relation = "not_yet_present"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places despair away from an arduous good not yet attained."
+    object_description = "Future arduous good apprehended as impossible to obtain."
+    attainability = "impossible"
+    source_id str = "st_i_ii_40_4"
+      ?rationale "The cited passage supports this editorial profile: Future arduous good apprehended as impossible to obtain."
 
   passion_profiles[fear_passion]
     concept_id = "fear_passion"
@@ -94,8 +104,10 @@ ontology
     arduous = true
     phase = "withdrawal"
     temporal_relation = "not_yet_present"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places fear away from an arduous evil not yet present."
+    object_description = "Future threatening evil apprehended as difficult to resist or avoid."
+    attainability = "not_specified"
+    source_id str = "st_i_ii_42_3"
+      ?rationale "The cited passage supports this editorial profile: Future threatening evil apprehended as difficult to resist or avoid."
 
   passion_profiles[daring_passion]
     concept_id = "daring_passion"
@@ -104,16 +116,20 @@ ontology
     arduous = true
     phase = "approach"
     temporal_relation = "not_yet_present"
-    source_id str = "st_i_ii_23_4"
-      ?rationale "ST I-II, q. 23, a. 4 places daring toward an arduous evil to be confronted."
+    object_description = "Threatening evil confronted in hope of victory over it."
+    attainability = "not_specified"
+    source_id str = "st_i_ii_45_1_2"
+      ?rationale "The cited passage supports this editorial profile: Threatening evil confronted in hope of victory over it."
 
   passion_profiles[anger_passion]
     concept_id = "anger_passion"
     appetite_id = "irascible_appetite"
-    object_aspect = "evil"
+    object_aspect = "good_and_evil"
     arduous = true
     phase = "attack"
-    temporal_relation = "present"
-    source_id str = "st_i_ii_23_3"
-      ?rationale "ST I-II, q. 23, a. 3 treats anger as attack against an arduous evil already present."
+    temporal_relation = "experienced_harm_and_future_redress"
+    object_description = "Experienced injury and its hurtful agent as evil; desired vengeance as an apparent just good still attainable."
+    attainability = "possible"
+    source_id str = "st_i_ii_46_1_2"
+      ?rationale "The cited passage supports this editorial profile: Experienced injury and its hurtful agent as evil; desired vengeance as an apparent just good still attainable."
 

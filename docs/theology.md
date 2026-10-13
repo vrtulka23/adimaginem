@@ -1,5 +1,7 @@
 # Theological ontology in DIPL
 
+See the dedicated [Holy Trinity](trinity.md) page for the expanded account of Word and Love, relations of origin, divine unity, and the focused graph view.
+
 The theological records in [`dip/theology_sources.dip`](../dip/theology_sources.dip), [`theology_concepts.dip`](../dip/theology_concepts.dip), and [`theology_edges.dip`](../dip/theology_edges.dip) extend the [human ontology](ontology.md). Specific effects and recipient distinctions are in [`sanctification_sources.dip`](../dip/sanctification_sources.dip), [`sanctification_concepts.dip`](../dip/sanctification_concepts.dip), and [`sanctification_edges.dip`](../dip/sanctification_edges.dip). They are a cited, provisional knowledge base for Christian anthropology. They are not numerical controls for divine action or a simulation of God.
 
 ## Authority and scope

@@ -24,3 +24,6 @@ rustc-ice-*.txt
 #.idea/
 
 __pycache__/*
+
+# Generated static ontology viewer
+/build/ontology-graph/

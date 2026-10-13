@@ -4,15 +4,22 @@ appetite_id str
   !options ["concupiscible_appetite", "irascible_appetite"]
   !labels ["Concupiscible appetite", "Irascible appetite"]
 object_aspect str
-  !options ["good", "evil"]
-  !labels ["Apprehended as good", "Apprehended as evil"]
+  !options ["good", "evil", "good_and_evil"]
+  !labels ["Apprehended as good", "Apprehended as evil", "Injury as evil and redress as apparent good"]
+object_description str
+  ?descr "The specifying aspect of the apprehended object; read with the cited rationale. This does not determine objective moral goodness."
+attainability str
+  !options ["not_specified", "possible", "impossible"]
+  !labels ["Not specified by this classification", "Good apprehended as attainable", "Good apprehended as unattainable"]
+  ?descr "Apprehended attainability of the sought good, including redress in anger. Not a probability or a claim about actual ability."
 arduous bool
+  ?descr "Whether arduousness specifies this passion; false does not mean the concrete situation has no difficulty."
 phase str
   !options ["initial_affinity", "approach", "withdrawal", "present_response", "attack"]
-  !labels ["Initial affinity or aversion", "Approach", "Withdrawal", "Response to a present object", "Attack on present harm"]
+  !labels ["Initial affinity or repugnance", "Approach", "Withdrawal", "Response to a present object", "Attack on present harm"]
 temporal_relation str
-  !options ["not_specified", "not_yet_present", "present"]
-  !labels ["Not specified", "Not yet present", "Present or attained"]
+  !options ["not_specified", "not_yet_present", "present", "experienced_harm_and_future_redress"]
+  !labels ["Not specified", "Not yet present", "Present or attained", "Experienced injury and future redress"]
 evidence_kind str = "editorial_classification"
   !options ["textual_paraphrase", "interpretive_inference", "editorial_classification"]
   !labels ["Textual paraphrase", "Interpretive inference", "Editorial classification"]

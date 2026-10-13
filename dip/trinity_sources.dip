@@ -1,0 +1,106 @@
+# Primary passages: Aquinas and the Catholic Catechism.
+ontology
+  sources[st_i_3_7]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 3, a. 7, respondeo"
+    url = "https://www.newadvent.org/summa/1003.htm"
+
+  sources[st_i_11_3]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 11, a. 3, respondeo"
+    url = "https://www.newadvent.org/summa/1011.htm"
+
+  sources[st_i_20_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 20, a. 1, respondeo and ad 1"
+    url = "https://www.newadvent.org/summa/1020.htm"
+
+  sources[st_i_27_1_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 27, aa. 1-4, respondeo"
+    url = "https://www.newadvent.org/summa/1027.htm"
+
+  sources[st_i_28_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 28, a. 4, respondeo"
+    url = "https://www.newadvent.org/summa/1028.htm"
+
+  sources[st_i_29_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 29, a. 4, respondeo"
+    url = "https://www.newadvent.org/summa/1029.htm"
+
+  sources[st_i_30_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 30, a. 2, respondeo and ad 1"
+    url = "https://www.newadvent.org/summa/1030.htm"
+
+  sources[st_i_32_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 32, a. 1, respondeo"
+    url = "https://www.newadvent.org/summa/1032.htm"
+
+  sources[st_i_34_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 34, a. 2, respondeo and ad 1-3"
+    url = "https://www.newadvent.org/summa/1034.htm"
+
+  sources[st_i_36_4]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 36, a. 4, respondeo and ad 1"
+    url = "https://www.newadvent.org/summa/1036.htm"
+
+  sources[st_i_37_1]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 37, a. 1, respondeo and ad 1-4"
+    url = "https://www.newadvent.org/summa/1037.htm"
+
+  sources[st_i_42_2]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 42, a. 2, respondeo"
+    url = "https://www.newadvent.org/summa/1042.htm"
+
+  sources[st_i_42_5]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 42, a. 5, respondeo and ad 2"
+    url = "https://www.newadvent.org/summa/1042.htm"
+
+  sources[st_i_45_6]
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 45, a. 6, respondeo and ad 2"
+    url = "https://www.newadvent.org/summa/1045.htm"
+
+  sources[ccc_234_255]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 234-255 (especially 234, 236-237, 253-255)"
+    url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"
+
+  sources[ccc_255]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraph 255"
+    url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"
+
+  sources[ccc_258]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraph 258"
+    url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"

@@ -56,6 +56,8 @@ pub struct PassionProfile {
     pub concept_id: String,
     pub appetite_id: String,
     pub object_aspect: String,
+    pub object_description: String,
+    pub attainability: String,
     pub arduous: bool,
     pub phase: String,
     pub temporal_relation: String,

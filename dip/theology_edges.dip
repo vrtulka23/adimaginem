@@ -635,6 +635,7 @@ ontology
     object str = "son"
     source_id str = "ccc_246"
       ?rationale "Catechism §246 names the Father as the one who eternally begets the Son; this is a relation of origin, not a temporal act."
+    causal_mode = "noncausal"
     included_in_model bool = true
 
   edges[holy_spirit_proceeds_from_father]
@@ -643,7 +644,10 @@ ontology
     object str = "father"
     source_id str = "ccc_246"
       ?rationale "Catechism §246 teaches that the Holy Spirit proceeds eternally from the Father and the Son as from one principle."
+    causal_mode = "noncausal"
     included_in_model bool = true
+    conditions = "Read both origin edges together: Father and Son are one principle of the Spirit."
+    condition_source_id = "st_i_36_4"
 
   edges[holy_spirit_proceeds_from_son]
     subject str = "holy_spirit"
@@ -651,7 +655,10 @@ ontology
     object str = "son"
     source_id str = "ccc_246"
       ?rationale "Catechism §246 teaches that the Holy Spirit proceeds eternally from the Father and the Son as from one principle, not as two independent causes."
+    causal_mode = "noncausal"
     included_in_model bool = true
+    conditions = "Read both origin edges together: Father and Son are one principle of the Spirit."
+    condition_source_id = "st_i_36_4"
 
   edges[prudence_perfects_intellect]
     subject str = "prudence_virtue"

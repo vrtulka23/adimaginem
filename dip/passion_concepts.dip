@@ -1,0 +1,97 @@
+# Eleven passion types with stable IDs; objects are aspects, not additional substances.
+ontology
+  concepts[love_passion]
+    latin_name = "amor"
+    label = "Love as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Sensitive appetite's initial affinity for an apprehended suitable good. This passion is distinct from intellectual love and from charity as a theological virtue."
+    source_id = "st_i_ii_26_1_2"
+
+  concepts[hatred_passion]
+    latin_name = "odium"
+    label = "Hatred as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Sensitive repugnance toward apprehended evil or unsuitability. It does not require an actual loss or a personal wrongdoer."
+    source_id = "st_i_ii_29_1"
+
+  concepts[desire_passion]
+    latin_name = "desiderium"
+    label = "Desire as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Concupiscible movement toward an apprehended good not yet possessed."
+    source_id = "st_i_ii_23_4"
+
+  concepts[aversion_passion]
+    latin_name = "fuga"
+    label = "Aversion as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Concupiscible movement away from an apprehended evil not yet present."
+    source_id = "st_i_ii_23_4"
+
+  concepts[joy_passion]
+    latin_name = "delectatio"
+    label = "Delight / joy as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Sensitive delight in an apprehended suitable good attained. Delectatio is broader than gaudium, which follows reason; this node retains the broad sensitive passion slot, not every intellectual joy or the fruit of the Spirit."
+    source_id = "st_i_ii_31_1_3"
+
+  concepts[sorrow_passion]
+    latin_name = "tristitia"
+    label = "Sorrow as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Concupiscible response to an apprehended evil already present, including a suffered loss of good."
+    source_id = "st_i_ii_23_4"
+
+  concepts[hope_passion]
+    latin_name = "spes"
+    label = "Hope as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Irascible movement toward a future arduous good apprehended as attainable. This sensitive passion is distinct from the theological virtue of hope."
+    source_id = "st_i_ii_40_1"
+
+  concepts[despair_passion]
+    latin_name = "desperatio"
+    label = "Despair as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Irascible withdrawal from a future arduous good apprehended as unattainable. The good remains the object; this passion alone does not specify a sin against theological hope."
+    source_id = "st_i_ii_40_4"
+
+  concepts[fear_passion]
+    latin_name = "timor"
+    label = "Fear as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Irascible recoil from an apprehended future evil difficult to resist or avoid. Anticipated loss of a loved good is one instance."
+    source_id = "st_i_ii_42_3"
+
+  concepts[daring_passion]
+    latin_name = "audacia"
+    label = "Daring as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Irascible confrontation of threatening evil through hope of overcoming it. Daring as passion is not identical with fortitude as virtue."
+    source_id = "st_i_ii_45_1_2"
+
+  concepts[anger_passion]
+    latin_name = "ira"
+    label = "Anger as passion"
+    domain = "anthropology"
+    category = "passion"
+    note = "Irascible response to suffered injury, involving desire and hope for vengeance apprehended as just. It concerns both the hurtful agent as evil and redress as an apparent good; the appraisal need not be truly just."
+    source_id = "st_i_ii_46_1_2"
+
+  concepts[apprehended_evil]
+    latin_name = "malum apprehensum"
+    label = "Apprehended evil"
+    domain = "anthropology"
+    category = "formal_object"
+    note = "What is apprehended as harmful or unsuitable to a loved good. This describes an object under an apprehended aspect, not an evil substance or necessarily moral evil."
+    source_id = "st_i_ii_29_1"

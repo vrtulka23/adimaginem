@@ -52,7 +52,7 @@ ontology
   relations[has_one_divine_essence]
     label = "Has one divine essence"
     kind = "theological"
-    description = "The one Trinity is the one undivided divine essence."
+    description = "The Trinity and each divine person are the one undivided essence; this is neither possession of a part nor membership in a species."
     prose_template = "{subject} has one undivided divine essence: {object}."
 
   relations[has_part]
@@ -225,7 +225,7 @@ ontology
     label = "Begets"
     kind = "theological"
     description = "The Father eternally begets the Son, a relation of origin within the one divine essence."
-    prose_template = "{subject} begets {object}."
+    prose_template = "{subject} eternally begets {object}."
 
   relations[bestows]
     explanation_role = "effect"
@@ -586,3 +586,64 @@ ontology
     kind = "power_and_act"
     description = "Capacity to limit an agent's activity under the cited providential or ministerial account."
     prose_template = "{subject} can restrain {object}."
+
+  relations[is_personal_name_of]
+    label = "Is a personal name of"
+    kind = "theological"
+    description = "Names the specified divine person under the cited personal signification; does not introduce another person."
+    prose_template = "{subject} is a personal name of {object}."
+
+  relations[is_personally_distinct_from]
+    label = "Is personally distinct from"
+    kind = "theological"
+    description = "Distinction of divine persons by relations of origin, with no division of the one essence. This predicate is symmetric in meaning."
+    prose_template = "{subject} is personally distinct from {object}."
+
+  relations[is_coeternal_with]
+    label = "Is coeternal with"
+    kind = "theological"
+    description = "Neither divine person begins later than the other. This predicate is symmetric and gives no temporal ordering."
+    prose_template = "{subject} is coeternal with {object}."
+
+  relations[mutually_indwells]
+    label = "Mutually indwells"
+    kind = "theological"
+    description = "Divine persons are in one another without spatial containment or separation of essence. A single edge expresses the mutual claim."
+    prose_template = "{subject} and {object} mutually indwell."
+
+  relations[subsists_as_relation]
+    label = "Subsists as relation"
+    kind = "theological"
+    description = "The divine person is the subsisting personal relation, not a subject bearing an added accident."
+    prose_template = "{subject} subsists as {object}."
+
+  relations[proceeds_by]
+    label = "Proceeds by"
+    kind = "theological"
+    description = "Names the mode of eternal personal origin; it does not describe a time step, creation, or a change in God."
+    prose_template = "{subject} proceeds by {object}."
+
+  relations[is_common_to_person]
+    label = "Is common to person"
+    kind = "theological"
+    description = "The cited divine act or relation belongs to this person in common with another or the others; it is not multiplied by its bearers."
+    prose_template = "{subject} belongs to {object} in common."
+
+  relations[is_relatively_opposed_to]
+    label = "Is relatively opposed to"
+    kind = "theological"
+    description = "Opposition of relations of origin in God, without contrariety of natures or conflict of wills. Symmetric in meaning."
+    prose_template = "{subject} is relatively opposed to {object}."
+
+  relations[precedes_in_generation]
+    label = "Precedes in generation"
+    kind = "appetite_and_passion"
+    description = "Natural ordering of passions in generation or execution, under the cited aspect; distinct from the order of intention and from a timed or inevitable transition."
+    prose_template = "{subject} precedes {object} in the order of generation."
+
+  relations[can_give_rise_to]
+    label = "Can give rise to"
+    kind = "appetite_and_passion"
+    description = "A cited conditional dependence or development between passions. Read the edge conditions and causal mode; the subject need not be a sufficient cause, nor does it cause an external event."
+    prose_template = "{subject} can give rise to {object}."
+    explanation_role = "effect"

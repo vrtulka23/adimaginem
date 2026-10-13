@@ -1,0 +1,462 @@
+# Membership, qualified objects, contrariety, order, and conditional influence.
+# Ordering and influence are distinct predicates; these are cited claims, not simulation rules.
+ontology
+  edges[love_of_concupiscible]
+    subject str = "love_passion"
+    relation str = "is_passion_of"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places love in the concupiscible appetite as inclination toward apprehended good."
+    included_in_model bool = true
+
+  edges[hatred_of_concupiscible]
+    subject str = "hatred_passion"
+    relation str = "is_passion_of"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places hatred in the concupiscible appetite as the counterpart of love concerning evil."
+    included_in_model bool = true
+
+  edges[desire_of_concupiscible]
+    subject str = "desire_passion"
+    relation str = "is_passion_of"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places desire in the concupiscible appetite as movement toward an absent good."
+    included_in_model bool = true
+
+  edges[aversion_of_concupiscible]
+    subject str = "aversion_passion"
+    relation str = "is_passion_of"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places aversion in the concupiscible appetite as movement away from evil."
+    included_in_model bool = true
+
+  edges[joy_of_concupiscible]
+    subject str = "joy_passion"
+    relation str = "is_passion_of"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places joy in the concupiscible appetite when a good is attained."
+    included_in_model bool = true
+
+  edges[sorrow_of_concupiscible]
+    subject str = "sorrow_passion"
+    relation str = "is_passion_of"
+    object str = "concupiscible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places sorrow in the concupiscible appetite in response to present evil."
+    included_in_model bool = true
+
+  edges[hope_of_irascible]
+    subject str = "hope_passion"
+    relation str = "is_passion_of"
+    object str = "irascible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places hope in the irascible appetite with respect to a difficult future good."
+    included_in_model bool = true
+
+  edges[despair_of_irascible]
+    subject str = "despair_passion"
+    relation str = "is_passion_of"
+    object str = "irascible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places despair in the irascible appetite with respect to a difficult good judged unattainable."
+    included_in_model bool = true
+
+  edges[fear_of_irascible]
+    subject str = "fear_passion"
+    relation str = "is_passion_of"
+    object str = "irascible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places fear in the irascible appetite with respect to a future evil."
+    included_in_model bool = true
+
+  edges[daring_of_irascible]
+    subject str = "daring_passion"
+    relation str = "is_passion_of"
+    object str = "irascible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places daring in the irascible appetite as a response to a future evil."
+    included_in_model bool = true
+
+  edges[anger_of_irascible]
+    subject str = "anger_passion"
+    relation str = "is_passion_of"
+    object str = "irascible_appetite"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "ST I-II, q. 23, a. 4 places anger in the irascible appetite in response to present evil."
+    included_in_model bool = true
+
+  edges[love_formal_object]
+    subject = "love_passion"
+    relation = "has_formal_object"
+    object = "apprehended_good"
+    source_id str = "st_i_ii_26_1_2"
+      ?rationale "Good apprehended as suitable, whether absent or possessed."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Good apprehended as suitable, whether absent or possessed."
+    condition_source_id = "st_i_ii_26_1_2"
+
+  edges[hatred_formal_object]
+    subject = "hatred_passion"
+    relation = "has_formal_object"
+    object = "apprehended_evil"
+    source_id str = "st_i_ii_29_1"
+      ?rationale "Evil apprehended as unsuitable, whether absent or present."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Evil apprehended as unsuitable, whether absent or present."
+    condition_source_id = "st_i_ii_29_1"
+
+  edges[desire_formal_object]
+    subject = "desire_passion"
+    relation = "has_formal_object"
+    object = "apprehended_good"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "Apprehended good not yet possessed."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Apprehended good not yet possessed."
+    condition_source_id = "st_i_ii_23_4"
+
+  edges[aversion_formal_object]
+    subject = "aversion_passion"
+    relation = "has_formal_object"
+    object = "apprehended_evil"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "Apprehended evil not yet present."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Apprehended evil not yet present."
+    condition_source_id = "st_i_ii_23_4"
+
+  edges[joy_formal_object]
+    subject = "joy_passion"
+    relation = "has_formal_object"
+    object = "apprehended_good"
+    source_id str = "st_i_ii_31_1_3"
+      ?rationale "Apprehended suitable good possessed or attained."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Apprehended suitable good possessed or attained."
+    condition_source_id = "st_i_ii_31_1_3"
+
+  edges[sorrow_formal_object]
+    subject = "sorrow_passion"
+    relation = "has_formal_object"
+    object = "apprehended_evil"
+    source_id str = "st_i_ii_23_4"
+      ?rationale "Apprehended evil already encountered."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Apprehended evil already encountered."
+    condition_source_id = "st_i_ii_23_4"
+
+  edges[hope_formal_object]
+    subject = "hope_passion"
+    relation = "has_formal_object"
+    object = "apprehended_good"
+    source_id str = "st_i_ii_40_1"
+      ?rationale "Future arduous good apprehended as possible to obtain."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Future arduous good apprehended as possible to obtain."
+    condition_source_id = "st_i_ii_40_1"
+
+  edges[despair_formal_object]
+    subject = "despair_passion"
+    relation = "has_formal_object"
+    object = "apprehended_good"
+    source_id str = "st_i_ii_40_4"
+      ?rationale "Future arduous good apprehended as impossible to obtain."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Future arduous good apprehended as impossible to obtain."
+    condition_source_id = "st_i_ii_40_4"
+
+  edges[fear_formal_object]
+    subject = "fear_passion"
+    relation = "has_formal_object"
+    object = "apprehended_evil"
+    source_id str = "st_i_ii_42_3"
+      ?rationale "Future threatening evil apprehended as difficult to resist or avoid."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Future threatening evil apprehended as difficult to resist or avoid."
+    condition_source_id = "st_i_ii_42_3"
+
+  edges[daring_formal_object]
+    subject = "daring_passion"
+    relation = "has_formal_object"
+    object = "apprehended_evil"
+    source_id str = "st_i_ii_45_1_2"
+      ?rationale "Threatening evil confronted in hope of victory over it."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "In sensitive appetite, under this specifying aspect: Threatening evil confronted in hope of victory over it."
+    condition_source_id = "st_i_ii_45_1_2"
+
+  edges[anger_harmful_object]
+    subject = "anger_passion"
+    relation = "has_formal_object"
+    object = "apprehended_evil"
+    source_id str = "st_i_ii_46_1_2"
+      ?rationale "Anger regards the hurtful agent under the aspect of evil."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "This is one aspect of anger's complex object; vengeance is sought under an apparent good."
+    condition_source_id = "st_i_ii_46_1_2"
+
+  edges[anger_redress_object]
+    subject = "anger_passion"
+    relation = "has_formal_object"
+    object = "apprehended_good"
+    source_id str = "st_i_ii_46_1_2"
+      ?rationale "Anger seeks vengeance under an apprehended aspect of justice."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Redress is desired and hoped for after injury; its apparent justice does not establish that retaliation is morally just."
+    condition_source_id = "st_i_ii_46_1_2"
+
+  edges[love_opposed_to_hatred]
+    subject = "love_passion"
+    relation = "is_opposed_to"
+    object = "hatred_passion"
+    source_id str = "st_i_ii_23_2"
+      ?rationale "The cited passage distinguishes these passions as contraries in the stated respect."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Contrary responses to good and evil considered simply, in the same respect."
+    condition_source_id = "st_i_ii_23_2"
+
+  edges[desire_opposed_to_aversion]
+    subject = "desire_passion"
+    relation = "is_opposed_to"
+    object = "aversion_passion"
+    source_id str = "st_i_ii_23_2"
+      ?rationale "The cited passage distinguishes these passions as contraries in the stated respect."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Pursuit of absent good and withdrawal from impending evil, under contrary object aspects."
+    condition_source_id = "st_i_ii_23_2"
+
+  edges[joy_opposed_to_sorrow]
+    subject = "joy_passion"
+    relation = "is_opposed_to"
+    object = "sorrow_passion"
+    source_id str = "st_i_ii_23_2"
+      ?rationale "The cited passage distinguishes these passions as contraries in the stated respect."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Rest in attained good and response to present evil, under contrary object aspects."
+    condition_source_id = "st_i_ii_23_2"
+
+  edges[hope_opposed_to_despair]
+    subject = "hope_passion"
+    relation = "is_opposed_to"
+    object = "despair_passion"
+    source_id str = "st_i_ii_40_4"
+      ?rationale "The cited passage distinguishes these passions as contraries in the stated respect."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Approach and withdrawal concern an arduous good, apprehended respectively as attainable or unattainable."
+    condition_source_id = "st_i_ii_40_4"
+
+  edges[fear_opposed_to_daring]
+    subject = "fear_passion"
+    relation = "is_opposed_to"
+    object = "daring_passion"
+    source_id str = "st_i_ii_45_1_2"
+      ?rationale "The cited passage distinguishes these passions as contraries in the stated respect."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Withdrawal and confrontation concern threatening evil, with different appraisals of overcoming it."
+    condition_source_id = "st_i_ii_45_1_2"
+
+  edges[hope_opposed_to_fear]
+    subject = "hope_passion"
+    relation = "is_opposed_to"
+    object = "fear_passion"
+    source_id str = "st_i_ii_40_4"
+      ?rationale "The cited passage distinguishes these passions as contraries in the stated respect."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Opposition by good and evil as objects, as specified in ad 1; distinct from the approach/withdrawal opposition of hope and despair."
+    condition_source_id = "st_i_ii_40_4"
+
+  edges[love_precedes_desire]
+    subject = "love_passion"
+    relation = "precedes_in_generation"
+    object = "desire_passion"
+    source_id str = "st_i_ii_25_2"
+      ?rationale "Aquinas distinguishes this ordering of the passions from the order of intention."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Order of generation or execution toward the same loved good; this does not assert a timed transition."
+    condition_source_id = "st_i_ii_25_2"
+
+  edges[desire_precedes_joy]
+    subject = "desire_passion"
+    relation = "precedes_in_generation"
+    object = "joy_passion"
+    source_id str = "st_i_ii_25_2"
+      ?rationale "Aquinas distinguishes this ordering of the passions from the order of intention."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Order of execution when the desired good is attained; enjoyment is first as intended end."
+    condition_source_id = "st_i_ii_25_2"
+
+  edges[desire_precedes_hope]
+    subject = "desire_passion"
+    relation = "precedes_in_generation"
+    object = "hope_passion"
+    source_id str = "st_i_ii_25_1"
+      ?rationale "Aquinas distinguishes this ordering of the passions from the order of intention."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Hope adds the aspect of arduous pursuit to desire for good."
+    condition_source_id = "st_i_ii_25_1"
+
+  edges[aversion_precedes_fear]
+    subject = "aversion_passion"
+    relation = "precedes_in_generation"
+    object = "fear_passion"
+    source_id str = "st_i_ii_25_1"
+      ?rationale "Aquinas distinguishes this ordering of the passions from the order of intention."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "Fear adds difficulty in avoiding the threatening evil to aversion."
+    condition_source_id = "st_i_ii_25_1"
+
+  edges[love_can_give_rise_to_hatred]
+    subject = "love_passion"
+    relation = "can_give_rise_to"
+    object = "hatred_passion"
+    source_id str = "st_i_ii_29_2"
+      ?rationale "Hatred depends on love of the good to which the hated object is contrary."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The loved good and the hated contrary are different objects or aspects; love does not turn into hatred of that same good."
+    condition_source_id = "st_i_ii_29_2"
+
+  edges[love_can_give_rise_to_fear]
+    subject = "love_passion"
+    relation = "can_give_rise_to"
+    object = "fear_passion"
+    source_id str = "st_i_ii_43_1"
+      ?rationale "Love is a cause of fear by way of material disposition."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    conditions = "An evil threatening a loved good is apprehended as approaching and difficult to avoid; love is not the efficient cause of that external threat."
+    condition_source_id = "st_i_ii_43_1"
+
+  edges[love_can_give_rise_to_desire]
+    subject = "love_passion"
+    relation = "can_give_rise_to"
+    object = "desire_passion"
+    source_id str = "st_i_ii_25_2"
+      ?rationale "Love of an unpossessed good gives rise to desire for it."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The loved good is not yet possessed."
+    condition_source_id = "st_i_ii_25_2"
+
+  edges[love_can_give_rise_to_joy]
+    subject = "love_passion"
+    relation = "can_give_rise_to"
+    object = "joy_passion"
+    source_id str = "st_i_ii_25_2"
+      ?rationale "Love of a possessed good gives rise to delight in it."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The suitable loved good is apprehended as possessed."
+    condition_source_id = "st_i_ii_25_2"
+
+  edges[hope_can_give_rise_to_daring]
+    subject = "hope_passion"
+    relation = "can_give_rise_to"
+    object = "daring_passion"
+    source_id str = "st_i_ii_45_1_2"
+      ?rationale "Hope of victory gives rise to confrontation of threatening evil."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The hoped-for good is victory over the danger confronted; this does not equate daring with virtue."
+    condition_source_id = "st_i_ii_45_1_2"
+
+  edges[fear_can_give_rise_to_sorrow]
+    subject = "fear_passion"
+    relation = "can_give_rise_to"
+    object = "sorrow_passion"
+    source_id str = "st_i_ii_25_1"
+      ?rationale "Sorrow follows when the feared evil is encountered."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The evil previously feared becomes present; the fear itself does not cause the external harm."
+    condition_source_id = "st_i_ii_25_1"
+
+  edges[sorrow_can_give_rise_to_anger]
+    subject = "sorrow_passion"
+    relation = "can_give_rise_to"
+    object = "anger_passion"
+    source_id str = "st_i_ii_46_1_2"
+      ?rationale "Anger arises with pain from injury and desire and hope of vengeance."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The experienced harm is apprehended as an injury for which redress is desired and hoped possible; sorrow alone is insufficient."
+    condition_source_id = "st_i_ii_46_1_2"
+
+  edges[hope_can_give_rise_to_anger]
+    subject = "hope_passion"
+    relation = "can_give_rise_to"
+    object = "anger_passion"
+    source_id str = "st_i_ii_46_1_2"
+      ?rationale "Hope of vengeance is among the antecedents of anger."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "The hoped-for good is vengeance after injury, not any hoped-for good whatsoever."
+    condition_source_id = "st_i_ii_46_1_2"
+
+  edges[anger_can_give_rise_to_hatred]
+    subject = "anger_passion"
+    relation = "can_give_rise_to"
+    object = "hatred_passion"
+    source_id str = "st_i_ii_46_3"
+      ?rationale "Aquinas distinguishes anger's causing hatred from its becoming the same passion."
+    included_in_model = true
+    affected_aspect = "act"
+    causal_mode = "unspecified"
+    conditions = "Anger persists over time; this is a possible causal development, not identity of the two passions."
+    condition_source_id = "st_i_ii_46_3"
