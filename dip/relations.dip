@@ -5,458 +5,584 @@ ontology
     label = "Actualizes"
     kind = "metaphysical"
     description = "A form or act brings a relevant potency into act."
+    prose_template = "{subject} actualizes {object}."
 
   relations[confers_character]
     label = "Confers character"
     kind = "theological"
     description = "A sacrament confers an enduring sacramental character."
+    prose_template = "{subject} confers {object}."
 
   relations[creates]
     label = "Creates"
     kind = "creation"
     description = "God gives being without pre-existing material; the object is a creature class, not a dated event."
+    prose_template = "{subject} creates {object}."
 
   relations[denotes_same_god_as]
     label = "Denotes the same God as"
     kind = "identity"
     description = "Two concept IDs refer to the one God; this introduces no further divine being."
+    prose_template = "{subject} denotes the same god as {object}."
 
   relations[distinct_in_essence_from]
     label = "Distinct in essence from"
     kind = "metaphysical"
     description = "Subject and object differ in what they are, under the cited distinction."
+    prose_template = "{subject} is distinct in essence from {object}."
 
   relations[follows_apprehension]
     label = "Follows apprehension"
     kind = "appetite_and_passion"
     description = "An appetitive response follows presentation of an object."
+    prose_template = "{subject} follows apprehension of {object}."
 
   relations[has_corporeal_dimension]
     label = "Has corporeal dimension"
     kind = "composition"
     description = "A human person includes a body in the one human composite."
+    prose_template = "{subject} has {object} as its corporeal dimension."
 
   relations[has_formal_object]
     label = "Has formal object"
     kind = "appetite_and_passion"
     description = "A power or inclination is specified by its object under a relevant aspect."
+    prose_template = "{subject} has {object} as its formal object."
 
   relations[has_one_divine_essence]
     label = "Has one divine essence"
     kind = "theological"
     description = "The one Trinity is the one undivided divine essence."
+    prose_template = "{subject} has one undivided divine essence: {object}."
 
   relations[has_part]
     label = "Has part"
     kind = "composition"
     description = "An item has a proper part according to the cited account."
+    prose_template = "{subject} has {object} as a part."
 
   relations[has_power_genus]
     label = "Has power genus"
     kind = "power_and_act"
     description = "A soul has a genus of operative powers."
+    prose_template = "{subject} has {object} as a genus of powers."
 
   relations[has_substantial_form]
     label = "Has substantial form"
     kind = "composition"
     description = "The composite has the substantial form that makes it one substance."
+    prose_template = "{subject} has {object} as its substantial form."
 
   relations[inheres_in_subject]
     label = "Inheres in subject"
     kind = "metaphysical"
     description = "A habit or quality has the indicated subject."
+    prose_template = "{subject} inheres in {object}."
 
   relations[instrumentally_causes_grace]
+    explanation_role = "effect"
     label = "Instrumentally causes grace"
     kind = "theological"
     description = "A sacrament causes grace instrumentally, with God as principal cause."
+    prose_template = "{subject} causes {object} instrumentally."
 
   relations[is_act_of]
     label = "Is an act of"
     kind = "power_and_act"
     description = "An operation belongs to the indicated power."
+    prose_template = "{subject} is an act of {object}."
 
   relations[is_fallen_condition_of]
     label = "Is a fallen condition of"
     kind = "condition"
     description = "The subject is an angel in a fallen condition, not another created nature."
+    prose_template = "{subject} is a fallen condition of {object}."
 
   relations[is_in_potency_to]
     label = "Is in potency to"
     kind = "metaphysical"
     description = "The subject is capable of the indicated act or form."
+    prose_template = "{subject} is in potency to {object}."
 
   relations[is_kind_of]
     label = "Is a kind of"
     kind = "classification"
     description = "The subject is classified under the broader object concept."
+    prose_template = "{subject} is a kind of {object}."
 
   relations[is_passion_of]
     label = "Is a passion of"
     kind = "appetite_and_passion"
     description = "A named passion belongs to the indicated sensitive appetite."
+    prose_template = "{subject} is a passion of {object}."
 
   relations[is_person_of]
     label = "Is a person of"
     kind = "theological"
     description = "A divine person is a person of the Trinity, without partition of essence."
+    prose_template = "{subject} is a person of {object}."
 
   relations[is_pure_act]
     label = "Is pure act"
     kind = "metaphysical"
     description = "God has no passive potency, in Aquinas's account."
+    prose_template = "{subject} is {object}."
 
   relations[is_realized_in]
     label = "Is realized in"
     kind = "metaphysical"
     description = "The subject is realized in the indicated bearer or composite."
+    prose_template = "{subject} is realized in {object}."
 
   relations[is_sacrament_of_group]
     label = "Is a sacrament in group"
     kind = "classification"
     description = "A sacrament belongs to a Catechism pastoral grouping."
+    prose_template = "{subject} belongs to the sacramental grouping {object}."
 
   relations[lacks_corporeality]
     label = "Lacks corporeality"
     kind = "condition"
     description = "The subject has no material body by nature."
+    prose_template = "{subject} lacks {object} by nature."
 
   relations[natural_principle_of]
     label = "Is a natural principle of"
     kind = "power_and_act"
     description = "The subject is a natural source of the indicated power or operation."
+    prose_template = "{subject} is a natural principle of {object}."
 
   relations[operates_through_organ]
     label = "Operates through a bodily organ"
     kind = "power_and_act"
     description = "The indicated power uses a bodily organ in its operation."
+    prose_template = "{subject} operates through {object}."
 
   relations[perfects]
+    explanation_role = "effect"
     label = "Perfects"
     kind = "theological"
     description = "A grace, gift, or habit perfects its indicated subject."
+    prose_template = "{subject} perfects {object}."
 
   relations[principle_of_becoming]
     label = "Is a principle of becoming"
     kind = "metaphysical"
     description = "The subject contributes as a principle of natural change."
+    prose_template = "{subject} is a principle of becoming for {object}."
 
   relations[renders_intelligible]
     label = "Renders intelligible"
     kind = "power_and_act"
     description = "The agent intellect makes a phantasm intelligible in act."
+    prose_template = "{subject} renders {object} intelligible."
 
   relations[is_abstracted_from]
     label = "Is abstracted from"
     kind = "power_and_act"
     description = "An intelligible species is abstracted from a phantasm by the agent intellect."
+    prose_template = "{subject} is abstracted from {object}."
 
   relations[receives]
     label = "Receives"
     kind = "power_and_act"
     description = "A receptive cognitive power receives a form by which it understands."
+    prose_template = "{subject} receives {object}."
 
   relations[turns_to]
     label = "Turns to"
     kind = "power_and_act"
     description = "In embodied human knowing, actual understanding turns to phantasms."
+    prose_template = "{subject} turns to {object}."
 
   relations[is_retained_by]
     label = "Is retained by"
     kind = "power_and_act"
     description = "A sensible likeness is retained by the imaginative power."
+    prose_template = "{subject} is retained by {object}."
 
   relations[moves_as_to_object]
+    explanation_role = "effect"
     label = "Moves as to object"
     kind = "appetite_and_passion"
     description = "Intellect moves will by presenting and specifying its apprehended object."
+    prose_template = "{subject} moves {object} by specifying its object."
 
   relations[moves_as_to_exercise]
+    explanation_role = "effect"
     label = "Moves as to exercise"
     kind = "appetite_and_passion"
     description = "Will moves a power regarding whether it exercises its act."
+    prose_template = "{subject} moves {object} regarding the exercise of its act."
 
   relations[precedes_in_practical_order]
     label = "Precedes in practical order"
     kind = "power_and_act"
     description = "One practical act is ordered before another in deliberation and choice."
+    prose_template = "{subject} precedes {object} in the practical order."
 
   relations[begets]
     label = "Begets"
     kind = "theological"
     description = "The Father eternally begets the Son, a relation of origin within the one divine essence."
+    prose_template = "{subject} begets {object}."
 
   relations[bestows]
+    explanation_role = "effect"
     label = "Bestows"
     kind = "theological"
     description = "A divine person freely gives a supernatural gift; the predicate expresses dependence on divine generosity, not a measured transfer."
+    prose_template = "{subject} bestows {object}."
 
   relations[infuses]
+    explanation_role = "effect"
     label = "Infuses"
     kind = "theological"
     description = "God infuses a supernatural virtue into the faithful."
+    prose_template = "{subject} infuses {object}."
 
   relations[is_ordered_to]
     label = "Is ordered to"
     kind = "theological"
     description = "A theological virtue is directed to God as its origin, motive, and object."
+    prose_template = "{subject} is ordered to {object}."
 
   relations[is_proper_to]
     label = "Is proper to"
     kind = "theological"
     description = "Sacramental grace is proper to each sacrament, with sacrament-specific effects to be established separately."
+    prose_template = "{subject} is proper to {object}."
 
   relations[is_instituted_by]
     label = "Is instituted by"
     kind = "theological"
     description = "The sacraments of the New Law are instituted by Christ."
+    prose_template = "{subject} is instituted by {object}."
 
   relations[proceeds_from]
     label = "Proceeds from"
     kind = "theological"
     description = "The Holy Spirit proceeds eternally from the Father and the Son as from one principle."
+    prose_template = "{subject} proceeds from {object}."
 
   relations[is_formed_by]
     label = "Is formed by"
     kind = "theological"
     description = "A fruit of the Spirit is formed in the faithful through the Holy Spirit."
+    prose_template = "{subject} is formed by {object}."
 
   relations[is_exemplar_cause_of]
     label = "Is exemplar cause of"
     kind = "metaphysical"
     description = "The exemplar cause is the intelligible pattern according to which a thing is made."
+    prose_template = "{subject} is an exemplar cause of {object}."
 
   relations[is_final_cause_of]
     label = "Is final cause of"
     kind = "metaphysical"
     description = "The final cause is that for the sake of which an effect or action is ordered."
+    prose_template = "{subject} is a final cause of {object}."
 
   relations[principally_causes_grace]
+    explanation_role = "effect"
     label = "Principally causes grace"
     kind = "theological"
     description = "God causes grace as principal agent; distinguish sacramental instrumentality."
+    prose_template = "{subject} causes {object} as principal agent."
 
   relations[instrumentally_effects]
+    explanation_role = "effect"
     label = "Instrumentally effects"
     kind = "theological"
     description = "A sacrament brings about the specified effect through divine agency, subject to the cited conditions."
+    prose_template = "{subject} instrumentally effects {object}."
 
   relations[strengthens]
+    explanation_role = "effect"
     label = "Strengthens"
     kind = "theological"
     description = "Confers strength in the specified spiritual respect; no numerical magnitude is implied."
+    prose_template = "{subject} strengthens {object}."
 
   relations[nourishes]
+    explanation_role = "effect"
     label = "Nourishes"
     kind = "theological"
     description = "Sustains and perfects spiritual life in the cited sacramental sense."
+    prose_template = "{subject} nourishes {object}."
 
   relations[remedies]
+    explanation_role = "effect"
     label = "Remedies"
     kind = "theological"
     description = "Is a remedy for the stated disorder or residual disposition; the extent is governed by the cited account."
+    prose_template = "{subject} remedies {object}."
 
   relations[enables]
+    explanation_role = "effect"
     label = "Enables"
     kind = "theological"
     description = "Provides the help or capacity for an operation without asserting that the operation occurs in every instance."
+    prose_template = "{subject} enables {object}."
 
   relations[grounds_connatural_judgment]
     label = "Grounds connatural judgment of"
     kind = "theological"
     description = "Charity supplies affinity with divine things through which the gift of wisdom judges."
+    prose_template = "{subject} grounds the connatural judgment of {object}."
 
   relations[increases]
+    explanation_role = "effect"
     label = "Increases"
     kind = "theological"
     description = "Perfects an existing habit in the qualitative sense stated by the source."
+    prose_template = "{subject} increases {object}."
 
   relations[arouses]
+    explanation_role = "effect"
     label = "Arouses"
     kind = "theological"
     description = "Brings a habit into exercise under the stated conditions."
+    prose_template = "{subject} arouses {object}."
 
   relations[has_power]
     label = "Has power"
     kind = "power_and_act"
     description = "A subject possesses an operative faculty; this does not identify the faculty with its essence."
+    prose_template = "{subject} has {object} as an operative power."
 
   relations[is_blessed_condition_of]
     label = "Is a blessed condition of"
     kind = "condition"
     description = "The angelic subject is considered in beatitude; this introduces no further angelic nature."
+    prose_template = "{subject} is a blessed condition of {object}."
 
   relations[directs]
+    explanation_role = "effect"
     label = "Directs"
     kind = "theological"
     description = "Guides an operation according to the cited divine instruction."
+    prose_template = "{subject} directs {object}."
 
   relations[is_united_in_charity_with]
     label = "Is united in charity with"
     kind = "theological"
     description = "Personal communion through charity, without identity of natures or sacramental reception being implied."
+    prose_template = "{subject} is united in charity with {object}."
 
   relations[participates_in]
     label = "Participates in"
     kind = "metaphysical"
     description = "Possesses a received participation in the stated perfection, without identity or division of that perfection."
+    prose_template = "{subject} participates in {object}."
 
   relations[expresses]
     label = "Expresses"
     kind = "power_and_act"
     description = "An operation considered under a specific aspect manifests the indicated act; no additional faculty or independent agent is implied."
+    prose_template = "{subject} expresses {object}."
 
   relations[moderates]
+    explanation_role = "effect"
     label = "Moderates"
     kind = "appetite_and_passion"
     description = "Orders an appetitive movement within its due measure, in the respect specified by the source."
+    prose_template = "{subject} moderates {object}."
 
   relations[sustains]
+    explanation_role = "effect"
     label = "Sustains"
     kind = "power_and_act"
     description = "Maintains a good operation amid the difficulty identified by the source."
+    prose_template = "{subject} sustains {object}."
 
   relations[includes]
     label = "Includes"
     kind = "metaphysical"
     description = "Includes the indicated aspect in its account; this is not a bodily part relation or an assertion of identity."
+    prose_template = "{subject} includes {object}."
 
   relations[orders]
+    explanation_role = "effect"
     label = "Orders"
     kind = "power_and_act"
     description = "Gives due measure to the indicated conduct according to reason."
+    prose_template = "{subject} orders {object}."
 
   relations[resists]
+    explanation_role = "effect"
     label = "Resists"
     kind = "appetite_and_passion"
     description = "Withstands an inclination without implying that the inclination has ceased."
+    prose_template = "{subject} resists {object}."
 
   relations[is_effect_of]
     label = "Is an effect of"
     kind = "theological"
     description = "Follows from the named principle under the cited account; distinguish from eternal divine procession."
+    prose_template = "{subject} is an effect of {object}."
 
   relations[is_opposed_to]
     label = "Is opposed to"
     kind = "metaphysical"
     description = "Contrariety in the aspect specified by the source; not necessarily absolute opposition in every respect."
+    prose_template = "{subject} is opposed to {object}."
 
   relations[can_dispose_to]
+    explanation_role = "effect"
     label = "Can dispose to"
     kind = "condition"
     description = "A possible dispositional consequence, not an inevitable transition."
+    prose_template = "{subject} can dispose toward {object}."
 
   relations[inclines_to]
+    explanation_role = "effect"
     label = "Inclines to"
     kind = "appetite_and_passion"
     description = "Inclines toward an operation without necessitating consent or occurrence."
+    prose_template = "{subject} inclines to {object}."
 
   relations[is_privation_of]
     label = "Is a privation of"
     kind = "metaphysical"
     description = "Lack of a due perfection, not a positive substance competing with it."
+    prose_template = "{subject} is a privation of {object}."
 
   relations[wounds_order_of]
+    explanation_role = "effect"
     label = "Wounds the ordering of"
     kind = "power_and_act"
     description = "Disorders a power in relation to its due object or operation without destroying the power."
+    prose_template = "{subject} wounds the ordering of {object}."
 
   relations[can_aggravate]
+    explanation_role = "effect"
     label = "Can aggravate"
     kind = "condition"
     description = "Can deepen an existing disorder; no numerical rate is implied."
+    prose_template = "{subject} can aggravate {object}."
 
   relations[does_not_destroy]
+    explanation_role = "limit"
     label = "Does not destroy"
     kind = "condition"
     description = "Explicit preservation of the specified reality in the respect stated by the citation."
+    prose_template = "{subject} does not destroy {object}."
 
   relations[can_impede]
+    explanation_role = "effect"
     label = "Can impede"
     kind = "power_and_act"
     description = "Can obstruct an operation or its proper exercise, without asserting every instance does so."
+    prose_template = "{subject} can impede {object}."
 
   relations[can_influence]
+    explanation_role = "effect"
     label = "Can influence"
     kind = "power_and_act"
     description = "A capacity to affect the specified operation or faculty under the cited limits; not an observed event."
+    prose_template = "{subject} can influence {object}."
 
   relations[requires]
     label = "Requires"
     kind = "condition"
     description = "A necessary condition, not by itself a sufficient condition or an executable diagnostic rule."
+    prose_template = "{subject} requires {object}."
 
   relations[deprives_of]
+    explanation_role = "effect"
     label = "Deprives of"
     kind = "theological"
     description = "Entails loss of the named perfection in the recipient under the stated conditions."
+    prose_template = "{subject} deprives its recipient of {object}."
 
   relations[weakens]
+    explanation_role = "effect"
     label = "Weakens"
     kind = "condition"
     description = "Impedes a perfection or its exercise without necessarily removing it."
+    prose_template = "{subject} weakens {object}."
 
   relations[turns_away_from]
+    explanation_role = "effect"
     label = "Turns away from"
     kind = "theological"
     description = "Moral aversion from the named end; not spatial separation or loss of dependence for existence."
+    prose_template = "{subject} turns away from {object}."
 
   relations[can_perform]
+    explanation_role = "capacity"
     label = "Can perform"
     kind = "power_and_act"
     description = "Agent has capacity for the named act; this does not assert its universal or present exercise."
+    prose_template = "{subject} can perform {object}."
 
   relations[uses_presentation]
     label = "Uses presentation of"
     kind = "power_and_act"
     description = "The operation presents truth through the indicated cognitive medium."
+    prose_template = "{subject} uses presentation of {object}."
 
   relations[does_not_infuse]
+    explanation_role = "limit"
     label = "Does not infuse"
     kind = "theological"
     description = "Explicit exclusion of the named agent or operation as the source of an infused habit."
+    prose_template = "{subject} does not infuse {object}."
 
   relations[cannot_compel]
+    explanation_role = "limit"
     label = "Cannot compel"
     kind = "power_and_act"
     description = "Excludes necessitating the specified voluntary act; persuasion and inclination remain distinct."
+    prose_template = "{subject} cannot compel {object}."
 
   relations[does_not_require]
+    explanation_role = "limit"
     label = "Does not require"
     kind = "condition"
     description = "Denies that the object is a necessary condition of every instance of the subject."
+    prose_template = "{subject} does not require {object}."
 
   relations[has_office]
+    explanation_role = "capacity"
     label = "Has office"
     kind = "classification"
     description = "An assigned ministry or role, distinct from nature and from every actual exercise."
+    prose_template = "{subject} has the office of {object}."
 
   relations[has_recipient]
     label = "Has recipient"
     kind = "power_and_act"
     description = "The act or office is directed to the indicated recipient class."
+    prose_template = "{subject} is directed to {object} as recipient."
 
   relations[has_members_of_kind]
     label = "Has members of kind"
     kind = "classification"
     description = "A collective order groups beings of the indicated kind; it is not itself an individual being."
+    prose_template = "{subject} has members of the kind {object}."
 
   relations[belongs_to_hierarchy]
     label = "Belongs to hierarchy"
     kind = "classification"
     description = "An order occupies a place within the explicitly identified hierarchical arrangement."
+    prose_template = "{subject} belongs to {object}."
 
   relations[has_characteristic]
     label = "Has characteristic"
     kind = "classification"
     description = "A characteristic perfection or ministry; does not assert exclusive possession."
+    prose_template = "{subject} has {object} as a characteristic."
 
   relations[is_higher_order_than]
     label = "Is a higher order than"
     kind = "classification"
     description = "Relative rank in the source-specific ordering, not spatial distance or a causal edge."
+    prose_template = "{subject} is a higher order than {object}."
 
   relations[can_restrain]
     label = "Can restrain"
     kind = "power_and_act"
     description = "Capacity to limit an agent's activity under the cited providential or ministerial account."
+    prose_template = "{subject} can restrain {object}."

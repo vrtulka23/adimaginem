@@ -46,6 +46,8 @@ pub struct Relation {
     pub label: String,
     pub kind: String,
     pub description: String,
+    pub prose_template: Option<String>,
+    pub explanation_role: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -175,6 +177,20 @@ impl Input {
                 || relation.description.trim().is_empty()
             {
                 errors.push(format!("relation {id}: incomplete definition"));
+            }
+            if let Some(role) = &relation.explanation_role {
+                if !["context", "capacity", "effect", "limit"].contains(&role.as_str()) {
+                    errors.push(format!("relation {id}: unknown explanation role {role}"));
+                }
+            }
+            if let Some(template) = &relation.prose_template {
+                let remainder = template.replace("{subject}", "").replace("{object}", "");
+                if !template.contains("{subject}")
+                    || !template.contains("{object}")
+                    || remainder.contains(['{', '}'])
+                {
+                    errors.push(format!("relation {id}: prose template must use only subject and object placeholders, including both"));
+                }
             }
         }
         for id in self.rationales.keys() {
@@ -325,12 +341,36 @@ mod tests {
                         label: "Has part".into(),
                         kind: "composition".into(),
                         description: "A part relation".into(),
+                        prose_template: None,
+                        explanation_role: None,
                     },
                 )]),
                 passion_profiles: BTreeMap::new(),
             },
             rationales: BTreeMap::new(),
             profile_rationales: BTreeMap::new(),
+        }
+    }
+
+    #[test]
+    fn prose_templates_require_both_supported_placeholders() {
+        let mut input = example_input();
+        for (template, invalid) in [
+            ("{subject} has {object} as a part.", false),
+            ("{subject} has a part.", true),
+            ("{subject} {unknown} {object}.", true),
+        ] {
+            input
+                .ontology
+                .relations
+                .get_mut("has_part")
+                .unwrap()
+                .prose_template = Some(template.into());
+            let errors = input.validate().unwrap_err();
+            assert_eq!(
+                errors.iter().any(|error| error.contains("prose template")),
+                invalid
+            );
         }
     }
 
@@ -351,6 +391,8 @@ mod tests {
                 label: "Creates".into(),
                 kind: "creation".into(),
                 description: "Gives being".into(),
+                prose_template: None,
+                explanation_role: None,
             },
         );
         input.ontology.edges.get_mut("broken").unwrap().relation = "creates".into();

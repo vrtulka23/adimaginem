@@ -26,7 +26,7 @@ graph_viewer[default]
 
   relation_width float = 0.07
 
-  highlighted_relation_width float = 0.18
+  highlighted_relation_width float = 0.4
 
   parallel_curve_step float = 0.5
 
@@ -53,3 +53,15 @@ graph_viewer[default]
   label_min_text_pixels float = 14.0
 
   label_gap float = 0.1
+
+  god_icon_scale float = 1.8
+
+  god_icon_color str = "#ffd66b"
+
+  god_icon_core_color str = "#fff7de"
+
+  god_icon_emission float = 0.65
+
+  god_icon_glow_opacity float = 0.38
+
+  influence_summary_depth int = 3

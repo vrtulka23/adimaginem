@@ -29,8 +29,8 @@ class Handler(BaseHTTPRequestHandler):
         if self.path in ("/", "/index.html"):
             body = (TOOLS / "ontology_graph.html").read_bytes()
             content_type = "text/html; charset=utf-8"
-        elif self.path == "/ontology_graph.js":
-            body = (TOOLS / "ontology_graph.js").read_bytes()
+        elif self.path in ("/ontology_graph.js", "/relationship_summary.mjs"):
+            body = (TOOLS / self.path[1:]).read_bytes()
             content_type = "text/javascript; charset=utf-8"
         elif self.path == "/api/ontology":
             body = self.data

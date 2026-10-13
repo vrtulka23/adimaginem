@@ -1,4 +1,5 @@
 import * as THREE from "https://esm.sh/three";
+import { explainPath, collectInfluence } from "./relationship_summary.mjs";
 import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.js";
 import {
   faAppleWhole, faBrain, faCompass, faCross, faCube, faCrown, faDove,
@@ -87,17 +88,19 @@ function syncSelectionRing() {
   visual.parent.localToWorld(selectionRing.position);
   graph.scene().worldToLocal(selectionRing.position);
   selectionRing.quaternion.copy(graph.camera().quaternion);
-  selectionRing.scale.setScalar(iconSize * selectionRing.userData.extent);
+  selectionRing.scale.setScalar(iconSize * iconScale(node.id) * selectionRing.userData.extent);
 }
 
+function iconScale(id) { return id === "god" ? sizeConfig.god_icon_scale : 1; }
 function nodeColor(id) { return colorGroups[conceptGroups[id]].color; }
 function colorLabel(entry) { return entry.metadata.category; }
 function isFocused(id) { return focusedGroups.has(conceptGroups[id]); }
 function applyNodeStyle(id, material) {
   const active = selected === id || pathNodeIds.has(id), focused = isFocused(id);
-  material.color.set(nodeColor(id));
-  material.emissive.set(nodeColor(id));
-  material.emissiveIntensity = active || focused ? sizeConfig.focus_emission : 0.035;
+  const color = material.userData.fixedColor || nodeColor(id);
+  material.color.set(color);
+  material.emissive.set(color);
+  material.emissiveIntensity = (material.userData.baseEmission ?? 0.035) + (active || focused ? sizeConfig.focus_emission : 0);
   material.opacity = focusedGroups.size && !focused && !active ? sizeConfig.dimmed_icon_opacity : 1;
   material.depthWrite = material.opacity === 1;
 }
@@ -173,6 +176,7 @@ function updateLegend() {
 }
 
 function iconFamily(id, category) {
+  if (id === "god") return "divine_majesty";
   if (["angelic_order", "angelic_hierarchy"].includes(category)) return "celestial";
   if (["trinity"].includes(id)) return "trinity";
   if (["god", "divine_essence", "pure_act", "rational_soul", "grace", "sanctifying_grace", "actual_grace", "sacramental_grace"].includes(id) || id.includes("grace")) return "radiance";
@@ -217,7 +221,81 @@ function iconDefinition(node) {
   })[family] || faCube;
 }
 
+// A single bespoke emblem for God: a gilded triangular aureole and ivory light.
+// Fixed proportions define the artwork; presentation controls live in DIPL.
+function makeDivineEmblem() {
+  const group = new THREE.Group();
+  group.name = "divine-majesty-emblem";
+  const gold = new THREE.MeshStandardMaterial({ color: sizeConfig.god_icon_color,
+    emissive: sizeConfig.god_icon_color, emissiveIntensity: sizeConfig.god_icon_emission,
+    metalness: 0.65, roughness: 0.23, transparent: true, depthTest: false,
+    side: THREE.DoubleSide });
+  const ivory = gold.clone();
+  gold.userData = { fixedColor: sizeConfig.god_icon_color, baseEmission: sizeConfig.god_icon_emission };
+  ivory.userData = { fixedColor: sizeConfig.god_icon_core_color, baseEmission: sizeConfig.god_icon_emission };
+  const triangle = new THREE.Shape();
+  const vertices = (radius) => [0, 1, 2].map(i => {
+    const angle = Math.PI / 2 + i * Math.PI * 2 / 3;
+    return new THREE.Vector2(Math.cos(angle) * radius, Math.sin(angle) * radius);
+  });
+  triangle.setFromPoints(vertices(0.34)); triangle.closePath();
+  const opening = new THREE.Path(); opening.setFromPoints(vertices(0.265).reverse()); opening.closePath();
+  triangle.holes.push(opening);
+  const relief = new THREE.ExtrudeGeometry(triangle, {depth: 0.055, bevelEnabled: true,
+    bevelThickness: 0.012, bevelSize: 0.009, bevelSegments: 3, steps: 1});
+  group.add(new THREE.Mesh(relief, gold));
+  for (let i = 0; i < 24; i++) {
+    const angle = i * Math.PI / 12, long = i % 2 === 0;
+    const ray = new THREE.Shape();
+    ray.moveTo(-0.012, 0.365); ray.lineTo(0, long ? 0.51 : 0.445);
+    ray.lineTo(0.012, 0.365); ray.lineTo(0, 0.345); ray.closePath();
+    const geometry = new THREE.ExtrudeGeometry(ray, {depth: 0.025, bevelEnabled: false});
+    geometry.rotateZ(angle);
+    group.add(new THREE.Mesh(geometry, gold));
+  }
+  const heart = new THREE.Mesh(new THREE.OctahedronGeometry(0.14), ivory);
+  heart.position.z = 0.075; heart.rotation.set(0.2, 0.3, 0);
+  group.add(heart);
+  const glowMaterial = new THREE.ShaderMaterial({transparent: true, depthWrite: false,
+    blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
+    uniforms: {color: {value: new THREE.Color(sizeConfig.god_icon_color)},
+      opacity: {value: sizeConfig.god_icon_glow_opacity}},
+    vertexShader: `varying vec2 glowUv; void main(){glowUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`,
+    fragmentShader: `varying vec2 glowUv; uniform vec3 color; uniform float opacity;
+      void main(){ float r=length((glowUv-.5)*2.0);
+        float a=exp(-r*r*7.0)*(1.0-smoothstep(.7,1.0,r))*opacity;
+        gl_FragColor=vec4(color,a); }`
+  });
+  const glow = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 1.4), glowMaterial);
+  glow.name = "divine-radiance"; glow.position.z = -0.04;
+  glow.raycast = () => {}; // Light never intercepts another icon's pointer target.
+  group.add(glow);
+  // Keep this singular emblem legible where its many incident lines converge.
+  // Only solid artwork draws above links; the glow remains depth-tested.
+  group.children.filter(child => child !== glow).forEach(child => { child.renderOrder = 5; });
+  group.userData.glowMaterial = glowMaterial;
+  group.userData.iconMaterials = [gold, ivory];
+  return group;
+}
+
+function finishSculpture(group, node, materials) {
+  group.scale.setScalar(iconSize * iconScale(node.id));
+  const label = makeLabelSprite(node.label, iconScale(node.id));
+  group.add(label);
+  group.userData.label = label;
+  group.userData.iconMaterial = materials[0];
+  group.userData.iconMaterials = materials;
+  group.userData.nodeId = node.id;
+  materials.forEach(material => applyNodeStyle(node.id, material));
+  nodeVisuals[node.id] = group;
+  return group;
+}
+
 function makeSculpture(node) {
+  if (node.id === "god") {
+    const group = makeDivineEmblem();
+    return finishSculpture(group, node, group.userData.iconMaterials);
+  }
   const icon = iconDefinition(node);
   const [width, height, , , pathData] = icon.icon;
   const paths = Array.isArray(pathData) ? pathData : [pathData];
@@ -246,17 +324,10 @@ function makeSculpture(node) {
   const mesh = new THREE.Mesh(geometry, material);
   mesh.castShadow = true; mesh.receiveShadow = true;
   group.add(mesh);
-  group.scale.setScalar(iconSize);
-  const label = makeLabelSprite(node.label);
-  group.add(label);
-  group.userData.label = label;
-  group.userData.iconMaterial = material;
-  group.userData.nodeId = node.id;
-  nodeVisuals[node.id] = group;
-  return group;
+  return finishSculpture(group, node, [material]);
 }
 
-function makeLabelSprite(text) {
+function makeLabelSprite(text, scale = 1) {
   const canvas = document.createElement("canvas"), ctx = canvas.getContext("2d");
   const font = "600 48px Inter, system-ui, sans-serif";
   ctx.font = font;
@@ -276,7 +347,7 @@ function makeLabelSprite(text) {
     sprite.getWorldPosition(viewPosition).applyMatrix4(camera.matrixWorldInverse);
     const worldPerPixel = 2 * Math.max(0, -viewPosition.z)
       / (camera.projectionMatrix.elements[5] * graph.height());
-    const minimumHeight = sizeConfig.label_min_text_pixels * (canvas.height / 48) * worldPerPixel / iconSize;
+    const minimumHeight = sizeConfig.label_min_text_pixels * (canvas.height / 48) * worldPerPixel / (iconSize * scale);
     const height = Math.max(sizeConfig.label_height, minimumHeight);
     sprite.scale.set(height * canvas.width / canvas.height, height, 1);
     sprite.updateMatrixWorld(true);
@@ -306,7 +377,7 @@ function visibleNodes() {
 }
 function preferredDistance(edge) {
   const base = edge.relation === "is_kind_of" ? 2.7 : shortKinds.has(edge.kind) ? 3.2 : 4.1;
-  return sizeConfig.link_spacing * Math.max(base, iconSize + 2 * iconGap + 2 * arrowLength());
+  return sizeConfig.link_spacing * Math.max(base, iconSize * (iconScale(edge.source.id || edge.source) + iconScale(edge.target.id || edge.target)) / 2 + 2 * iconGap + 2 * arrowLength());
 }
 function configureForces() {
   graph.d3Force("link")
@@ -314,7 +385,7 @@ function configureForces() {
     .strength((edge) => edge.relation === "is_kind_of" ? 0.5 : shortKinds.has(edge.kind) ? 0.3 : 0.2);
   graph.d3Force("charge").strength(sizeConfig.charge_strength * (iconSize / sizeConfig.icon_size) ** 2);
   graph.d3Force("center", d3.forceCenter(0, 0, 0));
-  graph.d3Force("collide", d3.forceCollide(() => iconSize * 0.5 + iconGap + arrowLength() * 0.5).strength(0.72).iterations(2));
+  graph.d3Force("collide", d3.forceCollide(node => iconSize * iconScale(node.id) * 0.52 + iconGap + arrowLength() * 0.5).strength(0.72).iterations(2));
 }
 function syncBillboards() {
   if (!graph) return;
@@ -326,7 +397,9 @@ function updateVisualState() {
   const showAll = document.querySelector("#show-labels").checked;
   for (const [id, visual] of Object.entries(nodeVisuals)) {
     const active = selected === id || pathNodeIds.has(id);
-    applyNodeStyle(id, visual.userData.iconMaterial);
+    visual.userData.iconMaterials.forEach(material => applyNodeStyle(id, material));
+    if (visual.userData.glowMaterial) visual.userData.glowMaterial.uniforms.opacity.value =
+      sizeConfig.god_icon_glow_opacity * visual.userData.iconMaterial.opacity;
     const label = visual.userData.label;
     if (label) label.visible = showAll || active;
   }
@@ -369,7 +442,7 @@ function createGraph() {
     .linkDirectionalArrowRelPos(sizeConfig.arrow_position)
     .linkDirectionalArrowColor((link) => relationColor(link, true))
     .linkLabel((link) => `${esc(concepts[link.source.id || link.source].label)} → ${esc(db.ontology.relations[link.relation].label)} → ${esc(concepts[link.target.id || link.target].label)}`)
-    .onNodeClick((node) => { selectConcept(node.id); document.querySelector("#search").value = node.id; })
+    .onNodeClick((node) => { if (selected === node.id) deselectConcept(); else selectConcept(node.id); })
     .onNodeHover((node) => { el.style.cursor = node ? "pointer" : "grab"; })
     .onEngineTick(() => { const active = visibleNodes(); for (const n of active) positions[n.id] = [n.x, n.y, n.z]; if (!initialTickReported && active.length) { const extent = ["x", "y", "z"].map((axis) => (Math.max(...active.map((n) => n[axis])) - Math.min(...active.map((n) => n[axis]))).toFixed(1)).join(" × "); document.querySelector("#layout-status").textContent = `Settling ${active.length} concepts · initial spread ${extent}.`; initialTickReported = true; } syncBillboards(); })
     .onEngineStop(() => { const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } });
@@ -383,11 +456,22 @@ function createGraph() {
 }
 
 function iconName(id, category) { return iconFamily(id, category).replaceAll("_", " "); }
-function selectConcept(id) { if (!concepts[id]) return; selected = id; showDetails(id); updateVisualState(); }
+function selectConcept(id) {
+  if (!concepts[id]) return;
+  selected = id;
+  document.querySelector("#search").value = id;
+  showDetails(id); updateVisualState();
+}
+function deselectConcept() {
+  selected = null;
+  document.querySelector("#search").value = "";
+  document.querySelector("#details").innerHTML = '<h2>Concept</h2><div class="empty">Select a node in the graph or search for a concept to see its definition, source, and directly connected cited relations.</div>';
+  updateVisualState();
+}
 function showDetails(id) {
   const c = concepts[id], source = db.ontology.sources[c.source_id];
   const incident = Object.entries(edges).filter(([, e]) => e.subject === id || e.object === id);
-  let html = `<h2>Concept</h2><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div><span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll("_", " "))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div><div class="section-title">Icon</div><div class="note">${esc(iconName(id, c.category))} · Font Awesome Free vector, extruded in 3D</div><div class="section-title">Definition source</div>${citation(source, c.source_id)}`;
+  let html = `<div class="concept-panel-header"><h2>Concept</h2><button type="button" id="deselect-concept" aria-label="Deselect concept" title="Deselect concept">×</button></div><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div><span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll("_", " "))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div><div class="section-title">Icon</div><div class="note">${id === "god" ? "Divine majesty · original gilded 3D emblem with a triangular aureole and radiant ivory center" : `${esc(iconName(id, c.category))} · Font Awesome Free vector, extruded in 3D`}</div><div class="section-title">Definition source</div>${citation(source, c.source_id)}`;
   if (incident.length) {
     html += `<div class="section-title">Connected relations · ${incident.length}</div>`;
     for (const [edgeId, e] of incident) {
@@ -400,11 +484,77 @@ function showDetails(id) {
     }
   }
   document.querySelector("#details").innerHTML = html;
-  document.querySelectorAll("[data-node]").forEach((button) => button.addEventListener("click", () => { selectConcept(button.dataset.node); document.querySelector("#search").value = button.dataset.node; }));
+  document.querySelector("#deselect-concept").addEventListener("click", () => {
+    deselectConcept();
+    document.querySelector("#search").focus({ preventScroll: true });
+  });
+  document.querySelectorAll("[data-node]").forEach((button) => button.addEventListener("click", () => selectConcept(button.dataset.node)));
 }
 function citation(source, id) {
   if (!source) return `<span class="small">Source: ${esc(id || "unknown")}</span>`;
   return `<div class="citation"><b>${esc(source.author)}</b>, <i>${esc(source.work)}</i>, ${esc(source.locator)}<br><a href="${esc(source.url)}" target="_blank" rel="noopener">Open source ↗</a></div>`;
+}
+function clearPathResult() {
+  pathEdgeIds.clear(); pathNodeIds.clear();
+  const output = document.querySelector("#path-result");
+  output.replaceChildren(); output.className = "";
+  const summary = document.querySelector("#relationship-summary");
+  summary.replaceChildren(); summary.hidden = true;
+  document.querySelector("#connection-summary").hidden = true;
+}
+function influenceOverview(start, end) {
+  if (start === end) return "";
+  const available = activeEdges().map(([id]) => id);
+  const item = step => {
+    const e = step.edge;
+    return `<div class="summary-claim"><span class="tag">${esc(e.review_status)}</span>${e.evidence_kind !== "textual_paraphrase" ? `<span class="tag">${esc(e.evidence_kind.replaceAll("_", " "))}</span>` : ""}<p>${esc(step.sentence)} ${esc(step.rationale)}</p>${e.recipient_scope && e.recipient_scope !== "unspecified" ? `<div class="summary-qualification">Recipient scope: ${esc(e.recipient_scope.replaceAll("_", " "))}.</div>` : ""}${e.conditions ? `<div class="summary-qualification"><b>Conditions:</b> ${esc(e.conditions)}</div>` : ""}<details class="influence-citation"><summary>Source and relation meaning</summary><p>${esc(step.description)}</p>${citation(step.source, e.source_id)}${e.conditions ? `<div class="small">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.causal_mode.replaceAll("_", " "))}</div></details></div>`;
+  };
+  return `<section class="influence-overview"><h2>Influence overview</h2><p class="summary-route">Related cited statements within ${sizeConfig.influence_summary_depth} steps, using explicit recipient scopes where available. They describe capacities and qualified effects; their sequence does not establish an inevitable causal chain.</p>`
+    + [[start, end], [end, start]].map(([from, to]) => {
+      const result = collectInfluence(db, from, to, available, sizeConfig.influence_summary_depth);
+      const all = [...result.statements, ...result.limits];
+      const prose = statements => [...new Set(statements.map(step => step.rationale || step.sentence))].map(esc).join(" ");
+      const statuses = [...new Set(all.map(step => step.edge.review_status))].map(status => `<span class="tag">${esc(status)}</span>`).join("");
+      const qualifications = [...new Set(all.map(step => step.edge.conditions).filter(Boolean))];
+      return `<h3>${esc(concepts[from].label)} → ${esc(concepts[to].label)}</h3>`
+        + statuses + (all.some(step => step.edge.evidence_kind === "interpretive_inference") ? '<span class="tag">Includes interpretive inference</span>' : "")
+        + (result.statements.length ? `<p>${prose(result.statements)}</p>` : '<p class="summary-route">No supported influence statements were found in this direction within the current filters and search depth.</p>')
+        + (result.limits.length ? `<p><b>Limits:</b> ${prose(result.limits)}</p>` : "")
+        + qualifications.map(text => `<p class="summary-qualification"><b>Condition:</b> ${esc(text)}</p>`).join("")
+        + (all.length ? `<details class="influence-statements"><summary>Read the cited influence statements (${all.length})</summary>${result.statements.map(item).join("")}${result.limits.length ? `<h3>Limits</h3>${result.limits.map(item).join("")}` : ""}</details>` : "");
+    }).join("") + "</section>";
+}
+function showRelationshipSummary(ordered, edgeIds, start = ordered[0], end = ordered.at(-1)) {
+  const { steps, labels } = ordered.length ? explainPath(db, ordered, edgeIds) : { steps: [], labels: [] };
+  const panel = document.querySelector("#relationship-summary");
+  panel.hidden = false;
+  const bubble = document.querySelector("#connection-summary");
+  bubble.hidden = false; bubble.open = true; bubble.scrollTop = 0;
+  const route = !ordered.length ? "No graph path is available under these filters. Explicit recipient-scoped statements may still describe influence."
+    : steps.length === 0 ? "The same concept is selected at both ends; no relation is traversed."
+    : steps.length === 1 ? "A direct connection in the selected path."
+    : `An indirect connection through ${labels.slice(1, -1).join(" → ")}. These steps do not establish a further direct or causal relation between the endpoints.`;
+  panel.innerHTML = influenceOverview(start, end) + `<h2>Path explanation</h2><div class="summary-route">${esc(route)}</div>`
+    + steps.map((step, i) => {
+      const e = step.edge;
+      const evidence = e.evidence_kind === "textual_paraphrase" ? "" : `<span class="tag">${esc(e.evidence_kind.replaceAll("_", " "))}</span>`;
+      const scope = e.recipient_scope && e.recipient_scope !== "unspecified"
+        ? `<div class="summary-qualification">Recipient scope: ${esc(e.recipient_scope.replaceAll("_", " "))}.</div>` : "";
+      const conditions = e.conditions ? `<div class="summary-qualification"><b>Conditions:</b> ${esc(e.conditions)}</div>` : "";
+      return `<div class="summary-claim">${evidence}<span class="tag">${esc(e.review_status)}</span><p>${esc(step.sentence)} ${esc(step.rationale)} <a href="#relationship-step-${i}" data-summary-step="${i}" aria-label="Sources for statement ${i + 1}">[${i + 1}]</a></p>${scope}${conditions}</div>`;
+    }).join("")
+    + (steps.length ? `<details class="summary-evidence"><summary>Read the cited steps (${steps.length})</summary><ol>${steps.map((step, i) => {
+      const e = step.edge;
+      const qualifiers = [["Aspect", e.affected_aspect], ["Causality", e.causal_mode]]
+        .filter(([, value]) => value && value !== "unspecified")
+        .map(([name, value]) => `<span class="tag">${name}: ${esc(value.replaceAll("_", " "))}</span>`).join("");
+      return `<li id="relationship-step-${i}"><b>${esc(step.sentence)}</b><p>${esc(step.description)}</p>${step.reversed ? '<p class="summary-qualification">This step is traversed backward. The statement keeps the original direction of the cited relation.</p>' : ""}${qualifiers}${citation(step.source, e.source_id)}${e.conditions ? `<div class="summary-qualification">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.evidence_kind.replaceAll("_", " "))} · ${esc(e.review_status)}</div></li>`;
+    }).join("")}</ol></details>` : "");
+  panel.querySelectorAll("[data-summary-step]").forEach(link => link.addEventListener("click", event => {
+    event.preventDefault();
+    panel.querySelector(".summary-evidence").open = true;
+    panel.querySelector(`#relationship-step-${link.dataset.summaryStep}`).scrollIntoView({ block: "nearest" });
+  }));
 }
 function fillControls() {
   const list = document.querySelector("#concept-list"), from = document.querySelector("#from"), to = document.querySelector("#to");
@@ -415,7 +565,7 @@ function fillControls() {
   from.value = "god"; to.value = "human_person";
   const domains = [...new Set(Object.values(concepts).map((c) => c.domain))].sort();
   document.querySelector("#domains").innerHTML = domains.map((domain) => `<label class="check"><input type="checkbox" value="${esc(domain)}" checked>${esc(domain)}</label>`).join("");
-  document.querySelectorAll("#domains input").forEach((input) => input.addEventListener("change", () => { pathEdgeIds.clear(); pathNodeIds.clear(); draw(); }));
+  document.querySelectorAll("#domains input").forEach((input) => input.addEventListener("change", () => { clearPathResult(); draw(); }));
   const relations = document.querySelector("#relations");
   for (const id of Object.keys(db.ontology.relations).sort()) { const option = document.createElement("option"); option.value = id; option.textContent = db.ontology.relations[id].label; relations.append(option); }
   document.querySelector("#counts").innerHTML = `<span class="pill">${Object.keys(concepts).length} concepts</span><span class="pill">${Object.keys(edges).length} relations</span><span class="pill">${Object.keys(db.ontology.sources).length} sources</span>`;
@@ -427,8 +577,13 @@ function shortestPath() {
   for (const [edgeId, edge] of rows) { (adj[edge.subject] ||= []).push({ node: edge.object, id: edgeId }); if (!directed) (adj[edge.object] ||= []).push({ node: edge.subject, id: edgeId }); }
   const queue = [start], previous = { [start]: null };
   for (let i = 0; i < queue.length && !Object.hasOwn(previous, end); i++) for (const step of adj[queue[i]] || []) { if (Object.hasOwn(previous, step.node)) continue; previous[step.node] = { from: queue[i], edge: step.id }; queue.push(step.node); if (step.node === end) break; }
-  pathEdgeIds.clear(); pathNodeIds.clear(); const output = document.querySelector("#path-result");
-  if (!Object.hasOwn(previous, end)) { output.className = "path-result none"; output.textContent = `No path found from “${concepts[start].label}” to “${concepts[end].label}” with these filters.`; updateVisualState(); return; }
+  clearPathResult(); const output = document.querySelector("#path-result");
+  const domains = activeDomains();
+  if (!Object.hasOwn(previous, end) || !domains.has(concepts[start].domain) || !domains.has(concepts[end].domain)) {
+    output.className = "path-result none"; output.textContent = `No path found from “${concepts[start].label}” to “${concepts[end].label}” with these filters.`;
+    if (domains.has(concepts[start].domain) && domains.has(concepts[end].domain)) showRelationshipSummary([], [], start, end);
+    updateVisualState(); return;
+  }
   const ordered = [end]; let current = end; pathNodeIds.add(current);
   while (current !== start) { const step = previous[current]; pathEdgeIds.add(step.edge); current = step.from; pathNodeIds.add(current); ordered.push(current); }
   ordered.reverse(); const relations = ordered.slice(1).map((id) => db.ontology.relations[edges[previous[id].edge].relation]?.label || edges[previous[id].edge].relation);
@@ -438,13 +593,14 @@ function shortestPath() {
     const forward = edges[previous[ordered[i + 1]].edge].subject === id;
     return `${esc(concepts[id].label)} <span style="color:#ffe08b">${forward ? "—" : "←"}${esc(relations[i])}${forward ? "→" : "—"}</span><br>`;
   }).join("")}`;
+  showRelationshipSummary(ordered, ordered.slice(1).map(id => previous[id].edge));
   updateVisualState();
 }
 function setIconSize(value, anneal = true) {
   iconSize = Number(value);
   document.querySelector("#icon-size").value = String(iconSize);
   document.querySelector("#icon-size-value").value = iconSize.toFixed(2);
-  for (const visual of Object.values(nodeVisuals)) visual.scale.setScalar(iconSize);
+  for (const visual of Object.values(nodeVisuals)) visual.scale.setScalar(iconSize * iconScale(visual.userData.nodeId));
   syncSelectionRing();
   if (anneal) layoutNeedsFit = true;
   if (graph) { configureForces(); graph.linkDirectionalArrowLength(arrowLength); if (anneal) graph.d3ReheatSimulation(); graph.refresh(); }
@@ -474,26 +630,32 @@ async function init() {
     sizeInput.min = sizeConfig.icon_size_min; sizeInput.max = sizeConfig.icon_size_max; sizeInput.step = sizeConfig.icon_size_step;
     fillControls(); fillColorLegend(); createGraph(); setIconSize(sizeConfig.icon_size, false); document.querySelector("#loading").remove(); draw();
     document.querySelector("#layout-status").textContent = `Settling ${graph.graphData().nodes.length} concepts using ${graph.graphData().links.length} visible relations.`;
-    document.querySelector("#search").addEventListener("change", (event) => selectConcept(event.target.value.trim()));
-    document.querySelector("#relations").addEventListener("change", () => draw());
+    document.querySelector("#search").addEventListener("change", (event) => {
+      const id = event.target.value.trim();
+      if (id) selectConcept(id); else deselectConcept();
+    });
+    document.querySelector("#relations").addEventListener("change", () => { clearPathResult(); draw(); });
     document.querySelector("#clear-relations").addEventListener("click", () => {
       const relations = document.querySelector("#relations");
       for (const option of relations.options) option.selected = false;
       relations.dispatchEvent(new Event("change"));
     });
-    document.querySelector("#included").addEventListener("change", () => draw());
+    document.querySelector("#included").addEventListener("change", () => { clearPathResult(); draw(); });
+    for (const id of ["from", "to"]) document.querySelector(`#${id}`).addEventListener("change", () => { clearPathResult(); updateVisualState(); });
     document.querySelector("#show-labels").addEventListener("change", updateVisualState);
     document.querySelector("#find-path").addEventListener("click", shortestPath);
     document.querySelector("#reheat").addEventListener("click", reheatLayout);
     document.querySelector("#restore-layout").addEventListener("click", restoreLayout);
     sizeInput.addEventListener("input", (event) => setIconSize(event.target.value));
     document.querySelector("#reset").addEventListener("click", () => {
-      pathEdgeIds.clear(); pathNodeIds.clear(); focusedGroups.clear(); selected = null; document.querySelector("#path-result").innerHTML = "";
-      document.querySelector("#details").innerHTML = '<h2>Concept</h2><div class="empty">Select a node in the graph or search for a concept to see its definition, source, and directly connected cited relations.</div>';
-      updateVisualState(); graph.zoomToFit(900, sizeConfig.fit_padding);
+      clearPathResult(); focusedGroups.clear(); deselectConcept();
+      graph.zoomToFit(900, sizeConfig.fit_padding);
     });
-    document.querySelector("#directed").addEventListener("change", () => { if (pathEdgeIds.size) shortestPath(); });
-    window.addEventListener("resize", () => graph.width(document.querySelector("#graph").clientWidth).height(document.querySelector("#graph").clientHeight));
+    document.querySelector("#directed").addEventListener("change", () => { if (document.querySelector("#path-result").textContent) shortestPath(); });
+    new ResizeObserver(() => {
+      const el = document.querySelector("#graph");
+      graph.width(el.clientWidth).height(el.clientHeight);
+    }).observe(document.querySelector("#graph"));
   } catch (error) { document.querySelector("#loading").textContent = `Could not load ontology: ${error.message}`; }
 }
 

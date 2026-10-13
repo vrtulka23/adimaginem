@@ -19,8 +19,8 @@ main{display:grid;grid-template-columns:290px minmax(400px,1fr) 300px;height:cal
 @media(max-width:1000px){main{grid-template-columns:245px minmax(350px,1fr)}.details{display:none}}@media(max-width:680px){header{padding:0 14px}.brand-mark{width:38px;height:38px}h1{font-size:16px}h1 span{font-size:12px}.counts{display:none}main{display:flex;flex-direction:column;height:auto;min-height:calc(100vh - 72px)}.sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:40vh}.graph-wrap{height:64vh;min-height:450px}.details{display:block;border-left:0;border-top:1px solid var(--line)}}
 </style>
 <style>
-.color-legend{position:absolute;z-index:3;right:14px;bottom:14px;width:255px;max-width:calc(100% - 28px);max-height:64%;overflow:auto;background:#111820ef;border:1px solid #34404a;border-radius:10px;padding:10px 12px;box-shadow:0 8px 28px #0005;font-size:11px}
-.color-legend summary{cursor:pointer;font-weight:650;color:#edf3f6;padding:2px 0}.color-legend .hint{margin:6px 0 8px}.legend-item{display:flex;align-items:center;gap:8px;width:100%;text-align:left;font-size:11px;padding:5px 6px;border:1px solid transparent;border-radius:5px;background:transparent;color:#d5e0e7}.legend-item:hover{background:#263640}.legend-item[aria-pressed=true]{border-color:#83a6b4;background:#263640;color:white}.legend-item:focus-visible{outline:2px solid var(--mint);outline-offset:1px}.legend-item.muted-group{opacity:.55}.legend-item:disabled{opacity:.3;cursor:default}.swatch{width:10px;height:10px;border-radius:3px;flex:none}.line-swatch{height:3px;border-radius:0}.legend-count{margin-left:auto;color:#9cabb7;font-variant-numeric:tabular-nums}.relation-legend{margin-top:9px;padding-top:7px;border-top:1px solid var(--line)}.relation-key{cursor:default}.legend-clear{font-size:11px;margin-top:8px;padding:5px 8px;width:100%}.legend-clear[hidden]{display:none}
+.graph-legends{position:absolute;z-index:3;right:14px;bottom:14px;width:255px;max-width:calc(100% - 28px);max-height:calc(100% - 80px);display:flex;flex-direction:column;gap:8px;pointer-events:none}.color-legend{flex:0 1 auto;min-height:42px;overflow:auto;pointer-events:auto;background:#111820ef;border:1px solid #34404a;border-radius:10px;padding:10px 12px;box-shadow:0 8px 28px #0005;font-size:11px}
+.color-legend summary{cursor:pointer;font-weight:650;color:#edf3f6;padding:2px 0}.color-legend .hint{margin:6px 0 8px}.legend-item{display:flex;align-items:center;gap:8px;width:100%;text-align:left;font-size:11px;padding:5px 6px;border:1px solid transparent;border-radius:5px;background:transparent;color:#d5e0e7}.legend-item:hover{background:#263640}.legend-item[aria-pressed=true]{border-color:#83a6b4;background:#263640;color:white}.legend-item:focus-visible{outline:2px solid var(--mint);outline-offset:1px}.legend-item.muted-group{opacity:.55}.legend-item:disabled{opacity:.3;cursor:default}.swatch{width:10px;height:10px;border-radius:3px;flex:none}.line-swatch{height:3px;border-radius:0}.legend-count{margin-left:auto;color:#9cabb7;font-variant-numeric:tabular-nums}.relation-key{cursor:default}.legend-clear{font-size:11px;margin-top:8px;padding:5px 8px;width:100%}.legend-clear[hidden]{display:none}
 body{height:100vh;display:flex;flex-direction:column}
 header{height:auto;min-height:72px;flex:none;flex-wrap:wrap;gap:16px;padding:12px 24px}
 main{height:auto;flex:1;min-height:0}
@@ -30,6 +30,10 @@ main{height:auto;flex:1;min-height:0}
 .layout-size label{white-space:nowrap}.layout-size input{width:130px;accent-color:var(--mint)}.layout-size .hint{margin:0}
 @media(max-width:1100px){.layout-controls{order:3;flex-basis:100%;max-width:none}.counts{margin-left:auto}}
 @media(max-width:680px){body{height:auto}header{padding:12px 14px;gap:10px}.layout-controls{min-width:0;width:100%}main{min-height:620px;flex:none}}
+.relationship-summary{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.relationship-summary[hidden]{display:none}.relationship-summary h2{letter-spacing:.04em;margin-bottom:8px}.summary-route{color:#aabac5;font-size:12px;margin-bottom:12px}.summary-claim{margin-bottom:14px}.summary-claim p{margin:3px 0 6px}.relationship-summary a{color:var(--mint)}.summary-qualification{font-size:12px;color:#b8c9d4;margin:5px 0}.summary-evidence{border-top:1px solid var(--line);padding-top:10px}.summary-evidence summary{cursor:pointer;color:var(--mint)}.summary-evidence ol{padding-left:18px}.summary-evidence li{padding:8px 0 12px;border-bottom:1px solid var(--line)}.summary-evidence p{margin:6px 0}.summary-claim .tag{text-transform:capitalize}
+.concept-panel-header{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#141a20;padding:4px 0 8px;margin-bottom:8px}.concept-panel-header h2{margin:0}.concept-panel-header button{width:32px;height:32px;flex:none;padding:0;font-size:24px;line-height:1;background:#1a252c;border-color:#3c4e58;color:#d5e0e7}.concept-panel-header button:hover{background:#2b4147}.concept-panel-header button:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.connection-summary[hidden]{display:none}.connection-summary[open]{flex:1 1 320px;min-height:150px}.connection-summary .relationship-summary{margin-top:10px;padding-top:10px}.connection-summary>summary{position:sticky;top:-10px;background:#111820;padding:8px 0;z-index:1}.influence-overview{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}.influence-overview h3{font-size:13px;color:#c7e9dd;margin:15px 0 10px}.influence-citation{font-size:11px;color:#b8c9d4}.influence-citation summary{font-size:11px;font-weight:400}.graph-legends:has(.connection-summary:not([hidden])){width:330px}
 </style>
 </head>
 <body>
@@ -56,17 +60,27 @@ main{height:auto;flex:1;min-height:0}
 <div class="field"><label for="to">To</label><select id="to"></select></div>
 <label class="toggle"><input id="directed" type="checkbox"> Follow arrow direction</label>
 <div class="hint">By default, path search treats relations as connections either way. Turn this on to follow each edge from subject to object.</div>
-<button class="action" id="find-path">Highlight shortest path</button>
+<button class="action" id="find-path">Connect and explain</button>
 <div id="path-result"></div>
 </aside>
 <section class="graph-wrap"><div class="legend-note"><b>Drag</b> to rotate · scroll to zoom · hover an icon or click for details</div><div id="graph" class="graph"></div><div id="loading" class="loading">Loading cited DIPL ontology…</div>
-<details class="color-legend" open>
-  <summary>Color legend</summary>
+<div class="graph-legends" aria-label="Graph legends and connection summary">
+<details class="color-legend connection-summary" id="connection-summary" hidden>
+  <summary>Connection summary</summary>
+  <section id="relationship-summary" class="relationship-summary" aria-label="Relationship summary" aria-live="polite" hidden></section>
+</details>
+<details class="color-legend" id="concept-legend" open>
+  <summary>Concept colors</summary>
   <div class="hint">Click groups to highlight them. Click again to release. Counts follow domain filters.</div>
   <div id="concept-colors" role="group" aria-label="Highlight concept groups"></div>
   <button type="button" id="clear-color-focus" class="legend-clear" hidden>Clear group highlights</button>
-  <details class="relation-legend"><summary>Relation colors</summary><div id="relation-colors"></div><div class="legend-item"><span class="swatch line-swatch" style="background:#ffe08b"></span><span>Highlighted path</span></div></details>
-</details></section>
+</details>
+<details class="color-legend" id="relation-legend" open>
+  <summary>Relation colors</summary>
+  <div id="relation-colors"></div>
+  <div class="legend-item"><span class="swatch line-swatch" style="background:#ffe08b"></span><span>Highlighted path</span></div>
+</details>
+</div></section>
 <aside class="details" id="details"><h2>Concept</h2><div class="empty">Select a node in the graph or search for a concept to see its definition, source, and connected relations.</div></aside>
 </main>
 <script type="module" src="/ontology_graph.js"></script>

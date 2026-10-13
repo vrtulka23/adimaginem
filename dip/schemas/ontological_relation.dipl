@@ -4,3 +4,11 @@ kind str
   !options ["creation", "identity", "classification", "composition", "metaphysical", "power_and_act", "appetite_and_passion", "theological", "condition"]
   !labels ["Creation", "Identity and co-reference", "Classification", "Composition", "Metaphysical relation", "Power and act", "Appetite and passion", "Theological relation", "Condition"]
 description str
+
+prose_template str = none
+  ?descr "Optional sentence for one directed claim. Use {subject} and {object}; conditions and citations are supplied by the edge. Templates are editorial wording, not additional evidence."
+
+explanation_role str = "context"
+  !options ["context", "capacity", "effect", "limit"]
+  !labels ["Context", "Capacity or office", "Effect or influence", "Explicit limit"]
+  ?descr "Editorial role for selecting cited influence statements. This does not change causal_mode, imply occurrence, or license composing effects across a path."
