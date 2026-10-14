@@ -74,6 +74,19 @@ def load_ontology(include_viewer=False):
               "profile_rationales": profile_rationales}
     if include_viewer and "graph_viewer" in data:
         result["graph_viewer"] = data["graph_viewer"]
+        for settings in result["graph_viewer"].values():
+            if isinstance(settings.get("structural_link_kinds"), str):
+                settings["structural_link_kinds"] = [settings["structural_link_kinds"]]
+        for collection, arrays in {
+            "graph_tours": ("audience_tags", "topic_tags", "step_ids"),
+            "graph_tour_steps": ("source_ids", "concept_ids", "edge_ids"),
+            "graph_tour_positions": (),
+        }.items():
+            result[collection] = data[collection]
+            for record in result[collection].values():
+                for field in arrays:
+                    if isinstance(record.get(field), str):
+                        record[field] = [record[field]]
         for palette in ("graph_concept_styles", "graph_relation_colors"):
             colors = data[palette]
             metadata = json.loads(_run([

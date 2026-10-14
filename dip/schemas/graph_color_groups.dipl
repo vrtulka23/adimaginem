@@ -51,3 +51,15 @@ $schema graph_sin
 $schema graph_angels
   color str = "#8bcce8"
     ?category "Angels, orders & ministry"
+
+$schema graph_eschatology
+  color str = "#d8bd78"
+    ?category "Last things & resurrection"
+
+$schema graph_marian
+  color str = "#75c7ff"
+    ?category "Mary & divine motherhood"
+
+$schema graph_saints
+  color str = "#a7d6bd"
+    ?category "Communion & intercession"

@@ -35,6 +35,13 @@ main{height:auto;flex:1;min-height:0}
 .concept-panel-header{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#141a20;padding:4px 0 8px;margin-bottom:8px}.concept-panel-header h2{margin:0}.concept-panel-header button{width:32px;height:32px;flex:none;padding:0;font-size:24px;line-height:1;background:#1a252c;border-color:#3c4e58;color:#d5e0e7}.concept-panel-header button:hover{background:#2b4147}.concept-panel-header button:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
 .graph-wrap{container-type:inline-size}.connection-summary{position:absolute;z-index:3;left:14px;bottom:14px;width:440px;max-width:calc(100% - 300px);max-height:calc(100% - 80px)}.connection-summary[hidden]{display:none}.connection-summary .relationship-summary{margin-top:8px;padding-top:0;border-top:0;font-size:14px;line-height:1.65}.connection-summary>summary{position:sticky;top:-10px;background:#111820;padding:8px 0;z-index:1}.influence-overview{margin:0 0 16px;padding:0 0 14px;border-bottom:1px solid var(--line)}.influence-overview h3{font-size:13px;color:#c7e9dd;margin:15px 0 10px}.influence-citation{font-size:11px;color:#b8c9d4}.influence-citation summary{font-size:11px;font-weight:400}@container(max-width:620px){.connection-summary{top:65px;bottom:auto;width:calc(100% - 28px);max-width:none;max-height:calc(60% - 65px)}.connection-summary:not([hidden])~.graph-legends{max-height:35%}}
 </style>
+<style>
+#tour-catalogue-content[hidden],#tour-player[hidden],#explore-controls[hidden]{display:none}
+.sidebar-accordion{border:1px solid var(--line);border-radius:10px;margin-bottom:12px;background:#111820}.sidebar-accordion>summary{cursor:pointer;padding:13px 12px;font-weight:650;color:var(--mint)}.sidebar-accordion>summary:focus-visible{outline:2px solid var(--mint);outline-offset:-2px;border-radius:9px}.accordion-content{padding:0 12px 14px}.sidebar-accordion[open]>summary{border-bottom:1px solid var(--line);margin-bottom:12px}.sidebar-accordion #tour-player{padding:0 12px 14px}#tour-match-count{margin:10px 0}
+.tour-card{border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px;background:#111b22}.tour-card h3{font-size:14px;margin:0 0 8px;color:var(--mint)}.tour-card p{font-size:12px;line-height:1.55;color:#c4d0d8}.tour-card button{margin-top:10px;width:100%;font-size:12px}.tour-card .tag{font-size:10px}
+#tour-catalogue{margin-bottom:22px}#tour-catalogue>summary{cursor:pointer;font-weight:650;color:var(--mint)}#tour-player{font-size:15px;line-height:1.7}.tour-heading{display:flex;align-items:start;gap:12px;margin-bottom:14px}.tour-heading h2{flex:1;line-height:1.5;letter-spacing:.04em}.tour-heading button{font-size:12px;white-space:nowrap}#tour-step-title{font-size:22px;line-height:1.3;color:var(--mint);margin:16px 0 12px}.tour-question{font-weight:650;color:#f4dfb1}.tour-qualification{padding-left:12px;border-left:2px solid #668b85;color:#b9cbd3;font-size:13px}.tour-navigation{display:flex;gap:10px;margin:22px 0}.tour-navigation button{flex:1}#tour-player details{font-size:13px;margin:16px 0}#tour-player summary{cursor:pointer;color:var(--mint)}button:disabled{opacity:.45;cursor:default}.tour-mode main{grid-template-columns:360px minmax(400px,1fr) 300px}
+@media(max-width:1100px){.tour-mode main{grid-template-columns:320px minmax(350px,1fr)}.tour-mode .details{display:none}}@media(max-width:680px){.tour-mode main{display:flex}.tour-mode .sidebar{max-height:52vh}.tour-mode .details{display:block}}
+</style>
 </head>
 <body>
 <header><div class="brand"><svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-labelledby="brand-title brand-desc"><title id="brand-title">Ad Imaginem mark</title><desc id="brand-desc">A human figure within a luminous circle, joined to two orbiting points.</desc><defs><linearGradient id="mark-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#233b3b"/><stop offset="1" stop-color="#171e25"/></linearGradient><linearGradient id="mark-line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe3a0"/><stop offset="1" stop-color="#87e0c2"/></linearGradient></defs><rect x="3" y="3" width="58" height="58" rx="19" fill="url(#mark-bg)" stroke="#58766f" stroke-width="1.2"/><circle cx="32" cy="31" r="21" fill="none" stroke="#87e0c2" stroke-opacity=".38" stroke-width="1.2"/><path d="M17 31a15 15 0 0 1 30 0" fill="none" stroke="#ffd27a" stroke-width="1.5" stroke-linecap="round"/><circle cx="32" cy="24" r="5.4" fill="#ffe3a0"/><path d="M21.5 46.5c1.3-8 5.1-12 10.5-12s9.2 4 10.5 12" fill="none" stroke="url(#mark-line)" stroke-width="2.6" stroke-linecap="round"/><path d="M11 31h6m30 0h6" stroke="#87e0c2" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="31" r="2.3" fill="#ffd27a"/><circle cx="54" cy="31" r="2.3" fill="#ffd27a"/><path d="M32 11v5" stroke="#ffd27a" stroke-width="1.4" stroke-linecap="round"/></svg><div><h1>Ad Imaginem <span>/ ontology graph</span></h1><div class="subtitle">A cited map of Thomistic and Catholic concepts</div></div></div><section class="layout-controls" aria-label="Graph layout">
@@ -48,7 +55,30 @@ main{height:auto;flex:1;min-height:0}
 </section><div class="counts" id="counts"></div></header>
 <main>
 <aside class="sidebar">
-<h2>Explore</h2>
+<details id="tour-catalogue" class="sidebar-accordion" name="sidebar-section" aria-label="Guided tour catalogue">
+<summary id="tour-catalogue-title">Guided tours</summary>
+<div id="tour-catalogue-content" class="accordion-content">
+<div class="field"><label for="tour-audience">Audience or interest</label><select id="tour-audience"></select></div>
+<div class="field"><label for="tour-topic">Topic</label><select id="tour-topic"></select></div>
+<div id="tour-match-count" class="hint" aria-live="polite"></div>
+<div id="tour-catalogue-list"></div>
+</div>
+<section id="tour-player" aria-label="Guided tour" hidden>
+<div class="tour-heading"><h2 id="tour-name"></h2><button type="button" id="tour-exit">Exit tour</button></div>
+<div id="tour-progress" class="small" aria-live="polite"></div>
+<h3 id="tour-step-title" tabindex="-1"></h3>
+<p id="tour-question" class="tour-question"></p>
+<p id="tour-narrative"></p>
+<p id="tour-qualification" class="tour-qualification"></p>
+<div class="tour-navigation"><button type="button" id="tour-previous">Previous</button><button type="button" id="tour-next">Next</button></div>
+<details open><summary>Sources for this step</summary><div id="tour-sources"></div></details>
+<details><summary>About this tour</summary><p id="tour-framing"></p><div class="small" id="tour-review"></div></details>
+</section>
+</details>
+<div id="explore-controls">
+<details id="explore-panel" class="sidebar-accordion" name="sidebar-section" open>
+<summary>Explore</summary>
+<div class="accordion-content">
 <label class="toggle"><input id="study-focus" type="checkbox"><span id="study-focus-label">Study focus</span></label>
 <div id="study-focus-note" class="note" hidden></div>
 <div class="field"><label for="search">Find a concept</label><input id="search" list="concept-list" placeholder="Try rational_soul or grace"><datalist id="concept-list"></datalist></div>
@@ -64,7 +94,11 @@ main{height:auto;flex:1;min-height:0}
 <label class="toggle"><input id="included" type="checkbox" checked> Show model-included edges only</label>
 <label class="toggle"><input id="show-labels" type="checkbox"> Show all concept labels</label>
 <div class="hint">Names appear on hover; selected and path concepts stay labeled.</div>
-<h2 style="margin-top:22px">Connect two concepts</h2>
+</div>
+</details>
+<details id="connections-panel" class="sidebar-accordion" name="sidebar-section">
+<summary>Concept connections</summary>
+<div class="accordion-content">
 <div class="field"><label for="from">From</label><select id="from"></select></div>
 <div class="field"><label for="to">To</label><select id="to"></select></div>
 <label class="toggle"><input id="directed" type="checkbox"> Follow arrow direction</label>
@@ -72,6 +106,9 @@ main{height:auto;flex:1;min-height:0}
 <button class="action" id="find-path">Connect and explain</button>
 <button type="button" class="legend-clear" id="disconnect" disabled>Disconnect concepts</button>
 <div id="path-result"></div>
+</div>
+</details>
+</div>
 </aside>
 <section class="graph-wrap"><div class="legend-note"><b>Drag</b> to rotate · scroll to zoom · hover an icon or click for details</div><div id="graph" class="graph"></div><div id="loading" class="loading">Loading cited DIPL ontology…</div>
 <details class="color-legend connection-summary" id="connection-summary" hidden>

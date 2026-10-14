@@ -1,0 +1,927 @@
+# Claims retain their scope and conditions; graph paths do not assign individual eternal destinies.
+ontology
+  edges[heaven_includes_vision]
+    subject = "heaven"
+    relation = "includes"
+    object = "beatific_vision"
+    source_id str = "ccc_1023_1029"
+      ?rationale "Heaven includes the direct vision of God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[heaven_communion_trinity]
+    subject = "heaven"
+    relation = "includes"
+    object = "trinity"
+    source_id str = "ccc_1023_1029"
+      ?rationale "Heaven is communion with the Trinity; inclusion here names the communion's divine term, not a part of a place."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[hell_excludes_vision]
+    subject = "hell"
+    relation = "excludes"
+    object = "beatific_vision"
+    source_id str = "ccc_1033_1037"
+      ?rationale "Hell excludes blessed communion with God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[hell_eternal_punishment]
+    subject = "hell"
+    relation = "includes"
+    object = "eternal_punishment"
+    source_id str = "ccc_1033_1037"
+      ?rationale "Hell is definitive, not temporary purification."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[purgatory_distinct_hell]
+    subject = "purgatory"
+    relation = "is_distinct_from"
+    object = "hell"
+    source_id str = "ccc_1030_1032"
+      ?rationale "The purification of the elect differs from the punishment of the damned."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[purgatory_purifies]
+    subject = "purgatory"
+    relation = "includes"
+    object = "purification_from_sin"
+    source_id str = "ccc_1030_1032"
+      ?rationale "Purgatory is final purification."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[purgatory_to_heaven]
+    subject = "purgatory"
+    relation = "is_ordered_to"
+    object = "heaven"
+    source_id str = "ccc_1030_1032"
+      ?rationale "Purification prepares the saved for heaven."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "final"
+
+  edges[souls_purgatory_state]
+    subject = "souls_in_purgatory"
+    relation = "has_characteristic"
+    object = "purgatory"
+    source_id str = "ccc_1030_1032"
+      ?rationale "These souls undergo final purification."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[souls_purgatory_grace]
+    subject = "souls_in_purgatory"
+    relation = "receives"
+    object = "sanctifying_grace"
+    source_id str = "ccc_1030_1032"
+      ?rationale "These departed souls died in grace and remain God's friends."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "Reception here denotes grace already possessed at death, not a new conversion after death."
+    condition_source_id = "ccc_1030_1032"
+
+  edges[souls_purgatory_separated]
+    subject = "souls_in_purgatory"
+    relation = "is_kind_of"
+    object = "separated_soul"
+    source_id str = "ccc_1021_1022"
+      ?rationale "The departed awaiting purification are human souls after death."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[separated_soul_rational]
+    subject = "separated_soul"
+    relation = "is_kind_of"
+    object = "rational_soul"
+    source_id str = "ccc_988_1001"
+      ?rationale "This is the human soul in its separated condition, not a different species of soul."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[soul_separates_body]
+    subject = "rational_soul"
+    relation = "separates_from"
+    object = "human_body"
+    source_id str = "ccc_988_1001"
+      ?rationale "Death separates soul and body."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "At human death; not the ordinary condition of embodied human life."
+    condition_source_id = "ccc_988_1001"
+
+  edges[death_separated_soul]
+    subject = "human_death"
+    relation = "includes"
+    object = "separated_soul"
+    source_id str = "ccc_988_1001"
+      ?rationale "Death leaves the human soul separated from the body."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[soul_reunited_body]
+    subject = "rational_soul"
+    relation = "reunites_with"
+    object = "human_body"
+    source_id str = "ccc_988_1001"
+      ?rationale "God reunites each human soul with its own body."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "At the resurrection of the dead; not reincarnation."
+    condition_source_id = "ccc_988_1001"
+
+  edges[resurrection_human_recipient]
+    subject = "resurrection_of_dead"
+    relation = "has_recipient"
+    object = "human_person"
+    source_id str = "ccc_988_1001"
+      ?rationale "All human beings will rise; their final states differ."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[judgment_at_death]
+    subject = "human_death"
+    relation = "includes"
+    object = "particular_judgment"
+    source_id str = "ccc_1021_1022"
+      ?rationale "Particular judgment occurs at death, without implying that death causes God's judgment."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[particular_judgment_recipient]
+    subject = "particular_judgment"
+    relation = "has_recipient"
+    object = "human_person"
+    source_id str = "ccc_1021_1022"
+      ?rationale "Each human life is judged in relation to Christ."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[last_judgment_recipient]
+    subject = "last_judgment"
+    relation = "has_recipient"
+    object = "human_person"
+    source_id str = "ccc_1038_1041"
+      ?rationale "The universal judgment manifests the truth of human lives."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[son_judges]
+    subject = "son"
+    relation = "can_perform"
+    object = "last_judgment"
+    source_id str = "ccc_1038_1041"
+      ?rationale "Christ comes as judge."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[resurrection_final_judgment]
+    subject = "last_judgment"
+    relation = "requires"
+    object = "resurrection_of_dead"
+    source_id str = "ccc_1038_1041"
+      ?rationale "The resurrection precedes the Last Judgment in the Catechism's account."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[renewal_resurrection]
+    subject = "renewed_creation"
+    relation = "includes"
+    object = "resurrection_of_dead"
+    source_id str = "ccc_1042_1050"
+      ?rationale "Final renewal embraces risen humanity and the created universe."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[suffrages_recipients]
+    subject = "suffrages_for_dead"
+    relation = "has_recipient"
+    object = "souls_in_purgatory"
+    source_id str = "ccc_1030_1032"
+      ?rationale "The Church assists the departed undergoing purification by prayer."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[eucharist_suffrage]
+    subject = "eucharist"
+    relation = "has_characteristic"
+    object = "suffrages_for_dead"
+    source_id str = "ccc_1030_1032"
+      ?rationale "The Eucharistic sacrifice is offered for the departed."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "As offered in suffrage for the dead; not an assertion that every Eucharist is exclusively for them."
+    condition_source_id = "ccc_1030_1032"
+
+  edges[temporal_distinct_eternal]
+    subject = "temporal_punishment"
+    relation = "is_distinct_from"
+    object = "eternal_punishment"
+    source_id str = "ccc_1471_1479"
+      ?rationale "Temporal and eternal punishment are distinct consequences of sin."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[purification_temporal]
+    subject = "purification_from_sin"
+    relation = "remedies"
+    object = "temporal_punishment"
+    source_id str = "ccc_1471_1479"
+      ?rationale "Purification frees the person from what is called temporal punishment."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "perfective"
+
+  edges[remission_distinct_purification]
+    subject = "remission_of_sin"
+    relation = "is_distinct_from"
+    object = "purification_from_sin"
+    source_id str = "st_iii_86_1_6"
+      ?rationale "Forgiveness of guilt and removal of every residual disorder are distinguishable; they are not independent rival salvations."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[penance_absolution]
+    subject = "penance"
+    relation = "includes"
+    object = "sacramental_absolution"
+    source_id str = "st_iii_84_3"
+      ?rationale "The minister's absolution is the sacramental form."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[absolution_remission]
+    subject = "sacramental_absolution"
+    relation = "instrumentally_effects"
+    object = "remission_of_sin"
+    source_id str = "st_iii_84_3"
+      ?rationale "God forgives through sacramental absolution."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "soul"
+    causal_mode = "instrumental"
+    conditions = "Within the valid sacrament of Penance with the requisite disposition of the penitent."
+    condition_source_id = "st_iii_84_3"
+
+  edges[penance_contrition]
+    subject = "penance"
+    relation = "includes"
+    object = "contrition"
+    source_id str = "ccc_1451_1460"
+      ?rationale "Contrition belongs to the penitent's acts."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[contrition_repentance]
+    subject = "contrition"
+    relation = "is_kind_of"
+    object = "repentance_for_sin"
+    source_id str = "ccc_1451_1460"
+      ?rationale "Contrition rejects past sin with resolve to amend."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[penance_confession]
+    subject = "penance"
+    relation = "includes"
+    object = "sacramental_confession"
+    source_id str = "ccc_1451_1460"
+      ?rationale "Confession is a constitutive act of sacramental Penance."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[penance_satisfaction]
+    subject = "penance"
+    relation = "includes"
+    object = "satisfaction_for_sin"
+    source_id str = "ccc_1451_1460"
+      ?rationale "Penance includes satisfaction for the disorder caused by sin."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[satisfaction_remnants]
+    subject = "satisfaction_for_sin"
+    relation = "remedies"
+    object = "remnants_of_sin"
+    source_id str = "ccc_1451_1460"
+      ?rationale "Penitential acts aid healing and reparation after forgiveness."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "dispositive"
+    conditions = "Through Christ's grace; not a purchase of divine forgiveness."
+    condition_source_id = "ccc_1451_1460"
+
+  edges[mary_human]
+    subject = "virgin_mary"
+    relation = "is_kind_of"
+    object = "human_person"
+    source_id str = "ccc_484_495"
+      ?rationale "Mary is a human creature."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_mother_son]
+    subject = "virgin_mary"
+    relation = "is_mother_of"
+    object = "son"
+    source_id str = "st_iii_35_4"
+      ?rationale "Motherhood terminates in the person of the Son."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "According to his human birth; Mary neither produces nor precedes the divine nature."
+    condition_source_id = "st_iii_35_4"
+
+  edges[mary_theotokos]
+    subject = "virgin_mary"
+    relation = "has_characteristic"
+    object = "divine_motherhood"
+    source_id str = "st_iii_35_4"
+      ?rationale "Theotokos expresses the identity of her Son as God incarnate."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[son_assumes_human_nature]
+    subject = "son"
+    relation = "assumes_nature"
+    object = "human_nature"
+    source_id str = "ccc_464_469"
+      ?rationale "The eternal Word assumes humanity without a second person."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[incarnation_of_son]
+    subject = "incarnation"
+    relation = "has_characteristic"
+    object = "son"
+    source_id str = "ccc_464_469"
+      ?rationale "The person who becomes man is the eternal Son."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[incarnation_human_nature]
+    subject = "incarnation"
+    relation = "includes"
+    object = "human_nature"
+    source_id str = "ccc_464_469"
+      ?rationale "The Incarnation includes a complete assumed humanity without mixing natures."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[human_nature_body]
+    subject = "human_nature"
+    relation = "includes"
+    object = "human_body"
+    source_id str = "ccc_464_469"
+      ?rationale "True humanity includes a body."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[human_nature_soul]
+    subject = "human_nature"
+    relation = "includes"
+    object = "rational_soul"
+    source_id str = "ccc_464_469"
+      ?rationale "True humanity includes a rational soul."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_virginity]
+    subject = "virgin_mary"
+    relation = "has_characteristic"
+    object = "perpetual_virginity"
+    source_id str = "st_iii_28_1_3"
+      ?rationale "Aquinas affirms Mary's perpetual virginity."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_immaculate]
+    subject = "virgin_mary"
+    relation = "has_characteristic"
+    object = "immaculate_conception"
+    source_id str = "ccc_484_495"
+      ?rationale "The Church teaches Mary's preservation at conception by Christ's merits."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_preserved_original_sin]
+    subject = "virgin_mary"
+    relation = "is_preserved_from"
+    object = "original_sin"
+    source_id str = "ccc_484_495"
+      ?rationale "Mary is preserved from original sin."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "From the first moment of her conception by a singular grace through Christ's merits; cited as Church teaching, not as ST III q. 27 a. 2."
+    condition_source_id = "ccc_484_495"
+
+  edges[immaculate_distinct_virginity]
+    subject = "immaculate_conception"
+    relation = "is_distinct_from"
+    object = "perpetual_virginity"
+    source_id str = "ccc_484_495"
+      ?rationale "Mary's own conception and her virginal motherhood concern different mysteries."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_assumption]
+    subject = "virgin_mary"
+    relation = "receives"
+    object = "assumption_of_mary"
+    source_id str = "ccc_963_975"
+      ?rationale "Mary is taken into glory body and soul."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[assumption_heaven]
+    subject = "assumption_of_mary"
+    relation = "is_ordered_to"
+    object = "heaven"
+    source_id str = "ccc_963_975"
+      ?rationale "The Assumption is Mary's entry into heavenly glory."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "final"
+
+  edges[mary_spiritual_motherhood]
+    subject = "virgin_mary"
+    relation = "has_office"
+    object = "mary_spiritual_motherhood"
+    source_id str = "lg_60_67"
+      ?rationale "Mary exercises maternal care in the order of grace."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_can_intercede]
+    subject = "virgin_mary"
+    relation = "can_perform"
+    object = "marian_intercession"
+    source_id str = "lg_60_67"
+      ?rationale "Mary intercedes in dependence on Christ."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[marian_intercession_depends_christ]
+    subject = "marian_intercession"
+    relation = "depends_on"
+    object = "christ_mediation"
+    source_id str = "lg_60_67"
+      ?rationale "Mary's role derives all efficacy from Christ's mediation."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[christ_mediation_son]
+    subject = "christ_mediation"
+    relation = "is_proper_to"
+    object = "son"
+    source_id str = "lg_60_67"
+      ?rationale "The one mediator is Jesus Christ, the incarnate Son."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_receives_grace]
+    subject = "virgin_mary"
+    relation = "receives"
+    object = "sanctifying_grace"
+    source_id str = "ccc_484_495"
+      ?rationale "Mary's holiness is received from God through Christ."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[saints_heavenly_state]
+    subject = "saints_in_heaven"
+    relation = "has_characteristic"
+    object = "heaven"
+    source_id str = "ccc_946_962"
+      ?rationale "The blessed are in glory with Christ."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[saints_human]
+    subject = "saints_in_heaven"
+    relation = "is_kind_of"
+    object = "human_person"
+    source_id str = "ccc_946_962"
+      ?rationale "Here saints names glorified human persons; it is not the angelic class."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[mary_among_saints]
+    subject = "virgin_mary"
+    relation = "is_kind_of"
+    object = "saints_in_heaven"
+    source_id str = "ccc_963_975"
+      ?rationale "Mary belongs to glorified redeemed humanity, with her singular bodily Assumption."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[communion_glorified]
+    subject = "communion_of_saints"
+    relation = "includes"
+    object = "saints_in_heaven"
+    source_id str = "ccc_946_962"
+      ?rationale "The glorified belong to the communion of the Church."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[communion_purifying]
+    subject = "communion_of_saints"
+    relation = "includes"
+    object = "souls_in_purgatory"
+    source_id str = "ccc_946_962"
+      ?rationale "Those being purified remain in ecclesial communion."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[saints_can_intercede]
+    subject = "saints_in_heaven"
+    relation = "can_perform"
+    object = "saints_intercession"
+    source_id str = "st_ii_ii_83_4_11"
+      ?rationale "The blessed pray for others."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[saints_intercession_to_god]
+    subject = "saints_intercession"
+    relation = "turns_to"
+    object = "god"
+    source_id str = "st_ii_ii_83_4_11"
+      ?rationale "The saints address their prayer to God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[saints_intercession_depends_christ]
+    subject = "saints_intercession"
+    relation = "depends_on"
+    object = "christ_mediation"
+    source_id str = "ccc_946_962"
+      ?rationale "Their intercession is through the one mediator."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[marian_intercession_kind]
+    subject = "marian_intercession"
+    relation = "is_kind_of"
+    object = "saints_intercession"
+    source_id str = "ccc_963_975"
+      ?rationale "Mary's intercession has a singular maternal character within the communion of saints."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[invocation_saints_recipient]
+    subject = "invocation_of_saints"
+    relation = "seeks_intercession_of"
+    object = "saints_in_heaven"
+    source_id str = "st_ii_ii_83_4_11"
+      ?rationale "Invocation asks the saints to pray for us; it does not ask them to supply grace as its principal source."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[invocation_mary_kind]
+    subject = "invocation_of_mary"
+    relation = "is_kind_of"
+    object = "invocation_of_saints"
+    source_id str = "ccc_963_975"
+      ?rationale "Asking Mary's prayers is a particular invocation of a saint."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[invocation_mary_recipient]
+    subject = "invocation_of_mary"
+    relation = "seeks_intercession_of"
+    object = "virgin_mary"
+    source_id str = "ccc_963_975"
+      ?rationale "Marian prayer invokes her maternal intercession."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[dulia_saints]
+    subject = "veneration_of_saints"
+    relation = "has_recipient"
+    object = "saints_in_heaven"
+    source_id str = "st_iii_25_5_6"
+      ?rationale "Saints are honored as God's servants."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[hyperdulia_mary]
+    subject = "marian_veneration"
+    relation = "has_recipient"
+    object = "virgin_mary"
+    source_id str = "st_iii_25_5_6"
+      ?rationale "Mary receives singular veneration because she is Mother of God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[latria_god]
+    subject = "divine_adoration"
+    relation = "has_recipient"
+    object = "god"
+    source_id str = "st_iii_25_5_6"
+      ?rationale "Latria belongs to God alone."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[hyperdulia_not_latria]
+    subject = "marian_veneration"
+    relation = "is_distinct_from"
+    object = "divine_adoration"
+    source_id str = "st_iii_25_5_6"
+      ?rationale "Aquinas expressly denies latria to Mary."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[dulia_not_latria]
+    subject = "veneration_of_saints"
+    relation = "is_distinct_from"
+    object = "divine_adoration"
+    source_id str = "st_iii_25_5_6"
+      ?rationale "Honoring a holy creature differs from adoring God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[invocation_not_adoration]
+    subject = "invocation_of_saints"
+    relation = "is_distinct_from"
+    object = "divine_adoration"
+    source_id str = "st_ii_ii_83_4_11"
+      ?rationale "Asking a saint's prayer is distinct from addressing God as the giver of the requested good."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"

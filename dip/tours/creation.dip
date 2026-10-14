@@ -1,0 +1,147 @@
+# Authored scenes and display coordinates; all visible lines reference existing cited edges.
+
+graph_tour_steps[creation_change]
+  tour_id = "creation"
+  title = "Start with natural becoming"
+  question = "What is presupposed when a natural thing comes to be?"
+  narrative = "In Aquinas's account of natural generation, matter is receptive to form, and form determines actuality. These are explanatory principles of becoming in an existing material order."
+  qualification = "Matter and form are principles of the composite. Their separate graph labels do not picture two independently complete objects."
+  source_ids = ["dpn_8", "dpn_2_7"]
+  concept_ids = ["matter", "form", "natural_generation"]
+  edge_ids = ["matter_potential_to_form", "form_actualizes_matter", "matter_in_generation", "form_in_generation"]
+  focus_concept = "natural_generation"
+  camera_z = 32.0
+
+graph_tour_positions[creation_change_matter]
+  step_id = "creation_change"
+  concept_id = "matter"
+  x = -8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[creation_change_form]
+  step_id = "creation_change"
+  concept_id = "form"
+  x = 8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[creation_change_natural_generation]
+  step_id = "creation_change"
+  concept_id = "natural_generation"
+  x = 0.0
+  y = -6.0
+  z = 1.0
+
+graph_tour_steps[creation_dependence]
+  tour_id = "creation"
+  title = "Received being and its cause"
+  question = "Why does Aquinas speak of a cause of being?"
+  narrative = "Aquinas argues that what has being by participation depends on the source of being. God is considered as the universal efficient cause, and as pure act. The question concerns why creatures have being, beyond describing one natural event after another."
+  qualification = "This is a philosophical argument with premises to examine. Merely drawing an arrow does not establish its conclusion."
+  source_ids = ["st_i_44_1", "st_i_3_2"]
+  concept_ids = ["god", "created_being", "pure_act", "efficient_cause"]
+  edge_ids = ["god_creates_all", "god_pure_act", "god_efficient_cause_role"]
+  focus_concept = "god"
+  camera_z = 32.0
+
+graph_tour_positions[creation_dependence_god]
+  step_id = "creation_dependence"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[creation_dependence_created_being]
+  step_id = "creation_dependence"
+  concept_id = "created_being"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[creation_dependence_pure_act]
+  step_id = "creation_dependence"
+  concept_id = "pure_act"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[creation_dependence_efficient_cause]
+  step_id = "creation_dependence"
+  concept_id = "efficient_cause"
+  x = 0.0
+  y = 2.0
+  z = -3.0
+
+graph_tour_steps[creation_creation]
+  tour_id = "creation"
+  title = "Creation and natural generation"
+  question = "Does creation require material for God to work on?"
+  narrative = "Aquinas distinguishes creation, which gives being without a presupposed material subject, from generation within the natural order. The Catechism affirms creation without pre-existing matter."
+  qualification = "The absence of presupposed matter is not a description of nothing as a material or a physical state."
+  source_ids = ["st_i_45_1_3", "ccc_296"]
+  concept_ids = ["god", "creation", "natural_generation", "matter"]
+  edge_ids = ["god_can_create", "creation_distinct_generation", "creation_no_presupposed_matter", "matter_in_generation"]
+  focus_concept = "creation"
+  camera_z = 32.0
+
+graph_tour_positions[creation_creation_god]
+  step_id = "creation_creation"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[creation_creation_creation]
+  step_id = "creation_creation"
+  concept_id = "creation"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[creation_creation_natural_generation]
+  step_id = "creation_creation"
+  concept_id = "natural_generation"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[creation_creation_matter]
+  step_id = "creation_creation"
+  concept_id = "matter"
+  x = 0.0
+  y = 2.0
+  z = -3.0
+
+graph_tour_steps[creation_duration]
+  tour_id = "creation"
+  title = "Dependence and a beginning in time"
+  question = "Are creation and temporal beginning the same question?"
+  narrative = "Aquinas distinguishes dependence by creation from a demonstration that the world began in time. He receives its temporal beginning through faith. The Catechism also teaches that God continues to sustain creatures in being."
+  qualification = "The question of a first moment is distinct from the question of dependence for existence. This scene provides no chronology or physical cosmological model."
+  source_ids = ["st_i_46_2", "ccc_301"]
+  concept_ids = ["god", "creation", "created_being"]
+  edge_ids = ["god_can_create", "god_creates_all"]
+  focus_concept = "created_being"
+  camera_z = 32.0
+
+graph_tour_positions[creation_duration_god]
+  step_id = "creation_duration"
+  concept_id = "god"
+  x = -8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[creation_duration_creation]
+  step_id = "creation_duration"
+  concept_id = "creation"
+  x = 8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[creation_duration_created_being]
+  step_id = "creation_duration"
+  concept_id = "created_being"
+  x = 0.0
+  y = -6.0
+  z = 1.0

@@ -252,13 +252,13 @@ ontology
   relations[is_ordered_to]
     label = "Is ordered to"
     kind = "theological"
-    description = "A theological virtue is directed to God as its origin, motive, and object."
+    description = "The subject is directed toward the stated end; the cited edge determines whether the ordering is natural, moral, or supernatural."
     prose_template = "{subject} is ordered to {object}."
 
   relations[is_proper_to]
     label = "Is proper to"
     kind = "theological"
-    description = "Sacramental grace is proper to each sacrament, with sacrament-specific effects to be established separately."
+    description = "The subject belongs distinctively to the indicated bearer or practice in the respect specified by the cited edge."
     prose_template = "{subject} is proper to {object}."
 
   relations[is_instituted_by]
@@ -691,3 +691,45 @@ ontology
     kind = "metaphysical"
     description = "Distinguishes concepts or modes under the cited account without asserting opposition or separability."
     prose_template = "{subject} is distinct from {object}."
+
+  relations[separates_from]
+    label = "Separates from"
+    kind = "metaphysical"
+    description = "Separation in the circumstances specified by the cited edge."
+    prose_template = "{subject} separates from {object}."
+
+  relations[reunites_with]
+    label = "Is reunited with"
+    kind = "theological"
+    description = "Reunion in the circumstances specified by the cited edge."
+    prose_template = "{subject} is reunited with {object}."
+
+  relations[is_mother_of]
+    label = "Is mother of"
+    kind = "theological"
+    description = "Personal motherhood; the nature according to which birth occurs is specified by the citation and conditions."
+    prose_template = "{subject} is mother of {object}."
+
+  relations[assumes_nature]
+    label = "Assumes nature"
+    kind = "theological"
+    description = "The divine person assumes a created nature without constituting another person or changing divinity."
+    prose_template = "{subject} assumes {object}."
+
+  relations[is_preserved_from]
+    label = "Is preserved from"
+    kind = "theological"
+    description = "Preservation from a specified evil by grace, within the stated scope."
+    prose_template = "{subject} is preserved from {object}."
+
+  relations[depends_on]
+    label = "Depends on"
+    kind = "theological"
+    description = "A derivative operation depends on the stated foundation; the source fixes the mode of dependence."
+    prose_template = "{subject} depends on {object}."
+
+  relations[seeks_intercession_of]
+    label = "Seeks intercession of"
+    kind = "theological"
+    description = "An invocation asks the indicated person or class to pray to God."
+    prose_template = "{subject} seeks the intercession of {object}."

@@ -36,6 +36,45 @@ graph_viewer[default]
 
   link_spacing float = 1.6
 
+  # Attraction, spacing, collision, and settling controls.
+  structural_link_kinds = ["identity", "classification", "composition"]
+
+  link_strength_kind_of = 0.5
+
+  link_strength_structural = 0.3
+
+  link_strength_default = 0.2
+
+  link_distance_kind_of = 2.7
+
+  link_distance_structural = 3.2
+
+  link_distance_default = 4.1
+
+  link_arrow_clearance_ratio = 2.0
+
+  charge_icon_scale_exponent = 2.0
+
+  collision_icon_radius_ratio = 0.52
+
+  collision_arrow_clearance_ratio = 0.5
+
+  collision_strength = 0.72
+
+  collision_iterations = 2
+
+  alpha_decay = 0.045
+
+  alpha_min = 0.002
+
+  velocity_decay = 0.65
+
+  cooldown_ms = 9000
+
+  initial_radius = 5.0
+
+  initial_jitter = 0.2
+
   charge_strength float = -8.0
 
   fit_padding float = 45.0
@@ -77,3 +116,7 @@ graph_viewer[default]
   god_icon_glow_opacity float = 0.38
 
   influence_summary_depth int = 3
+
+  tour_icon_size = 3.0
+
+  tour_transition_ms = 800

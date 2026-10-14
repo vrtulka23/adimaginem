@@ -117,3 +117,89 @@ study_focus_concept str = "trinity"
 
 study_focus_enabled bool = false
   ?descr "Whether the viewer initially restricts the graph to the study focus group."
+
+# Force layout controls. These are editorial display choices.
+
+structural_link_kinds str[1:] = ["identity", "classification", "composition"]
+  ?descr "Relation kinds sharing the structural attraction and distance settings; is_kind_of always uses its specific settings."
+
+link_strength_kind_of float = 0.5
+  ?descr "Attraction for is_kind_of edges. Viewer layout only, not philosophical or causal strength."
+  !condition ({.} >= 0 && {.} <= 1)
+
+link_strength_structural float = 0.3
+  ?descr "Attraction for structural_link_kinds, except is_kind_of. Viewer layout only."
+  !condition ({.} >= 0 && {.} <= 1)
+
+link_strength_default float = 0.2
+  ?descr "Attraction for all remaining edges, including influence relations. Viewer layout only."
+  !condition ({.} >= 0 && {.} <= 1)
+
+link_distance_kind_of float = 2.7
+  ?descr "Preferred is_kind_of distance before icon clearance and the link_spacing multiplier, in viewer units."
+  !condition ({.} > 0)
+
+link_distance_structural float = 3.2
+  ?descr "Preferred structural-kind distance before icon clearance and link_spacing, in viewer units."
+  !condition ({.} > 0)
+
+link_distance_default float = 4.1
+  ?descr "Preferred distance for other edges before icon clearance and link_spacing, in viewer units."
+  !condition ({.} > 0)
+
+link_arrow_clearance_ratio float = 2.0
+  ?descr "Total arrow clearance added to each link, as a multiple of the rendered arrow length."
+  !condition ({.} >= 0)
+
+charge_icon_scale_exponent float = 2.0
+  ?descr "Exponent applied to current/default icon size when scaling charge_strength; zero keeps charge independent of icon size."
+  !condition ({.} >= 0)
+
+collision_icon_radius_ratio float = 0.52
+  ?descr "Collision radius as a fraction of the scaled icon diameter, before gap and arrow clearance."
+  !condition ({.} > 0)
+
+collision_arrow_clearance_ratio float = 0.5
+  ?descr "Extra collision radius as a multiple of the rendered arrow length."
+  !condition ({.} >= 0)
+
+collision_strength float = 0.72
+  ?descr "Strength of collision resolution per iteration."
+  !condition ({.} >= 0 && {.} <= 1)
+
+collision_iterations int = 2
+  ?descr "Collision solver iterations per simulation tick."
+  !condition ({.} >= 1)
+
+alpha_decay float = 0.045
+  ?descr "Fractional simulation cooling per tick; lower values let forces act longer."
+  !condition ({.} > 0 && {.} < 1)
+
+alpha_min float = 0.002
+  ?descr "Cooling threshold at which the force simulation settles."
+  !condition ({.} > 0 && {.} < 1)
+
+velocity_decay float = 0.65
+  ?descr "Fraction of velocity removed per tick; larger values damp motion more strongly."
+  !condition ({.} >= 0 && {.} < 1)
+
+cooldown_ms int = 9000
+  ?descr "Maximum wall-clock duration of a settling run, in milliseconds."
+  !condition ({.} > 0)
+
+initial_radius float = 5.0
+  ?descr "Radius of the deterministic initial spherical placement, in viewer units."
+  !condition ({.} > 0)
+
+initial_jitter float = 0.2
+  ?descr "Width of the centered deterministic per-concept position perturbation, in viewer units; zero disables it."
+  !condition ({.} >= 0)
+
+# Guided-tour presentation defaults.
+tour_icon_size float = 3.0
+  ?descr "Icon size for authored tour coordinates; the previous exploration size is restored on exit."
+  !condition ({.} > 0)
+
+tour_transition_ms int = 800
+  ?descr "Duration of tour camera transitions in milliseconds; reduced-motion preference makes them immediate."
+  !condition ({.} >= 0)

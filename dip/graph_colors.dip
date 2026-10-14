@@ -505,3 +505,75 @@ graph_concept_styles[first_actuality] : graph_metaphysics
 graph_concept_styles[second_actuality] : graph_metaphysics
 
 graph_concept_styles[creation] : graph_creation
+
+graph_concept_styles[heaven] : graph_eschatology
+
+graph_concept_styles[hell] : graph_eschatology
+
+graph_concept_styles[purgatory] : graph_eschatology
+
+graph_concept_styles[human_death] : graph_eschatology
+
+graph_concept_styles[separated_soul] : graph_eschatology
+
+graph_concept_styles[particular_judgment] : graph_eschatology
+
+graph_concept_styles[last_judgment] : graph_eschatology
+
+graph_concept_styles[resurrection_of_dead] : graph_eschatology
+
+graph_concept_styles[purification_from_sin] : graph_eschatology
+
+graph_concept_styles[temporal_punishment] : graph_eschatology
+
+graph_concept_styles[eternal_punishment] : graph_eschatology
+
+graph_concept_styles[souls_in_purgatory] : graph_eschatology
+
+graph_concept_styles[suffrages_for_dead] : graph_eschatology
+
+graph_concept_styles[renewed_creation] : graph_eschatology
+
+graph_concept_styles[sacramental_absolution] : graph_sacraments
+
+graph_concept_styles[contrition] : graph_grace
+
+graph_concept_styles[sacramental_confession] : graph_sacraments
+
+graph_concept_styles[satisfaction_for_sin] : graph_sacraments
+
+graph_concept_styles[virgin_mary] : graph_marian
+
+graph_concept_styles[divine_motherhood] : graph_marian
+
+graph_concept_styles[perpetual_virginity] : graph_marian
+
+graph_concept_styles[immaculate_conception] : graph_marian
+
+graph_concept_styles[assumption_of_mary] : graph_marian
+
+graph_concept_styles[marian_intercession] : graph_marian
+
+graph_concept_styles[mary_spiritual_motherhood] : graph_marian
+
+graph_concept_styles[human_nature] : graph_human
+
+graph_concept_styles[incarnation] : graph_divine
+
+graph_concept_styles[christ_mediation] : graph_divine
+
+graph_concept_styles[communion_of_saints] : graph_saints
+
+graph_concept_styles[saints_in_heaven] : graph_saints
+
+graph_concept_styles[saints_intercession] : graph_saints
+
+graph_concept_styles[invocation_of_saints] : graph_saints
+
+graph_concept_styles[invocation_of_mary] : graph_marian
+
+graph_concept_styles[veneration_of_saints] : graph_saints
+
+graph_concept_styles[marian_veneration] : graph_marian
+
+graph_concept_styles[divine_adoration] : graph_divine

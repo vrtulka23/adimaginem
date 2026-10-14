@@ -1,0 +1,141 @@
+# Cited definitions; Latin terms are normalized scholarly labels.
+ontology
+  concepts[heaven]
+    label = "Heaven"
+    latin_name = "caelum"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Definitive blessed communion with the Trinity; includes the vision of God. This is not the physical sky."
+    source_id = "ccc_1023_1029"
+    review_status = "draft"
+
+  concepts[hell]
+    label = "Hell"
+    latin_name = "infernus"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Definitive exclusion from communion with God through dying in unrepented mortal sin; eternal, not a purifying stage."
+    source_id = "ccc_1033_1037"
+    review_status = "draft"
+
+  concepts[purgatory]
+    label = "Purgatory"
+    latin_name = "purgatorium"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Final purification of those who die in God's friendship but still need cleansing; their salvation is assured."
+    source_id = "ccc_1030_1032"
+    review_status = "draft"
+
+  concepts[human_death]
+    label = "Human death"
+    latin_name = "mors hominis"
+    domain = "theology"
+    study_areas = ["theology", "anthropology"]
+    category = "process"
+    note = "Separation of the human soul and body; the soul survives while awaiting resurrection."
+    source_id = "ccc_988_1001"
+    review_status = "draft"
+
+  concepts[separated_soul]
+    label = "Separated human soul"
+    latin_name = "anima separata"
+    domain = "theology"
+    study_areas = ["theology", "anthropology"]
+    category = "state"
+    note = "The human soul subsisting after death, awaiting reunion with its body; not a complete embodied human person."
+    source_id = "ccc_988_1001"
+    review_status = "draft"
+
+  concepts[particular_judgment]
+    label = "Particular judgment"
+    latin_name = "iudicium particulare"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Judgment of each person at death in relation to Christ."
+    source_id = "ccc_1021_1022"
+    review_status = "draft"
+
+  concepts[last_judgment]
+    label = "Last Judgment"
+    latin_name = "iudicium universale"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Universal judgment accompanying Christ's return after the resurrection; manifests the truth of lives and divine justice."
+    source_id = "ccc_1038_1041"
+    review_status = "draft"
+
+  concepts[resurrection_of_dead]
+    label = "Resurrection of the dead"
+    latin_name = "resurrectio mortuorum"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "process"
+    note = "God raises all the dead; bodily resurrection has different outcomes for the just and the unjust."
+    source_id = "ccc_988_1001"
+    review_status = "draft"
+
+  concepts[purification_from_sin]
+    label = "Purification from sin"
+    latin_name = "purificatio a peccato"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "process"
+    note = "Cleansing of disordered attachment and the consequences of sin, in this life or after death."
+    source_id = "ccc_1471_1479"
+    review_status = "draft"
+
+  concepts[temporal_punishment]
+    label = "Temporal punishment of sin"
+    latin_name = "poena temporalis peccati"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Purificatory consequence of sin that can remain after guilt is forgiven; distinct from eternal punishment. No duration is encoded."
+    source_id = "ccc_1471_1479"
+    review_status = "draft"
+
+  concepts[eternal_punishment]
+    label = "Eternal punishment"
+    latin_name = "poena aeterna"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Loss of eternal life arising from unrepented mortal sin; distinct from the temporal consequences remaining after forgiveness."
+    source_id = "ccc_1471_1479"
+    review_status = "draft"
+
+  concepts[souls_in_purgatory]
+    label = "Souls undergoing final purification"
+    latin_name = "animae in purgatorio"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Departed human souls in God's friendship who undergo purification before entering heaven."
+    source_id = "ccc_1030_1032"
+    review_status = "draft"
+
+  concepts[suffrages_for_dead]
+    label = "Suffrages for the dead"
+    latin_name = "suffragia pro defunctis"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Prayer and other acts of ecclesial charity offered for the departed, especially the Eucharistic sacrifice."
+    source_id = "ccc_1030_1032"
+    review_status = "draft"
+
+  concepts[renewed_creation]
+    label = "New heaven and new earth"
+    latin_name = "caelum novum et terra nova"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Final renewal of humanity and the universe in Christ; a revealed fulfillment without a physical timetable in this model."
+    source_id = "ccc_1042_1050"
+    review_status = "draft"

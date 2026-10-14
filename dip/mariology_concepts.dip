@@ -1,0 +1,181 @@
+# Cited definitions; Latin terms are normalized scholarly labels.
+ontology
+  concepts[virgin_mary]
+    label = "Blessed Virgin Mary"
+    latin_name = "Beata Virgo Maria"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "person"
+    note = "Mary of Nazareth, a Jewish woman and human creature, mother of the eternal Son according to his humanity."
+    source_id = "ccc_484_495"
+    review_status = "draft"
+
+  concepts[divine_motherhood]
+    label = "Theotokos / Mother of God"
+    latin_name = "maternitas divina; Dei Genetrix (Theotokos)"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "Mary's motherhood concerns the divine person born from her according to humanity; she does not originate the Godhead."
+    source_id = "st_iii_35_4"
+    review_status = "draft"
+
+  concepts[perpetual_virginity]
+    label = "Mary's perpetual virginity"
+    latin_name = "virginitas perpetua Mariae"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "The Church confesses Mary as virgin before, in, and after the birth of Christ."
+    source_id = "st_iii_28_1_3"
+    review_status = "draft"
+
+  concepts[immaculate_conception]
+    label = "Immaculate Conception of Mary"
+    latin_name = "immaculata conceptio Mariae"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "Mary was preserved from original sin from her conception through Christ's merits. This later-defined dogma is not the position expressed in ST III, q. 27, a. 2."
+    source_id = "ccc_484_495"
+    review_status = "draft"
+
+  concepts[assumption_of_mary]
+    label = "Assumption of Mary"
+    latin_name = "assumptio Beatae Mariae Virginis"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "At the completion of her earthly life, Mary was taken body and soul into heavenly glory. The definition does not settle the manner of her death."
+    source_id = "ccc_963_975"
+    review_status = "draft"
+
+  concepts[marian_intercession]
+    label = "Mary's intercession"
+    latin_name = "intercessio Mariae"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Mary's prayer for the faithful depends wholly on Christ's unique mediation."
+    source_id = "lg_60_67"
+    review_status = "draft"
+
+  concepts[mary_spiritual_motherhood]
+    label = "Mary's spiritual motherhood"
+    latin_name = "maternitas spiritualis Mariae"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "office"
+    note = "Mary's maternal care in the order of grace, exercised in dependence on Christ."
+    source_id = "lg_60_67"
+    review_status = "draft"
+
+  concepts[human_nature]
+    label = "Human nature"
+    latin_name = "natura humana"
+    domain = "theology"
+    study_areas = ["theology", "anthropology", "metaphysics"]
+    category = "principle"
+    note = "Human nature comprises a rational soul and body. In Christ it is assumed by the eternal Son without a second human person."
+    source_id = "ccc_464_469"
+    review_status = "draft"
+
+  concepts[incarnation]
+    label = "Incarnation of the Word"
+    latin_name = "incarnatio Verbi"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "The eternal Son assumes human nature; one divine person subsists in divine and human natures without confusion."
+    source_id = "ccc_464_469"
+    review_status = "draft"
+
+  concepts[christ_mediation]
+    label = "Christ's unique mediation"
+    latin_name = "mediatio Christi"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "office"
+    note = "The unique saving mediation of Jesus Christ; creaturely intercession derives its efficacy from him."
+    source_id = "lg_60_67"
+    review_status = "draft"
+
+  concepts[communion_of_saints]
+    label = "Communion of saints"
+    latin_name = "communio sanctorum"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "Communion in holy things and among holy persons, embracing the faithful on earth, those being purified, and those in glory."
+    source_id = "ccc_946_962"
+    review_status = "draft"
+
+  concepts[saints_in_heaven]
+    label = "Saints in heaven"
+    latin_name = "sancti in caelo"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Human persons in heavenly glory, united to Christ and interceding for the Church. The category is not limited to formally canonized saints."
+    source_id = "ccc_946_962"
+    review_status = "draft"
+
+  concepts[saints_intercession]
+    label = "Intercession of saints"
+    latin_name = "intercessio sanctorum"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "The blessed pray for others in union with Christ; their prayer does not replace his mediation."
+    source_id = "st_ii_ii_83_4_11"
+    review_status = "draft"
+
+  concepts[invocation_of_saints]
+    label = "Invocation of saints"
+    latin_name = "invocatio sanctorum"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Addressing saints with a request for their intercession before God."
+    source_id = "st_ii_ii_83_4_11"
+    review_status = "draft"
+
+  concepts[invocation_of_mary]
+    label = "Invocation of Mary"
+    latin_name = "invocatio Mariae"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Asking Mary to pray for us, as a particular form of invoking a saint."
+    source_id = "ccc_963_975"
+    review_status = "draft"
+
+  concepts[veneration_of_saints]
+    label = "Veneration of saints"
+    latin_name = "dulia"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Honor given to God's holy servants; distinct from adoration due to God alone."
+    source_id = "st_iii_25_5_6"
+    review_status = "draft"
+
+  concepts[marian_veneration]
+    label = "Marian veneration"
+    latin_name = "hyperdulia"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "The singular honor due to the Mother of God; distinct from divine adoration."
+    source_id = "st_iii_25_5_6"
+    review_status = "draft"
+
+  concepts[divine_adoration]
+    label = "Adoration of God"
+    latin_name = "latria"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Adoration owed to God alone, including the incarnate Son as one divine person."
+    source_id = "st_iii_25_5_6"
+    review_status = "draft"

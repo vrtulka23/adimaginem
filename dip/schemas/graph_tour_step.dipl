@@ -1,0 +1,17 @@
+?descr "One authored, cited scene in a guided tour"
+tour_id str
+title str
+question str
+narrative str
+  ?rationale "Editorial explanatory prose grounded in source_ids; scene geometry makes no additional doctrinal claim."
+qualification str
+source_ids str[1:]
+concept_ids str[1:]
+edge_ids str[1:]
+focus_concept str
+camera_x float = 0.0
+camera_y float = 0.0
+camera_z float = 32.0
+look_at_x float = 0.0
+look_at_y float = 0.0
+look_at_z float = 0.0

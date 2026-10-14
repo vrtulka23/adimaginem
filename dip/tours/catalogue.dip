@@ -1,0 +1,30 @@
+# Catalogue entries invite dialogue; tags never infer a visitor's religion.
+graph_tours map : graph_tour
+
+graph_tour_steps map : graph_tour_step
+
+graph_tour_positions map : graph_tour_position
+
+graph_tours[trinity]
+  title = "One God, three persons"
+  description = "Clarify divine unity, person and essence, eternal Word, and personal Love. An invitation to discuss what Catholics mean by Trinity."
+  audience_tags = ["Dialogue with Muslims", "General introduction"]
+  topic_tags = ["Trinity", "Divine unity", "Word and Love"]
+  step_ids = ["trinity_unity", "trinity_persons", "trinity_word", "trinity_love"]
+  framing_note = "This tour explains Catholic teaching. It makes no assumption about an individual visitor's beliefs. The Trinity is received through revelation; the diagram is not a proof from reason alone."
+
+graph_tours[eternal_son]
+  title = "The Son, eternity, and divine life"
+  description = "Explore why Catholic teaching confesses the Son as eternally divine, and how the Spirit and the common divine work belong to the same confession."
+  audience_tags = ["Dialogue with Jehovah's Witnesses", "Christian dialogue", "General introduction"]
+  topic_tags = ["Divinity of the Son", "Eternal generation", "Holy Spirit"]
+  step_ids = ["eternal_son_essence", "eternal_son_eternity", "eternal_son_spirit", "eternal_son_operation"]
+  framing_note = "This tour invites clarification of Catholic terms without assigning beliefs to the visitor. Concept nodes are labels for discussion; the divine essence is not a fourth person."
+
+graph_tours[creation]
+  title = "Creation, change, and dependence"
+  description = "Distinguish natural change, creation, received existence, and a beginning in time in Aquinas's account."
+  audience_tags = ["Dialogue with atheists and agnostics", "Philosophical inquiry", "General introduction"]
+  topic_tags = ["Creation", "Causality", "Faith and reason"]
+  step_ids = ["creation_change", "creation_dependence", "creation_creation", "creation_duration"]
+  framing_note = "This tour presents Thomistic arguments and Catholic teaching for examination. Its pictures illustrate distinctions; they do not by themselves demonstrate the conclusions or replace investigation of nature."

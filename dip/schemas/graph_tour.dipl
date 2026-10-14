@@ -1,0 +1,10 @@
+?descr "A cited editorial guided tour; audience tags describe an invitation, not a visitor's identity"
+title str
+description str
+audience_tags str[1:]
+topic_tags str[1:]
+step_ids str[1:]
+framing_note str
+review_status str = "draft"
+  !options ["draft", "reviewed", "contested"]
+  !labels ["Draft", "Reviewed", "Contested"]

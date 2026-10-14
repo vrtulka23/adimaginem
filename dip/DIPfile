@@ -1,4 +1,13 @@
 schemas[]
+  name = "graph_tour"
+  file = "schemas/graph_tour.dipl"
+schemas[]
+  name = "graph_tour_step"
+  file = "schemas/graph_tour_step.dipl"
+schemas[]
+  name = "graph_tour_position"
+  file = "schemas/graph_tour_position.dipl"
+schemas[]
   name = "study_area"
   file = "schemas/study_area.dipl"
 schemas[]
@@ -104,3 +113,23 @@ code[]
   file = "schemas/graph_color_groups.dipl"
 code[]
   file = "graph_colors.dip"
+code[]
+  file = "extension_sources.dip"
+code[]
+  file = "eschatology_concepts.dip"
+code[]
+  file = "reconciliation_concepts.dip"
+code[]
+  file = "mariology_concepts.dip"
+code[]
+  file = "extension_edges.dip"
+code[]
+  file = "tours/sources.dip"
+code[]
+  file = "tours/catalogue.dip"
+code[]
+  file = "tours/trinity.dip"
+code[]
+  file = "tours/eternal_son.dip"
+code[]
+  file = "tours/creation.dip"

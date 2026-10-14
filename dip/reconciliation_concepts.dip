@@ -1,0 +1,41 @@
+# Cited definitions; Latin terms are normalized scholarly labels.
+ontology
+  concepts[sacramental_absolution]
+    label = "Sacramental absolution"
+    latin_name = "absolutio sacramentalis"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "The ordained minister's sacramental act of forgiveness in Christ's name within Penance."
+    source_id = "st_iii_84_3"
+    review_status = "draft"
+
+  concepts[contrition]
+    label = "Contrition"
+    latin_name = "contritio"
+    domain = "theology"
+    study_areas = ["theology", "ethics"]
+    category = "act"
+    note = "Sorrow for and rejection of sins committed, with the resolve not to sin again; includes perfect and imperfect contrition."
+    source_id = "ccc_1451_1460"
+    review_status = "draft"
+
+  concepts[sacramental_confession]
+    label = "Sacramental confession"
+    latin_name = "confessio sacramentalis"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Acknowledgment of sins to a priest in the sacrament of Penance."
+    source_id = "ccc_1451_1460"
+    review_status = "draft"
+
+  concepts[satisfaction_for_sin]
+    label = "Satisfaction for sin"
+    latin_name = "satisfactio pro peccatis"
+    domain = "theology"
+    study_areas = ["theology", "ethics"]
+    category = "act"
+    note = "Reparation and penitential acts for harm and disorder remaining after sin, undertaken through Christ."
+    source_id = "ccc_1451_1460"
+    review_status = "draft"

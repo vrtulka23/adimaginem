@@ -46,11 +46,13 @@ node --test tools/web_ontology_adapter.test.mjs tools/relationship_summary.test.
 node --test tools/ontology_loader.test.mjs tools/selection_force.test.mjs
 ```
 
-The adapter supports the current scalar schema and rejects arrays, unitful values, unsafe integers, and truncated values explicitly. Such schema extensions require adapting the viewer contract. SNT's richer schema and inspection APIs remain available for future interfaces.
+The adapter supports scalar fields and one-dimensional string arrays, including tour tags and scene references. It rejects unsupported array shapes, unitful values, unsafe integers, and truncated values explicitly. Such schema extensions require adapting the viewer contract. SNT's richer schema and inspection APIs remain available for future interfaces.
 
 **Startup limitation:** evaluation and extraction of 8,006 paths took about 82 seconds in a local Node/WebAssembly parity check. The worker keeps the page responsive and reports progress, but each page load currently repeats extraction. This is data and interaction parity, not a claim of equal startup speed. A bulk value/metadata inspection API in SNT would help avoid thousands of individual description calls. The runtime WASM is approximately 4.8 MB before transfer compression. CDN dependencies below still require internet access.
 
 ## Exploring the graph
+
+Open **Guided tours** at the top of the sidebar for three introductions covering the Trinity, the Son's divinity, and creation. Catalogue cards show descriptions and audience tags. **Start tour** opens a sequence of cited scenes with saved DIPL coordinates; use **Previous**, **Next**, and **Exit tour**. Exiting restores the exploration view. Tours work in both running modes. See [guided tours](../docs/guided-tours.md) for source practice and authoring instructions.
 
 Use the concept search and domain/relation filters to focus the graph. Choose two concepts and select **Connect and explain** to trace their shortest connection under the active filters. Path search treats edges as traversable in either direction by default; enable **Follow arrow direction** to require subject-to-object traversal.
 
@@ -113,3 +115,7 @@ The cited [metaphysics module](../docs/metaphysics.md) connects general principl
 ## Overlapping study areas
 
 Expand **Study areas** in the left sidebar to filter by ethics, knowledge and truth, natural philosophy, logic, social and political philosophy, or the three broad areas. Checkboxes combine by union; domain and other filters still apply. **Clear study-area filter** restores all areas. **About selected areas** shows the cited scope and qualifications from DIPL, and concept panels list their memberships. See [study areas](../docs/study-areas.md).
+
+## Force layout settings
+
+Attraction weights, relation-kind grouping, preferred distances, collision, cooling, and initial spread are configured in [`dip/graph_viewer.dip`](../dip/graph_viewer.dip). See [graph layout controls](../docs/graph-layout.md) for the parameter table and formulas. These are visual tuning settings; they do not measure philosophical or causal strength. Restart Python mode or rebuild static mode after editing them.

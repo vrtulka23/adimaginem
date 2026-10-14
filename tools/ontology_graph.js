@@ -1,6 +1,7 @@
 import * as THREE from "https://esm.sh/three";
 import { explainPath, collectInfluence } from "./relationship_summary.mjs";
 import { loadOntology } from "./ontology_loader.mjs";
+import { prepareTours, filterTours } from "./guided_tours.mjs";
 import { createSelectionForce } from "./selection_force.mjs";
 import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.js";
 import {
@@ -25,7 +26,8 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({
 let colorGroups, relationColors, conceptGroups;
 const focusedGroups = new Set();
 const selectedStudyAreas = new Set();
-const shortKinds = new Set(["identity", "classification", "composition"]);
+let structuralLinkKinds;
+let tourData, activeTour = null, tourSnapshot = null, tourTransition = 0;
 let db, concepts, edges, positions, graph, iconSize, iconGap, iconHitPadding, sizeConfig, activeSignature = "", layoutNeedsFit = false;
 let nodeRegistry = {}, nodeVisuals = {}, pathEdgeIds = new Set(), pathNodeIds = new Set(), selected = null, initialTickReported = false;
 let selectionRing;
@@ -86,8 +88,9 @@ function syncSelectionRing() {
   if (!selectionRing) return;
   const node = graph.graphData().nodes.find((node) => node.id === selected);
   const visual = node && nodeVisuals[node.id];
-  selectionRing.visible = Boolean(visual);
-  if (!visual) return;
+  // Scene replacement detaches old meshes until the next render frame.
+  selectionRing.visible = Boolean(visual?.parent);
+  if (!visual?.parent) return;
   // Engine ticks precede the renderer's node-mesh position update.
   selectionRing.position.set(node.x, node.y, node.z);
   visual.parent.localToWorld(selectionRing.position);
@@ -161,8 +164,8 @@ function fillColorLegend() {
     .map(([key, entry]) => `<div class="legend-item relation-key" data-kind="${esc(key)}"><span class="swatch line-swatch" style="background:${esc(entry.color)}"></span><span>${esc(colorLabel(entry))}</span><span class="legend-count"></span></div>`).join("");
 }
 function updateLegend() {
-  const domains = activeDomains(), counts = {}, relationCounts = {};
-  for (const [id, c] of Object.entries(concepts)) if (domains.has(c.domain) && matchesStudyFocus(id)) counts[conceptGroups[id]] = (counts[conceptGroups[id]] || 0) + 1;
+  const counts = {}, relationCounts = {};
+  for (const node of visibleNodes()) counts[conceptGroups[node.id]] = (counts[conceptGroups[node.id]] || 0) + 1;
   for (const [, edge] of activeEdges()) {
     const kind = db.ontology.relations[edge.relation].kind;
     relationCounts[kind] = (relationCounts[kind] || 0) + 1;
@@ -286,6 +289,7 @@ function makeDivineEmblem() {
 function finishSculpture(group, node, materials) {
   group.scale.setScalar(iconSize * iconScale(node.id));
   const label = makeLabelSprite(node.label, iconScale(node.id));
+  label.visible = Boolean(activeTour) || document.querySelector('#show-labels').checked || selected === node.id || pathNodeIds.has(node.id);
   group.add(label);
   group.userData.label = label;
   group.userData.iconMaterial = materials[0];
@@ -365,7 +369,7 @@ function makeLabelSprite(text, scale = 1) {
 function positionSeed(s) { let h = 2166136261; for (const ch of s) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return (h >>> 0) / 4294967295; }
 function initialLayout() {
   const ids = Object.keys(concepts), n = ids.length, pos = {};
-  ids.forEach((id, i) => { const y = 1 - 2 * (i + .5) / n, r = Math.sqrt(1 - y * y), a = i * Math.PI * (3 - Math.sqrt(5)), j = (positionSeed(id) - .5) * .2; pos[id] = [5 * r * Math.cos(a) + j, 5 * y, 5 * r * Math.sin(a) - j]; });
+  ids.forEach((id, i) => { const y = 1 - 2 * (i + .5) / n, r = Math.sqrt(1 - y * y), a = i * Math.PI * (3 - Math.sqrt(5)), j = (positionSeed(id) - .5) * sizeConfig.initial_jitter; pos[id] = [sizeConfig.initial_radius * r * Math.cos(a) + j, sizeConfig.initial_radius * y, sizeConfig.initial_radius * r * Math.sin(a) - j]; });
   return pos;
 }
 function activeDomains() { return new Set([...document.querySelectorAll("#domains input:checked")].map((x) => x.value)); }
@@ -389,10 +393,12 @@ function updateStudyAreas() {
   draw();
 }
 function activeEdges() {
+  if (activeTour?.scene) return activeTour.scene.step.edge_ids.map(id => [id, edges[id]]);
   const selectedRelations = [...document.querySelector("#relations").selectedOptions].map((o) => o.value), domains = activeDomains(), included = document.querySelector("#included").checked;
   return Object.entries(edges).filter(([, e]) => (!included || e.included_in_model) && (!selectedRelations.length || selectedRelations.includes(e.relation)) && concepts[e.subject] && concepts[e.object] && matchesStudyFocus(e.subject) && matchesStudyFocus(e.object) && domains.has(concepts[e.subject].domain) && domains.has(concepts[e.object].domain));
 }
 function visibleNodes() {
+  if (activeTour?.scene) return activeTour.scene.step.concept_ids.map(id => nodeRegistry[id]);
   const domains = activeDomains();
   return Object.entries(concepts).filter(([id, c]) => domains.has(c.domain) && matchesStudyFocus(id)).map(([id, c]) => {
     if (!nodeRegistry[id]) { const [x, y, z] = positions[id]; nodeRegistry[id] = { id, label: c.label, domain: c.domain, category: c.category, x, y, z }; }
@@ -400,16 +406,16 @@ function visibleNodes() {
   });
 }
 function preferredDistance(edge) {
-  const base = edge.relation === "is_kind_of" ? 2.7 : shortKinds.has(edge.kind) ? 3.2 : 4.1;
-  return sizeConfig.link_spacing * Math.max(base, iconSize * (iconScale(edge.source.id || edge.source) + iconScale(edge.target.id || edge.target)) / 2 + 2 * iconGap + 2 * arrowLength());
+  const base = edge.relation === "is_kind_of" ? sizeConfig.link_distance_kind_of : structuralLinkKinds.has(edge.kind) ? sizeConfig.link_distance_structural : sizeConfig.link_distance_default;
+  return sizeConfig.link_spacing * Math.max(base, iconSize * (iconScale(edge.source.id || edge.source) + iconScale(edge.target.id || edge.target)) / 2 + 2 * iconGap + sizeConfig.link_arrow_clearance_ratio * arrowLength());
 }
 function configureForces() {
   graph.d3Force("link")
     .distance((edge) => preferredDistance(edge))
-    .strength((edge) => edge.relation === "is_kind_of" ? 0.5 : shortKinds.has(edge.kind) ? 0.3 : 0.2);
-  graph.d3Force("charge").strength(sizeConfig.charge_strength * (iconSize / sizeConfig.icon_size) ** 2);
+    .strength((edge) => edge.relation === "is_kind_of" ? sizeConfig.link_strength_kind_of : structuralLinkKinds.has(edge.kind) ? sizeConfig.link_strength_structural : sizeConfig.link_strength_default);
+  graph.d3Force("charge").strength(sizeConfig.charge_strength * (iconSize / sizeConfig.icon_size) ** sizeConfig.charge_icon_scale_exponent);
   graph.d3Force("center", d3.forceCenter(0, 0, 0));
-  graph.d3Force("collide", d3.forceCollide(node => iconSize * iconScale(node.id) * 0.52 + iconGap + arrowLength() * 0.5).strength(0.72).iterations(2));
+  graph.d3Force("collide", d3.forceCollide(node => iconSize * iconScale(node.id) * sizeConfig.collision_icon_radius_ratio + iconGap + arrowLength() * sizeConfig.collision_arrow_clearance_ratio).strength(sizeConfig.collision_strength).iterations(sizeConfig.collision_iterations));
 }
 function restoreSelectionLayout() {
   selectionForce.restore();
@@ -420,7 +426,7 @@ function restoreSelectionLayout() {
   for (const node of graph.graphData().nodes) positions[node.id] = [node.x, node.y, node.z];
 }
 function openSelectionSpace() {
-  if (!graph || !selected || !sizeConfig.selection_repulsion_enabled) return;
+  if (!graph || activeTour || !selected || !sizeConfig.selection_repulsion_enabled) return;
   if (!selectionForce.begin(selected, {
     radius: iconSize * iconScale(selected) * sizeConfig.selection_repulsion_radius,
     strength: sizeConfig.selection_repulsion_strength,
@@ -453,7 +459,7 @@ function updateVisualState() {
     if (visual.userData.glowMaterial) visual.userData.glowMaterial.uniforms.opacity.value =
       sizeConfig.god_icon_glow_opacity * visual.userData.iconMaterial.opacity;
     const label = visual.userData.label;
-    if (label) label.visible = showAll || active;
+    if (label) label.visible = Boolean(activeTour) || showAll || active;
   }
   updateLegend();
   syncBillboards();
@@ -473,7 +479,7 @@ function draw(reheatChanged = true) {
     activeSignature = signature;
     layoutNeedsFit = true;
     graph.graphData({ nodes, links });
-    configureForces();
+    if (!activeTour) configureForces();
     if (reheatChanged) graph.d3ReheatSimulation();
   }
   if (selected) showDetails(selected);
@@ -498,9 +504,9 @@ function createGraph() {
     .linkLabel((link) => `${esc(concepts[link.source.id || link.source].label)} → ${esc(db.ontology.relations[link.relation].label)} → ${esc(concepts[link.target.id || link.target].label)}`)
     .onNodeClick((node) => { if (selected === node.id) deselectConcept(); else selectConcept(node.id); })
     .onNodeHover((node) => { el.style.cursor = node ? "pointer" : "grab"; })
-    .onEngineTick(() => { const active = visibleNodes(); for (const n of active) positions[n.id] = [n.x, n.y, n.z]; if (!initialTickReported && active.length) { const extent = ["x", "y", "z"].map((axis) => (Math.max(...active.map((n) => n[axis])) - Math.min(...active.map((n) => n[axis]))).toFixed(1)).join(" × "); document.querySelector("#layout-status").textContent = `Settling ${active.length} concepts · initial spread ${extent}.`; initialTickReported = true; } syncBillboards(); })
-    .onEngineStop(() => { if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } if (selected && !selectionForce.active()) openSelectionSpace(); });
-  graph.d3AlphaDecay(0.045).d3AlphaMin(0.002).d3VelocityDecay(0.65).cooldownTime(9000);
+    .onEngineTick(() => { if (activeTour) { syncBillboards(); return; } const active = visibleNodes(); for (const n of active) positions[n.id] = [n.x, n.y, n.z]; if (!initialTickReported && active.length) { const extent = ["x", "y", "z"].map((axis) => (Math.max(...active.map((n) => n[axis])) - Math.min(...active.map((n) => n[axis]))).toFixed(1)).join(" × "); document.querySelector("#layout-status").textContent = `Settling ${active.length} concepts · initial spread ${extent}.`; initialTickReported = true; } syncBillboards(); })
+    .onEngineStop(() => { if (activeTour) { syncBillboards(); return; } if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } if (selected && !selectionForce.active()) openSelectionSpace(); });
+  graph.d3AlphaDecay(sizeConfig.alpha_decay).d3AlphaMin(sizeConfig.alpha_min).d3VelocityDecay(sizeConfig.velocity_decay).cooldownTime(sizeConfig.cooldown_ms);
   graph.d3Force("selection-space", selectionForce);
   graph.scene().add(new THREE.AmbientLight(0x9fb1c7, 1.7));
   const key = new THREE.DirectionalLight(0xffefd1, 2.4); key.position.set(-9, 12, 15); graph.scene().add(key);
@@ -511,7 +517,7 @@ function createGraph() {
 }
 
 function selectConcept(id) {
-  if (!concepts[id]) return;
+  if (!concepts[id] || (activeTour && !activeTour.scene.conceptIds.has(id))) return;
   selected = id;
   document.querySelector("#search").value = id;
   showDetails(id); updateVisualState();
@@ -683,7 +689,7 @@ function setIconSize(value, anneal = true) {
   for (const visual of Object.values(nodeVisuals)) visual.scale.setScalar(iconSize * iconScale(visual.userData.nodeId));
   syncSelectionRing();
   if (anneal) layoutNeedsFit = true;
-  if (graph) { configureForces(); graph.linkDirectionalArrowLength(arrowLength); if (anneal) graph.d3ReheatSimulation(); graph.refresh(); }
+  if (graph) { if (!activeTour) configureForces(); graph.linkDirectionalArrowLength(arrowLength); if (anneal) graph.d3ReheatSimulation(); graph.refresh(); }
 }
 function restoreLayout() {
   restoreSelectionLayout();
@@ -700,14 +706,152 @@ function reheatLayout() {
   configureForces(); graph.d3ReheatSimulation();
 }
 
+function renderTourCatalogue() {
+  const audience = document.querySelector('#tour-audience').value;
+  const topic = document.querySelector('#tour-topic').value;
+  const rows = filterTours(tourData.tours, {audience, topic});
+  document.querySelector('#tour-match-count').textContent = `${rows.length} of ${Object.keys(tourData.tours).length} tours`;
+  document.querySelector('#tour-catalogue-list').innerHTML = rows.map(([id, tour]) =>
+    `<article class="tour-card"><h3>${esc(tour.title)}</h3><p>${esc(tour.description)}</p><div>${tour.audience_tags.map(tag => `<span class="tag">${esc(tag)}</span>`).join('')}</div><div class="small">${tour.topic_tags.map(esc).join(' · ')} · ${tour.step_ids.length} steps</div><button type="button" data-tour="${esc(id)}">Start tour</button></article>`
+  ).join('') || '<p class="empty">No tours match these filters. Choose another topic or all audiences.</p>';
+  document.querySelectorAll('[data-tour]').forEach(button => button.addEventListener('click', () => startTour(button.dataset.tour)));
+}
+function initializeTours() {
+  document.querySelector("#tour-catalogue-title").textContent = `Guided tours · ${Object.keys(tourData.tours).length} tours`;
+  const audiences = [...new Set(Object.values(tourData.tours).flatMap(tour => tour.audience_tags))].sort();
+  document.querySelector('#tour-audience').innerHTML = '<option value="">All audiences</option>' + audiences.map(tag => `<option value="${esc(tag)}">${esc(tag)}</option>`).join('');
+  document.querySelector('#tour-audience').addEventListener('change', renderTourCatalogue);
+  const topics = [...new Set(Object.values(tourData.tours).flatMap(tour => tour.topic_tags))].sort();
+  document.querySelector('#tour-topic').innerHTML = '<option value="">All topics</option>' + topics.map(tag => `<option value="${esc(tag)}">${esc(tag)}</option>`).join('');
+  document.querySelector('#tour-topic').addEventListener('change', renderTourCatalogue);
+  document.querySelector('#tour-exit').addEventListener('click', () => exitTour());
+  document.querySelector('#tour-previous').addEventListener('click', () => applyTourStep(activeTour.index - 1));
+  document.querySelector('#tour-next').addEventListener('click', () => {
+    if (activeTour.index + 1 === tourData.tours[activeTour.id].step_ids.length) exitTour(true);
+    else applyTourStep(activeTour.index + 1);
+  });
+  renderTourCatalogue();
+}
+function startTour(id) {
+  if (!tourData.tours[id]) return;
+  if (activeTour) exitTour();
+  tourTransition++;
+  restoreSelectionLayout();
+  const savedNodes = {};
+  for (const key of Object.keys(concepts)) {
+    const node = nodeRegistry[key], [x, y, z] = positions[key];
+    savedNodes[key] = node ? Object.fromEntries(['x','y','z','vx','vy','vz','fx','fy','fz'].map(field => [field, node[field]])) : {x, y, z, vx:0, vy:0, vz:0, fx:null, fy:null, fz:null};
+  }
+  const camera = graph.camera().position, target = graph.controls().target;
+  const controls = [...document.querySelectorAll('#explore-controls input, #explore-controls select, #explore-controls button, .layout-controls input, .layout-controls button')];
+  tourSnapshot = {
+    nodes: savedNodes, selected, iconSize, focused: [...focusedGroups],
+    hadPath: Boolean(document.querySelector('#path-result').textContent),
+    camera: {x:camera.x,y:camera.y,z:camera.z}, target:{x:target.x,y:target.y,z:target.z},
+    nodeDrag: graph.enableNodeDrag(), cooldownTicks: graph.cooldownTicks(),
+    controls: controls.map(control => [control, control.disabled]),
+    legends: [...document.querySelectorAll('.graph-legends details')].map(panel => [panel, panel.open]),
+    sidebar: [...document.querySelectorAll('.sidebar-accordion')].map(panel => [panel, panel.open]),
+    forces: Object.fromEntries(['link','charge','center','collide'].map(name => [name, graph.d3Force(name)])),
+  };
+  controls.forEach(control => { control.disabled = true; });
+  // The link force resolves endpoint IDs to nodes for the renderer, even when
+  // its attraction is disabled. Removing it leaves unresolved string endpoints.
+  for (const name of ['charge','center','collide']) graph.d3Force(name, null);
+  graph.d3Force('link').strength(0);
+  tourSnapshot.legends.forEach(([panel]) => { panel.open = false; });
+  graph.enableNodeDrag(false);
+  clearPathResult(); focusedGroups.clear(); selected = null;
+  activeTour = { id, index: 0, scene: null };
+  document.body.classList.add('tour-mode');
+  document.querySelector('#tour-catalogue').open = true;
+  document.querySelector('#tour-catalogue-content').hidden = true;
+  document.querySelector('#explore-controls').hidden = true;
+  document.querySelector('#tour-player').hidden = false;
+  setIconSize(sizeConfig.tour_icon_size, false);
+  applyTourStep(0);
+}
+function applyTourStep(index) {
+  if (!activeTour) return;
+  const tour = tourData.tours[activeTour.id];
+  if (index < 0 || index >= tour.step_ids.length) return;
+  const scene = tourData.scenes[tour.step_ids[index]], step = scene.step;
+  activeTour.index = index; activeTour.scene = scene;
+  clearPathResult();
+  for (const id of step.edge_ids) pathEdgeIds.add(id);
+  for (const id of step.concept_ids) {
+    const c = concepts[id], [x,y,z] = scene.positions[id];
+    nodeRegistry[id] ||= {id, label:c.label, domain:c.domain, category:c.category};
+    Object.assign(nodeRegistry[id], {x,y,z,fx:x,fy:y,fz:z,vx:0,vy:0,vz:0});
+    positions[id] = [x,y,z]; pathNodeIds.add(id);
+  }
+  selected = step.focus_concept;
+  document.querySelector('#tour-name').textContent = tour.title;
+  document.querySelector('#tour-progress').textContent = `Step ${index + 1} of ${tour.step_ids.length}`;
+  document.querySelector('#tour-step-title').textContent = step.title;
+  document.querySelector('#tour-question').textContent = step.question;
+  document.querySelector('#tour-narrative').textContent = step.narrative;
+  document.querySelector('#tour-qualification').textContent = step.qualification;
+  document.querySelector('#tour-sources').innerHTML = step.source_ids.map(id => citation(db.ontology.sources[id], id)).join('');
+  document.querySelector('#tour-framing').textContent = tour.framing_note;
+  document.querySelector('#tour-review').textContent = `Editorial review: ${tour.review_status}`;
+  document.querySelector('#tour-previous').disabled = index === 0;
+  document.querySelector('#tour-next').textContent = index + 1 === tour.step_ids.length ? 'Finish tour' : 'Next';
+  draw(false); layoutNeedsFit = false;
+  graph.cameraPosition({x:step.camera_x,y:step.camera_y,z:step.camera_z}, {x:step.look_at_x,y:step.look_at_y,z:step.look_at_z}, reducedMotion.matches ? 0 : sizeConfig.tour_transition_ms);
+  document.querySelector('#layout-status').textContent = 'Guided tour · rotate or zoom to inspect; concept positions stay fixed.';
+  document.querySelector('#tour-step-title').focus({preventScroll:true});
+}
+function exitTour(completed = false) {
+  if (!activeTour) return;
+  const saved = tourSnapshot, token = ++tourTransition;
+  const tourId = activeTour.id, title = tourData.tours[tourId].title;
+  activeTour = null; tourSnapshot = null;
+  clearPathResult();
+  for (const [id, state] of Object.entries(saved.nodes)) {
+    if (nodeRegistry[id]) Object.assign(nodeRegistry[id], state);
+    positions[id] = [state.x,state.y,state.z];
+  }
+  for (const [name, force] of Object.entries(saved.forces)) graph.d3Force(name, force);
+  graph.enableNodeDrag(saved.nodeDrag);
+  // Stop the scene-change reheat so the restored exploration layout stays put.
+  graph.cooldownTicks(0);
+  saved.controls.forEach(([control, disabled]) => { control.disabled = disabled; });
+  saved.legends.forEach(([panel, open]) => { panel.open = open; });
+  focusedGroups.clear(); saved.focused.forEach(id => focusedGroups.add(id));
+  selected = saved.selected;
+  document.body.classList.remove('tour-mode');
+  document.querySelector('#tour-catalogue-content').hidden = false;
+  saved.sidebar.forEach(([panel, open]) => { panel.open = open; });
+  document.querySelector('#explore-controls').hidden = false;
+  document.querySelector('#tour-player').hidden = true;
+  setIconSize(saved.iconSize, false);
+  draw(false); layoutNeedsFit = false;
+  if (selected) { document.querySelector('#search').value = selected; showDetails(selected); }
+  else deselectConcept();
+  if (saved.hadPath) shortestPath();
+  graph.cameraPosition(saved.camera, saved.target, reducedMotion.matches ? 0 : sizeConfig.tour_transition_ms);
+  document.querySelector('#layout-status').textContent = completed ? `Completed “${title}”. Your exploration view is restored.` : 'Your exploration view is restored.';
+  // Wait for a rendered frame to observe the stop before restoring its budget.
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    if (token !== tourTransition) return;
+    graph.cooldownTicks(saved.cooldownTicks);
+    if (selected) openSelectionSpace();
+  }));
+  document.querySelector(`[data-tour="${tourId}"]`)?.focus({preventScroll:true});
+}
+
 async function init() {
   try {
     db = await loadOntology(message => { document.querySelector("#loading").textContent = message; });
-    concepts = db.ontology.concepts; edges = db.ontology.edges; positions = initialLayout();
+    concepts = db.ontology.concepts; edges = db.ontology.edges; tourData = prepareTours(db);
     relationColors = db.graph_relation_colors;
     conceptGroups = Object.fromEntries(Object.entries(db.graph_concept_styles).map(([id, style]) => [id, colorLabel(style)]));
     colorGroups = Object.fromEntries(Object.values(db.graph_concept_styles).map((style) => [colorLabel(style), style]));
     sizeConfig = db.graph_viewer.default; iconGap = sizeConfig.icon_gap; iconHitPadding = sizeConfig.icon_hit_padding;
+    structuralLinkKinds = new Set(sizeConfig.structural_link_kinds);
+    for (const kind of structuralLinkKinds) if (!Object.hasOwn(relationColors, kind)) throw new Error(`Unknown structural link kind: ${kind}`);
+    positions = initialLayout();
     const studyConcept = concepts[sizeConfig.study_focus_concept];
     if (!studyConcept) throw new Error("Unknown DIPL study_focus_concept");
     const studyFocus = document.querySelector("#study-focus"), studyNote = document.querySelector("#study-focus-note");
@@ -717,7 +861,7 @@ async function init() {
     studyNote.hidden = !studyFocus.checked;
     const sizeInput = document.querySelector("#icon-size");
     sizeInput.min = sizeConfig.icon_size_min; sizeInput.max = sizeConfig.icon_size_max; sizeInput.step = sizeConfig.icon_size_step;
-    fillControls(); fillColorLegend(); createGraph(); setIconSize(sizeConfig.icon_size, false); document.querySelector("#loading").remove(); draw();
+    fillControls(); initializeTours(); fillColorLegend(); createGraph(); setIconSize(sizeConfig.icon_size, false); document.querySelector("#loading").remove(); draw();
     document.querySelector("#layout-status").textContent = `Settling ${graph.graphData().nodes.length} concepts using ${graph.graphData().links.length} visible relations.`;
     document.querySelector("#search").addEventListener("change", (event) => {
       const id = event.target.value.trim();

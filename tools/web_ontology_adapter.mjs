@@ -32,14 +32,15 @@ export function decodeViewerValue(description) {
 
 export function readViewerData(model, progress = () => {}) {
   const data = { ontology: {}, rationales: {}, profile_rationales: {},
-    graph_viewer: {}, graph_concept_styles: {}, graph_relation_colors: {} };
-  const paths = model.paths().filter(path => /^(ontology\.|graph_viewer\[|graph_concept_styles\[|graph_relation_colors\[)/.test(path));
+    graph_viewer: {}, graph_concept_styles: {}, graph_relation_colors: {},
+    graph_tours: {}, graph_tour_steps: {}, graph_tour_positions: {} };
+  const paths = model.paths().filter(path => /^(ontology\.|graph_viewer\[|graph_concept_styles\[|graph_relation_colors\[|graph_tours\[|graph_tour_steps\[|graph_tour_positions\[)/.test(path));
   paths.forEach((path, index) => {
     const description = model.describe(path);
     const value = decodeViewerValue(description);
     if (value !== undefined) {
       // Named records have scalar fields and one-dimensional string arrays.
-      const match = /^(ontology\.([a-z_]+)|graph_viewer|graph_concept_styles|graph_relation_colors)\[([a-z_0-9]+)\]\.([a-z_0-9]+)$/.exec(path);
+      const match = /^(ontology\.([a-z_]+)|graph_viewer|graph_concept_styles|graph_relation_colors|graph_tours|graph_tour_steps|graph_tour_positions)\[([a-z_0-9]+)\]\.([a-z_0-9]+)$/.exec(path);
       if (!match) throw new Error(`Unsupported viewer path: ${path}`);
       const [, root, collection, id, field] = match;
       const records = collection ? (data.ontology[collection] ||= {}) : data[root];

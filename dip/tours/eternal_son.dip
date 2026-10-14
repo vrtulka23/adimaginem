@@ -1,0 +1,154 @@
+# Authored scenes and display coordinates; all visible lines reference existing cited edges.
+
+graph_tour_steps[eternal_son_essence]
+  tour_id = "eternal_son"
+  title = "The Son is wholly divine"
+  question = "What does consubstantial mean?"
+  narrative = "The Catholic confession identifies the Son with the same undivided divine essence as the Father. Father and Son are personally distinct. Their distinction does not place the Son in a lesser grade of divinity."
+  qualification = "The one essence is not a genus containing two separate gods."
+  source_ids = ["ccc_240_245", "ccc_253_254", "st_i_29_4"]
+  concept_ids = ["father", "son", "divine_essence"]
+  edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son"]
+  focus_concept = "son"
+  camera_z = 32.0
+
+graph_tour_positions[eternal_son_essence_father]
+  step_id = "eternal_son_essence"
+  concept_id = "father"
+  x = -8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_essence_son]
+  step_id = "eternal_son_essence"
+  concept_id = "son"
+  x = 8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_essence_divine_essence]
+  step_id = "eternal_son_essence"
+  concept_id = "divine_essence"
+  x = 0.0
+  y = -6.0
+  z = 1.0
+
+graph_tour_steps[eternal_son_eternity]
+  tour_id = "eternal_son"
+  title = "An origin without a beginning"
+  question = "Does being from the Father make the Son later?"
+  narrative = "Aquinas distinguishes an origin from a beginning in duration. He holds the Son to be coeternal with the Father because divine generation is neither successive nor a transition from imperfection to completion."
+  qualification = "The direction of the generation arrow expresses a relation of origin; it does not represent a timeline."
+  source_ids = ["st_i_42_2", "st_i_27_1_4"]
+  concept_ids = ["father", "son", "eternal_generation"]
+  edge_ids = ["father_begets_son", "father_coeternal_with_son", "son_by_generation"]
+  focus_concept = "eternal_generation"
+  camera_z = 32.0
+
+graph_tour_positions[eternal_son_eternity_father]
+  step_id = "eternal_son_eternity"
+  concept_id = "father"
+  x = -8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_eternity_son]
+  step_id = "eternal_son_eternity"
+  concept_id = "son"
+  x = 8.0
+  y = 3.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_eternity_eternal_generation]
+  step_id = "eternal_son_eternity"
+  concept_id = "eternal_generation"
+  x = 0.0
+  y = -6.0
+  z = 1.0
+
+graph_tour_steps[eternal_son_spirit]
+  tour_id = "eternal_son"
+  title = "The Spirit is a divine person"
+  question = "How does the Holy Spirit belong to divine life?"
+  narrative = "The Catechism confesses the Holy Spirit as a divine person, equal in divinity with Father and Son. Aquinas uses Love as a personal name of the Spirit. Personal distinction and unity of essence remain together."
+  qualification = "The concept of personal Love expresses the Spirit's identity and origin, rather than reducing the Spirit to an impersonal effect."
+  source_ids = ["ccc_240_245", "st_i_37_1", "ccc_255"]
+  concept_ids = ["father", "son", "holy_spirit", "divine_essence", "subsistent_love"]
+  edge_ids = ["father_one_essence", "son_one_essence", "holy_spirit_one_essence", "son_distinct_from_holy_spirit", "love_names_spirit"]
+  focus_concept = "holy_spirit"
+  camera_z = 32.0
+
+graph_tour_positions[eternal_son_spirit_father]
+  step_id = "eternal_son_spirit"
+  concept_id = "father"
+  x = -9.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_spirit_son]
+  step_id = "eternal_son_spirit"
+  concept_id = "son"
+  x = 9.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_spirit_holy_spirit]
+  step_id = "eternal_son_spirit"
+  concept_id = "holy_spirit"
+  x = 0.0
+  y = 0.0
+  z = 2.0
+
+graph_tour_positions[eternal_son_spirit_divine_essence]
+  step_id = "eternal_son_spirit"
+  concept_id = "divine_essence"
+  x = -8.0
+  y = -6.0
+  z = -1.0
+
+graph_tour_positions[eternal_son_spirit_subsistent_love]
+  step_id = "eternal_son_spirit"
+  concept_id = "subsistent_love"
+  x = 8.0
+  y = -6.0
+  z = -1.0
+
+graph_tour_steps[eternal_son_operation]
+  tour_id = "eternal_son"
+  title = "The common divine work"
+  question = "Do the persons act as three independent creators?"
+  narrative = "Aquinas teaches that creation belongs to the Trinity through the one divine essence, power, and will. The Catechism likewise describes the divine work as common to the three persons, while respecting their personal properties."
+  qualification = "These lines express common divine operation. They do not add together three partial contributions to make one complete deity."
+  source_ids = ["st_i_45_6", "ccc_258"]
+  concept_ids = ["father", "son", "holy_spirit", "common_divine_operation"]
+  edge_ids = ["operation_common_to_father", "operation_common_to_son", "operation_common_to_holy_spirit"]
+  focus_concept = "common_divine_operation"
+  camera_z = 32.0
+
+graph_tour_positions[eternal_son_operation_father]
+  step_id = "eternal_son_operation"
+  concept_id = "father"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_operation_son]
+  step_id = "eternal_son_operation"
+  concept_id = "son"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_operation_holy_spirit]
+  step_id = "eternal_son_operation"
+  concept_id = "holy_spirit"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[eternal_son_operation_common_divine_operation]
+  step_id = "eternal_son_operation"
+  concept_id = "common_divine_operation"
+  x = 0.0
+  y = 2.0
+  z = -3.0
