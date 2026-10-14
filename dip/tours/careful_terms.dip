@@ -1,0 +1,128 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[careful_terms_substance]
+  tour_id = "careful_terms"
+  title = "Substance and qualities"
+  question = "Does substance mean chemical material?"
+  narrative = "The human person is a substance; habits are qualities, and qualities are accidents. Here accident means what exists in a subject."
+  qualification = "Substance is not limited to chemistry, and accident does not mean an unexpected mishap."
+  concept_ids = ["human_person", "substance", "quality", "accident", "habit"]
+  edge_ids = ["human_substance", "quality_accident", "habit_quality", "accident_in_substance"]
+  source_ids = ["st_i_29_1", "st_i_ii_49_2", "st_i_ii_49_1", "dpn_3"]
+  focus_concept = "substance"
+  camera_z = 36.0
+
+graph_tour_positions[careful_terms_substance_human_person]
+  step_id = "careful_terms_substance"
+  concept_id = "human_person"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_substance_substance]
+  step_id = "careful_terms_substance"
+  concept_id = "substance"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_substance_quality]
+  step_id = "careful_terms_substance"
+  concept_id = "quality"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_substance_accident]
+  step_id = "careful_terms_substance"
+  concept_id = "accident"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_substance_habit]
+  step_id = "careful_terms_substance"
+  concept_id = "habit"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[careful_terms_person]
+  tour_id = "careful_terms"
+  title = "Person in Trinitarian language"
+  question = "Does person mean a separate divine being?"
+  narrative = "Father and Son are personally distinct while having the one divine essence. Aquinas explains the divine person as a subsisting relation."
+  qualification = "The word person is applied with theological distinctions; the graph does not posit three specimens of the divine species."
+  concept_ids = ["father", "son", "divine_essence"]
+  edge_ids = ["father_distinct_from_son", "father_one_essence", "son_one_essence"]
+  source_ids = ["st_i_29_4", "ccc_255", "ccc_253_254"]
+  focus_concept = "divine_essence"
+  camera_z = 36.0
+
+graph_tour_positions[careful_terms_person_father]
+  step_id = "careful_terms_person"
+  concept_id = "father"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_person_son]
+  step_id = "careful_terms_person"
+  concept_id = "son"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_person_divine_essence]
+  step_id = "careful_terms_person"
+  concept_id = "divine_essence"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[careful_terms_spirit]
+  tour_id = "careful_terms"
+  title = "Spiritual does not mean divine"
+  question = "How are soul, angel, and God distinguished?"
+  narrative = "An angel is a spiritual creature; the human rational soul is the form of a body. God is the creator of angels."
+  qualification = "Being spiritual does not erase the creator-creature distinction or make the human soul an angel."
+  concept_ids = ["god", "angel", "spiritual_creature", "rational_soul", "human_body"]
+  edge_ids = ["god_creates_angels", "angel_is_spiritual", "soul_actualizes_body"]
+  source_ids = ["ccc_327_330", "st_i_76_1"]
+  focus_concept = "angel"
+  camera_z = 36.0
+
+graph_tour_positions[careful_terms_spirit_god]
+  step_id = "careful_terms_spirit"
+  concept_id = "god"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_spirit_angel]
+  step_id = "careful_terms_spirit"
+  concept_id = "angel"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_spirit_spiritual_creature]
+  step_id = "careful_terms_spirit"
+  concept_id = "spiritual_creature"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_spirit_rational_soul]
+  step_id = "careful_terms_spirit"
+  concept_id = "rational_soul"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[careful_terms_spirit_human_body]
+  step_id = "careful_terms_spirit"
+  concept_id = "human_body"
+  x = 6.0
+  y = -7.0
+  z = 0.0

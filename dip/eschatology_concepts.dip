@@ -37,7 +37,7 @@ ontology
     study_areas = ["theology", "anthropology"]
     category = "process"
     note = "Separation of the human soul and body; the soul survives while awaiting resurrection."
-    source_id = "ccc_988_1001"
+    source_id = "ccc_997_1001"
     review_status = "draft"
 
   concepts[separated_soul]
@@ -47,7 +47,7 @@ ontology
     study_areas = ["theology", "anthropology"]
     category = "state"
     note = "The human soul subsisting after death, awaiting reunion with its body; not a complete embodied human person."
-    source_id = "ccc_988_1001"
+    source_id = "ccc_997_1001"
     review_status = "draft"
 
   concepts[particular_judgment]
@@ -77,7 +77,7 @@ ontology
     study_areas = ["theology"]
     category = "process"
     note = "God raises all the dead; bodily resurrection has different outcomes for the just and the unjust."
-    source_id = "ccc_988_1001"
+    source_id = "ccc_997_1001"
     review_status = "draft"
 
   concepts[purification_from_sin]

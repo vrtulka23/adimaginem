@@ -1,0 +1,135 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[spirit_work_gifts]
+  tour_id = "spirit_work"
+  title = "Gifts dispose us to divine guidance"
+  question = "What is meant by a gift here?"
+  narrative = "Aquinas describes the seven gifts as abiding dispositions making a person responsive to the Holy Spirit. They perfect the exercise of virtue."
+  qualification = "The seven gifts are distinguished from special charisms for serving the Church, such as prophecy or tongues; CCC 2003 supplies that further distinction."
+  concept_ids = ["holy_spirit", "gift_of_holy_spirit", "habit", "virtue"]
+  edge_ids = ["god_bestows_spirit_gifts", "gifts_are_habits", "gift_perfects_virtue"]
+  source_ids = ["st_i_ii_68_1", "ccc_2001_2005", "ccc_1830_1831", "st_i_ii_68_3"]
+  focus_concept = "gift_of_holy_spirit"
+  camera_z = 36.0
+
+graph_tour_positions[spirit_work_gifts_holy_spirit]
+  step_id = "spirit_work_gifts"
+  concept_id = "holy_spirit"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_gifts_gift_of_holy_spirit]
+  step_id = "spirit_work_gifts"
+  concept_id = "gift_of_holy_spirit"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_gifts_habit]
+  step_id = "spirit_work_gifts"
+  concept_id = "habit"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_gifts_virtue]
+  step_id = "spirit_work_gifts"
+  concept_id = "virtue"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[spirit_work_powers]
+  tour_id = "spirit_work"
+  title = "Understanding and counsel"
+  question = "What is perfected in the human person?"
+  narrative = "Understanding concerns speculative intellect, while counsel concerns practical intellect. The gifts perfect the person's activity under divine movement."
+  qualification = "These faculties are not separate persons, and the distinctions do not assign supernatural activity to brain locations."
+  concept_ids = ["understanding_gift", "speculative_intellect", "counsel_gift", "practical_intellect"]
+  edge_ids = ["understanding_gift_specific_intellect", "counsel_gift_specific_intellect"]
+  source_ids = ["st_i_ii_68_4"]
+  focus_concept = "understanding_gift"
+  camera_z = 36.0
+
+graph_tour_positions[spirit_work_powers_understanding_gift]
+  step_id = "spirit_work_powers"
+  concept_id = "understanding_gift"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_powers_speculative_intellect]
+  step_id = "spirit_work_powers"
+  concept_id = "speculative_intellect"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_powers_counsel_gift]
+  step_id = "spirit_work_powers"
+  concept_id = "counsel_gift"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_powers_practical_intellect]
+  step_id = "spirit_work_powers"
+  concept_id = "practical_intellect"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[spirit_work_fruits]
+  tour_id = "spirit_work"
+  title = "Fruits appear in living"
+  question = "How do gifts and fruits differ?"
+  narrative = "Fruits name the good acts and perfections that mature in a life moved by the Spirit. Gentleness moderates anger, and patience sustains endurance."
+  qualification = "A strong feeling does not by itself establish the presence or absence of sanctifying grace; CCC 2005 cautions against that inference."
+  concept_ids = ["fruit_of_holy_spirit", "human_person", "gentleness_fruit", "anger_passion", "patience_fruit", "endurance_of_adversity"]
+  edge_ids = ["fruits_realized_in_humans", "gentleness_moderates_anger", "patience_sustains_endurance"]
+  source_ids = ["st_i_ii_70_1", "ccc_2001_2005", "st_i_ii_70_3"]
+  focus_concept = "fruit_of_holy_spirit"
+  camera_z = 40.0
+
+graph_tour_positions[spirit_work_fruits_fruit_of_holy_spirit]
+  step_id = "spirit_work_fruits"
+  concept_id = "fruit_of_holy_spirit"
+  x = -9.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_fruits_human_person]
+  step_id = "spirit_work_fruits"
+  concept_id = "human_person"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_fruits_gentleness_fruit]
+  step_id = "spirit_work_fruits"
+  concept_id = "gentleness_fruit"
+  x = 9.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_fruits_anger_passion]
+  step_id = "spirit_work_fruits"
+  concept_id = "anger_passion"
+  x = -9.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_fruits_patience_fruit]
+  step_id = "spirit_work_fruits"
+  concept_id = "patience_fruit"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spirit_work_fruits_endurance_of_adversity]
+  step_id = "spirit_work_fruits"
+  concept_id = "endurance_of_adversity"
+  x = 9.0
+  y = -6.0
+  z = 0.0

@@ -1,0 +1,114 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[body_soul_unity]
+  tour_id = "body_soul"
+  title = "A living bodily unity"
+  question = "What does soul explain in Thomistic psychology?"
+  narrative = "The rational soul actualizes the body as its substantial form. The person senses and understands as one living subject."
+  qualification = "This philosophical account does not identify soul with a measured organ or a spatial object beside the body."
+  concept_ids = ["human_person", "rational_soul", "human_body"]
+  edge_ids = ["person_has_form", "soul_actualizes_body", "person_has_body"]
+  source_ids = ["st_i_76_1", "st_i_75_4"]
+  focus_concept = "rational_soul"
+  camera_z = 36.0
+
+graph_tour_positions[body_soul_unity_human_person]
+  step_id = "body_soul_unity"
+  concept_id = "human_person"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[body_soul_unity_rational_soul]
+  step_id = "body_soul_unity"
+  concept_id = "rational_soul"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[body_soul_unity_human_body]
+  step_id = "body_soul_unity"
+  concept_id = "human_body"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[body_soul_cognition]
+  tour_id = "body_soul"
+  title = "From imagination to understanding"
+  question = "How does Aquinas connect embodied experience with thought?"
+  narrative = "Imagination retains phantasms. Understanding turns to phantasms, while intelligible species are abstracted from them."
+  qualification = "Phantasm and intelligible species are technical philosophical terms, not direct equivalents of a modern neural representation."
+  concept_ids = ["phantasm", "imagination", "understanding", "intelligible_species"]
+  edge_ids = ["phantasm_retained_by_imagination", "understanding_turns_to_phantasm", "intelligible_species_abstracted_from_phantasm"]
+  source_ids = ["st_i_78_4", "st_i_84_7", "st_i_85_1"]
+  focus_concept = "understanding"
+  camera_z = 36.0
+
+graph_tour_positions[body_soul_cognition_phantasm]
+  step_id = "body_soul_cognition"
+  concept_id = "phantasm"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[body_soul_cognition_imagination]
+  step_id = "body_soul_cognition"
+  concept_id = "imagination"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[body_soul_cognition_understanding]
+  step_id = "body_soul_cognition"
+  concept_id = "understanding"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[body_soul_cognition_intelligible_species]
+  step_id = "body_soul_cognition"
+  concept_id = "intelligible_species"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[body_soul_appetite]
+  tour_id = "body_soul"
+  title = "Sensible appetite and will"
+  question = "How are emotion and rational desire distinguished?"
+  narrative = "Sensitive appetite and will are kinds of appetitive power. Choice belongs to will; passion belongs to sensitive appetite."
+  qualification = "The distinction concerns the object and manner of activity, not an anatomical partition."
+  concept_ids = ["sensitive_appetite", "appetitive_power", "will", "choice"]
+  edge_ids = ["sensitive_appetite_kind", "will_kind", "choice_of_will"]
+  source_ids = ["st_i_80_2", "st_i_83_4"]
+  focus_concept = "will"
+  camera_z = 36.0
+
+graph_tour_positions[body_soul_appetite_sensitive_appetite]
+  step_id = "body_soul_appetite"
+  concept_id = "sensitive_appetite"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[body_soul_appetite_appetitive_power]
+  step_id = "body_soul_appetite"
+  concept_id = "appetitive_power"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[body_soul_appetite_will]
+  step_id = "body_soul_appetite"
+  concept_id = "will"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[body_soul_appetite_choice]
+  step_id = "body_soul_appetite"
+  concept_id = "choice"
+  x = 8.0
+  y = -6.0
+  z = 0.0

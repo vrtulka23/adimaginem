@@ -15,10 +15,10 @@ ontology
 
   edges[heaven_communion_trinity]
     subject = "heaven"
-    relation = "includes"
+    relation = "is_communion_with"
     object = "trinity"
     source_id str = "ccc_1023_1029"
-      ?rationale "Heaven is communion with the Trinity; inclusion here names the communion's divine term, not a part of a place."
+      ?rationale "Heaven is communion with the Trinity."
     evidence_kind = "textual_paraphrase"
     review_status = "draft"
     included_in_model = true
@@ -136,7 +136,7 @@ ontology
     subject = "separated_soul"
     relation = "is_kind_of"
     object = "rational_soul"
-    source_id str = "ccc_988_1001"
+    source_id str = "ccc_997_1001"
       ?rationale "This is the human soul in its separated condition, not a different species of soul."
     evidence_kind = "textual_paraphrase"
     review_status = "draft"
@@ -149,7 +149,7 @@ ontology
     subject = "rational_soul"
     relation = "separates_from"
     object = "human_body"
-    source_id str = "ccc_988_1001"
+    source_id str = "ccc_997_1001"
       ?rationale "Death separates soul and body."
     evidence_kind = "textual_paraphrase"
     review_status = "draft"
@@ -158,13 +158,13 @@ ontology
     affected_aspect = "unspecified"
     causal_mode = "noncausal"
     conditions = "At human death; not the ordinary condition of embodied human life."
-    condition_source_id = "ccc_988_1001"
+    condition_source_id = "ccc_997_1001"
 
   edges[death_separated_soul]
     subject = "human_death"
-    relation = "includes"
+    relation = "results_in"
     object = "separated_soul"
-    source_id str = "ccc_988_1001"
+    source_id str = "ccc_997_1001"
       ?rationale "Death leaves the human soul separated from the body."
     evidence_kind = "textual_paraphrase"
     review_status = "draft"
@@ -177,7 +177,7 @@ ontology
     subject = "rational_soul"
     relation = "reunites_with"
     object = "human_body"
-    source_id str = "ccc_988_1001"
+    source_id str = "ccc_997_1001"
       ?rationale "God reunites each human soul with its own body."
     evidence_kind = "textual_paraphrase"
     review_status = "draft"
@@ -186,13 +186,13 @@ ontology
     affected_aspect = "unspecified"
     causal_mode = "noncausal"
     conditions = "At the resurrection of the dead; not reincarnation."
-    condition_source_id = "ccc_988_1001"
+    condition_source_id = "ccc_997_1001"
 
   edges[resurrection_human_recipient]
     subject = "resurrection_of_dead"
     relation = "has_recipient"
     object = "human_person"
-    source_id str = "ccc_988_1001"
+    source_id str = "ccc_997_1001"
       ?rationale "All human beings will rise; their final states differ."
     evidence_kind = "textual_paraphrase"
     review_status = "draft"
@@ -497,7 +497,7 @@ ontology
 
   edges[incarnation_of_son]
     subject = "incarnation"
-    relation = "has_characteristic"
+    relation = "is_proper_to"
     object = "son"
     source_id str = "ccc_464_469"
       ?rationale "The person who becomes man is the eternal Son."
@@ -925,3 +925,29 @@ ontology
     recipient_scope = "unspecified"
     affected_aspect = "unspecified"
     causal_mode = "noncausal"
+
+  edges[sin_subject_will]
+    subject = "personal_sin"
+    relation = "can_have_subject"
+    object = "will"
+    source_id str = "st_i_ii_74_1_5"
+      ?rationale "The will is a subject of personal sin because moral acts are voluntary."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "This concerns personal acts of sin, not the inherited condition of original sin."
+    condition_source_id = "st_i_ii_74_1_5"
+    included_in_model = true
+
+  edges[sin_subject_intellectual_power]
+    subject = "personal_sin"
+    relation = "can_have_subject"
+    object = "intellectual_power"
+    source_id str = "st_i_ii_74_1_5"
+      ?rationale "Reason can be a subject of sin when its disorder is voluntary."
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+    conditions = "The defect is voluntary or subject to voluntary control; invincible ignorance is not thereby a personal sin."
+    condition_source_id = "st_i_ii_74_1_5"
+    included_in_model = true

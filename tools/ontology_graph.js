@@ -7,7 +7,9 @@ import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.j
 import {
   faAppleWhole, faBrain, faCompass, faCross, faCube, faCrown, faDove,
   faEye, faGem, faGift, faHeart, faMedal, faPaw, faPerson,
-  faSeedling, faShareNodes, faSun, faWineGlass
+  faSeedling, faShareNodes, faSun, faWineGlass, faStar, faCloudSun,
+  faDoorClosed, faFireFlameCurved, faScaleBalanced, faHandsPraying,
+  faHourglassEnd, faPersonRays
 } from "https://esm.sh/@fortawesome/free-solid-svg-icons@6.7.2";
 
 window.addEventListener("error", (event) => {
@@ -213,6 +215,17 @@ function iconFamily(id, category) {
 }
 
 function iconDefinition(node) {
+  const distinctive = {
+    virgin_mary: faStar, divine_motherhood: faStar, immaculate_conception: faStar,
+    heaven: faCloudSun, hell: faDoorClosed, purgatory: faFireFlameCurved,
+    purification_from_sin: faFireFlameCurved, human_death: faHourglassEnd,
+    particular_judgment: faScaleBalanced, last_judgment: faScaleBalanced,
+    resurrection_of_dead: faPersonRays, assumption_of_mary: faCloudSun,
+    invocation_of_mary: faHandsPraying, invocation_of_saints: faHandsPraying,
+    marian_intercession: faHandsPraying, saints_intercession: faHandsPraying,
+    suffrages_for_dead: faHandsPraying, divine_adoration: faHandsPraying,
+  };
+  if (distinctive[node.id]) return distinctive[node.id];
   const family = iconFamily(node.id, node.category);
   if (family === "divine_person") {
     if (node.id === "father") return faCrown;

@@ -1,0 +1,330 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[sin_intellect_subject]
+  tour_id = "sin_intellect"
+  title = "Where is sin in a person?"
+  question = "Is sin a substance stored inside the intellect?"
+  narrative = "Aquinas locates a sinful act in the power from which the voluntary act proceeds: principally will, and also reason or appetite insofar as their activity can be voluntary. Vice is an abiding bad disposition, distinguished from an individual act."
+  qualification = "This is a moral and metaphysical account of subject, not a physical location. An involuntary intellectual error does not by itself establish personal guilt."
+  concept_ids = ["personal_sin", "will", "intellectual_power", "vice", "habit"]
+  edge_ids = ["sin_subject_will", "sin_subject_intellectual_power", "vice_habit"]
+  source_ids = ["st_i_ii_74_1_5", "st_i_ii_113_3_6", "st_i_83_4", "st_i_ii_71_1_6"]
+  focus_concept = "will"
+  camera_z = 36.0
+
+graph_tour_steps[sin_intellect_wounds]
+  tour_id = "sin_intellect"
+  title = "The intellect is wounded, not destroyed"
+  question = "What is corrupted by sin?"
+  narrative = "Aquinas names ignorance as a wound of the intellect's order toward truth and malice as a wound of will toward good. Personal sin can deepen these disorders."
+  qualification = "The natural faculties remain. Original sin is an inherited condition; it is not a personal act committed by each descendant."
+  concept_ids = ["ignorance_wound", "intellectual_power", "malice_wound", "will", "personal_sin"]
+  edge_ids = ["ignorance_wound_power", "malice_wound_power", "sin_preserves_natural_intellect"]
+  source_ids = ["st_i_ii_85_1_3", "ccc_404_405"]
+  focus_concept = "intellectual_power"
+  camera_z = 36.0
+
+graph_tour_positions[sin_intellect_wounds_ignorance_wound]
+  step_id = "sin_intellect_wounds"
+  concept_id = "ignorance_wound"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_wounds_intellectual_power]
+  step_id = "sin_intellect_wounds"
+  concept_id = "intellectual_power"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_wounds_malice_wound]
+  step_id = "sin_intellect_wounds"
+  concept_id = "malice_wound"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_wounds_will]
+  step_id = "sin_intellect_wounds"
+  concept_id = "will"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_wounds_personal_sin]
+  step_id = "sin_intellect_wounds"
+  concept_id = "personal_sin"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[sin_intellect_judgment]
+  tour_id = "sin_intellect"
+  title = "How judgment becomes clouded"
+  question = "How can desire affect what seems reasonable?"
+  narrative = "Disordered passion can impede practical judgment. Repeated wrongdoing disposes to vice, which inclines toward further sin. Aquinas also distinguishes spiritual blindness and dullness of understanding."
+  qualification = "The cited blindness concerns spiritual judgment. It is not a claim that every intellectual difficulty or disability results from a person's sins."
+  concept_ids = ["disordered_passion", "practical_judgment", "blindness_of_mind", "understanding", "personal_sin", "vice"]
+  edge_ids = ["passion_impedes_judgment", "blindness_of_mind_impedes", "sin_disposes_to_vice", "vice_inclines_sin"]
+  source_ids = ["st_ii_ii_15_1_2", "st_i_ii_77_1_2", "ccc_1865"]
+  focus_concept = "practical_judgment"
+  camera_z = 40.0
+
+graph_tour_positions[sin_intellect_judgment_disordered_passion]
+  step_id = "sin_intellect_judgment"
+  concept_id = "disordered_passion"
+  x = -9.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_judgment_practical_judgment]
+  step_id = "sin_intellect_judgment"
+  concept_id = "practical_judgment"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_judgment_blindness_of_mind]
+  step_id = "sin_intellect_judgment"
+  concept_id = "blindness_of_mind"
+  x = 9.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_judgment_understanding]
+  step_id = "sin_intellect_judgment"
+  concept_id = "understanding"
+  x = -9.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_judgment_personal_sin]
+  step_id = "sin_intellect_judgment"
+  concept_id = "personal_sin"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_judgment_vice]
+  step_id = "sin_intellect_judgment"
+  concept_id = "vice"
+  x = 9.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[sin_intellect_gravity]
+  tour_id = "sin_intellect"
+  title = "Mortal and venial sin"
+  question = "What is lost, and under what conditions?"
+  narrative = "Mortal sin involves grave matter, full knowledge, and deliberate consent, and deprives the person of sanctifying grace. Venial sin weakens charity while leaving grace intact."
+  qualification = "A graph of necessary conditions cannot judge an individual's conscience or degree of consent."
+  concept_ids = ["mortal_sin", "sanctifying_grace", "venial_sin", "charity_virtue"]
+  edge_ids = ["mortal_deprives_sanctifying_grace", "venial_preserves_grace", "venial_weakens_charity"]
+  source_ids = ["ccc_1854_1863"]
+  focus_concept = "mortal_sin"
+  camera_z = 36.0
+
+graph_tour_positions[sin_intellect_gravity_mortal_sin]
+  step_id = "sin_intellect_gravity"
+  concept_id = "mortal_sin"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_gravity_sanctifying_grace]
+  step_id = "sin_intellect_gravity"
+  concept_id = "sanctifying_grace"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_gravity_venial_sin]
+  step_id = "sin_intellect_gravity"
+  concept_id = "venial_sin"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_gravity_charity_virtue]
+  step_id = "sin_intellect_gravity"
+  concept_id = "charity_virtue"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[sin_intellect_conversion]
+  tour_id = "sin_intellect"
+  title = "Grace moves the return"
+  question = "How can the wounded person turn back?"
+  narrative = "God initiates justification. Grace enables conversion, and justification includes turning toward God and repentance for sin."
+  qualification = "For an adult capable of voluntary acts, this movement includes a free response under grace; it is not self-rescue by intellect alone."
+  concept_ids = ["justification", "god", "human_conversion", "repentance_for_sin", "grace"]
+  edge_ids = ["justification_from_god", "justification_includes_human_conversion", "justification_includes_repentance_for_sin", "grace_enables_conversion"]
+  source_ids = ["st_i_ii_113_3_6"]
+  focus_concept = "justification"
+  camera_z = 36.0
+
+graph_tour_positions[sin_intellect_conversion_justification]
+  step_id = "sin_intellect_conversion"
+  concept_id = "justification"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_conversion_god]
+  step_id = "sin_intellect_conversion"
+  concept_id = "god"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_conversion_human_conversion]
+  step_id = "sin_intellect_conversion"
+  concept_id = "human_conversion"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_conversion_repentance_for_sin]
+  step_id = "sin_intellect_conversion"
+  concept_id = "repentance_for_sin"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_conversion_grace]
+  step_id = "sin_intellect_conversion"
+  concept_id = "grace"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[sin_intellect_absolution]
+  tour_id = "sin_intellect"
+  title = "Confession and sacramental absolution"
+  question = "How is post-baptismal sin forgiven sacramentally?"
+  narrative = "In Penance the penitent turns from sin and confesses it; the authorized priest absolves in Christ's name. Aquinas understands absolution as instrumental in God's forgiveness."
+  qualification = "Contrition includes resolve to amend. Perfect contrition reconciles when it includes the intention of sacramental confession as soon as possible; it is not permission to dispense with confession."
+  concept_ids = ["penance", "contrition", "sacramental_confession", "sacramental_absolution", "remission_of_sin"]
+  edge_ids = ["penance_contrition", "penance_confession", "penance_absolution", "absolution_remission"]
+  source_ids = ["ccc_1451_1460", "ccc_1461_1467", "st_iii_84_3"]
+  focus_concept = "sacramental_absolution"
+  camera_z = 36.0
+
+graph_tour_positions[sin_intellect_absolution_penance]
+  step_id = "sin_intellect_absolution"
+  concept_id = "penance"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_absolution_contrition]
+  step_id = "sin_intellect_absolution"
+  concept_id = "contrition"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_absolution_sacramental_confession]
+  step_id = "sin_intellect_absolution"
+  concept_id = "sacramental_confession"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_absolution_sacramental_absolution]
+  step_id = "sin_intellect_absolution"
+  concept_id = "sacramental_absolution"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_absolution_remission_of_sin]
+  step_id = "sin_intellect_absolution"
+  concept_id = "remission_of_sin"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[sin_intellect_healing]
+  tour_id = "sin_intellect"
+  title = "Forgiveness and continuing healing"
+  question = "Why can bad inclinations remain after absolution?"
+  narrative = "Aquinas distinguishes remission of guilt from removal of all residual dispositions and temporal consequences. Satisfaction and reparation belong to healing after forgiveness."
+  qualification = "Continuing struggles do not by themselves show that absolution failed. Restoration of virtue and repair of harm continue through grace and action."
+  concept_ids = ["penance", "satisfaction_for_sin", "remnants_of_sin", "remission_of_sin", "purification_from_sin"]
+  edge_ids = ["penance_satisfaction", "satisfaction_remnants", "remission_distinct_purification"]
+  source_ids = ["st_iii_86_1_6", "ccc_1451_1460"]
+  focus_concept = "satisfaction_for_sin"
+  camera_z = 36.0
+
+graph_tour_positions[sin_intellect_healing_penance]
+  step_id = "sin_intellect_healing"
+  concept_id = "penance"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_healing_satisfaction_for_sin]
+  step_id = "sin_intellect_healing"
+  concept_id = "satisfaction_for_sin"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_healing_remnants_of_sin]
+  step_id = "sin_intellect_healing"
+  concept_id = "remnants_of_sin"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_healing_remission_of_sin]
+  step_id = "sin_intellect_healing"
+  concept_id = "remission_of_sin"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_healing_purification_from_sin]
+  step_id = "sin_intellect_healing"
+  concept_id = "purification_from_sin"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_subject_personal_sin]
+  step_id = "sin_intellect_subject"
+  concept_id = "personal_sin"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_subject_will]
+  step_id = "sin_intellect_subject"
+  concept_id = "will"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_subject_intellectual_power]
+  step_id = "sin_intellect_subject"
+  concept_id = "intellectual_power"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_subject_vice]
+  step_id = "sin_intellect_subject"
+  concept_id = "vice"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sin_intellect_subject_habit]
+  step_id = "sin_intellect_subject"
+  concept_id = "habit"
+  x = 6.0
+  y = -7.0
+  z = 0.0

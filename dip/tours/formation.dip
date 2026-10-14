@@ -1,0 +1,114 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[formation_human]
+  tour_id = "formation"
+  title = "Begin with the whole person"
+  question = "Who receives the gift of grace?"
+  narrative = "The human person has bodily life through a rational soul. Catholic formation concerns the whole person."
+  qualification = "Soul and body are not two independently complete human beings."
+  concept_ids = ["human_person", "human_body", "rational_soul"]
+  edge_ids = ["person_has_body", "person_has_form", "soul_actualizes_body"]
+  source_ids = ["st_i_75_4", "st_i_76_1"]
+  focus_concept = "human_person"
+  camera_z = 36.0
+
+graph_tour_positions[formation_human_human_person]
+  step_id = "formation_human"
+  concept_id = "human_person"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[formation_human_human_body]
+  step_id = "formation_human"
+  concept_id = "human_body"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[formation_human_rational_soul]
+  step_id = "formation_human"
+  concept_id = "rational_soul"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[formation_gift]
+  tour_id = "formation"
+  title = "Grace and virtue"
+  question = "What does God give?"
+  narrative = "God gives sanctifying grace and infuses theological virtues. Aquinas distinguishes grace in the soul from virtue as a principle of good activity."
+  qualification = "These distinctions explain received gifts; they do not divide the person into separate spiritual containers."
+  concept_ids = ["god", "sanctifying_grace", "theological_virtue", "virtue"]
+  edge_ids = ["god_bestows_sanctifying_grace", "god_infuses_theological_virtues", "grace_distinct_from_virtue"]
+  source_ids = ["ccc_1996_2000", "ccc_1812_1813", "st_i_ii_110_3"]
+  focus_concept = "god"
+  camera_z = 36.0
+
+graph_tour_positions[formation_gift_god]
+  step_id = "formation_gift"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[formation_gift_sanctifying_grace]
+  step_id = "formation_gift"
+  concept_id = "sanctifying_grace"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[formation_gift_theological_virtue]
+  step_id = "formation_gift"
+  concept_id = "theological_virtue"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[formation_gift_virtue]
+  step_id = "formation_gift"
+  concept_id = "virtue"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[formation_growth]
+  tour_id = "formation"
+  title = "Life begins and is nourished"
+  question = "How does sacramental life develop?"
+  narrative = "Baptism gives spiritual regeneration, and the Eucharist nourishes spiritual life. Aquinas uses the analogy of birth and nourishment to explain their different effects."
+  qualification = "This is an analogy of supernatural life; sacramental effects are not biological measurements."
+  concept_ids = ["baptism", "spiritual_regeneration", "spiritual_life", "eucharist"]
+  edge_ids = ["baptism_regenerates", "regeneration_begins_spiritual_life", "eucharist_nourishes_life"]
+  source_ids = ["st_iii_65_1", "ccc_1127_1129"]
+  focus_concept = "spiritual_life"
+  camera_z = 36.0
+
+graph_tour_positions[formation_growth_baptism]
+  step_id = "formation_growth"
+  concept_id = "baptism"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[formation_growth_spiritual_regeneration]
+  step_id = "formation_growth"
+  concept_id = "spiritual_regeneration"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[formation_growth_spiritual_life]
+  step_id = "formation_growth"
+  concept_id = "spiritual_life"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[formation_growth_eucharist]
+  step_id = "formation_growth"
+  concept_id = "eucharist"
+  x = 8.0
+  y = -6.0
+  z = 0.0

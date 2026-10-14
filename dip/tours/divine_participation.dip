@@ -1,0 +1,121 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[divine_participation_grace]
+  tour_id = "divine_participation"
+  title = "Grace and participation"
+  question = "What changes when a creature shares in divine life?"
+  narrative = "Sanctifying grace is received in the soul. Aquinas distinguishes this gift from the virtues that perfect its powers."
+  qualification = "Participation does not turn a creature into the divine essence. This is the Thomistic account of the received gift, not a comprehensive account of Eastern terminology."
+  concept_ids = ["god", "sanctifying_grace", "rational_soul", "virtue"]
+  edge_ids = ["god_bestows_sanctifying_grace", "grace_in_soul", "grace_distinct_from_virtue"]
+  source_ids = ["ur_17", "ccc_1996_2000", "st_i_ii_110_4", "st_i_ii_110_3"]
+  focus_concept = "sanctifying_grace"
+  camera_z = 36.0
+
+graph_tour_positions[divine_participation_grace_god]
+  step_id = "divine_participation_grace"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_grace_sanctifying_grace]
+  step_id = "divine_participation_grace"
+  concept_id = "sanctifying_grace"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_grace_rational_soul]
+  step_id = "divine_participation_grace"
+  concept_id = "rational_soul"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_grace_virtue]
+  step_id = "divine_participation_grace"
+  concept_id = "virtue"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[divine_participation_love]
+  tour_id = "divine_participation"
+  title = "Charity and spiritual judgment"
+  question = "How does love shape wisdom?"
+  narrative = "Charity has its subject in the will and gives a connaturality with divine things from which the gift of wisdom judges."
+  qualification = "The connection concerns judgment through shared love of the good; it does not remove the distinction between will and intellect."
+  concept_ids = ["charity_virtue", "will", "wisdom_gift", "intellectual_power"]
+  edge_ids = ["charity_in_will", "charity_grounds_wisdom", "wisdom_in_intellect"]
+  source_ids = ["st_ii_ii_24_1", "st_ii_ii_45_2"]
+  focus_concept = "wisdom_gift"
+  camera_z = 36.0
+
+graph_tour_positions[divine_participation_love_charity_virtue]
+  step_id = "divine_participation_love"
+  concept_id = "charity_virtue"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_love_will]
+  step_id = "divine_participation_love"
+  concept_id = "will"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_love_wisdom_gift]
+  step_id = "divine_participation_love"
+  concept_id = "wisdom_gift"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_love_intellectual_power]
+  step_id = "divine_participation_love"
+  concept_id = "intellectual_power"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[divine_participation_procession]
+  tour_id = "divine_participation"
+  title = "Different expressions of procession"
+  question = "What does the Latin formula intend?"
+  narrative = "Aquinas describes Father and Son as one principle of the Spirit's procession. The Catechism explains the Eastern emphasis on the Father as first origin and the Latin expression through their communion."
+  qualification = "CCC 248 discusses legitimate complementarity. The arrows encode the cited Latin account, not a verdict that all Orthodox objections are merely verbal."
+  concept_ids = ["holy_spirit", "father", "son", "common_spiration"]
+  edge_ids = ["holy_spirit_proceeds_from_father", "holy_spirit_proceeds_from_son", "spiration_common_to_father", "spiration_common_to_son"]
+  source_ids = ["ccc_248", "st_i_36_4", "ccc_246"]
+  focus_concept = "holy_spirit"
+  camera_z = 36.0
+
+graph_tour_positions[divine_participation_procession_holy_spirit]
+  step_id = "divine_participation_procession"
+  concept_id = "holy_spirit"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_procession_father]
+  step_id = "divine_participation_procession"
+  concept_id = "father"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_procession_son]
+  step_id = "divine_participation_procession"
+  concept_id = "son"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[divine_participation_procession_common_spiration]
+  step_id = "divine_participation_procession"
+  concept_id = "common_spiration"
+  x = 8.0
+  y = -6.0
+  z = 0.0

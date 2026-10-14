@@ -1,0 +1,121 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[causal_explanation_four]
+  tour_id = "causal_explanation"
+  title = "Four causal questions"
+  question = "What does cause mean here?"
+  narrative = "Aquinas distinguishes material, formal, efficient, and final causes: what something is made from, what determines its kind, what brings it about, and its end."
+  qualification = "These are distinct explanatory respects, not four competing physical forces."
+  concept_ids = ["material_cause", "cause", "formal_cause", "efficient_cause", "final_cause"]
+  edge_ids = ["material_cause_kind", "formal_cause_kind", "efficient_cause_kind", "final_cause_kind"]
+  source_ids = ["dpn_20"]
+  focus_concept = "cause"
+  camera_z = 36.0
+
+graph_tour_positions[causal_explanation_four_material_cause]
+  step_id = "causal_explanation_four"
+  concept_id = "material_cause"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_four_cause]
+  step_id = "causal_explanation_four"
+  concept_id = "cause"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_four_formal_cause]
+  step_id = "causal_explanation_four"
+  concept_id = "formal_cause"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_four_efficient_cause]
+  step_id = "causal_explanation_four"
+  concept_id = "efficient_cause"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_four_final_cause]
+  step_id = "causal_explanation_four"
+  concept_id = "final_cause"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[causal_explanation_form]
+  tour_id = "causal_explanation"
+  title = "Matter and form in explanation"
+  question = "How are causal roles related to natural principles?"
+  narrative = "Matter has a material causal role; form has a formal causal role. Form actualizes matter within a composite."
+  qualification = "Form does not mean merely external shape, and matter is not always a particular modern physical substance."
+  concept_ids = ["matter", "material_cause", "form", "formal_cause"]
+  edge_ids = ["matter_material_cause", "form_formal_cause", "form_actualizes_matter"]
+  source_ids = ["dpn_20", "dpn_8"]
+  focus_concept = "form"
+  camera_z = 36.0
+
+graph_tour_positions[causal_explanation_form_matter]
+  step_id = "causal_explanation_form"
+  concept_id = "matter"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_form_material_cause]
+  step_id = "causal_explanation_form"
+  concept_id = "material_cause"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_form_form]
+  step_id = "causal_explanation_form"
+  concept_id = "form"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_form_formal_cause]
+  step_id = "causal_explanation_form"
+  concept_id = "formal_cause"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[causal_explanation_creation]
+  tour_id = "causal_explanation"
+  title = "Natural change and creation"
+  question = "Does explaining a physical process settle every causal question?"
+  narrative = "Natural generation presupposes matter. Creation, in Aquinas's sense, concerns the giving of being without a presupposed material subject."
+  qualification = "The distinction does not supply an alternative physical mechanism or a cosmological timeline."
+  concept_ids = ["matter", "natural_generation", "creation"]
+  edge_ids = ["matter_in_generation", "creation_distinct_generation", "creation_no_presupposed_matter"]
+  source_ids = ["dpn_8", "st_i_45_1_3"]
+  focus_concept = "creation"
+  camera_z = 36.0
+
+graph_tour_positions[causal_explanation_creation_matter]
+  step_id = "causal_explanation_creation"
+  concept_id = "matter"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_creation_natural_generation]
+  step_id = "causal_explanation_creation"
+  concept_id = "natural_generation"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[causal_explanation_creation_creation]
+  step_id = "causal_explanation_creation"
+  concept_id = "creation"
+  x = 0.0
+  y = -6.0
+  z = 0.0

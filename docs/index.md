@@ -14,6 +14,8 @@ The project follows a [scholarly and Catholic method](method.md): claims about A
 - [Passions and their interrelations](passions.md): objects, contraries, natural ordering, and conditional influences.
 - [Theological ontology](theology.md): grace, virtues, gifts, fruits, the Trinity, and sacraments.
 - [Holy Trinity](trinity.md): divine unity, Word and Love, relations of origin, and the focused graph view.
+- [Mary and the saints](mariology.md): Theotokos, Marian teachings, intercession, and veneration.
+- [Heaven, Hell, Purgatory, and resurrection](eschatology.md): judgment, purification, prayer for the dead, and final fulfillment.
 - [Sin and angelic ministry](sin-and-angels.md): wounds of human powers, conversion, temptation, guardianship, and angelic orders.
 - [Creation and created orders](creation.md): God as creator, angels and demons, embodied humans, animals, plants, and matter.
 - [Architecture](architecture.md): responsibilities of the Rust core and Python outer layer.

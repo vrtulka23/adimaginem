@@ -42,12 +42,12 @@ ontology
     locator = "paragraphs 1042-1050: renewal of humanity and the universe"
     url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_12/vi_hope_of_the_new_heaven_and_the_new_earth.index.html"
 
-  sources[ccc_988_1001]
+  sources[ccc_997_1001]
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
-    locator = "paragraphs 988-1001: bodily resurrection and separation of soul and body"
-    url = "https://www.vatican.va/archive/ENG0015/__P2G.HTM"
+    locator = "paragraphs 997-1001: bodily resurrection and separation of soul and body"
+    url = "https://www.vatican.va/archive/ENG0015/__P2H.HTM"
 
   sources[ccc_1441_1449]
     authority_kind = "church_teaching"

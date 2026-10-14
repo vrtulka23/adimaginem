@@ -1,0 +1,114 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[responsible_action_good]
+  tour_id = "responsible_action"
+  title = "The good as apprehended"
+  question = "What moves a person to choose?"
+  narrative = "Will is directed toward a good as understood. Practical intellect presents an object, while will moves intellect as regards exercising its activity."
+  qualification = "An apparent good may be misjudged. These relations do not guarantee that the selected action is actually good."
+  concept_ids = ["will", "apprehended_good", "practical_intellect"]
+  edge_ids = ["will_object", "practical_intellect_moves_will_as_to_object", "will_moves_practical_intellect_as_to_exercise"]
+  source_ids = ["st_i_ii_8_1", "st_i_ii_9_1"]
+  focus_concept = "will"
+  camera_z = 36.0
+
+graph_tour_positions[responsible_action_good_will]
+  step_id = "responsible_action_good"
+  concept_id = "will"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_good_apprehended_good]
+  step_id = "responsible_action_good"
+  concept_id = "apprehended_good"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_good_practical_intellect]
+  step_id = "responsible_action_good"
+  concept_id = "practical_intellect"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[responsible_action_choice]
+  tour_id = "responsible_action"
+  title = "Deliberation and choice"
+  question = "How does practical inquiry enter action?"
+  narrative = "Counsel is an act of intellect that precedes choice in the practical order. Choice is an act of will."
+  qualification = "The order is explanatory; not every choice includes a lengthy conscious calculation."
+  concept_ids = ["counsel", "intellectual_power", "choice", "will"]
+  edge_ids = ["counsel_of_intellect", "counsel_precedes_choice", "choice_of_will"]
+  source_ids = ["st_i_ii_14_1", "st_i_83_4"]
+  focus_concept = "choice"
+  camera_z = 36.0
+
+graph_tour_positions[responsible_action_choice_counsel]
+  step_id = "responsible_action_choice"
+  concept_id = "counsel"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_choice_intellectual_power]
+  step_id = "responsible_action_choice"
+  concept_id = "intellectual_power"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_choice_choice]
+  step_id = "responsible_action_choice"
+  concept_id = "choice"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_choice_will]
+  step_id = "responsible_action_choice"
+  concept_id = "will"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[responsible_action_character]
+  tour_id = "responsible_action"
+  title = "Virtue and vice"
+  question = "What changes when patterns become established?"
+  narrative = "Virtue is a good habit. Vice is a bad habit opposed to virtue; repeated sin can dispose a person toward vice."
+  qualification = "An acquired disposition inclines action without converting this graph into a deterministic account of personal responsibility."
+  concept_ids = ["virtue", "habit", "vice", "personal_sin"]
+  edge_ids = ["virtue_as_habit", "vice_habit", "vice_opposes_virtue", "sin_disposes_to_vice"]
+  source_ids = ["st_i_ii_55_1", "st_i_ii_71_1_6", "ccc_1865"]
+  focus_concept = "habit"
+  camera_z = 36.0
+
+graph_tour_positions[responsible_action_character_virtue]
+  step_id = "responsible_action_character"
+  concept_id = "virtue"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_character_habit]
+  step_id = "responsible_action_character"
+  concept_id = "habit"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_character_vice]
+  step_id = "responsible_action_character"
+  concept_id = "vice"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[responsible_action_character_personal_sin]
+  step_id = "responsible_action_character"
+  concept_id = "personal_sin"
+  x = 8.0
+  y = -6.0
+  z = 0.0

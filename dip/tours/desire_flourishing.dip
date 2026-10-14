@@ -1,0 +1,121 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[desire_flourishing_desire]
+  tour_id = "desire_flourishing"
+  title = "Love, desire, and delight"
+  question = "How do responses to an apparent good differ?"
+  narrative = "Aquinas distinguishes love of a perceived good, desire for an absent good, and delight in a present good. Their ordering describes different movements of appetite."
+  qualification = "Apprehended good can be mistaken; the graph does not make every desire morally good."
+  concept_ids = ["love_passion", "apprehended_good", "desire_passion", "joy_passion"]
+  edge_ids = ["love_formal_object", "desire_formal_object", "joy_formal_object", "love_precedes_desire", "desire_precedes_joy"]
+  source_ids = ["na_2_4", "st_i_ii_26_1_2", "st_i_ii_23_4", "st_i_ii_31_1_3", "st_i_ii_25_2"]
+  focus_concept = "desire_passion"
+  camera_z = 36.0
+
+graph_tour_positions[desire_flourishing_desire_love_passion]
+  step_id = "desire_flourishing_desire"
+  concept_id = "love_passion"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_desire_apprehended_good]
+  step_id = "desire_flourishing_desire"
+  concept_id = "apprehended_good"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_desire_desire_passion]
+  step_id = "desire_flourishing_desire"
+  concept_id = "desire_passion"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_desire_joy_passion]
+  step_id = "desire_flourishing_desire"
+  concept_id = "joy_passion"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[desire_flourishing_passions]
+  tour_id = "desire_flourishing"
+  title = "Passions and moral formation"
+  question = "Must flourishing eliminate emotion?"
+  narrative = "Passions receive moral character through their relation to reason and will. Temperance perfects the concupiscible appetite, and fortitude the irascible appetite."
+  qualification = "The Thomistic account calls for rightly ordered passions. It does not use bodily pleasure or emotional intensity alone as its moral criterion."
+  concept_ids = ["temperance_virtue", "concupiscible_appetite", "fortitude_virtue", "irascible_appetite"]
+  edge_ids = ["temperance_perfects_concupiscible", "fortitude_perfects_irascible"]
+  source_ids = ["st_i_ii_24_1_3", "st_i_ii_61_2"]
+  focus_concept = "temperance_virtue"
+  camera_z = 36.0
+
+graph_tour_positions[desire_flourishing_passions_temperance_virtue]
+  step_id = "desire_flourishing_passions"
+  concept_id = "temperance_virtue"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_passions_concupiscible_appetite]
+  step_id = "desire_flourishing_passions"
+  concept_id = "concupiscible_appetite"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_passions_fortitude_virtue]
+  step_id = "desire_flourishing_passions"
+  concept_id = "fortitude_virtue"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_passions_irascible_appetite]
+  step_id = "desire_flourishing_passions"
+  concept_id = "irascible_appetite"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[desire_flourishing_peace]
+  tour_id = "desire_flourishing"
+  title = "Peace and ordered love"
+  question = "What does Aquinas include in peace?"
+  narrative = "Peace includes concord between persons and harmony of appetitive movements. Aquinas links true peace with charity."
+  qualification = "This is a Catholic account of peace; it is not an assertion that peace and nirvana are interchangeable terms."
+  concept_ids = ["peace_fruit", "charity_virtue", "concord", "appetitive_harmony"]
+  edge_ids = ["peace_fruit_from_charity", "peace_includes_concord", "peace_includes_appetitive_harmony"]
+  source_ids = ["st_ii_ii_29_1_3"]
+  focus_concept = "peace_fruit"
+  camera_z = 36.0
+
+graph_tour_positions[desire_flourishing_peace_peace_fruit]
+  step_id = "desire_flourishing_peace"
+  concept_id = "peace_fruit"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_peace_charity_virtue]
+  step_id = "desire_flourishing_peace"
+  concept_id = "charity_virtue"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_peace_concord]
+  step_id = "desire_flourishing_peace"
+  concept_id = "concord"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[desire_flourishing_peace_appetitive_harmony]
+  step_id = "desire_flourishing_peace"
+  concept_id = "appetitive_harmony"
+  x = 8.0
+  y = -6.0
+  z = 0.0

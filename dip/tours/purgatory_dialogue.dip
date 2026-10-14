@@ -1,0 +1,248 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[purgatory_dialogue_death]
+  tour_id = "purgatory_dialogue"
+  title = "Death and particular judgment"
+  question = "When does earthly moral life reach its end?"
+  narrative = "Catholic teaching places particular judgment at death. The human soul survives bodily death, awaiting resurrection."
+  qualification = "This model supplies no timetable beyond the revealed order and no spatial map of the afterlife."
+  concept_ids = ["human_death", "particular_judgment", "separated_soul", "rational_soul"]
+  edge_ids = ["judgment_at_death", "death_separated_soul", "separated_soul_rational"]
+  source_ids = ["ccc_1021_1022", "ccc_997_1001"]
+  focus_concept = "particular_judgment"
+  camera_z = 36.0
+
+graph_tour_positions[purgatory_dialogue_death_human_death]
+  step_id = "purgatory_dialogue_death"
+  concept_id = "human_death"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_death_particular_judgment]
+  step_id = "purgatory_dialogue_death"
+  concept_id = "particular_judgment"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_death_separated_soul]
+  step_id = "purgatory_dialogue_death"
+  concept_id = "separated_soul"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_death_rational_soul]
+  step_id = "purgatory_dialogue_death"
+  concept_id = "rational_soul"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[purgatory_dialogue_ends]
+  tour_id = "purgatory_dialogue"
+  title = "Heaven and Hell"
+  question = "Are there three equal final destinations?"
+  narrative = "Heaven includes the beatific vision. Hell is definitive exclusion from this communion. Purgatory is distinct from Hell and directed toward Heaven."
+  qualification = "Only those who die in God's friendship undergo Purgatory. It is not another opportunity for conversion after death."
+  concept_ids = ["heaven", "beatific_vision", "hell", "purgatory"]
+  edge_ids = ["heaven_includes_vision", "hell_excludes_vision", "purgatory_distinct_hell", "purgatory_to_heaven"]
+  source_ids = ["ccc_1023_1029", "ccc_1033_1037", "ccc_1030_1032"]
+  focus_concept = "purgatory"
+  camera_z = 36.0
+
+graph_tour_positions[purgatory_dialogue_ends_heaven]
+  step_id = "purgatory_dialogue_ends"
+  concept_id = "heaven"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_ends_beatific_vision]
+  step_id = "purgatory_dialogue_ends"
+  concept_id = "beatific_vision"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_ends_hell]
+  step_id = "purgatory_dialogue_ends"
+  concept_id = "hell"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_ends_purgatory]
+  step_id = "purgatory_dialogue_ends"
+  concept_id = "purgatory"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[purgatory_dialogue_forgiveness]
+  tour_id = "purgatory_dialogue"
+  title = "Forgiven guilt and remaining consequences"
+  question = "Why speak of purification if sins have been forgiven?"
+  narrative = "Aquinas distinguishes forgiveness from complete removal of sin's consequences. The Catechism distinguishes temporal punishment from eternal punishment."
+  qualification = "Temporal punishment here concerns purification from sinful attachment; the diagram does not assert that Christ's redemption is insufficient."
+  concept_ids = ["remission_of_sin", "purification_from_sin", "temporal_punishment", "eternal_punishment"]
+  edge_ids = ["remission_distinct_purification", "purification_temporal", "temporal_distinct_eternal"]
+  source_ids = ["st_iii_86_1_6", "st_appendix_purgatory", "ccc_1471_1479"]
+  focus_concept = "purification_from_sin"
+  camera_z = 36.0
+
+graph_tour_positions[purgatory_dialogue_forgiveness_remission_of_sin]
+  step_id = "purgatory_dialogue_forgiveness"
+  concept_id = "remission_of_sin"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_forgiveness_purification_from_sin]
+  step_id = "purgatory_dialogue_forgiveness"
+  concept_id = "purification_from_sin"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_forgiveness_temporal_punishment]
+  step_id = "purgatory_dialogue_forgiveness"
+  concept_id = "temporal_punishment"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_forgiveness_eternal_punishment]
+  step_id = "purgatory_dialogue_forgiveness"
+  concept_id = "eternal_punishment"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[purgatory_dialogue_saved]
+  tour_id = "purgatory_dialogue"
+  title = "Purification of the saved"
+  question = "What is the state of the souls being purified?"
+  narrative = "Those in Purgatory died in grace. Their final purification prepares them for Heaven."
+  qualification = "No uncertainty of final salvation, duration, temperature, or physical mechanism is encoded."
+  concept_ids = ["souls_in_purgatory", "sanctifying_grace", "purgatory", "purification_from_sin", "heaven"]
+  edge_ids = ["souls_purgatory_grace", "souls_purgatory_state", "purgatory_purifies", "purgatory_to_heaven"]
+  source_ids = ["ccc_1030_1032"]
+  focus_concept = "souls_in_purgatory"
+  camera_z = 36.0
+
+graph_tour_positions[purgatory_dialogue_saved_souls_in_purgatory]
+  step_id = "purgatory_dialogue_saved"
+  concept_id = "souls_in_purgatory"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_saved_sanctifying_grace]
+  step_id = "purgatory_dialogue_saved"
+  concept_id = "sanctifying_grace"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_saved_purgatory]
+  step_id = "purgatory_dialogue_saved"
+  concept_id = "purgatory"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_saved_purification_from_sin]
+  step_id = "purgatory_dialogue_saved"
+  concept_id = "purification_from_sin"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_saved_heaven]
+  step_id = "purgatory_dialogue_saved"
+  concept_id = "heaven"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[purgatory_dialogue_prayer]
+  tour_id = "purgatory_dialogue"
+  title = "Prayer for the departed"
+  question = "Why do Catholics offer prayers and Masses for them?"
+  narrative = "The Church offers suffrages for the departed, especially the Eucharist. The Catechism cites 2 Maccabees 12:46; Aquinas's account of suffrages explains their benefit within charity."
+  qualification = "Many Protestant traditions do not receive 2 Maccabees as canonical. This tour makes the Catholic scriptural and ecclesial basis explicit rather than presuming agreement about the canon."
+  concept_ids = ["suffrages_for_dead", "souls_in_purgatory", "eucharist", "communion_of_saints"]
+  edge_ids = ["suffrages_recipients", "eucharist_suffrage", "communion_purifying"]
+  source_ids = ["st_supp_71_6", "ccc_1030_1032", "ccc_946_962"]
+  focus_concept = "suffrages_for_dead"
+  camera_z = 36.0
+
+graph_tour_positions[purgatory_dialogue_prayer_suffrages_for_dead]
+  step_id = "purgatory_dialogue_prayer"
+  concept_id = "suffrages_for_dead"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_prayer_souls_in_purgatory]
+  step_id = "purgatory_dialogue_prayer"
+  concept_id = "souls_in_purgatory"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_prayer_eucharist]
+  step_id = "purgatory_dialogue_prayer"
+  concept_id = "eucharist"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_prayer_communion_of_saints]
+  step_id = "purgatory_dialogue_prayer"
+  concept_id = "communion_of_saints"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[purgatory_dialogue_resurrection]
+  tour_id = "purgatory_dialogue"
+  title = "The hope includes the body"
+  question = "Does Christian hope end with a separated soul?"
+  narrative = "The dead will rise, and the universal judgment will manifest the truth of human lives. The new creation embraces the fulfillment of humanity and the universe."
+  qualification = "The resurrection includes all the dead; this does not mean that all receive the same final state."
+  concept_ids = ["resurrection_of_dead", "human_person", "last_judgment", "renewed_creation"]
+  edge_ids = ["resurrection_human_recipient", "resurrection_final_judgment", "renewal_resurrection"]
+  source_ids = ["ccc_997_1001", "ccc_1038_1041", "ccc_1042_1050"]
+  focus_concept = "resurrection_of_dead"
+  camera_z = 36.0
+
+graph_tour_positions[purgatory_dialogue_resurrection_resurrection_of_dead]
+  step_id = "purgatory_dialogue_resurrection"
+  concept_id = "resurrection_of_dead"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_resurrection_human_person]
+  step_id = "purgatory_dialogue_resurrection"
+  concept_id = "human_person"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_resurrection_last_judgment]
+  step_id = "purgatory_dialogue_resurrection"
+  concept_id = "last_judgment"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[purgatory_dialogue_resurrection_renewed_creation]
+  step_id = "purgatory_dialogue_resurrection"
+  concept_id = "renewed_creation"
+  x = 8.0
+  y = -6.0
+  z = 0.0

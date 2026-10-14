@@ -63,3 +63,13 @@ The lowest order connects to individual guardianship. Powers connect to restrain
 - Human recipients are distinguished from blessed angelic recipients. Angelic intellectual perfections do not imply human sensitive passions.
 
 All predicates are classified in [relations.dip](../dip/relations.dip) and included in the edge schema's DIPL options and labels. The browser adds separate color groups for moral disorders and angelic orders/ministry; display groups remain editorial aids. Selecting a node shows citations, qualifications, and direction. Graph paths support exploration rather than automatic theological inference.
+# Sin, intellect, and reconciliation tour
+
+The guided tour **Sin, the intellect, and reconciliation** has seven scenes: the subject of sin, wounded powers, clouded judgment, mortal and venial sin, conversion, sacramental absolution, and continuing healing.
+
+The new `can_have_subject` relations distinguish the will as a subject of voluntary sin and intellect as a possible subject when its disorder is voluntary. Their conditions exclude treating every error as culpable. The source is Aquinas, [ST I-II, q. 74, aa. 1–2 and 5](https://www.newadvent.org/summa/2074.htm). “In” a faculty names the subject of an act, not a physical storage location. The inherited condition of original sin is distinguished from personal acts.
+
+The existing wound relations are retained: intellectual power is not destroyed by sin; its ordering toward truth can be impeded. Spiritual blindness does not mean that disability or every difficulty in understanding is caused by a person's sins.
+
+[reconciliation_concepts.dip](../dip/reconciliation_concepts.dip) adds contrition, sacramental confession, absolution, and satisfaction. Their connections in [extension_edges.dip](../dip/extension_edges.dip) distinguish God's forgiveness through sacramental absolution from the continuing repair of harm and healing of residual dispositions. See [ST III, q. 84, a. 3](https://www.newadvent.org/summa/4084.htm#article3), [ST III, q. 86, aa. 5–6](https://www.newadvent.org/summa/4086.htm), and [CCC 1451–1460](https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_two/article_4/vii_the_acts_of_the_penitent.html).
+

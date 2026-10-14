@@ -733,3 +733,21 @@ ontology
     kind = "theological"
     description = "An invocation asks the indicated person or class to pray to God."
     prose_template = "{subject} seeks the intercession of {object}."
+
+  relations[is_communion_with]
+    label = "Is communion with"
+    kind = "theological"
+    description = "Communion with the indicated personal term; not a composition of spatial parts."
+    prose_template = "{subject} is communion with {object}."
+
+  relations[results_in]
+    label = "Results in"
+    kind = "metaphysical"
+    description = "The event leaves the stated condition according to the source; no unstated temporal scale is implied."
+    prose_template = "{subject} results in {object}."
+
+  relations[can_have_subject]
+    label = "Can have as subject"
+    kind = "power_and_act"
+    description = "A power can be the subject of a moral act in the qualified circumstances specified by the source."
+    prose_template = "{subject} can have {object} as its subject."

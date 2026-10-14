@@ -1,0 +1,114 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[grace_faith_initiative]
+  tour_id = "grace_faith"
+  title = "Grace initiates conversion"
+  question = "Who begins the movement toward God?"
+  narrative = "God bestows grace and enables conversion. Aquinas treats justification as God moving a human person in a way appropriate to a voluntary agent."
+  qualification = "The response is enabled by grace; the diagram does not make independent human effort the cause of the first gift."
+  concept_ids = ["god", "grace", "human_conversion"]
+  edge_ids = ["god_bestows_grace", "grace_enables_conversion", "conversion_to_god"]
+  source_ids = ["st_i_ii_113_3_6", "ccc_2001_2005", "ccc_1996_2000"]
+  focus_concept = "grace"
+  camera_z = 36.0
+
+graph_tour_positions[grace_faith_initiative_god]
+  step_id = "grace_faith_initiative"
+  concept_id = "god"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_initiative_grace]
+  step_id = "grace_faith_initiative"
+  concept_id = "grace"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_initiative_human_conversion]
+  step_id = "grace_faith_initiative"
+  concept_id = "human_conversion"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[grace_faith_faith]
+  tour_id = "grace_faith"
+  title = "Faith and charity engage our powers"
+  question = "How are believing and loving related?"
+  narrative = "Faith has its subject in intellect, while charity has its subject in will. Aquinas calls charity the form of faith because it orders faith's act to its due end."
+  qualification = "Intellect and will are powers of one person. This Catholic account is offered for comparison with particular Protestant formulations."
+  concept_ids = ["faith_virtue", "intellectual_power", "charity_virtue", "will"]
+  edge_ids = ["faith_in_intellect", "charity_in_will"]
+  source_ids = ["st_ii_ii_4_3", "st_ii_ii_4_2", "st_ii_ii_24_1"]
+  focus_concept = "faith_virtue"
+  camera_z = 36.0
+
+graph_tour_positions[grace_faith_faith_faith_virtue]
+  step_id = "grace_faith_faith"
+  concept_id = "faith_virtue"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_faith_intellectual_power]
+  step_id = "grace_faith_faith"
+  concept_id = "intellectual_power"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_faith_charity_virtue]
+  step_id = "grace_faith_faith"
+  concept_id = "charity_virtue"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_faith_will]
+  step_id = "grace_faith_faith"
+  concept_id = "will"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[grace_faith_action]
+  tour_id = "grace_faith"
+  title = "Love becomes action"
+  question = "Where do good works enter the picture?"
+  narrative = "An act of charity includes willing good to another. Beneficence expresses charity in doing good. These distinctions let us trace willing and action without treating salvation as a score of achievements."
+  qualification = "The graph identifies acts and virtues; it does not measure anyone's justification."
+  concept_ids = ["act_of_charity", "benevolence", "will", "beneficence"]
+  edge_ids = ["charity_includes_benevolence", "benevolence_act_of_will", "beneficence_expresses_charity"]
+  source_ids = ["st_ii_ii_27_2", "st_ii_ii_31_1"]
+  focus_concept = "act_of_charity"
+  camera_z = 36.0
+
+graph_tour_positions[grace_faith_action_act_of_charity]
+  step_id = "grace_faith_action"
+  concept_id = "act_of_charity"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_action_benevolence]
+  step_id = "grace_faith_action"
+  concept_id = "benevolence"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_action_will]
+  step_id = "grace_faith_action"
+  concept_id = "will"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[grace_faith_action_beneficence]
+  step_id = "grace_faith_action"
+  concept_id = "beneficence"
+  x = 8.0
+  y = -6.0
+  z = 0.0

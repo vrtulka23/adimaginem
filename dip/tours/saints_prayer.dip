@@ -1,0 +1,128 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[saints_prayer_communion]
+  tour_id = "saints_prayer"
+  title = "Communion across death"
+  question = "What connects believers and the blessed?"
+  narrative = "Catholic teaching describes one communion embracing the glorified and those being purified. The saints in Heaven remain united to Christ."
+  qualification = "The graph distinguishes the blessed who are invoked from the departed for whom purification is sought."
+  concept_ids = ["communion_of_saints", "saints_in_heaven", "souls_in_purgatory", "heaven"]
+  edge_ids = ["communion_glorified", "communion_purifying", "saints_heavenly_state"]
+  source_ids = ["ccc_946_962"]
+  focus_concept = "communion_of_saints"
+  camera_z = 36.0
+
+graph_tour_positions[saints_prayer_communion_communion_of_saints]
+  step_id = "saints_prayer_communion"
+  concept_id = "communion_of_saints"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_communion_saints_in_heaven]
+  step_id = "saints_prayer_communion"
+  concept_id = "saints_in_heaven"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_communion_souls_in_purgatory]
+  step_id = "saints_prayer_communion"
+  concept_id = "souls_in_purgatory"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_communion_heaven]
+  step_id = "saints_prayer_communion"
+  concept_id = "heaven"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[saints_prayer_request]
+  tour_id = "saints_prayer"
+  title = "Invocation asks for intercession"
+  question = "What does pray to a saint mean here?"
+  narrative = "An invocation asks a saint to pray to God. Invoking Mary is a particular instance, addressed to the mother of the incarnate Son."
+  qualification = "Aquinas distinguishes asking God to give a good from asking a saint to obtain it by prayer. Neither Mary nor another saint becomes the principal source of grace."
+  concept_ids = ["invocation_of_mary", "invocation_of_saints", "virgin_mary", "saints_in_heaven"]
+  edge_ids = ["invocation_mary_kind", "invocation_mary_recipient", "invocation_saints_recipient"]
+  source_ids = ["st_ii_ii_83_4_11", "ccc_963_975"]
+  focus_concept = "invocation_of_mary"
+  camera_z = 36.0
+
+graph_tour_positions[saints_prayer_request_invocation_of_mary]
+  step_id = "saints_prayer_request"
+  concept_id = "invocation_of_mary"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_request_invocation_of_saints]
+  step_id = "saints_prayer_request"
+  concept_id = "invocation_of_saints"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_request_virgin_mary]
+  step_id = "saints_prayer_request"
+  concept_id = "virgin_mary"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_request_saints_in_heaven]
+  step_id = "saints_prayer_request"
+  concept_id = "saints_in_heaven"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[saints_prayer_christ]
+  tour_id = "saints_prayer"
+  title = "All intercession depends on Christ"
+  question = "Where does the prayer lead?"
+  narrative = "The saints' intercession turns to God and depends on Christ's mediation. Invocation is distinct from divine adoration."
+  qualification = "This route explains Catholic practice; it does not require a visitor to have accepted its premises before asking questions."
+  concept_ids = ["saints_intercession", "god", "christ_mediation", "invocation_of_saints", "divine_adoration"]
+  edge_ids = ["saints_intercession_to_god", "saints_intercession_depends_christ", "invocation_not_adoration"]
+  source_ids = ["st_ii_ii_83_4_11", "ccc_946_962"]
+  focus_concept = "christ_mediation"
+  camera_z = 36.0
+
+graph_tour_positions[saints_prayer_christ_saints_intercession]
+  step_id = "saints_prayer_christ"
+  concept_id = "saints_intercession"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_christ_god]
+  step_id = "saints_prayer_christ"
+  concept_id = "god"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_christ_christ_mediation]
+  step_id = "saints_prayer_christ"
+  concept_id = "christ_mediation"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_christ_invocation_of_saints]
+  step_id = "saints_prayer_christ"
+  concept_id = "invocation_of_saints"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[saints_prayer_christ_divine_adoration]
+  step_id = "saints_prayer_christ"
+  concept_id = "divine_adoration"
+  x = 6.0
+  y = -7.0
+  z = 0.0

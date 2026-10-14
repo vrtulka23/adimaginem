@@ -1,0 +1,128 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[good_evil_privation]
+  tour_id = "good_evil"
+  title = "Evil and a missing due good"
+  question = "Does evil name a rival substance?"
+  narrative = "Aquinas analyzes evil as the privation of a due good. The recorded case of original sin names loss of original justice."
+  qualification = "Not every absence is an evil: lack of sight is a privation in a human being, unlike the absence of sight in a stone. This does not make suffering unreal."
+  concept_ids = ["original_sin", "original_justice", "privation"]
+  edge_ids = ["original_sin_privation", "original_sin_includes_privation"]
+  source_ids = ["st_i_48_1_5", "ccc_404_405"]
+  focus_concept = "privation"
+  camera_z = 36.0
+
+graph_tour_positions[good_evil_privation_original_sin]
+  step_id = "good_evil_privation"
+  concept_id = "original_sin"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[good_evil_privation_original_justice]
+  step_id = "good_evil_privation"
+  concept_id = "original_justice"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[good_evil_privation_privation]
+  step_id = "good_evil_privation"
+  concept_id = "privation"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[good_evil_freedom]
+  tour_id = "good_evil"
+  title = "Moral guilt and consent"
+  question = "Is every harmful event a personal sin?"
+  narrative = "Personal sin involves voluntary disorder. Mortal sin requires grave matter, full moral knowledge, and deliberate consent."
+  qualification = "Natural suffering and personal culpability are distinct questions. These conditions are not a verdict about an individual."
+  concept_ids = ["mortal_sin", "grave_matter", "full_moral_knowledge", "deliberate_consent"]
+  edge_ids = ["mortal_requires_grave_matter", "mortal_requires_full_moral_knowledge", "mortal_requires_deliberate_consent"]
+  source_ids = ["st_i_48_1_5", "ccc_1854_1863"]
+  focus_concept = "mortal_sin"
+  camera_z = 36.0
+
+graph_tour_positions[good_evil_freedom_mortal_sin]
+  step_id = "good_evil_freedom"
+  concept_id = "mortal_sin"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[good_evil_freedom_grave_matter]
+  step_id = "good_evil_freedom"
+  concept_id = "grave_matter"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[good_evil_freedom_full_moral_knowledge]
+  step_id = "good_evil_freedom"
+  concept_id = "full_moral_knowledge"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[good_evil_freedom_deliberate_consent]
+  step_id = "good_evil_freedom"
+  concept_id = "deliberate_consent"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[good_evil_healing]
+  tour_id = "good_evil"
+  title = "Wounded powers and conversion"
+  question = "Can the person still turn toward the good?"
+  narrative = "Sin can aggravate the wounds of nature without destroying the natural intellectual power. Grace enables conversion to God."
+  qualification = "This route explains selected distinctions; it does not give a complete answer to why each instance of suffering occurs."
+  concept_ids = ["personal_sin", "wounded_human_nature", "intellectual_power", "grace", "human_conversion", "god"]
+  edge_ids = ["personal_sin_aggravates_wounds", "sin_preserves_natural_intellect", "grace_enables_conversion", "conversion_to_god"]
+  source_ids = ["st_i_ii_85_1_3", "st_i_ii_113_3_6"]
+  focus_concept = "human_conversion"
+  camera_z = 40.0
+
+graph_tour_positions[good_evil_healing_personal_sin]
+  step_id = "good_evil_healing"
+  concept_id = "personal_sin"
+  x = -9.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[good_evil_healing_wounded_human_nature]
+  step_id = "good_evil_healing"
+  concept_id = "wounded_human_nature"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[good_evil_healing_intellectual_power]
+  step_id = "good_evil_healing"
+  concept_id = "intellectual_power"
+  x = 9.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[good_evil_healing_grace]
+  step_id = "good_evil_healing"
+  concept_id = "grace"
+  x = -9.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[good_evil_healing_human_conversion]
+  step_id = "good_evil_healing"
+  concept_id = "human_conversion"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[good_evil_healing_god]
+  step_id = "good_evil_healing"
+  concept_id = "god"
+  x = 9.0
+  y = -6.0
+  z = 0.0

@@ -52,7 +52,7 @@ The adapter supports scalar fields and one-dimensional string arrays, including 
 
 ## Exploring the graph
 
-Open **Guided tours** at the top of the sidebar for three introductions covering the Trinity, the Son's divinity, and creation. Catalogue cards show descriptions and audience tags. **Start tour** opens a sequence of cited scenes with saved DIPL coordinates; use **Previous**, **Next**, and **Exit tour**. Exiting restores the exploration view. Tours work in both running modes. See [guided tours](../docs/guided-tours.md) for source practice and authoring instructions.
+The left sidebar has three accordions: **Guided tours**, **Explore**, and **Concept connections**. Opening one closes the others; Explore opens initially. Guided tours offers 22 introductions with 79 cited scenes, including interfaith routes, sin and reconciliation, Purgatory, Mariology, and invocation of saints. Filter the catalogue by audience and topic. **Start tour** opens scenes with DIPL coordinates; **Previous**, **Next**, and **Exit tour** navigate them. Exiting restores the exploration view and sidebar state. Tours work in both running modes. See [guided tours](../docs/guided-tours.md) for source practice and authoring.
 
 Use the concept search and domain/relation filters to focus the graph. Choose two concepts and select **Connect and explain** to trace their shortest connection under the active filters. Path search treats edges as traversable in either direction by default; enable **Follow arrow direction** to require subject-to-object traversal.
 

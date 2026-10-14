@@ -1,0 +1,121 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[divine_being_pure_act]
+  tour_id = "divine_being"
+  title = "God and pure act"
+  question = "Does divinity mean a higher degree of creaturely development?"
+  narrative = "For Aquinas, God is pure act and has no passive potentiality awaiting fulfillment. God's active power expresses fullness of actuality."
+  qualification = "Active power and passive potentiality have different meanings; the graph does not place God on a scale of developing creatures."
+  concept_ids = ["god", "pure_act", "passive_potentiality", "active_power"]
+  edge_ids = ["god_pure_act", "pure_act_excludes_passivity", "god_active_power"]
+  source_ids = ["st_i_3_2", "st_i_3_1", "st_i_25_1"]
+  focus_concept = "pure_act"
+  camera_z = 36.0
+
+graph_tour_positions[divine_being_pure_act_god]
+  step_id = "divine_being_pure_act"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_being_pure_act_pure_act]
+  step_id = "divine_being_pure_act"
+  concept_id = "pure_act"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_being_pure_act_passive_potentiality]
+  step_id = "divine_being_pure_act"
+  concept_id = "passive_potentiality"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[divine_being_pure_act_active_power]
+  step_id = "divine_being_pure_act"
+  concept_id = "active_power"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[divine_being_spirits]
+  tour_id = "divine_being"
+  title = "Spiritual beings are creatures"
+  question = "Does being immaterial make an angel divine?"
+  narrative = "Angels are spiritual creatures created by God. Their immateriality does not give them God's uncreated mode of being."
+  qualification = "This scene explains the Catholic distinction and does not summarize every Latter-day Saint use of the word spirit."
+  concept_ids = ["god", "angel", "spiritual_creature", "created_being"]
+  edge_ids = ["god_creates_angels", "angel_is_spiritual", "spiritual_is_created"]
+  source_ids = ["ccc_327_330"]
+  focus_concept = "angel"
+  camera_z = 36.0
+
+graph_tour_positions[divine_being_spirits_god]
+  step_id = "divine_being_spirits"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_being_spirits_angel]
+  step_id = "divine_being_spirits"
+  concept_id = "angel"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_being_spirits_spiritual_creature]
+  step_id = "divine_being_spirits"
+  concept_id = "spiritual_creature"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[divine_being_spirits_created_being]
+  step_id = "divine_being_spirits"
+  concept_id = "created_being"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[divine_being_participation]
+  tour_id = "divine_being"
+  title = "Sharing in divine life"
+  question = "What does deification mean in this account?"
+  narrative = "God gives sanctifying grace to the soul. The soul receives this perfection while remaining a created human soul."
+  qualification = "Sharing in divine life through grace is not identity with the uncreated essence or becoming an additional divine person."
+  concept_ids = ["god", "sanctifying_grace", "rational_soul", "human_person"]
+  edge_ids = ["god_bestows_sanctifying_grace", "grace_in_soul", "person_has_form"]
+  source_ids = ["st_i_ii_110_4", "ccc_1996_2000", "st_i_76_1"]
+  focus_concept = "sanctifying_grace"
+  camera_z = 36.0
+
+graph_tour_positions[divine_being_participation_god]
+  step_id = "divine_being_participation"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_being_participation_sanctifying_grace]
+  step_id = "divine_being_participation"
+  concept_id = "sanctifying_grace"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[divine_being_participation_rational_soul]
+  step_id = "divine_being_participation"
+  concept_id = "rational_soul"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[divine_being_participation_human_person]
+  step_id = "divine_being_participation"
+  concept_id = "human_person"
+  x = 8.0
+  y = -6.0
+  z = 0.0

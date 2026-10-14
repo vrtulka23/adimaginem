@@ -1,0 +1,255 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[mary_christ_theotokos]
+  tour_id = "mary_christ"
+  title = "Theotokos: who was born of Mary?"
+  question = "How can a human creature be Mother of God?"
+  narrative = "The eternal Son assumes human nature and is born of Mary. Aquinas explains that motherhood concerns the person born, even though his birth from Mary is according to humanity."
+  qualification = "Theotokos means God-bearer or Mother of God; Latin Dei Genetrix. Mary is neither the source of divinity nor mother of the Father or Holy Spirit."
+  concept_ids = ["virgin_mary", "son", "divine_motherhood", "human_nature"]
+  edge_ids = ["mary_mother_son", "mary_theotokos", "son_assumes_human_nature"]
+  source_ids = ["st_iii_35_4", "ccc_464_469"]
+  focus_concept = "divine_motherhood"
+  camera_z = 36.0
+
+graph_tour_positions[mary_christ_theotokos_virgin_mary]
+  step_id = "mary_christ_theotokos"
+  concept_id = "virgin_mary"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_theotokos_son]
+  step_id = "mary_christ_theotokos"
+  concept_id = "son"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_theotokos_divine_motherhood]
+  step_id = "mary_christ_theotokos"
+  concept_id = "divine_motherhood"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_theotokos_human_nature]
+  step_id = "mary_christ_theotokos"
+  concept_id = "human_nature"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[mary_christ_virgin]
+  tour_id = "mary_christ"
+  title = "The virgin mother"
+  question = "What does perpetual virginity affirm?"
+  narrative = "Aquinas affirms Mary's virginity before, in, and after Christ's birth. The Church confesses her as the ever-virgin mother of the incarnate Son."
+  qualification = "This confession concerns Christ's human birth; it must be distinguished from Mary's own conception."
+  concept_ids = ["virgin_mary", "perpetual_virginity", "son", "immaculate_conception"]
+  edge_ids = ["mary_virginity", "mary_mother_son", "immaculate_distinct_virginity"]
+  source_ids = ["st_iii_28_1_3", "st_iii_35_4", "ccc_484_495"]
+  focus_concept = "perpetual_virginity"
+  camera_z = 36.0
+
+graph_tour_positions[mary_christ_virgin_virgin_mary]
+  step_id = "mary_christ_virgin"
+  concept_id = "virgin_mary"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_virgin_perpetual_virginity]
+  step_id = "mary_christ_virgin"
+  concept_id = "perpetual_virginity"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_virgin_son]
+  step_id = "mary_christ_virgin"
+  concept_id = "son"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_virgin_immaculate_conception]
+  step_id = "mary_christ_virgin"
+  concept_id = "immaculate_conception"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[mary_christ_immaculate]
+  tour_id = "mary_christ"
+  title = "Redeemed by preservation"
+  question = "What does the Immaculate Conception concern?"
+  narrative = "Catholic teaching holds that Mary was preserved from original sin from her first conception through Christ's merits. Her holiness is a gift received from God."
+  qualification = "ST III q. 27 a. 2 instead places sanctification after contracting original sin. The later dogma is not presented as Aquinas's own conclusion in that article."
+  concept_ids = ["virgin_mary", "immaculate_conception", "original_sin", "sanctifying_grace"]
+  edge_ids = ["mary_immaculate", "mary_preserved_original_sin", "mary_receives_grace"]
+  source_ids = ["st_iii_27_2", "ccc_484_495"]
+  focus_concept = "immaculate_conception"
+  camera_z = 36.0
+
+graph_tour_positions[mary_christ_immaculate_virgin_mary]
+  step_id = "mary_christ_immaculate"
+  concept_id = "virgin_mary"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_immaculate_immaculate_conception]
+  step_id = "mary_christ_immaculate"
+  concept_id = "immaculate_conception"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_immaculate_original_sin]
+  step_id = "mary_christ_immaculate"
+  concept_id = "original_sin"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_immaculate_sanctifying_grace]
+  step_id = "mary_christ_immaculate"
+  concept_id = "sanctifying_grace"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[mary_christ_assumption]
+  tour_id = "mary_christ"
+  title = "Body and soul in glory"
+  question = "What does the Assumption affirm?"
+  narrative = "The Church teaches that Mary was taken body and soul into heavenly glory at the completion of her earthly life. Her glorification anticipates the resurrection of other Christians."
+  qualification = "The defined formula does not settle the manner of her death. Mary remains a redeemed creature."
+  concept_ids = ["virgin_mary", "assumption_of_mary", "heaven", "beatific_vision"]
+  edge_ids = ["mary_assumption", "assumption_heaven", "heaven_includes_vision"]
+  source_ids = ["ccc_963_975", "ccc_1023_1029"]
+  focus_concept = "assumption_of_mary"
+  camera_z = 36.0
+
+graph_tour_positions[mary_christ_assumption_virgin_mary]
+  step_id = "mary_christ_assumption"
+  concept_id = "virgin_mary"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_assumption_assumption_of_mary]
+  step_id = "mary_christ_assumption"
+  concept_id = "assumption_of_mary"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_assumption_heaven]
+  step_id = "mary_christ_assumption"
+  concept_id = "heaven"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_assumption_beatific_vision]
+  step_id = "mary_christ_assumption"
+  concept_id = "beatific_vision"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[mary_christ_intercession]
+  tour_id = "mary_christ"
+  title = "Asking Mary and the saints to pray"
+  question = "Does intercession compete with Christ?"
+  narrative = "The blessed intercede before God. Mary's maternal intercession is a particular form of this prayer and depends entirely on Christ's unique mediation."
+  qualification = "Invoking a saint asks for prayer; it does not attribute an independent power to bestow grace to the saint."
+  concept_ids = ["virgin_mary", "marian_intercession", "saints_intercession", "christ_mediation", "god"]
+  edge_ids = ["mary_can_intercede", "marian_intercession_kind", "marian_intercession_depends_christ", "saints_intercession_to_god"]
+  source_ids = ["lg_60_67", "ccc_963_975", "st_ii_ii_83_4_11"]
+  focus_concept = "marian_intercession"
+  camera_z = 36.0
+
+graph_tour_positions[mary_christ_intercession_virgin_mary]
+  step_id = "mary_christ_intercession"
+  concept_id = "virgin_mary"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_intercession_marian_intercession]
+  step_id = "mary_christ_intercession"
+  concept_id = "marian_intercession"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_intercession_saints_intercession]
+  step_id = "mary_christ_intercession"
+  concept_id = "saints_intercession"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_intercession_christ_mediation]
+  step_id = "mary_christ_intercession"
+  concept_id = "christ_mediation"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_intercession_god]
+  step_id = "mary_christ_intercession"
+  concept_id = "god"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[mary_christ_worship]
+  tour_id = "mary_christ"
+  title = "Dulia, hyperdulia, and latria"
+  question = "How does veneration differ from worship of God?"
+  narrative = "Aquinas reserves latria for God. Mary receives the singular veneration called hyperdulia; saints receive honor as God's servants."
+  qualification = "The distinction concerns the kind and object of honor, not merely how intense a feeling of devotion is."
+  concept_ids = ["marian_veneration", "virgin_mary", "divine_adoration", "god", "veneration_of_saints"]
+  edge_ids = ["hyperdulia_mary", "hyperdulia_not_latria", "latria_god", "dulia_not_latria"]
+  source_ids = ["st_iii_25_5_6"]
+  focus_concept = "divine_adoration"
+  camera_z = 36.0
+
+graph_tour_positions[mary_christ_worship_marian_veneration]
+  step_id = "mary_christ_worship"
+  concept_id = "marian_veneration"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_worship_virgin_mary]
+  step_id = "mary_christ_worship"
+  concept_id = "virgin_mary"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_worship_divine_adoration]
+  step_id = "mary_christ_worship"
+  concept_id = "divine_adoration"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_worship_god]
+  step_id = "mary_christ_worship"
+  concept_id = "god"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[mary_christ_worship_veneration_of_saints]
+  step_id = "mary_christ_worship"
+  concept_id = "veneration_of_saints"
+  x = 6.0
+  y = -7.0
+  z = 0.0

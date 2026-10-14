@@ -28,3 +28,155 @@ graph_tours[creation]
   topic_tags = ["Creation", "Causality", "Faith and reason"]
   step_ids = ["creation_change", "creation_dependence", "creation_creation", "creation_duration"]
   framing_note = "This tour presents Thomistic arguments and Catholic teaching for examination. Its pictures illustrate distinctions; they do not by themselves demonstrate the conclusions or replace investigation of nature."
+
+graph_tours[grace_faith]
+  title = "Grace, faith, charity, and action"
+  description = "God's initiative, our response, and the relation between faith, charity, and action."
+  audience_tags = ["Dialogue with Protestant and Evangelical Christians", "Christian dialogue"]
+  topic_tags = ["Grace", "Freedom", "Virtues"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["grace_faith_initiative", "grace_faith_faith", "grace_faith_action"]
+
+graph_tours[spirit_work]
+  title = "The Spirit's work in a person"
+  description = "Distinguish abiding gifts, their fruits, charisms, and emotional experiences."
+  audience_tags = ["Dialogue with Pentecostal and charismatic Christians", "Catholic formation"]
+  topic_tags = ["Holy Spirit", "Gifts and fruits", "Grace"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["spirit_work_gifts", "spirit_work_powers", "spirit_work_fruits"]
+
+graph_tours[divine_participation]
+  title = "Participation in divine life"
+  description = "Explore sanctification and clarify the scope of Latin Trinitarian language."
+  audience_tags = ["Dialogue with Eastern Orthodox Christians", "Christian dialogue"]
+  topic_tags = ["Grace", "Trinity", "Sanctification"]
+  framing_note = "This tour explains Thomistic vocabulary. Unitatis redintegratio 17 recognizes the richness of Eastern theology; these scenes do not claim to settle every Eastern-Western dispute."
+  step_ids = ["divine_participation_grace", "divine_participation_love", "divine_participation_procession"]
+
+graph_tours[jewish_dialogue]
+  title = "Divine unity and Christian language about God"
+  description = "Begin with divine unity and creation, then explain the meaning of Christian personal language."
+  audience_tags = ["Dialogue with Jewish visitors", "Interfaith dialogue"]
+  topic_tags = ["Divine unity", "Creation", "Trinity"]
+  framing_note = "Nostra aetate 4 recognizes the Church's Jewish roots and rejects presenting Jews as rejected by God. This tour explains Catholic claims without treating Judaism as an incomplete stereotype."
+  step_ids = ["jewish_dialogue_one", "jewish_dialogue_creator", "jewish_dialogue_persons"]
+
+graph_tours[divine_being]
+  title = "What Catholics mean by divine"
+  description = "Clarify uncreated being, spiritual creatures, and participation through grace."
+  audience_tags = ["Dialogue with Latter-day Saints", "Interfaith dialogue"]
+  topic_tags = ["Divine unity", "Creation", "Grace"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["divine_being_pure_act", "divine_being_spirits", "divine_being_participation"]
+
+graph_tours[god_world_soul]
+  title = "God, world, and the human soul"
+  description = "Examine Catholic distinctions between creator, embodied person, and union through charity."
+  audience_tags = ["Dialogue with Hindu visitors", "Interfaith dialogue"]
+  topic_tags = ["Creation", "Human nature", "Grace"]
+  framing_note = "Hindu traditions are diverse. Following Nostra aetate 2, this tour presents Catholic terms for dialogue without equating them with every Hindu account of self or ultimate reality."
+  step_ids = ["god_world_soul_creation", "god_world_soul_person", "god_world_soul_union"]
+
+graph_tours[desire_flourishing]
+  title = "Desire, suffering, and human flourishing"
+  description = "Explore desire, grief, moral formation, and peace in Aquinas's account."
+  audience_tags = ["Dialogue with Buddhist visitors", "Philosophical inquiry"]
+  topic_tags = ["Passions", "Virtues", "Human nature"]
+  framing_note = "Buddhist traditions differ in their accounts of self and liberation. These scenes offer a Catholic vocabulary for discussion, not a translation of all Buddhist teaching into Thomistic categories."
+  step_ids = ["desire_flourishing_desire", "desire_flourishing_passions", "desire_flourishing_peace"]
+
+graph_tours[spiritual_life]
+  title = "Spiritual life and human nature"
+  description = "Distinguish soul, faculties, grace, and emotional experience."
+  audience_tags = ["Spiritual seekers", "General introduction"]
+  topic_tags = ["Human nature", "Grace", "Discernment"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["spiritual_life_powers", "spiritual_life_grace", "spiritual_life_discernment"]
+
+graph_tours[formation]
+  title = "The human person transformed by grace"
+  description = "A first route from embodied life through grace to sacramental growth."
+  audience_tags = ["Catechumens", "Catholic formation", "General introduction"]
+  topic_tags = ["Human nature", "Grace", "Sacraments"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["formation_human", "formation_gift", "formation_growth"]
+
+graph_tours[body_soul]
+  title = "Body, soul, and powers"
+  description = "Learn the Thomistic vocabulary for embodied cognition and appetite."
+  audience_tags = ["Psychology and neuroscience students", "Philosophical inquiry"]
+  topic_tags = ["Human nature", "Knowledge", "Passions"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["body_soul_unity", "body_soul_cognition", "body_soul_appetite"]
+
+graph_tours[responsible_action]
+  title = "From perceived good to responsible action"
+  description = "Trace judgment, choice, and the formation of character."
+  audience_tags = ["Philosophy students", "Secular humanists", "Philosophical inquiry"]
+  topic_tags = ["Freedom", "Virtues", "Ethics"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["responsible_action_good", "responsible_action_choice", "responsible_action_character"]
+
+graph_tours[causal_explanation]
+  title = "Different kinds of explanation"
+  description = "Distinguish four causes and the question of creation from natural change."
+  audience_tags = ["Scientists and scientifically minded readers", "Philosophy students"]
+  topic_tags = ["Causality", "Metaphysics", "Faith and reason"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["causal_explanation_four", "causal_explanation_form", "causal_explanation_creation"]
+
+graph_tours[good_evil]
+  title = "Good, evil, and freedom"
+  description = "Clarify privation, responsibility, and the possibility of healing."
+  audience_tags = ["People exploring the problem of evil", "Philosophical inquiry", "General introduction"]
+  topic_tags = ["Evil", "Freedom", "Ethics"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["good_evil_privation", "good_evil_freedom", "good_evil_healing"]
+
+graph_tours[careful_terms]
+  title = "Words that need careful distinctions"
+  description = "Read person, substance, form, and spiritual creature without conflating their meanings."
+  audience_tags = ["Catechists", "Interfaith discussion leaders", "Philosophy students"]
+  topic_tags = ["Metaphysics", "Trinity", "Human nature"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["careful_terms_substance", "careful_terms_person", "careful_terms_spirit"]
+
+graph_tours[sacramental_life]
+  title = "Sacraments and the life of grace"
+  description = "Follow principal and instrumental causality, initiation, and reconciliation."
+  audience_tags = ["Catechumens", "Catholic formation", "Dialogue with Protestant and Evangelical Christians", "Christian dialogue"]
+  topic_tags = ["Sacraments", "Grace", "Sanctification"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["sacramental_life_cause", "sacramental_life_initiation", "sacramental_life_reconciliation"]
+
+graph_tours[sin_intellect]
+  title = "Sin, the intellect, and reconciliation"
+  description = "Where sin has its subject, how it clouds judgment, and how forgiveness and healing differ."
+  audience_tags = ["Catholic formation", "Catechumens", "Philosophical inquiry"]
+  topic_tags = ["Sin", "Knowledge", "Reconciliation"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["sin_intellect_subject", "sin_intellect_wounds", "sin_intellect_judgment", "sin_intellect_gravity", "sin_intellect_conversion", "sin_intellect_absolution", "sin_intellect_healing"]
+
+graph_tours[purgatory_dialogue]
+  title = "Purgatory, forgiveness, and the hope of heaven"
+  description = "Explain the Catholic teaching on purification, its relation to Christ's forgiveness, and prayer for the dead."
+  audience_tags = ["Dialogue with Protestant and Evangelical Christians", "Christian dialogue", "Catholic formation"]
+  topic_tags = ["Purgatory", "Last things", "Reconciliation"]
+  framing_note = "This tour presents the Catholic case for dialogue with Protestant Christians. It identifies Church teaching and Aquinas separately; the posthumous Summa supplement and appendix are labeled as such. It does not infer the fate of any named person."
+  step_ids = ["purgatory_dialogue_death", "purgatory_dialogue_ends", "purgatory_dialogue_forgiveness", "purgatory_dialogue_saved", "purgatory_dialogue_prayer", "purgatory_dialogue_resurrection"]
+
+graph_tours[mary_christ]
+  title = "Mary, Mother of God, and the communion of saints"
+  description = "Theotokos, Marian dogmas, intercession, and the distinction between veneration and divine worship."
+  audience_tags = ["Dialogue with Protestant and Evangelical Christians", "Christian dialogue", "Dialogue with Eastern Orthodox Christians", "Catholic formation"]
+  topic_tags = ["Mary", "Incarnation", "Prayer and intercession"]
+  framing_note = "Mary is considered in relation to Christ. Later-defined dogmas are sourced to Church teaching. The historical disagreement between ST III q. 27 a. 2 and the Immaculate Conception is identified rather than harmonized away."
+  step_ids = ["mary_christ_theotokos", "mary_christ_virgin", "mary_christ_immaculate", "mary_christ_assumption", "mary_christ_intercession", "mary_christ_worship"]
+
+graph_tours[saints_prayer]
+  title = "Why ask Mary and the saints to pray?"
+  description = "Distinguish invocation, intercession, divine worship, and prayer for the departed."
+  audience_tags = ["Dialogue with Protestant and Evangelical Christians", "Christian dialogue", "Spiritual seekers", "Catholic formation"]
+  topic_tags = ["Prayer and intercession", "Mary", "Communion of saints"]
+  framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
+  step_ids = ["saints_prayer_communion", "saints_prayer_request", "saints_prayer_christ"]

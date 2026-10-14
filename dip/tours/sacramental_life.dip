@@ -1,0 +1,128 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[sacramental_life_cause]
+  tour_id = "sacramental_life"
+  title = "God acts through sacramental signs"
+  question = "Who gives the grace of a sacrament?"
+  narrative = "God is the principal cause of grace. Aquinas calls the sacrament an instrumental cause, acting through divine power."
+  qualification = "Instrumental causality does not make a sacrament an independent source of supernatural life."
+  concept_ids = ["god", "grace", "sacrament", "son"]
+  edge_ids = ["god_principal_cause_of_grace", "sacrament_instrumental_grace", "sacraments_instituted_by_christ"]
+  source_ids = ["st_iii_62_1", "ccc_1114_1116"]
+  focus_concept = "sacrament"
+  camera_z = 36.0
+
+graph_tour_positions[sacramental_life_cause_god]
+  step_id = "sacramental_life_cause"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_cause_grace]
+  step_id = "sacramental_life_cause"
+  concept_id = "grace"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_cause_sacrament]
+  step_id = "sacramental_life_cause"
+  concept_id = "sacrament"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_cause_son]
+  step_id = "sacramental_life_cause"
+  concept_id = "son"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[sacramental_life_initiation]
+  tour_id = "sacramental_life"
+  title = "Beginning, strengthening, nourishment"
+  question = "Why several sacraments of initiation?"
+  narrative = "Aquinas compares Baptism with birth, Confirmation with strengthening, and the Eucharist with nourishment of spiritual life."
+  qualification = "The analogy distinguishes effects; it does not make grace a material substance consumed in measurable amounts."
+  concept_ids = ["baptism", "spiritual_regeneration", "spiritual_life", "confirmation", "eucharist"]
+  edge_ids = ["baptism_regenerates", "regeneration_begins_spiritual_life", "confirmation_strengthens_life", "eucharist_nourishes_life"]
+  source_ids = ["st_iii_65_1", "ccc_1127_1129"]
+  focus_concept = "spiritual_life"
+  camera_z = 36.0
+
+graph_tour_positions[sacramental_life_initiation_baptism]
+  step_id = "sacramental_life_initiation"
+  concept_id = "baptism"
+  x = 0.0
+  y = 7.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_initiation_spiritual_regeneration]
+  step_id = "sacramental_life_initiation"
+  concept_id = "spiritual_regeneration"
+  x = -9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_initiation_spiritual_life]
+  step_id = "sacramental_life_initiation"
+  concept_id = "spiritual_life"
+  x = 9.0
+  y = 1.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_initiation_confirmation]
+  step_id = "sacramental_life_initiation"
+  concept_id = "confirmation"
+  x = -6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_initiation_eucharist]
+  step_id = "sacramental_life_initiation"
+  concept_id = "eucharist"
+  x = 6.0
+  y = -7.0
+  z = 0.0
+
+graph_tour_steps[sacramental_life_reconciliation]
+  tour_id = "sacramental_life"
+  title = "Forgiveness within sacramental life"
+  question = "What does Penance include?"
+  narrative = "Penance includes the penitent's contrition and the minister's absolution. Its effect is remission of sin through Christ."
+  qualification = "Receiving forgiveness calls for the requisite disposition; the diagram does not substitute for the sacrament."
+  concept_ids = ["penance", "contrition", "sacramental_absolution", "remission_of_sin"]
+  edge_ids = ["penance_contrition", "penance_absolution", "absolution_remission"]
+  source_ids = ["ccc_1451_1460", "st_iii_84_3"]
+  focus_concept = "penance"
+  camera_z = 36.0
+
+graph_tour_positions[sacramental_life_reconciliation_penance]
+  step_id = "sacramental_life_reconciliation"
+  concept_id = "penance"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_reconciliation_contrition]
+  step_id = "sacramental_life_reconciliation"
+  concept_id = "contrition"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_reconciliation_sacramental_absolution]
+  step_id = "sacramental_life_reconciliation"
+  concept_id = "sacramental_absolution"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[sacramental_life_reconciliation_remission_of_sin]
+  step_id = "sacramental_life_reconciliation"
+  concept_id = "remission_of_sin"
+  x = 8.0
+  y = -6.0
+  z = 0.0

@@ -1,0 +1,100 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[jewish_dialogue_one]
+  tour_id = "jewish_dialogue"
+  title = "One, simple God"
+  question = "What does Catholic theology affirm about divine unity?"
+  narrative = "Aquinas argues that God is one and without composition. Catholic Trinitarian language is read within this confession of the one God."
+  qualification = "The separate principle nodes explain aspects of one confession; they are not divine parts."
+  concept_ids = ["god", "divine_unity", "divine_simplicity"]
+  edge_ids = ["god_one", "god_simple"]
+  source_ids = ["na_2_4", "st_i_11_3", "st_i_3_7"]
+  focus_concept = "god"
+  camera_z = 36.0
+
+graph_tour_positions[jewish_dialogue_one_god]
+  step_id = "jewish_dialogue_one"
+  concept_id = "god"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[jewish_dialogue_one_divine_unity]
+  step_id = "jewish_dialogue_one"
+  concept_id = "divine_unity"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[jewish_dialogue_one_divine_simplicity]
+  step_id = "jewish_dialogue_one"
+  concept_id = "divine_simplicity"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[jewish_dialogue_creator]
+  tour_id = "jewish_dialogue"
+  title = "Creator and creatures"
+  question = "How does creation differ from a division of God?"
+  narrative = "God causes the being of creatures. Created being depends on God; the account of creation does not treat creatures as fragments of the divine essence."
+  qualification = "The graph presents Aquinas's causal account for examination and dialogue."
+  concept_ids = ["god", "created_being", "efficient_cause"]
+  edge_ids = ["god_creates_all", "god_efficient_cause_role"]
+  source_ids = ["st_i_44_1", "ccc_290_292"]
+  focus_concept = "created_being"
+  camera_z = 36.0
+
+graph_tour_positions[jewish_dialogue_creator_god]
+  step_id = "jewish_dialogue_creator"
+  concept_id = "god"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[jewish_dialogue_creator_created_being]
+  step_id = "jewish_dialogue_creator"
+  concept_id = "created_being"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[jewish_dialogue_creator_efficient_cause]
+  step_id = "jewish_dialogue_creator"
+  concept_id = "efficient_cause"
+  x = 0.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[jewish_dialogue_persons]
+  tour_id = "jewish_dialogue"
+  title = "What Christians mean by personal distinction"
+  question = "What is being asserted when Catholics name Father and Son?"
+  narrative = "Catholic teaching identifies Father and Son with one divine essence while distinguishing them personally. Aquinas explains divine person through subsisting relation."
+  qualification = "This is an explanation of Christian confession, not a claim that Jewish interlocutors already accept it."
+  concept_ids = ["father", "divine_essence", "son"]
+  edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son"]
+  source_ids = ["st_i_29_4", "ccc_253_254", "ccc_255"]
+  focus_concept = "divine_essence"
+  camera_z = 36.0
+
+graph_tour_positions[jewish_dialogue_persons_father]
+  step_id = "jewish_dialogue_persons"
+  concept_id = "father"
+  x = -8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[jewish_dialogue_persons_divine_essence]
+  step_id = "jewish_dialogue_persons"
+  concept_id = "divine_essence"
+  x = 8.0
+  y = 4.0
+  z = 0.0
+
+graph_tour_positions[jewish_dialogue_persons_son]
+  step_id = "jewish_dialogue_persons"
+  concept_id = "son"
+  x = 0.0
+  y = -6.0
+  z = 0.0

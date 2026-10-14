@@ -1,0 +1,121 @@
+# Cited editorial scenes; positions are display coordinates, not theological distances.
+
+graph_tour_steps[spiritual_life_powers]
+  tour_id = "spiritual_life"
+  title = "One soul, several powers"
+  question = "What do soul and faculty mean?"
+  narrative = "Aquinas distinguishes the soul from its powers. Intellect and appetite name different capacities rooted in one living person."
+  qualification = "A faculty is a principle of activity, not an independent spirit inside the body."
+  concept_ids = ["rational_soul", "soul_power", "intellectual_power", "appetitive_power"]
+  edge_ids = ["soul_distinct_from_power", "soul_intellectual_power", "soul_appetitive_power"]
+  source_ids = ["st_i_77_1", "st_i_78_1"]
+  focus_concept = "rational_soul"
+  camera_z = 36.0
+
+graph_tour_positions[spiritual_life_powers_rational_soul]
+  step_id = "spiritual_life_powers"
+  concept_id = "rational_soul"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_powers_soul_power]
+  step_id = "spiritual_life_powers"
+  concept_id = "soul_power"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_powers_intellectual_power]
+  step_id = "spiritual_life_powers"
+  concept_id = "intellectual_power"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_powers_appetitive_power]
+  step_id = "spiritual_life_powers"
+  concept_id = "appetitive_power"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[spiritual_life_grace]
+  tour_id = "spiritual_life"
+  title = "Nature and grace"
+  question = "How is grace different from a natural capacity?"
+  narrative = "Grace is a gift from God. Sanctifying grace perfects the soul, while actual grace names divine help in conversion and growth."
+  qualification = "Natural abilities and supernatural gifts should not be identified solely because both are represented as nodes."
+  concept_ids = ["god", "grace", "sanctifying_grace", "actual_grace"]
+  edge_ids = ["god_bestows_grace", "sanctifying_kind_of_grace", "actual_kind_of_grace"]
+  source_ids = ["ccc_1996_2000"]
+  focus_concept = "grace"
+  camera_z = 36.0
+
+graph_tour_positions[spiritual_life_grace_god]
+  step_id = "spiritual_life_grace"
+  concept_id = "god"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_grace_grace]
+  step_id = "spiritual_life_grace"
+  concept_id = "grace"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_grace_sanctifying_grace]
+  step_id = "spiritual_life_grace"
+  concept_id = "sanctifying_grace"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_grace_actual_grace]
+  step_id = "spiritual_life_grace"
+  concept_id = "actual_grace"
+  x = 8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_steps[spiritual_life_discernment]
+  tour_id = "spiritual_life"
+  title = "Feeling and spiritual judgment"
+  question = "Can a feeling by itself establish a spiritual claim?"
+  narrative = "Disordered passion can impede practical judgment. The gift of counsel perfects practical intellect; discernment involves the ordering of thought and action."
+  qualification = "The Catechism cautions that feelings do not establish our state of grace. The graph is not a device for certifying spiritual experiences."
+  concept_ids = ["disordered_passion", "practical_judgment", "practical_intellect", "counsel_gift"]
+  edge_ids = ["passion_impedes_judgment", "judgment_act_of_practical_intellect", "counsel_gift_specific_intellect"]
+  source_ids = ["ccc_2001_2005", "st_i_ii_77_1_2", "st_i_ii_68_4"]
+  focus_concept = "practical_judgment"
+  camera_z = 36.0
+
+graph_tour_positions[spiritual_life_discernment_disordered_passion]
+  step_id = "spiritual_life_discernment"
+  concept_id = "disordered_passion"
+  x = -8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_discernment_practical_judgment]
+  step_id = "spiritual_life_discernment"
+  concept_id = "practical_judgment"
+  x = 8.0
+  y = 5.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_discernment_practical_intellect]
+  step_id = "spiritual_life_discernment"
+  concept_id = "practical_intellect"
+  x = -8.0
+  y = -6.0
+  z = 0.0
+
+graph_tour_positions[spiritual_life_discernment_counsel_gift]
+  step_id = "spiritual_life_discernment"
+  concept_id = "counsel_gift"
+  x = 8.0
+  y = -6.0
+  z = 0.0
