@@ -1,0 +1,439 @@
+# Passage-level provenance: classifications concern only the recorded claim.
+ontology
+  support_records map : support_record
+
+  support_records[god_reason]
+    target_kind = "concept"
+    target_id = "god"
+    claim = "God exists."
+    source_id str = "st_i_2_2_3"
+      ?rationale "Aquinas argues from effects to a first cause."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "This classification concerns existence; it does not extend natural demonstrability to the Trinity."
+    review_status = "draft"
+
+  support_records[god_wisdom]
+    target_kind = "concept"
+    target_id = "god"
+    claim = "Created beauty and greatness direct reason toward their maker."
+    source_id str = "bible_wisdom_13_1_5"
+      ?rationale "Wisdom presents creation as a basis for recognition of its maker."
+    grounding = ["natural_reason", "divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "A scriptural witness to natural knowledge, not the wording of the Five Ways."
+    review_status = "draft"
+
+  support_records[god_council]
+    target_kind = "concept"
+    target_id = "god"
+    claim = "God can be known from creatures through natural reason."
+    source_id str = "dei_verbum_6_10"
+      ?rationale "Dei verbum 6 affirms natural knowledge of God and the assistance revelation gives to its reception."
+    grounding = ["natural_reason", "divine_revelation"]
+    support_kind = "doctrinal_formulation"
+    doctrinal_status = "magisterial_teaching"
+    qualification = "The same truth can be naturally knowable and revealed; these are not mutually exclusive classifications (Dei verbum 6)."
+    review_status = "draft"
+    status_source_id = "dei_verbum_6_10"
+
+  support_records[trinity_revelation]
+    target_kind = "concept"
+    target_id = "trinity"
+    claim = "The Trinity of divine persons is known through revelation."
+    source_id str = "st_i_32_1"
+      ?rationale "Aquinas distinguishes revealed personal distinctions from naturally knowable divine attributes."
+    grounding = ["divine_revelation"]
+    support_kind = "theological_inference"
+    doctrinal_status = "unassessed"
+    qualification = "This is Aquinas's account of how the mystery is known."
+    review_status = "draft"
+
+  support_records[trinity_baptismal_witness]
+    target_kind = "concept"
+    target_id = "trinity"
+    claim = "The baptismal commission names Father, Son, and Holy Spirit."
+    source_id str = "bible_matthew_28_19"
+      ?rationale "The verse gives the triadic baptismal naming."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The later technical terminology of essence and subsistent relation is not stated in this verse."
+    review_status = "draft"
+
+  support_records[trinity_church]
+    target_kind = "concept"
+    target_id = "trinity"
+    claim = "The Trinity is one God in three persons."
+    source_id str = "ccc_253_254"
+      ?rationale "The Catechism formulates unity and personal distinction."
+    grounding = ["divine_revelation"]
+    support_kind = "doctrinal_formulation"
+    doctrinal_status = "magisterial_teaching"
+    qualification = "A doctrinal formulation; the precise theological note is not inferred from the source type."
+    review_status = "draft"
+    status_source_id = "ccc_253_254"
+
+  support_records[trinity_essence_church]
+    target_kind = "edge"
+    target_id = "trinity_one_essence"
+    claim = "The three persons have one divine essence."
+    source_id str = "ccc_253_254"
+      ?rationale "The Catechism excludes division of the one divinity."
+    grounding = ["divine_revelation"]
+    support_kind = "doctrinal_formulation"
+    doctrinal_status = "magisterial_teaching"
+    qualification = "This relation does not introduce three gods."
+    review_status = "draft"
+    status_source_id = "ccc_253_254"
+
+  support_records[son_baptismal_witness]
+    target_kind = "concept"
+    target_id = "son"
+    claim = "Father, Son, and Holy Spirit are named together in the baptismal commission."
+    source_id str = "bible_matthew_28_19"
+      ?rationale "The passage explicitly names the three."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "This witness supports the naming, not every theological predicate attached to this concept."
+    review_status = "draft"
+
+  support_records[holy_spirit_baptismal_witness]
+    target_kind = "concept"
+    target_id = "holy_spirit"
+    claim = "Father, Son, and Holy Spirit are named together in the baptismal commission."
+    source_id str = "bible_matthew_28_19"
+      ?rationale "The passage explicitly names the three."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "This witness supports the naming, not every theological predicate attached to this concept."
+    review_status = "draft"
+
+  support_records[father_baptismal_witness]
+    target_kind = "concept"
+    target_id = "father"
+    claim = "Father, Son, and Holy Spirit are named together in the baptismal commission."
+    source_id str = "bible_matthew_28_19"
+      ?rationale "The passage explicitly names the three."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "This witness supports the naming, not every theological predicate attached to this concept."
+    review_status = "draft"
+
+  support_records[son_word_witness]
+    target_kind = "concept"
+    target_id = "son"
+    claim = "The Word is with God and is God."
+    source_id str = "bible_john_1_1_3"
+      ?rationale "John's prologue affirms the Word's divinity."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The record concerns the Johannine witness; later technical formulations have their own citations."
+    review_status = "draft"
+
+  support_records[incarnation_witness]
+    target_kind = "edge"
+    target_id = "son_assumes_human_nature"
+    claim = "The Word became flesh."
+    source_id str = "bible_john_1_14"
+      ?rationale "The prologue witnesses to the incarnation."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The edge expresses this in later theological terminology; the verse does not itself supply the complete account of hypostatic union."
+    review_status = "draft"
+
+  support_records[baptism_scripture]
+    target_kind = "concept"
+    target_id = "baptism"
+    claim = "Christ commissions baptism in the triune name."
+    source_id str = "bible_matthew_28_19"
+      ?rationale "Baptism belongs to the commission."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "This verse is one witness, not an exhaustive sacramental treatise."
+    review_status = "draft"
+
+  support_records[resurrection_scripture]
+    target_kind = "concept"
+    target_id = "christ_resurrection"
+    claim = "Jesus, who was crucified, has risen."
+    source_id str = "bible_matthew_28_5_6"
+      ?rationale "The angel announces the resurrection at the tomb."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "A Gospel witness; this record does not claim an independent historical demonstration."
+    review_status = "draft"
+
+  support_records[soul_aristotle]
+    target_kind = "concept"
+    target_id = "rational_soul"
+    claim = "Soul is the first actuality of a natural organized body potentially alive."
+    source_id str = "aristotle_de_anima_ii_1"
+      ?rationale "Aristotle develops the form-and-actuality account of living bodies."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Historical philosophical background: this general account does not establish every Thomistic thesis about the rational soul."
+    review_status = "draft"
+
+  support_records[soul_thomas]
+    target_kind = "concept"
+    target_id = "rational_soul"
+    claim = "The intellectual principle is the substantial form of the human body."
+    source_id str = "st_i_76_1"
+      ?rationale "Aquinas argues from the unity of human intellectual and bodily operations."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Classification concerns this argument in the respondeo, not every passage in the question."
+    review_status = "draft"
+
+  support_records[person_form_reason]
+    target_kind = "edge"
+    target_id = "person_has_form"
+    claim = "The human person has the rational soul as substantial form."
+    source_id str = "st_i_76_1"
+      ?rationale "Aquinas treats intellectual activity as the activity of this human being."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Natural philosophical argument; the scriptural word soul is not automatically equivalent to this technical account."
+    review_status = "draft"
+
+  support_records[person_body_reason]
+    target_kind = "edge"
+    target_id = "person_has_body"
+    claim = "The human being includes the body."
+    source_id str = "st_i_75_4"
+      ?rationale "Aquinas rejects identifying the whole human being with the soul alone."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "This is a philosophical claim about the human composite."
+    review_status = "draft"
+
+  support_records[person_reason]
+    target_kind = "concept"
+    target_id = "human_person"
+    claim = "The whole human being is not the soul alone."
+    source_id str = "st_i_75_4"
+      ?rationale "The argument concerns the embodied human composite."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "The classification does not cover every claim about human destiny."
+    review_status = "draft"
+
+  support_records[vegetative_power_reason]
+    target_kind = "concept"
+    target_id = "vegetative_power"
+    claim = "One of the five genera of powers in ST I, q. 78, a. 1."
+    source_id str = "st_i_78_1"
+      ?rationale "Aquinas distinguishes genera of powers by their operations and objects."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Natural philosophical classification within the cited account of living powers."
+    review_status = "draft"
+
+  support_records[sensitive_power_reason]
+    target_kind = "concept"
+    target_id = "sensitive_power"
+    claim = "One of the five genera of powers in ST I, q. 78, a. 1."
+    source_id str = "st_i_78_1"
+      ?rationale "Aquinas distinguishes genera of powers by their operations and objects."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Natural philosophical classification within the cited account of living powers."
+    review_status = "draft"
+
+  support_records[appetitive_power_reason]
+    target_kind = "concept"
+    target_id = "appetitive_power"
+    claim = "One of the five genera of powers in ST I, q. 78, a. 1."
+    source_id str = "st_i_78_1"
+      ?rationale "Aquinas distinguishes genera of powers by their operations and objects."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Natural philosophical classification within the cited account of living powers."
+    review_status = "draft"
+
+  support_records[locomotive_power_reason]
+    target_kind = "concept"
+    target_id = "locomotive_power"
+    claim = "One of the five genera of powers in ST I, q. 78, a. 1."
+    source_id str = "st_i_78_1"
+      ?rationale "Aquinas distinguishes genera of powers by their operations and objects."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Natural philosophical classification within the cited account of living powers."
+    review_status = "draft"
+
+  support_records[intellectual_power_reason]
+    target_kind = "concept"
+    target_id = "intellectual_power"
+    claim = "One of the five genera of powers in ST I, q. 78, a. 1."
+    source_id str = "st_i_78_1"
+      ?rationale "Aquinas distinguishes genera of powers by their operations and objects."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Natural philosophical classification within the cited account of living powers."
+    review_status = "draft"
+
+  support_records[fruit_of_holy_spirit_scripture]
+    target_kind = "concept"
+    target_id = "fruit_of_holy_spirit"
+    claim = "Paul describes fruit borne in life according to the Spirit."
+    source_id str = "bible_galatians_5_22_25"
+      ?rationale "Galatians names fruits in its account of life in the Spirit."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The NABRE list and the traditional Latin twelve-fruit enumeration must be distinguished."
+    review_status = "draft"
+
+  support_records[joy_fruit_scripture]
+    target_kind = "concept"
+    target_id = "joy_fruit"
+    claim = "Paul names joy among the fruit of the Spirit."
+    source_id str = "bible_galatians_5_22_25"
+      ?rationale "Galatians names fruits in its account of life in the Spirit."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The NABRE list and the traditional Latin twelve-fruit enumeration must be distinguished."
+    review_status = "draft"
+
+  support_records[peace_fruit_scripture]
+    target_kind = "concept"
+    target_id = "peace_fruit"
+    claim = "Paul names peace among the fruit of the Spirit."
+    source_id str = "bible_galatians_5_22_25"
+      ?rationale "Galatians names fruits in its account of life in the Spirit."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The NABRE list and the traditional Latin twelve-fruit enumeration must be distinguished."
+    review_status = "draft"
+
+  support_records[patience_fruit_scripture]
+    target_kind = "concept"
+    target_id = "patience_fruit"
+    claim = "Paul names patience among the fruit of the Spirit."
+    source_id str = "bible_galatians_5_22_25"
+      ?rationale "Galatians names fruits in its account of life in the Spirit."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The NABRE list and the traditional Latin twelve-fruit enumeration must be distinguished."
+    review_status = "draft"
+
+  support_records[gentleness_fruit_scripture]
+    target_kind = "concept"
+    target_id = "gentleness_fruit"
+    claim = "Paul names gentleness among the fruit of the Spirit."
+    source_id str = "bible_galatians_5_22_25"
+      ?rationale "Galatians names fruits in its account of life in the Spirit."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The NABRE list and the traditional Latin twelve-fruit enumeration must be distinguished."
+    review_status = "draft"
+
+  support_records[fruits_human_scripture]
+    target_kind = "edge"
+    target_id = "fruits_realized_in_humans"
+    claim = "The fruits characterize human life in the Spirit."
+    source_id str = "bible_galatians_5_22_25"
+      ?rationale "Paul addresses how believers live."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The ontological classification of fruits as acts is articulated separately by Aquinas."
+    review_status = "draft"
+
+  support_records[fruits_thomas]
+    target_kind = "concept"
+    target_id = "fruit_of_holy_spirit"
+    claim = "Fruits are human acts proceeding from the Holy Spirit."
+    source_id str = "st_i_ii_70_1"
+      ?rationale "Aquinas interprets the scriptural image using distinctions concerning acts and delight."
+    grounding = ["reasoning_from_revelation"]
+    support_kind = "theological_inference"
+    doctrinal_status = "unassessed"
+    qualification = "The explanation reasons from a revealed starting point; it is not merely a lexical occurrence."
+    review_status = "draft"
+
+  support_records[combat_scripture]
+    target_kind = "concept"
+    target_id = "spiritual_combat"
+    claim = "Believers are called to resist evil with God's help and persevering prayer."
+    source_id str = "bible_ephesians_6_10_18"
+      ?rationale "Ephesians describes spiritual struggle and prayer."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "The martial imagery does not establish a taxonomy of oppression or possession."
+    review_status = "draft"
+
+  support_records[prayer_combat_scripture]
+    target_kind = "edge"
+    target_id = "christian_prayer_sustains_combat"
+    claim = "Prayer belongs to perseverance in spiritual struggle."
+    source_id str = "bible_ephesians_6_10_18"
+      ?rationale "The passage joins the armor imagery to persevering prayer."
+    grounding = ["divine_revelation"]
+    support_kind = "explicit_statement"
+    doctrinal_status = "unassessed"
+    qualification = "No mechanical protection score is implied."
+    review_status = "draft"
+
+  support_records[prayer_reason]
+    target_kind = "concept"
+    target_id = "christian_prayer"
+    claim = "Petition is an act of reason moved by the will."
+    source_id str = "st_ii_ii_83_1_2"
+      ?rationale "ST II-II, q. 83, a. 1, respondeo analyzes petition as ordering by reason; ad 2 explains the motion of the will."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "This concerns the faculty analysis; Christian prayer also has revealed content."
+    review_status = "draft"
+
+  support_records[prayer_faculty_reason]
+    target_kind = "edge"
+    target_id = "prayer_act_of_intellect"
+    claim = "Petition is an act of the intellectual power."
+    source_id str = "st_ii_ii_83_1_2"
+      ?rationale "ST II-II, q. 83, a. 1, respondeo and ad 1 distinguish petition by reason from the desire that causes it."
+    grounding = ["natural_reason"]
+    support_kind = "philosophical_argument"
+    doctrinal_status = "unassessed"
+    qualification = "Does not classify all claims about prayer as naturally demonstrable."
+    review_status = "draft"
+
+  support_records[revelation_council]
+    target_kind = "concept"
+    target_id = "divine_revelation"
+    claim = "God communicates himself and his saving will."
+    source_id str = "dei_verbum_6_10"
+      ?rationale "Dei verbum 6 describes divine self-communication; paragraphs 7-10 explain its transmission in Scripture and Tradition."
+    grounding = ["divine_revelation"]
+    support_kind = "doctrinal_formulation"
+    doctrinal_status = "magisterial_teaching"
+    qualification = "Scripture and Tradition are not competing grades of evidence."
+    review_status = "draft"
+    status_source_id = "dei_verbum_6_10"

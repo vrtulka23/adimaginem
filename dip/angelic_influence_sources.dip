@@ -1,6 +1,7 @@
 # Cited angelic influence records; all concepts and edges default to draft.
 ontology
   sources[st_i_111_1]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -8,6 +9,7 @@ ontology
     url = "https://www.newadvent.org/summa/1111.htm#article1"
 
   sources[st_i_111_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -15,6 +17,7 @@ ontology
     url = "https://www.newadvent.org/summa/1111.htm#article2"
 
   sources[st_i_111_3_4]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -22,6 +25,7 @@ ontology
     url = "https://www.newadvent.org/summa/1111.htm#article3"
 
   sources[st_i_114_2_3]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -29,6 +33,7 @@ ontology
     url = "https://www.newadvent.org/summa/1114.htm#article2"
 
   sources[st_i_113_1_3]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"

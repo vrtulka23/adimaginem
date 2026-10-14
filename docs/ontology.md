@@ -56,3 +56,7 @@ snt dip parse --project dip/DIPfile --print
 The project entry point and option labels were checked with SNT3 0.9.4. A portable bundle can be produced when needed with `snt dip package --project dip/DIPfile --output project.bundle.json`; generated bundles should be treated as build artifacts.
 
 Return to the [documentation index](index.md).
+
+## Grounding and historical attestation
+
+[`support_records`](../dip/support_records.dip), governed by [`support_record.dipl`](../dip/schemas/support_record.dipl), attaches any number of bounded claims and citations to a concept or edge by ID. Each record has grounding modes, a support kind, a separately sourced doctrinal status, qualification, review status, and `?rationale` on its source reference. Sources now also record witness family, translation, and optional dating or structured biblical verses. See [grounding and historical sources](grounding-and-sources.md) for scope, initial coverage, scholarly safeguards, and authoring instructions.

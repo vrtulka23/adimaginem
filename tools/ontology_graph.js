@@ -2,6 +2,7 @@ import * as THREE from "https://esm.sh/three";
 import { explainPath, collectInfluence } from "./relationship_summary.mjs";
 import { loadOntology } from "./ontology_loader.mjs";
 import { prepareTours, filterTours, seedTourPositions } from "./guided_tours.mjs";
+import { prepareSupport, filterSupportGraph, groundingLabels, witnessLabels, supportLabels, statusLabels } from "./source_support.mjs";
 import { createSelectionForce } from "./selection_force.mjs";
 import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.js";
 import {
@@ -29,6 +30,7 @@ let colorGroups, relationColors, conceptGroups;
 const focusedGroups = new Set();
 const selectedStudyAreas = new Set();
 let structuralLinkKinds;
+let supportIndex, supportFilter = {conceptIds:null,edgeIds:null}, detailSection = "definition";
 let tourData, activeTour = null, tourSnapshot = null, tourTransition = 0;
 let db, concepts, edges, positions, graph, iconSize, iconGap, iconHitPadding, sizeConfig, activeSignature = "", layoutNeedsFit = false;
 let nodeRegistry = {}, nodeVisuals = {}, pathEdgeIds = new Set(), pathNodeIds = new Set(), selected = null, initialTickReported = false;
@@ -411,6 +413,7 @@ function initialLayout() {
 }
 function activeDomains() { return new Set([...document.querySelectorAll("#domains input:checked")].map((x) => x.value)); }
 function matchesStudyFocus(id) {
+  if (supportFilter.conceptIds && !supportFilter.conceptIds.has(id)) return false;
   const matchesArea = !selectedStudyAreas.size || concepts[id].study_areas.some(area => selectedStudyAreas.has(area));
   return matchesArea && (!document.querySelector("#study-focus").checked || conceptGroups[id] === conceptGroups[sizeConfig.study_focus_concept]);
 }
@@ -432,7 +435,7 @@ function updateStudyAreas() {
 function activeEdges() {
   if (activeTour?.scene) return activeTour.scene.step.edge_ids.map(id => [id, edges[id]]);
   const selectedRelations = [...document.querySelector("#relations").selectedOptions].map((o) => o.value), domains = activeDomains(), included = document.querySelector("#included").checked;
-  return Object.entries(edges).filter(([, e]) => (!included || e.included_in_model) && (!selectedRelations.length || selectedRelations.includes(e.relation)) && concepts[e.subject] && concepts[e.object] && matchesStudyFocus(e.subject) && matchesStudyFocus(e.object) && domains.has(concepts[e.subject].domain) && domains.has(concepts[e.object].domain));
+  return Object.entries(edges).filter(([id, e]) => (!supportFilter.edgeIds || supportFilter.edgeIds.has(id)) && (!included || e.included_in_model) && (!selectedRelations.length || selectedRelations.includes(e.relation)) && concepts[e.subject] && concepts[e.object] && matchesStudyFocus(e.subject) && matchesStudyFocus(e.object) && domains.has(concepts[e.subject].domain) && domains.has(concepts[e.object].domain));
 }
 function visibleNodes() {
   if (activeTour?.scene) return activeTour.scene.step.concept_ids.map(id => nodeRegistry[id]);
@@ -570,44 +573,55 @@ function deselectConcept() {
   updateVisualState();
   closeSelectionSpace();
 }
+function supportMarkup(kind, id) {
+  const records = supportIndex[kind].get(id) || [];
+  return records.map(r => `<article class="support-record" data-support-record="${esc(r.id)}"><p><b>${esc(r.claim)}</b></p>
+    <div>${r.grounding.map(g=>`<span class="tag">${esc(groundingLabels[g])}</span>`).join('')}<span class="tag">${esc(supportLabels[r.support_kind])}</span><span class="tag">${esc(r.review_status)}</span></div>
+    <p>${esc(db.support_rationales[r.id])}</p><p class="summary-qualification">${esc(r.qualification)}</p>
+    ${citation(db.ontology.sources[r.source_id],r.source_id)}
+    <div class="small">${esc(statusLabels[r.doctrinal_status])}</div>
+    ${r.status_source_id && r.status_source_id!==r.source_id ? citation(db.ontology.sources[r.status_source_id],r.status_source_id) : ''}</article>`).join('');
+}
+function edgeSupportMarkup(id) {
+  const count = supportIndex.edge.get(id)?.length || 0;
+  return count ? `<details class="support-evidence"><summary>Grounding and historical support (${count})</summary>${supportMarkup('edge',id)}</details>` : '';
+}
 function showDetails(id) {
   const c = concepts[id], source = db.ontology.sources[c.source_id];
   const incident = activeEdges().filter(([, e]) => e.subject === id || e.object === id);
-  let html = `<div class="concept-panel-header"><h2>Concept</h2><button type="button" id="deselect-concept" aria-label="Deselect concept" title="Deselect concept">×</button></div><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div><span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll("_", " "))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div><div class="section-title">Definition source</div>${citation(source, c.source_id)}`;
-  const groundedRelations = Object.values(db.ontology.relations).filter((relation) => relation.principle_id === id);
-  html += `<div class="section-title">Study areas</div>${c.study_areas.map(area => `<span class="tag" title="${esc(db.ontology.study_areas[area].description)}">${esc(db.ontology.study_areas[area].label)}</span>`).join("")}<div class="hint">Editorial study groupings; a concept can belong to several areas.</div>`;
-  if (groundedRelations.length) {
-    html += `<details><summary>Relations using this principle (${groundedRelations.length})</summary>${groundedRelations.map((relation) => `<div class="edge-row"><b>${esc(relation.label)}</b><p>${esc(relation.description)}</p></div>`).join("")}</details>`;
-  }
-  html += `<div class="section-title">Connected relations · ${incident.length}</div>`;
-  if (incident.length) {
-    for (const [edgeId, e] of incident) {
-      const outgoing = e.subject === id, other = outgoing ? e.object : e.subject, edgeSource = db.ontology.sources[e.source_id], rationale = db.rationales?.[edgeId] || "";
-      const qualifiers = [["Recipient", e.recipient_scope], ["Aspect", e.affected_aspect], ["Causality", e.causal_mode]]
-        .filter(([, value]) => value && value !== "unspecified")
-        .map(([name, value]) => `<span class="tag">${name}: ${esc(value.replaceAll("_", " "))}</span>`).join("");
-      const condition = e.conditions ? `<div><b>Conditions:</b> ${esc(e.conditions)}</div>${citation(db.ontology.sources[e.condition_source_id], e.condition_source_id)}` : "";
-      const principleId = db.ontology.relations[e.relation]?.principle_id;
-      const principle = concepts[principleId] ? `<div>Principle: <button data-node="${esc(principleId)}">${esc(concepts[principleId].label)}</button></div>` : "";
-      html += `<div class="edge-row" data-edge="${esc(edgeId)}"><button data-node="${esc(other)}">${esc(concepts[other].label)}</button><br><b>${outgoing ? "→" : "←"} ${esc(db.ontology.relations[e.relation]?.label || e.relation)}</b>${principle}<div>${esc(rationale)}</div>${qualifiers}${citation(edgeSource, e.source_id)}${condition}</div>`;
-    }
-  } else {
-    html += '<div class="empty">No connected relations are displayed with the current filters.</div>';
-  }
-  document.querySelector("#details").innerHTML = html;
-  document.querySelector("#deselect-concept").addEventListener("click", () => {
-    deselectConcept();
-    document.querySelector("#search").focus({ preventScroll: true });
-  });
-  document.querySelectorAll("#details [data-node]").forEach((button) => button.addEventListener("click", () => selectConcept(button.dataset.node)));
+  if (detailSection === "principles" && !Object.values(db.ontology.relations).some(r=>r.principle_id===id)) detailSection="definition";
+  const section = (key,title,body) => `<details class="concept-section" name="concept-sections" data-concept-section="${key}" ${detailSection===key?'open':''}><summary>${title}</summary><div class="concept-section-body">${body}</div></details>`;
+  let html = `<div class="concept-panel-header"><h2>Concept</h2><button type="button" id="deselect-concept" aria-label="Deselect concept" title="Deselect concept">×</button></div><div class="detail-title">${esc(c.label)}</div><div class="latin">${esc(c.latin_name)}</div><div class="id">${esc(id)}</div>`;
+  html += section('definition','Definition',`<span class="tag">${esc(c.domain)}</span><span class="tag">${esc(c.category.replaceAll('_',' '))}</span><span class="tag">${esc(c.review_status)}</span><div class="note">${esc(c.note)}</div>${citation(source,c.source_id)}`);
+  const support = supportIndex.concept.get(id) || [];
+  html += section('grounding',`Grounding and sources · ${support.length}`,support.length ? `<p class="hint">Assessments apply to the stated claims. Other aspects may remain unassessed.</p>${supportMarkup('concept',id)}` : `<p class="note">Grounding has not yet been assessed for this definition. This does not mean it lacks scriptural or philosophical support.</p>${citation(source,c.source_id)}`);
+  html += section('studies','Study areas',c.study_areas.map(area => `<span class="tag" title="${esc(db.ontology.study_areas[area].description)}">${esc(db.ontology.study_areas[area].label)}</span>`).join('')+'<div class="hint">Editorial study groupings; a concept can belong to several areas.</div>');
+  const groundedRelations = Object.values(db.ontology.relations).filter(r=>r.principle_id===id);
+  if (groundedRelations.length) html += section('principles',`Relations using this principle · ${groundedRelations.length}`,groundedRelations.map(r=>`<div class="edge-row"><b>${esc(r.label)}</b><p>${esc(r.description)}</p></div>`).join(''));
+  const relations = incident.map(([edgeId,e])=>{
+    const outgoing=e.subject===id, other=outgoing?e.object:e.subject;
+    const qualifiers=[['Recipient',e.recipient_scope],['Aspect',e.affected_aspect],['Causality',e.causal_mode]].filter(([,v])=>v&&v!=='unspecified').map(([name,v])=>`<span class="tag">${name}: ${esc(v.replaceAll('_',' '))}</span>`).join('');
+    const principleId=db.ontology.relations[e.relation]?.principle_id;
+    const principle=concepts[principleId]?`<div>Principle: <button data-node="${esc(principleId)}">${esc(concepts[principleId].label)}</button></div>`:'';
+    const condition=e.conditions?`<div><b>Conditions:</b> ${esc(e.conditions)}</div>${citation(db.ontology.sources[e.condition_source_id],e.condition_source_id)}`:'';
+    return `<details class="edge-row" data-edge="${esc(edgeId)}"><summary>${outgoing?'→':'←'} ${esc(db.ontology.relations[e.relation]?.label||e.relation)} · ${esc(concepts[other].label)}</summary><button data-node="${esc(other)}">Open ${esc(concepts[other].label)}</button>${principle}<p>${esc(db.rationales?.[edgeId]||'')}</p>${qualifiers}${citation(db.ontology.sources[e.source_id],e.source_id)}${condition}${edgeSupportMarkup(edgeId)}</details>`;
+  }).join('');
+  html += section('relations',`Connected relations · ${incident.length}`,relations || '<div class="empty">No connected relations are displayed with the current filters.</div>');
+  const panel=document.querySelector('#details'); panel.innerHTML=html;
+  panel.querySelectorAll('[data-concept-section]').forEach(element=>element.addEventListener('toggle',()=>{
+    if(element.open) detailSection=element.dataset.conceptSection;
+  }));
+  panel.querySelector('#deselect-concept').addEventListener('click',()=>{deselectConcept();document.querySelector('#search').focus({preventScroll:true});});
+  panel.querySelectorAll('[data-node]').forEach(button=>button.addEventListener('click',()=>selectConcept(button.dataset.node)));
 }
 function citation(source, id) {
   if (!source) return `<span class="small">Source: ${esc(id || "unknown")}</span>`;
+  const witness = witnessLabels[source.witness_kind];
   const authority = {
     church_guidance: "Official ecclesial guidance or discipline",
     pastoral_literature: "Pastoral literature · not magisterial teaching",
   }[source.authority_kind];
-  return `<div class="citation">${authority ? `<small>${esc(authority)}</small><br>` : ""}<b>${esc(source.author)}</b>, <i>${esc(source.work)}</i>, ${esc(source.locator)}<br><a href="${esc(source.url)}" target="_blank" rel="noopener">Open source ↗</a></div>`;
+  return `<div class="citation">${witness ? `<small>${esc(witness)}</small><br>` : ""}${authority ? `<small>${esc(authority)}</small><br>` : ""}<b>${esc(source.author)}</b>, <i>${esc(source.work)}</i>, ${esc(source.locator)}${source.translation ? `<br>${esc(source.translation)}` : ""}${source.date_note ? `<br>${esc(source.date_note)}` : ""}<br><a href="${esc(source.url)}" target="_blank" rel="noopener">Open source ↗</a></div>`;
 }
 function clearPathResult() {
   pathEdgeIds.clear(); pathNodeIds.clear();
@@ -623,7 +637,7 @@ function influenceOverview(start, end) {
   const available = activeEdges().map(([id]) => id);
   const item = step => {
     const e = step.edge;
-    return `<div class="summary-claim"><span class="tag">${esc(e.review_status)}</span>${e.evidence_kind !== "textual_paraphrase" ? `<span class="tag">${esc(e.evidence_kind.replaceAll("_", " "))}</span>` : ""}<p>${esc(step.sentence)} ${esc(step.rationale)}</p>${e.recipient_scope && e.recipient_scope !== "unspecified" ? `<div class="summary-qualification">Recipient scope: ${esc(e.recipient_scope.replaceAll("_", " "))}.</div>` : ""}${e.conditions ? `<div class="summary-qualification"><b>Conditions:</b> ${esc(e.conditions)}</div>` : ""}<details class="influence-citation"><summary>Source and relation meaning</summary><p>${esc(step.description)}</p>${citation(step.source, e.source_id)}${e.conditions ? `<div class="small">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.causal_mode.replaceAll("_", " "))}</div></details></div>`;
+    return `<div class="summary-claim"><span class="tag">${esc(e.review_status)}</span>${e.evidence_kind !== "textual_paraphrase" ? `<span class="tag">${esc(e.evidence_kind.replaceAll("_", " "))}</span>` : ""}<p>${esc(step.sentence)} ${esc(step.rationale)}</p>${e.recipient_scope && e.recipient_scope !== "unspecified" ? `<div class="summary-qualification">Recipient scope: ${esc(e.recipient_scope.replaceAll("_", " "))}.</div>` : ""}${e.conditions ? `<div class="summary-qualification"><b>Conditions:</b> ${esc(e.conditions)}</div>` : ""}<details class="influence-citation"><summary>Source and relation meaning</summary><p>${esc(step.description)}</p>${citation(step.source, e.source_id)}${edgeSupportMarkup(step.id)}${e.conditions ? `<div class="small">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.causal_mode.replaceAll("_", " "))}</div></details></div>`;
   };
   const directions = [[start, end], [end, start]].map(([from, to]) => {
       const result = collectInfluence(db, from, to, available, sizeConfig.influence_summary_depth);
@@ -665,7 +679,7 @@ function showRelationshipSummary(ordered, edgeIds, start = ordered[0], end = ord
       const qualifiers = [["Aspect", e.affected_aspect], ["Causality", e.causal_mode]]
         .filter(([, value]) => value && value !== "unspecified")
         .map(([name, value]) => `<span class="tag">${name}: ${esc(value.replaceAll("_", " "))}</span>`).join("");
-      return `<li id="relationship-step-${i}"><b>${esc(step.sentence)}</b><p>${esc(step.description)}</p>${step.reversed ? '<p class="summary-qualification">This step is traversed backward. The statement keeps the original direction of the cited relation.</p>' : ""}${qualifiers}${citation(step.source, e.source_id)}${e.conditions ? `<div class="summary-qualification">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.evidence_kind.replaceAll("_", " "))} · ${esc(e.review_status)}</div></li>`;
+      return `<li id="relationship-step-${i}"><b>${esc(step.sentence)}</b><p>${esc(step.description)}</p>${step.reversed ? '<p class="summary-qualification">This step is traversed backward. The statement keeps the original direction of the cited relation.</p>' : ""}${qualifiers}${citation(step.source, e.source_id)}${edgeSupportMarkup(step.id)}${e.conditions ? `<div class="summary-qualification">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.evidence_kind.replaceAll("_", " "))} · ${esc(e.review_status)}</div></li>`;
     }).join("")}</ol></details>` : "");
   panel.querySelectorAll("[data-summary-step]").forEach(link => link.addEventListener("click", event => {
     event.preventDefault();
@@ -673,7 +687,26 @@ function showRelationshipSummary(ordered, edgeIds, start = ordered[0], end = ord
     panel.querySelector(`#relationship-step-${link.dataset.summaryStep}`).scrollIntoView({ block: "nearest" });
   }));
 }
+function updateSupportFilter() {
+  supportFilter=filterSupportGraph(db,supportIndex,{
+    grounding:document.querySelector('#grounding-filter').value,
+    witness:document.querySelector('#witness-filter').value,
+    support:document.querySelector('#support-filter').value,
+  });
+  clearPathResult();
+  if (selected && !matchesStudyFocus(selected)) deselectConcept();
+  draw();
+}
 function fillControls() {
+  for(const [id,labels] of [['grounding-filter',groundingLabels],['witness-filter',witnessLabels],['support-filter',supportLabels]]) {
+    const select=document.querySelector('#'+id);
+    select.innerHTML='<option value="">All</option>'+Object.entries(labels).map(([value,label])=>`<option value="${value}">${esc(label)}</option>`).join('');
+    select.addEventListener('change',updateSupportFilter);
+  }
+  document.querySelector('#clear-grounding').addEventListener('click',()=>{
+    for(const id of ['grounding-filter','witness-filter','support-filter'])document.querySelector('#'+id).value='';
+    updateSupportFilter();
+  });
   const list = document.querySelector("#concept-list"), from = document.querySelector("#from"), to = document.querySelector("#to");
   for (const [id, c] of Object.entries(concepts).sort((a, b) => a[1].label.localeCompare(b[1].label))) {
     const option = document.createElement("option"); option.value = id; option.label = `${c.label} · ${id}`; list.append(option);
@@ -898,7 +931,7 @@ function exitTour(completed = false) {
 async function init() {
   try {
     db = await loadOntology(message => { document.querySelector("#loading").textContent = message; });
-    concepts = db.ontology.concepts; edges = db.ontology.edges; tourData = prepareTours(db);
+    concepts = db.ontology.concepts; edges = db.ontology.edges; tourData = prepareTours(db); supportIndex = prepareSupport(db);
     relationColors = db.graph_relation_colors;
     conceptGroups = Object.fromEntries(Object.entries(db.graph_concept_styles).map(([id, style]) => [id, colorLabel(style)]));
     colorGroups = Object.fromEntries(Object.values(db.graph_concept_styles).map((style) => [colorLabel(style), style]));
@@ -941,6 +974,8 @@ async function init() {
     sizeInput.addEventListener("input", (event) => setIconSize(event.target.value));
     document.querySelector("#reset").addEventListener("click", () => {
       if (activeTour) { applyTourStep(activeTour.index); return; }
+      for(const id of ['grounding-filter','witness-filter','support-filter'])document.querySelector('#'+id).value='';
+      supportFilter={conceptIds:null,edgeIds:null};
       studyFocus.checked = false; studyNote.hidden = true;
       clearPathResult(); focusedGroups.clear(); deselectConcept();
       draw();

@@ -1,6 +1,7 @@
 # Source-qualified theological records; model encodings await scholarly review.
 ontology
   sources[ccc_1667_1670]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -8,6 +9,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_four/article_1.html"
 
   sources[ccc_1673]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -15,6 +17,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_four/article_1.html"
 
   sources[ccc_2853_2854]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -22,6 +25,7 @@ ontology
     url = "https://www.usccb.org/sites/default/files/flipbooks/catechism/688/"
 
   sources[ge_158_164]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Francis"
     work = "Gaudete et exsultate"
@@ -29,6 +33,7 @@ ontology
     url = "https://www.vatican.va/content/francesco/en/apost_exhortations/documents/papa-francesco_esortazione-ap_20180319_gaudete-et-exsultate.html"
 
   sources[medina_exorcism_1999]
+    witness_kind str = "ecclesial_guidance"
     authority_kind = "church_guidance"
     author = "Jorge Arturo Medina Estevez, Prefect of the Congregation for Divine Worship"
     work = "Il rito degli esorcismi"
@@ -36,6 +41,7 @@ ontology
     url = "https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_1999-01-26_il-rito-degli-esorcismi_it.html"
 
   sources[usccb_exorcism_faq]
+    witness_kind str = "ecclesial_guidance"
     authority_kind = "church_guidance"
     author = "USCCB Committee on Divine Worship"
     work = "Exorcism: Questions and Answers"
@@ -43,6 +49,7 @@ ontology
     url = "https://www.usccb.org/prayer-and-worship/sacraments-and-sacramentals/sacramentals-blessings/exorcism"
 
   sources[cic_1172]
+    witness_kind str = "ecclesial_guidance"
     authority_kind = "church_guidance"
     author = "Catholic Church"
     work = "Code of Canon Law"
@@ -50,6 +57,7 @@ ontology
     url = "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1166-1190_en.html"
 
   sources[cpa_2022_terminology]
+    witness_kind str = "pastoral_literature"
     authority_kind = "pastoral_literature"
     author = "Catholic Psychotherapy Association"
     work = "Guidelines for Mental Health Professionals Supporting Persons Seeking Freedom and Recovery from Possession and Other Spiritual Afflictions, second edition"
@@ -57,13 +65,16 @@ ontology
     url = "https://catholicpsychotherapy.org/wp-content/uploads/2023/04/Guidelines-for-Mental-Health-Professionals-Supporting-Persons-Seeking-Freedom-2nd-ed-Final-2.pdf"
 
   sources[st_ii_ii_83_1_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "II-II, q. 83, aa. 1-2: prayer as an act of reason under the will and within providence"
     url = "https://www.newadvent.org/summa/3083.htm#article1"
+    translation str = "Fathers of the English Dominican Province, second revised edition (1920), New Advent online edition"
 
   sources[st_i_114_1]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"

@@ -13,7 +13,7 @@ DEFAULT_OUTPUT = ROOT / "build" / "ontology-graph"
 DEFAULT_SNT_ROOT = ROOT.parent / "scinumtools3"
 VIEWER_FILES = (
     "ontology_graph.js", "ontology_loader.mjs", "relationship_summary.mjs", "selection_force.mjs", "web_ontology_adapter.mjs",
-    "web_ontology_loader.mjs", "web_ontology_worker.mjs", "guided_tours.mjs",
+    "source_support.mjs", "web_ontology_loader.mjs", "web_ontology_worker.mjs", "guided_tours.mjs",
 )
 
 

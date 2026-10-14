@@ -1,0 +1,22 @@
+?descr "A source-qualified assessment of one claim about a concept or edge; no automatic inheritance to other claims"
+target_kind str
+  !options ["concept", "edge"]
+  !labels ["Concept definition or aspect", "Ontological relation"]
+target_id str
+claim str
+# Declare source_id str on each record so SNT preserves its local ?rationale.
+# The runtime requires and validates it, as with ontological_edge.source_id.
+grounding str[1:]
+  ?descr "Claim-specific modes: natural_reason, divine_revelation, reasoning_from_revelation, or unassessed alone; validated element by element by Rust and the viewer"
+  # SNT !options compares a whole array, so it cannot constrain each element here.
+support_kind str
+  !options ["explicit_statement", "philosophical_argument", "theological_inference", "typological_interpretation", "doctrinal_formulation", "terminology_only", "editorial_classification"]
+  !labels ["Explicit statement", "Philosophical argument", "Theological inference", "Typological interpretation", "Doctrinal formulation", "Terminology only", "Editorial classification"]
+doctrinal_status str = "unassessed"
+  !options ["unassessed", "defined_doctrine", "magisterial_teaching", "theological_opinion", "pastoral_terminology", "editorial"]
+  !labels ["Unassessed", "Defined doctrine", "Magisterial teaching", "Theological opinion", "Pastoral terminology", "Editorial"]
+status_source_id str = none
+qualification str
+review_status str = "draft"
+  !options ["draft", "reviewed", "contested"]
+  !labels ["Draft", "Reviewed", "Contested"]

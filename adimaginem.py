@@ -1,7 +1,7 @@
 """Python entry point for the cited Rust ontology core.
 
 SNT evaluates the canonical DIPL project; its inspection API supplies edge and
-passion rationale metadata which SNT's values-only JSON generator omits.
+passion and claim-support rationale metadata which SNT's values-only JSON generator omits.
 """
 
 import argparse
@@ -44,6 +44,10 @@ def load_ontology(include_viewer=False):
         if isinstance(concept.get("study_areas"), str):
             concept["study_areas"] = [concept["study_areas"]]
 
+    for record in data["ontology"].get("support_records", {}).values():
+        if isinstance(record.get("grounding"), str):
+            record["grounding"] = [record["grounding"]]
+
     listing = json.loads(_run(["snt", "dip", "list", "--project", str(PROJECT),
                                "--query", "?ontology.edges.", "--limit", "10000",
                                "--format", "json"]))
@@ -70,7 +74,20 @@ def load_ontology(include_viewer=False):
             if match.group(1) in profile_rationales:
                 raise RuntimeError(f"duplicate metadata for passion {match.group(1)}")
             profile_rationales[match.group(1)] = item["metadata"].get("rationale", "")
-    result = {"ontology": data["ontology"], "rationales": rationales,
+    support_listing = json.loads(_run(["snt", "dip", "list", "--project", str(PROJECT),
+                                      "--query", "?ontology.support_records.", "--limit", "10000", "--format", "json"]))
+    if support_listing.get("truncated") or len(support_listing["items"]) != support_listing["total"]:
+        raise RuntimeError("SNT support metadata listing is incomplete")
+    support_rationales = {}
+    for item in support_listing["items"]:
+        match = re.fullmatch(r"ontology\.support_records\[([^]]+)\]\.source_id", item["path"])
+        if match:
+            if match[1] in support_rationales:
+                raise RuntimeError(f"duplicate metadata for support {match[1]}")
+            support_rationales[match[1]] = item["metadata"].get("rationale", "")
+    if set(support_rationales) != set(data["ontology"].get("support_records", {})) or not all(support_rationales.values()):
+        raise RuntimeError("Every support record needs rationale metadata")
+    result = {"support_rationales": support_rationales, "ontology": data["ontology"], "rationales": rationales,
               "profile_rationales": profile_rationales}
     if include_viewer and "graph_viewer" in data:
         result["graph_viewer"] = data["graph_viewer"]
@@ -110,13 +127,15 @@ def load_ontology(include_viewer=False):
     return result
 
 
-def query(command, concept_id=None, relation=None):
+def query(command, concept_id=None, relation=None, target_kind=None):
     """Evaluate DIPL, then invoke the Rust core through its JSON process interface."""
     request = {"command": command, "data": load_ontology()}
     if concept_id is not None:
         request["id"] = concept_id
     if relation is not None:
         request["relation"] = relation
+    if target_kind is not None:
+        request["target_kind"] = target_kind
     result = subprocess.run(["cargo", "run", "--quiet", "--manifest-path",
                              str(ROOT / "Cargo.toml")], input=json.dumps(request),
                             text=True, capture_output=True, cwd=ROOT)
@@ -138,10 +157,13 @@ def main():
     outgoing.add_argument("--relation")
     passion = subcommands.add_parser("passion")
     passion.add_argument("id")
+    support = subcommands.add_parser("support")
+    support.add_argument("id")
+    support.add_argument("--target-kind", choices=["concept", "edge"], default="concept")
     arguments = parser.parse_args()
     try:
         result = query(arguments.command, getattr(arguments, "id", None),
-                       getattr(arguments, "relation", None))
+                       getattr(arguments, "relation", None), getattr(arguments, "target_kind", None))
     except (RuntimeError, OSError, ValueError) as error:
         parser.exit(1, f"adimaginem: {error}\n")
     print(json.dumps(result, indent=2, ensure_ascii=False))

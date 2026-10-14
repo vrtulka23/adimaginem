@@ -1,8 +1,18 @@
 ?descr "A passage-level citation supporting an ontological concept or relation"
 authority_kind str = "thomistic_text"
-  !options ["thomistic_text", "church_teaching", "church_guidance", "pastoral_literature"]
-  !labels ["Text of Thomas Aquinas", "Catholic teaching", "Official ecclesial guidance or discipline", "Pastoral literature (not magisterial teaching)"]
+  !options ["thomistic_text", "church_teaching", "church_guidance", "pastoral_literature", "scripture", "philosophical_text"]
+  !labels ["Text of Thomas Aquinas", "Catholic teaching", "Official ecclesial guidance or discipline", "Pastoral literature (not magisterial teaching)", "Sacred Scripture", "Primary philosophical text"]
 author str
 work str
 locator str
 url str
+witness_kind str = "unassessed"
+  !options ["unassessed", "scripture", "ancient_philosophy", "patristic", "scholastic", "magisterial", "ecclesial_guidance", "pastoral_literature"]
+  !labels ["Unassessed", "Scripture", "Ancient philosophy", "Patristic writing", "Scholastic writing", "Magisterial document", "Ecclesial guidance or discipline", "Pastoral literature"]
+date_note str = none
+  ?descr "Date or period of this witness, when established; never an automatic claim of first occurrence"
+biblical_book str = none
+biblical_chapter int = none
+verse_start int = none
+verse_end int = none
+translation str = none

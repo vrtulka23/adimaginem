@@ -41,7 +41,7 @@ class PythonHandler(Handler):
             body, content_type = self.html_bytes, "text/html; charset=utf-8"
         elif path == "/api/ontology":
             body, content_type = self.ontology_bytes, "application/json; charset=utf-8"
-        elif path in ("/ontology_graph.js", "/ontology_loader.mjs", "/relationship_summary.mjs", "/selection_force.mjs", "/guided_tours.mjs"):
+        elif path in ("/ontology_graph.js", "/ontology_loader.mjs", "/relationship_summary.mjs", "/selection_force.mjs", "/guided_tours.mjs", "/source_support.mjs"):
             return super().send_head()
         else:
             self.send_error(404, "Unknown viewer resource")

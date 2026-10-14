@@ -20,6 +20,10 @@ python3 adimaginem.py validate
 python3 adimaginem.py concept rational_soul
 python3 adimaginem.py outgoing rational_soul --relation has_power_genus
 python3 adimaginem.py passion anger_passion
+python3 adimaginem.py support god
+python3 adimaginem.py support person_has_form --target-kind edge
 ```
 
 The current `adimaginem.py` path uses SNT3 0.9.4's `--generate json` plus `snt dip list`, because generated values omit metadata such as `?rationale`. It joins rationales to records by DIPL path. The in-process replacement needs to preserve this provenance. A structured export through the C ABI may use JSON as the interchange representation inside the process; that avoids a subprocess and avoids duplicating DIPL evaluation in Rust while keeping the schema and rationale data intact.
+
+Claim-level support records and their `?rationale` metadata travel through both loaders. Rust validates their references, classification values, biblical locators, and status evidence; `support` queries return the exact claim, rationale, qualification, and cited sources. The shared browser module `source_support.mjs` validates and filters the same records without propagating an assessment between concepts and edges. See [grounding and historical sources](grounding-and-sources.md).

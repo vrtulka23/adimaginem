@@ -1,6 +1,7 @@
 # Primary passages for foundational concepts and core Catholic teaching.
 ontology
   sources[st_i_14_1_4]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -8,6 +9,7 @@ ontology
     url = "https://www.newadvent.org/summa/1014.htm#article1"
 
   sources[st_i_ii_94_6]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -15,6 +17,7 @@ ontology
     url = "https://www.newadvent.org/summa/2094.htm#article6"
 
   sources[st_i_ii_19_5_6]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -22,6 +25,7 @@ ontology
     url = "https://www.newadvent.org/summa/2019.htm#article5"
 
   sources[st_i_ii_94_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -29,6 +33,7 @@ ontology
     url = "https://www.newadvent.org/summa/2094.htm#article2"
 
   sources[st_i_79_12_13]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -36,6 +41,7 @@ ontology
     url = "https://www.newadvent.org/summa/1079.htm#article12"
 
   sources[st_i_ii_91_1_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -43,6 +49,7 @@ ontology
     url = "https://www.newadvent.org/summa/2091.htm#article1"
 
   sources[st_i_ii_90_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -50,6 +57,7 @@ ontology
     url = "https://www.newadvent.org/summa/2090.htm#article2"
 
   sources[st_i_3_4]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -57,6 +65,7 @@ ontology
     url = "https://www.newadvent.org/summa/1003.htm#article4"
 
   sources[st_i_5_1]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -64,6 +73,7 @@ ontology
     url = "https://www.newadvent.org/summa/1005.htm#article1"
 
   sources[st_i_11_1]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -71,6 +81,7 @@ ontology
     url = "https://www.newadvent.org/summa/1011.htm#article1"
 
   sources[st_i_16_3_5]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -78,6 +89,7 @@ ontology
     url = "https://www.newadvent.org/summa/1016.htm#article3"
 
   sources[st_i_13_5]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -85,6 +97,7 @@ ontology
     url = "https://www.newadvent.org/summa/1013.htm#article5"
 
   sources[st_i_22_1_4]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -92,6 +105,7 @@ ontology
     url = "https://www.newadvent.org/summa/1022.htm"
 
   sources[st_i_93_4_6]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -99,6 +113,7 @@ ontology
     url = "https://www.newadvent.org/summa/1093.htm#article4"
 
   sources[st_iii_2_1_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -106,6 +121,7 @@ ontology
     url = "https://www.newadvent.org/summa/4002.htm#article1"
 
   sources[st_iii_18_1_6]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -113,6 +129,7 @@ ontology
     url = "https://www.newadvent.org/summa/4018.htm#article1"
 
   sources[st_iii_48_1_6]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -120,6 +137,7 @@ ontology
     url = "https://www.newadvent.org/summa/4048.htm"
 
   sources[st_iii_56_1_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -127,6 +145,7 @@ ontology
     url = "https://www.newadvent.org/summa/4056.htm"
 
   sources[st_iii_75_1_5]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -134,6 +153,7 @@ ontology
     url = "https://www.newadvent.org/summa/4075.htm"
 
   sources[de_ente_1_4]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "De ente et essentia"
@@ -141,6 +161,7 @@ ontology
     url = "https://isidore.co/aquinas/english/DeEnte&Essentia.htm"
 
   sources[de_veritate_1_1_2]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Quaestiones disputatae de veritate"
@@ -148,6 +169,7 @@ ontology
     url = "https://isidore.co/aquinas/english/QDdeVer1.htm"
 
   sources[ccc_51_53]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -155,6 +177,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__PF.HTM"
 
   sources[ccc_65_67]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -162,6 +185,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__PH.HTM"
 
   sources[ccc_75_79]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -169,6 +193,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__PK.HTM"
 
   sources[ccc_80_83]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -176,6 +201,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__PL.HTM"
 
   sources[ccc_84_87]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -183,6 +209,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__PM.HTM"
 
   sources[ccc_475_482]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -190,6 +217,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__P1J.HTM"
 
   sources[ccc_638_658]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -197,6 +225,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__P1S.HTM"
 
   sources[ccc_781_810]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -204,6 +233,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__P28.HTM"
 
   sources[ccc_811_870]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -211,6 +241,7 @@ ontology
     url = "https://www.vatican.va/archive/ENG0015/__P29.HTM"
 
   sources[ccc_1362_1377]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"

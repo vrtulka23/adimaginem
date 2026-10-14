@@ -1,13 +1,16 @@
 # Catholic doctrinal passages and Aquinas's theological arguments.
 ontology
   sources[ccc_253_254]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
     locator = "paragraphs 253-254"
     url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"
+    translation str = "English version published on the Holy See website"
 
   sources[ccc_246]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -15,6 +18,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.index.html"
 
   sources[ccc_1804_1805]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -22,6 +26,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_three/section_one/chapter_one/article_7/i_the_human_virtues.html"
 
   sources[ccc_1812_1813]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -29,6 +34,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_three/section_one/chapter_one/article_7/ii_the_theological_virtues.index.html"
 
   sources[ccc_1830_1831]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -36,6 +42,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_three/section_one/chapter_one/article_7/iii_the_gifts_and_fruits_of_the_holy_spirit.html"
 
   sources[ccc_1832]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -43,6 +50,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_three/section_one/chapter_one/article_7/iii_the_gifts_and_fruits_of_the_holy_spirit.html"
 
   sources[ccc_1996_2000]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -50,6 +58,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_three/section_one/chapter_three/article_2/ii_grace.html"
 
   sources[ccc_1210_1211]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -57,6 +66,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_two/section_two.index.html"
 
   sources[ccc_1114_1116]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -64,6 +74,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_two/section_one/chapter_one/article_2/i_the_sacraments_of_christ.html"
 
   sources[ccc_1127_1129]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -71,6 +82,7 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_two/section_one/chapter_one/article_2/iv_the_sacraments_of_salvation.html"
 
   sources[ccc_698]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -78,54 +90,64 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_8/ii_the_name%2C_titles%2C_and_symbols_of_the_holy_spirit.html"
 
   sources[st_i_ii_68_1]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 68, a. 1, respondeo"
     url = "https://www.newadvent.org/summa/2068.htm"
 
   sources[st_i_ii_62_1]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 62, a. 1, respondeo"
     url = "https://www.newadvent.org/summa/2062.htm"
 
   sources[st_i_ii_63_2]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 63, a. 2, respondeo"
     url = "https://www.newadvent.org/summa/2063.htm"
 
   sources[st_i_ii_63_3]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 63, a. 3, respondeo"
     url = "https://www.newadvent.org/summa/2063.htm"
 
   sources[st_i_ii_70_1]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 70, a. 1, respondeo and ad 3"
     url = "https://www.newadvent.org/summa/2070.htm"
+    translation str = "Fathers of the English Dominican Province, second revised edition (1920), New Advent online edition"
 
   sources[st_i_ii_110_3]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 110, a. 3, respondeo"
     url = "https://www.newadvent.org/summa/2110.htm"
 
   sources[st_i_ii_110_4]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I-II, q. 110, a. 4, respondeo"
     url = "https://www.newadvent.org/summa/2110.htm"
 
   sources[st_iii_60_2]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "III, q. 60, a. 2, respondeo"
     url = "https://www.newadvent.org/summa/4060.htm"
 
   sources[st_iii_62_1]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "III, q. 62, a. 1, respondeo"

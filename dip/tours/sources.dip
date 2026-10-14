@@ -1,6 +1,7 @@
 # Additional passage-level sources used by guided explanations.
 ontology
   sources[ccc_240_245]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"
@@ -8,12 +9,14 @@ ontology
     url = "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html"
 
   sources[st_i_46_2]
+    witness_kind str = "scholastic"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
     locator = "I, q. 46, a. 2, respondeo and ad 1: beginning in time and dependence by creation"
     url = "https://www.newadvent.org/summa/1046.htm#article2"
 
   sources[ccc_301]
+    witness_kind str = "magisterial"
     authority_kind = "church_teaching"
     author = "Catholic Church"
     work = "Catechism of the Catholic Church"

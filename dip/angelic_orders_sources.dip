@@ -1,6 +1,7 @@
 # Cited angelic orders records; all concepts and edges default to draft.
 ontology
   sources[st_i_108_1_4]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -8,6 +9,7 @@ ontology
     url = "https://www.newadvent.org/summa/1108.htm#article1"
 
   sources[st_i_108_5]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"
@@ -15,6 +17,7 @@ ontology
     url = "https://www.newadvent.org/summa/1108.htm#article5"
 
   sources[st_i_108_6]
+    witness_kind str = "scholastic"
     authority_kind = "thomistic_text"
     author = "Thomas Aquinas"
     work = "Summa theologiae"

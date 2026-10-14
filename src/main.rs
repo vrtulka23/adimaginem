@@ -30,6 +30,7 @@ fn run() -> Result<(), String> {
             "edges": input.ontology.edges.len(),
             "relations": input.ontology.relations.len(),
             "passion_profiles": input.ontology.passion_profiles.len(),
+            "support_records": input.ontology.support_records.len(),
             "valid": true
         }),
         "concept" => {
@@ -43,7 +44,26 @@ fn run() -> Result<(), String> {
                 .sources
                 .get(&concept.source_id)
                 .ok_or("unknown source")?;
-            json!({"id": id, "concept": concept, "source": source})
+            json!({"id": id, "concept": concept, "source": source, "support": input.cited_support("concept", id)})
+        }
+        "support" => {
+            let id = request
+                .get("id")
+                .and_then(Value::as_str)
+                .ok_or("missing id")?;
+            let kind = request
+                .get("target_kind")
+                .and_then(Value::as_str)
+                .unwrap_or("concept");
+            let exists = match kind {
+                "concept" => input.ontology.concepts.contains_key(id),
+                "edge" => input.ontology.edges.contains_key(id),
+                _ => return Err("target_kind must be concept or edge".into()),
+            };
+            if !exists {
+                return Err("unknown support target".into());
+            }
+            json!(input.cited_support(kind, id))
         }
         "relation" => {
             let id = request

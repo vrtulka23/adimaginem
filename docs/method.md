@@ -26,4 +26,8 @@ When a source is ambiguous, keep the model's assumption visible and revisable. S
 
 ## Source authority in DIPL
 
-`authority_kind` distinguishes `thomistic_text`, `church_teaching`, `church_guidance` (official pastoral explanations or ecclesiastical discipline), and `pastoral_literature` (non-magisterial terminology or commentary). These are source types, not numerical levels of certainty. A curial presentation is not thereby a dogmatic definition, and a professional Catholic association's terminology is not universal Church teaching. Each citation's author, work, locator, and the record's qualifications govern its use. See [spiritual warfare](spiritual-warfare.md) for the first use of the latter two categories.
+`authority_kind` distinguishes `scripture`, `philosophical_text`, `thomistic_text`, `church_teaching`, `church_guidance` (official pastoral explanations or ecclesiastical discipline), and `pastoral_literature` (non-magisterial terminology or commentary). These are source types, not numerical levels of certainty. A curial presentation is not thereby a dogmatic definition, and a professional Catholic association's terminology is not universal Church teaching. Each citation's author, work, locator, and the record's qualifications govern its use. See [spiritual warfare](spiritual-warfare.md) for the first use of the latter two categories.
+
+## Claim-level grounding
+
+The [grounding and historical sources](grounding-and-sources.md) records implement these distinctions for particular cited claims. Source family, mode of knowledge, kind of support, doctrinal standing, and editorial review remain separate. New assessments use primary texts and official Church documents with identified editions or translations; disputed readings require critical editions and scholarly studies. An unassessed claim is not thereby unsupported, and a dated witness is not necessarily the first occurrence of an idea.

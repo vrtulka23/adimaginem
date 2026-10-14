@@ -119,3 +119,11 @@ Expand **Study areas** in the left sidebar to filter by ethics, knowledge and tr
 ## Force layout settings
 
 Attraction weights, relation-kind grouping, preferred distances, collision, cooling, and initial spread are configured in [`dip/graph_viewer.dip`](../dip/graph_viewer.dip). See [graph layout controls](../docs/graph-layout.md) for the parameter table and formulas. These are visual tuning settings; they do not measure philosophical or causal strength. Restart Python mode or rebuild static mode after editing them.
+
+### Grounding, sources, and concept accordions
+
+**Explore → Grounding and historical sources** filters by mode of knowledge, historical witness family, and how the passage supports a claim. Combined filters must match the same evidence record. Relations are assessed separately from their endpoints; endpoints of matching relations remain as context. Clear grounding filters or Reset graph view removes these filters. Unassessed means not yet classified, not unsupported.
+
+Concept details use separate accordions for Definition, Grounding and sources, Study areas, relation principles where applicable, and Connected relations. Each connected relation can expand to show its rationale, citations, conditions, and additional support records. The concept panel remembers the section being read. Connection summaries expose the same edge evidence. These controls work in both Python and static modes.
+
+See [the assessment method and coverage](../docs/grounding-and-sources.md). Run `node --test tools/source_support.test.mjs` for evidence validation, combined filtering, and independent concept/relation assessments.

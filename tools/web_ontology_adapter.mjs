@@ -31,7 +31,7 @@ export function decodeViewerValue(description) {
 }
 
 export function readViewerData(model, progress = () => {}) {
-  const data = { ontology: {}, rationales: {}, profile_rationales: {},
+  const data = { ontology: {}, rationales: {}, profile_rationales: {}, support_rationales: {},
     graph_viewer: {}, graph_concept_styles: {}, graph_relation_colors: {},
     graph_tours: {}, graph_tour_steps: {}, graph_tour_positions: {} };
   const paths = model.paths().filter(path => /^(ontology\.|graph_viewer\[|graph_concept_styles\[|graph_relation_colors\[|graph_tours\[|graph_tour_steps\[|graph_tour_positions\[)/.test(path));
@@ -47,6 +47,7 @@ export function readViewerData(model, progress = () => {}) {
       const record = records[id] ||= {};
       record[field] = value;
       if (collection === "edges" && field === "source_id") data.rationales[id] = description.metadata.rationale;
+      if (collection === "support_records" && field === "source_id") data.support_rationales[id] = description.metadata.rationale;
       if (collection === "passion_profiles" && field === "source_id") data.profile_rationales[id] = description.metadata.rationale;
       if ((root === "graph_concept_styles" || root === "graph_relation_colors") && field === "color") {
         if (!description.metadata.category || !/^#[0-9a-fA-F]{6}$/.test(value)) throw new Error(`Invalid color or category at ${path}`);

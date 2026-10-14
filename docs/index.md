@@ -9,6 +9,7 @@ The project follows a [scholarly and Catholic method](method.md): claims about A
 - [Resources and source practice](resources.md): primary texts, relevant passages, a starting conceptual map, and citation guidance.
 - [Scholarly and Catholic method](method.md): interpretive authorities and review standards for model claims.
 - [Ontology data](ontology.md): structure and source provenance of the DIPL concept and edge graph.
+- [Grounding and historical sources](grounding-and-sources.md): claim-level assessments, biblical references, philosophical arguments, and doctrinal standing.
 - [Study areas](study-areas.md): overlapping ethics, knowledge, natural philosophy, logic, and social philosophy filters.
 - [Metaphysical foundations](metaphysics.md): how matter, form, act, potency, substance, accidents, and causes connect to the rest of the ontology.
 - [First principles and doctrinal foundations](foundations.md): truth and being, conscience and natural law, Christ's saving work, revelation, Church, and Eucharistic doctrine.

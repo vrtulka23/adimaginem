@@ -1,4 +1,7 @@
 schemas[]
+  name = "support_record"
+  file = "schemas/support_record.dipl"
+schemas[]
   name = "graph_tour"
   file = "schemas/graph_tour.dipl"
 schemas[]
@@ -189,3 +192,8 @@ code[]
   file = "tours/saints_prayer.dip"
 code[]
   file = "tours/context_positions.dip"
+
+code[]
+  file = "grounding_sources.dip"
+code[]
+  file = "support_records.dip"

@@ -4,11 +4,47 @@ use std::collections::BTreeMap;
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct Source {
+    #[serde(default = "unassessed")]
+    pub witness_kind: String,
+    pub date_note: Option<String>,
+    pub biblical_book: Option<String>,
+    pub biblical_chapter: Option<u32>,
+    pub verse_start: Option<u32>,
+    pub verse_end: Option<u32>,
+    pub translation: Option<String>,
     pub authority_kind: String,
     pub author: String,
     pub work: String,
     pub locator: String,
     pub url: String,
+}
+
+fn unassessed() -> String {
+    "unassessed".into()
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct SupportRecord {
+    pub target_kind: String,
+    pub target_id: String,
+    pub claim: String,
+    pub source_id: String,
+    pub grounding: Vec<String>,
+    pub support_kind: String,
+    pub doctrinal_status: String,
+    pub status_source_id: Option<String>,
+    pub qualification: String,
+    pub review_status: String,
+}
+
+#[derive(Debug, Serialize)]
+pub struct CitedSupport<'a> {
+    pub id: &'a str,
+    pub record: &'a SupportRecord,
+    pub rationale: &'a str,
+    pub source: &'a Source,
+    pub status_source: Option<&'a Source>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -82,6 +118,8 @@ pub struct StudyArea {
 #[derive(Debug, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct Ontology {
+    #[serde(default)]
+    pub support_records: BTreeMap<String, SupportRecord>,
     pub study_areas: BTreeMap<String, StudyArea>,
     pub concepts: BTreeMap<String, Concept>,
     pub sources: BTreeMap<String, Source>,
@@ -93,6 +131,8 @@ pub struct Ontology {
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Input {
+    #[serde(default)]
+    pub support_rationales: BTreeMap<String, String>,
     pub ontology: Ontology,
     pub rationales: BTreeMap<String, String>,
     pub profile_rationales: BTreeMap<String, String>,
@@ -146,6 +186,128 @@ impl Input {
                 || source.url.trim().is_empty()
             {
                 errors.push(format!("source {id}: incomplete citation"));
+            }
+        }
+        for (id, source) in &ontology.sources {
+            if ![
+                "unassessed",
+                "scripture",
+                "ancient_philosophy",
+                "patristic",
+                "scholastic",
+                "magisterial",
+                "ecclesial_guidance",
+                "pastoral_literature",
+            ]
+            .contains(&source.witness_kind.as_str())
+            {
+                errors.push(format!("source {id}: invalid witness kind"));
+            }
+            if source.witness_kind == "scripture" || source.authority_kind == "scripture" {
+                if source.witness_kind != "scripture"
+                    || source.authority_kind != "scripture"
+                    || source
+                        .biblical_book
+                        .as_ref()
+                        .map_or(true, |s| s.trim().is_empty())
+                    || source
+                        .translation
+                        .as_ref()
+                        .map_or(true, |s| s.trim().is_empty())
+                    || source.biblical_chapter.unwrap_or(0) == 0
+                    || source.verse_start.unwrap_or(0) == 0
+                    || source.verse_end.unwrap_or(0) < source.verse_start.unwrap_or(1)
+                {
+                    errors.push(format!(
+                        "source {id}: incomplete or invalid biblical locator"
+                    ));
+                }
+            }
+        }
+        for (id, record) in &ontology.support_records {
+            let valid_target = match record.target_kind.as_str() {
+                "concept" => ontology.concepts.contains_key(&record.target_id),
+                "edge" => ontology.edges.contains_key(&record.target_id),
+                _ => false,
+            };
+            if !valid_target {
+                errors.push(format!("support {id}: unknown target"));
+            }
+            if !ontology.sources.contains_key(&record.source_id) {
+                errors.push(format!("support {id}: unknown source"));
+            }
+            let unique: std::collections::BTreeSet<_> = record.grounding.iter().collect();
+            if record.grounding.is_empty()
+                || unique.len() != record.grounding.len()
+                || (record.grounding.len() > 1
+                    && record.grounding.iter().any(|v| v == "unassessed"))
+                || record.grounding.iter().any(|v| {
+                    ![
+                        "natural_reason",
+                        "divine_revelation",
+                        "reasoning_from_revelation",
+                        "unassessed",
+                    ]
+                    .contains(&v.as_str())
+                })
+            {
+                errors.push(format!("support {id}: invalid grounding"));
+            }
+            if ![
+                "explicit_statement",
+                "philosophical_argument",
+                "theological_inference",
+                "typological_interpretation",
+                "doctrinal_formulation",
+                "terminology_only",
+                "editorial_classification",
+            ]
+            .contains(&record.support_kind.as_str())
+                || ![
+                    "unassessed",
+                    "defined_doctrine",
+                    "magisterial_teaching",
+                    "theological_opinion",
+                    "pastoral_terminology",
+                    "editorial",
+                ]
+                .contains(&record.doctrinal_status.as_str())
+                || !["draft", "reviewed", "contested"].contains(&record.review_status.as_str())
+            {
+                errors.push(format!("support {id}: invalid classification"));
+            }
+            if record.claim.trim().is_empty()
+                || record.qualification.trim().is_empty()
+                || self
+                    .support_rationales
+                    .get(id)
+                    .map_or(true, |r| r.trim().is_empty())
+            {
+                errors.push(format!(
+                    "support {id}: missing claim, qualification or rationale"
+                ));
+            }
+            let status_source = record
+                .status_source_id
+                .as_ref()
+                .and_then(|id| ontology.sources.get(id));
+            if (record.doctrinal_status != "unassessed" || record.status_source_id.is_some())
+                && status_source.is_none()
+            {
+                errors.push(format!("support {id}: doctrinal status needs a source"));
+            }
+            if ["defined_doctrine", "magisterial_teaching"]
+                .contains(&record.doctrinal_status.as_str())
+                && status_source.map_or(true, |s| s.authority_kind != "church_teaching")
+            {
+                errors.push(format!(
+                    "support {id}: doctrinal grade needs a magisterial source"
+                ));
+            }
+        }
+        for id in self.support_rationales.keys() {
+            if !ontology.support_records.contains_key(id) {
+                errors.push(format!("support rationale {id}: unknown record"));
             }
         }
         for (id, concept) in &ontology.concepts {
@@ -305,6 +467,26 @@ impl Input {
         }
     }
 
+    pub fn cited_support(&self, target_kind: &str, target_id: &str) -> Vec<CitedSupport<'_>> {
+        self.ontology
+            .support_records
+            .iter()
+            .filter(|(_, record)| {
+                record.target_kind == target_kind && record.target_id == target_id
+            })
+            .map(|(id, record)| CitedSupport {
+                id,
+                record,
+                rationale: self.support_rationales[id].as_str(),
+                source: &self.ontology.sources[&record.source_id],
+                status_source: record
+                    .status_source_id
+                    .as_ref()
+                    .and_then(|id| self.ontology.sources.get(id)),
+            })
+            .collect()
+    }
+
     pub fn cited_edges(&self, concept: &str, relation: Option<&str>) -> Vec<CitedEdge<'_>> {
         self.ontology
             .edges
@@ -347,7 +529,9 @@ mod tests {
 
     fn example_input() -> Input {
         Input {
+            support_rationales: BTreeMap::new(),
             ontology: Ontology {
+                support_records: BTreeMap::new(),
                 study_areas: BTreeMap::from([(
                     "anthropology".into(),
                     StudyArea {
@@ -375,6 +559,13 @@ mod tests {
                 sources: BTreeMap::from([(
                     "source".into(),
                     Source {
+                        witness_kind: "scholastic".into(),
+                        date_note: None,
+                        biblical_book: None,
+                        biblical_chapter: None,
+                        verse_start: None,
+                        verse_end: None,
+                        translation: None,
                         authority_kind: "thomistic_text".into(),
                         author: "Thomas Aquinas".into(),
                         work: "Summa theologiae".into(),
@@ -582,5 +773,95 @@ mod tests {
             .unwrap_err()
             .iter()
             .any(|e| e.contains("must occur together")));
+    }
+    #[test]
+    fn claim_assessments_require_resolved_evidence_and_stay_on_their_target() {
+        let mut input = example_input();
+        input.ontology.edges.clear();
+        input.ontology.support_records.insert(
+            "reason".into(),
+            SupportRecord {
+                target_kind: "concept".into(),
+                target_id: "person".into(),
+                claim: "An exact claim".into(),
+                source_id: "source".into(),
+                grounding: vec!["natural_reason".into()],
+                support_kind: "philosophical_argument".into(),
+                doctrinal_status: "unassessed".into(),
+                status_source_id: None,
+                qualification: "Only this argument".into(),
+                review_status: "draft".into(),
+            },
+        );
+        input
+            .support_rationales
+            .insert("reason".into(), "The argument supports this claim".into());
+        assert!(input.validate().is_ok());
+        assert_eq!(input.cited_support("concept", "person").len(), 1);
+        assert!(input.cited_support("edge", "person").is_empty());
+        let result = serde_json::to_value(input.cited_support("concept", "person")).unwrap();
+        assert_eq!(result[0]["rationale"], "The argument supports this claim");
+        assert_eq!(result[0]["source"]["locator"], "I, q. 75, a. 4");
+        input
+            .ontology
+            .support_records
+            .get_mut("reason")
+            .unwrap()
+            .grounding
+            .push("unassessed".into());
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("invalid grounding")));
+        let record = input.ontology.support_records.get_mut("reason").unwrap();
+        record.grounding.pop();
+        record.doctrinal_status = "defined_doctrine".into();
+        record.status_source_id = Some("source".into());
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("magisterial source")));
+        let record = input.ontology.support_records.get_mut("reason").unwrap();
+        record.doctrinal_status = "unassessed".into();
+        record.target_id = "missing".into();
+        input.support_rationales.clear();
+        let errors = input.validate().unwrap_err();
+        assert!(errors.iter().any(|e| e.contains("unknown target")));
+        assert!(errors
+            .iter()
+            .any(|e| e.contains("missing claim, qualification or rationale")));
+    }
+
+    #[test]
+    fn scripture_requires_an_identified_translation_and_valid_verse_range() {
+        let mut input = example_input();
+        input.ontology.edges.clear();
+        let source = input.ontology.sources.get_mut("source").unwrap();
+        source.authority_kind = "scripture".into();
+        source.witness_kind = "scripture".into();
+        source.biblical_book = Some("John".into());
+        source.biblical_chapter = Some(1);
+        source.verse_start = Some(1);
+        source.verse_end = Some(3);
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("biblical locator")));
+        input
+            .ontology
+            .sources
+            .get_mut("source")
+            .unwrap()
+            .translation = Some("Identified edition".into());
+        assert!(input.validate().is_ok());
+        input.ontology.sources.get_mut("source").unwrap().verse_end = Some(0);
+        assert!(input
+            .validate()
+            .unwrap_err()
+            .iter()
+            .any(|e| e.contains("biblical locator")));
     }
 }
