@@ -68,3 +68,19 @@ export function filterTours(tours, { audience = '', topic = '' } = {}) {
     (!audience || tour.audience_tags.includes(audience)) &&
     (!topic || tour.topic_tags.includes(topic)));
 }
+
+// Authored coordinates seed a layout; they do not pin it. A reproducible depth
+// perturbation breaks the planar symmetry of scenes authored with z = 0.
+export function seedTourPositions(scene, depth) {
+  const ids = [...scene.conceptIds].sort();
+  const offsets = ids.map(id => {
+    let hash = 2166136261;
+    for (const char of id) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619);
+    return (hash >>> 0) / 0xffffffff * 2 - 1;
+  });
+  const mean = offsets.reduce((sum, value) => sum + value, 0) / ids.length;
+  return Object.fromEntries(ids.map((id, index) => {
+    const [x, y, z] = scene.positions[id];
+    return [id, [x, y, z + (offsets[index] - mean) * depth]];
+  }));
+}

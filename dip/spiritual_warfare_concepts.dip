@@ -1,0 +1,131 @@
+# Source-qualified theological records; model encodings await scholarly review.
+ontology
+  concepts[spiritual_combat]
+    label = "Spiritual warfare / combat"
+    latin_name = "pugna spiritualis"
+    domain = "theology"
+    study_areas = ["theology", "ethics"]
+    category = "process"
+    note = "Christian perseverance against temptation and evil, including disordered inclinations and worldly pressures as well as the devil."
+    source_id = "ge_158_164"
+    review_status = "draft"
+
+  concepts[spiritual_vigilance]
+    label = "Spiritual vigilance"
+    latin_name = "vigilantia spiritualis"
+    domain = "theology"
+    study_areas = ["theology", "ethics"]
+    category = "disposition"
+    note = "Watchfulness in the pursuit of holiness, sustained by trust in God."
+    source_id = "ge_158_164"
+    review_status = "draft"
+
+  concepts[christian_prayer]
+    label = "Christian prayer"
+    latin_name = "oratio"
+    domain = "theology"
+    study_areas = ["theology", "anthropology"]
+    category = "act"
+    note = "Petition to God: an act of reason moved by the will, within divine providence. This concept focuses on petitionary prayer."
+    source_id = "st_ii_ii_83_1_2"
+    review_status = "draft"
+
+  concepts[demonic_affliction]
+    label = "Demonic affliction"
+    latin_name = "afflictio diabolica"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Broad descriptive heading for harmful demonic influence; possession and influence without possession are distinguished. No personal case is identified by this class."
+    source_id = "medina_exorcism_1999"
+    review_status = "draft"
+
+  concepts[demonic_oppression]
+    label = "Demonic oppression / vexation"
+    latin_name = "oppressio diabolica; vexatio diabolica"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "Source-specific pastoral terminology for exterior demonic affliction. The cited authors report overlapping usage of oppression and vexation; this grouping is editorial, not a universal Church taxonomy or a stage of possession. The Latin labels are descriptive."
+    source_id = "cpa_2022_terminology"
+    review_status = "draft"
+
+  concepts[demonic_possession]
+    label = "Demonic possession"
+    latin_name = "possessio diabolica"
+    domain = "theology"
+    study_areas = ["theology", "anthropology"]
+    category = "state"
+    note = "Extraordinary demonic domination of bodily activity, distinguished from control of free consent. Possession does not itself establish culpability."
+    source_id = "medina_exorcism_1999"
+    review_status = "draft"
+
+  concepts[deliverance_from_evil]
+    label = "Deliverance from evil"
+    latin_name = "liberatio a malo"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "state"
+    note = "The liberation sought from God against the Evil One and the evils he instigates, with peace and perseverance; broader than release from possession."
+    source_id = "ccc_2853_2854"
+    review_status = "draft"
+
+  concepts[prayer_for_deliverance]
+    label = "Prayer for deliverance"
+    latin_name = "oratio pro liberatione a malo"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Petition to God for liberation from evil, exemplified by the final petition of the Our Father."
+    source_id = "ccc_2853_2854"
+    review_status = "draft"
+
+  concepts[sacramental]
+    label = "Sacramental"
+    latin_name = "sacramentale"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "sacramental"
+    note = "A sacred sign instituted by the Church, disposing recipients toward grace through ecclesial intercession."
+    source_id = "ccc_1667_1670"
+    review_status = "draft"
+
+  concepts[exorcism]
+    label = "Exorcism"
+    latin_name = "exorcismus"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "sacramental"
+    note = "The Church's authoritative prayer in Christ's name for protection or liberation from demonic dominion."
+    source_id = "ccc_1673"
+    review_status = "draft"
+
+  concepts[major_exorcism]
+    label = "Major exorcism"
+    latin_name = "exorcismus maior"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "sacramental"
+    note = "Solemn exorcism concerning possession, entrusted to an authorized ordained minister under ecclesial discipline."
+    source_id = "usccb_exorcism_faq"
+    review_status = "draft"
+
+  concepts[baptismal_exorcism]
+    label = "Baptismal exorcism"
+    latin_name = "exorcismus baptismalis"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "sacramental"
+    note = "Simple exorcism in baptismal preparation or celebration; its inclusion does not diagnose possession."
+    source_id = "usccb_exorcism_faq"
+    review_status = "draft"
+
+  concepts[authorized_exorcist]
+    label = "Authorized exorcist"
+    latin_name = "exorcista legitime deputatus"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "office"
+    note = "Minister with the requisite special and express permission of the local ordinary for exorcism of the possessed in the Latin Church."
+    source_id = "cic_1172"
+    review_status = "draft"

@@ -30,6 +30,8 @@ Conversion, repentance, and justification also connect to grace, God, remission 
 
 ## Angelic influence and its limits
 
+The [spiritual warfare module](spiritual-warfare.md) extends these connections with prayer, demonic affliction, possession, and the Church's ministry of deliverance.
+
 The model records capacities to illuminate human intellect, influence imagination and senses, and persuade. It also records explicit exclusions: created angelic influence cannot compel deliberate consent, and angelic illumination does not infuse the habit of faith. [I, q. 111, aa. 1–4](https://www.newadvent.org/summa/1111.htm#article1).
 
 Aquinas explains sensory and imaginative mediation using the physiology available to him. The graph retains the cited relation to embodied operations; it does not implement his discussion of humors as a modern physiological mechanism.

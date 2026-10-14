@@ -4,7 +4,7 @@ graph_tour_positions[trinity_unity_divine_essence]
   step_id = "trinity_unity"
   concept_id = "divine_essence"
   x = 0.0
-  y = 2.0
+  y = 0.0
   z = 0.0
 
 graph_tour_positions[trinity_word_divine_essence]
@@ -25,7 +25,7 @@ graph_tour_positions[eternal_son_eternity_divine_essence]
   step_id = "eternal_son_eternity"
   concept_id = "divine_essence"
   x = 0.0
-  y = 2.0
+  y = 0.0
   z = 0.0
 
 graph_tour_positions[eternal_son_operation_divine_will]
@@ -59,8 +59,8 @@ graph_tour_positions[grace_faith_faith_rational_soul]
 graph_tour_positions[grace_faith_faith_appetitive_power]
   step_id = "grace_faith_faith"
   concept_id = "appetitive_power"
-  x = 0.0
-  y = -6.0
+  x = -4.0
+  y = -2.0
   z = 0.0
 
 graph_tour_positions[spirit_work_powers_intellectual_power]
@@ -73,7 +73,7 @@ graph_tour_positions[spirit_work_powers_intellectual_power]
 graph_tour_positions[spirit_work_fruits_holy_spirit]
   step_id = "spirit_work_fruits"
   concept_id = "holy_spirit"
-  x = 4.0
+  x = 10.0
   y = 0.0
   z = 0.0
 
@@ -87,29 +87,29 @@ graph_tour_positions[divine_participation_love_rational_soul]
 graph_tour_positions[divine_participation_love_appetitive_power]
   step_id = "divine_participation_love"
   concept_id = "appetitive_power"
-  x = 0.0
-  y = 4.0
+  x = -2.0
+  y = 2.0
   z = 0.0
 
 graph_tour_positions[jewish_dialogue_persons_trinity]
   step_id = "jewish_dialogue_persons"
   concept_id = "trinity"
-  x = 2.0
+  x = 0.0
   y = 0.0
   z = 0.0
 
 graph_tour_positions[god_world_soul_person_human_nature]
   step_id = "god_world_soul_person"
   concept_id = "human_nature"
-  x = -2.0
+  x = 0.0
   y = 0.0
   z = 0.0
 
 graph_tour_positions[god_world_soul_union_act_of_charity]
   step_id = "god_world_soul_union"
   concept_id = "act_of_charity"
-  x = 2.0
-  y = 2.0
+  x = 4.0
+  y = 0.0
   z = 0.0
 
 graph_tour_positions[desire_flourishing_passions_sensitive_appetite]
@@ -123,55 +123,55 @@ graph_tour_positions[spiritual_life_discernment_conscience]
   step_id = "spiritual_life_discernment"
   concept_id = "conscience"
   x = -2.0
-  y = 0.0
+  y = 2.0
   z = 0.0
 
 graph_tour_positions[formation_human_human_nature]
   step_id = "formation_human"
   concept_id = "human_nature"
-  x = -2.0
+  x = 0.0
   y = 0.0
   z = 0.0
 
 graph_tour_positions[formation_growth_church]
   step_id = "formation_growth"
   concept_id = "church"
-  x = 2.0
+  x = 4.0
   y = -2.0
   z = 0.0
 
 graph_tour_positions[formation_growth_eucharistic_sacrifice]
   step_id = "formation_growth"
   concept_id = "eucharistic_sacrifice"
-  x = 0.0
-  y = -8.0
+  x = 2.0
+  y = -10.0
   z = 0.0
 
 graph_tour_positions[body_soul_cognition_intellectual_power]
   step_id = "body_soul_cognition"
   concept_id = "intellectual_power"
   x = -2.0
-  y = -2.0
+  y = -4.0
   z = 0.0
 
 graph_tour_positions[body_soul_cognition_agent_intellect]
   step_id = "body_soul_cognition"
   concept_id = "agent_intellect"
-  x = 4.0
-  y = 0.0
+  x = 2.0
+  y = 2.0
   z = 0.0
 
 graph_tour_positions[body_soul_appetite_rational_soul]
   step_id = "body_soul_appetite"
   concept_id = "rational_soul"
-  x = 2.0
-  y = 0.0
+  x = 4.0
+  y = -2.0
   z = 0.0
 
 graph_tour_positions[responsible_action_good_conscience]
   step_id = "responsible_action_good"
   concept_id = "conscience"
-  x = -2.0
+  x = 0.0
   y = 0.0
   z = 0.0
 
@@ -185,7 +185,7 @@ graph_tour_positions[responsible_action_choice_practical_intellect]
 graph_tour_positions[causal_explanation_creation_form]
   step_id = "causal_explanation_creation"
   concept_id = "form"
-  x = 2.0
+  x = 0.0
   y = 0.0
   z = 0.0
 
@@ -220,29 +220,29 @@ graph_tour_positions[sacramental_life_reconciliation_christ_passion]
 graph_tour_positions[sin_intellect_wounds_wounded_human_nature]
   step_id = "sin_intellect_wounds"
   concept_id = "wounded_human_nature"
-  x = 2.0
+  x = 0.0
   y = 0.0
   z = 0.0
 
 graph_tour_positions[sin_intellect_judgment_intellectual_power]
   step_id = "sin_intellect_judgment"
   concept_id = "intellectual_power"
-  x = -4.0
+  x = -6.0
   y = 0.0
   z = 0.0
 
 graph_tour_positions[sin_intellect_judgment_practical_intellect]
   step_id = "sin_intellect_judgment"
   concept_id = "practical_intellect"
-  x = 2.0
-  y = 0.0
+  x = 4.0
+  y = -2.0
   z = 0.0
 
 graph_tour_positions[sin_intellect_healing_sacramental_absolution]
   step_id = "sin_intellect_healing"
   concept_id = "sacramental_absolution"
-  x = -2.0
-  y = 0.0
+  x = 0.0
+  y = -2.0
   z = 0.0
 
 graph_tour_positions[purgatory_dialogue_death_human_body]
@@ -269,15 +269,15 @@ graph_tour_positions[purgatory_dialogue_prayer_eucharistic_sacrifice]
 graph_tour_positions[purgatory_dialogue_resurrection_christ_resurrection]
   step_id = "purgatory_dialogue_resurrection"
   concept_id = "christ_resurrection"
-  x = -2.0
-  y = 0.0
+  x = -4.0
+  y = -2.0
   z = 0.0
 
 graph_tour_positions[purgatory_dialogue_resurrection_son]
   step_id = "purgatory_dialogue_resurrection"
   concept_id = "son"
-  x = 4.0
-  y = 0.0
+  x = 2.0
+  y = 2.0
   z = 0.0
 
 graph_tour_positions[mary_christ_theotokos_incarnation]
@@ -290,15 +290,15 @@ graph_tour_positions[mary_christ_theotokos_incarnation]
 graph_tour_positions[mary_christ_theotokos_hypostatic_union]
   step_id = "mary_christ_theotokos"
   concept_id = "hypostatic_union"
-  x = 0.0
-  y = 6.0
+  x = 2.0
+  y = 8.0
   z = 0.0
 
 graph_tour_positions[mary_christ_intercession_saints_in_heaven]
   step_id = "mary_christ_intercession"
   concept_id = "saints_in_heaven"
-  x = 2.0
-  y = 0.0
+  x = 0.0
+  y = -2.0
   z = 0.0
 
 graph_tour_positions[saints_prayer_communion_church]

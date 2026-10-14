@@ -1,0 +1,71 @@
+# Source-qualified theological records; model encodings await scholarly review.
+ontology
+  sources[ccc_1667_1670]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "1667-1670: sacramentals and their disposition toward grace"
+    url = "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_four/article_1.html"
+
+  sources[ccc_1673]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "1673: exorcism, its authority, forms, and distinction from illness"
+    url = "https://www.vatican.va/content/catechism/en/part_two/section_two/chapter_four/article_1.html"
+
+  sources[ccc_2853_2854]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "2853-2854: Christ's victory and the petition for deliverance"
+    url = "https://www.usccb.org/sites/default/files/flipbooks/catechism/688/"
+
+  sources[ge_158_164]
+    authority_kind = "church_teaching"
+    author = "Francis"
+    work = "Gaudete et exsultate"
+    locator = "158-164: spiritual combat and vigilance, especially 159 and 162"
+    url = "https://www.vatican.va/content/francesco/en/apost_exhortations/documents/papa-francesco_esortazione-ap_20180319_gaudete-et-exsultate.html"
+
+  sources[medina_exorcism_1999]
+    authority_kind = "church_guidance"
+    author = "Jorge Arturo Medina Estevez, Prefect of the Congregation for Divine Worship"
+    work = "Il rito degli esorcismi"
+    locator = "Presentation, 26 January 1999: paragraphs beginning La Sacra Scrittura, Non puo, and Seguono le preghiere"
+    url = "https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_1999-01-26_il-rito-degli-esorcismi_it.html"
+
+  sources[usccb_exorcism_faq]
+    authority_kind = "church_guidance"
+    author = "USCCB Committee on Divine Worship"
+    work = "Exorcism: Questions and Answers"
+    locator = "Questions on Penance, referral, kinds of exorcism, and ministers"
+    url = "https://www.usccb.org/prayer-and-worship/sacraments-and-sacramentals/sacramentals-blessings/exorcism"
+
+  sources[cic_1172]
+    authority_kind = "church_guidance"
+    author = "Catholic Church"
+    work = "Code of Canon Law"
+    locator = "Canon 1172, paragraphs 1-2 (Latin Church): permission and qualifications"
+    url = "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1166-1190_en.html"
+
+  sources[cpa_2022_terminology]
+    authority_kind = "pastoral_literature"
+    author = "Catholic Psychotherapy Association"
+    work = "Guidelines for Mental Health Professionals Supporting Persons Seeking Freedom and Recovery from Possession and Other Spiritual Afflictions, second edition"
+    locator = "2022, printed pp. 8-9, Diabolic Obsession and Oppression and Vexation, Curses, or Malefices; cited only for terminology, not diagnosis or magisterial classification"
+    url = "https://catholicpsychotherapy.org/wp-content/uploads/2023/04/Guidelines-for-Mental-Health-Professionals-Supporting-Persons-Seeking-Freedom-2nd-ed-Final-2.pdf"
+
+  sources[st_ii_ii_83_1_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "II-II, q. 83, aa. 1-2: prayer as an act of reason under the will and within providence"
+    url = "https://www.newadvent.org/summa/3083.htm#article1"
+
+  sources[st_i_114_1]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 114, a. 1, respondeo and ad 2: assaults, permission, grace and angelic guardianship"
+    url = "https://www.newadvent.org/summa/1114.htm#article1"

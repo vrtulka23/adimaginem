@@ -1,0 +1,528 @@
+# Source-qualified theological records; model encodings await scholarly review.
+ontology
+  edges[combat_resists_temptation]
+    subject = "spiritual_combat"
+    relation = "resists"
+    object = "temptation_to_sin"
+    source_id str = "ge_158_164"
+      ?rationale "Spiritual combat includes resistance to temptation."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+
+  edges[combat_includes_vigilance]
+    subject = "spiritual_combat"
+    relation = "includes"
+    object = "spiritual_vigilance"
+    source_id str = "ge_158_164"
+      ?rationale "Combat calls for watchfulness."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[christian_prayer_sustains_combat]
+    subject = "christian_prayer"
+    relation = "sustains"
+    object = "spiritual_combat"
+    source_id str = "ge_158_164"
+      ?rationale "Prayer, Eucharistic worship and reconciliation support perseverance."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    conditions = "The cited practices support spiritual life; no automatic immunity from affliction is asserted."
+    condition_source_id = "ge_158_164"
+
+  edges[eucharist_sustains_combat]
+    subject = "eucharist"
+    relation = "sustains"
+    object = "spiritual_combat"
+    source_id str = "ge_158_164"
+      ?rationale "Prayer, Eucharistic worship and reconciliation support perseverance."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    conditions = "The cited practices support spiritual life; no automatic immunity from affliction is asserted."
+    condition_source_id = "ge_158_164"
+
+  edges[penance_sustains_combat]
+    subject = "penance"
+    relation = "sustains"
+    object = "spiritual_combat"
+    source_id str = "ge_158_164"
+      ?rationale "Prayer, Eucharistic worship and reconciliation support perseverance."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+    conditions = "The cited practices support spiritual life; no automatic immunity from affliction is asserted."
+    condition_source_id = "ge_158_164"
+
+  edges[grace_enables_combat]
+    subject = "grace"
+    relation = "enables"
+    object = "spiritual_combat"
+    source_id str = "st_i_114_1"
+      ?rationale "Divine grace enables resistance despite demonic power."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "principal"
+
+  edges[guardianship_assists_combat]
+    subject = "angelic_guardianship"
+    relation = "sustains"
+    object = "spiritual_combat"
+    source_id str = "st_i_114_1"
+      ?rationale "Aquinas names angelic guardianship among the helps given against demonic assault."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "dispositive"
+
+  edges[prayer_act_of_intellect]
+    subject = "christian_prayer"
+    relation = "is_act_of"
+    object = "intellectual_power"
+    source_id str = "st_ii_ii_83_1_2"
+      ?rationale "Petition is an act of practical reason, moved by will."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+
+  edges[will_moves_prayer]
+    subject = "will"
+    relation = "moves_as_to_exercise"
+    object = "christian_prayer"
+    source_id str = "st_ii_ii_83_1_2"
+      ?rationale "The will moves reason to pray."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+
+  edges[prayer_turns_to_god]
+    subject = "christian_prayer"
+    relation = "turns_to"
+    object = "god"
+    source_id str = "st_ii_ii_83_1_2"
+      ?rationale "Prayer directs the mind toward God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[prayer_within_providence]
+    subject = "christian_prayer"
+    relation = "depends_on"
+    object = "divine_providence"
+    source_id str = "st_ii_ii_83_1_2"
+      ?rationale "Prayer belongs within providence and does not alter God's eternal disposition."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[possession_kind_affliction]
+    subject = "demonic_possession"
+    relation = "is_kind_of"
+    object = "demonic_affliction"
+    source_id str = "medina_exorcism_1999"
+      ?rationale "Possession is one form of harmful demonic influence."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[oppression_kind_affliction]
+    subject = "demonic_oppression"
+    relation = "is_kind_of"
+    object = "demonic_affliction"
+    source_id str = "cpa_2022_terminology"
+      ?rationale "Oppression/vexation is indexed under affliction in the cited pastoral usage."
+    evidence_kind = "editorial_classification"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "A source-specific editorial grouping; no exhaustive taxonomy or progression is implied."
+    condition_source_id = "cpa_2022_terminology"
+
+  edges[oppression_distinct_possession]
+    subject = "demonic_oppression"
+    relation = "is_distinct_from"
+    object = "demonic_possession"
+    source_id str = "cpa_2022_terminology"
+      ?rationale "The pastoral discussion distinguishes oppression from possession."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "The terms may overlap in usage and the described conditions may coexist."
+    condition_source_id = "cpa_2022_terminology"
+
+  edges[possession_concerns_body]
+    subject = "demonic_possession"
+    relation = "concerns"
+    object = "human_body"
+    source_id str = "medina_exorcism_1999"
+      ?rationale "Possession concerns bodily powers and activity."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "body"
+    causal_mode = "noncausal"
+
+  edges[possession_cannot_compel_consent]
+    subject = "demonic_possession"
+    relation = "cannot_compel"
+    object = "deliberate_consent"
+    source_id str = "medina_exorcism_1999"
+      ?rationale "Demonic bodily domination cannot force free consent to sin."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+
+  edges[possession_distinct_personal_sin]
+    subject = "demonic_possession"
+    relation = "is_distinct_from"
+    object = "personal_sin"
+    source_id str = "medina_exorcism_1999"
+      ?rationale "Affliction and freely consenting to sin must be distinguished."
+    evidence_kind = "interpretive_inference"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "act"
+    causal_mode = "noncausal"
+
+  edges[affliction_concerns_fallen_angel]
+    subject = "demonic_affliction"
+    relation = "concerns"
+    object = "fallen_angel"
+    source_id str = "medina_exorcism_1999"
+      ?rationale "Demonic affliction names influence attributed to fallen angels."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[demonic_assault_under_providence]
+    subject = "demonic_affliction"
+    relation = "depends_on"
+    object = "divine_providence"
+    source_id str = "st_i_114_1"
+      ?rationale "Demonic assault occurs only within divine permission."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "Permission is not divine malice or approval of the demon's intention."
+    condition_source_id = "st_i_114_1"
+
+  edges[deliverance_depends_on_christ_passion]
+    subject = "deliverance_from_evil"
+    relation = "depends_on"
+    object = "christ_passion"
+    source_id str = "ccc_2853_2854"
+      ?rationale "Christ's self-giving death grounds victory over the Evil One."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[deliverance_prayer_kind_prayer]
+    subject = "prayer_for_deliverance"
+    relation = "is_kind_of"
+    object = "christian_prayer"
+    source_id str = "ccc_2853_2854"
+      ?rationale "Deliverance is sought in prayer to God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[deliverance_prayer_petitions_liberation]
+    subject = "prayer_for_deliverance"
+    relation = "petitions_for"
+    object = "deliverance_from_evil"
+    source_id str = "ccc_2853_2854"
+      ?rationale "The final petition asks liberation from evil and perseverance."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[deliverance_prayer_to_father]
+    subject = "prayer_for_deliverance"
+    relation = "turns_to"
+    object = "father"
+    source_id str = "ccc_2853_2854"
+      ?rationale "The Church brings this petition before the Father."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[church_prays_for_deliverance]
+    subject = "church"
+    relation = "can_perform"
+    object = "prayer_for_deliverance"
+    source_id str = "ccc_2853_2854"
+      ?rationale "The Church prays for the world's deliverance."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[ordinary_deliverance_distinct_major_exorcism]
+    subject = "prayer_for_deliverance"
+    relation = "is_distinct_from"
+    object = "major_exorcism"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "Private supplication and the reserved solemn rite have distinct ministerial conditions."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "Distinction of forms and authorization, not denial of their common purpose."
+    condition_source_id = "usccb_exorcism_faq"
+
+  edges[sacramental_distinct_sacrament]
+    subject = "sacramental"
+    relation = "is_distinct_from"
+    object = "sacrament"
+    source_id str = "ccc_1667_1670"
+      ?rationale "Sacramentals have a different mode of efficacy from the seven sacraments."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[sacramental_instituted_church]
+    subject = "sacramental"
+    relation = "is_instituted_by"
+    object = "church"
+    source_id str = "ccc_1667_1670"
+      ?rationale "The Church institutes sacramentals."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[sacramental_disposes_grace]
+    subject = "sacramental"
+    relation = "can_dispose_to"
+    object = "grace"
+    source_id str = "ccc_1667_1670"
+      ?rationale "Ecclesial prayer disposes recipients to receive grace and cooperate with it."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "unspecified"
+    causal_mode = "dispositive"
+
+  edges[exorcism_kind_sacramental]
+    subject = "exorcism"
+    relation = "is_kind_of"
+    object = "sacramental"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "Exorcism is a sacramental."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[exorcism_in_christ_name]
+    subject = "exorcism"
+    relation = "is_exercised_in_name_of"
+    object = "son"
+    source_id str = "ccc_1673"
+      ?rationale "The Church exorcizes by Christ's authority."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[church_ministry_exorcism]
+    subject = "church"
+    relation = "can_perform"
+    object = "exorcism"
+    source_id str = "ccc_1673"
+      ?rationale "Christ entrusted this ministry to the Church."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "Exercise is governed by the Church's norms."
+    condition_source_id = "ccc_1673"
+
+  edges[exorcism_ordered_deliverance]
+    subject = "exorcism"
+    relation = "is_ordered_to"
+    object = "deliverance_from_evil"
+    source_id str = "ccc_1673"
+      ?rationale "Exorcism seeks protection or liberation."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "unspecified"
+    causal_mode = "final"
+
+  edges[major_kind_exorcism]
+    subject = "major_exorcism"
+    relation = "is_kind_of"
+    object = "exorcism"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "Major exorcism is the solemn form."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[major_concerns_possession]
+    subject = "major_exorcism"
+    relation = "concerns"
+    object = "demonic_possession"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "The solemn rite concerns deliverance from possession."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "human_person"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "Ecclesial discernment includes medical and psychological assessment; the graph cannot determine a personal case."
+    condition_source_id = "usccb_exorcism_faq"
+
+  edges[major_requires_authorized_minister]
+    subject = "major_exorcism"
+    relation = "requires"
+    object = "authorized_exorcist"
+    source_id str = "cic_1172"
+      ?rationale "Legitimate ministry requires the local ordinary's special and express permission."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+    conditions = "Latin Church discipline; priestly ordination alone is insufficient."
+    condition_source_id = "cic_1172"
+
+  edges[baptismal_kind_exorcism]
+    subject = "baptismal_exorcism"
+    relation = "is_kind_of"
+    object = "exorcism"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "Simple exorcisms belong to baptismal rites."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[baptismal_ordered_baptism]
+    subject = "baptismal_exorcism"
+    relation = "is_ordered_to"
+    object = "baptism"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "Baptismal exorcism accompanies preparation or celebration of Baptism."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[baptismal_not_requires_possession]
+    subject = "baptismal_exorcism"
+    relation = "does_not_require"
+    object = "demonic_possession"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "A baptismal exorcism does not imply that its recipient is possessed."
+    evidence_kind = "interpretive_inference"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"
+
+  edges[exorcism_distinct_penance]
+    subject = "exorcism"
+    relation = "is_distinct_from"
+    object = "penance"
+    source_id str = "usccb_exorcism_faq"
+      ?rationale "Exorcism and sacramental forgiveness have distinct purposes."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    recipient_scope = "unspecified"
+    affected_aspect = "unspecified"
+    causal_mode = "noncausal"

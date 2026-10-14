@@ -651,3 +651,29 @@ graph_concept_styles[real_presence] : graph_sacraments
 graph_concept_styles[transubstantiation] : graph_sacraments
 
 graph_concept_styles[eucharistic_sacrifice] : graph_sacraments
+
+graph_concept_styles[spiritual_combat] : graph_spiritual_combat
+
+graph_concept_styles[spiritual_vigilance] : graph_spiritual_combat
+
+graph_concept_styles[christian_prayer] : graph_spiritual_combat
+
+graph_concept_styles[demonic_affliction] : graph_affliction
+
+graph_concept_styles[demonic_oppression] : graph_affliction
+
+graph_concept_styles[demonic_possession] : graph_affliction
+
+graph_concept_styles[deliverance_from_evil] : graph_spiritual_combat
+
+graph_concept_styles[prayer_for_deliverance] : graph_spiritual_combat
+
+graph_concept_styles[sacramental] : graph_sacraments
+
+graph_concept_styles[exorcism] : graph_sacraments
+
+graph_concept_styles[major_exorcism] : graph_sacraments
+
+graph_concept_styles[baptismal_exorcism] : graph_sacraments
+
+graph_concept_styles[authorized_exorcist] : graph_church

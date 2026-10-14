@@ -18,6 +18,7 @@ The project follows a [scholarly and Catholic method](method.md): claims about A
 - [Mary and the saints](mariology.md): Theotokos, Marian teachings, intercession, and veneration.
 - [Heaven, Hell, Purgatory, and resurrection](eschatology.md): judgment, purification, prayer for the dead, and final fulfillment.
 - [Sin and angelic ministry](sin-and-angels.md): wounds of human powers, conversion, temptation, guardianship, and angelic orders.
+- [Spiritual warfare and deliverance](spiritual-warfare.md): prayer, affliction, oppression/vexation, possession, and exorcism, with source-specific distinctions.
 - [Creation and created orders](creation.md): God as creator, angels and demons, embodied humans, animals, plants, and matter.
 - [Architecture](architecture.md): responsibilities of the Rust core and Python outer layer.
 - [First executable slice](architecture.md#first-executable-slice): run validation and cited graph queries.

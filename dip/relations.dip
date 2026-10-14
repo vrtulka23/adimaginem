@@ -820,3 +820,15 @@ ontology
     kind = "metaphysical"
     description = "Identifies the subject matter of a cited concept or account. It asserts neither efficient causation nor a faculty's formal object."
     prose_template = "{subject} concerns {object}."
+
+  relations[petitions_for]
+    label = "Petitions for"
+    kind = "theological"
+    description = "Prayer asks for the indicated good; this does not assert an automatic result."
+    prose_template = "{subject} petitions for {object}."
+
+  relations[is_exercised_in_name_of]
+    label = "Is exercised in the name of"
+    kind = "theological"
+    description = "The ministry acts in the indicated person's authority, not by an independent power."
+    prose_template = "{subject} is exercised in the name of {object}."

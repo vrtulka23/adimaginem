@@ -75,3 +75,11 @@ $schema graph_church
 $schema graph_revelation
   color str = "#cab6ef"
     ?category "Revelation & transmission"
+
+$schema graph_spiritual_combat
+  color str = "#63c9b3"
+    ?category "Prayer & spiritual combat"
+
+$schema graph_affliction
+  color str = "#b79bcf"
+    ?category "Demonic affliction"

@@ -122,3 +122,5 @@ graph_viewer[default]
   tour_transition_ms = 800
 
   tour_context_opacity = 0.55
+
+  tour_depth_ratio = 3.0

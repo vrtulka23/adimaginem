@@ -1,4 +1,4 @@
-?descr "An editorial display coordinate for one concept in one tour step"
+?descr "An editorial starting coordinate for one concept in one tour step; the viewer relaxes positions in three dimensions"
 step_id str
 concept_id str
 x float

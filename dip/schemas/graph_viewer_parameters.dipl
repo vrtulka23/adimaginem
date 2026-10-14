@@ -197,7 +197,7 @@ initial_jitter float = 0.2
 
 # Guided-tour presentation defaults.
 tour_icon_size float = 3.0
-  ?descr "Icon size for authored tour coordinates; the previous exploration size is restored on exit."
+  ?descr "Initial icon size during tours; the previous exploration size is restored on exit."
   !condition ({.} > 0)
 
 tour_transition_ms int = 800
@@ -207,3 +207,7 @@ tour_transition_ms int = 800
 tour_context_opacity float = 0.55
   ?descr "Opacity of unhighlighted supporting icons, labels, and relations in guided scenes. Clicking a supporting concept makes that icon fully visible."
   !condition ({.} > 0 && {.} <= 1)
+
+tour_depth_ratio float = 3.0
+  ?descr "Initial tour depth perturbation as a multiple of icon size, before recentering. Breaks planar symmetry; coordinates then relax using the shared layout forces. Zero preserves authored initial depth."
+  !condition ({.} >= 0)

@@ -27,13 +27,13 @@ Open **Guided tours** at the top of the graph's left sidebar. The catalogue has 
 | Mary, Mother of God, and the communion of saints | Dialogue with Protestant and Evangelical Christians; Christian dialogue; Dialogue with Eastern Orthodox Christians; Catholic formation | Theotokos: who was born of Mary?; The virgin mother; Redeemed by preservation; Body and soul in glory; Asking Mary and the saints to pray; Dulia, hyperdulia, and latria |
 | Why ask Mary and the saints to pray? | Dialogue with Protestant and Evangelical Christians; Christian dialogue; Spiritual seekers; Catholic formation | Communion across death; Invocation asks for intercession; All intercession depends on Christ |
 
-Select **Start tour**, then **Previous** or **Next**. Each scene shows its question, explanation, qualification, and source links. Concepts remain clickable, and the camera can rotate and zoom. Positions stay fixed so that annealing and selection repulsion do not rearrange the scene. Labels remain visible.
+Select **Start tour**, then **Previous** or **Next**. Each scene shows its question, explanation, qualification, and source links. Concepts remain clickable, and the camera can rotate and zoom. Saved coordinates seed a three-dimensional force layout. Attraction, repulsion, and icon/arrow collision clearance relax each scene; a reproducible depth spread prevents coplanar starting arrangements. The camera fits the result after settling. Labels remain visible.
 
 **Main concepts are emphasized; supporting concepts remain quieter.** Supporting icons and their labels are translucent, and supporting relations use their normal colors and widths. Click any supporting icon to inspect its definition and citations. Thirty-eight scenes include additional connective context, with 47 supporting concept placements. The original focus of each step is preserved.
 
 The connections are explicitly selected from existing cited ontology edges. They are not generated from graph proximity. Examples include the soul and appetitive power between faith/intellect and charity/will; intellect between its speculative and practical uses; and saints in Heaven between invocation and intercession. Supporting sources appear with the other step citations.
 
-**Exit tour** or **Finish tour** restores the exploration view, including filters, icon size, selection, connection search, camera, and the saved layout. Ordinary layout controls are disabled while a tour is active.
+**Exit tour** or **Finish tour** restores the exploration view, including filters, icon size, selection, connection search, camera, and the saved layout. **Icon size**, **Reheat layout**, **Restore starting layout**, and **Reset graph view** work during a tour. Restore and Reset restart the current scene from its authored coordinates and depth spread. Nodes can be dragged; selecting one does not pin it. Exploration filters remain inactive until exit.
 
 ## Sidebar organization
 
@@ -59,7 +59,7 @@ The canonical files are in [`dip/tours/`](../dip/tours/). Three map schemas sepa
 |---|---|
 | `graph_tours` | Title, description, audience and topic tags, ordered step IDs, framing note, review status |
 | `graph_tour_steps` | Tour ID, title, question, narrative, qualification, all visible source/concept/edge IDs, highlighted concept/edge subsets, focus concept, camera and look-at coordinates |
-| `graph_tour_positions` | Step ID, concept ID, and explicit `x`, `y`, `z` coordinates |
+| `graph_tour_positions` | Step ID, concept ID, and explicit initial `x`, `y`, `z` coordinates |
 
 These are presentation maps outside `ontology`. Sources remain in `ontology.sources`. No additional philosophical relation is inferred from tour membership or geometry.
 
@@ -82,7 +82,7 @@ To add a tour:
 4. Give every selected concept one position for that scene. Set a camera position and look-at target; the default camera is `(0, 0, 32)` looking at the origin.
 5. Write a concise question, explanation, and qualification. Avoid attributing a belief to every member of an audience, and identify distinctions that the diagram could otherwise obscure.
 
-The shared viewer validator rejects missing citations, unknown or out-of-scene edges, invalid highlighted subsets, disconnected supporting concepts, repeated or orphan steps, missing/duplicate positions, nonfinite coordinates, and invalid camera targets. Supporting positions are collected in [`context_positions.dip`](../dip/tours/context_positions.dip). `tour_icon_size`, `tour_transition_ms`, and `tour_context_opacity` are configured in `dip/graph_viewer.dip`; reduced-motion preferences disable camera animation.
+The shared viewer validator rejects missing citations, unknown or out-of-scene edges, invalid highlighted subsets, disconnected supporting concepts, repeated or orphan steps, missing/duplicate positions, nonfinite coordinates, and invalid camera targets. Supporting positions are collected in [`context_positions.dip`](../dip/tours/context_positions.dip). `tour_icon_size`, `tour_transition_ms`, `tour_context_opacity`, and `tour_depth_ratio` are configured in `dip/graph_viewer.dip`; reduced-motion preferences disable camera animation. `tour_depth_ratio` scales the initial depth perturbation by icon size (zero retains the authored depth). Tour settling reuses the shared DIPL attraction, repulsion, collision, and cooling controls. Projection can still produce line crossings; rotating the graph exposes its depth.
 
 ## Running and checking
 

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { prepareTours, filterTours } from './guided_tours.mjs';
+import { prepareTours, filterTours, seedTourPositions } from './guided_tours.mjs';
 
 function fixture() {
   return {
@@ -41,4 +41,20 @@ test('invalid source, scene membership, camera, and coordinate references are re
     d=>d.graph_tour_steps.extra={...d.graph_tour_steps.first},
   ];
   for(const mutate of mutations) {const data=fixture();mutate(data);assert.throws(()=>prepareTours(data),/Guided tours:/);}
+});
+
+test('planar tour coordinates seed a reproducible volume without changing authored data', () => {
+  const positions = {a:[-5,-5,0],b:[5,-5,0],c:[5,5,0],d:[-5,5,0]};
+  const scene = {conceptIds:new Set(Object.keys(positions)),positions};
+  const original = structuredClone(positions);
+  const seeded = seedTourPositions(scene, 9);
+  assert.deepEqual(positions, original);
+  assert.deepEqual(seedTourPositions(scene, 0), positions);
+  assert.deepEqual(seedTourPositions({...scene,conceptIds:new Set(['d','c','b','a'])},9), seeded);
+  const [a,b,c,d] = Object.values(seeded);
+  const subtract = (p,q) => p.map((v,i)=>v-q[i]);
+  const [u,v,w] = [subtract(b,a),subtract(c,a),subtract(d,a)];
+  const volume = u[0]*(v[1]*w[2]-v[2]*w[1])-u[1]*(v[0]*w[2]-v[2]*w[0])+u[2]*(v[0]*w[1]-v[1]*w[0]);
+  assert.ok(Math.abs(volume)>0.001, 'four planar nodes must begin noncoplanar');
+  assert.ok(Math.abs(Object.values(seeded).reduce((sum,p)=>sum+p[2],0))<1e-10);
 });

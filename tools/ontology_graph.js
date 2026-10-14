@@ -1,7 +1,7 @@
 import * as THREE from "https://esm.sh/three";
 import { explainPath, collectInfluence } from "./relationship_summary.mjs";
 import { loadOntology } from "./ontology_loader.mjs";
-import { prepareTours, filterTours } from "./guided_tours.mjs";
+import { prepareTours, filterTours, seedTourPositions } from "./guided_tours.mjs";
 import { createSelectionForce } from "./selection_force.mjs";
 import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.js";
 import {
@@ -9,7 +9,7 @@ import {
   faEye, faGem, faGift, faHeart, faMedal, faPaw, faPerson,
   faSeedling, faShareNodes, faSun, faWineGlass, faStar, faCloudSun,
   faDoorClosed, faFireFlameCurved, faScaleBalanced, faHandsPraying,
-  faHourglassEnd, faPersonRays, faChurch, faBookOpen, faLink
+  faHourglassEnd, faPersonRays, faChurch, faBookOpen, faLink, faShieldHalved
 } from "https://esm.sh/@fortawesome/free-solid-svg-icons@6.7.2";
 
 window.addEventListener("error", (event) => {
@@ -217,6 +217,12 @@ function iconFamily(id, category) {
 
 function iconDefinition(node) {
   const distinctive = {
+    spiritual_combat: faShieldHalved, spiritual_vigilance: faEye,
+    christian_prayer: faHandsPraying, prayer_for_deliverance: faHandsPraying,
+    deliverance_from_evil: faDove, demonic_affliction: faCloudSun,
+    demonic_oppression: faCloudSun, demonic_possession: faPerson,
+    sacramental: faCross, exorcism: faCross, major_exorcism: faCross,
+    baptismal_exorcism: faCross, authorized_exorcist: faChurch,
     virgin_mary: faStar, divine_motherhood: faStar, immaculate_conception: faStar,
     heaven: faCloudSun, hell: faDoorClosed, purgatory: faFireFlameCurved,
     purification_from_sin: faFireFlameCurved, human_death: faHourglassEnd,
@@ -307,11 +313,20 @@ function makeDivineEmblem() {
   return group;
 }
 
+function styleTourLabel(id, label) {
+  const context = activeTour && !pathNodeIds.has(id);
+  const gap = sizeConfig.selection_ring_radius + 3 * sizeConfig.selection_ring_width + sizeConfig.label_gap;
+  label.material.opacity = context && selected !== id ? sizeConfig.tour_context_opacity : 1;
+  // Supporting labels sit above the artwork with one label-height of extra
+  // clearance; the main concepts retain their familiar labels underneath.
+  label.position.y = context ? gap + sizeConfig.label_height : -gap;
+}
+
 function finishSculpture(group, node, materials) {
   group.scale.setScalar(iconSize * iconScale(node.id));
   const label = makeLabelSprite(node.label, iconScale(node.id));
   label.visible = Boolean(activeTour) || document.querySelector('#show-labels').checked || selected === node.id || pathNodeIds.has(node.id);
-  label.material.opacity = activeTour && !pathNodeIds.has(node.id) && selected !== node.id ? sizeConfig.tour_context_opacity : 1;
+  styleTourLabel(node.id, label);
   group.add(label);
   group.userData.label = label;
   group.userData.iconMaterial = materials[0];
@@ -483,7 +498,7 @@ function updateVisualState() {
     const label = visual.userData.label;
     if (label) {
       label.visible = Boolean(activeTour) || showAll || active;
-      label.material.opacity = activeTour && !active ? sizeConfig.tour_context_opacity : 1;
+      styleTourLabel(id, label);
     }
   }
   updateLegend();
@@ -504,7 +519,7 @@ function draw(reheatChanged = true) {
     activeSignature = signature;
     layoutNeedsFit = true;
     graph.graphData({ nodes, links });
-    if (!activeTour) configureForces();
+    configureForces();
     if (reheatChanged) graph.d3ReheatSimulation();
   }
   if (selected) showDetails(selected);
@@ -530,7 +545,7 @@ function createGraph() {
     .onNodeClick((node) => { if (selected === node.id) deselectConcept(); else selectConcept(node.id); })
     .onNodeHover((node) => { el.style.cursor = node ? "pointer" : "grab"; })
     .onEngineTick(() => { if (activeTour) { syncBillboards(); return; } const active = visibleNodes(); for (const n of active) positions[n.id] = [n.x, n.y, n.z]; if (!initialTickReported && active.length) { const extent = ["x", "y", "z"].map((axis) => (Math.max(...active.map((n) => n[axis])) - Math.min(...active.map((n) => n[axis]))).toFixed(1)).join(" × "); document.querySelector("#layout-status").textContent = `Settling ${active.length} concepts · initial spread ${extent}.`; initialTickReported = true; } syncBillboards(); })
-    .onEngineStop(() => { if (activeTour) { syncBillboards(); return; } if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } if (selected && !selectionForce.active()) openSelectionSpace(); });
+    .onEngineStop(() => { if (activeTour) { settleTourView(); return; } if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } if (selected && !selectionForce.active()) openSelectionSpace(); });
   graph.d3AlphaDecay(sizeConfig.alpha_decay).d3AlphaMin(sizeConfig.alpha_min).d3VelocityDecay(sizeConfig.velocity_decay).cooldownTime(sizeConfig.cooldown_ms);
   graph.d3Force("selection-space", selectionForce);
   graph.scene().add(new THREE.AmbientLight(0x9fb1c7, 1.7));
@@ -588,7 +603,11 @@ function showDetails(id) {
 }
 function citation(source, id) {
   if (!source) return `<span class="small">Source: ${esc(id || "unknown")}</span>`;
-  return `<div class="citation"><b>${esc(source.author)}</b>, <i>${esc(source.work)}</i>, ${esc(source.locator)}<br><a href="${esc(source.url)}" target="_blank" rel="noopener">Open source ↗</a></div>`;
+  const authority = {
+    church_guidance: "Official ecclesial guidance or discipline",
+    pastoral_literature: "Pastoral literature · not magisterial teaching",
+  }[source.authority_kind];
+  return `<div class="citation">${authority ? `<small>${esc(authority)}</small><br>` : ""}<b>${esc(source.author)}</b>, <i>${esc(source.work)}</i>, ${esc(source.locator)}<br><a href="${esc(source.url)}" target="_blank" rel="noopener">Open source ↗</a></div>`;
 }
 function clearPathResult() {
   pathEdgeIds.clear(); pathNodeIds.clear();
@@ -606,20 +625,21 @@ function influenceOverview(start, end) {
     const e = step.edge;
     return `<div class="summary-claim"><span class="tag">${esc(e.review_status)}</span>${e.evidence_kind !== "textual_paraphrase" ? `<span class="tag">${esc(e.evidence_kind.replaceAll("_", " "))}</span>` : ""}<p>${esc(step.sentence)} ${esc(step.rationale)}</p>${e.recipient_scope && e.recipient_scope !== "unspecified" ? `<div class="summary-qualification">Recipient scope: ${esc(e.recipient_scope.replaceAll("_", " "))}.</div>` : ""}${e.conditions ? `<div class="summary-qualification"><b>Conditions:</b> ${esc(e.conditions)}</div>` : ""}<details class="influence-citation"><summary>Source and relation meaning</summary><p>${esc(step.description)}</p>${citation(step.source, e.source_id)}${e.conditions ? `<div class="small">Condition source:</div>${citation(step.conditionSource, e.condition_source_id)}` : ""}<div class="small">Edge: ${esc(step.id)} · ${esc(e.causal_mode.replaceAll("_", " "))}</div></details></div>`;
   };
-  return `<section class="influence-overview"><h2>Influence overview</h2><p class="summary-route">Cited capacities, effects, and limits. These describe possibilities under the stated conditions, not an inevitable causal chain.</p>`
-    + [[start, end], [end, start]].map(([from, to]) => {
+  const directions = [[start, end], [end, start]].map(([from, to]) => {
       const result = collectInfluence(db, from, to, available, sizeConfig.influence_summary_depth);
       const all = [...result.statements, ...result.limits];
+      if (!all.length) return "";
       const prose = statements => [...new Set(statements.map(step => step.rationale || step.sentence))].map(esc).join(" ");
       const statuses = [...new Set(all.map(step => step.edge.review_status))].map(status => `<span class="tag">${esc(status)}</span>`).join("");
       const qualifications = [...new Set(all.map(step => step.edge.conditions).filter(Boolean))];
       return `<h3>${esc(concepts[from].label)} → ${esc(concepts[to].label)}</h3>`
         + statuses + (all.some(step => step.edge.evidence_kind === "interpretive_inference") ? '<span class="tag">Includes interpretive inference</span>' : "")
-        + (result.statements.length ? `<p>${prose(result.statements)}</p>` : '<p class="summary-route">No supported influence statements were found in this direction within the current filters and search depth.</p>')
+        + (result.statements.length ? `<p>${prose(result.statements)}</p>` : "")
         + (result.limits.length ? `<p><b>Limits:</b> ${prose(result.limits)}</p>` : "")
         + qualifications.map(text => `<p class="summary-qualification"><b>Condition:</b> ${esc(text)}</p>`).join("")
         + (all.length ? `<details class="influence-statements"><summary>Read the cited influence statements (${all.length})</summary>${result.statements.map(item).join("")}${result.limits.length ? `<h3>Limits</h3>${result.limits.map(item).join("")}` : ""}</details>` : "");
-    }).join("") + "</section>";
+    }).join("");
+  return directions ? `<section class="influence-overview"><h2>Influence overview</h2><p class="summary-route">Cited capacities, effects, and limits. These describe possibilities under the stated conditions, not an inevitable causal chain.</p>${directions}</section>` : "";
 }
 function showRelationshipSummary(ordered, edgeIds, start = ordered[0], end = ordered.at(-1)) {
   const { steps, labels } = ordered.length ? explainPath(db, ordered, edgeIds) : { steps: [], labels: [] };
@@ -714,9 +734,10 @@ function setIconSize(value, anneal = true) {
   for (const visual of Object.values(nodeVisuals)) visual.scale.setScalar(iconSize * iconScale(visual.userData.nodeId));
   syncSelectionRing();
   if (anneal) layoutNeedsFit = true;
-  if (graph) { if (!activeTour) configureForces(); graph.linkDirectionalArrowLength(arrowLength); if (anneal) graph.d3ReheatSimulation(); graph.refresh(); }
+  if (graph) { configureForces(); graph.linkDirectionalArrowLength(arrowLength); if (anneal) graph.d3ReheatSimulation(); graph.refresh(); }
 }
 function restoreLayout() {
+  if (activeTour) { applyTourStep(activeTour.index); return; }
   restoreSelectionLayout();
   const initial = initialLayout();
   for (const [id, node] of Object.entries(nodeRegistry)) { const [x, y, z] = initial[id]; Object.assign(node, { x, y, z, vx: 0, vy: 0, vz: 0, fx: null, fy: null, fz: null }); positions[id] = [x, y, z]; }
@@ -729,6 +750,15 @@ function reheatLayout() {
   const nodes = visibleNodes().length, links = activeEdges().length;
   document.querySelector("#layout-status").textContent = `Settling ${nodes} concepts and ${links} relations with space for icons and midpoint arrows.`;
   configureForces(); graph.d3ReheatSimulation();
+}
+
+function settleTourView() {
+  syncBillboards();
+  document.querySelector('#layout-status').textContent = 'Guided tour · 3D layout settled. Rotate, drag concepts, or Reheat to explore the connections.';
+  if (layoutNeedsFit) {
+    graph.zoomToFit(reducedMotion.matches ? 0 : sizeConfig.tour_transition_ms, sizeConfig.fit_padding);
+    layoutNeedsFit = false;
+  }
 }
 
 function renderTourCatalogue() {
@@ -779,13 +809,9 @@ function startTour(id) {
     sidebar: [...document.querySelectorAll('.sidebar-accordion')].map(panel => [panel, panel.open]),
     forces: Object.fromEntries(['link','charge','center','collide'].map(name => [name, graph.d3Force(name)])),
   };
-  controls.forEach(control => { control.disabled = true; });
-  // The link force resolves endpoint IDs to nodes for the renderer, even when
-  // its attraction is disabled. Removing it leaves unresolved string endpoints.
-  for (const name of ['charge','center','collide']) graph.d3Force(name, null);
-  graph.d3Force('link').strength(0);
+  controls.forEach(control => { control.disabled = !control.closest('.layout-controls'); });
   tourSnapshot.legends.forEach(([panel]) => { panel.open = false; });
-  graph.enableNodeDrag(false);
+  graph.enableNodeDrag(true).cooldownTicks(Infinity);
   clearPathResult(); focusedGroups.clear(); selected = null;
   activeTour = { id, index: 0, scene: null };
   document.body.classList.add('tour-mode');
@@ -805,10 +831,11 @@ function applyTourStep(index) {
   clearPathResult();
   for (const id of step.highlighted_edge_ids) pathEdgeIds.add(id);
   for (const id of step.highlighted_concept_ids) pathNodeIds.add(id);
+  const seeded = seedTourPositions(scene, iconSize * sizeConfig.tour_depth_ratio);
   for (const id of step.concept_ids) {
-    const c = concepts[id], [x,y,z] = scene.positions[id];
+    const c = concepts[id], [x,y,z] = seeded[id];
     nodeRegistry[id] ||= {id, label:c.label, domain:c.domain, category:c.category};
-    Object.assign(nodeRegistry[id], {x,y,z,fx:x,fy:y,fz:z,vx:0,vy:0,vz:0});
+    Object.assign(nodeRegistry[id], {x,y,z,fx:null,fy:null,fz:null,vx:0,vy:0,vz:0});
     positions[id] = [x,y,z];
   }
   selected = step.focus_concept;
@@ -823,9 +850,10 @@ function applyTourStep(index) {
   document.querySelector('#tour-review').textContent = `Editorial review: ${tour.review_status}`;
   document.querySelector('#tour-previous').disabled = index === 0;
   document.querySelector('#tour-next').textContent = index + 1 === tour.step_ids.length ? 'Finish tour' : 'Next';
-  draw(false); layoutNeedsFit = false;
+  draw(false); configureForces(); layoutNeedsFit = true;
   graph.cameraPosition({x:step.camera_x,y:step.camera_y,z:step.camera_z}, {x:step.look_at_x,y:step.look_at_y,z:step.look_at_z}, reducedMotion.matches ? 0 : sizeConfig.tour_transition_ms);
-  document.querySelector('#layout-status').textContent = 'Guided tour · emphasized concepts lead the step; quieter concepts and lines provide context.';
+  graph.d3ReheatSimulation();
+  document.querySelector('#layout-status').textContent = 'Guided tour · relaxing in 3D with space for icons and arrows; quieter concepts provide context.';
   document.querySelector('#tour-step-title').focus({preventScroll:true});
 }
 function exitTour(completed = false) {
@@ -912,6 +940,7 @@ async function init() {
     document.querySelector("#restore-layout").addEventListener("click", restoreLayout);
     sizeInput.addEventListener("input", (event) => setIconSize(event.target.value));
     document.querySelector("#reset").addEventListener("click", () => {
+      if (activeTour) { applyTourStep(activeTour.index); return; }
       studyFocus.checked = false; studyNote.hidden = true;
       clearPathResult(); focusedGroups.clear(); deselectConcept();
       draw();

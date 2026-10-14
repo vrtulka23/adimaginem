@@ -34,8 +34,11 @@ For example, raising `link_strength_default` gives influence links more attracti
 | `cooldown_ms` | Maximum settling time per run in milliseconds | 9000 |
 | `initial_radius` | Radius of the initial spherical placement | 5.0 |
 | `initial_jitter` | Width of deterministic position perturbation | 0.2 |
+| `tour_depth_ratio` | Initial tour depth perturbation in multiples of icon size, before recentering | 3.0 |
 
 The existing `icon_gap`, icon-size controls, arrow-size control, and `selection_repulsion_*` settings remain in the same DIPL record. Initial placement still uses record order and a deterministic spherical distribution; making its spread configurable does not change that algorithm.
+
+Guided tours start from their authored DIPL coordinates with deterministic depth offsets scaled by `tour_depth_ratio`. The offsets are centered to preserve the scene's initial mean depth. Nodes then relax freely using the shared attraction, repulsion, collision, and cooling settings above. Restore restarts the active scene; exiting a tour restores the saved exploration layout.
 
 ## What remains calculated
 
