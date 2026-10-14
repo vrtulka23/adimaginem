@@ -1,0 +1,111 @@
+# Latin names are scholarly labels; definitions preserve the cited distinctions.
+ontology
+  concepts[being]
+    label = "Being"
+    latin_name = "ens"
+    domain = "metaphysics"
+    study_areas = ["metaphysics", "knowledge_truth"]
+    category = "principle"
+    note = "That which is; the first notion of intellect. Being is not a genus containing God and creatures univocally."
+    source_id = "de_veritate_1_1_2"
+    review_status = "draft"
+
+  concepts[essence]
+    label = "Essence"
+    latin_name = "essentia; quidditas"
+    domain = "metaphysics"
+    study_areas = ["metaphysics"]
+    category = "principle"
+    note = "What a thing is. In material substances the essence includes matter and form, not the form alone."
+    source_id = "de_ente_1_4"
+    review_status = "draft"
+
+  concepts[act_of_being]
+    label = "Act of being"
+    latin_name = "esse; actus essendi"
+    domain = "metaphysics"
+    study_areas = ["metaphysics"]
+    category = "principle"
+    note = "The actuality by which something is. Created essence receives existence; in God essence and existence are identical."
+    source_id = "st_i_3_4"
+    review_status = "draft"
+
+  concepts[transcendental_unity]
+    label = "Unity of being"
+    latin_name = "unum"
+    domain = "metaphysics"
+    study_areas = ["metaphysics"]
+    category = "principle"
+    note = "Being as undivided in itself; not merely numerical quantity."
+    source_id = "st_i_11_1"
+    review_status = "draft"
+
+  concepts[transcendental_goodness]
+    label = "Goodness of being"
+    latin_name = "bonum"
+    domain = "metaphysics"
+    study_areas = ["metaphysics", "ethics"]
+    category = "principle"
+    note = "Being considered as desirable and perfective. This does not make every voluntary act morally good."
+    source_id = "st_i_5_1"
+    review_status = "draft"
+
+  concepts[truth]
+    label = "Truth"
+    latin_name = "veritas"
+    domain = "metaphysics"
+    study_areas = ["metaphysics", "knowledge_truth", "logic"]
+    category = "principle"
+    note = "Conformity of intellect and thing, with distinct applications to knowing and to the intelligibility of things."
+    source_id = "de_veritate_1_1_2"
+    review_status = "draft"
+
+  concepts[truth_in_intellect]
+    label = "Truth in the intellect"
+    latin_name = "veritas in intellectu"
+    domain = "metaphysics"
+    study_areas = ["knowledge_truth", "logic", "anthropology"]
+    category = "principle"
+    note = "Truth properly known in judgment through conformity to what is; distinct from mere conviction."
+    source_id = "st_i_16_1_2"
+    review_status = "draft"
+
+  concepts[truth_of_things]
+    label = "Truth of things"
+    latin_name = "veritas rerum"
+    domain = "metaphysics"
+    study_areas = ["metaphysics", "knowledge_truth"]
+    category = "principle"
+    note = "Things are called true through relation to intellect, chiefly the divine intellect on which natural things depend."
+    source_id = "de_veritate_1_1_2"
+    review_status = "draft"
+
+  concepts[noncontradiction]
+    label = "Principle of noncontradiction"
+    latin_name = "principium non contradictionis"
+    domain = "metaphysics"
+    study_areas = ["logic", "metaphysics", "knowledge_truth"]
+    category = "principle"
+    note = "The same cannot both be and not be at the same time and in the same respect. Distinct respects must not be collapsed."
+    source_id = "st_i_ii_94_2"
+    review_status = "draft"
+
+  concepts[first_practical_principle]
+    label = "First principle of practical reason"
+    latin_name = "bonum faciendum et prosequendum, et malum vitandum"
+    domain = "metaphysics"
+    study_areas = ["ethics", "knowledge_truth"]
+    category = "principle"
+    note = "Good is to be done and pursued, and evil avoided. Concrete moral precepts require further practical reasoning."
+    source_id = "st_i_ii_94_2"
+    review_status = "draft"
+
+  concepts[analogical_predication]
+    label = "Analogical predication"
+    latin_name = "praedicatio analogica"
+    domain = "metaphysics"
+    study_areas = ["metaphysics", "logic", "theology"]
+    category = "principle"
+    note = "Names shared by God and creatures signify related perfections without identical creaturely modes or wholly unrelated meanings."
+    source_id = "st_i_13_5"
+    review_status = "draft"

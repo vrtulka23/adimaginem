@@ -63,3 +63,15 @@ $schema graph_marian
 $schema graph_saints
   color str = "#a7d6bd"
     ?category "Communion & intercession"
+
+$schema graph_christology
+  color str = "#e8aa83"
+    ?category "Christ & salvation"
+
+$schema graph_church
+  color str = "#75baa9"
+    ?category "Church & apostolic life"
+
+$schema graph_revelation
+  color str = "#cab6ef"
+    ?category "Revelation & transmission"

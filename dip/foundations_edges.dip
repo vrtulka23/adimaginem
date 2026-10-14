@@ -1,0 +1,962 @@
+# Cited claims, not executable inference or transition rules.
+ontology
+  edges[conscience_guides_will]
+    subject = "conscience"
+    relation = "directs"
+    object = "will"
+    source_id str = "st_i_ii_19_5_6"
+      ?rationale "The will is morally evaluated in relation to the judgment of reason, including conscience."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Conscience can err. Following error does not automatically excuse: voluntariness and negligence matter. This relation is not an algorithm assigning personal culpability."
+    condition_source_id = "st_i_ii_19_5_6"
+
+  edges[passion_impedes_conscience]
+    subject = "disordered_passion"
+    relation = "can_impede"
+    object = "conscience"
+    source_id str = "st_i_ii_94_6"
+      ?rationale "Passion can hinder application of a general moral principle to a particular action; this application is represented by conscience."
+    evidence_kind = "interpretive_inference"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "dispositive"
+    conditions = "The first general principles are not thereby erased. The edge concerns an impeded act of application, not a destroyed faculty or automatic sin."
+    condition_source_id = "st_i_ii_94_6"
+
+  edges[god_subsistent_esse]
+    subject = "god"
+    relation = "has_act_of_being"
+    object = "act_of_being"
+    source_id str = "st_i_3_4"
+      ?rationale "God is his own subsistent existence."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "In God essence and existence are identical; the predicate does not assert a received actuality or two constituent parts."
+    condition_source_id = "st_i_3_4"
+
+  edges[resurrection_ours_instrumental]
+    subject = "christ_resurrection"
+    relation = "instrumentally_effects"
+    object = "resurrection_of_dead"
+    source_id str = "st_iii_56_1_2"
+      ?rationale "Christ's risen humanity acts through divine power in the resurrection of human bodies."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "instrumental"
+    conditions = "Efficient causality extends to the resurrection of both just and wicked. Glorious conformity, treated in the separate exemplar relation, properly concerns the just."
+    condition_source_id = "st_iii_56_1_2"
+
+  edges[good_convertible_being]
+    subject = "transcendental_goodness"
+    relation = "is_convertible_with"
+    object = "being"
+    source_id str = "st_i_5_1"
+      ?rationale "Good and being are the same in reality, considered under different aspects."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[one_convertible_being]
+    subject = "transcendental_unity"
+    relation = "is_convertible_with"
+    object = "being"
+    source_id str = "st_i_11_1"
+      ?rationale "Unity adds the notion of indivision to being."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[true_convertible_being]
+    subject = "truth_of_things"
+    relation = "is_convertible_with"
+    object = "being"
+    source_id str = "st_i_16_3_5"
+      ?rationale "Every being is intelligible; truth adds relation to intellect."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[intellect_truth_sense]
+    subject = "truth_in_intellect"
+    relation = "is_kind_of"
+    object = "truth"
+    source_id str = "st_i_16_1_2"
+      ?rationale "Truth is primarily said of intellect in conformity with things."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[things_truth_sense]
+    subject = "truth_of_things"
+    relation = "is_kind_of"
+    object = "truth"
+    source_id str = "de_veritate_1_1_2"
+      ?rationale "Things are called true by their relation to intellect."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This classification distinguishes ordered senses, not univocal species of a genus."
+    condition_source_id = "de_veritate_1_1_2"
+
+  edges[intellect_ordered_truth]
+    subject = "intellectual_power"
+    relation = "is_ordered_to"
+    object = "truth_in_intellect"
+    source_id str = "st_i_16_1_2"
+      ?rationale "Truth is the perfection toward which intellect tends."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "final"
+
+  edges[practical_judgment_truth]
+    subject = "practical_judgment"
+    relation = "is_ordered_to"
+    object = "truth_in_intellect"
+    source_id str = "st_i_16_1_2"
+      ?rationale "Intellectual judgment aims to affirm what is the case."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "final"
+    conditions = "This does not assert that every actual judgment is true."
+    condition_source_id = "st_i_16_1_2"
+
+  edges[truth_things_divine_intellect]
+    subject = "truth_of_things"
+    relation = "depends_on"
+    object = "divine_intellect"
+    source_id str = "de_veritate_1_1_2"
+      ?rationale "Natural things are measured by the divine intellect."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Dependence concerns natural things as true through conformity to their divine exemplar."
+    condition_source_id = "de_veritate_1_1_2"
+
+  edges[divine_intellect_god]
+    subject = "divine_intellect"
+    relation = "is_proper_to"
+    object = "god"
+    source_id str = "st_i_16_3_5"
+      ?rationale "God knows his own being; intellect and being are not really distinct in him."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[god_truth]
+    subject = "god"
+    relation = "has_characteristic"
+    object = "truth"
+    source_id str = "st_i_16_3_5"
+      ?rationale "God is truth itself."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This is essential predication, not an accidental quality inhering in God."
+    condition_source_id = "st_i_16_3_5"
+
+  edges[noncontradiction_being]
+    subject = "noncontradiction"
+    relation = "depends_on"
+    object = "being"
+    source_id str = "st_i_ii_94_2"
+      ?rationale "The first indemonstrable principle is grounded in being and non-being."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This is an explanatory basis, not derivation by a prior demonstration."
+    condition_source_id = "st_i_ii_94_2"
+
+  edges[principles_habit]
+    subject = "understanding_of_principles"
+    relation = "is_kind_of"
+    object = "habit"
+    source_id str = "st_i_79_12_13"
+      ?rationale "Understanding of principles is an intellectual habit."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[principles_noncontradiction]
+    subject = "understanding_of_principles"
+    relation = "grasps_principle"
+    object = "noncontradiction"
+    source_id str = "st_i_ii_94_2"
+      ?rationale "Noncontradiction is the first indemonstrable speculative principle."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[principles_subject_intellect]
+    subject = "understanding_of_principles"
+    relation = "inheres_in_subject"
+    object = "intellectual_power"
+    source_id str = "st_i_79_12_13"
+      ?rationale "This natural habit belongs to intellect."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[synderesis_habit]
+    subject = "synderesis"
+    relation = "is_kind_of"
+    object = "habit"
+    source_id str = "st_i_79_12_13"
+      ?rationale "Synderesis is a natural habit of practical principles."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[synderesis_practical_principle]
+    subject = "synderesis"
+    relation = "grasps_principle"
+    object = "first_practical_principle"
+    source_id str = "st_i_ii_94_2"
+      ?rationale "The first practical precept concerns pursuing good and avoiding evil."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[synderesis_practical_intellect]
+    subject = "synderesis"
+    relation = "inheres_in_subject"
+    object = "practical_intellect"
+    source_id str = "st_i_79_12_13"
+      ?rationale "Synderesis belongs to intellect in its practical use."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[conscience_intellectual_act]
+    subject = "conscience"
+    relation = "is_act_of"
+    object = "practical_intellect"
+    source_id str = "st_i_79_12_13"
+      ?rationale "Conscience applies knowledge to an individual act."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[conscience_choice]
+    subject = "conscience"
+    relation = "applies_to_action"
+    object = "choice"
+    source_id str = "st_i_79_12_13"
+      ?rationale "Conscience judges what one should do or has done."
+    evidence_kind = "interpretive_inference"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Choice is included as a particular voluntary action; this edge does not assert infallibility."
+    condition_source_id = "st_i_79_12_13"
+
+  edges[conscience_synderesis_distinction]
+    subject = "conscience"
+    relation = "is_distinct_from"
+    object = "synderesis"
+    source_id str = "st_i_79_12_13"
+      ?rationale "Application in an act is distinct from the habit of first principles."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[practical_principle_good]
+    subject = "first_practical_principle"
+    relation = "is_ordered_to"
+    object = "transcendental_goodness"
+    source_id str = "st_i_ii_94_2"
+      ?rationale "Good is first apprehended by practical reason."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "final"
+
+  edges[natural_law_first_precept]
+    subject = "natural_law"
+    relation = "includes"
+    object = "first_practical_principle"
+    source_id str = "st_i_ii_94_2"
+      ?rationale "Other natural-law precepts are based on the first practical precept."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[natural_law_eternal]
+    subject = "natural_law"
+    relation = "participates_in"
+    object = "eternal_law"
+    source_id str = "st_i_ii_91_1_2"
+      ?rationale "Natural law is rational participation in eternal law."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[eternal_law_providence]
+    subject = "eternal_law"
+    relation = "expresses"
+    object = "divine_providence"
+    source_id str = "st_i_ii_91_1_2"
+      ?rationale "Eternal law is divine reason governing the universe."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[natural_law_common_good]
+    subject = "natural_law"
+    relation = "is_ordered_to"
+    object = "common_good"
+    source_id str = "st_i_ii_90_2"
+      ?rationale "Law is directed to the common good."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "final"
+
+  edges[created_received_esse]
+    subject = "created_being"
+    relation = "has_act_of_being"
+    object = "act_of_being"
+    source_id str = "de_ente_1_4"
+      ?rationale "Created existence is received, not identical with created essence."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Act of being is an intrinsic actuality, not an externally attached object."
+    condition_source_id = "de_ente_1_4"
+
+  edges[esse_actuality]
+    subject = "act_of_being"
+    relation = "is_kind_of"
+    object = "actuality"
+    source_id str = "st_i_3_4"
+      ?rationale "Existence actualizes form or nature."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The most fundamental actuality is distinguished from an operation or second act."
+    condition_source_id = "st_i_3_4"
+
+  edges[created_essence_esse]
+    subject = "essence"
+    relation = "is_distinct_from"
+    object = "act_of_being"
+    source_id str = "st_i_3_4"
+      ?rationale "Created essence is not its own existence."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Real distinction is asserted for creatures; it is not applied to God."
+    condition_source_id = "st_i_3_4"
+
+  edges[human_nature_essence]
+    subject = "human_nature"
+    relation = "is_kind_of"
+    object = "essence"
+    source_id str = "de_ente_1_4"
+      ?rationale "Humanity signifies what a human being is."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[person_human_nature]
+    subject = "human_person"
+    relation = "has_essence"
+    object = "human_nature"
+    source_id str = "de_ente_1_4"
+      ?rationale "A human person has human nature."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[god_divine_essence]
+    subject = "god"
+    relation = "has_essence"
+    object = "divine_essence"
+    source_id str = "st_i_3_4"
+      ?rationale "God is his own essence and existence."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "No composition of a possessor and a received essence is implied."
+    condition_source_id = "st_i_3_4"
+
+  edges[analogy_god]
+    subject = "analogical_predication"
+    relation = "concerns"
+    object = "god"
+    source_id str = "st_i_13_5"
+      ?rationale "Names of creaturely perfections can be predicated analogically of God."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The edge concerns the scope of divine naming, not a definition of God."
+    condition_source_id = "st_i_13_5"
+
+  edges[analogy_created]
+    subject = "analogical_predication"
+    relation = "concerns"
+    object = "created_being"
+    source_id str = "st_i_13_5"
+      ?rationale "The same names apply to creatures according to their received perfections."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "The modes of signification differ from their application to God."
+    condition_source_id = "st_i_13_5"
+
+  edges[providence_god]
+    subject = "divine_providence"
+    relation = "is_proper_to"
+    object = "god"
+    source_id str = "st_i_22_1_4"
+      ?rationale "Providence is the ordering of things to their ends in the divine mind."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[providence_creatures]
+    subject = "divine_providence"
+    relation = "orders"
+    object = "created_being"
+    source_id str = "st_i_22_1_4"
+      ?rationale "All things fall under providence."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "God wills some effects through contingent secondary causes, not all by necessity."
+    condition_source_id = "st_i_22_1_4"
+
+  edges[human_image_god]
+    subject = "human_person"
+    relation = "has_characteristic"
+    object = "image_of_god"
+    source_id str = "st_i_93_4_6"
+      ?rationale "The divine image belongs to human intellectual nature."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[angel_image_god]
+    subject = "angel"
+    relation = "has_characteristic"
+    object = "image_of_god"
+    source_id str = "st_i_93_4_6"
+      ?rationale "Angels also bear the divine image through intellectual nature."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[image_intellect]
+    subject = "image_of_god"
+    relation = "is_realized_in"
+    object = "intellectual_power"
+    source_id str = "st_i_93_4_6"
+      ?rationale "In humans the image is principally found in the intellectual nature."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This specifies the human instance, without denying the image in angels."
+    condition_source_id = "st_i_93_4_6"
+
+  edges[incarnation_hypostatic_union]
+    subject = "incarnation"
+    relation = "includes"
+    object = "hypostatic_union"
+    source_id str = "st_iii_2_1_2"
+      ?rationale "The union is in the person of the Word."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[union_son]
+    subject = "hypostatic_union"
+    relation = "is_proper_to"
+    object = "son"
+    source_id str = "st_iii_2_1_2"
+      ?rationale "The Son is the one personal subject of both natures."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[son_human_will]
+    subject = "son"
+    relation = "has_power"
+    object = "christ_human_will"
+    source_id str = "st_iii_18_1_6"
+      ?rationale "Christ possesses a genuine human will."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "According to the assumed human nature; not a created power in the divine essence."
+    condition_source_id = "st_iii_18_1_6"
+
+  edges[christ_will_kind]
+    subject = "christ_human_will"
+    relation = "is_kind_of"
+    object = "will"
+    source_id str = "st_iii_18_1_6"
+      ?rationale "His human will is a created rational appetite."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[christ_wills_distinct]
+    subject = "christ_human_will"
+    relation = "is_distinct_from"
+    object = "divine_will"
+    source_id str = "st_iii_18_1_6"
+      ?rationale "Christ has two natural wills, without opposition."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[divine_will_common_father]
+    subject = "divine_will"
+    relation = "is_common_to_person"
+    object = "father"
+    source_id str = "ccc_475_482"
+      ?rationale "The three divine persons share the one divine will."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This does not multiply divine wills or introduce a divine faculty as an accident."
+    condition_source_id = "ccc_475_482"
+
+  edges[divine_will_common_son]
+    subject = "divine_will"
+    relation = "is_common_to_person"
+    object = "son"
+    source_id str = "ccc_475_482"
+      ?rationale "The three divine persons share the one divine will."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This does not multiply divine wills or introduce a divine faculty as an accident."
+    condition_source_id = "ccc_475_482"
+
+  edges[divine_will_common_holy_spirit]
+    subject = "divine_will"
+    relation = "is_common_to_person"
+    object = "holy_spirit"
+    source_id str = "ccc_475_482"
+      ?rationale "The three divine persons share the one divine will."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This does not multiply divine wills or introduce a divine faculty as an accident."
+    condition_source_id = "ccc_475_482"
+
+  edges[passion_son]
+    subject = "christ_passion"
+    relation = "is_act_of"
+    object = "son"
+    source_id str = "st_iii_48_1_6"
+      ?rationale "The incarnate Son freely undergoes his Passion."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Suffering and death are according to human nature, not a change in the divine essence."
+    condition_source_id = "st_iii_48_1_6"
+
+  edges[passion_redemption]
+    subject = "christ_passion"
+    relation = "instrumentally_effects"
+    object = "redemption"
+    source_id str = "st_iii_48_1_6"
+      ?rationale "The Passion is an instrument of divine saving agency."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "instrumental"
+    conditions = "Aquinas also treats merit, satisfaction, and sacrifice; no automatic individual salvation is inferred."
+    condition_source_id = "st_iii_48_1_6"
+
+  edges[passion_remission]
+    subject = "christ_passion"
+    relation = "instrumentally_effects"
+    object = "remission_of_sin"
+    source_id str = "st_iii_48_1_6"
+      ?rationale "Christ acts through his humanity in removing sin."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "instrumental"
+
+  edges[resurrection_son]
+    subject = "christ_resurrection"
+    relation = "is_proper_to"
+    object = "son"
+    source_id str = "ccc_638_658"
+      ?rationale "The crucified Jesus rises bodily in glory."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Resurrection concerns his assumed humanity; divine nature does not die or recover life."
+    condition_source_id = "ccc_638_658"
+
+  edges[resurrection_ours_exemplar]
+    subject = "christ_resurrection"
+    relation = "is_exemplar_cause_of"
+    object = "resurrection_of_dead"
+    source_id str = "st_iii_56_1_2"
+      ?rationale "His Resurrection exemplifies the resurrection of human bodies."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "formal"
+    conditions = "Exemplar causality here properly concerns the resurrection of the just in conformity to Christ's glory. Efficient causality extends to all who rise; this does not entail universal salvation."
+    condition_source_id = "st_iii_56_1_2"
+
+  edges[resurrection_justification]
+    subject = "christ_resurrection"
+    relation = "instrumentally_effects"
+    object = "justification"
+    source_id str = "st_iii_56_1_2"
+      ?rationale "Christ risen brings new spiritual life through divine power."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "instrumental"
+
+  edges[church_head_christ]
+    subject = "church"
+    relation = "has_head"
+    object = "son"
+    source_id str = "ccc_781_810"
+      ?rationale "Christ is head of the Church, his Body."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Mystical union does not identify the Church with the divine essence."
+    condition_source_id = "ccc_781_810"
+
+  edges[church_marks]
+    subject = "church"
+    relation = "has_characteristic"
+    object = "four_marks_of_church"
+    source_id str = "ccc_811_870"
+      ?rationale "The Creed confesses four inseparable marks of the Church."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[church_communion_saints]
+    subject = "church"
+    relation = "is_communion_with"
+    object = "saints_in_heaven"
+    source_id str = "ccc_946_962"
+      ?rationale "The Church includes communion among faithful on earth and in glory."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[church_communion]
+    subject = "church"
+    relation = "has_characteristic"
+    object = "communion_of_saints"
+    source_id str = "ccc_946_962"
+      ?rationale "Communion in holy things and among holy persons belongs to the Church."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[church_magisterium]
+    subject = "church"
+    relation = "has_office"
+    object = "magisterium"
+    source_id str = "ccc_84_87"
+      ?rationale "Authentic interpretation is entrusted to the living teaching office."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[church_apostolic_succession]
+    subject = "church"
+    relation = "has_characteristic"
+    object = "apostolic_succession"
+    source_id str = "ccc_75_79"
+      ?rationale "The apostles entrusted continuation of their ministry to bishops."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[succession_tradition]
+    subject = "apostolic_succession"
+    relation = "is_ordered_to"
+    object = "sacred_tradition"
+    source_id str = "ccc_75_79"
+      ?rationale "Apostolic succession serves continued transmission of the Gospel."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "final"
+
+  edges[revelation_god]
+    subject = "divine_revelation"
+    relation = "is_effect_of"
+    object = "god"
+    source_id str = "ccc_51_53"
+      ?rationale "God freely reveals himself and his saving will."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "principal"
+
+  edges[revelation_christ]
+    subject = "divine_revelation"
+    relation = "is_realized_in"
+    object = "son"
+    source_id str = "ccc_65_67"
+      ?rationale "Jesus Christ is the fullness of revelation."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This refers to the incarnate Son and his mission, not merely a finite list of propositions."
+    condition_source_id = "ccc_65_67"
+
+  edges[scripture_transmits]
+    subject = "sacred_scripture"
+    relation = "transmits"
+    object = "divine_revelation"
+    source_id str = "ccc_80_83"
+      ?rationale "Scripture is the inspired written mode of transmitting the Word."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[tradition_transmits]
+    subject = "sacred_tradition"
+    relation = "transmits"
+    object = "divine_revelation"
+    source_id str = "ccc_80_83"
+      ?rationale "Tradition is the living transmission of the received Word."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[scripture_tradition_distinct]
+    subject = "sacred_scripture"
+    relation = "is_distinct_from"
+    object = "sacred_tradition"
+    source_id str = "ccc_80_83"
+      ?rationale "They are distinct, closely united modes of transmission."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Neither constitutes a separate competing revelation."
+    condition_source_id = "ccc_80_83"
+
+  edges[scripture_deposit]
+    subject = "sacred_scripture"
+    relation = "transmits"
+    object = "deposit_of_faith"
+    source_id str = "ccc_84_87"
+      ?rationale "The deposit is contained in Scripture and Tradition together."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This edge does not assert that either mode can be treated in isolation from the other."
+    condition_source_id = "ccc_84_87"
+
+  edges[tradition_deposit]
+    subject = "sacred_tradition"
+    relation = "transmits"
+    object = "deposit_of_faith"
+    source_id str = "ccc_84_87"
+      ?rationale "The sacred heritage is handed on in apostolic Tradition."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[magisterium_deposit]
+    subject = "magisterium"
+    relation = "authentically_interprets"
+    object = "deposit_of_faith"
+    source_id str = "ccc_84_87"
+      ?rationale "The teaching office serves the received deposit."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Its authority does not make it superior to the Word or the author of new public revelation."
+    condition_source_id = "ccc_84_87"
+
+  edges[eucharist_presence]
+    subject = "eucharist"
+    relation = "has_characteristic"
+    object = "real_presence"
+    source_id str = "st_iii_75_1_5"
+      ?rationale "The sacrament contains Christ substantially."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[eucharist_substantial_son]
+    subject = "eucharist"
+    relation = "has_substantial_presence_of"
+    object = "son"
+    source_id str = "ccc_1362_1377"
+      ?rationale "The whole Christ is truly, really, and substantially present."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This is the incarnate Son, body and blood, soul and divinity, under the Eucharistic species."
+    condition_source_id = "ccc_1362_1377"
+
+  edges[eucharist_conversion]
+    subject = "eucharist"
+    relation = "includes"
+    object = "transubstantiation"
+    source_id str = "st_iii_75_1_5"
+      ?rationale "Consecration effects substantial conversion."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[conversion_presence]
+    subject = "transubstantiation"
+    relation = "results_in"
+    object = "real_presence"
+    source_id str = "st_iii_75_1_5"
+      ?rationale "Conversion accounts for substantial presence while species remain."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[conversion_substance]
+    subject = "transubstantiation"
+    relation = "concerns"
+    object = "substance"
+    source_id str = "st_iii_75_1_5"
+      ?rationale "The whole substance is converted."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This edge identifies what changes; it does not treat ordinary substance as sacramental matter in general."
+    condition_source_id = "st_iii_75_1_5"
+
+  edges[conversion_accidents]
+    subject = "transubstantiation"
+    relation = "does_not_destroy"
+    object = "accident"
+    source_id str = "st_iii_75_1_5"
+      ?rationale "The sensible species remain."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "Restricted to the accidents of the consecrated bread and wine; not a general rule about accidents."
+    condition_source_id = "st_iii_75_1_5"
+
+  edges[eucharist_sacrifice]
+    subject = "eucharist"
+    relation = "includes"
+    object = "eucharistic_sacrifice"
+    source_id str = "ccc_1362_1377"
+      ?rationale "The Eucharist is also sacrifice."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[eucharist_one_sacrifice]
+    subject = "eucharistic_sacrifice"
+    relation = "sacramentally_makes_present"
+    object = "christ_passion"
+    source_id str = "ccc_1362_1377"
+      ?rationale "The one sacrifice of the cross is sacramentally present."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+    conditions = "This is not a repeated crucifixion or an additional redemption."
+    condition_source_id = "ccc_1362_1377"
+
+  edges[church_offering]
+    subject = "church"
+    relation = "participates_in"
+    object = "eucharistic_sacrifice"
+    source_id str = "ccc_1362_1377"
+      ?rationale "The Church joins in the offering of her head."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "noncausal"
+
+  edges[eucharist_church_unity]
+    subject = "eucharist"
+    relation = "strengthens"
+    object = "church"
+    source_id str = "ccc_781_810"
+      ?rationale "Communion in Christ deepens unity among members of his body."
+    evidence_kind = "textual_paraphrase"
+    review_status = "draft"
+    included_in_model = true
+    causal_mode = "perfective"

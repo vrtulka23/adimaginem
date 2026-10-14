@@ -79,7 +79,7 @@ def load_ontology(include_viewer=False):
                 settings["structural_link_kinds"] = [settings["structural_link_kinds"]]
         for collection, arrays in {
             "graph_tours": ("audience_tags", "topic_tags", "step_ids"),
-            "graph_tour_steps": ("source_ids", "concept_ids", "edge_ids"),
+            "graph_tour_steps": ("source_ids", "concept_ids", "edge_ids", "highlighted_concept_ids", "highlighted_edge_ids"),
             "graph_tour_positions": (),
         }.items():
             result[collection] = data[collection]

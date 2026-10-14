@@ -63,7 +63,8 @@ The lowest order connects to individual guardianship. Powers connect to restrain
 - Human recipients are distinguished from blessed angelic recipients. Angelic intellectual perfections do not imply human sensitive passions.
 
 All predicates are classified in [relations.dip](../dip/relations.dip) and included in the edge schema's DIPL options and labels. The browser adds separate color groups for moral disorders and angelic orders/ministry; display groups remain editorial aids. Selecting a node shows citations, qualifications, and direction. Graph paths support exploration rather than automatic theological inference.
-# Sin, intellect, and reconciliation tour
+
+## Sin, intellect, and reconciliation tour
 
 The guided tour **Sin, the intellect, and reconciliation** has seven scenes: the subject of sin, wounded powers, clouded judgment, mortal and venial sin, conversion, sacramental absolution, and continuing healing.
 

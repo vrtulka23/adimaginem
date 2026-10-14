@@ -8,9 +8,11 @@ graph_tour_steps[god_world_soul_creation]
   qualification = "Causal dependence is not the claim that the world is a bodily part of God."
   concept_ids = ["god", "created_being"]
   edge_ids = ["god_creates_all", "god_final_cause_of_created_being"]
+  highlighted_concept_ids = ["god", "created_being"]
+  highlighted_edge_ids = ["god_creates_all", "god_final_cause_of_created_being"]
   source_ids = ["st_i_44_1", "na_2_4", "ccc_290_292", "st_i_44_3_4"]
   focus_concept = "created_being"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[god_world_soul_creation_god]
   step_id = "god_world_soul_creation"
@@ -32,9 +34,11 @@ graph_tour_steps[god_world_soul_person]
   question = "What is the relation between soul and body?"
   narrative = "The rational soul is the substantial form of the body. The human person is the living composite whose acts include sensing and understanding."
   qualification = "These are Thomistic terms; a comparison with atman or other traditional terms requires attention to a particular school."
-  concept_ids = ["human_person", "human_body", "rational_soul"]
-  edge_ids = ["person_has_body", "person_has_form", "soul_actualizes_body"]
-  source_ids = ["st_i_75_4", "st_i_76_1"]
+  concept_ids = ["human_person", "human_body", "rational_soul", "human_nature"]
+  edge_ids = ["person_has_body", "person_has_form", "soul_actualizes_body", "person_human_nature", "human_nature_soul"]
+  highlighted_concept_ids = ["human_person", "human_body", "rational_soul"]
+  highlighted_edge_ids = ["person_has_body", "person_has_form", "soul_actualizes_body"]
+  source_ids = ["st_i_75_4", "st_i_76_1", "de_ente_1_4", "ccc_464_469"]
   focus_concept = "human_person"
   camera_z = 36.0
 
@@ -65,9 +69,11 @@ graph_tour_steps[god_world_soul_union]
   question = "How can union preserve personal distinction?"
   narrative = "Charity inheres in the will and is directed toward God. Loving union perfects the creature's relation to God."
   qualification = "The creature remains a creature. The tour does not identify Catholic charity with every account of liberation."
-  concept_ids = ["charity_virtue", "will", "god"]
-  edge_ids = ["charity_in_will", "charity_ordered_to_god"]
-  source_ids = ["st_ii_ii_24_1", "ccc_1812_1813"]
+  concept_ids = ["charity_virtue", "will", "god", "act_of_charity"]
+  edge_ids = ["charity_in_will", "charity_ordered_to_god", "charity_act_of_will"]
+  highlighted_concept_ids = ["charity_virtue", "will", "god"]
+  highlighted_edge_ids = ["charity_in_will", "charity_ordered_to_god"]
+  source_ids = ["st_ii_ii_24_1", "ccc_1812_1813", "st_iii_79_1"]
   focus_concept = "charity_virtue"
   camera_z = 36.0
 

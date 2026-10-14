@@ -11,6 +11,7 @@ The project follows a [scholarly and Catholic method](method.md): claims about A
 - [Ontology data](ontology.md): structure and source provenance of the DIPL concept and edge graph.
 - [Study areas](study-areas.md): overlapping ethics, knowledge, natural philosophy, logic, and social philosophy filters.
 - [Metaphysical foundations](metaphysics.md): how matter, form, act, potency, substance, accidents, and causes connect to the rest of the ontology.
+- [First principles and doctrinal foundations](foundations.md): truth and being, conscience and natural law, Christ's saving work, revelation, Church, and Eucharistic doctrine.
 - [Passions and their interrelations](passions.md): objects, contraries, natural ordering, and conditional influences.
 - [Theological ontology](theology.md): grace, virtues, gifts, fruits, the Trinity, and sacraments.
 - [Holy Trinity](trinity.md): divine unity, Word and Love, relations of origin, and the focused graph view.

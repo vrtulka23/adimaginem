@@ -7,7 +7,13 @@ narrative str
 qualification str
 source_ids str[1:]
 concept_ids str[1:]
+  ?descr "All visible concepts, including the supporting context."
 edge_ids str[1:]
+  ?descr "All visible cited relations, including connecting context."
+highlighted_concept_ids str[1:]
+  ?descr "Subset of concept_ids emphasized by this step; other visible concepts are supporting context."
+highlighted_edge_ids str[1:]
+  ?descr "Subset of edge_ids emphasized by this step; other visible relations retain normal colors and widths."
 focus_concept str
 camera_x float = 0.0
 camera_y float = 0.0

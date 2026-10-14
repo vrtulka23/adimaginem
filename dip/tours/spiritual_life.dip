@@ -8,9 +8,11 @@ graph_tour_steps[spiritual_life_powers]
   qualification = "A faculty is a principle of activity, not an independent spirit inside the body."
   concept_ids = ["rational_soul", "soul_power", "intellectual_power", "appetitive_power"]
   edge_ids = ["soul_distinct_from_power", "soul_intellectual_power", "soul_appetitive_power"]
+  highlighted_concept_ids = ["rational_soul", "soul_power", "intellectual_power", "appetitive_power"]
+  highlighted_edge_ids = ["soul_distinct_from_power", "soul_intellectual_power", "soul_appetitive_power"]
   source_ids = ["st_i_77_1", "st_i_78_1"]
   focus_concept = "rational_soul"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[spiritual_life_powers_rational_soul]
   step_id = "spiritual_life_powers"
@@ -48,9 +50,11 @@ graph_tour_steps[spiritual_life_grace]
   qualification = "Natural abilities and supernatural gifts should not be identified solely because both are represented as nodes."
   concept_ids = ["god", "grace", "sanctifying_grace", "actual_grace"]
   edge_ids = ["god_bestows_grace", "sanctifying_kind_of_grace", "actual_kind_of_grace"]
+  highlighted_concept_ids = ["god", "grace", "sanctifying_grace", "actual_grace"]
+  highlighted_edge_ids = ["god_bestows_grace", "sanctifying_kind_of_grace", "actual_kind_of_grace"]
   source_ids = ["ccc_1996_2000"]
   focus_concept = "grace"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[spiritual_life_grace_god]
   step_id = "spiritual_life_grace"
@@ -86,9 +90,11 @@ graph_tour_steps[spiritual_life_discernment]
   question = "Can a feeling by itself establish a spiritual claim?"
   narrative = "Disordered passion can impede practical judgment. The gift of counsel perfects practical intellect; discernment involves the ordering of thought and action."
   qualification = "The Catechism cautions that feelings do not establish our state of grace. The graph is not a device for certifying spiritual experiences."
-  concept_ids = ["disordered_passion", "practical_judgment", "practical_intellect", "counsel_gift"]
-  edge_ids = ["passion_impedes_judgment", "judgment_act_of_practical_intellect", "counsel_gift_specific_intellect"]
-  source_ids = ["ccc_2001_2005", "st_i_ii_77_1_2", "st_i_ii_68_4"]
+  concept_ids = ["disordered_passion", "practical_judgment", "practical_intellect", "counsel_gift", "conscience"]
+  edge_ids = ["passion_impedes_judgment", "judgment_act_of_practical_intellect", "counsel_gift_specific_intellect", "conscience_intellectual_act", "passion_impedes_conscience"]
+  highlighted_concept_ids = ["disordered_passion", "practical_judgment", "practical_intellect", "counsel_gift"]
+  highlighted_edge_ids = ["passion_impedes_judgment", "judgment_act_of_practical_intellect", "counsel_gift_specific_intellect"]
+  source_ids = ["ccc_2001_2005", "st_i_ii_77_1_2", "st_i_ii_68_4", "st_i_79_12_13", "st_i_ii_94_6"]
   focus_concept = "practical_judgment"
   camera_z = 36.0
 

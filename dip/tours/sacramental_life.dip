@@ -8,9 +8,11 @@ graph_tour_steps[sacramental_life_cause]
   qualification = "Instrumental causality does not make a sacrament an independent source of supernatural life."
   concept_ids = ["god", "grace", "sacrament", "son"]
   edge_ids = ["god_principal_cause_of_grace", "sacrament_instrumental_grace", "sacraments_instituted_by_christ"]
+  highlighted_concept_ids = ["god", "grace", "sacrament", "son"]
+  highlighted_edge_ids = ["god_principal_cause_of_grace", "sacrament_instrumental_grace", "sacraments_instituted_by_christ"]
   source_ids = ["st_iii_62_1", "ccc_1114_1116"]
   focus_concept = "sacrament"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[sacramental_life_cause_god]
   step_id = "sacramental_life_cause"
@@ -48,9 +50,11 @@ graph_tour_steps[sacramental_life_initiation]
   qualification = "The analogy distinguishes effects; it does not make grace a material substance consumed in measurable amounts."
   concept_ids = ["baptism", "spiritual_regeneration", "spiritual_life", "confirmation", "eucharist"]
   edge_ids = ["baptism_regenerates", "regeneration_begins_spiritual_life", "confirmation_strengthens_life", "eucharist_nourishes_life"]
+  highlighted_concept_ids = ["baptism", "spiritual_regeneration", "spiritual_life", "confirmation", "eucharist"]
+  highlighted_edge_ids = ["baptism_regenerates", "regeneration_begins_spiritual_life", "confirmation_strengthens_life", "eucharist_nourishes_life"]
   source_ids = ["st_iii_65_1", "ccc_1127_1129"]
   focus_concept = "spiritual_life"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[sacramental_life_initiation_baptism]
   step_id = "sacramental_life_initiation"
@@ -93,9 +97,11 @@ graph_tour_steps[sacramental_life_reconciliation]
   question = "What does Penance include?"
   narrative = "Penance includes the penitent's contrition and the minister's absolution. Its effect is remission of sin through Christ."
   qualification = "Receiving forgiveness calls for the requisite disposition; the diagram does not substitute for the sacrament."
-  concept_ids = ["penance", "contrition", "sacramental_absolution", "remission_of_sin"]
-  edge_ids = ["penance_contrition", "penance_absolution", "absolution_remission"]
-  source_ids = ["ccc_1451_1460", "st_iii_84_3"]
+  concept_ids = ["penance", "contrition", "sacramental_absolution", "remission_of_sin", "christ_passion"]
+  edge_ids = ["penance_contrition", "penance_absolution", "absolution_remission", "passion_remission"]
+  highlighted_concept_ids = ["penance", "contrition", "sacramental_absolution", "remission_of_sin"]
+  highlighted_edge_ids = ["penance_contrition", "penance_absolution", "absolution_remission"]
+  source_ids = ["ccc_1451_1460", "st_iii_84_3", "st_iii_48_1_6"]
   focus_concept = "penance"
   camera_z = 36.0
 

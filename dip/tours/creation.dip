@@ -6,9 +6,11 @@ graph_tour_steps[creation_change]
   question = "What is presupposed when a natural thing comes to be?"
   narrative = "In Aquinas's account of natural generation, matter is receptive to form, and form determines actuality. These are explanatory principles of becoming in an existing material order."
   qualification = "Matter and form are principles of the composite. Their separate graph labels do not picture two independently complete objects."
-  source_ids = ["dpn_8", "dpn_2_7"]
-  concept_ids = ["matter", "form", "natural_generation"]
-  edge_ids = ["matter_potential_to_form", "form_actualizes_matter", "matter_in_generation", "form_in_generation"]
+  source_ids = ["dpn_8", "dpn_2_7", "dpn_12"]
+  concept_ids = ["matter", "form", "natural_generation", "privation"]
+  edge_ids = ["matter_potential_to_form", "form_actualizes_matter", "matter_in_generation", "form_in_generation", "privation_in_becoming"]
+  highlighted_concept_ids = ["matter", "form", "natural_generation"]
+  highlighted_edge_ids = ["matter_potential_to_form", "form_actualizes_matter", "matter_in_generation", "form_in_generation"]
   focus_concept = "natural_generation"
   camera_z = 32.0
 
@@ -39,9 +41,11 @@ graph_tour_steps[creation_dependence]
   question = "Why does Aquinas speak of a cause of being?"
   narrative = "Aquinas argues that what has being by participation depends on the source of being. God is considered as the universal efficient cause, and as pure act. The question concerns why creatures have being, beyond describing one natural event after another."
   qualification = "This is a philosophical argument with premises to examine. Merely drawing an arrow does not establish its conclusion."
-  source_ids = ["st_i_44_1", "st_i_3_2"]
-  concept_ids = ["god", "created_being", "pure_act", "efficient_cause"]
-  edge_ids = ["god_creates_all", "god_pure_act", "god_efficient_cause_role"]
+  source_ids = ["st_i_44_1", "st_i_3_2", "de_ente_1_4", "st_i_3_4"]
+  concept_ids = ["god", "created_being", "pure_act", "efficient_cause", "act_of_being"]
+  edge_ids = ["god_creates_all", "god_pure_act", "god_efficient_cause_role", "created_received_esse", "god_subsistent_esse"]
+  highlighted_concept_ids = ["god", "created_being", "pure_act", "efficient_cause"]
+  highlighted_edge_ids = ["god_creates_all", "god_pure_act", "god_efficient_cause_role"]
   focus_concept = "god"
   camera_z = 32.0
 
@@ -82,8 +86,10 @@ graph_tour_steps[creation_creation]
   source_ids = ["st_i_45_1_3", "ccc_296"]
   concept_ids = ["god", "creation", "natural_generation", "matter"]
   edge_ids = ["god_can_create", "creation_distinct_generation", "creation_no_presupposed_matter", "matter_in_generation"]
+  highlighted_concept_ids = ["god", "creation", "natural_generation", "matter"]
+  highlighted_edge_ids = ["god_can_create", "creation_distinct_generation", "creation_no_presupposed_matter", "matter_in_generation"]
   focus_concept = "creation"
-  camera_z = 32.0
+  camera_z = 32
 
 graph_tour_positions[creation_creation_god]
   step_id = "creation_creation"
@@ -122,8 +128,10 @@ graph_tour_steps[creation_duration]
   source_ids = ["st_i_46_2", "ccc_301"]
   concept_ids = ["god", "creation", "created_being"]
   edge_ids = ["god_can_create", "god_creates_all"]
+  highlighted_concept_ids = ["god", "creation", "created_being"]
+  highlighted_edge_ids = ["god_can_create", "god_creates_all"]
   focus_concept = "created_being"
-  camera_z = 32.0
+  camera_z = 32
 
 graph_tour_positions[creation_duration_god]
   step_id = "creation_duration"

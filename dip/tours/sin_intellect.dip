@@ -7,10 +7,12 @@ graph_tour_steps[sin_intellect_subject]
   narrative = "Aquinas locates a sinful act in the power from which the voluntary act proceeds: principally will, and also reason or appetite insofar as their activity can be voluntary. Vice is an abiding bad disposition, distinguished from an individual act."
   qualification = "This is a moral and metaphysical account of subject, not a physical location. An involuntary intellectual error does not by itself establish personal guilt."
   concept_ids = ["personal_sin", "will", "intellectual_power", "vice", "habit"]
-  edge_ids = ["sin_subject_will", "sin_subject_intellectual_power", "vice_habit"]
-  source_ids = ["st_i_ii_74_1_5", "st_i_ii_113_3_6", "st_i_83_4", "st_i_ii_71_1_6"]
+  edge_ids = ["sin_subject_will", "sin_subject_intellectual_power", "vice_habit", "vice_inclines_sin"]
+  highlighted_concept_ids = ["personal_sin", "will", "intellectual_power", "vice", "habit"]
+  highlighted_edge_ids = ["sin_subject_will", "sin_subject_intellectual_power", "vice_habit"]
+  source_ids = ["st_i_ii_74_1_5", "st_i_ii_113_3_6", "st_i_83_4", "st_i_ii_71_1_6", "ccc_1865"]
   focus_concept = "will"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_steps[sin_intellect_wounds]
   tour_id = "sin_intellect"
@@ -18,8 +20,10 @@ graph_tour_steps[sin_intellect_wounds]
   question = "What is corrupted by sin?"
   narrative = "Aquinas names ignorance as a wound of the intellect's order toward truth and malice as a wound of will toward good. Personal sin can deepen these disorders."
   qualification = "The natural faculties remain. Original sin is an inherited condition; it is not a personal act committed by each descendant."
-  concept_ids = ["ignorance_wound", "intellectual_power", "malice_wound", "will", "personal_sin"]
-  edge_ids = ["ignorance_wound_power", "malice_wound_power", "sin_preserves_natural_intellect"]
+  concept_ids = ["ignorance_wound", "intellectual_power", "malice_wound", "will", "personal_sin", "wounded_human_nature"]
+  edge_ids = ["ignorance_wound_power", "malice_wound_power", "sin_preserves_natural_intellect", "wounded_nature_ignorance_wound", "wounded_nature_malice_wound", "personal_sin_aggravates_wounds"]
+  highlighted_concept_ids = ["ignorance_wound", "intellectual_power", "malice_wound", "will", "personal_sin"]
+  highlighted_edge_ids = ["ignorance_wound_power", "malice_wound_power", "sin_preserves_natural_intellect"]
   source_ids = ["st_i_ii_85_1_3", "ccc_404_405"]
   focus_concept = "intellectual_power"
   camera_z = 36.0
@@ -65,9 +69,11 @@ graph_tour_steps[sin_intellect_judgment]
   question = "How can desire affect what seems reasonable?"
   narrative = "Disordered passion can impede practical judgment. Repeated wrongdoing disposes to vice, which inclines toward further sin. Aquinas also distinguishes spiritual blindness and dullness of understanding."
   qualification = "The cited blindness concerns spiritual judgment. It is not a claim that every intellectual difficulty or disability results from a person's sins."
-  concept_ids = ["disordered_passion", "practical_judgment", "blindness_of_mind", "understanding", "personal_sin", "vice"]
-  edge_ids = ["passion_impedes_judgment", "blindness_of_mind_impedes", "sin_disposes_to_vice", "vice_inclines_sin"]
-  source_ids = ["st_ii_ii_15_1_2", "st_i_ii_77_1_2", "ccc_1865"]
+  concept_ids = ["disordered_passion", "practical_judgment", "blindness_of_mind", "understanding", "personal_sin", "vice", "intellectual_power", "practical_intellect"]
+  edge_ids = ["passion_impedes_judgment", "blindness_of_mind_impedes", "sin_disposes_to_vice", "vice_inclines_sin", "understanding_of_intellect", "judgment_act_of_practical_intellect", "practical_intellect_is_intellectual", "sin_subject_intellectual_power"]
+  highlighted_concept_ids = ["disordered_passion", "practical_judgment", "blindness_of_mind", "understanding", "personal_sin", "vice"]
+  highlighted_edge_ids = ["passion_impedes_judgment", "blindness_of_mind_impedes", "sin_disposes_to_vice", "vice_inclines_sin"]
+  source_ids = ["st_ii_ii_15_1_2", "st_i_ii_77_1_2", "ccc_1865", "st_i_84_7", "st_i_79_11", "st_i_ii_74_1_5", "st_i_78_1"]
   focus_concept = "practical_judgment"
   camera_z = 40.0
 
@@ -121,9 +127,11 @@ graph_tour_steps[sin_intellect_gravity]
   qualification = "A graph of necessary conditions cannot judge an individual's conscience or degree of consent."
   concept_ids = ["mortal_sin", "sanctifying_grace", "venial_sin", "charity_virtue"]
   edge_ids = ["mortal_deprives_sanctifying_grace", "venial_preserves_grace", "venial_weakens_charity"]
+  highlighted_concept_ids = ["mortal_sin", "sanctifying_grace", "venial_sin", "charity_virtue"]
+  highlighted_edge_ids = ["mortal_deprives_sanctifying_grace", "venial_preserves_grace", "venial_weakens_charity"]
   source_ids = ["ccc_1854_1863"]
   focus_concept = "mortal_sin"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[sin_intellect_gravity_mortal_sin]
   step_id = "sin_intellect_gravity"
@@ -161,9 +169,11 @@ graph_tour_steps[sin_intellect_conversion]
   qualification = "For an adult capable of voluntary acts, this movement includes a free response under grace; it is not self-rescue by intellect alone."
   concept_ids = ["justification", "god", "human_conversion", "repentance_for_sin", "grace"]
   edge_ids = ["justification_from_god", "justification_includes_human_conversion", "justification_includes_repentance_for_sin", "grace_enables_conversion"]
+  highlighted_concept_ids = ["justification", "god", "human_conversion", "repentance_for_sin", "grace"]
+  highlighted_edge_ids = ["justification_from_god", "justification_includes_human_conversion", "justification_includes_repentance_for_sin", "grace_enables_conversion"]
   source_ids = ["st_i_ii_113_3_6"]
   focus_concept = "justification"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[sin_intellect_conversion_justification]
   step_id = "sin_intellect_conversion"
@@ -208,9 +218,11 @@ graph_tour_steps[sin_intellect_absolution]
   qualification = "Contrition includes resolve to amend. Perfect contrition reconciles when it includes the intention of sacramental confession as soon as possible; it is not permission to dispense with confession."
   concept_ids = ["penance", "contrition", "sacramental_confession", "sacramental_absolution", "remission_of_sin"]
   edge_ids = ["penance_contrition", "penance_confession", "penance_absolution", "absolution_remission"]
+  highlighted_concept_ids = ["penance", "contrition", "sacramental_confession", "sacramental_absolution", "remission_of_sin"]
+  highlighted_edge_ids = ["penance_contrition", "penance_confession", "penance_absolution", "absolution_remission"]
   source_ids = ["ccc_1451_1460", "ccc_1461_1467", "st_iii_84_3"]
   focus_concept = "sacramental_absolution"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[sin_intellect_absolution_penance]
   step_id = "sin_intellect_absolution"
@@ -253,9 +265,11 @@ graph_tour_steps[sin_intellect_healing]
   question = "Why can bad inclinations remain after absolution?"
   narrative = "Aquinas distinguishes remission of guilt from removal of all residual dispositions and temporal consequences. Satisfaction and reparation belong to healing after forgiveness."
   qualification = "Continuing struggles do not by themselves show that absolution failed. Restoration of virtue and repair of harm continue through grace and action."
-  concept_ids = ["penance", "satisfaction_for_sin", "remnants_of_sin", "remission_of_sin", "purification_from_sin"]
-  edge_ids = ["penance_satisfaction", "satisfaction_remnants", "remission_distinct_purification"]
-  source_ids = ["st_iii_86_1_6", "ccc_1451_1460"]
+  concept_ids = ["penance", "satisfaction_for_sin", "remnants_of_sin", "remission_of_sin", "purification_from_sin", "sacramental_absolution"]
+  edge_ids = ["penance_satisfaction", "satisfaction_remnants", "remission_distinct_purification", "penance_absolution", "absolution_remission"]
+  highlighted_concept_ids = ["penance", "satisfaction_for_sin", "remnants_of_sin", "remission_of_sin", "purification_from_sin"]
+  highlighted_edge_ids = ["penance_satisfaction", "satisfaction_remnants", "remission_distinct_purification"]
+  source_ids = ["st_iii_86_1_6", "ccc_1451_1460", "st_iii_84_3"]
   focus_concept = "satisfaction_for_sin"
   camera_z = 36.0
 

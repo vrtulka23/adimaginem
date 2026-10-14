@@ -6,9 +6,11 @@ graph_tour_steps[saints_prayer_communion]
   question = "What connects believers and the blessed?"
   narrative = "Catholic teaching describes one communion embracing the glorified and those being purified. The saints in Heaven remain united to Christ."
   qualification = "The graph distinguishes the blessed who are invoked from the departed for whom purification is sought."
-  concept_ids = ["communion_of_saints", "saints_in_heaven", "souls_in_purgatory", "heaven"]
-  edge_ids = ["communion_glorified", "communion_purifying", "saints_heavenly_state"]
-  source_ids = ["ccc_946_962"]
+  concept_ids = ["communion_of_saints", "saints_in_heaven", "souls_in_purgatory", "heaven", "church"]
+  edge_ids = ["communion_glorified", "communion_purifying", "saints_heavenly_state", "church_communion", "church_communion_saints"]
+  highlighted_concept_ids = ["communion_of_saints", "saints_in_heaven", "souls_in_purgatory", "heaven"]
+  highlighted_edge_ids = ["communion_glorified", "communion_purifying", "saints_heavenly_state"]
+  source_ids = ["ccc_946_962", "ccc_781_810"]
   focus_concept = "communion_of_saints"
   camera_z = 36.0
 
@@ -46,9 +48,11 @@ graph_tour_steps[saints_prayer_request]
   question = "What does pray to a saint mean here?"
   narrative = "An invocation asks a saint to pray to God. Invoking Mary is a particular instance, addressed to the mother of the incarnate Son."
   qualification = "Aquinas distinguishes asking God to give a good from asking a saint to obtain it by prayer. Neither Mary nor another saint becomes the principal source of grace."
-  concept_ids = ["invocation_of_mary", "invocation_of_saints", "virgin_mary", "saints_in_heaven"]
-  edge_ids = ["invocation_mary_kind", "invocation_mary_recipient", "invocation_saints_recipient"]
-  source_ids = ["st_ii_ii_83_4_11", "ccc_963_975"]
+  concept_ids = ["invocation_of_mary", "invocation_of_saints", "virgin_mary", "saints_in_heaven", "saints_intercession", "marian_intercession"]
+  edge_ids = ["invocation_mary_kind", "invocation_mary_recipient", "invocation_saints_recipient", "saints_can_intercede", "marian_intercession_kind"]
+  highlighted_concept_ids = ["invocation_of_mary", "invocation_of_saints", "virgin_mary", "saints_in_heaven"]
+  highlighted_edge_ids = ["invocation_mary_kind", "invocation_mary_recipient", "invocation_saints_recipient"]
+  source_ids = ["st_ii_ii_83_4_11", "ccc_963_975", "lg_60_67"]
   focus_concept = "invocation_of_mary"
   camera_z = 36.0
 
@@ -86,8 +90,10 @@ graph_tour_steps[saints_prayer_christ]
   question = "Where does the prayer lead?"
   narrative = "The saints' intercession turns to God and depends on Christ's mediation. Invocation is distinct from divine adoration."
   qualification = "This route explains Catholic practice; it does not require a visitor to have accepted its premises before asking questions."
-  concept_ids = ["saints_intercession", "god", "christ_mediation", "invocation_of_saints", "divine_adoration"]
-  edge_ids = ["saints_intercession_to_god", "saints_intercession_depends_christ", "invocation_not_adoration"]
+  concept_ids = ["saints_intercession", "god", "christ_mediation", "invocation_of_saints", "divine_adoration", "saints_in_heaven"]
+  edge_ids = ["saints_intercession_to_god", "saints_intercession_depends_christ", "invocation_not_adoration", "saints_can_intercede", "invocation_saints_recipient"]
+  highlighted_concept_ids = ["saints_intercession", "god", "christ_mediation", "invocation_of_saints", "divine_adoration"]
+  highlighted_edge_ids = ["saints_intercession_to_god", "saints_intercession_depends_christ", "invocation_not_adoration"]
   source_ids = ["st_ii_ii_83_4_11", "ccc_946_962"]
   focus_concept = "christ_mediation"
   camera_z = 36.0

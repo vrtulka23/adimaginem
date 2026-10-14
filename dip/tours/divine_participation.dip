@@ -8,9 +8,11 @@ graph_tour_steps[divine_participation_grace]
   qualification = "Participation does not turn a creature into the divine essence. This is the Thomistic account of the received gift, not a comprehensive account of Eastern terminology."
   concept_ids = ["god", "sanctifying_grace", "rational_soul", "virtue"]
   edge_ids = ["god_bestows_sanctifying_grace", "grace_in_soul", "grace_distinct_from_virtue"]
+  highlighted_concept_ids = ["god", "sanctifying_grace", "rational_soul", "virtue"]
+  highlighted_edge_ids = ["god_bestows_sanctifying_grace", "grace_in_soul", "grace_distinct_from_virtue"]
   source_ids = ["ur_17", "ccc_1996_2000", "st_i_ii_110_4", "st_i_ii_110_3"]
   focus_concept = "sanctifying_grace"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[divine_participation_grace_god]
   step_id = "divine_participation_grace"
@@ -46,9 +48,11 @@ graph_tour_steps[divine_participation_love]
   question = "How does love shape wisdom?"
   narrative = "Charity has its subject in the will and gives a connaturality with divine things from which the gift of wisdom judges."
   qualification = "The connection concerns judgment through shared love of the good; it does not remove the distinction between will and intellect."
-  concept_ids = ["charity_virtue", "will", "wisdom_gift", "intellectual_power"]
-  edge_ids = ["charity_in_will", "charity_grounds_wisdom", "wisdom_in_intellect"]
-  source_ids = ["st_ii_ii_24_1", "st_ii_ii_45_2"]
+  concept_ids = ["charity_virtue", "will", "wisdom_gift", "intellectual_power", "rational_soul", "appetitive_power"]
+  edge_ids = ["charity_in_will", "charity_grounds_wisdom", "wisdom_in_intellect", "soul_intellectual_power", "soul_appetitive_power", "will_kind"]
+  highlighted_concept_ids = ["charity_virtue", "will", "wisdom_gift", "intellectual_power"]
+  highlighted_edge_ids = ["charity_in_will", "charity_grounds_wisdom", "wisdom_in_intellect"]
+  source_ids = ["st_ii_ii_24_1", "st_ii_ii_45_2", "st_i_78_1", "st_i_80_2", "st_i_76_1"]
   focus_concept = "wisdom_gift"
   camera_z = 36.0
 
@@ -88,9 +92,11 @@ graph_tour_steps[divine_participation_procession]
   qualification = "CCC 248 discusses legitimate complementarity. The arrows encode the cited Latin account, not a verdict that all Orthodox objections are merely verbal."
   concept_ids = ["holy_spirit", "father", "son", "common_spiration"]
   edge_ids = ["holy_spirit_proceeds_from_father", "holy_spirit_proceeds_from_son", "spiration_common_to_father", "spiration_common_to_son"]
+  highlighted_concept_ids = ["holy_spirit", "father", "son", "common_spiration"]
+  highlighted_edge_ids = ["holy_spirit_proceeds_from_father", "holy_spirit_proceeds_from_son", "spiration_common_to_father", "spiration_common_to_son"]
   source_ids = ["ccc_248", "st_i_36_4", "ccc_246"]
   focus_concept = "holy_spirit"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[divine_participation_procession_holy_spirit]
   step_id = "divine_participation_procession"

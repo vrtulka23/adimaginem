@@ -124,6 +124,16 @@ code[]
 code[]
   file = "extension_edges.dip"
 code[]
+  file = "foundations_sources.dip"
+code[]
+  file = "first_principles_concepts.dip"
+code[]
+  file = "moral_reasoning_concepts.dip"
+code[]
+  file = "doctrinal_foundations_concepts.dip"
+code[]
+  file = "foundations_edges.dip"
+code[]
   file = "tours/sources.dip"
 code[]
   file = "tours/catalogue.dip"
@@ -171,3 +181,5 @@ code[]
   file = "tours/mary_christ.dip"
 code[]
   file = "tours/saints_prayer.dip"
+code[]
+  file = "tours/context_positions.dip"

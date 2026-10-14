@@ -1,0 +1,51 @@
+# Latin names are scholarly labels; definitions preserve the cited distinctions.
+ontology
+  concepts[understanding_of_principles]
+    label = "Understanding of first principles"
+    latin_name = "intellectus principiorum"
+    domain = "anthropology"
+    study_areas = ["anthropology", "knowledge_truth", "logic"]
+    category = "habit"
+    note = "Natural intellectual habit of first speculative principles, distinct from an intellectual act and from the infused gift of understanding."
+    source_id = "st_i_79_12_13"
+    review_status = "draft"
+
+  concepts[synderesis]
+    label = "Synderesis"
+    latin_name = "synderesis"
+    domain = "anthropology"
+    study_areas = ["anthropology", "ethics", "knowledge_truth"]
+    category = "habit"
+    note = "Natural habit of first practical principles; not an additional faculty. Particular applications can fail."
+    source_id = "st_i_79_12_13"
+    review_status = "draft"
+
+  concepts[conscience]
+    label = "Conscience"
+    latin_name = "conscientia"
+    domain = "anthropology"
+    study_areas = ["anthropology", "ethics", "knowledge_truth"]
+    category = "act"
+    note = "An act applying knowledge to what one does, has done, or should do; it can witness, bind, accuse, or excuse. Erroneous judgment and its culpability are distinguished in the linked, qualified relations."
+    source_id = "st_i_79_12_13"
+    review_status = "draft"
+
+  concepts[natural_law]
+    label = "Natural law"
+    latin_name = "lex naturalis"
+    domain = "anthropology"
+    study_areas = ["anthropology", "ethics", "social_political", "theology"]
+    category = "principle"
+    note = "Participation of rational creatures in eternal law through practical reason and natural inclinations."
+    source_id = "st_i_ii_91_1_2"
+    review_status = "draft"
+
+  concepts[common_good]
+    label = "Common good"
+    latin_name = "bonum commune"
+    domain = "anthropology"
+    study_areas = ["anthropology", "ethics", "social_political"]
+    category = "formal_object"
+    note = "The good of a community toward which law is ordered; the common end is not reducible to a private advantage."
+    source_id = "st_i_ii_90_2"
+    review_status = "draft"

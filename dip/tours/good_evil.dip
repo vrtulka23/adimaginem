@@ -8,9 +8,11 @@ graph_tour_steps[good_evil_privation]
   qualification = "Not every absence is an evil: lack of sight is a privation in a human being, unlike the absence of sight in a stone. This does not make suffering unreal."
   concept_ids = ["original_sin", "original_justice", "privation"]
   edge_ids = ["original_sin_privation", "original_sin_includes_privation"]
+  highlighted_concept_ids = ["original_sin", "original_justice", "privation"]
+  highlighted_edge_ids = ["original_sin_privation", "original_sin_includes_privation"]
   source_ids = ["st_i_48_1_5", "ccc_404_405"]
   focus_concept = "privation"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[good_evil_privation_original_sin]
   step_id = "good_evil_privation"
@@ -41,9 +43,11 @@ graph_tour_steps[good_evil_freedom]
   qualification = "Natural suffering and personal culpability are distinct questions. These conditions are not a verdict about an individual."
   concept_ids = ["mortal_sin", "grave_matter", "full_moral_knowledge", "deliberate_consent"]
   edge_ids = ["mortal_requires_grave_matter", "mortal_requires_full_moral_knowledge", "mortal_requires_deliberate_consent"]
+  highlighted_concept_ids = ["mortal_sin", "grave_matter", "full_moral_knowledge", "deliberate_consent"]
+  highlighted_edge_ids = ["mortal_requires_grave_matter", "mortal_requires_full_moral_knowledge", "mortal_requires_deliberate_consent"]
   source_ids = ["st_i_48_1_5", "ccc_1854_1863"]
   focus_concept = "mortal_sin"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[good_evil_freedom_mortal_sin]
   step_id = "good_evil_freedom"
@@ -79,9 +83,11 @@ graph_tour_steps[good_evil_healing]
   question = "Can the person still turn toward the good?"
   narrative = "Sin can aggravate the wounds of nature without destroying the natural intellectual power. Grace enables conversion to God."
   qualification = "This route explains selected distinctions; it does not give a complete answer to why each instance of suffering occurs."
-  concept_ids = ["personal_sin", "wounded_human_nature", "intellectual_power", "grace", "human_conversion", "god"]
-  edge_ids = ["personal_sin_aggravates_wounds", "sin_preserves_natural_intellect", "grace_enables_conversion", "conversion_to_god"]
-  source_ids = ["st_i_ii_85_1_3", "st_i_ii_113_3_6"]
+  concept_ids = ["personal_sin", "wounded_human_nature", "intellectual_power", "grace", "human_conversion", "god", "sanctifying_grace", "rational_soul"]
+  edge_ids = ["personal_sin_aggravates_wounds", "sin_preserves_natural_intellect", "grace_enables_conversion", "conversion_to_god", "god_bestows_sanctifying_grace", "sanctifying_kind_of_grace", "grace_in_soul", "soul_intellectual_power"]
+  highlighted_concept_ids = ["personal_sin", "wounded_human_nature", "intellectual_power", "grace", "human_conversion", "god"]
+  highlighted_edge_ids = ["personal_sin_aggravates_wounds", "sin_preserves_natural_intellect", "grace_enables_conversion", "conversion_to_god"]
+  source_ids = ["st_i_ii_85_1_3", "st_i_ii_113_3_6", "ccc_1996_2000", "st_i_ii_110_4", "st_i_78_1", "st_i_76_1"]
   focus_concept = "human_conversion"
   camera_z = 40.0
 

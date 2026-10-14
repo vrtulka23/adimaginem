@@ -22,18 +22,32 @@ export function prepareTours(data) {
   for (const [id, step] of Object.entries(steps)) {
     if (!used.has(id)) fail(`orphan step ${id}`);
     for (const field of ['title', 'question', 'narrative', 'qualification']) text(step[field], `${id}.${field}`);
-    for (const field of ['source_ids', 'concept_ids', 'edge_ids']) list(step[field], `${id}.${field}`);
+    for (const field of ['source_ids', 'concept_ids', 'edge_ids', 'highlighted_concept_ids', 'highlighted_edge_ids']) list(step[field], `${id}.${field}`);
     if (step.source_ids.some(source => !sources[source])) fail(`unknown citation in ${id}`);
     if (step.concept_ids.some(concept => !concepts[concept])) fail(`unknown concept in ${id}`);
-    if (!step.concept_ids.includes(step.focus_concept)) fail(`focus outside scene ${id}`);
+    if (!step.highlighted_concept_ids.includes(step.focus_concept)) fail(`focus outside highlighted concepts in ${id}`);
+    if (step.highlighted_concept_ids.some(concept => !step.concept_ids.includes(concept))) fail(`highlighted concept outside scene ${id}`);
+    if (step.highlighted_edge_ids.some(edge => !step.edge_ids.includes(edge))) fail(`highlighted edge outside scene ${id}`);
     for (const edgeId of step.edge_ids) {
       const edge = edges[edgeId];
       if (!edge || !step.concept_ids.includes(edge.subject) || !step.concept_ids.includes(edge.object)) fail(`edge ${edgeId} outside scene ${id}`);
     }
+    const connected = new Set(step.highlighted_concept_ids);
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (const edgeId of step.edge_ids) {
+        const {subject, object} = edges[edgeId];
+        if (connected.has(subject) === connected.has(object)) continue;
+        connected.add(subject); connected.add(object); changed = true;
+      }
+    }
+    if (step.concept_ids.some(concept => !connected.has(concept))) fail(`supporting concept disconnected from highlighted concepts in ${id}`);
     const camera = ['camera_x', 'camera_y', 'camera_z'].map(field => step[field]);
     const target = ['look_at_x', 'look_at_y', 'look_at_z'].map(field => step[field]);
     if (![...camera, ...target].every(Number.isFinite) || camera.every((v, i) => v === target[i])) fail(`invalid camera in ${id}`);
-    scenes[id] = { step, positions: {}, conceptIds: new Set(step.concept_ids), edgeIds: new Set(step.edge_ids) };
+    scenes[id] = { step, positions: {}, conceptIds: new Set(step.concept_ids), edgeIds: new Set(step.edge_ids),
+      highlightedConceptIds: new Set(step.highlighted_concept_ids), highlightedEdgeIds: new Set(step.highlighted_edge_ids) };
   }
   for (const [id, position] of Object.entries(positions)) {
     const scene = scenes[position.step_id];

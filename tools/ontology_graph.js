@@ -9,7 +9,7 @@ import {
   faEye, faGem, faGift, faHeart, faMedal, faPaw, faPerson,
   faSeedling, faShareNodes, faSun, faWineGlass, faStar, faCloudSun,
   faDoorClosed, faFireFlameCurved, faScaleBalanced, faHandsPraying,
-  faHourglassEnd, faPersonRays
+  faHourglassEnd, faPersonRays, faChurch, faBookOpen, faLink
 } from "https://esm.sh/@fortawesome/free-solid-svg-icons@6.7.2";
 
 window.addEventListener("error", (event) => {
@@ -112,6 +112,7 @@ function applyNodeStyle(id, material) {
   material.emissive.set(color);
   material.emissiveIntensity = (material.userData.baseEmission ?? 0.035) + (active || focused ? sizeConfig.focus_emission : 0);
   material.opacity = focusedGroups.size && !focused && !active ? sizeConfig.dimmed_icon_opacity : 1;
+  if (activeTour && !active) material.opacity = sizeConfig.tour_context_opacity;
   material.depthWrite = material.opacity === 1;
 }
 function incidentToSelection(link) {
@@ -121,14 +122,14 @@ function relationColor(link, arrow = false) {
   const focused = isFocused(link.source.id || link.source) || isFocused(link.target.id || link.target);
   const path = pathEdgeIds.has(link.edgeId);
   const color = path ? "#ffe08b" : relationColors[link.kind].color;
-  const opacity = path || incidentToSelection(link) ? 1 : focusedGroups.size || selected
+  const opacity = activeTour ? (path ? 1 : sizeConfig.tour_context_opacity) : path || incidentToSelection(link) ? 1 : focusedGroups.size || selected
     ? (focused ? (arrow ? sizeConfig.arrow_opacity : sizeConfig.focused_relation_opacity) : sizeConfig.dimmed_relation_opacity)
     : (arrow ? sizeConfig.arrow_opacity : sizeConfig.relation_opacity);
   const rgb = color.slice(1).match(/../g).map((v) => parseInt(v, 16));
   return `rgba(${rgb.join(",")},${opacity})`;
 }
 function relationWidth(link) {
-  return pathEdgeIds.has(link.edgeId) || incidentToSelection(link)
+  return pathEdgeIds.has(link.edgeId) || (!activeTour && incidentToSelection(link))
     ? sizeConfig.highlighted_relation_width : sizeConfig.relation_width;
 }
 function arrowLength() { return iconSize * sizeConfig.arrow_size_ratio; }
@@ -224,6 +225,13 @@ function iconDefinition(node) {
     invocation_of_mary: faHandsPraying, invocation_of_saints: faHandsPraying,
     marian_intercession: faHandsPraying, saints_intercession: faHandsPraying,
     suffrages_for_dead: faHandsPraying, divine_adoration: faHandsPraying,
+    church: faChurch, four_marks_of_church: faChurch, apostolic_succession: faLink,
+    magisterium: faBookOpen, divine_revelation: faBookOpen, sacred_scripture: faBookOpen,
+    sacred_tradition: faBookOpen, deposit_of_faith: faBookOpen,
+    christ_passion: faCross, redemption: faCross, christ_resurrection: faPersonRays,
+    hypostatic_union: faLink, christ_human_will: faHeart, divine_will: faSun,
+    conscience: faScaleBalanced, synderesis: faCompass, natural_law: faScaleBalanced,
+    real_presence: faWineGlass, transubstantiation: faWineGlass, eucharistic_sacrifice: faWineGlass,
   };
   if (distinctive[node.id]) return distinctive[node.id];
   const family = iconFamily(node.id, node.category);
@@ -303,6 +311,7 @@ function finishSculpture(group, node, materials) {
   group.scale.setScalar(iconSize * iconScale(node.id));
   const label = makeLabelSprite(node.label, iconScale(node.id));
   label.visible = Boolean(activeTour) || document.querySelector('#show-labels').checked || selected === node.id || pathNodeIds.has(node.id);
+  label.material.opacity = activeTour && !pathNodeIds.has(node.id) && selected !== node.id ? sizeConfig.tour_context_opacity : 1;
   group.add(label);
   group.userData.label = label;
   group.userData.iconMaterial = materials[0];
@@ -472,7 +481,10 @@ function updateVisualState() {
     if (visual.userData.glowMaterial) visual.userData.glowMaterial.uniforms.opacity.value =
       sizeConfig.god_icon_glow_opacity * visual.userData.iconMaterial.opacity;
     const label = visual.userData.label;
-    if (label) label.visible = Boolean(activeTour) || showAll || active;
+    if (label) {
+      label.visible = Boolean(activeTour) || showAll || active;
+      label.material.opacity = activeTour && !active ? sizeConfig.tour_context_opacity : 1;
+    }
   }
   updateLegend();
   syncBillboards();
@@ -791,12 +803,13 @@ function applyTourStep(index) {
   const scene = tourData.scenes[tour.step_ids[index]], step = scene.step;
   activeTour.index = index; activeTour.scene = scene;
   clearPathResult();
-  for (const id of step.edge_ids) pathEdgeIds.add(id);
+  for (const id of step.highlighted_edge_ids) pathEdgeIds.add(id);
+  for (const id of step.highlighted_concept_ids) pathNodeIds.add(id);
   for (const id of step.concept_ids) {
     const c = concepts[id], [x,y,z] = scene.positions[id];
     nodeRegistry[id] ||= {id, label:c.label, domain:c.domain, category:c.category};
     Object.assign(nodeRegistry[id], {x,y,z,fx:x,fy:y,fz:z,vx:0,vy:0,vz:0});
-    positions[id] = [x,y,z]; pathNodeIds.add(id);
+    positions[id] = [x,y,z];
   }
   selected = step.focus_concept;
   document.querySelector('#tour-name').textContent = tour.title;
@@ -812,7 +825,7 @@ function applyTourStep(index) {
   document.querySelector('#tour-next').textContent = index + 1 === tour.step_ids.length ? 'Finish tour' : 'Next';
   draw(false); layoutNeedsFit = false;
   graph.cameraPosition({x:step.camera_x,y:step.camera_y,z:step.camera_z}, {x:step.look_at_x,y:step.look_at_y,z:step.look_at_z}, reducedMotion.matches ? 0 : sizeConfig.tour_transition_ms);
-  document.querySelector('#layout-status').textContent = 'Guided tour · rotate or zoom to inspect; concept positions stay fixed.';
+  document.querySelector('#layout-status').textContent = 'Guided tour · emphasized concepts lead the step; quieter concepts and lines provide context.';
   document.querySelector('#tour-step-title').focus({preventScroll:true});
 }
 function exitTour(completed = false) {

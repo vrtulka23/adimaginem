@@ -6,9 +6,11 @@ graph_tour_steps[purgatory_dialogue_death]
   question = "When does earthly moral life reach its end?"
   narrative = "Catholic teaching places particular judgment at death. The human soul survives bodily death, awaiting resurrection."
   qualification = "This model supplies no timetable beyond the revealed order and no spatial map of the afterlife."
-  concept_ids = ["human_death", "particular_judgment", "separated_soul", "rational_soul"]
-  edge_ids = ["judgment_at_death", "death_separated_soul", "separated_soul_rational"]
-  source_ids = ["ccc_1021_1022", "ccc_997_1001"]
+  concept_ids = ["human_death", "particular_judgment", "separated_soul", "rational_soul", "human_body"]
+  edge_ids = ["judgment_at_death", "death_separated_soul", "separated_soul_rational", "soul_separates_body"]
+  highlighted_concept_ids = ["human_death", "particular_judgment", "separated_soul", "rational_soul"]
+  highlighted_edge_ids = ["judgment_at_death", "death_separated_soul", "separated_soul_rational"]
+  source_ids = ["ccc_1021_1022", "ccc_997_1001", "st_i_75_4"]
   focus_concept = "particular_judgment"
   camera_z = 36.0
 
@@ -48,9 +50,11 @@ graph_tour_steps[purgatory_dialogue_ends]
   qualification = "Only those who die in God's friendship undergo Purgatory. It is not another opportunity for conversion after death."
   concept_ids = ["heaven", "beatific_vision", "hell", "purgatory"]
   edge_ids = ["heaven_includes_vision", "hell_excludes_vision", "purgatory_distinct_hell", "purgatory_to_heaven"]
+  highlighted_concept_ids = ["heaven", "beatific_vision", "hell", "purgatory"]
+  highlighted_edge_ids = ["heaven_includes_vision", "hell_excludes_vision", "purgatory_distinct_hell", "purgatory_to_heaven"]
   source_ids = ["ccc_1023_1029", "ccc_1033_1037", "ccc_1030_1032"]
   focus_concept = "purgatory"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[purgatory_dialogue_ends_heaven]
   step_id = "purgatory_dialogue_ends"
@@ -88,9 +92,11 @@ graph_tour_steps[purgatory_dialogue_forgiveness]
   qualification = "Temporal punishment here concerns purification from sinful attachment; the diagram does not assert that Christ's redemption is insufficient."
   concept_ids = ["remission_of_sin", "purification_from_sin", "temporal_punishment", "eternal_punishment"]
   edge_ids = ["remission_distinct_purification", "purification_temporal", "temporal_distinct_eternal"]
+  highlighted_concept_ids = ["remission_of_sin", "purification_from_sin", "temporal_punishment", "eternal_punishment"]
+  highlighted_edge_ids = ["remission_distinct_purification", "purification_temporal", "temporal_distinct_eternal"]
   source_ids = ["st_iii_86_1_6", "st_appendix_purgatory", "ccc_1471_1479"]
   focus_concept = "purification_from_sin"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[purgatory_dialogue_forgiveness_remission_of_sin]
   step_id = "purgatory_dialogue_forgiveness"
@@ -128,9 +134,11 @@ graph_tour_steps[purgatory_dialogue_saved]
   qualification = "No uncertainty of final salvation, duration, temperature, or physical mechanism is encoded."
   concept_ids = ["souls_in_purgatory", "sanctifying_grace", "purgatory", "purification_from_sin", "heaven"]
   edge_ids = ["souls_purgatory_grace", "souls_purgatory_state", "purgatory_purifies", "purgatory_to_heaven"]
+  highlighted_concept_ids = ["souls_in_purgatory", "sanctifying_grace", "purgatory", "purification_from_sin", "heaven"]
+  highlighted_edge_ids = ["souls_purgatory_grace", "souls_purgatory_state", "purgatory_purifies", "purgatory_to_heaven"]
   source_ids = ["ccc_1030_1032"]
   focus_concept = "souls_in_purgatory"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[purgatory_dialogue_saved_souls_in_purgatory]
   step_id = "purgatory_dialogue_saved"
@@ -173,9 +181,11 @@ graph_tour_steps[purgatory_dialogue_prayer]
   question = "Why do Catholics offer prayers and Masses for them?"
   narrative = "The Church offers suffrages for the departed, especially the Eucharist. The Catechism cites 2 Maccabees 12:46; Aquinas's account of suffrages explains their benefit within charity."
   qualification = "Many Protestant traditions do not receive 2 Maccabees as canonical. This tour makes the Catholic scriptural and ecclesial basis explicit rather than presuming agreement about the canon."
-  concept_ids = ["suffrages_for_dead", "souls_in_purgatory", "eucharist", "communion_of_saints"]
-  edge_ids = ["suffrages_recipients", "eucharist_suffrage", "communion_purifying"]
-  source_ids = ["st_supp_71_6", "ccc_1030_1032", "ccc_946_962"]
+  concept_ids = ["suffrages_for_dead", "souls_in_purgatory", "eucharist", "communion_of_saints", "church", "eucharistic_sacrifice"]
+  edge_ids = ["suffrages_recipients", "eucharist_suffrage", "communion_purifying", "church_offering", "eucharist_sacrifice", "church_communion"]
+  highlighted_concept_ids = ["suffrages_for_dead", "souls_in_purgatory", "eucharist", "communion_of_saints"]
+  highlighted_edge_ids = ["suffrages_recipients", "eucharist_suffrage", "communion_purifying"]
+  source_ids = ["st_supp_71_6", "ccc_1030_1032", "ccc_946_962", "ccc_1362_1377", "ccc_781_810"]
   focus_concept = "suffrages_for_dead"
   camera_z = 36.0
 
@@ -213,9 +223,11 @@ graph_tour_steps[purgatory_dialogue_resurrection]
   question = "Does Christian hope end with a separated soul?"
   narrative = "The dead will rise, and the universal judgment will manifest the truth of human lives. The new creation embraces the fulfillment of humanity and the universe."
   qualification = "The resurrection includes all the dead; this does not mean that all receive the same final state."
-  concept_ids = ["resurrection_of_dead", "human_person", "last_judgment", "renewed_creation"]
-  edge_ids = ["resurrection_human_recipient", "resurrection_final_judgment", "renewal_resurrection"]
-  source_ids = ["ccc_997_1001", "ccc_1038_1041", "ccc_1042_1050"]
+  concept_ids = ["resurrection_of_dead", "human_person", "last_judgment", "renewed_creation", "christ_resurrection", "son"]
+  edge_ids = ["resurrection_human_recipient", "resurrection_final_judgment", "renewal_resurrection", "resurrection_ours_instrumental", "resurrection_son"]
+  highlighted_concept_ids = ["resurrection_of_dead", "human_person", "last_judgment", "renewed_creation"]
+  highlighted_edge_ids = ["resurrection_human_recipient", "resurrection_final_judgment", "renewal_resurrection"]
+  source_ids = ["ccc_997_1001", "ccc_1038_1041", "ccc_1042_1050", "st_iii_56_1_2", "ccc_638_658", "ccc_253_254"]
   focus_concept = "resurrection_of_dead"
   camera_z = 36.0
 

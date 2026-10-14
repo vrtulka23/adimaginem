@@ -8,9 +8,11 @@ graph_tour_steps[divine_being_pure_act]
   qualification = "Active power and passive potentiality have different meanings; the graph does not place God on a scale of developing creatures."
   concept_ids = ["god", "pure_act", "passive_potentiality", "active_power"]
   edge_ids = ["god_pure_act", "pure_act_excludes_passivity", "god_active_power"]
+  highlighted_concept_ids = ["god", "pure_act", "passive_potentiality", "active_power"]
+  highlighted_edge_ids = ["god_pure_act", "pure_act_excludes_passivity", "god_active_power"]
   source_ids = ["st_i_3_2", "st_i_3_1", "st_i_25_1"]
   focus_concept = "pure_act"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[divine_being_pure_act_god]
   step_id = "divine_being_pure_act"
@@ -48,9 +50,11 @@ graph_tour_steps[divine_being_spirits]
   qualification = "This scene explains the Catholic distinction and does not summarize every Latter-day Saint use of the word spirit."
   concept_ids = ["god", "angel", "spiritual_creature", "created_being"]
   edge_ids = ["god_creates_angels", "angel_is_spiritual", "spiritual_is_created"]
+  highlighted_concept_ids = ["god", "angel", "spiritual_creature", "created_being"]
+  highlighted_edge_ids = ["god_creates_angels", "angel_is_spiritual", "spiritual_is_created"]
   source_ids = ["ccc_327_330"]
   focus_concept = "angel"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[divine_being_spirits_god]
   step_id = "divine_being_spirits"
@@ -88,9 +92,11 @@ graph_tour_steps[divine_being_participation]
   qualification = "Sharing in divine life through grace is not identity with the uncreated essence or becoming an additional divine person."
   concept_ids = ["god", "sanctifying_grace", "rational_soul", "human_person"]
   edge_ids = ["god_bestows_sanctifying_grace", "grace_in_soul", "person_has_form"]
+  highlighted_concept_ids = ["god", "sanctifying_grace", "rational_soul", "human_person"]
+  highlighted_edge_ids = ["god_bestows_sanctifying_grace", "grace_in_soul", "person_has_form"]
   source_ids = ["st_i_ii_110_4", "ccc_1996_2000", "st_i_76_1"]
   focus_concept = "sanctifying_grace"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[divine_being_participation_god]
   step_id = "divine_being_participation"

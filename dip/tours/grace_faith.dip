@@ -8,9 +8,11 @@ graph_tour_steps[grace_faith_initiative]
   qualification = "The response is enabled by grace; the diagram does not make independent human effort the cause of the first gift."
   concept_ids = ["god", "grace", "human_conversion"]
   edge_ids = ["god_bestows_grace", "grace_enables_conversion", "conversion_to_god"]
+  highlighted_concept_ids = ["god", "grace", "human_conversion"]
+  highlighted_edge_ids = ["god_bestows_grace", "grace_enables_conversion", "conversion_to_god"]
   source_ids = ["st_i_ii_113_3_6", "ccc_2001_2005", "ccc_1996_2000"]
   focus_concept = "grace"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[grace_faith_initiative_god]
   step_id = "grace_faith_initiative"
@@ -39,9 +41,11 @@ graph_tour_steps[grace_faith_faith]
   question = "How are believing and loving related?"
   narrative = "Faith has its subject in intellect, while charity has its subject in will. Aquinas calls charity the form of faith because it orders faith's act to its due end."
   qualification = "Intellect and will are powers of one person. This Catholic account is offered for comparison with particular Protestant formulations."
-  concept_ids = ["faith_virtue", "intellectual_power", "charity_virtue", "will"]
-  edge_ids = ["faith_in_intellect", "charity_in_will"]
-  source_ids = ["st_ii_ii_4_3", "st_ii_ii_4_2", "st_ii_ii_24_1"]
+  concept_ids = ["faith_virtue", "intellectual_power", "charity_virtue", "will", "rational_soul", "appetitive_power"]
+  edge_ids = ["faith_in_intellect", "charity_in_will", "soul_intellectual_power", "soul_appetitive_power", "will_kind"]
+  highlighted_concept_ids = ["faith_virtue", "intellectual_power", "charity_virtue", "will"]
+  highlighted_edge_ids = ["faith_in_intellect", "charity_in_will"]
+  source_ids = ["st_ii_ii_4_3", "st_ii_ii_4_2", "st_ii_ii_24_1", "st_i_78_1", "st_i_80_2", "st_i_76_1"]
   focus_concept = "faith_virtue"
   camera_z = 36.0
 
@@ -81,9 +85,11 @@ graph_tour_steps[grace_faith_action]
   qualification = "The graph identifies acts and virtues; it does not measure anyone's justification."
   concept_ids = ["act_of_charity", "benevolence", "will", "beneficence"]
   edge_ids = ["charity_includes_benevolence", "benevolence_act_of_will", "beneficence_expresses_charity"]
+  highlighted_concept_ids = ["act_of_charity", "benevolence", "will", "beneficence"]
+  highlighted_edge_ids = ["charity_includes_benevolence", "benevolence_act_of_will", "beneficence_expresses_charity"]
   source_ids = ["st_ii_ii_27_2", "st_ii_ii_31_1"]
   focus_concept = "act_of_charity"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[grace_faith_action_act_of_charity]
   step_id = "grace_faith_action"

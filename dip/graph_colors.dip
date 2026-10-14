@@ -577,3 +577,77 @@ graph_concept_styles[veneration_of_saints] : graph_saints
 graph_concept_styles[marian_veneration] : graph_marian
 
 graph_concept_styles[divine_adoration] : graph_divine
+
+graph_concept_styles[being] : graph_metaphysics
+
+graph_concept_styles[essence] : graph_metaphysics
+
+graph_concept_styles[act_of_being] : graph_metaphysics
+
+graph_concept_styles[transcendental_unity] : graph_metaphysics
+
+graph_concept_styles[transcendental_goodness] : graph_metaphysics
+
+graph_concept_styles[truth] : graph_metaphysics
+
+graph_concept_styles[truth_in_intellect] : graph_metaphysics
+
+graph_concept_styles[truth_of_things] : graph_metaphysics
+
+graph_concept_styles[noncontradiction] : graph_metaphysics
+
+graph_concept_styles[first_practical_principle] : graph_metaphysics
+
+graph_concept_styles[analogical_predication] : graph_metaphysics
+
+graph_concept_styles[understanding_of_principles] : graph_virtues
+
+graph_concept_styles[synderesis] : graph_virtues
+
+graph_concept_styles[conscience] : graph_faculties
+
+graph_concept_styles[natural_law] : graph_metaphysics
+
+graph_concept_styles[common_good] : graph_metaphysics
+
+graph_concept_styles[eternal_law] : graph_divine
+
+graph_concept_styles[divine_providence] : graph_divine
+
+graph_concept_styles[image_of_god] : graph_human
+
+graph_concept_styles[divine_intellect] : graph_divine
+
+graph_concept_styles[hypostatic_union] : graph_christology
+
+graph_concept_styles[christ_human_will] : graph_christology
+
+graph_concept_styles[divine_will] : graph_divine
+
+graph_concept_styles[christ_passion] : graph_christology
+
+graph_concept_styles[christ_resurrection] : graph_christology
+
+graph_concept_styles[redemption] : graph_christology
+
+graph_concept_styles[church] : graph_church
+
+graph_concept_styles[four_marks_of_church] : graph_church
+
+graph_concept_styles[apostolic_succession] : graph_church
+
+graph_concept_styles[magisterium] : graph_church
+
+graph_concept_styles[divine_revelation] : graph_revelation
+
+graph_concept_styles[sacred_scripture] : graph_revelation
+
+graph_concept_styles[sacred_tradition] : graph_revelation
+
+graph_concept_styles[deposit_of_faith] : graph_revelation
+
+graph_concept_styles[real_presence] : graph_sacraments
+
+graph_concept_styles[transubstantiation] : graph_sacraments
+
+graph_concept_styles[eucharistic_sacrifice] : graph_sacraments

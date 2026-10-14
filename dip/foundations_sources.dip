@@ -1,0 +1,218 @@
+# Primary passages for foundational concepts and core Catholic teaching.
+ontology
+  sources[st_i_14_1_4]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 14, aa. 1-4: divine knowledge, substance, and pure act"
+    url = "https://www.newadvent.org/summa/1014.htm#article1"
+
+  sources[st_i_ii_94_6]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 94, a. 6: enduring general principles and impeded particular application"
+    url = "https://www.newadvent.org/summa/2094.htm#article6"
+
+  sources[st_i_ii_19_5_6]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 19, aa. 5-6: conscience, error, and culpability"
+    url = "https://www.newadvent.org/summa/2019.htm#article5"
+
+  sources[st_i_ii_94_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 94, a. 2: first speculative and practical principles"
+    url = "https://www.newadvent.org/summa/2094.htm#article2"
+
+  sources[st_i_79_12_13]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 79, aa. 12-13: understanding of principles, synderesis, conscience"
+    url = "https://www.newadvent.org/summa/1079.htm#article12"
+
+  sources[st_i_ii_91_1_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 91, aa. 1-2: eternal and natural law"
+    url = "https://www.newadvent.org/summa/2091.htm#article1"
+
+  sources[st_i_ii_90_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I-II, q. 90, a. 2: law and the common good"
+    url = "https://www.newadvent.org/summa/2090.htm#article2"
+
+  sources[st_i_3_4]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 3, a. 4: essence and existence in God and creatures"
+    url = "https://www.newadvent.org/summa/1003.htm#article4"
+
+  sources[st_i_5_1]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 5, a. 1: goodness and being"
+    url = "https://www.newadvent.org/summa/1005.htm#article1"
+
+  sources[st_i_11_1]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 11, a. 1: unity and being"
+    url = "https://www.newadvent.org/summa/1011.htm#article1"
+
+  sources[st_i_16_3_5]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 16, aa. 3-5: truth, being, and God"
+    url = "https://www.newadvent.org/summa/1016.htm#article3"
+
+  sources[st_i_13_5]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 13, a. 5: analogical predication of divine names"
+    url = "https://www.newadvent.org/summa/1013.htm#article5"
+
+  sources[st_i_22_1_4]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 22, aa. 1-4: providence and contingent causes"
+    url = "https://www.newadvent.org/summa/1022.htm"
+
+  sources[st_i_93_4_6]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "I, q. 93, aa. 4 and 6: image of God in rational creatures"
+    url = "https://www.newadvent.org/summa/1093.htm#article4"
+
+  sources[st_iii_2_1_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 2, aa. 1-2: union in person, not confusion of natures"
+    url = "https://www.newadvent.org/summa/4002.htm#article1"
+
+  sources[st_iii_18_1_6]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 18, aa. 1 and 6: two natural wills without opposition"
+    url = "https://www.newadvent.org/summa/4018.htm#article1"
+
+  sources[st_iii_48_1_6]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 48, aa. 1-6: modes of the saving efficacy of the Passion"
+    url = "https://www.newadvent.org/summa/4048.htm"
+
+  sources[st_iii_56_1_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 56, aa. 1-2: Resurrection as efficient and exemplar cause"
+    url = "https://www.newadvent.org/summa/4056.htm"
+
+  sources[st_iii_75_1_5]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Summa theologiae"
+    locator = "III, q. 75, aa. 1-5: substantial presence and conversion"
+    url = "https://www.newadvent.org/summa/4075.htm"
+
+  sources[de_ente_1_4]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "De ente et essentia"
+    locator = "chapters 1, 2, and 4: essence, material composition, and received existence"
+    url = "https://isidore.co/aquinas/english/DeEnte&Essentia.htm"
+
+  sources[de_veritate_1_1_2]
+    authority_kind = "thomistic_text"
+    author = "Thomas Aquinas"
+    work = "Quaestiones disputatae de veritate"
+    locator = "q. 1, aa. 1-2: being, truth, and the order of intellects and things"
+    url = "https://isidore.co/aquinas/english/QDdeVer1.htm"
+
+  sources[ccc_51_53]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 51-53: revelation as divine self-communication"
+    url = "https://www.vatican.va/archive/ENG0015/__PF.HTM"
+
+  sources[ccc_65_67]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 65-67: Christ as fullness of revelation"
+    url = "https://www.vatican.va/archive/ENG0015/__PH.HTM"
+
+  sources[ccc_75_79]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 75-79: apostolic transmission and succession"
+    url = "https://www.vatican.va/archive/ENG0015/__PK.HTM"
+
+  sources[ccc_80_83]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 80-83: Scripture and Tradition"
+    url = "https://www.vatican.va/archive/ENG0015/__PL.HTM"
+
+  sources[ccc_84_87]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 84-87: deposit of faith and the serving Magisterium"
+    url = "https://www.vatican.va/archive/ENG0015/__PM.HTM"
+
+  sources[ccc_475_482]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 475 and 482: divine and human wills in Christ"
+    url = "https://www.vatican.va/archive/ENG0015/__P1J.HTM"
+
+  sources[ccc_638_658]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 638-658: reality and saving significance of the Resurrection"
+    url = "https://www.vatican.va/archive/ENG0015/__P1S.HTM"
+
+  sources[ccc_781_810]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 781-810, especially 787-797: Church, Body of Christ and temple of the Spirit"
+    url = "https://www.vatican.va/archive/ENG0015/__P28.HTM"
+
+  sources[ccc_811_870]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 811-870: one, holy, catholic, and apostolic Church"
+    url = "https://www.vatican.va/archive/ENG0015/__P29.HTM"
+
+  sources[ccc_1362_1377]
+    authority_kind = "church_teaching"
+    author = "Catholic Church"
+    work = "Catechism of the Catholic Church"
+    locator = "paragraphs 1362-1377: memorial, one sacrifice, and substantial presence"
+    url = "https://www.vatican.va/archive/ENG0015/__P41.HTM"

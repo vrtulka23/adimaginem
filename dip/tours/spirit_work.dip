@@ -8,9 +8,11 @@ graph_tour_steps[spirit_work_gifts]
   qualification = "The seven gifts are distinguished from special charisms for serving the Church, such as prophecy or tongues; CCC 2003 supplies that further distinction."
   concept_ids = ["holy_spirit", "gift_of_holy_spirit", "habit", "virtue"]
   edge_ids = ["god_bestows_spirit_gifts", "gifts_are_habits", "gift_perfects_virtue"]
+  highlighted_concept_ids = ["holy_spirit", "gift_of_holy_spirit", "habit", "virtue"]
+  highlighted_edge_ids = ["god_bestows_spirit_gifts", "gifts_are_habits", "gift_perfects_virtue"]
   source_ids = ["st_i_ii_68_1", "ccc_2001_2005", "ccc_1830_1831", "st_i_ii_68_3"]
   focus_concept = "gift_of_holy_spirit"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[spirit_work_gifts_holy_spirit]
   step_id = "spirit_work_gifts"
@@ -46,9 +48,11 @@ graph_tour_steps[spirit_work_powers]
   question = "What is perfected in the human person?"
   narrative = "Understanding concerns speculative intellect, while counsel concerns practical intellect. The gifts perfect the person's activity under divine movement."
   qualification = "These faculties are not separate persons, and the distinctions do not assign supernatural activity to brain locations."
-  concept_ids = ["understanding_gift", "speculative_intellect", "counsel_gift", "practical_intellect"]
-  edge_ids = ["understanding_gift_specific_intellect", "counsel_gift_specific_intellect"]
-  source_ids = ["st_i_ii_68_4"]
+  concept_ids = ["understanding_gift", "speculative_intellect", "counsel_gift", "practical_intellect", "intellectual_power"]
+  edge_ids = ["understanding_gift_specific_intellect", "counsel_gift_specific_intellect", "speculative_intellect_kind", "practical_intellect_is_intellectual"]
+  highlighted_concept_ids = ["understanding_gift", "speculative_intellect", "counsel_gift", "practical_intellect"]
+  highlighted_edge_ids = ["understanding_gift_specific_intellect", "counsel_gift_specific_intellect"]
+  source_ids = ["st_i_ii_68_4", "st_i_79_11", "st_i_78_1"]
   focus_concept = "understanding_gift"
   camera_z = 36.0
 
@@ -86,9 +90,11 @@ graph_tour_steps[spirit_work_fruits]
   question = "How do gifts and fruits differ?"
   narrative = "Fruits name the good acts and perfections that mature in a life moved by the Spirit. Gentleness moderates anger, and patience sustains endurance."
   qualification = "A strong feeling does not by itself establish the presence or absence of sanctifying grace; CCC 2005 cautions against that inference."
-  concept_ids = ["fruit_of_holy_spirit", "human_person", "gentleness_fruit", "anger_passion", "patience_fruit", "endurance_of_adversity"]
-  edge_ids = ["fruits_realized_in_humans", "gentleness_moderates_anger", "patience_sustains_endurance"]
-  source_ids = ["st_i_ii_70_1", "ccc_2001_2005", "st_i_ii_70_3"]
+  concept_ids = ["fruit_of_holy_spirit", "human_person", "gentleness_fruit", "anger_passion", "patience_fruit", "endurance_of_adversity", "holy_spirit"]
+  edge_ids = ["fruits_realized_in_humans", "gentleness_moderates_anger", "patience_sustains_endurance", "gentleness_fruit_kind", "patience_fruit_kind", "adversity_endurance_in_person", "gentleness_fruit_formed_by_spirit", "patience_fruit_formed_by_spirit"]
+  highlighted_concept_ids = ["fruit_of_holy_spirit", "human_person", "gentleness_fruit", "anger_passion", "patience_fruit", "endurance_of_adversity"]
+  highlighted_edge_ids = ["fruits_realized_in_humans", "gentleness_moderates_anger", "patience_sustains_endurance"]
+  source_ids = ["st_i_ii_70_1", "ccc_2001_2005", "st_i_ii_70_3", "ccc_1832", "st_ii_ii_136_1", "ccc_253_254"]
   focus_concept = "fruit_of_holy_spirit"
   camera_z = 40.0
 

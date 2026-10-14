@@ -8,9 +8,11 @@ graph_tour_steps[jewish_dialogue_one]
   qualification = "The separate principle nodes explain aspects of one confession; they are not divine parts."
   concept_ids = ["god", "divine_unity", "divine_simplicity"]
   edge_ids = ["god_one", "god_simple"]
+  highlighted_concept_ids = ["god", "divine_unity", "divine_simplicity"]
+  highlighted_edge_ids = ["god_one", "god_simple"]
   source_ids = ["na_2_4", "st_i_11_3", "st_i_3_7"]
   focus_concept = "god"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[jewish_dialogue_one_god]
   step_id = "jewish_dialogue_one"
@@ -41,9 +43,11 @@ graph_tour_steps[jewish_dialogue_creator]
   qualification = "The graph presents Aquinas's causal account for examination and dialogue."
   concept_ids = ["god", "created_being", "efficient_cause"]
   edge_ids = ["god_creates_all", "god_efficient_cause_role"]
+  highlighted_concept_ids = ["god", "created_being", "efficient_cause"]
+  highlighted_edge_ids = ["god_creates_all", "god_efficient_cause_role"]
   source_ids = ["st_i_44_1", "ccc_290_292"]
   focus_concept = "created_being"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[jewish_dialogue_creator_god]
   step_id = "jewish_dialogue_creator"
@@ -72,9 +76,11 @@ graph_tour_steps[jewish_dialogue_persons]
   question = "What is being asserted when Catholics name Father and Son?"
   narrative = "Catholic teaching identifies Father and Son with one divine essence while distinguishing them personally. Aquinas explains divine person through subsisting relation."
   qualification = "This is an explanation of Christian confession, not a claim that Jewish interlocutors already accept it."
-  concept_ids = ["father", "divine_essence", "son"]
-  edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son"]
-  source_ids = ["st_i_29_4", "ccc_253_254", "ccc_255"]
+  concept_ids = ["father", "divine_essence", "son", "trinity"]
+  edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son", "trinity_one_essence"]
+  highlighted_concept_ids = ["father", "divine_essence", "son"]
+  highlighted_edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son"]
+  source_ids = ["st_i_29_4", "ccc_253_254", "ccc_255", "ccc_234_255"]
   focus_concept = "divine_essence"
   camera_z = 36.0
 

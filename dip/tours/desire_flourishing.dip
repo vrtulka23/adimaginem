@@ -8,9 +8,11 @@ graph_tour_steps[desire_flourishing_desire]
   qualification = "Apprehended good can be mistaken; the graph does not make every desire morally good."
   concept_ids = ["love_passion", "apprehended_good", "desire_passion", "joy_passion"]
   edge_ids = ["love_formal_object", "desire_formal_object", "joy_formal_object", "love_precedes_desire", "desire_precedes_joy"]
+  highlighted_concept_ids = ["love_passion", "apprehended_good", "desire_passion", "joy_passion"]
+  highlighted_edge_ids = ["love_formal_object", "desire_formal_object", "joy_formal_object", "love_precedes_desire", "desire_precedes_joy"]
   source_ids = ["na_2_4", "st_i_ii_26_1_2", "st_i_ii_23_4", "st_i_ii_31_1_3", "st_i_ii_25_2"]
   focus_concept = "desire_passion"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[desire_flourishing_desire_love_passion]
   step_id = "desire_flourishing_desire"
@@ -46,9 +48,11 @@ graph_tour_steps[desire_flourishing_passions]
   question = "Must flourishing eliminate emotion?"
   narrative = "Passions receive moral character through their relation to reason and will. Temperance perfects the concupiscible appetite, and fortitude the irascible appetite."
   qualification = "The Thomistic account calls for rightly ordered passions. It does not use bodily pleasure or emotional intensity alone as its moral criterion."
-  concept_ids = ["temperance_virtue", "concupiscible_appetite", "fortitude_virtue", "irascible_appetite"]
-  edge_ids = ["temperance_perfects_concupiscible", "fortitude_perfects_irascible"]
-  source_ids = ["st_i_ii_24_1_3", "st_i_ii_61_2"]
+  concept_ids = ["temperance_virtue", "concupiscible_appetite", "fortitude_virtue", "irascible_appetite", "sensitive_appetite"]
+  edge_ids = ["temperance_perfects_concupiscible", "fortitude_perfects_irascible", "concupiscible_kind", "irascible_kind"]
+  highlighted_concept_ids = ["temperance_virtue", "concupiscible_appetite", "fortitude_virtue", "irascible_appetite"]
+  highlighted_edge_ids = ["temperance_perfects_concupiscible", "fortitude_perfects_irascible"]
+  source_ids = ["st_i_ii_24_1_3", "st_i_ii_61_2", "st_i_81_2", "st_i_80_2"]
   focus_concept = "temperance_virtue"
   camera_z = 36.0
 
@@ -88,9 +92,11 @@ graph_tour_steps[desire_flourishing_peace]
   qualification = "This is a Catholic account of peace; it is not an assertion that peace and nirvana are interchangeable terms."
   concept_ids = ["peace_fruit", "charity_virtue", "concord", "appetitive_harmony"]
   edge_ids = ["peace_fruit_from_charity", "peace_includes_concord", "peace_includes_appetitive_harmony"]
+  highlighted_concept_ids = ["peace_fruit", "charity_virtue", "concord", "appetitive_harmony"]
+  highlighted_edge_ids = ["peace_fruit_from_charity", "peace_includes_concord", "peace_includes_appetitive_harmony"]
   source_ids = ["st_ii_ii_29_1_3"]
   focus_concept = "peace_fruit"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[desire_flourishing_peace_peace_fruit]
   step_id = "desire_flourishing_peace"

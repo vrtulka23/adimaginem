@@ -4,6 +4,8 @@ The [`dip/DIPfile`](../dip/DIPfile) is the SNT3 project entry point. It loads th
 
 ## Data contract
 
+The [foundations module](foundations.md) adds first principles, truth, moral reasoning, and core Catholic doctrines. The [Marian](mariology.md) and [eschatological](eschatology.md) modules use the same concept, edge, and source schemas. Each new concept is connected to the shared ontology and receives a display schema; tour records are separate presentation data.
+
 The `ontology` tree has six collections:
 
 | Collection | Purpose |

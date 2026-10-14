@@ -9,8 +9,10 @@ graph_tour_steps[eternal_son_essence]
   source_ids = ["ccc_240_245", "ccc_253_254", "st_i_29_4"]
   concept_ids = ["father", "son", "divine_essence"]
   edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son"]
+  highlighted_concept_ids = ["father", "son", "divine_essence"]
+  highlighted_edge_ids = ["father_one_essence", "son_one_essence", "father_distinct_from_son"]
   focus_concept = "son"
-  camera_z = 32.0
+  camera_z = 32
 
 graph_tour_positions[eternal_son_essence_father]
   step_id = "eternal_son_essence"
@@ -39,9 +41,11 @@ graph_tour_steps[eternal_son_eternity]
   question = "Does being from the Father make the Son later?"
   narrative = "Aquinas distinguishes an origin from a beginning in duration. He holds the Son to be coeternal with the Father because divine generation is neither successive nor a transition from imperfection to completion."
   qualification = "The direction of the generation arrow expresses a relation of origin; it does not represent a timeline."
-  source_ids = ["st_i_42_2", "st_i_27_1_4"]
-  concept_ids = ["father", "son", "eternal_generation"]
-  edge_ids = ["father_begets_son", "father_coeternal_with_son", "son_by_generation"]
+  source_ids = ["st_i_42_2", "st_i_27_1_4", "ccc_253_254"]
+  concept_ids = ["father", "son", "eternal_generation", "divine_essence"]
+  edge_ids = ["father_begets_son", "father_coeternal_with_son", "son_by_generation", "father_one_essence", "son_one_essence"]
+  highlighted_concept_ids = ["father", "son", "eternal_generation"]
+  highlighted_edge_ids = ["father_begets_son", "father_coeternal_with_son", "son_by_generation"]
   focus_concept = "eternal_generation"
   camera_z = 32.0
 
@@ -75,8 +79,10 @@ graph_tour_steps[eternal_son_spirit]
   source_ids = ["ccc_240_245", "st_i_37_1", "ccc_255"]
   concept_ids = ["father", "son", "holy_spirit", "divine_essence", "subsistent_love"]
   edge_ids = ["father_one_essence", "son_one_essence", "holy_spirit_one_essence", "son_distinct_from_holy_spirit", "love_names_spirit"]
+  highlighted_concept_ids = ["father", "son", "holy_spirit", "divine_essence", "subsistent_love"]
+  highlighted_edge_ids = ["father_one_essence", "son_one_essence", "holy_spirit_one_essence", "son_distinct_from_holy_spirit", "love_names_spirit"]
   focus_concept = "holy_spirit"
-  camera_z = 32.0
+  camera_z = 32
 
 graph_tour_positions[eternal_son_spirit_father]
   step_id = "eternal_son_spirit"
@@ -119,9 +125,11 @@ graph_tour_steps[eternal_son_operation]
   question = "Do the persons act as three independent creators?"
   narrative = "Aquinas teaches that creation belongs to the Trinity through the one divine essence, power, and will. The Catechism likewise describes the divine work as common to the three persons, while respecting their personal properties."
   qualification = "These lines express common divine operation. They do not add together three partial contributions to make one complete deity."
-  source_ids = ["st_i_45_6", "ccc_258"]
-  concept_ids = ["father", "son", "holy_spirit", "common_divine_operation"]
-  edge_ids = ["operation_common_to_father", "operation_common_to_son", "operation_common_to_holy_spirit"]
+  source_ids = ["st_i_45_6", "ccc_258", "ccc_475_482"]
+  concept_ids = ["father", "son", "holy_spirit", "common_divine_operation", "divine_will"]
+  edge_ids = ["operation_common_to_father", "operation_common_to_son", "operation_common_to_holy_spirit", "divine_will_common_father", "divine_will_common_son", "divine_will_common_holy_spirit"]
+  highlighted_concept_ids = ["father", "son", "holy_spirit", "common_divine_operation"]
+  highlighted_edge_ids = ["operation_common_to_father", "operation_common_to_son", "operation_common_to_holy_spirit"]
   focus_concept = "common_divine_operation"
   camera_z = 32.0
 

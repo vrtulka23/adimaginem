@@ -46,7 +46,7 @@ node --test tools/web_ontology_adapter.test.mjs tools/relationship_summary.test.
 node --test tools/ontology_loader.test.mjs tools/selection_force.test.mjs
 ```
 
-The adapter supports scalar fields and one-dimensional string arrays, including tour tags and scene references. It rejects unsupported array shapes, unitful values, unsafe integers, and truncated values explicitly. Such schema extensions require adapting the viewer contract. SNT's richer schema and inspection APIs remain available for future interfaces.
+The adapter supports scalar fields and one-dimensional string arrays, including tour tags, scene references, and highlighted subsets. It rejects unsupported array shapes, unitful values, unsafe integers, and truncated values explicitly. Such schema extensions require adapting the viewer contract. SNT's richer schema and inspection APIs remain available for future interfaces.
 
 **Startup limitation:** evaluation and extraction of 8,006 paths took about 82 seconds in a local Node/WebAssembly parity check. The worker keeps the page responsive and reports progress, but each page load currently repeats extraction. This is data and interaction parity, not a claim of equal startup speed. A bulk value/metadata inspection API in SNT would help avoid thousands of individual description calls. The runtime WASM is approximately 4.8 MB before transfer compression. CDN dependencies below still require internet access.
 

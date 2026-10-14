@@ -1,0 +1,211 @@
+# Latin names are scholarly labels; definitions preserve the cited distinctions.
+ontology
+  concepts[eternal_law]
+    label = "Eternal law"
+    latin_name = "lex aeterna"
+    domain = "theology"
+    study_areas = ["theology", "ethics", "metaphysics"]
+    category = "principle"
+    note = "Divine wisdom as governing the universe; not a law imposed upon God from outside."
+    source_id = "st_i_ii_91_1_2"
+    review_status = "draft"
+
+  concepts[divine_providence]
+    label = "Divine providence"
+    latin_name = "providentia divina"
+    domain = "theology"
+    study_areas = ["theology", "metaphysics"]
+    category = "doctrine"
+    note = "God orders creatures to their ends, including contingent effects through their proper causes."
+    source_id = "st_i_22_1_4"
+    review_status = "draft"
+
+  concepts[image_of_god]
+    label = "Image of God"
+    latin_name = "imago Dei"
+    domain = "theology"
+    study_areas = ["theology", "anthropology"]
+    category = "doctrine"
+    note = "Rational creatures bear a likeness of God through intellectual nature; the image admits perfection through grace and glory."
+    source_id = "st_i_93_4_6"
+    review_status = "draft"
+
+  concepts[divine_intellect]
+    label = "Divine intellect"
+    latin_name = "intellectus divinus"
+    domain = "theology"
+    study_areas = ["theology", "metaphysics", "knowledge_truth"]
+    category = "divine_essence"
+    note = "God knowing; no cognitive faculty added as an accident to divine being. The divine intellect measures created things."
+    source_id = "st_i_14_1_4"
+    review_status = "draft"
+
+  concepts[hypostatic_union]
+    label = "Hypostatic union"
+    latin_name = "unio hypostatica"
+    domain = "theology"
+    study_areas = ["theology", "metaphysics"]
+    category = "doctrine"
+    note = "Divine and human natures are united in the one person of the eternal Son, without confusion or a second personal subject."
+    source_id = "st_iii_2_1_2"
+    review_status = "draft"
+
+  concepts[christ_human_will]
+    label = "Christ's human will"
+    latin_name = "voluntas humana Christi"
+    domain = "theology"
+    study_areas = ["theology", "anthropology"]
+    category = "power"
+    note = "The created human will assumed by the Son; freely obedient and not opposed to the divine will."
+    source_id = "st_iii_18_1_6"
+    review_status = "draft"
+
+  concepts[divine_will]
+    label = "Divine will"
+    latin_name = "voluntas divina"
+    domain = "theology"
+    study_areas = ["theology", "metaphysics"]
+    category = "divine_essence"
+    note = "The one divine will common to Father, Son, and Holy Spirit; Christ also possesses a distinct created human will."
+    source_id = "ccc_475_482"
+    review_status = "draft"
+
+  concepts[christ_passion]
+    label = "Christ's Passion"
+    latin_name = "passio Christi"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Christ's voluntary saving suffering and death, efficacious by merit, satisfaction, sacrifice, redemption, and instrumental agency. Here Passion is not the generic psychological category."
+    source_id = "st_iii_48_1_6"
+    review_status = "draft"
+
+  concepts[christ_resurrection]
+    label = "Christ's Resurrection"
+    latin_name = "resurrectio Christi"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "Jesus truly rises bodily in glorified life; his Resurrection grounds Christian hope and is not only survival in others' memory."
+    source_id = "ccc_638_658"
+    review_status = "draft"
+
+  concepts[redemption]
+    label = "Redemption"
+    latin_name = "redemptio"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "Liberation from bondage to sin through Christ's saving self-offering; his satisfaction is not a payment to the devil."
+    source_id = "st_iii_48_1_6"
+    review_status = "draft"
+
+  concepts[church]
+    label = "Church"
+    latin_name = "Ecclesia"
+    domain = "theology"
+    study_areas = ["theology", "social_political"]
+    category = "community"
+    note = "The people gathered by God as the Body of Christ and temple of the Holy Spirit; not simply a building or clergy."
+    source_id = "ccc_781_810"
+    review_status = "draft"
+
+  concepts[four_marks_of_church]
+    label = "One, holy, catholic, and apostolic"
+    latin_name = "una, sancta, catholica et apostolica"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "doctrine"
+    note = "Four inseparable marks of the Church confessed in the Creed; holiness does not deny sins of her members."
+    source_id = "ccc_811_870"
+    review_status = "draft"
+
+  concepts[apostolic_succession]
+    label = "Apostolic succession"
+    latin_name = "successio apostolica"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "office"
+    note = "Continuation of apostolic ministry in the bishops for preserving and handing on the Gospel."
+    source_id = "ccc_75_79"
+    review_status = "draft"
+
+  concepts[magisterium]
+    label = "Magisterium"
+    latin_name = "Magisterium Ecclesiae"
+    domain = "theology"
+    study_areas = ["theology", "knowledge_truth"]
+    category = "office"
+    note = "Living teaching office of bishops in communion with the successor of Peter; serves and authentically interprets the received Word."
+    source_id = "ccc_84_87"
+    review_status = "draft"
+
+  concepts[divine_revelation]
+    label = "Divine revelation"
+    latin_name = "revelatio divina"
+    domain = "theology"
+    study_areas = ["theology", "knowledge_truth"]
+    category = "act"
+    note = "God freely makes himself and his saving purpose known through mutually connected deeds and words, culminating in Christ."
+    source_id = "ccc_51_53"
+    review_status = "draft"
+
+  concepts[sacred_scripture]
+    label = "Sacred Scripture"
+    latin_name = "Sacra Scriptura"
+    domain = "theology"
+    study_areas = ["theology", "knowledge_truth"]
+    category = "sacred_text"
+    note = "The Word of God committed to writing under inspiration of the Holy Spirit."
+    source_id = "ccc_80_83"
+    review_status = "draft"
+
+  concepts[sacred_tradition]
+    label = "Sacred Tradition"
+    latin_name = "Sacra Traditio"
+    domain = "theology"
+    study_areas = ["theology", "knowledge_truth"]
+    category = "process"
+    note = "Living apostolic transmission of the Word; distinguished from changeable local theological, devotional, or disciplinary traditions."
+    source_id = "ccc_80_83"
+    review_status = "draft"
+
+  concepts[deposit_of_faith]
+    label = "Deposit of faith"
+    latin_name = "depositum fidei"
+    domain = "theology"
+    study_areas = ["theology", "knowledge_truth"]
+    category = "doctrine"
+    note = "The sacred heritage entrusted by the apostles to the whole Church, contained in Scripture and Tradition."
+    source_id = "ccc_84_87"
+    review_status = "draft"
+
+  concepts[real_presence]
+    label = "Eucharistic real presence"
+    latin_name = "praesentia realis et substantialis"
+    domain = "theology"
+    study_areas = ["theology", "metaphysics"]
+    category = "doctrine"
+    note = "Christ is substantially present in the Eucharist, not merely signified by an absent person's image."
+    source_id = "st_iii_75_1_5"
+    review_status = "draft"
+
+  concepts[transubstantiation]
+    label = "Transubstantiation"
+    latin_name = "transsubstantiatio"
+    domain = "theology"
+    study_areas = ["theology", "metaphysics"]
+    category = "doctrine"
+    note = "Conversion of the whole substance of bread and wine into Christ's body and blood, while the sensible species remain. This is not an ordinary material transformation."
+    source_id = "st_iii_75_1_5"
+    review_status = "draft"
+
+  concepts[eucharistic_sacrifice]
+    label = "Eucharistic sacrifice"
+    latin_name = "sacrificium eucharisticum"
+    domain = "theology"
+    study_areas = ["theology"]
+    category = "act"
+    note = "Sacramental making-present of Christ's once-for-all sacrifice; the victim and offering priest are the same, with a different manner of offering."
+    source_id = "ccc_1362_1377"
+    review_status = "draft"

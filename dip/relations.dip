@@ -303,7 +303,7 @@ ontology
     explanation_role = "effect"
     label = "Instrumentally effects"
     kind = "theological"
-    description = "A sacrament brings about the specified effect through divine agency, subject to the cited conditions."
+    description = "A created instrument brings about the specified effect through divine agency, subject to the cited conditions; this includes Christ acting through his humanity and sacramental instruments."
     prose_template = "{subject} instrumentally effects {object}."
 
   relations[strengthens]
@@ -636,7 +636,7 @@ ontology
   relations[is_common_to_person]
     label = "Is common to person"
     kind = "theological"
-    description = "The cited divine act or relation belongs to this person in common with another or the others; it is not multiplied by its bearers."
+    description = "The cited divine perfection, act, or relation belongs to this person in common with another or the others; it is not multiplied by its bearers."
     prose_template = "{subject} belongs to {object} in common."
 
   relations[is_relatively_opposed_to]
@@ -724,8 +724,8 @@ ontology
 
   relations[depends_on]
     label = "Depends on"
-    kind = "theological"
-    description = "A derivative operation depends on the stated foundation; the source fixes the mode of dependence."
+    kind = "metaphysical"
+    description = "Dependence on the stated foundation in the respect specified by the source; neither temporal succession nor efficient causation is implied without an explicit qualifier."
     prose_template = "{subject} depends on {object}."
 
   relations[seeks_intercession_of]
@@ -751,3 +751,72 @@ ontology
     kind = "power_and_act"
     description = "A power can be the subject of a moral act in the qualified circumstances specified by the source."
     prose_template = "{subject} can have {object} as its subject."
+
+  relations[is_convertible_with]
+    label = "Is convertible with"
+    kind = "metaphysical"
+    description = "Coextensive in reality under a specified transcendental consideration; the notions remain distinct."
+    prose_template = "{subject} is convertible with {object}."
+    principle_id = "being"
+
+  relations[has_essence]
+    label = "Has essence"
+    kind = "metaphysical"
+    description = "Identifies what the subject is; does not imply a separable part."
+    prose_template = "{subject} has {object} as its essence."
+    principle_id = "essence"
+
+  relations[has_act_of_being]
+    label = "Has act of being"
+    kind = "metaphysical"
+    description = "The subject exists through the act of being, with created reception distinguished from divine subsistence."
+    prose_template = "{subject} has {object}."
+    principle_id = "act_of_being"
+
+  relations[grasps_principle]
+    label = "Grasps principle"
+    kind = "power_and_act"
+    description = "A habit or power concerns the specified principle as known, not as its efficient cause."
+    prose_template = "{subject} grasps {object}."
+
+  relations[applies_to_action]
+    label = "Applies knowledge to"
+    kind = "power_and_act"
+    description = "An act of moral judgment applies knowledge to the specified conduct; not a claim of infallibility."
+    prose_template = "{subject} applies knowledge to {object}."
+
+  relations[transmits]
+    label = "Transmits"
+    kind = "theological"
+    description = "Hands on the received content in the manner specified by the citation."
+    prose_template = "{subject} transmits {object}."
+
+  relations[authentically_interprets]
+    label = "Authentically interprets"
+    kind = "theological"
+    description = "The Church teaching office interprets received revelation under its authoritative mandate; it does not originate new revelation."
+    prose_template = "{subject} authentically interprets {object}."
+
+  relations[has_head]
+    label = "Has as head"
+    kind = "theological"
+    description = "Christ as head of his ecclesial body; not an anatomical composition."
+    prose_template = "{subject} has {object} as its head."
+
+  relations[sacramentally_makes_present]
+    label = "Sacramentally makes present"
+    kind = "theological"
+    description = "Makes present the one saving sacrifice without repeating the historical crucifixion."
+    prose_template = "{subject} sacramentally makes present {object}."
+
+  relations[has_substantial_presence_of]
+    label = "Has substantial presence of"
+    kind = "theological"
+    description = "Specifically Eucharistic presence, distinct from local enclosure or mere symbolism."
+    prose_template = "{subject} has the substantial presence of {object}."
+
+  relations[concerns]
+    label = "Concerns"
+    kind = "metaphysical"
+    description = "Identifies the subject matter of a cited concept or account. It asserts neither efficient causation nor a faculty's formal object."
+    prose_template = "{subject} concerns {object}."

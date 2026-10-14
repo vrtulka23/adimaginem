@@ -8,9 +8,11 @@ graph_tour_steps[body_soul_unity]
   qualification = "This philosophical account does not identify soul with a measured organ or a spatial object beside the body."
   concept_ids = ["human_person", "rational_soul", "human_body"]
   edge_ids = ["person_has_form", "soul_actualizes_body", "person_has_body"]
+  highlighted_concept_ids = ["human_person", "rational_soul", "human_body"]
+  highlighted_edge_ids = ["person_has_form", "soul_actualizes_body", "person_has_body"]
   source_ids = ["st_i_76_1", "st_i_75_4"]
   focus_concept = "rational_soul"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[body_soul_unity_human_person]
   step_id = "body_soul_unity"
@@ -39,9 +41,11 @@ graph_tour_steps[body_soul_cognition]
   question = "How does Aquinas connect embodied experience with thought?"
   narrative = "Imagination retains phantasms. Understanding turns to phantasms, while intelligible species are abstracted from them."
   qualification = "Phantasm and intelligible species are technical philosophical terms, not direct equivalents of a modern neural representation."
-  concept_ids = ["phantasm", "imagination", "understanding", "intelligible_species"]
-  edge_ids = ["phantasm_retained_by_imagination", "understanding_turns_to_phantasm", "intelligible_species_abstracted_from_phantasm"]
-  source_ids = ["st_i_78_4", "st_i_84_7", "st_i_85_1"]
+  concept_ids = ["phantasm", "imagination", "understanding", "intelligible_species", "intellectual_power", "agent_intellect"]
+  edge_ids = ["phantasm_retained_by_imagination", "understanding_turns_to_phantasm", "intelligible_species_abstracted_from_phantasm", "understanding_of_intellect", "agent_intellect_kind"]
+  highlighted_concept_ids = ["phantasm", "imagination", "understanding", "intelligible_species"]
+  highlighted_edge_ids = ["phantasm_retained_by_imagination", "understanding_turns_to_phantasm", "intelligible_species_abstracted_from_phantasm"]
+  source_ids = ["st_i_78_4", "st_i_84_7", "st_i_85_1", "st_i_79_3", "st_i_78_1"]
   focus_concept = "understanding"
   camera_z = 36.0
 
@@ -79,9 +83,11 @@ graph_tour_steps[body_soul_appetite]
   question = "How are emotion and rational desire distinguished?"
   narrative = "Sensitive appetite and will are kinds of appetitive power. Choice belongs to will; passion belongs to sensitive appetite."
   qualification = "The distinction concerns the object and manner of activity, not an anatomical partition."
-  concept_ids = ["sensitive_appetite", "appetitive_power", "will", "choice"]
-  edge_ids = ["sensitive_appetite_kind", "will_kind", "choice_of_will"]
-  source_ids = ["st_i_80_2", "st_i_83_4"]
+  concept_ids = ["sensitive_appetite", "appetitive_power", "will", "choice", "rational_soul"]
+  edge_ids = ["sensitive_appetite_kind", "will_kind", "choice_of_will", "soul_appetitive_power"]
+  highlighted_concept_ids = ["sensitive_appetite", "appetitive_power", "will", "choice"]
+  highlighted_edge_ids = ["sensitive_appetite_kind", "will_kind", "choice_of_will"]
+  source_ids = ["st_i_80_2", "st_i_83_4", "st_i_78_1", "st_i_76_1"]
   focus_concept = "will"
   camera_z = 36.0
 

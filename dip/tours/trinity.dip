@@ -6,9 +6,11 @@ graph_tour_steps[trinity_unity]
   question = "What does Catholic teaching mean by one God?"
   narrative = "The Catechism identifies the Trinity with the one God. Aquinas argues for divine unity. The God and Trinity labels in this scene name the same God, considered through different concepts."
   qualification = "The drawing does not count separate divine beings or divide God into components."
-  source_ids = ["ccc_253_254", "st_i_11_3"]
-  concept_ids = ["god", "trinity", "divine_unity"]
-  edge_ids = ["god_same_as_trinity", "god_one"]
+  source_ids = ["ccc_253_254", "st_i_11_3", "st_i_3_4"]
+  concept_ids = ["god", "trinity", "divine_unity", "divine_essence"]
+  edge_ids = ["god_same_as_trinity", "god_one", "trinity_one_essence", "god_divine_essence"]
+  highlighted_concept_ids = ["god", "trinity", "divine_unity"]
+  highlighted_edge_ids = ["god_same_as_trinity", "god_one"]
   focus_concept = "god"
   camera_z = 32.0
 
@@ -42,8 +44,10 @@ graph_tour_steps[trinity_persons]
   source_ids = ["ccc_253_254", "ccc_255", "st_i_29_4"]
   concept_ids = ["father", "son", "holy_spirit", "divine_essence"]
   edge_ids = ["father_one_essence", "son_one_essence", "holy_spirit_one_essence", "father_distinct_from_son", "father_distinct_from_holy_spirit", "son_distinct_from_holy_spirit"]
+  highlighted_concept_ids = ["father", "son", "holy_spirit", "divine_essence"]
+  highlighted_edge_ids = ["father_one_essence", "son_one_essence", "holy_spirit_one_essence", "father_distinct_from_son", "father_distinct_from_holy_spirit", "son_distinct_from_holy_spirit"]
   focus_concept = "divine_essence"
-  camera_z = 32.0
+  camera_z = 32
 
 graph_tour_positions[trinity_persons_father]
   step_id = "trinity_persons"
@@ -79,9 +83,11 @@ graph_tour_steps[trinity_word]
   question = "What do Father, Son, and generation signify here?"
   narrative = "Aquinas names the Son as the Word and explains this origin by analogy with intellectual procession. The Son is eternally from the Father. Divine generation involves neither a bodily process nor a time when the Father existed without the Son."
   qualification = "The intellectual analogy helps clarify the language; it does not make God a human mind or exhaust the mystery."
-  source_ids = ["st_i_27_1_4", "st_i_34_2", "st_i_42_2"]
-  concept_ids = ["father", "son", "eternal_word", "eternal_generation"]
-  edge_ids = ["father_begets_son", "word_names_son", "son_by_generation", "father_coeternal_with_son"]
+  source_ids = ["st_i_27_1_4", "st_i_34_2", "st_i_42_2", "ccc_253_254"]
+  concept_ids = ["father", "son", "eternal_word", "eternal_generation", "divine_essence"]
+  edge_ids = ["father_begets_son", "word_names_son", "son_by_generation", "father_coeternal_with_son", "father_one_essence", "son_one_essence"]
+  highlighted_concept_ids = ["father", "son", "eternal_word", "eternal_generation"]
+  highlighted_edge_ids = ["father_begets_son", "word_names_son", "son_by_generation", "father_coeternal_with_son"]
   focus_concept = "son"
   camera_z = 32.0
 
@@ -119,11 +125,13 @@ graph_tour_steps[trinity_love]
   question = "What does it mean to call the Spirit Love?"
   narrative = "Aquinas distinguishes love as common to God from Love as a personal name of the Holy Spirit. The Spirit proceeds by way of love. In the Latin Catholic account, Father and Son are one principle of this procession."
   qualification = "This is divine, personal Love; the term does not identify the Spirit with a human emotion. This tour explains a revealed mystery rather than deriving the Trinity from reason alone."
-  source_ids = ["st_i_37_1", "st_i_36_4", "st_i_32_1"]
-  concept_ids = ["father", "son", "holy_spirit", "subsistent_love", "procession_of_love"]
-  edge_ids = ["holy_spirit_proceeds_from_father", "holy_spirit_proceeds_from_son", "love_names_spirit", "spirit_by_love"]
+  source_ids = ["st_i_37_1", "st_i_36_4", "st_i_32_1", "ccc_253_254"]
+  concept_ids = ["father", "son", "holy_spirit", "subsistent_love", "procession_of_love", "divine_essence"]
+  edge_ids = ["holy_spirit_proceeds_from_father", "holy_spirit_proceeds_from_son", "love_names_spirit", "spirit_by_love", "father_one_essence", "son_one_essence", "holy_spirit_one_essence"]
+  highlighted_concept_ids = ["father", "son", "holy_spirit", "subsistent_love", "procession_of_love"]
+  highlighted_edge_ids = ["holy_spirit_proceeds_from_father", "holy_spirit_proceeds_from_son", "love_names_spirit", "spirit_by_love"]
   focus_concept = "holy_spirit"
-  camera_z = 32.0
+  camera_z = 33.800000000000004
 
 graph_tour_positions[trinity_love_father]
   step_id = "trinity_love"

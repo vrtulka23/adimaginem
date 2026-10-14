@@ -8,9 +8,11 @@ graph_tour_steps[careful_terms_substance]
   qualification = "Substance is not limited to chemistry, and accident does not mean an unexpected mishap."
   concept_ids = ["human_person", "substance", "quality", "accident", "habit"]
   edge_ids = ["human_substance", "quality_accident", "habit_quality", "accident_in_substance"]
+  highlighted_concept_ids = ["human_person", "substance", "quality", "accident", "habit"]
+  highlighted_edge_ids = ["human_substance", "quality_accident", "habit_quality", "accident_in_substance"]
   source_ids = ["st_i_29_1", "st_i_ii_49_2", "st_i_ii_49_1", "dpn_3"]
   focus_concept = "substance"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[careful_terms_substance_human_person]
   step_id = "careful_terms_substance"
@@ -55,9 +57,11 @@ graph_tour_steps[careful_terms_person]
   qualification = "The word person is applied with theological distinctions; the graph does not posit three specimens of the divine species."
   concept_ids = ["father", "son", "divine_essence"]
   edge_ids = ["father_distinct_from_son", "father_one_essence", "son_one_essence"]
+  highlighted_concept_ids = ["father", "son", "divine_essence"]
+  highlighted_edge_ids = ["father_distinct_from_son", "father_one_essence", "son_one_essence"]
   source_ids = ["st_i_29_4", "ccc_255", "ccc_253_254"]
   focus_concept = "divine_essence"
-  camera_z = 36.0
+  camera_z = 36
 
 graph_tour_positions[careful_terms_person_father]
   step_id = "careful_terms_person"
@@ -86,9 +90,11 @@ graph_tour_steps[careful_terms_spirit]
   question = "How are soul, angel, and God distinguished?"
   narrative = "An angel is a spiritual creature; the human rational soul is the form of a body. God is the creator of angels."
   qualification = "Being spiritual does not erase the creator-creature distinction or make the human soul an angel."
-  concept_ids = ["god", "angel", "spiritual_creature", "rational_soul", "human_body"]
-  edge_ids = ["god_creates_angels", "angel_is_spiritual", "soul_actualizes_body"]
-  source_ids = ["ccc_327_330", "st_i_76_1"]
+  concept_ids = ["god", "angel", "spiritual_creature", "rational_soul", "human_body", "human_person"]
+  edge_ids = ["god_creates_angels", "angel_is_spiritual", "soul_actualizes_body", "god_creates_humans", "person_has_form", "person_has_body"]
+  highlighted_concept_ids = ["god", "angel", "spiritual_creature", "rational_soul", "human_body"]
+  highlighted_edge_ids = ["god_creates_angels", "angel_is_spiritual", "soul_actualizes_body"]
+  source_ids = ["ccc_327_330", "st_i_76_1", "st_i_75_4"]
   focus_concept = "angel"
   camera_z = 36.0
 

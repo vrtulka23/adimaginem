@@ -203,3 +203,7 @@ tour_icon_size float = 3.0
 tour_transition_ms int = 800
   ?descr "Duration of tour camera transitions in milliseconds; reduced-motion preference makes them immediate."
   !condition ({.} >= 0)
+
+tour_context_opacity float = 0.55
+  ?descr "Opacity of unhighlighted supporting icons, labels, and relations in guided scenes. Clicking a supporting concept makes that icon fully visible."
+  !condition ({.} > 0 && {.} <= 1)

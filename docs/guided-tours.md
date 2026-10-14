@@ -29,6 +29,10 @@ Open **Guided tours** at the top of the graph's left sidebar. The catalogue has 
 
 Select **Start tour**, then **Previous** or **Next**. Each scene shows its question, explanation, qualification, and source links. Concepts remain clickable, and the camera can rotate and zoom. Positions stay fixed so that annealing and selection repulsion do not rearrange the scene. Labels remain visible.
 
+**Main concepts are emphasized; supporting concepts remain quieter.** Supporting icons and their labels are translucent, and supporting relations use their normal colors and widths. Click any supporting icon to inspect its definition and citations. Thirty-eight scenes include additional connective context, with 47 supporting concept placements. The original focus of each step is preserved.
+
+The connections are explicitly selected from existing cited ontology edges. They are not generated from graph proximity. Examples include the soul and appetitive power between faith/intellect and charity/will; intellect between its speculative and practical uses; and saints in Heaven between invocation and intercession. Supporting sources appear with the other step citations.
+
 **Exit tour** or **Finish tour** restores the exploration view, including filters, icon size, selection, connection search, camera, and the saved layout. Ordinary layout controls are disabled while a tour is active.
 
 ## Sidebar organization
@@ -54,7 +58,7 @@ The canonical files are in [`dip/tours/`](../dip/tours/). Three map schemas sepa
 | Map | Contents |
 |---|---|
 | `graph_tours` | Title, description, audience and topic tags, ordered step IDs, framing note, review status |
-| `graph_tour_steps` | Tour ID, title, question, narrative, qualification, source/concept/edge IDs, focus concept, camera and look-at coordinates |
+| `graph_tour_steps` | Tour ID, title, question, narrative, qualification, all visible source/concept/edge IDs, highlighted concept/edge subsets, focus concept, camera and look-at coordinates |
 | `graph_tour_positions` | Step ID, concept ID, and explicit `x`, `y`, `z` coordinates |
 
 These are presentation maps outside `ontology`. Sources remain in `ontology.sources`. No additional philosophical relation is inferred from tour membership or geometry.
@@ -74,11 +78,11 @@ To add a tour:
 
 1. Add a catalogue record in `catalogue.dip`, applying the existing map schema. Use stable IDs and an ordered `step_ids` list.
 2. Add scene records in a new `.dip` file and import it in `dip/DIPfile`. Cite authoritative passages in each scene's `source_ids`; add source records only when needed.
-3. Select existing concepts and edges. Both endpoints of every selected edge must appear in the scene. Preserve the edge's original direction and qualifications.
+3. Select existing visible concepts and edges in `concept_ids` and `edge_ids`. Both endpoints of every edge must appear in the scene. Use `highlighted_concept_ids` and `highlighted_edge_ids` for the subsets emphasized by the step; other visible entries provide context. The focus concept must be highlighted. Every supporting concept must connect to the highlighted concepts by visible cited relations. Preserve direction and qualifications, and include the supporting passages in `source_ids`.
 4. Give every selected concept one position for that scene. Set a camera position and look-at target; the default camera is `(0, 0, 32)` looking at the origin.
 5. Write a concise question, explanation, and qualification. Avoid attributing a belief to every member of an audience, and identify distinctions that the diagram could otherwise obscure.
 
-The shared viewer validator rejects missing citations, unknown or out-of-scene edges, repeated or orphan steps, missing/duplicate positions, nonfinite coordinates, and invalid camera targets. `tour_icon_size` and `tour_transition_ms` are configured in `dip/graph_viewer.dip`; reduced-motion preferences disable camera animation.
+The shared viewer validator rejects missing citations, unknown or out-of-scene edges, invalid highlighted subsets, disconnected supporting concepts, repeated or orphan steps, missing/duplicate positions, nonfinite coordinates, and invalid camera targets. Supporting positions are collected in [`context_positions.dip`](../dip/tours/context_positions.dip). `tour_icon_size`, `tour_transition_ms`, and `tour_context_opacity` are configured in `dip/graph_viewer.dip`; reduced-motion preferences disable camera animation.
 
 ## Running and checking
 

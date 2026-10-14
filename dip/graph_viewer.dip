@@ -120,3 +120,5 @@ graph_viewer[default]
   tour_icon_size = 3.0
 
   tour_transition_ms = 800
+
+  tour_context_opacity = 0.55
