@@ -8,7 +8,7 @@ This module adds 13 concepts and 39 cited relations to the existing account of t
 - [Relations](../dip/spiritual_warfare_edges.dip): directed claims, `?rationale`, conditions, and evidence classifications.
 - [Sources](../dip/spiritual_warfare_sources.dip): passage-level references and kinds of authority.
 
-Both native Python and static WebAssembly load these same DIPL records. The graph adds **Prayer & spiritual combat** and **Demonic affliction** color groups; sacramentals remain with sacramental ministry.
+Both native Python and static Astro load these same DIPL records. The graph adds **Prayer & spiritual combat** and **Demonic affliction** color groups; sacramentals remain with sacramental ministry.
 
 ## What the distinctions mean
 

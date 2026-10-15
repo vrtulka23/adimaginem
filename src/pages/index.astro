@@ -1,0 +1,35 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import data from '../../public/graph-assets/ontology.json';
+const base = import.meta.env.BASE_URL;
+const counts = [[Object.keys(data.ontology.concepts).length, 'concepts'], [Object.keys(data.ontology.edges).length, 'relations'], [Object.keys(data.ontology.sources).length, 'cited sources'], [Object.keys(data.graph_tours).length, 'guided tours']];
+---
+<SiteLayout>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">An atlas of philosophy & theology</p>
+      <h1>See the connections.<br /><em>Seek understanding.</em></h1>
+      <p class="intro">Explore the human person, the created world, and the life of faith through a connected map of Thomistic philosophy and Catholic teaching.</p>
+      <div class="actions"><a class="button" href={`${base}graph/`}>Enter the graph <span aria-hidden="true">↗</span></a><a class="button secondary" href={`${base}docs/method/`}>Read our method</a></div>
+      <p class="caption">Every relation leads back to a source. Follow the connection, then read the passage.</p>
+    </div>
+    <div class="atlas" aria-hidden="true">
+      <svg viewBox="0 0 520 520"><defs><radialGradient id="halo"><stop stop-color="#365d4d" stop-opacity=".7"/><stop offset="1" stop-color="#10191c" stop-opacity="0"/></radialGradient></defs><circle cx="260" cy="260" r="255" fill="url(#halo)"/><g fill="none" stroke="#6d9987" stroke-width="1"><circle cx="260" cy="260" r="184" stroke-dasharray="2 8"/><ellipse cx="260" cy="260" rx="210" ry="105" transform="rotate(-35 260 260)"/><ellipse cx="260" cy="260" rx="210" ry="105" transform="rotate(35 260 260)"/><path d="M260 76L405 188 375 388 145 388 105 188Z M260 76V260L145 388 M105 188L260 260 405 188 M260 260L375 388" stroke="#598774"/></g><g fill="#a0d5c1"><circle cx="260" cy="76" r="6"/><circle cx="405" cy="188" r="7"/><circle cx="375" cy="388" r="6"/><circle cx="145" cy="388" r="6"/><circle cx="105" cy="188" r="7"/></g><circle cx="260" cy="260" r="45" fill="#172b28" stroke="#e8c98e"/><path d="M260 236v48m-24-24h48" stroke="#e8c98e" stroke-width="1.5"/><circle cx="260" cy="260" r="10" fill="none" stroke="#e8c98e"/><g fill="#b1c2bf" font-size="12" font-family="Georgia,serif" letter-spacing="2"><text x="260" y="51" text-anchor="middle">BEING</text><text x="422" y="179">TRUTH</text><text x="378" y="418">GOOD</text><text x="114" y="418">PERSON</text><text x="45" y="176">LIFE</text></g></svg>
+      <span class="atlas-note">A map for inquiry, rooted in the texts.</span>
+    </div>
+  </section>
+  <section class="numbers" aria-label="What the atlas contains">{counts.map(([number, label]) => <div><strong>{number}</strong><span>{label}</span></div>)}</section>
+  <section class="paths">
+    <div class="section-heading"><p class="eyebrow">Ways into the atlas</p><h2>Begin with a question.</h2></div>
+    <div class="cards">
+      <a href={`${base}graph/`}><span class="card-number">01 / EXPLORE</span><h3>Follow a connection</h3><p>Select concepts, trace their relationships, and inspect the citations behind each statement.</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+      <a href={`${base}docs/guided-tours/`}><span class="card-number">02 / DISCOVER</span><h3>Take a guided tour</h3><p>Approach the Trinity, grace, the human person, and other questions through carefully framed, cited scenes.</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+      <a href={`${base}docs/resources/`}><span class="card-number">03 / READ</span><h3>Return to the sources</h3><p>Consult Aquinas, Scripture, and Church teaching, with clear distinctions between texts and interpretation.</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="method"><span class="eyebrow">Built for careful study</span><h2>Clarity begins with distinctions.</h2><p>This is a developing scholarly atlas. Its explanations preserve the scope, conditions, and sources of each claim. Editorial review labels describe our encoding; they do not grade the authority of Catholic teaching.</p><p>Machine-learning tools helped locate passages and prepare explanations. We welcome corrections and review from scholars and responsible Church authorities.</p><a href={`${base}docs/review-and-contributions/`}>How to review or contribute →</a><br /><a href={`${base}docs/`}>Browse the documentation →</a></section>
+</SiteLayout>
+<style>
+  .hero{max-width:1280px;margin:auto;padding:85px 48px 48px;display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:20px}.hero h1{font:400 clamp(42px,4.6vw,65px)/1.12 Georgia,serif;letter-spacing:-.035em;margin:27px 0}.hero h1 em{color:var(--gold);font-weight:400}.intro{max-width:510px;color:var(--muted);font-size:17px;line-height:1.8}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.caption{font-size:12px;line-height:1.7;color:#8fa49d;max-width:410px;margin-top:24px}.atlas svg{width:100%;overflow:visible}.atlas-note{display:block;text-align:center;font:italic 13px Georgia,serif;color:var(--muted)}.numbers{max-width:1184px;margin:25px auto 0;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}.numbers div{display:flex;align-items:baseline;gap:12px;justify-content:center}.numbers div+div{border-left:1px solid var(--line)}.numbers strong{font:36px Georgia,serif;color:var(--gold)}.numbers span{font-size:12px;color:var(--muted)}.paths{max-width:1280px;margin:auto;padding:65px 48px}.section-heading h2,.method h2{font:36px Georgia,serif;margin:15px 0 30px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.cards>a{position:relative;padding:29px 27px 55px;background:var(--panel);border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink)}.cards>a:hover{border-color:var(--mint)}.card-number{font-size:10px;letter-spacing:.13em;color:var(--mint)}.cards h3{font:25px Georgia,serif;margin:22px 0 14px}.cards p{color:var(--muted);font-size:14px;line-height:1.8}.card-arrow{position:absolute;right:26px;bottom:20px;color:var(--gold);font-size:24px}.method{max-width:720px;margin:5px auto 0;padding:30px 24px;text-align:center}.method h2{margin-bottom:22px}.method p{color:var(--muted);line-height:1.9;font-size:15px}.method>a{display:inline-block;margin-top:12px;font-size:14px}
+  @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:50px}.atlas{max-width:400px;margin:10px auto 0}.cards{grid-template-columns:1fr}.numbers{margin:0 24px;grid-template-columns:repeat(2,1fr);gap:25px}.numbers div:nth-child(3){border-left:0}.paths{padding:45px 24px}}@media(max-width:500px){.hero{padding:38px 24px}.numbers div{flex-direction:column;align-items:center;gap:5px}.hero h1{font-size:42px}}
+</style>

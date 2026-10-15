@@ -36,7 +36,7 @@ For example, raising `link_strength_default` gives influence links more attracti
 | `initial_jitter` | Width of deterministic position perturbation | 0.2 |
 | `tour_depth_ratio` | Initial tour depth perturbation in multiples of icon size, before recentering | 3.0 |
 
-The existing `icon_gap`, icon-size controls, arrow-size control, and `selection_repulsion_*` settings remain in the same DIPL record. Initial placement still uses record order and a deterministic spherical distribution; making its spread configurable does not change that algorithm.
+The existing `icon_gap`, icon-size controls, arrow-size control, and `selection_repulsion_*` settings remain in the same DIPL record. Initial placement uses the explicit DIPL order described below and a deterministic spherical distribution; making its spread configurable does not change that algorithm.
 
 Guided tours start from their authored DIPL coordinates with deterministic depth offsets scaled by `tour_depth_ratio`. The offsets are centered to preserve the scene's initial mean depth. Nodes then relax freely using the shared attraction, repulsion, collision, and cooling settings above. Restore restarts the active scene; exiting a tour restores the saved exploration layout.
 
@@ -60,7 +60,28 @@ The half-sum uses the two endpoint radii; `2 × G` reserves one gap per endpoint
 
 ## Apply changes
 
-- **Local Python mode:** restart `python3 tools/ontology_graph.py --port 8878`, then refresh the page. DIPL is cached at server startup.
-- **Static web mode:** rebuild with `python3 tools/build_ontology_graph.py` and serve or publish the rebuilt artifact.
+- **Local Python mode:** restart `python3 tools/ontology_graph.py --port 8878`, then refresh the page. DIPL changes invalidate the persistent DIPH5 cache at server startup.
+- **Static web mode:** rebuild with `./setup.sh --build` and serve or publish the rebuilt artifact.
 
 Both modes use the same viewer code and DIPL settings. See [viewer instructions](../tools/README.md).
+
+## Introductory rotation
+
+After the initial graph settles and the camera fits it, the view begins a slow orbit. Moving the pointer, touching, clicking, scrolling, focusing a control, or using the keyboard stops it for the rest of that page load, including interactions during loading. Reheat, Reset, and tours do not restart it. Hidden tabs pause the orbit, and reduced-motion preferences disable it. Icons continue facing the viewer.
+
+DIPL controls in `graph_viewer[default]` are `intro_rotation_enabled` (true), `intro_rotation_speed` (currently 8 in the viewer record, approximately a 7.5-second orbit at 60 fps; schema fallback 0.8), and `intro_rotation_delay_ms` (500 ms after camera fitting). These are presentation choices, with no ontological meaning.
+
+## Stable concept and connection order
+
+The original DIPL exporter and the persisted DIPH5 reader can return map entries in different orders. The graph previously used that incidental order to assign initial positions and process forces, so a cache change could alter its arrangement.
+
+Two ordered DIPL lists now make this choice explicit:
+
+- [`graph_layout_concepts.dip`](../dip/graph_layout_concepts.dip): `graph_layout.concept_order` determines which concept receives each starting position and the order of simulation nodes.
+- [`graph_layout_edges.dip`](../dip/graph_layout_edges.dip): `graph_layout.edge_order` determines the order of simulation connections.
+
+Each list entry applies the `graph_layout_entry` schema and contains an existing `id` and an explicit integer `position`. Positions preserve the original uncached declaration order. The viewer sorts by these positions: alphabetical map keys and lexicographically exported list indices no longer change initialization. Both Python and static viewers use these lists, including **Restore starting layout**.
+
+When adding a concept or connection, append its ID with the next unused position to the appropriate list. Remove its entry if the record is deleted. The validator rejects missing, repeated, and unknown IDs, as well as invalid or repeated positions. Changing positions is an intentional visual change; it makes no claim of philosophical priority.
+
+This stabilizes ordering, not every final coordinate. Adding concepts changes the initial distribution, and topology, filters, icon size, cooling time, library versions, and browser performance can still affect relaxation. The order does not prescribe a cone, cylinder, or sphere as the final shape. Guided tours retain their own authored coordinates and scene order.

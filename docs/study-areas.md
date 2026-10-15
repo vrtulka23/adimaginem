@@ -38,7 +38,7 @@ ontology
 
 The scope citation explains the field of inquiry; the concept's original `source_id` continues to support its definition. Membership generates no graph edges, causal rules, or transitive theological claims. The broader ethics filter does not classify grace as naturally acquired virtue, and the natural-philosophy filter does not make the intellect a bodily organ.
 
-The DIPL schema requires at least one string and carries the common editorial `?rationale`. Rust validates each ID against `ontology.study_areas`, rejects duplicate or empty memberships, and verifies area citations and their editorial status. The browser adapter validates membership references too. Both loaders normalize SNT's singleton-array scalar rendering into a one-item array; the WebAssembly loader also verifies its declared shape. SNT's current `!options` checks an entire array value, so it cannot serve as an element-wise foreign-key constraint here. The study-area schema does use `!options` and `!labels` for its editorial evidence kind.
+The DIPL schema requires at least one string and carries the common editorial `?rationale`. The shared graph validator validates each ID against `ontology.study_areas`, rejects duplicate or empty memberships, and verifies area citations and their editorial status. Both delivery modes use the same loader, which normalizes SNT's singleton-array scalar rendering into a one-item array. SNT's current `!options` checks an entire array value, so it cannot serve as an element-wise foreign-key constraint here. The study-area schema does use `!options` and `!labels` for its editorial evidence kind.
 
 ## Using the graph
 
@@ -46,4 +46,4 @@ Expand **Study areas** in the left sidebar. Check one or more areas to show the 
 
 **About selected areas** shows the DIPL descriptions, qualifications, Latin names, and source links. Each concept panel also lists its study areas. Counts next to area labels are total memberships before other filters.
 
-Both the native Python viewer and static WebAssembly viewer use this data. Restart the Python server after changing DIPL, and rebuild the static bundle. See [running the viewer](../tools/README.md).
+Both the native Python viewer and static Astro viewer use this data. Restart the Python server after changing DIPL, and rebuild the static bundle. See [running the viewer](../tools/README.md).

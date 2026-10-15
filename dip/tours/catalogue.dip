@@ -180,3 +180,39 @@ graph_tours[saints_prayer]
   topic_tags = ["Prayer and intercession", "Mary", "Communion of saints"]
   framing_note = "This is a cited Catholic and Thomistic introduction. Audience tags invite discussion and do not attribute beliefs to any individual. Coordinates organize reading; they do not add theological claims."
   step_ids = ["saints_prayer_communion", "saints_prayer_request", "saints_prayer_christ"]
+
+graph_tours[faith_and_reason]
+  title = "Does faith mean giving up reason?"
+  description = "Three distinctions about intellectual assent, truth, and revelation."
+  audience_tags = ["General introduction", "Catholic formation", "Christian dialogue"]
+  topic_tags = ["Common questions", "Faith and reason"]
+  step_ids = ["faith_and_reason_assent", "faith_and_reason_truth", "faith_and_reason_revelation"]
+  framing_note = "A focused clarification of Catholic teaching, open to any visitor. Questions describe possible misunderstandings without attributing them to a religious group or individual. Read the cited passages and the qualifications together."
+  review_status = "draft"
+
+graph_tours[mass_one_sacrifice]
+  title = "Is Christ sacrificed again at every Mass?"
+  description = "Clarify the one sacrifice, sacramental presence, and the fruit of Communion."
+  audience_tags = ["General introduction", "Catholic formation", "Christian dialogue"]
+  topic_tags = ["Common questions", "Eucharist", "Sacraments"]
+  step_ids = ["mass_one_sacrifice_memorial", "mass_one_sacrifice_presence", "mass_one_sacrifice_fruit"]
+  framing_note = "A focused clarification of Catholic teaching, open to any visitor. Questions describe possible misunderstandings without attributing them to a religious group or individual. Read the cited passages and the qualifications together."
+  review_status = "draft"
+
+graph_tours[confession_and_forgiveness]
+  title = "Why confess to a priest if God forgives?"
+  description = "Distinguish God's action, sacramental ministry, and the penitent's conversion."
+  audience_tags = ["General introduction", "Catholic formation", "Christian dialogue"]
+  topic_tags = ["Common questions", "Confession", "Forgiveness"]
+  step_ids = ["confession_and_forgiveness_source", "confession_and_forgiveness_ministry", "confession_and_forgiveness_conversion"]
+  framing_note = "A focused clarification of Catholic teaching, open to any visitor. Questions describe possible misunderstandings without attributing them to a religious group or individual. Read the cited passages and the qualifications together."
+  review_status = "draft"
+
+graph_tours[scripture_and_tradition]
+  title = "Do Catholics put tradition above the Bible?"
+  description = "Distinguish Scripture, apostolic Tradition, changeable customs, and a teaching office that serves the Word."
+  audience_tags = ["General introduction", "Catholic formation", "Christian dialogue"]
+  topic_tags = ["Common questions", "Scripture", "Church authority"]
+  step_ids = ["scripture_and_tradition_transmission", "scripture_and_tradition_customs", "scripture_and_tradition_service"]
+  framing_note = "A focused clarification of Catholic teaching, open to any visitor. Questions describe possible misunderstandings without attributing them to a religious group or individual. Read the cited passages and the qualifications together."
+  review_status = "draft"

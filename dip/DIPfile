@@ -1,4 +1,8 @@
 schemas[]
+  name = "graph_layout_entry"
+  file = "schemas/graph_layout_entry.dipl"
+
+schemas[]
   name = "support_record"
   file = "schemas/support_record.dipl"
 schemas[]
@@ -197,3 +201,21 @@ code[]
   file = "grounding_sources.dip"
 code[]
   file = "support_records.dip"
+
+code[]
+  file = "tours/faith_and_reason.dip"
+
+code[]
+  file = "tours/mass_one_sacrifice.dip"
+
+code[]
+  file = "tours/confession_and_forgiveness.dip"
+
+code[]
+  file = "tours/scripture_and_tradition.dip"
+
+code[]
+  file = "graph_layout_concepts.dip"
+
+code[]
+  file = "graph_layout_edges.dip"

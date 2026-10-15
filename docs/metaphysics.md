@@ -42,7 +42,7 @@ ontology
     principle_id = "final_cause"
 ```
 
-This field is an editorial reference to the concept explaining a predicate. It is independent of the predicate's display color and does not generate an ontological edge, imply inheritance of agency, or substitute for an edge's passage citation. Rust rejects a reference to an unknown concept. Both viewer loaders preserve the field.
+This field is an editorial reference to the concept explaining a predicate. It is independent of the predicate's display color and does not generate an ontological edge, imply inheritance of agency, or substitute for an edge's passage citation. The shared graph validator rejects a reference to an unknown concept. Both delivery modes preserve the field.
 
 In the concept panel, each applicable relation has a **Principle** button. Selecting the principle also shows **Relations using this principle**. Graph lines and path search continue to use the explicit cited edges, including the new metaphysical connections.
 

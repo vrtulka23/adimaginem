@@ -1,0 +1,62 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { documentationGroups } from '../../data/documentation.mjs';
+export function getStaticPaths() {
+  const pages = import.meta.glob('../../../docs/*.md', { eager: true });
+  return Object.entries(pages).map(([path, page]) => {
+    const slug = path.split('/').pop().replace(/\.md$/, '');
+    return { params: { slug: slug === 'index' ? undefined : slug }, props: { page, slug } };
+  });
+}
+const { page, slug } = Astro.props;
+const { Content } = page;
+const headings = await page.getHeadings();
+const title = headings.find(h => h.depth === 1)?.text || 'Documentation';
+const base = import.meta.env.BASE_URL;
+const sections = headings.filter(h => h.depth === 2);
+const currentGroup = documentationGroups.find(group => group.pages.some(([id]) => id === slug));
+---
+<SiteLayout title={title}>
+  <div class="reading-layout">
+    <aside aria-label="Documentation navigation">
+      <p class="eyebrow">The reading room</p>
+      <a class="graph-link" href={`${base}graph/`}>Open the graph ↗</a>
+      <details class="browse" open>
+        <summary>Browse topics</summary>
+        <nav aria-label="Documentation topics">
+          {documentationGroups.map(group => <details class="topic" open={group === currentGroup}>
+            <summary>{group.title}</summary>
+            {group.pages.map(([id, label]) => <a href={`${base}docs/${id === 'index' ? '' : `${id}/`}`} aria-current={id === slug ? 'page' : undefined}>{label}</a>)}
+          </details>)}
+        </nav>
+      </details>
+    </aside>
+    <div class="reading-content">
+      <p class="breadcrumb"><a href={`${base}docs/`}>Documentation</a><span aria-hidden="true"> / </span>{currentGroup?.title}</p>
+      {sections.length > 0 && <details class="page-contents"><summary>On this page <span>{sections.length} sections</span></summary><ul>{sections.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></details>}
+      <article class="prose"><Content /></article>
+      <div class="reading-footer"><a href={`${base}docs/`}>← All documentation</a><a href={`${base}docs/review-and-contributions/`}>Suggest a correction →</a></div>
+    </div>
+  </div>
+</SiteLayout>
+<script>
+  // Keep the reading text close to the top on small screens; navigation
+  // remains available as an ordinary keyboard-accessible disclosure.
+  const browse = document.querySelector<HTMLDetailsElement>('.browse');
+  if (browse && window.matchMedia('(max-width: 850px)').matches) browse.open = false;
+</script>
+<style>
+  .reading-layout{max-width:1280px;margin:auto;padding:44px 48px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:55px}
+  aside{font-size:15px;line-height:1.6;align-self:start;position:sticky;top:24px;max-height:calc(100dvh - 48px);overflow-y:auto;padding:0 12px 8px 0}
+  .graph-link{display:block;margin:20px 0 26px;text-decoration:none}
+  summary{cursor:pointer;color:var(--ink);padding:12px 0;line-height:1.5}
+  nav{display:block;font-size:inherit}.topic{border-top:1px solid var(--line)}.topic summary{font-weight:500}
+  .topic a{display:block;padding:8px 12px;margin:3px 0;text-decoration:none;color:var(--muted);border-left:2px solid transparent}
+  .topic a:hover{color:var(--gold)}.topic a[aria-current=page]{color:var(--mint);background:var(--panel);border-left-color:var(--mint);border-radius:0 4px 4px 0}
+  .reading-content{min-width:0;max-width:76ch}.breadcrumb{font-size:13px;color:var(--muted);line-height:1.7;margin:0 0 20px}.breadcrumb span{margin:0 8px}
+  .page-contents{border:1px solid var(--line);border-radius:8px;padding:0 18px;margin-bottom:32px;background:var(--panel);font-size:15px}
+  .page-contents summary span{font-size:12px;color:var(--muted);margin-left:12px}.page-contents ul{padding-left:22px;margin:4px 0 20px}.page-contents li{margin:10px 0;line-height:1.5}
+  .reading-footer{margin-top:48px;border-top:1px solid var(--line);padding-top:24px;display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;font-size:14px}
+  @media(max-width:850px){.reading-layout{display:block;padding:28px 24px}aside{position:static;max-height:none;padding:0 0 18px;margin-bottom:24px;border-bottom:1px solid var(--line)}aside .eyebrow{margin-top:0}.graph-link{margin:12px 0}.browse nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;align-items:start}.reading-content{max-width:100%}}
+  @media(max-width:500px){.browse nav{display:block}.reading-layout{padding:24px 20px}.page-contents summary span{display:none}}
+</style>

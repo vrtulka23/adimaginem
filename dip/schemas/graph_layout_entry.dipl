@@ -1,0 +1,7 @@
+?descr "One ID in the explicit visual ordering; explicit position determines layout initialization order, not philosophical rank"
+id str
+  ?descr "Existing concept or edge ID; collection membership and uniqueness are checked by the shared viewer validator"
+
+position int
+  ?descr "Unique nonnegative position within this visual order; independent of exporter enumeration"
+  !condition ({.} >= 0)

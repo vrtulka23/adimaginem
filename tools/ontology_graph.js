@@ -4,6 +4,7 @@ import { loadOntology } from "./ontology_loader.mjs";
 import { prepareTours, filterTours, seedTourPositions } from "./guided_tours.mjs";
 import { prepareSupport, filterSupportGraph, groundingLabels, witnessLabels, supportLabels, statusLabels } from "./source_support.mjs";
 import { createSelectionForce } from "./selection_force.mjs";
+import { orderedGraphRecords } from "./graph_layout.mjs";
 import { SVGLoader } from "https://esm.sh/three/examples/jsm/loaders/SVGLoader.js";
 import {
   faAppleWhole, faBrain, faCompass, faCross, faCube, faCrown, faDove,
@@ -38,6 +39,42 @@ let selectionRing;
 const selectionForce = createSelectionForce();
 let suspendedForces = null;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let introInspected = false, introScheduled = false, introReady = false, introTimer;
+const introInputs = new AbortController();
+
+function syncIntroRotation() {
+  if (!graph) return;
+  graph.controls().autoRotate = Boolean(introReady && !introInspected &&
+    !document.hidden && !reducedMotion.matches && !activeTour);
+}
+
+function stopIntroRotation() {
+  introInspected = true;
+  introReady = false;
+  clearTimeout(introTimer);
+  introInputs.abort();
+  syncIntroRotation();
+}
+
+// Capture interaction even while DIPL is loading or the initial layout settles.
+// Pointer movement also covers inspecting node/edge tooltips without clicking.
+for (const event of ["pointermove", "pointerdown", "wheel", "keydown", "focusin", "click"]) {
+  document.addEventListener(event, stopIntroRotation, {capture:true, passive:true, signal:introInputs.signal});
+}
+document.addEventListener("visibilitychange", syncIntroRotation);
+reducedMotion.addEventListener("change", () => { if (reducedMotion.matches) stopIntroRotation(); });
+
+function scheduleIntroRotation(cameraFitMs) {
+  if (introScheduled || introInspected || !sizeConfig.intro_rotation_enabled ||
+      reducedMotion.matches || !graph.graphData().nodes.length) return;
+  introScheduled = true;
+  graph.controls().autoRotateSpeed = sizeConfig.intro_rotation_speed;
+  // Let the camera finish fitting the settled graph before starting its orbit.
+  introTimer = setTimeout(() => {
+    introReady = true;
+    syncIntroRotation();
+  }, cameraFitMs + sizeConfig.intro_rotation_delay_ms);
+}
 
 function createSelectionRing() {
   const radius = sizeConfig.selection_ring_radius;
@@ -548,7 +585,7 @@ function createGraph() {
     .onNodeClick((node) => { if (selected === node.id) deselectConcept(); else selectConcept(node.id); })
     .onNodeHover((node) => { el.style.cursor = node ? "pointer" : "grab"; })
     .onEngineTick(() => { if (activeTour) { syncBillboards(); return; } const active = visibleNodes(); for (const n of active) positions[n.id] = [n.x, n.y, n.z]; if (!initialTickReported && active.length) { const extent = ["x", "y", "z"].map((axis) => (Math.max(...active.map((n) => n[axis])) - Math.min(...active.map((n) => n[axis]))).toFixed(1)).join(" × "); document.querySelector("#layout-status").textContent = `Settling ${active.length} concepts · initial spread ${extent}.`; initialTickReported = true; } syncBillboards(); })
-    .onEngineStop(() => { if (activeTour) { settleTourView(); return; } if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; if (layoutNeedsFit) { graph.zoomToFit(700, sizeConfig.fit_padding); layoutNeedsFit = false; } if (selected && !selectionForce.active()) openSelectionSpace(); });
+    .onEngineStop(() => { if (activeTour) { settleTourView(); return; } if (selectionForce.returning()) restoreSelectionLayout(); const settled = visibleNodes(); for (const n of settled) positions[n.id] = [n.x, n.y, n.z]; const span = settled.length ? Math.max(...["x", "y", "z"].map((axis) => Math.max(...settled.map((n) => n[axis])) - Math.min(...settled.map((n) => n[axis])))).toFixed(1) : "0"; document.querySelector("#layout-status").textContent = `Layout settled · ${settled.length} concepts · span ${span}. Change filters or icon size to anneal again.`; const cameraFitMs = layoutNeedsFit ? 700 : 0; if (layoutNeedsFit) { graph.zoomToFit(cameraFitMs, sizeConfig.fit_padding); layoutNeedsFit = false; } scheduleIntroRotation(cameraFitMs); if (selected && !selectionForce.active()) openSelectionSpace(); });
   graph.d3AlphaDecay(sizeConfig.alpha_decay).d3AlphaMin(sizeConfig.alpha_min).d3VelocityDecay(sizeConfig.velocity_decay).cooldownTime(sizeConfig.cooldown_ms);
   graph.d3Force("selection-space", selectionForce);
   graph.scene().add(new THREE.AmbientLight(0x9fb1c7, 1.7));
@@ -556,11 +593,13 @@ function createGraph() {
   const fill = new THREE.DirectionalLight(0x94c9ff, 1.25); fill.position.set(8, -5, 10); graph.scene().add(fill);
   createSelectionRing();
   graph.controls().addEventListener("change", syncBillboards);
+  graph.controls().addEventListener("start", stopIntroRotation);
   graph.cameraPosition({ x: 25, y: 18, z: 29 }, { x: 0, y: 0, z: 0 }, 0);
 }
 
 function selectConcept(id) {
   if (!concepts[id] || (activeTour && !activeTour.scene.conceptIds.has(id))) return;
+  stopIntroRotation();
   selected = id;
   document.querySelector("#search").value = id;
   showDetails(id); updateVisualState();
@@ -822,6 +861,7 @@ function initializeTours() {
 }
 function startTour(id) {
   if (!tourData.tours[id]) return;
+  stopIntroRotation();
   if (activeTour) exitTour();
   tourTransition++;
   restoreSelectionLayout();
@@ -931,7 +971,7 @@ function exitTour(completed = false) {
 async function init() {
   try {
     db = await loadOntology(message => { document.querySelector("#loading").textContent = message; });
-    concepts = db.ontology.concepts; edges = db.ontology.edges; tourData = prepareTours(db); supportIndex = prepareSupport(db);
+    ({ concepts, edges } = orderedGraphRecords(db)); tourData = prepareTours(db); supportIndex = prepareSupport(db);
     relationColors = db.graph_relation_colors;
     conceptGroups = Object.fromEntries(Object.entries(db.graph_concept_styles).map(([id, style]) => [id, colorLabel(style)]));
     colorGroups = Object.fromEntries(Object.values(db.graph_concept_styles).map((style) => [colorLabel(style), style]));

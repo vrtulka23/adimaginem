@@ -1,0 +1,2705 @@
+# Explicit visual order captured from the original uncached DIPL export.
+# Append new IDs to preserve the relative order of existing entries.
+# This order is a presentation setting, not a claim about ontology.
+graph_layout
+  edge_order list : graph_layout_entry
+
+  edge_order[]
+    id = "person_has_body"
+    position = 0
+
+  edge_order[]
+    id = "person_has_form"
+    position = 1
+
+  edge_order[]
+    id = "soul_distinct_from_power"
+    position = 2
+
+  edge_order[]
+    id = "soul_origin_of_powers"
+    position = 3
+
+  edge_order[]
+    id = "soul_vegetative_power"
+    position = 4
+
+  edge_order[]
+    id = "soul_sensitive_power"
+    position = 5
+
+  edge_order[]
+    id = "soul_appetitive_power"
+    position = 6
+
+  edge_order[]
+    id = "soul_locomotive_power"
+    position = 7
+
+  edge_order[]
+    id = "soul_intellectual_power"
+    position = 8
+
+  edge_order[]
+    id = "body_has_organ"
+    position = 9
+
+  edge_order[]
+    id = "sensitive_power_uses_organ"
+    position = 10
+
+  edge_order[]
+    id = "external_sense_kind"
+    position = 11
+
+  edge_order[]
+    id = "internal_sense_kind"
+    position = 12
+
+  edge_order[]
+    id = "sight_kind"
+    position = 13
+
+  edge_order[]
+    id = "hearing_kind"
+    position = 14
+
+  edge_order[]
+    id = "smell_kind"
+    position = 15
+
+  edge_order[]
+    id = "taste_kind"
+    position = 16
+
+  edge_order[]
+    id = "touch_kind"
+    position = 17
+
+  edge_order[]
+    id = "common_sense_kind"
+    position = 18
+
+  edge_order[]
+    id = "imagination_kind"
+    position = 19
+
+  edge_order[]
+    id = "cogitative_kind"
+    position = 20
+
+  edge_order[]
+    id = "sensitive_memory_kind"
+    position = 21
+
+  edge_order[]
+    id = "nutritive_kind"
+    position = 22
+
+  edge_order[]
+    id = "augmentative_kind"
+    position = 23
+
+  edge_order[]
+    id = "generative_kind"
+    position = 24
+
+  edge_order[]
+    id = "possible_intellect_kind"
+    position = 25
+
+  edge_order[]
+    id = "agent_intellect_kind"
+    position = 26
+
+  edge_order[]
+    id = "sensitive_appetite_kind"
+    position = 27
+
+  edge_order[]
+    id = "will_kind"
+    position = 28
+
+  edge_order[]
+    id = "concupiscible_kind"
+    position = 29
+
+  edge_order[]
+    id = "irascible_kind"
+    position = 30
+
+  edge_order[]
+    id = "choice_of_will"
+    position = 31
+
+  edge_order[]
+    id = "natural_appetite_object"
+    position = 32
+
+  edge_order[]
+    id = "concupiscible_object"
+    position = 33
+
+  edge_order[]
+    id = "irascible_object"
+    position = 34
+
+  edge_order[]
+    id = "will_object"
+    position = 35
+
+  edge_order[]
+    id = "sensing_of_sensitive_power"
+    position = 36
+
+  edge_order[]
+    id = "imagining_of_imagination"
+    position = 37
+
+  edge_order[]
+    id = "understanding_of_intellect"
+    position = 38
+
+  edge_order[]
+    id = "willing_of_will"
+    position = 39
+
+  edge_order[]
+    id = "counsel_of_intellect"
+    position = 40
+
+  edge_order[]
+    id = "virtue_as_habit"
+    position = 41
+
+  edge_order[]
+    id = "practical_intellect_is_intellectual"
+    position = 42
+
+  edge_order[]
+    id = "agent_intellect_renders_phantasm_intelligible"
+    position = 43
+
+  edge_order[]
+    id = "intelligible_species_abstracted_from_phantasm"
+    position = 44
+
+  edge_order[]
+    id = "possible_intellect_receives_species"
+    position = 45
+
+  edge_order[]
+    id = "understanding_turns_to_phantasm"
+    position = 46
+
+  edge_order[]
+    id = "practical_intellect_moves_will_as_to_object"
+    position = 47
+
+  edge_order[]
+    id = "will_moves_practical_intellect_as_to_exercise"
+    position = 48
+
+  edge_order[]
+    id = "counsel_precedes_choice"
+    position = 49
+
+  edge_order[]
+    id = "phantasm_retained_by_imagination"
+    position = 50
+
+  edge_order[]
+    id = "love_of_concupiscible"
+    position = 51
+
+  edge_order[]
+    id = "hatred_of_concupiscible"
+    position = 52
+
+  edge_order[]
+    id = "desire_of_concupiscible"
+    position = 53
+
+  edge_order[]
+    id = "aversion_of_concupiscible"
+    position = 54
+
+  edge_order[]
+    id = "joy_of_concupiscible"
+    position = 55
+
+  edge_order[]
+    id = "sorrow_of_concupiscible"
+    position = 56
+
+  edge_order[]
+    id = "hope_of_irascible"
+    position = 57
+
+  edge_order[]
+    id = "despair_of_irascible"
+    position = 58
+
+  edge_order[]
+    id = "fear_of_irascible"
+    position = 59
+
+  edge_order[]
+    id = "daring_of_irascible"
+    position = 60
+
+  edge_order[]
+    id = "anger_of_irascible"
+    position = 61
+
+  edge_order[]
+    id = "love_formal_object"
+    position = 62
+
+  edge_order[]
+    id = "hatred_formal_object"
+    position = 63
+
+  edge_order[]
+    id = "desire_formal_object"
+    position = 64
+
+  edge_order[]
+    id = "aversion_formal_object"
+    position = 65
+
+  edge_order[]
+    id = "joy_formal_object"
+    position = 66
+
+  edge_order[]
+    id = "sorrow_formal_object"
+    position = 67
+
+  edge_order[]
+    id = "hope_formal_object"
+    position = 68
+
+  edge_order[]
+    id = "despair_formal_object"
+    position = 69
+
+  edge_order[]
+    id = "fear_formal_object"
+    position = 70
+
+  edge_order[]
+    id = "daring_formal_object"
+    position = 71
+
+  edge_order[]
+    id = "anger_harmful_object"
+    position = 72
+
+  edge_order[]
+    id = "anger_redress_object"
+    position = 73
+
+  edge_order[]
+    id = "love_opposed_to_hatred"
+    position = 74
+
+  edge_order[]
+    id = "desire_opposed_to_aversion"
+    position = 75
+
+  edge_order[]
+    id = "joy_opposed_to_sorrow"
+    position = 76
+
+  edge_order[]
+    id = "hope_opposed_to_despair"
+    position = 77
+
+  edge_order[]
+    id = "fear_opposed_to_daring"
+    position = 78
+
+  edge_order[]
+    id = "hope_opposed_to_fear"
+    position = 79
+
+  edge_order[]
+    id = "love_precedes_desire"
+    position = 80
+
+  edge_order[]
+    id = "desire_precedes_joy"
+    position = 81
+
+  edge_order[]
+    id = "desire_precedes_hope"
+    position = 82
+
+  edge_order[]
+    id = "aversion_precedes_fear"
+    position = 83
+
+  edge_order[]
+    id = "love_can_give_rise_to_hatred"
+    position = 84
+
+  edge_order[]
+    id = "love_can_give_rise_to_fear"
+    position = 85
+
+  edge_order[]
+    id = "love_can_give_rise_to_desire"
+    position = 86
+
+  edge_order[]
+    id = "love_can_give_rise_to_joy"
+    position = 87
+
+  edge_order[]
+    id = "hope_can_give_rise_to_daring"
+    position = 88
+
+  edge_order[]
+    id = "fear_can_give_rise_to_sorrow"
+    position = 89
+
+  edge_order[]
+    id = "sorrow_can_give_rise_to_anger"
+    position = 90
+
+  edge_order[]
+    id = "hope_can_give_rise_to_anger"
+    position = 91
+
+  edge_order[]
+    id = "anger_can_give_rise_to_hatred"
+    position = 92
+
+  edge_order[]
+    id = "trinity_one_essence"
+    position = 93
+
+  edge_order[]
+    id = "father_person_of_trinity"
+    position = 94
+
+  edge_order[]
+    id = "son_person_of_trinity"
+    position = 95
+
+  edge_order[]
+    id = "spirit_person_of_trinity"
+    position = 96
+
+  edge_order[]
+    id = "sanctifying_kind_of_grace"
+    position = 97
+
+  edge_order[]
+    id = "actual_kind_of_grace"
+    position = 98
+
+  edge_order[]
+    id = "god_bestows_grace"
+    position = 99
+
+  edge_order[]
+    id = "god_bestows_sanctifying_grace"
+    position = 100
+
+  edge_order[]
+    id = "god_bestows_actual_grace"
+    position = 101
+
+  edge_order[]
+    id = "faith_ordered_to_god"
+    position = 102
+
+  edge_order[]
+    id = "hope_ordered_to_god"
+    position = 103
+
+  edge_order[]
+    id = "charity_ordered_to_god"
+    position = 104
+
+  edge_order[]
+    id = "god_bestows_spirit_gifts"
+    position = 105
+
+  edge_order[]
+    id = "god_infuses_theological_virtues"
+    position = 106
+
+  edge_order[]
+    id = "grace_in_soul"
+    position = 107
+
+  edge_order[]
+    id = "grace_distinct_from_virtue"
+    position = 108
+
+  edge_order[]
+    id = "cardinal_kind_of_virtue"
+    position = 109
+
+  edge_order[]
+    id = "theological_kind_of_virtue"
+    position = 110
+
+  edge_order[]
+    id = "acquired_kind_of_virtue"
+    position = 111
+
+  edge_order[]
+    id = "infused_kind_of_virtue"
+    position = 112
+
+  edge_order[]
+    id = "theological_kind_of_infused"
+    position = 113
+
+  edge_order[]
+    id = "gift_perfects_virtue"
+    position = 114
+
+  edge_order[]
+    id = "wisdom_gift_perfects_intellect"
+    position = 115
+
+  edge_order[]
+    id = "understanding_gift_perfects_intellect"
+    position = 116
+
+  edge_order[]
+    id = "counsel_gift_perfects_intellect"
+    position = 117
+
+  edge_order[]
+    id = "knowledge_gift_perfects_intellect"
+    position = 118
+
+  edge_order[]
+    id = "fortitude_gift_perfects_appetite"
+    position = 119
+
+  edge_order[]
+    id = "piety_gift_perfects_appetite"
+    position = 120
+
+  edge_order[]
+    id = "fear_gift_perfects_appetite"
+    position = 121
+
+  edge_order[]
+    id = "sacrament_instrumental_grace"
+    position = 122
+
+  edge_order[]
+    id = "sacraments_instituted_by_christ"
+    position = 123
+
+  edge_order[]
+    id = "sacramental_grace_kind"
+    position = 124
+
+  edge_order[]
+    id = "sacramental_grace_proper_to_sacraments"
+    position = 125
+
+  edge_order[]
+    id = "prudence_virtue_cardinal"
+    position = 126
+
+  edge_order[]
+    id = "justice_virtue_cardinal"
+    position = 127
+
+  edge_order[]
+    id = "fortitude_virtue_cardinal"
+    position = 128
+
+  edge_order[]
+    id = "temperance_virtue_cardinal"
+    position = 129
+
+  edge_order[]
+    id = "faith_virtue_theological"
+    position = 130
+
+  edge_order[]
+    id = "hope_virtue_theological"
+    position = 131
+
+  edge_order[]
+    id = "charity_virtue_theological"
+    position = 132
+
+  edge_order[]
+    id = "wisdom_gift_kind"
+    position = 133
+
+  edge_order[]
+    id = "understanding_gift_kind"
+    position = 134
+
+  edge_order[]
+    id = "counsel_gift_kind"
+    position = 135
+
+  edge_order[]
+    id = "fortitude_gift_kind"
+    position = 136
+
+  edge_order[]
+    id = "knowledge_gift_kind"
+    position = 137
+
+  edge_order[]
+    id = "piety_gift_kind"
+    position = 138
+
+  edge_order[]
+    id = "fear_of_lord_gift_kind"
+    position = 139
+
+  edge_order[]
+    id = "charity_fruit_kind"
+    position = 140
+
+  edge_order[]
+    id = "joy_fruit_kind"
+    position = 141
+
+  edge_order[]
+    id = "peace_fruit_kind"
+    position = 142
+
+  edge_order[]
+    id = "patience_fruit_kind"
+    position = 143
+
+  edge_order[]
+    id = "kindness_fruit_kind"
+    position = 144
+
+  edge_order[]
+    id = "goodness_fruit_kind"
+    position = 145
+
+  edge_order[]
+    id = "generosity_fruit_kind"
+    position = 146
+
+  edge_order[]
+    id = "gentleness_fruit_kind"
+    position = 147
+
+  edge_order[]
+    id = "faithfulness_fruit_kind"
+    position = 148
+
+  edge_order[]
+    id = "modesty_fruit_kind"
+    position = 149
+
+  edge_order[]
+    id = "self_control_fruit_kind"
+    position = 150
+
+  edge_order[]
+    id = "chastity_fruit_kind"
+    position = 151
+
+  edge_order[]
+    id = "baptism_sacrament"
+    position = 152
+
+  edge_order[]
+    id = "baptism_group"
+    position = 153
+
+  edge_order[]
+    id = "confirmation_sacrament"
+    position = 154
+
+  edge_order[]
+    id = "confirmation_group"
+    position = 155
+
+  edge_order[]
+    id = "eucharist_sacrament"
+    position = 156
+
+  edge_order[]
+    id = "eucharist_group"
+    position = 157
+
+  edge_order[]
+    id = "penance_sacrament"
+    position = 158
+
+  edge_order[]
+    id = "penance_group"
+    position = 159
+
+  edge_order[]
+    id = "anointing_of_sick_sacrament"
+    position = 160
+
+  edge_order[]
+    id = "anointing_of_sick_group"
+    position = 161
+
+  edge_order[]
+    id = "holy_orders_sacrament"
+    position = 162
+
+  edge_order[]
+    id = "holy_orders_group"
+    position = 163
+
+  edge_order[]
+    id = "matrimony_sacrament"
+    position = 164
+
+  edge_order[]
+    id = "matrimony_group"
+    position = 165
+
+  edge_order[]
+    id = "baptism_character"
+    position = 166
+
+  edge_order[]
+    id = "confirmation_character"
+    position = 167
+
+  edge_order[]
+    id = "holy_orders_character"
+    position = 168
+
+  edge_order[]
+    id = "father_begets_son"
+    position = 169
+
+  edge_order[]
+    id = "holy_spirit_proceeds_from_father"
+    position = 170
+
+  edge_order[]
+    id = "holy_spirit_proceeds_from_son"
+    position = 171
+
+  edge_order[]
+    id = "prudence_perfects_intellect"
+    position = 172
+
+  edge_order[]
+    id = "justice_perfects_will"
+    position = 173
+
+  edge_order[]
+    id = "fortitude_perfects_irascible"
+    position = 174
+
+  edge_order[]
+    id = "temperance_perfects_concupiscible"
+    position = 175
+
+  edge_order[]
+    id = "charity_fruit_formed_by_spirit"
+    position = 176
+
+  edge_order[]
+    id = "joy_fruit_formed_by_spirit"
+    position = 177
+
+  edge_order[]
+    id = "peace_fruit_formed_by_spirit"
+    position = 178
+
+  edge_order[]
+    id = "patience_fruit_formed_by_spirit"
+    position = 179
+
+  edge_order[]
+    id = "kindness_fruit_formed_by_spirit"
+    position = 180
+
+  edge_order[]
+    id = "goodness_fruit_formed_by_spirit"
+    position = 181
+
+  edge_order[]
+    id = "generosity_fruit_formed_by_spirit"
+    position = 182
+
+  edge_order[]
+    id = "gentleness_fruit_formed_by_spirit"
+    position = 183
+
+  edge_order[]
+    id = "faithfulness_fruit_formed_by_spirit"
+    position = 184
+
+  edge_order[]
+    id = "modesty_fruit_formed_by_spirit"
+    position = 185
+
+  edge_order[]
+    id = "self_control_fruit_formed_by_spirit"
+    position = 186
+
+  edge_order[]
+    id = "chastity_fruit_formed_by_spirit"
+    position = 187
+
+  edge_order[]
+    id = "word_names_son"
+    position = 188
+
+  edge_order[]
+    id = "love_names_spirit"
+    position = 189
+
+  edge_order[]
+    id = "father_one_essence"
+    position = 190
+
+  edge_order[]
+    id = "essential_love_common_to_father"
+    position = 191
+
+  edge_order[]
+    id = "operation_common_to_father"
+    position = 192
+
+  edge_order[]
+    id = "son_one_essence"
+    position = 193
+
+  edge_order[]
+    id = "essential_love_common_to_son"
+    position = 194
+
+  edge_order[]
+    id = "operation_common_to_son"
+    position = 195
+
+  edge_order[]
+    id = "holy_spirit_one_essence"
+    position = 196
+
+  edge_order[]
+    id = "essential_love_common_to_holy_spirit"
+    position = 197
+
+  edge_order[]
+    id = "operation_common_to_holy_spirit"
+    position = 198
+
+  edge_order[]
+    id = "father_distinct_from_son"
+    position = 199
+
+  edge_order[]
+    id = "father_coeternal_with_son"
+    position = 200
+
+  edge_order[]
+    id = "father_indwells_son"
+    position = 201
+
+  edge_order[]
+    id = "father_distinct_from_holy_spirit"
+    position = 202
+
+  edge_order[]
+    id = "father_coeternal_with_holy_spirit"
+    position = 203
+
+  edge_order[]
+    id = "father_indwells_holy_spirit"
+    position = 204
+
+  edge_order[]
+    id = "son_distinct_from_holy_spirit"
+    position = 205
+
+  edge_order[]
+    id = "son_coeternal_with_holy_spirit"
+    position = 206
+
+  edge_order[]
+    id = "son_indwells_holy_spirit"
+    position = 207
+
+  edge_order[]
+    id = "son_by_generation"
+    position = 208
+
+  edge_order[]
+    id = "spirit_by_love"
+    position = 209
+
+  edge_order[]
+    id = "father_subsisting_relation"
+    position = 210
+
+  edge_order[]
+    id = "son_subsisting_relation"
+    position = 211
+
+  edge_order[]
+    id = "spirit_subsisting_relation"
+    position = 212
+
+  edge_order[]
+    id = "spiration_common_to_father"
+    position = 213
+
+  edge_order[]
+    id = "spiration_common_to_son"
+    position = 214
+
+  edge_order[]
+    id = "paternity_opposed_to_filiation"
+    position = 215
+
+  edge_order[]
+    id = "spiration_opposed_to_procession"
+    position = 216
+
+  edge_order[]
+    id = "god_simple"
+    position = 217
+
+  edge_order[]
+    id = "god_one"
+    position = 218
+
+  edge_order[]
+    id = "god_same_as_trinity"
+    position = 219
+
+  edge_order[]
+    id = "god_creates_all"
+    position = 220
+
+  edge_order[]
+    id = "god_exemplar_cause_of_created_being"
+    position = 221
+
+  edge_order[]
+    id = "god_final_cause_of_created_being"
+    position = 222
+
+  edge_order[]
+    id = "god_creates_angels"
+    position = 223
+
+  edge_order[]
+    id = "god_creates_humans"
+    position = 224
+
+  edge_order[]
+    id = "god_creates_animals"
+    position = 225
+
+  edge_order[]
+    id = "god_creates_plants"
+    position = 226
+
+  edge_order[]
+    id = "god_creates_inanimate"
+    position = 227
+
+  edge_order[]
+    id = "spiritual_is_created"
+    position = 228
+
+  edge_order[]
+    id = "corporeal_is_created"
+    position = 229
+
+  edge_order[]
+    id = "angel_is_spiritual"
+    position = 230
+
+  edge_order[]
+    id = "human_is_created"
+    position = 231
+
+  edge_order[]
+    id = "animal_is_corporeal"
+    position = 232
+
+  edge_order[]
+    id = "plant_is_corporeal"
+    position = 233
+
+  edge_order[]
+    id = "inanimate_is_corporeal"
+    position = 234
+
+  edge_order[]
+    id = "demon_is_fallen_angel"
+    position = 235
+
+  edge_order[]
+    id = "angel_lacks_body"
+    position = 236
+
+  edge_order[]
+    id = "god_pure_act"
+    position = 237
+
+  edge_order[]
+    id = "faith_in_intellect"
+    position = 238
+
+  edge_order[]
+    id = "hope_in_will"
+    position = 239
+
+  edge_order[]
+    id = "speculative_intellect_kind"
+    position = 240
+
+  edge_order[]
+    id = "counsel_perfects_prudence"
+    position = 241
+
+  edge_order[]
+    id = "wisdom_in_intellect"
+    position = 242
+
+  edge_order[]
+    id = "charity_grounds_wisdom"
+    position = 243
+
+  edge_order[]
+    id = "charity_in_will"
+    position = 244
+
+  edge_order[]
+    id = "charity_act_of_will"
+    position = 245
+
+  edge_order[]
+    id = "gifts_are_habits"
+    position = 246
+
+  edge_order[]
+    id = "god_principal_cause_of_grace"
+    position = 247
+
+  edge_order[]
+    id = "baptism_regenerates"
+    position = 248
+
+  edge_order[]
+    id = "regeneration_begins_spiritual_life"
+    position = 249
+
+  edge_order[]
+    id = "confirmation_strengthens_life"
+    position = 250
+
+  edge_order[]
+    id = "eucharist_nourishes_life"
+    position = 251
+
+  edge_order[]
+    id = "penance_remits_sin"
+    position = 252
+
+  edge_order[]
+    id = "anointing_remedies_remnants"
+    position = 253
+
+  edge_order[]
+    id = "orders_enables_ministry"
+    position = 254
+
+  edge_order[]
+    id = "matrimony_ordered_to_procreation"
+    position = 255
+
+  edge_order[]
+    id = "matrimony_remedies_concupiscence"
+    position = 256
+
+  edge_order[]
+    id = "eucharist_increases_charity"
+    position = 257
+
+  edge_order[]
+    id = "eucharist_arouses_charity"
+    position = 258
+
+  edge_order[]
+    id = "character_in_intellect"
+    position = 259
+
+  edge_order[]
+    id = "character_participates_priesthood"
+    position = 260
+
+  edge_order[]
+    id = "priesthood_proper_to_incarnate_son"
+    position = 261
+
+  edge_order[]
+    id = "anointing_enables_endurance"
+    position = 262
+
+  edge_order[]
+    id = "anointing_bodily_healing"
+    position = 263
+
+  edge_order[]
+    id = "bodily_healing_of_body"
+    position = 264
+
+  edge_order[]
+    id = "angel_has_intellect"
+    position = 265
+
+  edge_order[]
+    id = "angel_has_will"
+    position = 266
+
+  edge_order[]
+    id = "blessed_angel_condition"
+    position = 267
+
+  edge_order[]
+    id = "grace_enables_angelic_turning"
+    position = 268
+
+  edge_order[]
+    id = "angelic_turning_act_of_will"
+    position = 269
+
+  edge_order[]
+    id = "angelic_turning_toward_god"
+    position = 270
+
+  edge_order[]
+    id = "blessed_angel_receives_vision"
+    position = 271
+
+  edge_order[]
+    id = "angelic_vision_act_of_intellect"
+    position = 272
+
+  edge_order[]
+    id = "vision_has_divine_object"
+    position = 273
+
+  edge_order[]
+    id = "counsel_directs_angelic_ministry"
+    position = 274
+
+  edge_order[]
+    id = "angelic_ministry_in_blessed"
+    position = 275
+
+  edge_order[]
+    id = "blessed_angels_united_to_christ"
+    position = 276
+
+  edge_order[]
+    id = "wisdom_gift_specific_intellect"
+    position = 277
+
+  edge_order[]
+    id = "understanding_gift_specific_intellect"
+    position = 278
+
+  edge_order[]
+    id = "counsel_gift_specific_intellect"
+    position = 279
+
+  edge_order[]
+    id = "knowledge_gift_specific_intellect"
+    position = 280
+
+  edge_order[]
+    id = "fruits_realized_in_humans"
+    position = 281
+
+  edge_order[]
+    id = "charity_fruit_expresses_love"
+    position = 282
+
+  edge_order[]
+    id = "joy_fruit_from_charity"
+    position = 283
+
+  edge_order[]
+    id = "peace_fruit_from_charity"
+    position = 284
+
+  edge_order[]
+    id = "peace_includes_concord"
+    position = 285
+
+  edge_order[]
+    id = "peace_includes_appetitive_harmony"
+    position = 286
+
+  edge_order[]
+    id = "patience_sustains_endurance"
+    position = 287
+
+  edge_order[]
+    id = "longanimity_sustains_waiting"
+    position = 288
+
+  edge_order[]
+    id = "goodness_expresses_benevolence"
+    position = 289
+
+  edge_order[]
+    id = "kindness_expresses_beneficence"
+    position = 290
+
+  edge_order[]
+    id = "gentleness_moderates_anger"
+    position = 291
+
+  edge_order[]
+    id = "faithfulness_expresses_fidelity"
+    position = 292
+
+  edge_order[]
+    id = "modesty_orders_conduct"
+    position = 293
+
+  edge_order[]
+    id = "self_control_resists_desire"
+    position = 294
+
+  edge_order[]
+    id = "self_control_exercised_in_will"
+    position = 295
+
+  edge_order[]
+    id = "chastity_moderates_desire"
+    position = 296
+
+  edge_order[]
+    id = "benevolence_act_of_will"
+    position = 297
+
+  edge_order[]
+    id = "charity_includes_benevolence"
+    position = 298
+
+  edge_order[]
+    id = "beneficence_expresses_charity"
+    position = 299
+
+  edge_order[]
+    id = "concord_realized_in_wills"
+    position = 300
+
+  edge_order[]
+    id = "harmony_realized_in_appetites"
+    position = 301
+
+  edge_order[]
+    id = "adversity_endurance_in_person"
+    position = 302
+
+  edge_order[]
+    id = "waiting_in_person"
+    position = 303
+
+  edge_order[]
+    id = "fidelity_in_person"
+    position = 304
+
+  edge_order[]
+    id = "outward_conduct_in_person"
+    position = 305
+
+  edge_order[]
+    id = "baptism_remedies_original_sin"
+    position = 306
+
+  edge_order[]
+    id = "justification_from_god"
+    position = 307
+
+  edge_order[]
+    id = "mortal_sin_personal"
+    position = 308
+
+  edge_order[]
+    id = "venial_sin_personal"
+    position = 309
+
+  edge_order[]
+    id = "vice_habit"
+    position = 310
+
+  edge_order[]
+    id = "vice_opposes_virtue"
+    position = 311
+
+  edge_order[]
+    id = "sin_disposes_to_vice"
+    position = 312
+
+  edge_order[]
+    id = "vice_inclines_sin"
+    position = 313
+
+  edge_order[]
+    id = "original_sin_privation"
+    position = 314
+
+  edge_order[]
+    id = "wounded_nature_original"
+    position = 315
+
+  edge_order[]
+    id = "wounded_nature_in_human"
+    position = 316
+
+  edge_order[]
+    id = "wounded_nature_ignorance_wound"
+    position = 317
+
+  edge_order[]
+    id = "ignorance_wound_power"
+    position = 318
+
+  edge_order[]
+    id = "wounded_nature_malice_wound"
+    position = 319
+
+  edge_order[]
+    id = "malice_wound_power"
+    position = 320
+
+  edge_order[]
+    id = "wounded_nature_weakness_wound"
+    position = 321
+
+  edge_order[]
+    id = "weakness_wound_power"
+    position = 322
+
+  edge_order[]
+    id = "wounded_nature_disordered_concupiscence"
+    position = 323
+
+  edge_order[]
+    id = "disordered_concupiscence_power"
+    position = 324
+
+  edge_order[]
+    id = "personal_sin_aggravates_wounds"
+    position = 325
+
+  edge_order[]
+    id = "sin_preserves_natural_intellect"
+    position = 326
+
+  edge_order[]
+    id = "ignorance_impedes_judgment"
+    position = 327
+
+  edge_order[]
+    id = "blindness_of_mind_impedes"
+    position = 328
+
+  edge_order[]
+    id = "blindness_of_mind_opposes_gift"
+    position = 329
+
+  edge_order[]
+    id = "dullness_of_understanding_impedes"
+    position = 330
+
+  edge_order[]
+    id = "dullness_of_understanding_opposes_gift"
+    position = 331
+
+  edge_order[]
+    id = "passion_impedes_judgment"
+    position = 332
+
+  edge_order[]
+    id = "passion_affects_imagining"
+    position = 333
+
+  edge_order[]
+    id = "imagining_affects_judgment"
+    position = 334
+
+  edge_order[]
+    id = "judgment_presents_good_to_will"
+    position = 335
+
+  edge_order[]
+    id = "judgment_act_of_practical_intellect"
+    position = 336
+
+  edge_order[]
+    id = "disordered_passion_sensitive"
+    position = 337
+
+  edge_order[]
+    id = "mortal_requires_grave_matter"
+    position = 338
+
+  edge_order[]
+    id = "mortal_requires_full_moral_knowledge"
+    position = 339
+
+  edge_order[]
+    id = "mortal_requires_deliberate_consent"
+    position = 340
+
+  edge_order[]
+    id = "mortal_deprives_charity_virtue"
+    position = 341
+
+  edge_order[]
+    id = "mortal_deprives_sanctifying_grace"
+    position = 342
+
+  edge_order[]
+    id = "venial_weakens_charity"
+    position = 343
+
+  edge_order[]
+    id = "venial_preserves_grace"
+    position = 344
+
+  edge_order[]
+    id = "mortal_involves_aversion"
+    position = 345
+
+  edge_order[]
+    id = "aversion_away_from_god"
+    position = 346
+
+  edge_order[]
+    id = "consent_act_of_will"
+    position = 347
+
+  edge_order[]
+    id = "grace_enables_conversion"
+    position = 348
+
+  edge_order[]
+    id = "conversion_to_god"
+    position = 349
+
+  edge_order[]
+    id = "repentance_opposes_personal_sin"
+    position = 350
+
+  edge_order[]
+    id = "justification_includes_human_conversion"
+    position = 351
+
+  edge_order[]
+    id = "justification_includes_repentance_for_sin"
+    position = 352
+
+  edge_order[]
+    id = "justification_includes_remission_of_sin"
+    position = 353
+
+  edge_order[]
+    id = "penance_remedies_mortal"
+    position = 354
+
+  edge_order[]
+    id = "good_angel_can_illuminate"
+    position = 355
+
+  edge_order[]
+    id = "illumination_strengthens_intellect"
+    position = 356
+
+  edge_order[]
+    id = "illumination_uses_phantasms"
+    position = 357
+
+  edge_order[]
+    id = "illumination_does_not_infuse_faith"
+    position = 358
+
+  edge_order[]
+    id = "blessed_angel_can_affect_imagination"
+    position = 359
+
+  edge_order[]
+    id = "blessed_angel_can_affect_external_sense"
+    position = 360
+
+  edge_order[]
+    id = "blessed_angel_can_persuade"
+    position = 361
+
+  edge_order[]
+    id = "blessed_angel_cannot_compel_consent"
+    position = 362
+
+  edge_order[]
+    id = "fallen_angel_can_affect_imagination"
+    position = 363
+
+  edge_order[]
+    id = "fallen_angel_can_affect_external_sense"
+    position = 364
+
+  edge_order[]
+    id = "fallen_angel_can_persuade"
+    position = 365
+
+  edge_order[]
+    id = "fallen_angel_cannot_compel_consent"
+    position = 366
+
+  edge_order[]
+    id = "persuasion_inclines_will"
+    position = 367
+
+  edge_order[]
+    id = "demon_can_suggest"
+    position = 368
+
+  edge_order[]
+    id = "demonic_suggestion_temptation"
+    position = 369
+
+  edge_order[]
+    id = "suggestion_can_stir_passion"
+    position = 370
+
+  edge_order[]
+    id = "temptation_inclines_to_sin"
+    position = 371
+
+  edge_order[]
+    id = "temptation_cannot_compel_consent"
+    position = 372
+
+  edge_order[]
+    id = "personal_sin_does_not_require_suggestion"
+    position = 373
+
+  edge_order[]
+    id = "good_angel_guardian_office"
+    position = 374
+
+  edge_order[]
+    id = "guardianship_part_of_ministry"
+    position = 375
+
+  edge_order[]
+    id = "personal_guardianship_kind"
+    position = 376
+
+  edge_order[]
+    id = "guardianship_human_recipient"
+    position = 377
+
+  edge_order[]
+    id = "god_orders_guardianship"
+    position = 378
+
+  edge_order[]
+    id = "combat_resists_temptation"
+    position = 379
+
+  edge_order[]
+    id = "combat_includes_vigilance"
+    position = 380
+
+  edge_order[]
+    id = "christian_prayer_sustains_combat"
+    position = 381
+
+  edge_order[]
+    id = "eucharist_sustains_combat"
+    position = 382
+
+  edge_order[]
+    id = "penance_sustains_combat"
+    position = 383
+
+  edge_order[]
+    id = "grace_enables_combat"
+    position = 384
+
+  edge_order[]
+    id = "guardianship_assists_combat"
+    position = 385
+
+  edge_order[]
+    id = "prayer_act_of_intellect"
+    position = 386
+
+  edge_order[]
+    id = "will_moves_prayer"
+    position = 387
+
+  edge_order[]
+    id = "prayer_turns_to_god"
+    position = 388
+
+  edge_order[]
+    id = "prayer_within_providence"
+    position = 389
+
+  edge_order[]
+    id = "possession_kind_affliction"
+    position = 390
+
+  edge_order[]
+    id = "oppression_kind_affliction"
+    position = 391
+
+  edge_order[]
+    id = "oppression_distinct_possession"
+    position = 392
+
+  edge_order[]
+    id = "possession_concerns_body"
+    position = 393
+
+  edge_order[]
+    id = "possession_cannot_compel_consent"
+    position = 394
+
+  edge_order[]
+    id = "possession_distinct_personal_sin"
+    position = 395
+
+  edge_order[]
+    id = "affliction_concerns_fallen_angel"
+    position = 396
+
+  edge_order[]
+    id = "demonic_assault_under_providence"
+    position = 397
+
+  edge_order[]
+    id = "deliverance_depends_on_christ_passion"
+    position = 398
+
+  edge_order[]
+    id = "deliverance_prayer_kind_prayer"
+    position = 399
+
+  edge_order[]
+    id = "deliverance_prayer_petitions_liberation"
+    position = 400
+
+  edge_order[]
+    id = "deliverance_prayer_to_father"
+    position = 401
+
+  edge_order[]
+    id = "church_prays_for_deliverance"
+    position = 402
+
+  edge_order[]
+    id = "ordinary_deliverance_distinct_major_exorcism"
+    position = 403
+
+  edge_order[]
+    id = "sacramental_distinct_sacrament"
+    position = 404
+
+  edge_order[]
+    id = "sacramental_instituted_church"
+    position = 405
+
+  edge_order[]
+    id = "sacramental_disposes_grace"
+    position = 406
+
+  edge_order[]
+    id = "exorcism_kind_sacramental"
+    position = 407
+
+  edge_order[]
+    id = "exorcism_in_christ_name"
+    position = 408
+
+  edge_order[]
+    id = "church_ministry_exorcism"
+    position = 409
+
+  edge_order[]
+    id = "exorcism_ordered_deliverance"
+    position = 410
+
+  edge_order[]
+    id = "major_kind_exorcism"
+    position = 411
+
+  edge_order[]
+    id = "major_concerns_possession"
+    position = 412
+
+  edge_order[]
+    id = "major_requires_authorized_minister"
+    position = 413
+
+  edge_order[]
+    id = "baptismal_kind_exorcism"
+    position = 414
+
+  edge_order[]
+    id = "baptismal_ordered_baptism"
+    position = 415
+
+  edge_order[]
+    id = "baptismal_not_requires_possession"
+    position = 416
+
+  edge_order[]
+    id = "exorcism_distinct_penance"
+    position = 417
+
+  edge_order[]
+    id = "first_hierarchy_kind"
+    position = 418
+
+  edge_order[]
+    id = "second_hierarchy_kind"
+    position = 419
+
+  edge_order[]
+    id = "third_hierarchy_kind"
+    position = 420
+
+  edge_order[]
+    id = "seraphim_order"
+    position = 421
+
+  edge_order[]
+    id = "seraphim_members"
+    position = 422
+
+  edge_order[]
+    id = "seraphim_hierarchy"
+    position = 423
+
+  edge_order[]
+    id = "seraphim_characteristic"
+    position = 424
+
+  edge_order[]
+    id = "cherubim_order"
+    position = 425
+
+  edge_order[]
+    id = "cherubim_members"
+    position = 426
+
+  edge_order[]
+    id = "cherubim_hierarchy"
+    position = 427
+
+  edge_order[]
+    id = "cherubim_characteristic"
+    position = 428
+
+  edge_order[]
+    id = "thrones_order"
+    position = 429
+
+  edge_order[]
+    id = "thrones_members"
+    position = 430
+
+  edge_order[]
+    id = "thrones_hierarchy"
+    position = 431
+
+  edge_order[]
+    id = "thrones_characteristic"
+    position = 432
+
+  edge_order[]
+    id = "dominions_order"
+    position = 433
+
+  edge_order[]
+    id = "dominions_members"
+    position = 434
+
+  edge_order[]
+    id = "dominions_hierarchy"
+    position = 435
+
+  edge_order[]
+    id = "dominions_characteristic"
+    position = 436
+
+  edge_order[]
+    id = "angelic_virtues_order"
+    position = 437
+
+  edge_order[]
+    id = "angelic_virtues_members"
+    position = 438
+
+  edge_order[]
+    id = "angelic_virtues_hierarchy"
+    position = 439
+
+  edge_order[]
+    id = "angelic_virtues_characteristic"
+    position = 440
+
+  edge_order[]
+    id = "powers_order_order"
+    position = 441
+
+  edge_order[]
+    id = "powers_order_members"
+    position = 442
+
+  edge_order[]
+    id = "powers_order_hierarchy"
+    position = 443
+
+  edge_order[]
+    id = "powers_order_characteristic"
+    position = 444
+
+  edge_order[]
+    id = "principalities_order"
+    position = 445
+
+  edge_order[]
+    id = "principalities_members"
+    position = 446
+
+  edge_order[]
+    id = "principalities_hierarchy"
+    position = 447
+
+  edge_order[]
+    id = "principalities_characteristic"
+    position = 448
+
+  edge_order[]
+    id = "archangels_order"
+    position = 449
+
+  edge_order[]
+    id = "archangels_members"
+    position = 450
+
+  edge_order[]
+    id = "archangels_hierarchy"
+    position = 451
+
+  edge_order[]
+    id = "archangels_characteristic"
+    position = 452
+
+  edge_order[]
+    id = "angels_order_order"
+    position = 453
+
+  edge_order[]
+    id = "angels_order_members"
+    position = 454
+
+  edge_order[]
+    id = "angels_order_hierarchy"
+    position = 455
+
+  edge_order[]
+    id = "angels_order_characteristic"
+    position = 456
+
+  edge_order[]
+    id = "seraphim_above_cherubim"
+    position = 457
+
+  edge_order[]
+    id = "cherubim_above_thrones"
+    position = 458
+
+  edge_order[]
+    id = "thrones_above_dominions"
+    position = 459
+
+  edge_order[]
+    id = "dominions_above_angelic_virtues"
+    position = 460
+
+  edge_order[]
+    id = "angelic_virtues_above_powers_order"
+    position = 461
+
+  edge_order[]
+    id = "powers_order_above_principalities"
+    position = 462
+
+  edge_order[]
+    id = "principalities_above_archangels"
+    position = 463
+
+  edge_order[]
+    id = "archangels_above_angels_order"
+    position = 464
+
+  edge_order[]
+    id = "hierarchy_ordered_to_god"
+    position = 465
+
+  edge_order[]
+    id = "seraphic_ardor_charity"
+    position = 466
+
+  edge_order[]
+    id = "cherubic_knowledge_in_intellect"
+    position = 467
+
+  edge_order[]
+    id = "direction_of_angelic_ministry_directs_ministry"
+    position = 468
+
+  edge_order[]
+    id = "empowerment_of_angelic_ministry_directs_ministry"
+    position = 469
+
+  edge_order[]
+    id = "ordering_of_angelic_execution_directs_ministry"
+    position = 470
+
+  edge_order[]
+    id = "leadership_of_angelic_ministry_directs_ministry"
+    position = 471
+
+  edge_order[]
+    id = "announcement_of_great_divine_matters_human_recipient"
+    position = 472
+
+  edge_order[]
+    id = "angelic_announcement_human_recipient"
+    position = 473
+
+  edge_order[]
+    id = "lowest_order_guardianship"
+    position = 474
+
+  edge_order[]
+    id = "powers_restrain_demons"
+    position = 475
+
+  edge_order[]
+    id = "matter_potential_to_form"
+    position = 476
+
+  edge_order[]
+    id = "form_actualizes_matter"
+    position = 477
+
+  edge_order[]
+    id = "privation_in_becoming"
+    position = 478
+
+  edge_order[]
+    id = "potency_to_act"
+    position = 479
+
+  edge_order[]
+    id = "accident_in_substance"
+    position = 480
+
+  edge_order[]
+    id = "material_cause_kind"
+    position = 481
+
+  edge_order[]
+    id = "formal_cause_kind"
+    position = 482
+
+  edge_order[]
+    id = "efficient_cause_kind"
+    position = 483
+
+  edge_order[]
+    id = "final_cause_kind"
+    position = 484
+
+  edge_order[]
+    id = "substantial_form_kind"
+    position = 485
+
+  edge_order[]
+    id = "accidental_form_kind"
+    position = 486
+
+  edge_order[]
+    id = "quality_accident"
+    position = 487
+
+  edge_order[]
+    id = "habit_quality"
+    position = 488
+
+  edge_order[]
+    id = "soul_power_quality"
+    position = 489
+
+  edge_order[]
+    id = "human_substance"
+    position = 490
+
+  edge_order[]
+    id = "soul_substantial_form_kind"
+    position = 491
+
+  edge_order[]
+    id = "soul_actualizes_body"
+    position = 492
+
+  edge_order[]
+    id = "human_material_principle"
+    position = 493
+
+  edge_order[]
+    id = "first_actuality_kind"
+    position = 494
+
+  edge_order[]
+    id = "second_actuality_kind"
+    position = 495
+
+  edge_order[]
+    id = "soul_first_actuality"
+    position = 496
+
+  edge_order[]
+    id = "first_to_second_actuality"
+    position = 497
+
+  edge_order[]
+    id = "understanding_second_actuality"
+    position = 498
+
+  edge_order[]
+    id = "sensing_second_actuality"
+    position = 499
+
+  edge_order[]
+    id = "intellect_potential_to_understanding"
+    position = 500
+
+  edge_order[]
+    id = "passive_potency_kind"
+    position = 501
+
+  edge_order[]
+    id = "active_power_kind"
+    position = 502
+
+  edge_order[]
+    id = "intellect_passive_potency"
+    position = 503
+
+  edge_order[]
+    id = "agent_intellect_active_power"
+    position = 504
+
+  edge_order[]
+    id = "pure_act_actuality"
+    position = 505
+
+  edge_order[]
+    id = "pure_act_excludes_passivity"
+    position = 506
+
+  edge_order[]
+    id = "god_active_power"
+    position = 507
+
+  edge_order[]
+    id = "angel_has_act"
+    position = 508
+
+  edge_order[]
+    id = "angel_has_potency"
+    position = 509
+
+  edge_order[]
+    id = "matter_in_generation"
+    position = 510
+
+  edge_order[]
+    id = "form_in_generation"
+    position = 511
+
+  edge_order[]
+    id = "matter_material_cause"
+    position = 512
+
+  edge_order[]
+    id = "form_formal_cause"
+    position = 513
+
+  edge_order[]
+    id = "god_efficient_cause_role"
+    position = 514
+
+  edge_order[]
+    id = "god_final_cause_role"
+    position = 515
+
+  edge_order[]
+    id = "original_sin_includes_privation"
+    position = 516
+
+  edge_order[]
+    id = "natural_appetite_follows_form"
+    position = 517
+
+  edge_order[]
+    id = "creation_distinct_generation"
+    position = 518
+
+  edge_order[]
+    id = "creation_no_presupposed_matter"
+    position = 519
+
+  edge_order[]
+    id = "god_can_create"
+    position = 520
+
+  edge_order[]
+    id = "quality_accidental_form"
+    position = 521
+
+  edge_order[]
+    id = "heaven_includes_vision"
+    position = 522
+
+  edge_order[]
+    id = "heaven_communion_trinity"
+    position = 523
+
+  edge_order[]
+    id = "hell_excludes_vision"
+    position = 524
+
+  edge_order[]
+    id = "hell_eternal_punishment"
+    position = 525
+
+  edge_order[]
+    id = "purgatory_distinct_hell"
+    position = 526
+
+  edge_order[]
+    id = "purgatory_purifies"
+    position = 527
+
+  edge_order[]
+    id = "purgatory_to_heaven"
+    position = 528
+
+  edge_order[]
+    id = "souls_purgatory_state"
+    position = 529
+
+  edge_order[]
+    id = "souls_purgatory_grace"
+    position = 530
+
+  edge_order[]
+    id = "souls_purgatory_separated"
+    position = 531
+
+  edge_order[]
+    id = "separated_soul_rational"
+    position = 532
+
+  edge_order[]
+    id = "soul_separates_body"
+    position = 533
+
+  edge_order[]
+    id = "death_separated_soul"
+    position = 534
+
+  edge_order[]
+    id = "soul_reunited_body"
+    position = 535
+
+  edge_order[]
+    id = "resurrection_human_recipient"
+    position = 536
+
+  edge_order[]
+    id = "judgment_at_death"
+    position = 537
+
+  edge_order[]
+    id = "particular_judgment_recipient"
+    position = 538
+
+  edge_order[]
+    id = "last_judgment_recipient"
+    position = 539
+
+  edge_order[]
+    id = "son_judges"
+    position = 540
+
+  edge_order[]
+    id = "resurrection_final_judgment"
+    position = 541
+
+  edge_order[]
+    id = "renewal_resurrection"
+    position = 542
+
+  edge_order[]
+    id = "suffrages_recipients"
+    position = 543
+
+  edge_order[]
+    id = "eucharist_suffrage"
+    position = 544
+
+  edge_order[]
+    id = "temporal_distinct_eternal"
+    position = 545
+
+  edge_order[]
+    id = "purification_temporal"
+    position = 546
+
+  edge_order[]
+    id = "remission_distinct_purification"
+    position = 547
+
+  edge_order[]
+    id = "penance_absolution"
+    position = 548
+
+  edge_order[]
+    id = "absolution_remission"
+    position = 549
+
+  edge_order[]
+    id = "penance_contrition"
+    position = 550
+
+  edge_order[]
+    id = "contrition_repentance"
+    position = 551
+
+  edge_order[]
+    id = "penance_confession"
+    position = 552
+
+  edge_order[]
+    id = "penance_satisfaction"
+    position = 553
+
+  edge_order[]
+    id = "satisfaction_remnants"
+    position = 554
+
+  edge_order[]
+    id = "mary_human"
+    position = 555
+
+  edge_order[]
+    id = "mary_mother_son"
+    position = 556
+
+  edge_order[]
+    id = "mary_theotokos"
+    position = 557
+
+  edge_order[]
+    id = "son_assumes_human_nature"
+    position = 558
+
+  edge_order[]
+    id = "incarnation_of_son"
+    position = 559
+
+  edge_order[]
+    id = "incarnation_human_nature"
+    position = 560
+
+  edge_order[]
+    id = "human_nature_body"
+    position = 561
+
+  edge_order[]
+    id = "human_nature_soul"
+    position = 562
+
+  edge_order[]
+    id = "mary_virginity"
+    position = 563
+
+  edge_order[]
+    id = "mary_immaculate"
+    position = 564
+
+  edge_order[]
+    id = "mary_preserved_original_sin"
+    position = 565
+
+  edge_order[]
+    id = "immaculate_distinct_virginity"
+    position = 566
+
+  edge_order[]
+    id = "mary_assumption"
+    position = 567
+
+  edge_order[]
+    id = "assumption_heaven"
+    position = 568
+
+  edge_order[]
+    id = "mary_spiritual_motherhood"
+    position = 569
+
+  edge_order[]
+    id = "mary_can_intercede"
+    position = 570
+
+  edge_order[]
+    id = "marian_intercession_depends_christ"
+    position = 571
+
+  edge_order[]
+    id = "christ_mediation_son"
+    position = 572
+
+  edge_order[]
+    id = "mary_receives_grace"
+    position = 573
+
+  edge_order[]
+    id = "saints_heavenly_state"
+    position = 574
+
+  edge_order[]
+    id = "saints_human"
+    position = 575
+
+  edge_order[]
+    id = "mary_among_saints"
+    position = 576
+
+  edge_order[]
+    id = "communion_glorified"
+    position = 577
+
+  edge_order[]
+    id = "communion_purifying"
+    position = 578
+
+  edge_order[]
+    id = "saints_can_intercede"
+    position = 579
+
+  edge_order[]
+    id = "saints_intercession_to_god"
+    position = 580
+
+  edge_order[]
+    id = "saints_intercession_depends_christ"
+    position = 581
+
+  edge_order[]
+    id = "marian_intercession_kind"
+    position = 582
+
+  edge_order[]
+    id = "invocation_saints_recipient"
+    position = 583
+
+  edge_order[]
+    id = "invocation_mary_kind"
+    position = 584
+
+  edge_order[]
+    id = "invocation_mary_recipient"
+    position = 585
+
+  edge_order[]
+    id = "dulia_saints"
+    position = 586
+
+  edge_order[]
+    id = "hyperdulia_mary"
+    position = 587
+
+  edge_order[]
+    id = "latria_god"
+    position = 588
+
+  edge_order[]
+    id = "hyperdulia_not_latria"
+    position = 589
+
+  edge_order[]
+    id = "dulia_not_latria"
+    position = 590
+
+  edge_order[]
+    id = "invocation_not_adoration"
+    position = 591
+
+  edge_order[]
+    id = "sin_subject_will"
+    position = 592
+
+  edge_order[]
+    id = "sin_subject_intellectual_power"
+    position = 593
+
+  edge_order[]
+    id = "conscience_guides_will"
+    position = 594
+
+  edge_order[]
+    id = "passion_impedes_conscience"
+    position = 595
+
+  edge_order[]
+    id = "god_subsistent_esse"
+    position = 596
+
+  edge_order[]
+    id = "resurrection_ours_instrumental"
+    position = 597
+
+  edge_order[]
+    id = "good_convertible_being"
+    position = 598
+
+  edge_order[]
+    id = "one_convertible_being"
+    position = 599
+
+  edge_order[]
+    id = "true_convertible_being"
+    position = 600
+
+  edge_order[]
+    id = "intellect_truth_sense"
+    position = 601
+
+  edge_order[]
+    id = "things_truth_sense"
+    position = 602
+
+  edge_order[]
+    id = "intellect_ordered_truth"
+    position = 603
+
+  edge_order[]
+    id = "practical_judgment_truth"
+    position = 604
+
+  edge_order[]
+    id = "truth_things_divine_intellect"
+    position = 605
+
+  edge_order[]
+    id = "divine_intellect_god"
+    position = 606
+
+  edge_order[]
+    id = "god_truth"
+    position = 607
+
+  edge_order[]
+    id = "noncontradiction_being"
+    position = 608
+
+  edge_order[]
+    id = "principles_habit"
+    position = 609
+
+  edge_order[]
+    id = "principles_noncontradiction"
+    position = 610
+
+  edge_order[]
+    id = "principles_subject_intellect"
+    position = 611
+
+  edge_order[]
+    id = "synderesis_habit"
+    position = 612
+
+  edge_order[]
+    id = "synderesis_practical_principle"
+    position = 613
+
+  edge_order[]
+    id = "synderesis_practical_intellect"
+    position = 614
+
+  edge_order[]
+    id = "conscience_intellectual_act"
+    position = 615
+
+  edge_order[]
+    id = "conscience_choice"
+    position = 616
+
+  edge_order[]
+    id = "conscience_synderesis_distinction"
+    position = 617
+
+  edge_order[]
+    id = "practical_principle_good"
+    position = 618
+
+  edge_order[]
+    id = "natural_law_first_precept"
+    position = 619
+
+  edge_order[]
+    id = "natural_law_eternal"
+    position = 620
+
+  edge_order[]
+    id = "eternal_law_providence"
+    position = 621
+
+  edge_order[]
+    id = "natural_law_common_good"
+    position = 622
+
+  edge_order[]
+    id = "created_received_esse"
+    position = 623
+
+  edge_order[]
+    id = "esse_actuality"
+    position = 624
+
+  edge_order[]
+    id = "created_essence_esse"
+    position = 625
+
+  edge_order[]
+    id = "human_nature_essence"
+    position = 626
+
+  edge_order[]
+    id = "person_human_nature"
+    position = 627
+
+  edge_order[]
+    id = "god_divine_essence"
+    position = 628
+
+  edge_order[]
+    id = "analogy_god"
+    position = 629
+
+  edge_order[]
+    id = "analogy_created"
+    position = 630
+
+  edge_order[]
+    id = "providence_god"
+    position = 631
+
+  edge_order[]
+    id = "providence_creatures"
+    position = 632
+
+  edge_order[]
+    id = "human_image_god"
+    position = 633
+
+  edge_order[]
+    id = "angel_image_god"
+    position = 634
+
+  edge_order[]
+    id = "image_intellect"
+    position = 635
+
+  edge_order[]
+    id = "incarnation_hypostatic_union"
+    position = 636
+
+  edge_order[]
+    id = "union_son"
+    position = 637
+
+  edge_order[]
+    id = "son_human_will"
+    position = 638
+
+  edge_order[]
+    id = "christ_will_kind"
+    position = 639
+
+  edge_order[]
+    id = "christ_wills_distinct"
+    position = 640
+
+  edge_order[]
+    id = "divine_will_common_father"
+    position = 641
+
+  edge_order[]
+    id = "divine_will_common_son"
+    position = 642
+
+  edge_order[]
+    id = "divine_will_common_holy_spirit"
+    position = 643
+
+  edge_order[]
+    id = "passion_son"
+    position = 644
+
+  edge_order[]
+    id = "passion_redemption"
+    position = 645
+
+  edge_order[]
+    id = "passion_remission"
+    position = 646
+
+  edge_order[]
+    id = "resurrection_son"
+    position = 647
+
+  edge_order[]
+    id = "resurrection_ours_exemplar"
+    position = 648
+
+  edge_order[]
+    id = "resurrection_justification"
+    position = 649
+
+  edge_order[]
+    id = "church_head_christ"
+    position = 650
+
+  edge_order[]
+    id = "church_marks"
+    position = 651
+
+  edge_order[]
+    id = "church_communion_saints"
+    position = 652
+
+  edge_order[]
+    id = "church_communion"
+    position = 653
+
+  edge_order[]
+    id = "church_magisterium"
+    position = 654
+
+  edge_order[]
+    id = "church_apostolic_succession"
+    position = 655
+
+  edge_order[]
+    id = "succession_tradition"
+    position = 656
+
+  edge_order[]
+    id = "revelation_god"
+    position = 657
+
+  edge_order[]
+    id = "revelation_christ"
+    position = 658
+
+  edge_order[]
+    id = "scripture_transmits"
+    position = 659
+
+  edge_order[]
+    id = "tradition_transmits"
+    position = 660
+
+  edge_order[]
+    id = "scripture_tradition_distinct"
+    position = 661
+
+  edge_order[]
+    id = "scripture_deposit"
+    position = 662
+
+  edge_order[]
+    id = "tradition_deposit"
+    position = 663
+
+  edge_order[]
+    id = "magisterium_deposit"
+    position = 664
+
+  edge_order[]
+    id = "eucharist_presence"
+    position = 665
+
+  edge_order[]
+    id = "eucharist_substantial_son"
+    position = 666
+
+  edge_order[]
+    id = "eucharist_conversion"
+    position = 667
+
+  edge_order[]
+    id = "conversion_presence"
+    position = 668
+
+  edge_order[]
+    id = "conversion_substance"
+    position = 669
+
+  edge_order[]
+    id = "conversion_accidents"
+    position = 670
+
+  edge_order[]
+    id = "eucharist_sacrifice"
+    position = 671
+
+  edge_order[]
+    id = "eucharist_one_sacrifice"
+    position = 672
+
+  edge_order[]
+    id = "church_offering"
+    position = 673
+
+  edge_order[]
+    id = "eucharist_church_unity"
+    position = 674

@@ -7,7 +7,7 @@ claim str
 # Declare source_id str on each record so SNT preserves its local ?rationale.
 # The runtime requires and validates it, as with ontological_edge.source_id.
 grounding str[1:]
-  ?descr "Claim-specific modes: natural_reason, divine_revelation, reasoning_from_revelation, or unassessed alone; validated element by element by Rust and the viewer"
+  ?descr "Claim-specific modes: natural_reason, divine_revelation, reasoning_from_revelation, or unassessed alone; validated element by element by the shared graph validator"
   # SNT !options compares a whole array, so it cannot constrain each element here.
 support_kind str
   !options ["explicit_statement", "philosophical_argument", "theological_inference", "typological_interpretation", "doctrinal_formulation", "terminology_only", "editorial_classification"]

@@ -1,0 +1,141 @@
+# Focused, cited explanations. Coordinates are reading aids, not doctrinal claims.
+
+graph_tour_steps[mass_one_sacrifice_memorial]
+  tour_id = "mass_one_sacrifice"
+  title = "The one sacrifice made present"
+  question = "Does the Mass add another crucifixion?"
+  narrative = "The Catechism identifies the sacrifice of the Eucharist with Christ's one sacrifice, made present sacramentally (1366-1367). Aquinas explains the celebration as a sacramental representation of the Passion through which its fruits are communicated (ST III, q. 83, a. 1)."
+  qualification = "Sacramental representation here is effective, not merely a picture. Christ does not suffer a new historical death at each celebration."
+  source_ids = ["st_iii_83_1", "ccc_1362_1377", "st_iii_48_1_6"]
+  concept_ids = ["eucharist", "eucharistic_sacrifice", "christ_passion", "son", "church"]
+  edge_ids = ["eucharist_sacrifice", "eucharist_one_sacrifice", "passion_son", "church_offering"]
+  highlighted_concept_ids = ["eucharistic_sacrifice", "christ_passion"]
+  highlighted_edge_ids = ["eucharist_one_sacrifice"]
+  focus_concept = "eucharistic_sacrifice"
+  camera_z = 36.0
+
+graph_tour_positions[mass_one_sacrifice_memorial_eucharist]
+  step_id = "mass_one_sacrifice_memorial"
+  concept_id = "eucharist"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[mass_one_sacrifice_memorial_eucharistic_sacrifice]
+  step_id = "mass_one_sacrifice_memorial"
+  concept_id = "eucharistic_sacrifice"
+  x = 2.47
+  y = 5.71
+  z = -2.50
+
+graph_tour_positions[mass_one_sacrifice_memorial_christ_passion]
+  step_id = "mass_one_sacrifice_memorial"
+  concept_id = "christ_passion"
+  x = -6.47
+  y = 3.53
+  z = 2.50
+
+graph_tour_positions[mass_one_sacrifice_memorial_son]
+  step_id = "mass_one_sacrifice_memorial"
+  concept_id = "son"
+  x = -6.47
+  y = -3.53
+  z = -2.50
+
+graph_tour_positions[mass_one_sacrifice_memorial_church]
+  step_id = "mass_one_sacrifice_memorial"
+  concept_id = "church"
+  x = 2.47
+  y = -5.71
+  z = 2.50
+
+graph_tour_steps[mass_one_sacrifice_presence]
+  tour_id = "mass_one_sacrifice"
+  title = "What changes, and what remains"
+  question = "Does sacramental presence mean only a reminder, or a visible change of appearance?"
+  narrative = "Aquinas distinguishes the conversion of substance from the remaining sensible qualities of bread and wine (ST III, q. 75, aa. 1, 4-5). The Catechism teaches that the whole Christ is substantially present (1374-1376)."
+  qualification = "Substance and accident are philosophical terms here. The appearance of bread and wine remains; this teaching is not a claim that laboratory observation detects ordinary flesh."
+  source_ids = ["st_iii_75_1_5", "ccc_1362_1377"]
+  concept_ids = ["eucharist", "real_presence", "transubstantiation", "substance", "accident"]
+  edge_ids = ["eucharist_presence", "eucharist_conversion", "conversion_presence", "conversion_substance", "conversion_accidents"]
+  highlighted_concept_ids = ["real_presence", "transubstantiation", "substance", "accident"]
+  highlighted_edge_ids = ["conversion_presence", "conversion_substance", "conversion_accidents"]
+  focus_concept = "real_presence"
+  camera_z = 36.0
+
+graph_tour_positions[mass_one_sacrifice_presence_eucharist]
+  step_id = "mass_one_sacrifice_presence"
+  concept_id = "eucharist"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[mass_one_sacrifice_presence_real_presence]
+  step_id = "mass_one_sacrifice_presence"
+  concept_id = "real_presence"
+  x = 2.47
+  y = 5.71
+  z = -2.50
+
+graph_tour_positions[mass_one_sacrifice_presence_transubstantiation]
+  step_id = "mass_one_sacrifice_presence"
+  concept_id = "transubstantiation"
+  x = -6.47
+  y = 3.53
+  z = 2.50
+
+graph_tour_positions[mass_one_sacrifice_presence_substance]
+  step_id = "mass_one_sacrifice_presence"
+  concept_id = "substance"
+  x = -6.47
+  y = -3.53
+  z = -2.50
+
+graph_tour_positions[mass_one_sacrifice_presence_accident]
+  step_id = "mass_one_sacrifice_presence"
+  concept_id = "accident"
+  x = 2.47
+  y = -5.71
+  z = 2.50
+
+graph_tour_steps[mass_one_sacrifice_fruit]
+  tour_id = "mass_one_sacrifice"
+  title = "Communion is ordered to charity"
+  question = "What is the sacrament meant to bring about in the recipient?"
+  narrative = "Aquinas describes the Eucharist as spiritual nourishment which strengthens grace and charity and arouses charity to action (ST III, q. 79, a. 1). Its purpose includes living union with Christ."
+  qualification = "The graph records the sacrament's proper effects, not an inevitable outcome regardless of the recipient. The Catechism distinguishes sacramental efficacy from the fruits received according to a person's disposition (1128)."
+  source_ids = ["st_iii_79_1", "st_iii_65_1", "ccc_1127_1129"]
+  concept_ids = ["eucharist", "spiritual_life", "charity_virtue", "act_of_charity"]
+  edge_ids = ["eucharist_nourishes_life", "eucharist_increases_charity", "eucharist_arouses_charity"]
+  highlighted_concept_ids = ["eucharist", "charity_virtue", "act_of_charity"]
+  highlighted_edge_ids = ["eucharist_nourishes_life", "eucharist_increases_charity", "eucharist_arouses_charity"]
+  focus_concept = "eucharist"
+  camera_z = 36.0
+
+graph_tour_positions[mass_one_sacrifice_fruit_eucharist]
+  step_id = "mass_one_sacrifice_fruit"
+  concept_id = "eucharist"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[mass_one_sacrifice_fruit_spiritual_life]
+  step_id = "mass_one_sacrifice_fruit"
+  concept_id = "spiritual_life"
+  x = 0.00
+  y = 6.00
+  z = -2.50
+
+graph_tour_positions[mass_one_sacrifice_fruit_charity_virtue]
+  step_id = "mass_one_sacrifice_fruit"
+  concept_id = "charity_virtue"
+  x = -8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[mass_one_sacrifice_fruit_act_of_charity]
+  step_id = "mass_one_sacrifice_fruit"
+  concept_id = "act_of_charity"
+  x = -0.00
+  y = -6.00
+  z = -2.50

@@ -46,7 +46,7 @@ The canonical files are:
 5. Leave doctrinal standing unassessed unless the relevant source supports the proposed status. Supply `status_source_id` when assigning a status.
 6. Validate and seek scholarly review. Set `reviewed` only after that review has actually occurred.
 
-Scalar categories use DIPL `!options` and `!labels`. The installed SNT checks `!options` against a whole array rather than each element, so the multi-valued `grounding` field uses a typed string array with element validation in Rust and the shared viewer. As with existing edges, `source_id str` is declared on each record: the installed SNT replaces its local rationale metadata when the field is supplied by the schema. The loaders and validators require that field and its rationale. Validators reject unknown references, missing rationale, invalid or duplicate modes, unassessed mixed with assessed modes, invalid biblical ranges, and unsupported status references.
+Scalar categories use DIPL `!options` and `!labels`. The installed SNT checks `!options` against a whole array rather than each element, so the multi-valued `grounding` field uses a typed string array with element validation in the shared graph validator. As with existing edges, `source_id str` is declared on each record: the installed SNT replaces its local rationale metadata when the field is supplied by the schema. The loaders and validators require that field and its rationale. Validators reject unknown references, missing rationale, invalid or duplicate modes, unassessed mixed with assessed modes, invalid biblical ranges, and unsupported status references.
 
 ## Reading and filtering
 
@@ -56,12 +56,6 @@ Concept and relation assessments are independent. Matching relations retain thei
 
 The concept panel has accordions for Definition, Grounding and sources, Study areas, Relations using this principle (where applicable), and Connected relations. Relation rows expand to show their citations, qualifications, conditions, and any additional grounding records. Connection summaries expose the same evidence for their exact edges.
 
-The Python and static WebAssembly modes use the same canonical DIPL and viewer. CLI access:
+The Python viewer and static Astro site use the same DIPL data and shared validator. Select a concept and open **Grounding and sources**, or expand a connected relation to inspect its own assessment. Run `./setup.sh --check` for build and integrity checks.
 
-```sh
-python3 adimaginem.py support god
-python3 adimaginem.py support person_has_form --target-kind edge
-python3 adimaginem.py validate
-```
-
-Concept queries also include their support records. Validation checks structure and provenance; it does not certify a theological interpretation.
+Validation checks structure and provenance; it does not certify a theological interpretation.

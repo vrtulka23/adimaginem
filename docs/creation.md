@@ -1,6 +1,6 @@
 # Creation and created orders
 
-The creation graph is in [`creation_sources.dip`](../dip/creation_sources.dip), [`creation_concepts.dip`](../dip/creation_concepts.dip), and [`creation_edges.dip`](../dip/creation_edges.dip). Its central relation is explicit: `god creates angel`, `god creates human_person`, `god creates nonhuman_animal`, `god creates plant`, and `god creates inanimate_material_creature`. The more general `god creates created_being` states the universal claim. `god` and `trinity` are two graph labels for the same one God; the `denotes_same_god_as` edge records that co-reference. Creation is the common work of the Trinity ([Catechism §§290–292](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_4_the_creator.index.html)). God alone creates from nothing ([§296](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_4_the_creator.index.html); [Aquinas, *ST* I, q. 45, a. 5](https://www.newadvent.org/summa/1045.htm)). Accordingly, the Rust validator rejects a `creates` edge whose subject is a creature.
+The creation graph is in [`creation_sources.dip`](../dip/creation_sources.dip), [`creation_concepts.dip`](../dip/creation_concepts.dip), and [`creation_edges.dip`](../dip/creation_edges.dip). Its central relation is explicit: `god creates angel`, `god creates human_person`, `god creates nonhuman_animal`, `god creates plant`, and `god creates inanimate_material_creature`. The more general `god creates created_being` states the universal claim. `god` and `trinity` are two graph labels for the same one God; the `denotes_same_god_as` edge records that co-reference. Creation is the common work of the Trinity ([Catechism §§290–292](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_4_the_creator.index.html)). God alone creates from nothing ([§296](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_4_the_creator.index.html); [Aquinas, *ST* I, q. 45, a. 5](https://www.newadvent.org/summa/1045.htm)). Accordingly, the shared graph validator rejects a `creates` edge whose subject is a creature.
 
 The `is_kind_of` edges classify spiritual and corporeal creatures. Angels are spiritual creatures; animals, plants, and inanimate material things are corporeal creatures. The human person is a creature composed of spirit and body and is not reduced to either order alone ([Catechism §327](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_5_heaven_and_earth.index.html)). The existing `human_person has_corporeal_dimension human_body` edge makes the human body explicit. The new `angel lacks_corporeality corporeality` edge records the Church's account of angels as noncorporeal spirits ([§§328–330](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_5_heaven_and_earth.index.html)). These are claims about kinds of beings, not empirical anatomy.
 
@@ -12,14 +12,8 @@ The creature classes do not form a chain of makers. The Catechism speaks of the 
 
 ## Relation vocabulary
 
-Every edge predicate has a definition and `kind` in [`dip/relations.dip`](../dip/relations.dip), checked by [`ontological_relation.dipl`](../dip/schemas/ontological_relation.dipl). Kinds include creation, classification, composition, metaphysical relation, and condition. This separates `creates` from `is_kind_of`, `has_corporeal_dimension`, and `is_fallen_condition_of`. The registry defines how a relation is used; each concrete edge still has its own source and rationale. The Rust loader rejects an unregistered relation.
+Every edge predicate has a definition and `kind` in [`dip/relations.dip`](../dip/relations.dip), checked by [`ontological_relation.dipl`](../dip/schemas/ontological_relation.dipl). Kinds include creation, classification, composition, metaphysical relation, and condition. This separates `creates` from `is_kind_of`, `has_corporeal_dimension`, and `is_fallen_condition_of`. The registry defines how a relation is used; each concrete edge still has its own source and rationale. The shared graph validator rejects an unregistered relation.
 
-Inspect the statements and vocabulary with:
-
-```sh
-python3 adimaginem.py outgoing god --relation creates
-python3 adimaginem.py outgoing angel
-python3 adimaginem.py relation creates
-```
+In the graph, select God or Angel and open **Connected relations**. Use the relation filter to inspect creation edges; expanded rows show the predicate, supporting passage, and rationale.
 
 Return to the [documentation index](index.md).

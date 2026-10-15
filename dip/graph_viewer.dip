@@ -5,6 +5,12 @@ graph_viewer[default]
 
   study_focus_enabled = false
 
+  intro_rotation_enabled = true
+
+  intro_rotation_speed = 8
+
+  intro_rotation_delay_ms = 500
+
   icon_size float = 2.0
   icon_size_min float = 0.85
   icon_size_max float = 10.0

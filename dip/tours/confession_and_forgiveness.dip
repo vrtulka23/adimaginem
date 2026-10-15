@@ -1,0 +1,155 @@
+# Focused, cited explanations. Coordinates are reading aids, not doctrinal claims.
+
+graph_tour_steps[confession_and_forgiveness_source]
+  tour_id = "confession_and_forgiveness"
+  title = "God is the source of forgiveness"
+  question = "Does a minister replace God?"
+  narrative = "The Catechism begins its explanation with God's authority to forgive and Christ's entrusting of a ministry of reconciliation (1441-1442). Aquinas distinguishes God as principal cause of grace from sacramental instruments (ST III, q. 62, a. 1)."
+  qualification = "The route through grace and sacrament explains different kinds of agency. It does not transfer divine power to a minister independently of God."
+  source_ids = ["ccc_1441_1449", "st_iii_62_1", "ccc_1210_1211", "st_iii_86_1_6"]
+  concept_ids = ["god", "grace", "sacrament", "penance", "remission_of_sin"]
+  edge_ids = ["god_principal_cause_of_grace", "sacrament_instrumental_grace", "penance_sacrament", "penance_remits_sin"]
+  highlighted_concept_ids = ["god", "penance", "remission_of_sin"]
+  highlighted_edge_ids = ["god_principal_cause_of_grace", "penance_remits_sin"]
+  focus_concept = "god"
+  camera_z = 36.0
+
+graph_tour_positions[confession_and_forgiveness_source_god]
+  step_id = "confession_and_forgiveness_source"
+  concept_id = "god"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_source_grace]
+  step_id = "confession_and_forgiveness_source"
+  concept_id = "grace"
+  x = 2.47
+  y = 5.71
+  z = -2.50
+
+graph_tour_positions[confession_and_forgiveness_source_sacrament]
+  step_id = "confession_and_forgiveness_source"
+  concept_id = "sacrament"
+  x = -6.47
+  y = 3.53
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_source_penance]
+  step_id = "confession_and_forgiveness_source"
+  concept_id = "penance"
+  x = -6.47
+  y = -3.53
+  z = -2.50
+
+graph_tour_positions[confession_and_forgiveness_source_remission_of_sin]
+  step_id = "confession_and_forgiveness_source"
+  concept_id = "remission_of_sin"
+  x = 2.47
+  y = -5.71
+  z = 2.50
+
+graph_tour_steps[confession_and_forgiveness_ministry]
+  tour_id = "confession_and_forgiveness"
+  title = "Absolution is a ministerial act"
+  question = "What does the priest mean by absolving?"
+  narrative = "Aquinas explains absolution as an effective sacramental act performed ministerially (ST III, q. 84, a. 3, replies 3-5). The Catechism describes the confessor as the servant of God's forgiveness (1466)."
+  qualification = "This is the Catholic account of an entrusted ministry. The sacramental sign points to God's mercy, not the priest's personal moral superiority."
+  source_ids = ["st_iii_84_3", "ccc_1461_1467", "st_iii_48_1_6"]
+  concept_ids = ["penance", "sacramental_absolution", "remission_of_sin", "christ_passion", "son"]
+  edge_ids = ["penance_absolution", "absolution_remission", "passion_remission", "passion_son"]
+  highlighted_concept_ids = ["sacramental_absolution", "remission_of_sin", "christ_passion"]
+  highlighted_edge_ids = ["absolution_remission", "passion_remission"]
+  focus_concept = "sacramental_absolution"
+  camera_z = 36.0
+
+graph_tour_positions[confession_and_forgiveness_ministry_penance]
+  step_id = "confession_and_forgiveness_ministry"
+  concept_id = "penance"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_ministry_sacramental_absolution]
+  step_id = "confession_and_forgiveness_ministry"
+  concept_id = "sacramental_absolution"
+  x = 2.47
+  y = 5.71
+  z = -2.50
+
+graph_tour_positions[confession_and_forgiveness_ministry_remission_of_sin]
+  step_id = "confession_and_forgiveness_ministry"
+  concept_id = "remission_of_sin"
+  x = -6.47
+  y = 3.53
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_ministry_christ_passion]
+  step_id = "confession_and_forgiveness_ministry"
+  concept_id = "christ_passion"
+  x = -6.47
+  y = -3.53
+  z = -2.50
+
+graph_tour_positions[confession_and_forgiveness_ministry_son]
+  step_id = "confession_and_forgiveness_ministry"
+  concept_id = "son"
+  x = 2.47
+  y = -5.71
+  z = 2.50
+
+graph_tour_steps[confession_and_forgiveness_conversion]
+  tour_id = "confession_and_forgiveness"
+  title = "Forgiveness includes a real turning back"
+  question = "Can confession be a permission to keep doing wrong?"
+  narrative = "The Catechism identifies contrition, confession, and satisfaction among the penitent's acts (1451-1460). Contrition includes rejecting the sin and resolving to amend; satisfaction seeks to repair its harm."
+  qualification = "A sincere purpose of amendment is not a guarantee that a person will never fall again. Satisfaction is a response to mercy, not a payment that purchases God's forgiveness."
+  source_ids = ["ccc_1451_1460", "st_iii_84_3"]
+  concept_ids = ["penance", "contrition", "repentance_for_sin", "sacramental_confession", "satisfaction_for_sin", "sacramental_absolution"]
+  edge_ids = ["penance_contrition", "contrition_repentance", "penance_confession", "penance_satisfaction", "penance_absolution"]
+  highlighted_concept_ids = ["contrition", "sacramental_confession", "satisfaction_for_sin"]
+  highlighted_edge_ids = ["penance_contrition", "contrition_repentance", "penance_confession", "penance_satisfaction", "penance_absolution"]
+  focus_concept = "contrition"
+  camera_z = 36.0
+
+graph_tour_positions[confession_and_forgiveness_conversion_penance]
+  step_id = "confession_and_forgiveness_conversion"
+  concept_id = "penance"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_conversion_contrition]
+  step_id = "confession_and_forgiveness_conversion"
+  concept_id = "contrition"
+  x = 4.00
+  y = 5.20
+  z = -2.50
+
+graph_tour_positions[confession_and_forgiveness_conversion_repentance_for_sin]
+  step_id = "confession_and_forgiveness_conversion"
+  concept_id = "repentance_for_sin"
+  x = -4.00
+  y = 5.20
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_conversion_sacramental_confession]
+  step_id = "confession_and_forgiveness_conversion"
+  concept_id = "sacramental_confession"
+  x = -8.00
+  y = 0.00
+  z = -2.50
+
+graph_tour_positions[confession_and_forgiveness_conversion_satisfaction_for_sin]
+  step_id = "confession_and_forgiveness_conversion"
+  concept_id = "satisfaction_for_sin"
+  x = -4.00
+  y = -5.20
+  z = 2.50
+
+graph_tour_positions[confession_and_forgiveness_conversion_sacramental_absolution]
+  step_id = "confession_and_forgiveness_conversion"
+  concept_id = "sacramental_absolution"
+  x = 4.00
+  y = -5.20
+  z = -2.50

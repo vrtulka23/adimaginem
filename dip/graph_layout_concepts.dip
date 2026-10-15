@@ -1,0 +1,1273 @@
+# Explicit visual order captured from the original uncached DIPL export.
+# Append new IDs to preserve the relative order of existing entries.
+# This order is a presentation setting, not a claim about ontology.
+graph_layout
+  concept_order list : graph_layout_entry
+
+  concept_order[]
+    id = "human_person"
+    position = 0
+
+  concept_order[]
+    id = "human_body"
+    position = 1
+
+  concept_order[]
+    id = "rational_soul"
+    position = 2
+
+  concept_order[]
+    id = "soul_power"
+    position = 3
+
+  concept_order[]
+    id = "vegetative_power"
+    position = 4
+
+  concept_order[]
+    id = "sensitive_power"
+    position = 5
+
+  concept_order[]
+    id = "appetitive_power"
+    position = 6
+
+  concept_order[]
+    id = "locomotive_power"
+    position = 7
+
+  concept_order[]
+    id = "intellectual_power"
+    position = 8
+
+  concept_order[]
+    id = "bodily_organ"
+    position = 9
+
+  concept_order[]
+    id = "nutritive_power"
+    position = 10
+
+  concept_order[]
+    id = "augmentative_power"
+    position = 11
+
+  concept_order[]
+    id = "generative_power"
+    position = 12
+
+  concept_order[]
+    id = "external_sense"
+    position = 13
+
+  concept_order[]
+    id = "sight"
+    position = 14
+
+  concept_order[]
+    id = "hearing"
+    position = 15
+
+  concept_order[]
+    id = "smell"
+    position = 16
+
+  concept_order[]
+    id = "taste"
+    position = 17
+
+  concept_order[]
+    id = "touch"
+    position = 18
+
+  concept_order[]
+    id = "internal_sense"
+    position = 19
+
+  concept_order[]
+    id = "common_sense"
+    position = 20
+
+  concept_order[]
+    id = "imagination"
+    position = 21
+
+  concept_order[]
+    id = "cogitative_power"
+    position = 22
+
+  concept_order[]
+    id = "sensitive_memory"
+    position = 23
+
+  concept_order[]
+    id = "possible_intellect"
+    position = 24
+
+  concept_order[]
+    id = "agent_intellect"
+    position = 25
+
+  concept_order[]
+    id = "sensitive_appetite"
+    position = 26
+
+  concept_order[]
+    id = "will"
+    position = 27
+
+  concept_order[]
+    id = "concupiscible_appetite"
+    position = 28
+
+  concept_order[]
+    id = "irascible_appetite"
+    position = 29
+
+  concept_order[]
+    id = "choice"
+    position = 30
+
+  concept_order[]
+    id = "natural_appetite"
+    position = 31
+
+  concept_order[]
+    id = "naturally_suitable_good"
+    position = 32
+
+  concept_order[]
+    id = "sensible_good_or_evil"
+    position = 33
+
+  concept_order[]
+    id = "arduous_sensible_good_or_evil"
+    position = 34
+
+  concept_order[]
+    id = "apprehended_good"
+    position = 35
+
+  concept_order[]
+    id = "sensing"
+    position = 36
+
+  concept_order[]
+    id = "imagining"
+    position = 37
+
+  concept_order[]
+    id = "understanding"
+    position = 38
+
+  concept_order[]
+    id = "willing"
+    position = 39
+
+  concept_order[]
+    id = "counsel"
+    position = 40
+
+  concept_order[]
+    id = "habit"
+    position = 41
+
+  concept_order[]
+    id = "phantasm"
+    position = 42
+
+  concept_order[]
+    id = "intelligible_species"
+    position = 43
+
+  concept_order[]
+    id = "practical_intellect"
+    position = 44
+
+  concept_order[]
+    id = "love_passion"
+    position = 45
+
+  concept_order[]
+    id = "hatred_passion"
+    position = 46
+
+  concept_order[]
+    id = "desire_passion"
+    position = 47
+
+  concept_order[]
+    id = "aversion_passion"
+    position = 48
+
+  concept_order[]
+    id = "joy_passion"
+    position = 49
+
+  concept_order[]
+    id = "sorrow_passion"
+    position = 50
+
+  concept_order[]
+    id = "hope_passion"
+    position = 51
+
+  concept_order[]
+    id = "despair_passion"
+    position = 52
+
+  concept_order[]
+    id = "fear_passion"
+    position = 53
+
+  concept_order[]
+    id = "daring_passion"
+    position = 54
+
+  concept_order[]
+    id = "anger_passion"
+    position = 55
+
+  concept_order[]
+    id = "apprehended_evil"
+    position = 56
+
+  concept_order[]
+    id = "trinity"
+    position = 57
+
+  concept_order[]
+    id = "divine_essence"
+    position = 58
+
+  concept_order[]
+    id = "father"
+    position = 59
+
+  concept_order[]
+    id = "son"
+    position = 60
+
+  concept_order[]
+    id = "holy_spirit"
+    position = 61
+
+  concept_order[]
+    id = "grace"
+    position = 62
+
+  concept_order[]
+    id = "sanctifying_grace"
+    position = 63
+
+  concept_order[]
+    id = "actual_grace"
+    position = 64
+
+  concept_order[]
+    id = "virtue"
+    position = 65
+
+  concept_order[]
+    id = "cardinal_virtue"
+    position = 66
+
+  concept_order[]
+    id = "theological_virtue"
+    position = 67
+
+  concept_order[]
+    id = "acquired_virtue"
+    position = 68
+
+  concept_order[]
+    id = "infused_virtue"
+    position = 69
+
+  concept_order[]
+    id = "prudence_virtue"
+    position = 70
+
+  concept_order[]
+    id = "justice_virtue"
+    position = 71
+
+  concept_order[]
+    id = "fortitude_virtue"
+    position = 72
+
+  concept_order[]
+    id = "temperance_virtue"
+    position = 73
+
+  concept_order[]
+    id = "faith_virtue"
+    position = 74
+
+  concept_order[]
+    id = "hope_virtue"
+    position = 75
+
+  concept_order[]
+    id = "charity_virtue"
+    position = 76
+
+  concept_order[]
+    id = "gift_of_holy_spirit"
+    position = 77
+
+  concept_order[]
+    id = "fruit_of_holy_spirit"
+    position = 78
+
+  concept_order[]
+    id = "sacrament"
+    position = 79
+
+  concept_order[]
+    id = "initiation_sacraments"
+    position = 80
+
+  concept_order[]
+    id = "healing_sacraments"
+    position = 81
+
+  concept_order[]
+    id = "service_sacraments"
+    position = 82
+
+  concept_order[]
+    id = "sacramental_grace"
+    position = 83
+
+  concept_order[]
+    id = "sacramental_character"
+    position = 84
+
+  concept_order[]
+    id = "wisdom_gift"
+    position = 85
+
+  concept_order[]
+    id = "understanding_gift"
+    position = 86
+
+  concept_order[]
+    id = "counsel_gift"
+    position = 87
+
+  concept_order[]
+    id = "fortitude_gift"
+    position = 88
+
+  concept_order[]
+    id = "knowledge_gift"
+    position = 89
+
+  concept_order[]
+    id = "piety_gift"
+    position = 90
+
+  concept_order[]
+    id = "fear_of_lord_gift"
+    position = 91
+
+  concept_order[]
+    id = "charity_fruit"
+    position = 92
+
+  concept_order[]
+    id = "joy_fruit"
+    position = 93
+
+  concept_order[]
+    id = "peace_fruit"
+    position = 94
+
+  concept_order[]
+    id = "patience_fruit"
+    position = 95
+
+  concept_order[]
+    id = "kindness_fruit"
+    position = 96
+
+  concept_order[]
+    id = "goodness_fruit"
+    position = 97
+
+  concept_order[]
+    id = "generosity_fruit"
+    position = 98
+
+  concept_order[]
+    id = "gentleness_fruit"
+    position = 99
+
+  concept_order[]
+    id = "faithfulness_fruit"
+    position = 100
+
+  concept_order[]
+    id = "modesty_fruit"
+    position = 101
+
+  concept_order[]
+    id = "self_control_fruit"
+    position = 102
+
+  concept_order[]
+    id = "chastity_fruit"
+    position = 103
+
+  concept_order[]
+    id = "baptism"
+    position = 104
+
+  concept_order[]
+    id = "confirmation"
+    position = 105
+
+  concept_order[]
+    id = "eucharist"
+    position = 106
+
+  concept_order[]
+    id = "penance"
+    position = 107
+
+  concept_order[]
+    id = "anointing_of_sick"
+    position = 108
+
+  concept_order[]
+    id = "holy_orders"
+    position = 109
+
+  concept_order[]
+    id = "matrimony"
+    position = 110
+
+  concept_order[]
+    id = "eternal_word"
+    position = 111
+
+  concept_order[]
+    id = "subsistent_love"
+    position = 112
+
+  concept_order[]
+    id = "divine_love"
+    position = 113
+
+  concept_order[]
+    id = "eternal_generation"
+    position = 114
+
+  concept_order[]
+    id = "procession_of_love"
+    position = 115
+
+  concept_order[]
+    id = "divine_paternity"
+    position = 116
+
+  concept_order[]
+    id = "divine_filiation"
+    position = 117
+
+  concept_order[]
+    id = "common_spiration"
+    position = 118
+
+  concept_order[]
+    id = "personal_procession"
+    position = 119
+
+  concept_order[]
+    id = "divine_simplicity"
+    position = 120
+
+  concept_order[]
+    id = "divine_unity"
+    position = 121
+
+  concept_order[]
+    id = "common_divine_operation"
+    position = 122
+
+  concept_order[]
+    id = "god"
+    position = 123
+
+  concept_order[]
+    id = "created_being"
+    position = 124
+
+  concept_order[]
+    id = "spiritual_creature"
+    position = 125
+
+  concept_order[]
+    id = "corporeal_creature"
+    position = 126
+
+  concept_order[]
+    id = "angel"
+    position = 127
+
+  concept_order[]
+    id = "fallen_angel"
+    position = 128
+
+  concept_order[]
+    id = "nonhuman_animal"
+    position = 129
+
+  concept_order[]
+    id = "plant"
+    position = 130
+
+  concept_order[]
+    id = "inanimate_material_creature"
+    position = 131
+
+  concept_order[]
+    id = "pure_act"
+    position = 132
+
+  concept_order[]
+    id = "corporeality"
+    position = 133
+
+  concept_order[]
+    id = "speculative_intellect"
+    position = 134
+
+  concept_order[]
+    id = "act_of_charity"
+    position = 135
+
+  concept_order[]
+    id = "spiritual_life"
+    position = 136
+
+  concept_order[]
+    id = "spiritual_regeneration"
+    position = 137
+
+  concept_order[]
+    id = "remission_of_sin"
+    position = 138
+
+  concept_order[]
+    id = "remnants_of_sin"
+    position = 139
+
+  concept_order[]
+    id = "sacred_ministry"
+    position = 140
+
+  concept_order[]
+    id = "generation_of_children"
+    position = 141
+
+  concept_order[]
+    id = "disordered_concupiscence"
+    position = 142
+
+  concept_order[]
+    id = "bodily_healing"
+    position = 143
+
+  concept_order[]
+    id = "endurance_in_illness"
+    position = 144
+
+  concept_order[]
+    id = "beatific_vision"
+    position = 145
+
+  concept_order[]
+    id = "blessed_angel"
+    position = 146
+
+  concept_order[]
+    id = "angelic_intellect"
+    position = 147
+
+  concept_order[]
+    id = "angelic_will"
+    position = 148
+
+  concept_order[]
+    id = "angelic_turning_to_god"
+    position = 149
+
+  concept_order[]
+    id = "angelic_ministry"
+    position = 150
+
+  concept_order[]
+    id = "christ_priesthood"
+    position = 151
+
+  concept_order[]
+    id = "benevolence"
+    position = 152
+
+  concept_order[]
+    id = "beneficence"
+    position = 153
+
+  concept_order[]
+    id = "concord"
+    position = 154
+
+  concept_order[]
+    id = "appetitive_harmony"
+    position = 155
+
+  concept_order[]
+    id = "endurance_of_adversity"
+    position = 156
+
+  concept_order[]
+    id = "perseverance_in_waiting"
+    position = 157
+
+  concept_order[]
+    id = "trustworthy_dealing"
+    position = 158
+
+  concept_order[]
+    id = "outward_conduct"
+    position = 159
+
+  concept_order[]
+    id = "personal_sin"
+    position = 160
+
+  concept_order[]
+    id = "original_sin"
+    position = 161
+
+  concept_order[]
+    id = "mortal_sin"
+    position = 162
+
+  concept_order[]
+    id = "venial_sin"
+    position = 163
+
+  concept_order[]
+    id = "vice"
+    position = 164
+
+  concept_order[]
+    id = "original_justice"
+    position = 165
+
+  concept_order[]
+    id = "wounded_human_nature"
+    position = 166
+
+  concept_order[]
+    id = "ignorance_wound"
+    position = 167
+
+  concept_order[]
+    id = "malice_wound"
+    position = 168
+
+  concept_order[]
+    id = "weakness_wound"
+    position = 169
+
+  concept_order[]
+    id = "blindness_of_mind"
+    position = 170
+
+  concept_order[]
+    id = "dullness_of_understanding"
+    position = 171
+
+  concept_order[]
+    id = "disordered_passion"
+    position = 172
+
+  concept_order[]
+    id = "practical_judgment"
+    position = 173
+
+  concept_order[]
+    id = "grave_matter"
+    position = 174
+
+  concept_order[]
+    id = "full_moral_knowledge"
+    position = 175
+
+  concept_order[]
+    id = "deliberate_consent"
+    position = 176
+
+  concept_order[]
+    id = "aversion_from_god"
+    position = 177
+
+  concept_order[]
+    id = "human_conversion"
+    position = 178
+
+  concept_order[]
+    id = "repentance_for_sin"
+    position = 179
+
+  concept_order[]
+    id = "justification"
+    position = 180
+
+  concept_order[]
+    id = "angelic_illumination"
+    position = 181
+
+  concept_order[]
+    id = "angelic_persuasion"
+    position = 182
+
+  concept_order[]
+    id = "temptation_to_sin"
+    position = 183
+
+  concept_order[]
+    id = "demonic_suggestion"
+    position = 184
+
+  concept_order[]
+    id = "angelic_guardianship"
+    position = 185
+
+  concept_order[]
+    id = "personal_angelic_guardianship"
+    position = 186
+
+  concept_order[]
+    id = "spiritual_combat"
+    position = 187
+
+  concept_order[]
+    id = "spiritual_vigilance"
+    position = 188
+
+  concept_order[]
+    id = "christian_prayer"
+    position = 189
+
+  concept_order[]
+    id = "demonic_affliction"
+    position = 190
+
+  concept_order[]
+    id = "demonic_oppression"
+    position = 191
+
+  concept_order[]
+    id = "demonic_possession"
+    position = 192
+
+  concept_order[]
+    id = "deliverance_from_evil"
+    position = 193
+
+  concept_order[]
+    id = "prayer_for_deliverance"
+    position = 194
+
+  concept_order[]
+    id = "sacramental"
+    position = 195
+
+  concept_order[]
+    id = "exorcism"
+    position = 196
+
+  concept_order[]
+    id = "major_exorcism"
+    position = 197
+
+  concept_order[]
+    id = "baptismal_exorcism"
+    position = 198
+
+  concept_order[]
+    id = "authorized_exorcist"
+    position = 199
+
+  concept_order[]
+    id = "angelic_order"
+    position = 200
+
+  concept_order[]
+    id = "angelic_hierarchy"
+    position = 201
+
+  concept_order[]
+    id = "first_angelic_hierarchy"
+    position = 202
+
+  concept_order[]
+    id = "second_angelic_hierarchy"
+    position = 203
+
+  concept_order[]
+    id = "third_angelic_hierarchy"
+    position = 204
+
+  concept_order[]
+    id = "seraphim"
+    position = 205
+
+  concept_order[]
+    id = "seraphic_ardor"
+    position = 206
+
+  concept_order[]
+    id = "cherubim"
+    position = 207
+
+  concept_order[]
+    id = "cherubic_knowledge"
+    position = 208
+
+  concept_order[]
+    id = "thrones"
+    position = 209
+
+  concept_order[]
+    id = "receptivity_to_divine_government"
+    position = 210
+
+  concept_order[]
+    id = "dominions"
+    position = 211
+
+  concept_order[]
+    id = "direction_of_angelic_ministry"
+    position = 212
+
+  concept_order[]
+    id = "angelic_virtues"
+    position = 213
+
+  concept_order[]
+    id = "empowerment_of_angelic_ministry"
+    position = 214
+
+  concept_order[]
+    id = "powers_order"
+    position = 215
+
+  concept_order[]
+    id = "ordering_of_angelic_execution"
+    position = 216
+
+  concept_order[]
+    id = "principalities"
+    position = 217
+
+  concept_order[]
+    id = "leadership_of_angelic_ministry"
+    position = 218
+
+  concept_order[]
+    id = "archangels"
+    position = 219
+
+  concept_order[]
+    id = "announcement_of_great_divine_matters"
+    position = 220
+
+  concept_order[]
+    id = "angels_order"
+    position = 221
+
+  concept_order[]
+    id = "angelic_announcement"
+    position = 222
+
+  concept_order[]
+    id = "matter"
+    position = 223
+
+  concept_order[]
+    id = "form"
+    position = 224
+
+  concept_order[]
+    id = "potentiality"
+    position = 225
+
+  concept_order[]
+    id = "actuality"
+    position = 226
+
+  concept_order[]
+    id = "privation"
+    position = 227
+
+  concept_order[]
+    id = "natural_generation"
+    position = 228
+
+  concept_order[]
+    id = "substance"
+    position = 229
+
+  concept_order[]
+    id = "accident"
+    position = 230
+
+  concept_order[]
+    id = "cause"
+    position = 231
+
+  concept_order[]
+    id = "material_cause"
+    position = 232
+
+  concept_order[]
+    id = "formal_cause"
+    position = 233
+
+  concept_order[]
+    id = "efficient_cause"
+    position = 234
+
+  concept_order[]
+    id = "final_cause"
+    position = 235
+
+  concept_order[]
+    id = "substantial_form"
+    position = 236
+
+  concept_order[]
+    id = "accidental_form"
+    position = 237
+
+  concept_order[]
+    id = "quality"
+    position = 238
+
+  concept_order[]
+    id = "active_power"
+    position = 239
+
+  concept_order[]
+    id = "passive_potentiality"
+    position = 240
+
+  concept_order[]
+    id = "first_actuality"
+    position = 241
+
+  concept_order[]
+    id = "second_actuality"
+    position = 242
+
+  concept_order[]
+    id = "creation"
+    position = 243
+
+  concept_order[]
+    id = "heaven"
+    position = 244
+
+  concept_order[]
+    id = "hell"
+    position = 245
+
+  concept_order[]
+    id = "purgatory"
+    position = 246
+
+  concept_order[]
+    id = "human_death"
+    position = 247
+
+  concept_order[]
+    id = "separated_soul"
+    position = 248
+
+  concept_order[]
+    id = "particular_judgment"
+    position = 249
+
+  concept_order[]
+    id = "last_judgment"
+    position = 250
+
+  concept_order[]
+    id = "resurrection_of_dead"
+    position = 251
+
+  concept_order[]
+    id = "purification_from_sin"
+    position = 252
+
+  concept_order[]
+    id = "temporal_punishment"
+    position = 253
+
+  concept_order[]
+    id = "eternal_punishment"
+    position = 254
+
+  concept_order[]
+    id = "souls_in_purgatory"
+    position = 255
+
+  concept_order[]
+    id = "suffrages_for_dead"
+    position = 256
+
+  concept_order[]
+    id = "renewed_creation"
+    position = 257
+
+  concept_order[]
+    id = "sacramental_absolution"
+    position = 258
+
+  concept_order[]
+    id = "contrition"
+    position = 259
+
+  concept_order[]
+    id = "sacramental_confession"
+    position = 260
+
+  concept_order[]
+    id = "satisfaction_for_sin"
+    position = 261
+
+  concept_order[]
+    id = "virgin_mary"
+    position = 262
+
+  concept_order[]
+    id = "divine_motherhood"
+    position = 263
+
+  concept_order[]
+    id = "perpetual_virginity"
+    position = 264
+
+  concept_order[]
+    id = "immaculate_conception"
+    position = 265
+
+  concept_order[]
+    id = "assumption_of_mary"
+    position = 266
+
+  concept_order[]
+    id = "marian_intercession"
+    position = 267
+
+  concept_order[]
+    id = "mary_spiritual_motherhood"
+    position = 268
+
+  concept_order[]
+    id = "human_nature"
+    position = 269
+
+  concept_order[]
+    id = "incarnation"
+    position = 270
+
+  concept_order[]
+    id = "christ_mediation"
+    position = 271
+
+  concept_order[]
+    id = "communion_of_saints"
+    position = 272
+
+  concept_order[]
+    id = "saints_in_heaven"
+    position = 273
+
+  concept_order[]
+    id = "saints_intercession"
+    position = 274
+
+  concept_order[]
+    id = "invocation_of_saints"
+    position = 275
+
+  concept_order[]
+    id = "invocation_of_mary"
+    position = 276
+
+  concept_order[]
+    id = "veneration_of_saints"
+    position = 277
+
+  concept_order[]
+    id = "marian_veneration"
+    position = 278
+
+  concept_order[]
+    id = "divine_adoration"
+    position = 279
+
+  concept_order[]
+    id = "being"
+    position = 280
+
+  concept_order[]
+    id = "essence"
+    position = 281
+
+  concept_order[]
+    id = "act_of_being"
+    position = 282
+
+  concept_order[]
+    id = "transcendental_unity"
+    position = 283
+
+  concept_order[]
+    id = "transcendental_goodness"
+    position = 284
+
+  concept_order[]
+    id = "truth"
+    position = 285
+
+  concept_order[]
+    id = "truth_in_intellect"
+    position = 286
+
+  concept_order[]
+    id = "truth_of_things"
+    position = 287
+
+  concept_order[]
+    id = "noncontradiction"
+    position = 288
+
+  concept_order[]
+    id = "first_practical_principle"
+    position = 289
+
+  concept_order[]
+    id = "analogical_predication"
+    position = 290
+
+  concept_order[]
+    id = "understanding_of_principles"
+    position = 291
+
+  concept_order[]
+    id = "synderesis"
+    position = 292
+
+  concept_order[]
+    id = "conscience"
+    position = 293
+
+  concept_order[]
+    id = "natural_law"
+    position = 294
+
+  concept_order[]
+    id = "common_good"
+    position = 295
+
+  concept_order[]
+    id = "eternal_law"
+    position = 296
+
+  concept_order[]
+    id = "divine_providence"
+    position = 297
+
+  concept_order[]
+    id = "image_of_god"
+    position = 298
+
+  concept_order[]
+    id = "divine_intellect"
+    position = 299
+
+  concept_order[]
+    id = "hypostatic_union"
+    position = 300
+
+  concept_order[]
+    id = "christ_human_will"
+    position = 301
+
+  concept_order[]
+    id = "divine_will"
+    position = 302
+
+  concept_order[]
+    id = "christ_passion"
+    position = 303
+
+  concept_order[]
+    id = "christ_resurrection"
+    position = 304
+
+  concept_order[]
+    id = "redemption"
+    position = 305
+
+  concept_order[]
+    id = "church"
+    position = 306
+
+  concept_order[]
+    id = "four_marks_of_church"
+    position = 307
+
+  concept_order[]
+    id = "apostolic_succession"
+    position = 308
+
+  concept_order[]
+    id = "magisterium"
+    position = 309
+
+  concept_order[]
+    id = "divine_revelation"
+    position = 310
+
+  concept_order[]
+    id = "sacred_scripture"
+    position = 311
+
+  concept_order[]
+    id = "sacred_tradition"
+    position = 312
+
+  concept_order[]
+    id = "deposit_of_faith"
+    position = 313
+
+  concept_order[]
+    id = "real_presence"
+    position = 314
+
+  concept_order[]
+    id = "transubstantiation"
+    position = 315
+
+  concept_order[]
+    id = "eucharistic_sacrifice"
+    position = 316

@@ -195,6 +195,18 @@ initial_jitter float = 0.2
   ?descr "Width of the centered deterministic per-concept position perturbation, in viewer units; zero disables it."
   !condition ({.} >= 0)
 
+# Introductory camera motion.
+intro_rotation_enabled bool = true
+  ?descr "Gently orbit the settled initial graph until the first pointer, keyboard, focus, or control interaction. Disabled for reduced-motion users."
+
+intro_rotation_speed float = 0.8
+  ?descr "OrbitControls auto-rotation speed; 0.8 is approximately one revolution in 75 seconds at 60 frames per second. Presentation only."
+  !condition ({.} >= 0)
+
+intro_rotation_delay_ms int = 500
+  ?descr "Pause after initial graph settling and camera fitting, before introductory rotation begins."
+  !condition ({.} >= 0)
+
 # Guided-tour presentation defaults.
 tour_icon_size float = 3.0
   ?descr "Initial icon size during tours; the previous exploration size is restored on exit."

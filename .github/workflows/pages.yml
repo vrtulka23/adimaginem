@@ -1,0 +1,77 @@
+name: Build and publish website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned SNT CLI
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4 libaec0
+          curl --fail --location --retry 3 https://github.com/scinumtools/snt3/releases/download/v0.9.5/snt-v0.9.5-linux-x86_64.tar.gz -o "$RUNNER_TEMP/snt.tar.gz"
+          echo "c7f1a843279028ae81ef55b18b84f81c8c2a0bc466d3a51c8fda9e5bc35a5026  $RUNNER_TEMP/snt.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/snt.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/snt-v0.9.5-linux-x86_64" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/snt-v0.9.5-linux-x86_64/snt" --version
+      - name: Install website dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Configure GitHub Pages paths
+        shell: bash
+        run: |
+          repository="${GITHUB_REPOSITORY#*/}"
+          echo "SITE_URL=https://${GITHUB_REPOSITORY_OWNER}.github.io" >> "$GITHUB_ENV"
+          if [[ "$repository" == "${GITHUB_REPOSITORY_OWNER}.github.io" ]]; then
+            echo 'BASE_PATH=/' >> "$GITHUB_ENV"
+          else
+            echo "BASE_PATH=/$repository/" >> "$GITHUB_ENV"
+          fi
+      - name: Build static site and validate ontology
+        run: npm run build
+      - name: Test graph logic, cache, and static links
+        run: |
+          npm test
+          npm run check:site
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4

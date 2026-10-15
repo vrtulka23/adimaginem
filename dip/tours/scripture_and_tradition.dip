@@ -1,0 +1,134 @@
+# Focused, cited explanations. Coordinates are reading aids, not doctrinal claims.
+
+graph_tour_steps[scripture_and_tradition_transmission]
+  tour_id = "scripture_and_tradition"
+  title = "One revelation, distinct modes of transmission"
+  question = "Are Scripture and Tradition rival revelations?"
+  narrative = "Dei Verbum 9-10 presents Scripture and apostolic Tradition as intimately connected in handing on the one divine revelation. The Catechism distinguishes the inspired written word from its living apostolic transmission (80-82)."
+  qualification = "These are Catholic claims about transmission. Showing two nodes does not imply two gods, two unrelated messages, or an authority to contradict Scripture."
+  source_ids = ["dei_verbum_6_10", "ccc_80_83", "ccc_65_67"]
+  concept_ids = ["sacred_scripture", "divine_revelation", "sacred_tradition", "son"]
+  edge_ids = ["scripture_transmits", "tradition_transmits", "scripture_tradition_distinct", "revelation_christ"]
+  highlighted_concept_ids = ["sacred_scripture", "sacred_tradition", "divine_revelation"]
+  highlighted_edge_ids = ["scripture_transmits", "tradition_transmits"]
+  focus_concept = "sacred_scripture"
+  camera_z = 36.0
+
+graph_tour_positions[scripture_and_tradition_transmission_sacred_scripture]
+  step_id = "scripture_and_tradition_transmission"
+  concept_id = "sacred_scripture"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[scripture_and_tradition_transmission_divine_revelation]
+  step_id = "scripture_and_tradition_transmission"
+  concept_id = "divine_revelation"
+  x = 0.00
+  y = 6.00
+  z = -2.50
+
+graph_tour_positions[scripture_and_tradition_transmission_sacred_tradition]
+  step_id = "scripture_and_tradition_transmission"
+  concept_id = "sacred_tradition"
+  x = -8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[scripture_and_tradition_transmission_son]
+  step_id = "scripture_and_tradition_transmission"
+  concept_id = "son"
+  x = -0.00
+  y = -6.00
+  z = -2.50
+
+graph_tour_steps[scripture_and_tradition_customs]
+  tour_id = "scripture_and_tradition"
+  title = "Apostolic Tradition and local customs"
+  question = "Is every inherited Catholic practice unchangeable?"
+  narrative = "Catechism 83 distinguishes apostolic Tradition from particular theological, disciplinary, liturgical, and devotional traditions. Such particular forms can be retained, changed, or abandoned under the Church's guidance."
+  qualification = "The graph's Sacred Tradition node denotes apostolic transmission. The scene does not classify every custom or resolve a particular dispute about whether a practice can change."
+  source_ids = ["ccc_80_83", "ccc_84_87"]
+  concept_ids = ["sacred_tradition", "divine_revelation", "deposit_of_faith", "sacred_scripture"]
+  edge_ids = ["tradition_transmits", "tradition_deposit", "scripture_deposit", "scripture_tradition_distinct"]
+  highlighted_concept_ids = ["sacred_tradition", "deposit_of_faith"]
+  highlighted_edge_ids = ["tradition_deposit"]
+  focus_concept = "sacred_tradition"
+  camera_z = 36.0
+
+graph_tour_positions[scripture_and_tradition_customs_sacred_tradition]
+  step_id = "scripture_and_tradition_customs"
+  concept_id = "sacred_tradition"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[scripture_and_tradition_customs_divine_revelation]
+  step_id = "scripture_and_tradition_customs"
+  concept_id = "divine_revelation"
+  x = 0.00
+  y = 6.00
+  z = -2.50
+
+graph_tour_positions[scripture_and_tradition_customs_deposit_of_faith]
+  step_id = "scripture_and_tradition_customs"
+  concept_id = "deposit_of_faith"
+  x = -8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[scripture_and_tradition_customs_sacred_scripture]
+  step_id = "scripture_and_tradition_customs"
+  concept_id = "sacred_scripture"
+  x = -0.00
+  y = -6.00
+  z = -2.50
+
+graph_tour_steps[scripture_and_tradition_service]
+  tour_id = "scripture_and_tradition"
+  title = "The teaching office serves the Word"
+  question = "Can the Magisterium invent a different revelation?"
+  narrative = "Dei Verbum 10 describes the Magisterium as serving the word of God by guarding and faithfully explaining what has been handed on. Scripture and Tradition transmit the deposit which it authentically interprets."
+  qualification = "This diagram does not make every statement by a church official infallible. It presents the teaching office's relation to the received deposit; the authority of a particular statement requires its own assessment."
+  source_ids = ["dei_verbum_6_10", "ccc_84_87"]
+  concept_ids = ["magisterium", "deposit_of_faith", "sacred_scripture", "sacred_tradition", "church"]
+  edge_ids = ["magisterium_deposit", "scripture_deposit", "tradition_deposit", "church_magisterium"]
+  highlighted_concept_ids = ["magisterium", "deposit_of_faith"]
+  highlighted_edge_ids = ["magisterium_deposit"]
+  focus_concept = "magisterium"
+  camera_z = 36.0
+
+graph_tour_positions[scripture_and_tradition_service_magisterium]
+  step_id = "scripture_and_tradition_service"
+  concept_id = "magisterium"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[scripture_and_tradition_service_deposit_of_faith]
+  step_id = "scripture_and_tradition_service"
+  concept_id = "deposit_of_faith"
+  x = 2.47
+  y = 5.71
+  z = -2.50
+
+graph_tour_positions[scripture_and_tradition_service_sacred_scripture]
+  step_id = "scripture_and_tradition_service"
+  concept_id = "sacred_scripture"
+  x = -6.47
+  y = 3.53
+  z = 2.50
+
+graph_tour_positions[scripture_and_tradition_service_sacred_tradition]
+  step_id = "scripture_and_tradition_service"
+  concept_id = "sacred_tradition"
+  x = -6.47
+  y = -3.53
+  z = -2.50
+
+graph_tour_positions[scripture_and_tradition_service_church]
+  step_id = "scripture_and_tradition_service"
+  concept_id = "church"
+  x = 2.47
+  y = -5.71
+  z = 2.50

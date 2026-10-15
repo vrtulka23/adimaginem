@@ -1,12 +1,13 @@
-// The native server supplies this endpoint explicitly. Static builds omit it.
+// Both delivery modes use the same data contract and browser validation.
+import { validateOntology } from "./ontology_validation.mjs";
+
 export async function loadOntology(progress = () => {}) {
   const endpoint = document.querySelector('meta[name="ontology-endpoint"]')?.content;
-  if (endpoint) {
-    progress("Loading ontology from the local Python server…");
-    const response = await fetch(new URL(endpoint, document.baseURI));
-    if (!response.ok) throw new Error(`Python ontology request failed: ${response.status}`);
-    return response.json();
-  }
-  const { loadWebOntology } = await import("./web_ontology_loader.mjs");
-  return loadWebOntology(progress);
+  if (!endpoint) throw new Error("Missing ontology data endpoint");
+  progress("Loading the cited ontology…");
+  const response = await fetch(new URL(endpoint, document.baseURI));
+  if (!response.ok) throw new Error(`Ontology request failed: ${response.status}`);
+  const data = await response.json();
+  validateOntology(data);
+  return data;
 }

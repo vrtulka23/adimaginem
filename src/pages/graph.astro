@@ -1,0 +1,19 @@
+---
+// Reuse the exact graph document served by Python; no iframe or second UI.
+import document from '../../tools/ontology_graph.html?raw';
+const base = import.meta.env.BASE_URL;
+const head = document.match(/<head>([\s\S]*?)<\/head>/)[1];
+const body = document.match(/<body>([\s\S]*?)<\/body>/)[1]
+  .replace('src="./ontology_graph.js"', `src="${base}graph-assets/ontology_graph.js"`)
+  .replace('<div class="subtitle">', `<div class="subtitle"><a href="${base}" style="color:inherit">Home</a> · <a href="${base}docs/" style="color:inherit">Documentation</a> · `);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <Fragment set:html={head} />
+    <meta name="ontology-endpoint" content={`${base}graph-assets/ontology.json`} />
+    <meta name="description" content="Explore cited Thomistic and Catholic concepts, relations, and guided tours in an interactive 3D graph." />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+  </head>
+  <body><Fragment set:html={body} /><noscript>This graph needs JavaScript. <a href={`${base}docs/`}>Read the documentation and sources</a>.</noscript></body>
+</html>

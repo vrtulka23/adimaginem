@@ -2,6 +2,12 @@
 
 The model aims to be philosophically precise, textually grounded, and consonant with Catholic teaching. Its computational structures are explicit interpretations of a tradition; they are not substitutes for the human person, the spiritual soul, or theological judgment.
 
+## Machine-assisted research and expert review
+
+Machine-learning tools were used to discover relevant texts and passages, collect citations, and help draft explanations and their graph representations. The original works remain the cited sources; machine-assisted discovery and drafting do not establish the correctness of an interpretation or constitute ecclesiastical approval.
+
+If an explanation is inconsistent with Catholic doctrinal teaching, misreads a source, or lacks philosophical coherence, its concept, relation, citation, or tour text can be corrected in the repository's `dip/` files and the site rebuilt. Contributions from qualified theologians, philosophers, textual scholars, and responsible Church authorities are welcome. See [editorial review and contributions](review-and-contributions.md) for practical steps. The review standards below apply to these corrections as well as to new material.
+
 ## Interpretive authorities
 
 1. **Aquinas's own texts** govern claims about Aquinas. Read the whole article or argument, including objections and replies, and compare parallel passages where a term or conclusion is disputed. The [source guide](resources.md) identifies the starting corpus.
@@ -12,7 +18,7 @@ Do not label every Thomistic thesis as defined Catholic doctrine. State whether 
 
 ## Review standard for model claims
 
-Each significant concept, constraint, or transition in the Rust model should have a traceable record containing:
+Each significant concept, constraint, or transition in the ontology should have a traceable record containing:
 
 - a precise primary passage and, when doctrine is implicated, a precise Catholic teaching reference;
 - the relevant wording and translation or edition used, with the argument's context;

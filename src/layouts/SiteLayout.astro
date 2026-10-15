@@ -1,0 +1,35 @@
+---
+const { title = 'Ad Imaginem', description = 'A cited atlas of Thomistic philosophy and Catholic theology.' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title === 'Ad Imaginem' ? title : `${title} · Ad Imaginem`}</title>
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href={base}><img src={`${base}favicon.svg`} width="42" height="42" alt="" />Ad Imaginem</a>
+      <nav aria-label="Main navigation">
+        <a href={`${base}graph/`}>Explore the graph <span aria-hidden="true">↗</span></a>
+        <a href={`${base}docs/`}>Documentation</a>
+        <a href="https://github.com/vrtulka23/adimaginem">GitHub</a>
+      </nav>
+    </header>
+    <main id="content"><slot /></main>
+    <footer class="site-footer"><span>Ad Imaginem · Faith seeking understanding.</span><a href={`${base}docs/method/`}>Our sources and method →</a></footer>
+  </body>
+</html>
+<style is:global>
+  :root{color-scheme:dark;--bg:#10191c;--panel:#172326;--ink:#f0eee5;--muted:#b1c2bf;--mint:#a0d5c1;--gold:#e8c98e;--line:#30423f;font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+  *{box-sizing:border-box}body{margin:0}a{color:var(--mint);text-underline-offset:4px}a:hover{color:var(--gold)}button,a{touch-action:manipulation}:focus-visible{outline:2px solid var(--gold);outline-offset:5px}::selection{background:#356453;color:white}
+  .site-header,.site-footer{max-width:1280px;margin:auto;padding:25px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px}.site-header{border-bottom:1px solid var(--line)}.wordmark{font-family:Georgia,serif;font-size:26px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:12px;white-space:nowrap}nav{display:flex;gap:28px;font-size:13px}nav a{text-decoration:none}.site-footer{margin-top:70px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);padding-bottom:36px}.skip-link{position:absolute;left:20px;top:-100px;padding:12px;background:var(--bg);z-index:100}.skip-link:focus{top:10px}
+  .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.button{display:inline-flex;align-items:center;gap:28px;padding:15px 23px;border:1px solid var(--mint);background:var(--mint);color:var(--bg);border-radius:4px;text-decoration:none;font-size:14px;font-weight:600}.button:hover{background:#c3e6d9;color:var(--bg)}.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+  .prose{font-size:17px;line-height:1.85;overflow-wrap:break-word;max-width:820px;min-width:0;color:#d5dfda}.prose h1,.prose h2,.prose h3{color:var(--ink);line-height:1.2;font-family:Georgia,serif;font-weight:400;scroll-margin-top:30px}.prose h1{font-size:clamp(32px,5vw,48px);margin-top:0}.prose h2{font-size:28px;margin-top:50px}.prose h3{font-size:22px;margin-top:35px}.prose pre{padding:20px;background:#0c1316;border:1px solid var(--line);overflow-x:auto;border-radius:6px;line-height:1.6}.prose code{font-size:.88em;overflow-wrap:anywhere;color:#c6dfd3}.prose pre code{overflow-wrap:normal}.prose table{display:block;overflow-x:auto;border-collapse:collapse;font-size:14px}.prose td,.prose th{padding:10px 14px;border:1px solid var(--line);text-align:left}.prose blockquote{border-left:2px solid var(--gold);margin-left:0;padding-left:24px}.prose img{max-width:100%}.prose li+li{margin-top:12px}.prose p{margin:1.2em 0}.prose ul,.prose ol{padding-left:1.5em}.prose th{background:var(--panel);color:var(--ink)}
+  @media(max-width:700px){.site-header,.site-footer{padding:20px 22px;flex-wrap:wrap}nav{gap:20px;font-size:12px}.site-footer{gap:15px}.wordmark{font-size:23px}}
+</style>

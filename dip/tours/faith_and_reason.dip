@@ -1,0 +1,127 @@
+# Focused, cited explanations. Coordinates are reading aids, not doctrinal claims.
+
+graph_tour_steps[faith_and_reason_assent]
+  tour_id = "faith_and_reason"
+  title = "Believing engages the intellect"
+  question = "Does believing mean switching off thought?"
+  narrative = "Aquinas locates faith in the intellect. The Catechism describes believing as intellectual assent involving the will and divine grace (155). Faith therefore engages human understanding; it is not simply a feeling."
+  qualification = "This scene identifies the subject of faith. The intellect node is a human power, not a separate person or a complete account of believing."
+  source_ids = ["ccc_153_160", "st_ii_ii_4_2", "st_i_16_1_2"]
+  concept_ids = ["faith_virtue", "intellectual_power", "truth_in_intellect"]
+  edge_ids = ["faith_in_intellect", "intellect_ordered_truth"]
+  highlighted_concept_ids = ["faith_virtue", "intellectual_power"]
+  highlighted_edge_ids = ["faith_in_intellect"]
+  focus_concept = "faith_virtue"
+  camera_z = 36.0
+
+graph_tour_positions[faith_and_reason_assent_faith_virtue]
+  step_id = "faith_and_reason_assent"
+  concept_id = "faith_virtue"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[faith_and_reason_assent_intellectual_power]
+  step_id = "faith_and_reason_assent"
+  concept_id = "intellectual_power"
+  x = -4.00
+  y = 5.20
+  z = -2.50
+
+graph_tour_positions[faith_and_reason_assent_truth_in_intellect]
+  step_id = "faith_and_reason_assent"
+  concept_id = "truth_in_intellect"
+  x = -4.00
+  y = -5.20
+  z = 2.50
+
+graph_tour_steps[faith_and_reason_truth]
+  tour_id = "faith_and_reason"
+  title = "Faith and reason seek truth"
+  question = "Must a discovery of reason contradict faith?"
+  narrative = "The intellect is ordered to truth. Catholic teaching affirms that genuine truth discovered through reason cannot contradict what God truly reveals (Catechism 159). Aquinas identifies God as truth itself (ST I, q. 16, a. 5)."
+  qualification = "This principle does not settle every disputed interpretation or scientific claim. Identifying an apparent conflict requires examining the argument and the interpretation."
+  source_ids = ["ccc_153_160", "st_ii_ii_4_2", "st_i_16_1_2", "st_i_16_3_5", "ccc_1812_1813"]
+  concept_ids = ["faith_virtue", "intellectual_power", "truth_in_intellect", "truth", "god"]
+  edge_ids = ["faith_in_intellect", "intellect_ordered_truth", "intellect_truth_sense", "god_truth", "faith_ordered_to_god"]
+  highlighted_concept_ids = ["intellectual_power", "truth", "god"]
+  highlighted_edge_ids = ["intellect_ordered_truth", "god_truth"]
+  focus_concept = "intellectual_power"
+  camera_z = 36.0
+
+graph_tour_positions[faith_and_reason_truth_faith_virtue]
+  step_id = "faith_and_reason_truth"
+  concept_id = "faith_virtue"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[faith_and_reason_truth_intellectual_power]
+  step_id = "faith_and_reason_truth"
+  concept_id = "intellectual_power"
+  x = 2.47
+  y = 5.71
+  z = -2.50
+
+graph_tour_positions[faith_and_reason_truth_truth_in_intellect]
+  step_id = "faith_and_reason_truth"
+  concept_id = "truth_in_intellect"
+  x = -6.47
+  y = 3.53
+  z = 2.50
+
+graph_tour_positions[faith_and_reason_truth_truth]
+  step_id = "faith_and_reason_truth"
+  concept_id = "truth"
+  x = -6.47
+  y = -3.53
+  z = -2.50
+
+graph_tour_positions[faith_and_reason_truth_god]
+  step_id = "faith_and_reason_truth"
+  concept_id = "god"
+  x = 2.47
+  y = -5.71
+  z = 2.50
+
+graph_tour_steps[faith_and_reason_revelation]
+  tour_id = "faith_and_reason"
+  title = "Understanding has more than one mode"
+  question = "Must every revealed mystery be demonstrable by reason alone?"
+  narrative = "Faith receives God's revelation on his authority. The Catechism distinguishes this ground of assent from signs that make belief credible (156), while encouraging deeper understanding (158). Revelation and rational inquiry have distinct roles."
+  qualification = "Compatibility with reason does not mean every revealed truth is a philosophical conclusion. These links explain Catholic claims without proving them from the diagram."
+  source_ids = ["ccc_153_160", "ccc_51_53", "ccc_1812_1813", "ccc_65_67"]
+  concept_ids = ["divine_revelation", "god", "faith_virtue", "son"]
+  edge_ids = ["revelation_god", "faith_ordered_to_god", "revelation_christ"]
+  highlighted_concept_ids = ["divine_revelation", "faith_virtue"]
+  highlighted_edge_ids = ["revelation_god", "faith_ordered_to_god"]
+  focus_concept = "divine_revelation"
+  camera_z = 36.0
+
+graph_tour_positions[faith_and_reason_revelation_divine_revelation]
+  step_id = "faith_and_reason_revelation"
+  concept_id = "divine_revelation"
+  x = 8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[faith_and_reason_revelation_god]
+  step_id = "faith_and_reason_revelation"
+  concept_id = "god"
+  x = 0.00
+  y = 6.00
+  z = -2.50
+
+graph_tour_positions[faith_and_reason_revelation_faith_virtue]
+  step_id = "faith_and_reason_revelation"
+  concept_id = "faith_virtue"
+  x = -8.00
+  y = 0.00
+  z = 2.50
+
+graph_tour_positions[faith_and_reason_revelation_son]
+  step_id = "faith_and_reason_revelation"
+  concept_id = "son"
+  x = -0.00
+  y = -6.00
+  z = -2.50
