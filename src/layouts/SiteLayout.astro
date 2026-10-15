@@ -1,12 +1,12 @@
 ---
-import GoogleTag from '../components/GoogleTag.astro';
+import GoatCounter from '../components/GoatCounter.astro';
 const { title = 'Ad Imaginem', description = 'A cited atlas of Thomistic philosophy and Catholic theology.' } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="en">
   <head>
-    <GoogleTag />
+    <GoatCounter />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />

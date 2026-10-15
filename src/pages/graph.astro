@@ -1,7 +1,7 @@
 ---
 // Reuse the exact graph document served by Python; no iframe or second UI.
 import document from '../../tools/ontology_graph.html?raw';
-import GoogleTag from '../components/GoogleTag.astro';
+import GoatCounter from '../components/GoatCounter.astro';
 const base = import.meta.env.BASE_URL;
 const head = document.match(/<head>([\s\S]*?)<\/head>/)[1];
 const body = document.match(/<body>([\s\S]*?)<\/body>/)[1]
@@ -11,7 +11,7 @@ const body = document.match(/<body>([\s\S]*?)<\/body>/)[1]
 <!doctype html>
 <html lang="en">
   <head>
-    <GoogleTag />
+    <GoatCounter />
     <Fragment set:html={head} />
     <meta name="ontology-endpoint" content={`${base}graph-assets/ontology.json`} />
     <meta name="description" content="Explore cited Thomistic and Catholic concepts, relations, and guided tours in an interactive 3D graph." />
