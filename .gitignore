@@ -4,6 +4,7 @@ node_modules/
 dist/
 public/graph-assets/
 target/*
+PROPOSALS/*
 
 # Generated DIPL snapshots and legacy viewer builds
 build/
