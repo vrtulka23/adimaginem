@@ -3,136 +3,136 @@ ontology
   # The source registry keeps passage-level provenance separate from edges.
   sources[st_i_75_4]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 75, a. 4, respondeo"
-    url str = "https://www.newadvent.org/summa/1075.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1075.htm"
     translation str = "Fathers of the English Dominican Province, second revised edition (1920), New Advent online edition"
 
   sources[st_i_76_1]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 76, a. 1, respondeo"
-    url str = "https://www.newadvent.org/summa/1076.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1076.htm"
     translation str = "Fathers of the English Dominican Province, second revised edition (1920), New Advent online edition"
 
   sources[st_i_77_1]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 77, a. 1, respondeo"
-    url str = "https://www.newadvent.org/summa/1077.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1077.htm"
 
   sources[st_i_77_6]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 77, a. 6, respondeo"
-    url str = "https://www.newadvent.org/summa/1077.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1077.htm"
 
   sources[st_i_78_1]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 78, a. 1, respondeo"
-    url str = "https://www.newadvent.org/summa/1078.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1078.htm"
     translation str = "Fathers of the English Dominican Province, second revised edition (1920), New Advent online edition"
 
   sources[st_i_78_2]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 78, a. 2, respondeo"
-    url str = "https://www.newadvent.org/summa/1078.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1078.htm"
 
   sources[st_i_78_3]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 78, a. 3, respondeo"
-    url str = "https://www.newadvent.org/summa/1078.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1078.htm"
 
   sources[st_i_78_4]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 78, a. 4, respondeo"
-    url str = "https://www.newadvent.org/summa/1078.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1078.htm"
 
   sources[st_i_79_2]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 79, a. 2, respondeo"
-    url str = "https://www.newadvent.org/summa/1079.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1079.htm"
 
   sources[st_i_79_3]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 79, a. 3, respondeo"
-    url str = "https://www.newadvent.org/summa/1079.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1079.htm"
 
   sources[st_i_80_2]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 80, a. 2, respondeo"
-    url str = "https://www.newadvent.org/summa/1080.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1080.htm"
 
   sources[st_i_81_2]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 81, a. 2, respondeo"
-    url str = "https://www.newadvent.org/summa/1081.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1081.htm"
 
   sources[st_i_83_4]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 83, a. 4, respondeo"
-    url str = "https://www.newadvent.org/summa/1083.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1083.htm"
 
   sources[st_i_ii_22_3]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I-II, q. 22, a. 3, respondeo"
-    url str = "https://www.newadvent.org/summa/2022.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/2022.htm"
 
   sources[dpn_8]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "De principiis naturae"
     locator str = "section 8, English edition linked here"
-    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      ?authors "Thomas Aquinas"
+      ?title "De principiis naturae"
+      ?url "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
 
   sources[dpn_1]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "De principiis naturae"
     locator str = "section 1, English edition linked here"
-    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      ?authors "Thomas Aquinas"
+      ?title "De principiis naturae"
+      ?url "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
 
   sources[dpn_3]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "De principiis naturae"
     locator str = "sections 3-4, English edition linked here"
-    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      ?authors "Thomas Aquinas"
+      ?title "De principiis naturae"
+      ?url "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
 
   sources[dpn_12]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "De principiis naturae"
     locator str = "section 12, English edition linked here"
-    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      ?authors "Thomas Aquinas"
+      ?title "De principiis naturae"
+      ?url "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
 
   sources[dpn_20]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "De principiis naturae"
     locator str = "section 20, English edition linked here"
-    url str = "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"
+      ?authors "Thomas Aquinas"
+      ?title "De principiis naturae"
+      ?url "https://www.jonhaines.com/thomas/english/DePrincNaturae.htm"

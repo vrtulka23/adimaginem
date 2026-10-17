@@ -12,7 +12,7 @@ The `ontology` tree has six collections:
 | --- | --- |
 | `concepts[id]` | Stable concept IDs with an English `label`, a `latin_name`, an editorial `domain` and `category`, overlapping `study_areas`, a short note, a `source_id`, and a `review_status`. The `ontological_concept` schema checks their shape and controlled values and gives options readable labels. |
 | `study_areas[id]` | Editorial fields of inquiry with labels, Latin names, descriptions, scope citations, and qualifications. Concepts refer to these IDs through a nonempty string array. See [study areas](study-areas.md). |
-| `sources[id]` | Passage-level provenance: `authority_kind`, author, work, precise locator, and edition URL. The `ontological_source` schema checks the record shape. IDs are stable keys for citations, not substitutes for reading the passage. |
+| `sources[id]` | Passage-level provenance: `authority_kind`, precise `locator`, and bibliographic `?authors`, `?title`, and `?url` metadata on that locator. The `ontological_source` schema checks the structured fields; the loader validates required citation metadata. IDs are stable keys for citations, not substitutes for reading the passage. |
 | `edges[id]` | Directed `subject`–`relation`–`object` statements with a `source_id`. Each `source_id` value carries a `?rationale` explaining why that passage supports the edge. The `ontological_edge` schema checks the relation vocabulary, `evidence_kind`, and `review_status` with readable option labels. `included_in_model` selects edges for a simulation; it does not change a philosophical claim. |
 | `relations[id]` | Editorial definitions of the edge predicates, each with a label, description, and classified `kind`. The `ontological_relation` schema checks the kind. Every edge relation must exist in this registry. Optional `principle_id` links a predicate to its explanatory concept; it does not generate an edge. |
 | `passion_profiles[id]` | Editorial formal profiles for the eleven sensitive passions: appetite, object aspect and description, apprehended attainability, arduousness, phase, and temporal relation. The `passion_profile` schema checks options and defaults `evidence_kind` to `editorial_classification` and `review_status` to `draft`. Each local `source_id` carries a `?rationale`. |
@@ -60,3 +60,37 @@ Return to the [documentation index](index.md).
 ## Grounding and historical attestation
 
 [`support_records`](../dip/support_records.dip), governed by [`support_record.dipl`](../dip/schemas/support_record.dipl), attaches any number of bounded claims and citations to a concept or edge by ID. Each record has grounding modes, a support kind, a separately sourced doctrinal status, qualification, review status, and `?rationale` on its source reference. Sources now also record witness family, translation, and optional dating or structured biblical verses. See [grounding and historical sources](grounding-and-sources.md) for scope, initial coverage, scholarly safeguards, and authoring instructions.
+
+## Authoring citation metadata
+
+Each passage has one canonical source record. Its bibliographic information is
+stored as metadata on the `locator` value, so it is available in the published
+SNT 0.9.5 `json-metadata` export:
+
+```dipl
+ontology
+  sources[st_i_75_4]
+    locator str = "I, q. 75, a. 4, respondeo"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1075.htm"
+```
+
+Declare `locator str` explicitly when attaching local metadata to the schema
+field. Keep `translation`, `date_note`, `authority_kind`, `witness_kind`, and
+biblical passage fields as structured values. Metadata belong to this cited
+passage; they do not make a claim about the author of our DIPL file.
+
+The loader requires nonempty author, title, and URL metadata and converts them
+to the existing browser fields `author`, `work`, and `url`. This generated
+representation keeps citation display, links, and filtering compatible; do
+not maintain duplicate authored copies in DIPL. Source IDs and incoming
+references are unchanged.
+
+The adapter also accepts source-map metadata from `snt-dip-values/2`. That
+format is available in the newer upstream source build, while the pinned
+release exports v1. Current records use locator metadata so both work without
+extra per-source inspection calls. Legacy value fields can still be read;
+conflicting legacy fields or conflicting map/value metadata fail validation.
+Explicitly empty required metadata are errors, not invitations to fall back
+to another copy. DIPH5 and static assets must be rebuilt after editing sources.

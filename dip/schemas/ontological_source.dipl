@@ -2,10 +2,9 @@
 authority_kind str = "thomistic_text"
   !options ["thomistic_text", "church_teaching", "church_guidance", "pastoral_literature", "scripture", "philosophical_text"]
   !labels ["Text of Thomas Aquinas", "Catholic teaching", "Official ecclesial guidance or discipline", "Pastoral literature (not magisterial teaching)", "Sacred Scripture", "Primary philosophical text"]
-author str
-work str
+# Bibliographic ?authors, ?title, and ?url belong to locator metadata.
+# The shared loader enforces their presence and normalizes them for the viewer.
 locator str
-url str
 witness_kind str = "unassessed"
   !options ["unassessed", "scripture", "ancient_philosophy", "patristic", "scholastic", "magisterial", "ecclesial_guidance", "pastoral_literature"]
   !labels ["Unassessed", "Scripture", "Ancient philosophy", "Patristic writing", "Scholastic writing", "Magisterial document", "Ecclesial guidance or discipline", "Pastoral literature"]

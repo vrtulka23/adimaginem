@@ -2,38 +2,38 @@
 ontology
   sources[boeth_trin_5_1_2]
     witness_kind str = "scholastic"
-    author = "Thomas Aquinas"
-    work = "Super Boetium De Trinitate"
-    locator = "q. 5, aa. 1-2, especially a. 2 ad 6-7"
-    url = "https://isidore.co/aquinas/english/BoethiusDeTr.htm"
+    locator str = "q. 5, aa. 1-2, especially a. 2 ad 6-7"
+      ?authors "Thomas Aquinas"
+      ?title "Super Boetium De Trinitate"
+      ?url "https://isidore.co/aquinas/english/BoethiusDeTr.htm"
 
   sources[in_ethic_i_1]
     witness_kind str = "scholastic"
-    author = "Thomas Aquinas"
-    work = "Sententia libri Ethicorum"
-    locator = "I, lectio 1, nos. 1-6: orders considered by philosophy and divisions of moral philosophy"
-    url = "https://isidore.co/aquinas/Ethics1.htm"
+    locator str = "I, lectio 1, nos. 1-6: orders considered by philosophy and divisions of moral philosophy"
+      ?authors "Thomas Aquinas"
+      ?title "Sententia libri Ethicorum"
+      ?url "https://isidore.co/aquinas/Ethics1.htm"
 
   sources[in_postanal_prooemium]
     witness_kind str = "scholastic"
-    author = "Thomas Aquinas"
-    work = "Expositio libri Posteriorum Analyticorum"
-    locator = "Prooemium (Foreword of Thomas Aquinas): logic and the three operations of reason"
-    url = "https://isidore.co/aquinas/english/PostAnalytica.htm#02"
+    locator str = "Prooemium (Foreword of Thomas Aquinas): logic and the three operations of reason"
+      ?authors "Thomas Aquinas"
+      ?title "Expositio libri Posteriorum Analyticorum"
+      ?url "https://isidore.co/aquinas/english/PostAnalytica.htm#02"
 
   sources[st_i_16_1_2]
     witness_kind str = "scholastic"
-    author = "Thomas Aquinas"
-    work = "Summa theologiae"
-    locator = "I, q. 16, aa. 1-2, respondeo: truth and intellectual judgment"
-    url = "https://www.newadvent.org/summa/1016.htm"
+    locator str = "I, q. 16, aa. 1-2, respondeo: truth and intellectual judgment"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1016.htm"
 
   sources[st_i_1_1_4]
     witness_kind str = "scholastic"
-    author = "Thomas Aquinas"
-    work = "Summa theologiae"
-    locator = "I, q. 1, aa. 1-4: sacred doctrine, its principles and scope"
-    url = "https://www.newadvent.org/summa/1001.htm"
+    locator str = "I, q. 1, aa. 1-4: sacred doctrine, its principles and scope"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1001.htm"
 
   study_areas map : study_area
 

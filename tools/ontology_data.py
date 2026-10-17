@@ -12,7 +12,7 @@ from pathlib import Path
 from time import monotonic
 
 from diph5_cache import load_cached
-from snt_metadata import decode_metadata
+from snt_metadata import decode_metadata, normalize_source_citations
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -107,6 +107,7 @@ def _read_snapshot(snapshot, snt, include_viewer, report=None):
             listing = describe_all(listing["total"])
     if listing.get("truncated") or len(listing["items"]) != listing["total"]:
         raise RuntimeError("SNT metadata listing is incomplete")
+    normalize_source_citations(data, listing["items"])
     notify(f"Snapshot [2/3] Read {len(listing['items'])} metadata records; "
            "assembling citations, tours, and display settings…")
 

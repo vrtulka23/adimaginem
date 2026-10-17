@@ -2,17 +2,17 @@
 ontology
   sources[st_i_80_1]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I, q. 80, a. 1, respondeo"
-    url str = "https://www.newadvent.org/summa/1080.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/1080.htm"
 
   sources[st_i_ii_8_1]
     witness_kind str = "scholastic"
-    author str = "Thomas Aquinas"
-    work str = "Summa theologiae"
     locator str = "I-II, q. 8, a. 1, respondeo"
-    url str = "https://www.newadvent.org/summa/2008.htm"
+      ?authors "Thomas Aquinas"
+      ?title "Summa theologiae"
+      ?url "https://www.newadvent.org/summa/2008.htm"
 
   concepts[natural_appetite]
     latin_name = "appetitus naturalis"
