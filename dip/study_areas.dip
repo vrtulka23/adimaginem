@@ -1,39 +1,39 @@
 # Sources ground the scope of study areas; assignments remain editorial.
 ontology
   sources[boeth_trin_5_1_2]
+    ?authors "Thomas Aquinas"
+    ?title "Super Boetium De Trinitate"
+    ?url "https://isidore.co/aquinas/english/BoethiusDeTr.htm"
     witness_kind str = "scholastic"
-    locator str = "q. 5, aa. 1-2, especially a. 2 ad 6-7"
-      ?authors "Thomas Aquinas"
-      ?title "Super Boetium De Trinitate"
-      ?url "https://isidore.co/aquinas/english/BoethiusDeTr.htm"
+    locator = "q. 5, aa. 1-2, especially a. 2 ad 6-7"
 
   sources[in_ethic_i_1]
+    ?authors "Thomas Aquinas"
+    ?title "Sententia libri Ethicorum"
+    ?url "https://isidore.co/aquinas/Ethics1.htm"
     witness_kind str = "scholastic"
-    locator str = "I, lectio 1, nos. 1-6: orders considered by philosophy and divisions of moral philosophy"
-      ?authors "Thomas Aquinas"
-      ?title "Sententia libri Ethicorum"
-      ?url "https://isidore.co/aquinas/Ethics1.htm"
+    locator = "I, lectio 1, nos. 1-6: orders considered by philosophy and divisions of moral philosophy"
 
   sources[in_postanal_prooemium]
+    ?authors "Thomas Aquinas"
+    ?title "Expositio libri Posteriorum Analyticorum"
+    ?url "https://isidore.co/aquinas/english/PostAnalytica.htm#02"
     witness_kind str = "scholastic"
-    locator str = "Prooemium (Foreword of Thomas Aquinas): logic and the three operations of reason"
-      ?authors "Thomas Aquinas"
-      ?title "Expositio libri Posteriorum Analyticorum"
-      ?url "https://isidore.co/aquinas/english/PostAnalytica.htm#02"
+    locator = "Prooemium (Foreword of Thomas Aquinas): logic and the three operations of reason"
 
   sources[st_i_16_1_2]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/1016.htm"
     witness_kind str = "scholastic"
-    locator str = "I, q. 16, aa. 1-2, respondeo: truth and intellectual judgment"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/1016.htm"
+    locator = "I, q. 16, aa. 1-2, respondeo: truth and intellectual judgment"
 
   sources[st_i_1_1_4]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/1001.htm"
     witness_kind str = "scholastic"
-    locator str = "I, q. 1, aa. 1-4: sacred doctrine, its principles and scope"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/1001.htm"
+    locator = "I, q. 1, aa. 1-4: sacred doctrine, its principles and scope"
 
   study_areas map : study_area
 

@@ -1,11 +1,11 @@
 # Passage-level provenance: classifications concern only the recorded claim.
 ontology
   sources[bible_john_1_1_3]
+    ?authors "John"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/john/1"
     authority_kind = "scripture"
-    locator str = "John 1:1-3 (biblical text, distinct from editorial footnotes)"
-      ?authors "John"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/john/1"
+    locator = "John 1:1-3 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "John"
     biblical_chapter = 1
@@ -14,11 +14,11 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[bible_john_1_14]
+    ?authors "John"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/john/1"
     authority_kind = "scripture"
-    locator str = "John 1:14 (biblical text, distinct from editorial footnotes)"
-      ?authors "John"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/john/1"
+    locator = "John 1:14 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "John"
     biblical_chapter = 1
@@ -27,11 +27,11 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[bible_matthew_28_19]
+    ?authors "Matthew"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/matthew/28"
     authority_kind = "scripture"
-    locator str = "Matthew 28:19 (biblical text, distinct from editorial footnotes)"
-      ?authors "Matthew"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/matthew/28"
+    locator = "Matthew 28:19 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "Matthew"
     biblical_chapter = 28
@@ -40,11 +40,11 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[bible_matthew_28_5_6]
+    ?authors "Matthew"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/matthew/28"
     authority_kind = "scripture"
-    locator str = "Matthew 28:5-6 (biblical text, distinct from editorial footnotes)"
-      ?authors "Matthew"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/matthew/28"
+    locator = "Matthew 28:5-6 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "Matthew"
     biblical_chapter = 28
@@ -53,11 +53,11 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[bible_galatians_5_22_25]
+    ?authors "Galatians"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/galatians/5"
     authority_kind = "scripture"
-    locator str = "Galatians 5:22-25 (biblical text, distinct from editorial footnotes)"
-      ?authors "Galatians"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/galatians/5"
+    locator = "Galatians 5:22-25 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "Galatians"
     biblical_chapter = 5
@@ -66,11 +66,11 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[bible_ephesians_6_10_18]
+    ?authors "Ephesians"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/ephesians/6"
     authority_kind = "scripture"
-    locator str = "Ephesians 6:10-18 (biblical text, distinct from editorial footnotes)"
-      ?authors "Ephesians"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/ephesians/6"
+    locator = "Ephesians 6:10-18 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "Ephesians"
     biblical_chapter = 6
@@ -79,11 +79,11 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[bible_wisdom_13_1_5]
+    ?authors "Wisdom"
+    ?title "The Holy Bible"
+    ?url "https://bible.usccb.org/bible/wisdom/13"
     authority_kind = "scripture"
-    locator str = "Wisdom 13:1-5 (biblical text, distinct from editorial footnotes)"
-      ?authors "Wisdom"
-      ?title "The Holy Bible"
-      ?url "https://bible.usccb.org/bible/wisdom/13"
+    locator = "Wisdom 13:1-5 (biblical text, distinct from editorial footnotes)"
     witness_kind = "scripture"
     biblical_book = "Wisdom"
     biblical_chapter = 13
@@ -92,30 +92,30 @@ ontology
     translation = "New American Bible, Revised Edition (NABRE), USCCB online edition"
 
   sources[aristotle_de_anima_ii_1]
+    ?authors "Aristotle"
+    ?title "De anima / On the Soul"
+    ?url "https://classics.mit.edu/Aristotle/soul.2.ii.html"
     authority_kind = "philosophical_text"
-    locator str = "II.1, 412a6-412b9; English translation by J. A. Smith"
-      ?authors "Aristotle"
-      ?title "De anima / On the Soul"
-      ?url "https://classics.mit.edu/Aristotle/soul.2.ii.html"
+    locator = "II.1, 412a6-412b9; English translation by J. A. Smith"
     witness_kind = "ancient_philosophy"
     date_note = "Fourth century BC; work-level period, not a claim of earliest attestation"
     translation = "J. A. Smith"
 
   sources[st_i_2_2_3]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/1002.htm#article2"
     authority_kind = "thomistic_text"
-    locator str = "I, q. 2, aa. 2-3, respondeo: demonstration from effects and the Five Ways"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/1002.htm#article2"
+    locator = "I, q. 2, aa. 2-3, respondeo: demonstration from effects and the Five Ways"
     witness_kind = "scholastic"
     translation str = "Fathers of the English Dominican Province, second revised edition (1920), New Advent online edition"
 
   sources[dei_verbum_6_10]
+    ?authors "Second Vatican Council"
+    ?title "Dei Verbum"
+    ?url "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html"
     authority_kind = "church_teaching"
-    locator str = "6-10: natural knowledge, revelation, Scripture, Tradition, and the Magisterium"
-      ?authors "Second Vatican Council"
-      ?title "Dei Verbum"
-      ?url "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html"
+    locator = "6-10: natural knowledge, revelation, Scripture, Tradition, and the Magisterium"
     witness_kind = "magisterial"
     date_note = "18 November 1965"
     translation str = "English version published on the Holy See website"

@@ -1,9 +1,10 @@
 ?descr "A passage-level citation supporting an ontological concept or relation"
+!metadata authors nonempty
+!metadata title nonempty
+!metadata url nonempty
 authority_kind str = "thomistic_text"
   !options ["thomistic_text", "church_teaching", "church_guidance", "pastoral_literature", "scripture", "philosophical_text"]
   !labels ["Text of Thomas Aquinas", "Catholic teaching", "Official ecclesial guidance or discipline", "Pastoral literature (not magisterial teaching)", "Sacred Scripture", "Primary philosophical text"]
-# Bibliographic ?authors, ?title, and ?url belong to locator metadata.
-# The shared loader enforces their presence and normalizes them for the viewer.
 locator str
 witness_kind str = "unassessed"
   !options ["unassessed", "scripture", "ancient_philosophy", "patristic", "scholastic", "magisterial", "ecclesial_guidance", "pastoral_literature"]

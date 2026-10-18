@@ -1,7 +1,7 @@
 """Native SNT loader shared by the static website build and Python viewer.
 
-SNT 0.9.5 exports values, array shapes, and metadata together. Older SNT uses
-a values export plus bulk inspection; both paths preserve the viewer contract.
+SNT 0.9.6 exports values, array shapes, and container metadata together.
+Older export adapters remain readable, but current DIPL schemas require 0.9.6+.
 """
 
 import json

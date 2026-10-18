@@ -1,4 +1,4 @@
-"""Export compatibility checks for the SNT 0.9.5 adapter."""
+"""Compatibility checks for SNT metadata export schemas v1 and v2."""
 
 import sys
 from pathlib import Path

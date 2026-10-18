@@ -31,11 +31,11 @@ jobs:
           sudo apt-get update
           # HDF5's SZIP compatibility library is packaged separately from libaec.
           sudo apt-get install -y libcurl4 libaec0 libsz2
-          curl --fail --location --retry 3 https://github.com/scinumtools/snt3/releases/download/v0.9.5/snt-v0.9.5-linux-x86_64.tar.gz -o "$RUNNER_TEMP/snt.tar.gz"
-          echo "c7f1a843279028ae81ef55b18b84f81c8c2a0bc466d3a51c8fda9e5bc35a5026  $RUNNER_TEMP/snt.tar.gz" | sha256sum --check
+          curl --fail --location --retry 3 https://github.com/scinumtools/snt3/releases/download/v0.9.6/snt-v0.9.6-linux-x86_64.tar.gz -o "$RUNNER_TEMP/snt.tar.gz"
+          echo "a44f17a464af4602b5a698ff11c5690fc2a5e171e8e3a9fb7daecc8766df046e  $RUNNER_TEMP/snt.tar.gz" | sha256sum --check
           tar -xzf "$RUNNER_TEMP/snt.tar.gz" -C "$RUNNER_TEMP"
-          echo "$RUNNER_TEMP/snt-v0.9.5-linux-x86_64" >> "$GITHUB_PATH"
-          "$RUNNER_TEMP/snt-v0.9.5-linux-x86_64/snt" --version
+          echo "$RUNNER_TEMP/snt-v0.9.6-linux-x86_64" >> "$GITHUB_PATH"
+          "$RUNNER_TEMP/snt-v0.9.6-linux-x86_64/snt" --version
       - name: Install website dependencies
         run: npm ci --no-audit --no-fund
       - name: Configure GitHub Pages paths

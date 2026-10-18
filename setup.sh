@@ -23,7 +23,7 @@ Examples:
   ./setup.sh --diph5
   BASE_PATH=/adimaginem/ ./setup.sh --build
 
-DIPL loading needs Python 3 and the native snt CLI on PATH.
+DIPL loading needs Python 3 and SNT 0.9.6+ on PATH or in build/snt/.
 Astro needs a supported even-numbered Node release (22.12+, 24, or 26).
 Server options are forwarded to Astro or the Python viewer. Ctrl-C stops it.
 HELP
@@ -31,7 +31,10 @@ HELP
 
 require_python() {
   command -v python3 >/dev/null || { echo 'Install Python 3 first.' >&2; exit 1; }
+  # Optional local release archive, with its bundled libraries beside the CLI.
+  if [[ -x "$PWD/build/snt/snt" ]]; then export PATH="$PWD/build/snt:$PATH"; fi
   command -v snt >/dev/null || { echo 'Install the native SNT CLI and put snt on PATH; see docs/dependencies.md.' >&2; exit 1; }
+  python3 -c 'import re, subprocess, sys; version=subprocess.check_output(["snt", "--version"], text=True); match=re.search(r"(\d+)\.(\d+)\.(\d+)", version); sys.exit(0 if match and tuple(map(int, match.groups())) >= (0,9,6) else "SNT 0.9.6+ is required for citation metadata constraints; see docs/dependencies.md.")'
 }
 
 supported_node() {

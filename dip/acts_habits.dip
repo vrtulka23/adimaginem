@@ -1,60 +1,60 @@
 # Selected operations and the habit distinction needed before dynamic rules.
 ontology
   sources[st_i_84_7]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/1084.htm"
     witness_kind str = "scholastic"
-    locator str = "I, q. 84, a. 7, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/1084.htm"
+    locator = "I, q. 84, a. 7, respondeo"
 
   sources[st_i_ii_14_1]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/2014.htm"
     witness_kind str = "scholastic"
-    locator str = "I-II, q. 14, a. 1, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/2014.htm"
+    locator = "I-II, q. 14, a. 1, respondeo"
 
   sources[st_i_ii_49_1]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/2049.htm"
     witness_kind str = "scholastic"
-    locator str = "I-II, q. 49, a. 1, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/2049.htm"
+    locator = "I-II, q. 49, a. 1, respondeo"
 
   sources[st_i_ii_55_1]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/2055.htm"
     witness_kind str = "scholastic"
-    locator str = "I-II, q. 55, a. 1, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/2055.htm"
+    locator = "I-II, q. 55, a. 1, respondeo"
 
   sources[st_i_ii_9_1]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/2009.htm"
     witness_kind str = "scholastic"
-    locator str = "I-II, q. 9, a. 1, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/2009.htm"
+    locator = "I-II, q. 9, a. 1, respondeo"
 
   sources[st_i_79_11]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/1079.htm"
     witness_kind str = "scholastic"
-    locator str = "I, q. 79, a. 11, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/1079.htm"
+    locator = "I, q. 79, a. 11, respondeo"
 
   sources[st_i_85_1]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/1085.htm"
     witness_kind str = "scholastic"
-    locator str = "I, q. 85, a. 1, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/1085.htm"
+    locator = "I, q. 85, a. 1, respondeo"
 
   sources[st_i_ii_61_2]
+    ?authors "Thomas Aquinas"
+    ?title "Summa theologiae"
+    ?url "https://www.newadvent.org/summa/2061.htm"
     witness_kind str = "scholastic"
-    locator str = "I-II, q. 61, a. 2, respondeo"
-      ?authors "Thomas Aquinas"
-      ?title "Summa theologiae"
-      ?url "https://www.newadvent.org/summa/2061.htm"
+    locator = "I-II, q. 61, a. 2, respondeo"
 
   concepts[sensing]
     latin_name = "sentire"
